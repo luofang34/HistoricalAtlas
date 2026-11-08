@@ -1,0 +1,240 @@
+{
+  "entities": [
+    {
+      "id": "25488225-5f68-5582-9661-54806f8c89d4",
+      "key": "earth/cn-gz/bijie/xiaoba/xinchang-river",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "929ac45a-88b3-5240-89a3-e6182097626a",
+      "key": "earth/cn-gz/bijie/xiaoba/chuanzhu-temple",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "752d6c91-8ef5-57b4-bb3d-31ad868135e5",
+      "key": "earth/cn-gz/bijie/xiaoba/xia-temple",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "b0210d01-f490-5e71-a349-e4dffa6f4f7f",
+      "key": "earth/cn-gz/bijie/xiaoba/zhongjian-temple",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "e405668a-6c22-595b-b07a-cff58e7fd137",
+      "key": "earth/cn-gz/bijie/xiaoba/tingzi",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "f8e75e9c-9b4e-51d3-9d32-25e8aadf9605",
+      "key": "earth/cn-gz/bijie/xiaoba/shita",
+      "body": "earth",
+      "kind": "historic_site"
+    }
+  ],
+  "records": [
+    {
+      "id": "14bff0bb-e9ec-5ed4-9a64-219bc8b88faa",
+      "key": "bijie-gazetteer/p183/xiaoba/xinchang-river",
+      "entity_id": "25488225-5f68-5582-9661-54806f8c89d4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "183",
+      "scan_page": 218,
+      "locator": "Place table, row 1: 新场河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "新场河",
+        "pinyin": "Xīncháng Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "发源于王家坝公社，过小坝入大方县境内，境内流长约5公里。"
+      }
+    },
+    {
+      "id": "26305dec-e6b2-55f6-878f-dc28ada842bd",
+      "key": "bijie-gazetteer/p183/xiaoba/chuanzhu-temple",
+      "entity_id": "929ac45a-88b3-5240-89a3-e6182097626a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "183",
+      "scan_page": 218,
+      "locator": "Place table, row 2: 川主庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "川主庙",
+        "pinyin": "Chuānzhǔ Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.5,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°30′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "现为公社粮站。"
+      }
+    },
+    {
+      "id": "a8e14978-34db-5532-a72f-0a5902a2d3e5",
+      "key": "bijie-gazetteer/p183/xiaoba/xia-temple",
+      "entity_id": "752d6c91-8ef5-57b4-bb3d-31ad868135e5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "183",
+      "scan_page": 218,
+      "locator": "Place table, row 3: 夏庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "夏庙",
+        "pinyin": "Xià Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.5,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°30′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "现已废"
+      }
+    },
+    {
+      "id": "b3c43235-df0e-502d-abc1-2107e5f92615",
+      "key": "bijie-gazetteer/p183/xiaoba/zhongjian-temple",
+      "entity_id": "b0210d01-f490-5e71-a349-e4dffa6f4f7f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "183",
+      "scan_page": 218,
+      "locator": "Place table, row 4: 中间庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "中间庙",
+        "pinyin": "Zhōngjiān Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.5,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°30′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "现已废"
+      }
+    },
+    {
+      "id": "be846c64-1da5-5ece-935e-e78bc1134134",
+      "key": "bijie-gazetteer/p183/xiaoba/tingzi",
+      "entity_id": "e405668a-6c22-595b-b07a-cff58e7fd137",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "183",
+      "scan_page": 218,
+      "locator": "Place table, row 5: 亭子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "亭子",
+        "pinyin": "Tíngzǐ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.5,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°30′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "现已废"
+      }
+    },
+    {
+      "id": "4f9e76c2-04e1-557d-ae80-61ae31a7fb33",
+      "key": "bijie-gazetteer/p183/xiaoba/shita",
+      "entity_id": "f8e75e9c-9b4e-51d3-9d32-25e8aadf9605",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "183",
+      "scan_page": 218,
+      "locator": "Place table, row 6: 石塔",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "石塔",
+        "pinyin": "Shítǎ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.5,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°30′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "现已废"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

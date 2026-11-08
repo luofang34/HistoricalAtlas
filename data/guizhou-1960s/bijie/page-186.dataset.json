@@ -1,0 +1,591 @@
+{
+  "entities": [
+    {
+      "id": "6ae1798b-3267-5d6a-8640-15c684114e2b",
+      "key": "earth/cn-gz/bijie/hantun/hantun-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "3feb89d7-dc5a-5c42-9d49-b811fc422acb",
+      "key": "earth/cn-gz/bijie/hantun/hantun",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "f0b4db81-effc-5917-b99e-4f3956f7c005",
+      "key": "earth/cn-gz/bijie/hantun/shuitang-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "ea165350-a8ff-574d-b723-e9f17deebb29",
+      "key": "earth/cn-gz/bijie/hantun/shuitang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "202142ab-5a1e-5618-82d6-5c1933409ccc",
+      "key": "earth/cn-gz/bijie/hantun/fengtian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "a7d2a9c6-c739-5277-bb39-e51a36089741",
+      "key": "earth/cn-gz/bijie/hantun/hujiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "6afd31ac-95ad-557a-b4e8-d234d6d124ce",
+      "key": "earth/cn-gz/bijie/hantun/guanba-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "8b464b2a-a73d-5f44-94f2-0a672babd545",
+      "key": "earth/cn-gz/bijie/hantun/guanba",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "0f1074e6-da2a-51f6-a7ef-2926fde3be4f",
+      "key": "earth/cn-gz/bijie/hantun/linjiaqiao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "47b977df-5ec7-5bb5-a38f-259726d837c0",
+      "key": "earth/cn-gz/bijie/hantun/liangjiazhai-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "57251a96-cf36-5c2a-a7eb-3614b9d4ba1c",
+      "key": "earth/cn-gz/bijie/hantun/liangjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "7ad15e8c-a5c1-56e1-b3da-2ea1115303de",
+      "key": "earth/cn-gz/bijie/hantun/miaozhai-yakou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "b24db205-c903-55a4-8844-9789269d005f",
+      "key": "earth/cn-gz/bijie/hantun/hantun-bridge",
+      "body": "earth",
+      "kind": "bridge"
+    }
+  ],
+  "records": [
+    {
+      "id": "478a2518-6d1e-5f5f-b020-2fc6b14f34a3",
+      "key": "bijie-gazetteer/p186/hantun-commune",
+      "entity_id": "6daa1864-9a90-5e6b-8f0f-38316cb644e7",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 1: 汉屯公社",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "汉屯公社",
+        "pinyin": "Hàntún Gōngshè",
+        "population": 3897,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+        "rank": "commune",
+        "seat_id": "3feb89d7-dc5a-5c42-9d49-b811fc422acb",
+        "coordinate": {
+          "point": {
+            "longitude": 107.45,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "107°27′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a68d4970-691c-5e51-9ce1-f088e52d344a",
+      "key": "bijie-gazetteer/p186/hantun/hantun-brigade",
+      "entity_id": "6ae1798b-3267-5d6a-8640-15c684114e2b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 2: 汉屯大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "汉屯大队",
+        "pinyin": "Hàntún Dàduì",
+        "population": 1446,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6daa1864-9a90-5e6b-8f0f-38316cb644e7",
+        "rank": "brigade",
+        "seat_id": "3feb89d7-dc5a-5c42-9d49-b811fc422acb",
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "81d3f9c5-393f-5149-871b-3e6b8efc0676",
+      "key": "bijie-gazetteer/p186/hantun/hantun",
+      "entity_id": "3feb89d7-dc5a-5c42-9d49-b811fc422acb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 3: 汉屯",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "汉屯",
+        "pinyin": "Hàntún",
+        "population": 802,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6ae1798b-3267-5d6a-8640-15c684114e2b",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 25.333333333333332
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "25°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公社、大队驻地"
+      }
+    },
+    {
+      "id": "5c608217-7912-5893-be35-c97c2aa4f9b4",
+      "key": "bijie-gazetteer/p186/hantun/shuitang-brigade",
+      "entity_id": "f0b4db81-effc-5917-b99e-4f3956f7c005",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 4: 水塘大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "水塘大队",
+        "pinyin": "Shuǐtáng Dàduì",
+        "population": 784,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "6daa1864-9a90-5e6b-8f0f-38316cb644e7",
+        "rank": "brigade",
+        "seat_id": "ea165350-a8ff-574d-b723-e9f17deebb29",
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "22de18ce-9b1b-5c24-9a09-47ea98a10970",
+      "key": "bijie-gazetteer/p186/hantun/shuitang",
+      "entity_id": "ea165350-a8ff-574d-b723-e9f17deebb29",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 5: 水塘",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "水塘",
+        "pinyin": "Shuǐtáng",
+        "population": 376,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "f0b4db81-effc-5917-b99e-4f3956f7c005",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "3c4c35df-cc55-573a-ae33-3dd4d7838196",
+      "key": "bijie-gazetteer/p186/hantun/fengtian",
+      "entity_id": "202142ab-5a1e-5618-82d6-5c1933409ccc",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 6: 丰田",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "丰田",
+        "pinyin": "Fēngtián",
+        "population": 218,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "f0b4db81-effc-5917-b99e-4f3956f7c005",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "1bcc8f16-b3cb-5b52-ad43-6d23aa77bd26",
+      "key": "bijie-gazetteer/p186/hantun/hujiazhai",
+      "entity_id": "a7d2a9c6-c739-5277-bb39-e51a36089741",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 7: 胡家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "胡家寨",
+        "pinyin": "Hújiāzhài",
+        "population": 190,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "f0b4db81-effc-5917-b99e-4f3956f7c005",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "abb6bdb3-75df-56dc-8484-7957a1db57c0",
+      "key": "bijie-gazetteer/p186/hantun/guanba-brigade",
+      "entity_id": "6afd31ac-95ad-557a-b4e8-d234d6d124ce",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 8: 官坝大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "官坝大队",
+        "pinyin": "Guānbà Dàduì",
+        "population": 996,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6daa1864-9a90-5e6b-8f0f-38316cb644e7",
+        "rank": "brigade",
+        "seat_id": "8b464b2a-a73d-5f44-94f2-0a672babd545",
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.35
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°21′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5922576e-fa03-523b-a93e-8d6fc224a867",
+      "key": "bijie-gazetteer/p186/hantun/guanba",
+      "entity_id": "8b464b2a-a73d-5f44-94f2-0a672babd545",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 9: 官坝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "官坝",
+        "pinyin": "Guānbà",
+        "population": 828,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6afd31ac-95ad-557a-b4e8-d234d6d124ce",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.35
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°21′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "de833b88-b331-58df-ba1d-a3934fa8460c",
+      "key": "bijie-gazetteer/p186/hantun/linjiaqiao",
+      "entity_id": "0f1074e6-da2a-51f6-a7ef-2926fde3be4f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 10: 林家桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "林家桥",
+        "pinyin": "Línjiāqiáo",
+        "population": 168,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6afd31ac-95ad-557a-b4e8-d234d6d124ce",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.35
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°21′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "629fe1a6-bc9d-5fba-9cd7-abf440d20061",
+      "key": "bijie-gazetteer/p186/hantun/liangjiazhai-brigade",
+      "entity_id": "47b977df-5ec7-5bb5-a38f-259726d837c0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 11: 梁家寨大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "梁家寨大队",
+        "pinyin": "Liángjiāzhài Dàduì",
+        "population": 678,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6daa1864-9a90-5e6b-8f0f-38316cb644e7",
+        "rank": "brigade",
+        "seat_id": "57251a96-cf36-5c2a-a7eb-3614b9d4ba1c",
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "79d9ecce-1d08-5071-81e1-d86050b65f76",
+      "key": "bijie-gazetteer/p186/hantun/liangjiazhai",
+      "entity_id": "57251a96-cf36-5c2a-a7eb-3614b9d4ba1c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 12: 梁家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "梁家寨",
+        "pinyin": "Liángjiāzhài",
+        "population": 570,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "47b977df-5ec7-5bb5-a38f-259726d837c0",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "72fadc65-1ed5-5737-a3f6-a02818d381c7",
+      "key": "bijie-gazetteer/p186/hantun/miaozhai-yakou",
+      "entity_id": "7ad15e8c-a5c1-56e1-b3da-2ea1115303de",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 13: 苗寨垭口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "苗寨垭口",
+        "pinyin": "Miáozhàiyákǒu",
+        "population": 108,
+        "households": null,
+        "ethnicities": [
+          "苗"
+        ],
+        "parent_id": "47b977df-5ec7-5bb5-a38f-259726d837c0",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ccaaae74-c9bb-5cbc-9b55-57cbfdaa41fa",
+      "key": "bijie-gazetteer/p186/hantun/hantun-bridge",
+      "entity_id": "b24db205-c903-55a4-8844-9789269d005f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "186",
+      "scan_page": 221,
+      "locator": "Place table, row 14: 汉屯桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "汉屯桥",
+        "pinyin": "Hàntún Qiáo",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.35
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°21′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "桥 (28—6)/15"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

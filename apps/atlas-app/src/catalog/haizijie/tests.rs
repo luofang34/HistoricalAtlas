@@ -44,3 +44,25 @@ fn two_daomakan_villages_and_the_recorded_tree_remain_separate() {
     let village = EntityId::from_key("earth/cn-gz/bijie/wangjiaba/potoushang").unwrap();
     assert_eq!(atlas.parents(tree), BTreeSet::from([village]));
 }
+
+#[test]
+fn xiaoba_and_zhongtun_historical_names_find_their_settlements() {
+    let atlas = atlas();
+    for (name, key) in [
+        ("杨柳街", "xiaoba/xiaoba"),
+        ("小坝屯", "xiaoba/xiaoba"),
+        ("旱屯", "hantun/hantun"),
+        ("阿冲屯", "zhongtun/zhongtun"),
+        ("窝中屯", "zhongtun/zhongtun"),
+        ("新场河", "xiaoba/xinchang-river"),
+        ("水牛屯电站", "zhongtun/shuiniutun-power-station"),
+    ] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{key}")).unwrap();
+        assert!(atlas.search(name, BodyId::Earth).contains(&id), "{key}");
+    }
+    let matched: BTreeSet<_> = atlas.search("和尚冲", BodyId::Earth).into_iter().collect();
+    for key in ["heshangchong-north", "heshangchong-south"] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/xiaoba/{key}")).unwrap();
+        assert!(matched.contains(&id));
+    }
+}

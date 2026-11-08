@@ -72,6 +72,11 @@ fn complete_tables_export_all_reviewed_rows_with_their_source_fields() {
         (176, 12),
         (178, 13),
         (180, 19),
+        (182, 35),
+        (183, 6),
+        (186, 14),
+        (188, 18),
+        (190, 14),
     ] {
         let rows: Vec<_> = input
             .data
@@ -103,6 +108,9 @@ mod shaogang;
 
 #[path = "lanni/tests.rs"]
 mod lanni;
+
+#[path = "xiaoba/tests.rs"]
+mod xiaoba;
 
 #[test]
 fn district_and_brigade_seats_follow_the_explicit_table_annotations() {
