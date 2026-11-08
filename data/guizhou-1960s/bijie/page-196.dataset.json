@@ -1,0 +1,678 @@
+{
+  "entities": [
+    {
+      "id": "e89dcb44-e69b-54b9-a771-6752cd72ce10",
+      "key": "earth/cn-gz/bijie/yazitang/guolegou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "ef9133cc-75e5-5813-99c4-1f96e4c7d7cb",
+      "key": "earth/cn-gz/bijie/yazitang/erdao-yakou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c20251f4-0007-54df-bd9d-77cd93e7fd3d",
+      "key": "earth/cn-gz/bijie/yazitang/huangjia-yakou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "1f41d0e6-bcf3-5dfa-9d62-aaf569918c23",
+      "key": "earth/cn-gz/bijie/yazitang/cangshang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "9f83c032-c042-5554-961d-8ad3410f87b0",
+      "key": "earth/cn-gz/bijie/yazitang/dingjiaba",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "52fb5ed7-d8e4-5cc4-9e49-66408d79be80",
+      "key": "earth/cn-gz/bijie/yazitang/dazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "651075c2-2ea9-52ef-90b3-e13cab954a97",
+      "key": "earth/cn-gz/bijie/yazitang/qinggangpo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "80a5f523-5a3a-528a-ac13-b4b3aebdbc2e",
+      "key": "earth/cn-gz/bijie/yazitang/xiajiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "f7b33d45-b89a-5591-be37-9320dd8a2c4c",
+      "key": "earth/cn-gz/bijie/yazitang/goupayan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c8106236-133f-5d6f-a8e9-f62811f237b8",
+      "key": "earth/cn-gz/bijie/yazitang/mawo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "31e7a7e9-f7da-5d43-87f0-2d6bbd43aba2",
+      "key": "earth/cn-gz/bijie/yazitang/luoshuidong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "3a75a197-94f3-5896-a523-eae2ae1b0bc3",
+      "key": "earth/cn-gz/bijie/yazitang/damatang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "89be44f0-9966-5d94-8cd5-3d9ab47ed744",
+      "key": "earth/cn-gz/bijie/yazitang/gaotukan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "268b10f2-c738-57cf-90e9-9c3d82612179",
+      "key": "earth/cn-gz/bijie/yazitang/zuantianpo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "9fe64f25-60d4-5afe-9fc0-69e3a232297a",
+      "key": "earth/cn-gz/bijie/yazitang/yazitang",
+      "body": "earth",
+      "kind": "settlement"
+    }
+  ],
+  "records": [
+    {
+      "id": "61a37db1-24f9-5509-a973-049af80bd444",
+      "key": "bijie-gazetteer/p196/yazitang-commune",
+      "entity_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 1: 鸭子塘公社",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "鸭子塘公社",
+        "pinyin": "Yāzǐtáng Gōngshè",
+        "population": 2229,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "彝",
+          "苗"
+        ],
+        "parent_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+        "rank": "commune",
+        "seat_id": "9f83c032-c042-5554-961d-8ad3410f87b0",
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.366666666666667
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°22′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b7edf278-450a-5162-9964-a7ce5e221009",
+      "key": "bijie-gazetteer/p196/yazitang/guolegou",
+      "entity_id": "e89dcb44-e69b-54b9-a771-6752cd72ce10",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 2: 果乐沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "果乐沟",
+        "pinyin": "Guǒlègōu",
+        "population": 211,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ca2030ca-43db-5b7b-90c9-87267bd3aec2",
+      "key": "bijie-gazetteer/p196/yazitang/erdao-yakou",
+      "entity_id": "ef9133cc-75e5-5813-99c4-1f96e4c7d7cb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 3: 二道丫口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "二道丫口",
+        "pinyin": "Èrdào Yàkǒu",
+        "population": 172,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "61bddd89-ff2c-5f98-8146-0e0e643fd9ad",
+      "key": "bijie-gazetteer/p196/yazitang/huangjia-yakou",
+      "entity_id": "c20251f4-0007-54df-bd9d-77cd93e7fd3d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 4: 黄家丫口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "黄家丫口",
+        "pinyin": "Huángjiā Yàkǒu",
+        "population": 126,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5afa9fb9-a462-5723-aa12-994f8a3daef8",
+      "key": "bijie-gazetteer/p196/yazitang/cangshang",
+      "entity_id": "1f41d0e6-bcf3-5dfa-9d62-aaf569918c23",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 5: 仓上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "仓上",
+        "pinyin": "Cāngshàng",
+        "population": 175,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.366666666666667
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°22′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ff8dc791-8004-5f18-9398-d32e200bea88",
+      "key": "bijie-gazetteer/p196/yazitang/dingjiaba",
+      "entity_id": "9f83c032-c042-5554-961d-8ad3410f87b0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 6: 丁家坝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "丁家坝",
+        "pinyin": "Dīngjiābà",
+        "population": 149,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.366666666666667
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°22′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公社驻地"
+      }
+    },
+    {
+      "id": "7ef5b47a-fc38-55a2-a3e7-3bfbf5313b54",
+      "key": "bijie-gazetteer/p196/yazitang/dazhai",
+      "entity_id": "52fb5ed7-d8e4-5cc4-9e49-66408d79be80",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 7: 大寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大寨",
+        "pinyin": "Dàzhài",
+        "population": 253,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "881f34ca-ee59-505e-ae1c-4f11a0bea89c",
+      "key": "bijie-gazetteer/p196/yazitang/qinggangpo",
+      "entity_id": "651075c2-2ea9-52ef-90b3-e13cab954a97",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 8: 青杠坡",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "青杠坡",
+        "pinyin": "Qīnggāngpō",
+        "population": 139,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "493e6e64-c436-5da9-b1ae-9e9b6b790976",
+      "key": "bijie-gazetteer/p196/yazitang/xiajiazhai",
+      "entity_id": "80a5f523-5a3a-528a-ac13-b4b3aebdbc2e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 9: 夏家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "夏家寨",
+        "pinyin": "Xià Jiāzhài",
+        "population": 103,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ff4be0c6-17bc-562e-8d48-8687ef613243",
+      "key": "bijie-gazetteer/p196/yazitang/goupayan",
+      "entity_id": "f7b33d45-b89a-5591-be37-9320dd8a2c4c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 10: 狗爬岩",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "狗爬岩",
+        "pinyin": "Gǒupáyán",
+        "population": 56,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b1713ccc-a0f7-5591-b5bb-df94413da308",
+      "key": "bijie-gazetteer/p196/yazitang/mawo",
+      "entity_id": "c8106236-133f-5d6f-a8e9-f62811f237b8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 11: 麻窝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "麻窝",
+        "pinyin": "Mǎwō",
+        "population": 99,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "66b4cdfd-d7ba-5929-9c0c-d1766f14eb8e",
+      "key": "bijie-gazetteer/p196/yazitang/luoshuidong",
+      "entity_id": "31e7a7e9-f7da-5d43-87f0-2d6bbd43aba2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 12: 落水洞",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "落水洞",
+        "pinyin": "Luòshuǐdòng",
+        "population": 97,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8d9574e5-dcbd-50e3-9c46-73ab5f250de5",
+      "key": "bijie-gazetteer/p196/yazitang/damatang",
+      "entity_id": "3a75a197-94f3-5896-a523-eae2ae1b0bc3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 13: 大麻塘",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大麻塘",
+        "pinyin": "Dàmátáng",
+        "population": 102,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.366666666666667
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°22′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f97249e9-e4ea-5021-8398-145b6071af09",
+      "key": "bijie-gazetteer/p196/yazitang/gaotukan",
+      "entity_id": "89be44f0-9966-5d94-8cd5-3d9ab47ed744",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 14: 高土坎",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "高土坎",
+        "pinyin": "Gāotǔkǎn",
+        "population": 109,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.366666666666667
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°22′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "788b393e-54c6-50a4-abbe-8f06414f19e0",
+      "key": "bijie-gazetteer/p196/yazitang/zuantianpo",
+      "entity_id": "268b10f2-c738-57cf-90e9-9c3d82612179",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 15: 钻天坡",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "钻天坡",
+        "pinyin": "Zuāntiānpō",
+        "population": 228,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.366666666666667
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°22′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d2b1b14c-8b89-5d11-895f-916038a7ac70",
+      "key": "bijie-gazetteer/p196/yazitang/yazitang",
+      "entity_id": "9fe64f25-60d4-5afe-9fc0-69e3a232297a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "196",
+      "scan_page": 231,
+      "locator": "Place table, row 16: 鸭子塘",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "鸭子塘",
+        "pinyin": "Yāzǐtáng",
+        "population": 210,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6e9d0c2a-0e67-5241-b1ac-8a604129ac85",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.366666666666667
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°22′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}
