@@ -1,5 +1,6 @@
 use super::*;
 use atlas_geo::registration::ControlPoint;
+use atlas_geo::registration::PlanarPoint;
 use serde_json::Value;
 
 mod rejection;

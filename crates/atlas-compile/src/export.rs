@@ -27,6 +27,8 @@ struct IndexedEntity<'a> {
     records: Vec<&'a Record>,
     estimates: Vec<&'a Estimate>,
     disputes: Vec<&'a Dispute>,
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    drawings: Vec<&'a atlas_boundary::sheet::SheetTrace>,
 }
 
 /// Named byte buffers ready to write into a publication directory.
@@ -37,6 +39,9 @@ pub fn compile(input: &LedgerInput) -> Result<Artifacts, ExportError> {
     atlas_ledger::validation::validate(&input.catalog, &input.data)?;
     atlas_ledger::publication::verify_publication(&input.data, &input.aliases, &input.published)?;
     crate::plate_models::validate_models(&input.plate_models, &input.catalog, &input.data)?;
+    for trace in &input.traces {
+        atlas_boundary::sheet::validate(&input.catalog, &input.data, trace)?;
+    }
     let shards = index_entities(input);
     let current: BTreeSet<_> = shards
         .values()
@@ -94,6 +99,7 @@ fn index_entities(input: &LedgerInput) -> BTreeMap<String, BTreeMap<EntityId, In
                     records: Vec::new(),
                     estimates: Vec::new(),
                     disputes: Vec::new(),
+                    drawings: Vec::new(),
                 },
             )
         })
@@ -111,6 +117,14 @@ fn index_entities(input: &LedgerInput) -> BTreeMap<String, BTreeMap<EntityId, In
     for dispute in &input.data.disputes {
         if let Some(index) = entities.get_mut(&dispute.entity_id) {
             index.disputes.push(dispute);
+        }
+    }
+    for trace in &input.traces {
+        if let Some(unit) = trace.units.first()
+            && let Some(record) = input.data.records.iter().find(|r| r.id == unit.record_id)
+            && let Some(index) = entities.get_mut(&record.entity_id)
+        {
+            index.drawings.push(trace);
         }
     }
     let mut shards: BTreeMap<String, BTreeMap<EntityId, IndexedEntity<'_>>> = BTreeMap::new();
@@ -208,6 +222,9 @@ pub fn write_blocking(output: &Path, artifacts: &Artifacts) -> Result<(), Export
 /// Static artifact construction or write failure.
 #[derive(Debug, Error)]
 pub enum ExportError {
+    /// Reviewed source-sheet geometry or evidence failed validation.
+    #[error(transparent)]
+    Sheet(#[from] atlas_boundary::sheet::SheetError),
     /// A source map failed evidence or registration checks.
     #[error("place map export: {0}")]
     PlaceMap(#[source] Box<crate::place_maps::PlaceMapError>),

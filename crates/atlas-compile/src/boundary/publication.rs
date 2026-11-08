@@ -36,6 +36,7 @@ pub(super) fn write_trace(
             "version": 1, "geometry_kind": "map_trace", "source_id": trace.source_id,
             "scan_page": trace.scan_page, "scan_sha256": evidence::fingerprint(input, trace)?,
             "source_frame": trace.source_frame, "boundary_method": trace.boundary_method,
+            "places": trace.places,
             "method_basis": trace.method_basis, "vertices": vertices, "units": units,
             "vertex_count": trace.vertices.len(), "unit_count": trace.units.len(),
         }),

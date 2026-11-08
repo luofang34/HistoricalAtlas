@@ -6,6 +6,9 @@ use thiserror::Error;
 /// Evidence, geometry, registration, or publication failure for a boundary.
 #[derive(Debug, Error)]
 pub enum BoundaryError {
+    /// Reviewed source-sheet geometry or evidence is invalid.
+    #[error(transparent)]
+    Sheet(#[from] atlas_boundary::sheet::SheetError),
     /// Request or ledger failed to load.
     #[error("boundary input: {0}")]
     Input(#[from] InputError),

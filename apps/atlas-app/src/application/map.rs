@@ -19,6 +19,9 @@ impl Application {
     }
 
     pub(super) fn map_panel(&mut self, ui: &mut egui::Ui) {
+        if self.sheet_panel(ui) {
+            return;
+        }
         ui.label(self.map_caption());
         if self.dirty {
             let points = match self.points() {

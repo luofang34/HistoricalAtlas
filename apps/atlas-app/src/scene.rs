@@ -8,6 +8,7 @@ use serde_json::{Value, json};
 pub mod basemap;
 mod locations;
 pub mod renderer;
+pub mod sheet;
 pub mod territories;
 
 /// Visibility of coordinate observations in the map.

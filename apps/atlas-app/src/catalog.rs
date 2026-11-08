@@ -14,6 +14,9 @@ use crate::error::AppError;
 #[derive(Debug, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Entry {
+    /// Reviewed vector drawings in the source map's pixel frame.
+    #[serde(default)]
+    pub drawings: Vec<atlas_boundary::sheet::SheetTrace>,
     /// Permanent geographical identity.
     pub entity: Entity,
     /// Reviewed source observations.
@@ -82,6 +85,11 @@ impl Atlas {
             data.disputes.extend(entry.disputes.clone());
         }
         atlas_ledger::validation::validate(&sources, &data)?;
+        for entry in publication.entries.values() {
+            for drawing in &entry.drawings {
+                atlas_boundary::sheet::validate(&sources, &data, drawing)?;
+            }
+        }
         verify_publication(&data, &publication.aliases, &Published::default())?;
         let aliases = publication
             .aliases
@@ -100,6 +108,24 @@ impl Atlas {
     /// Find an entity and its evidence by permanent identity.
     pub fn entry(&self, id: EntityId) -> Option<&Entry> {
         self.entries.get(&self.resolve(id)?)
+    }
+
+    /// Source drawings containing a selected boundary or place.
+    pub fn drawings(&self, id: EntityId) -> Vec<&atlas_boundary::sheet::SheetTrace> {
+        let records: BTreeSet<_> = self
+            .entry(id)
+            .into_iter()
+            .flat_map(|e| &e.records)
+            .map(|r| r.id)
+            .collect();
+        self.entries
+            .values()
+            .flat_map(|e| &e.drawings)
+            .filter(|d| {
+                d.units.iter().any(|u| records.contains(&u.record_id))
+                    || d.places.iter().any(|p| records.contains(&p.record_id))
+            })
+            .collect()
     }
 
     /// Resolve a permanent identity or published redirect to a current entity.

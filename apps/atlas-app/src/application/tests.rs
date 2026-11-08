@@ -1,5 +1,8 @@
 use super::*;
 
+#[path = "sheet/tests.rs"]
+mod sheet;
+
 #[test]
 fn mapped_place_view_focuses_registered_location_and_shows_its_sheet_name() {
     let mut app = Application::new(crate::catalog::tests::atlas()).unwrap();

@@ -15,6 +15,7 @@ mod dates;
 mod evidence;
 mod map;
 mod overlay;
+mod sheet;
 
 /// Application state independent of the windowing platform.
 pub struct Application {
@@ -32,6 +33,7 @@ pub struct Application {
     dirty: bool,
     error: Option<String>,
     overlay: overlay::OverlayState,
+    sheet: sheet::SheetView,
 }
 
 impl Application {
@@ -54,6 +56,7 @@ impl Application {
             dirty: true,
             error: None,
             overlay: overlay::OverlayState::default(),
+            sheet: sheet::SheetView::default(),
         })
     }
 
@@ -93,6 +96,9 @@ impl Application {
     fn select(&mut self, id: EntityId, focus: bool) {
         self.selected = Some(id);
         self.dirty = true;
+        if focus && !self.atlas.drawings(id).is_empty() && self.focus_point(id).is_none() {
+            self.sheet = sheet::SheetView::open();
+        }
         if focus && let Some(point) = self.focus_point(id) {
             self.camera.center = point;
             self.camera.zoom = if self.body == BodyId::Earth {
@@ -158,6 +164,7 @@ impl Application {
     }
 
     fn apply_time(&mut self) {
+        self.sheet.visible = false;
         match SelectedTime::query(&self.atlas, &self.time) {
             Ok(time) => {
                 self.selected_time = time;

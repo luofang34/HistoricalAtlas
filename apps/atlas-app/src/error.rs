@@ -6,6 +6,9 @@ use thiserror::Error;
 /// Atlas input or time selection failure.
 #[derive(Debug, Error)]
 pub enum AppError {
+    /// Source-sheet geometry or citation validation failed.
+    #[error(transparent)]
+    Sheet(#[from] atlas_boundary::sheet::SheetError),
     /// Territorial relationship selection failed.
     #[error("territory: {0}")]
     Territory(#[from] atlas_boundary::nodal::NodalError),

@@ -67,6 +67,7 @@ impl Application {
     }
 
     fn shortcuts(&mut self, ui: &mut egui::Ui) {
+        let previous = self.layer;
         ui.horizontal_wrapped(|ui| {
             let mut year = self
                 .time
@@ -120,6 +121,9 @@ impl Application {
                 .on_hover_text("Administrative and seat links for the selected place.")
                 .changed();
         });
+        if self.layer != previous {
+            self.sheet.visible = false;
+        }
     }
 
     pub(super) fn search_panel(&mut self, ui: &mut egui::Ui) {

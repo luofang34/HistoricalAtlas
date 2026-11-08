@@ -19,6 +19,8 @@ use crate::plate_models::{PlateDocumentError, PlateModelDocument, validate_model
 /// Validated input bundle including the existing publication contract.
 #[derive(Debug)]
 pub struct LedgerInput {
+    /// Reviewed boundary and place drawings in source-sheet coordinates.
+    pub traces: Vec<crate::boundary::SheetTrace>,
     /// Registered source maps supplying derived place locations.
     pub place_maps: BTreeMap<String, crate::place_maps::PlaceMap>,
     /// Cited plate models available for reconstruction.
@@ -139,6 +141,7 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
     let published = read_json_blocking(&root.join("published.json"))?;
     verify_publication(&data, &aliases, &published)?;
     let mut input = LedgerInput {
+        traces: Vec::new(),
         place_maps: BTreeMap::new(),
         plate_models,
         catalog,
@@ -152,6 +155,7 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
             path,
             source: Box::new(source),
         })?;
+        input.traces.push(trace);
     }
     Ok(input)
 }

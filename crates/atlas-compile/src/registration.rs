@@ -53,24 +53,7 @@ pub struct TargetFrame {
     pub units: String,
 }
 
-/// Dimensions of the full scan-page raster used to measure source points.
-#[derive(Debug, Clone, Copy, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
-pub struct RasterFrame {
-    /// Image width in pixels, with x increasing to the right from the left edge.
-    pub width: u32,
-    /// Image height in pixels, with y increasing downwards from the top edge.
-    pub height: u32,
-}
-
-impl RasterFrame {
-    pub(crate) fn contains(self, point: PlanarPoint) -> bool {
-        self.width > 0
-            && self.height > 0
-            && (0.0..=f64::from(self.width)).contains(&point.x)
-            && (0.0..=f64::from(self.height)).contains(&point.y)
-    }
-}
+pub use atlas_boundary::sheet::RasterFrame;
 
 /// Complete inputs for fitting a source sheet and transforming traced vertices.
 #[derive(Debug, Clone, Serialize, Deserialize)]
