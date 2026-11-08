@@ -131,6 +131,48 @@ impl TemporalSpan {
         }
         Ok(())
     }
+
+    /// Classify a time against both endpoint uncertainty ranges.
+    pub fn membership(&self, at: EpochTime) -> Result<TimeMembership, TimeError> {
+        self.validate()?;
+        if self.start.is_none() && self.end.is_none() {
+            return Ok(TimeMembership::Undated);
+        }
+        if self.start.is_some_and(|start| at < start.earliest)
+            || self.end.is_some_and(|end| at >= end.latest)
+        {
+            return Ok(TimeMembership::Outside);
+        }
+        if self.start.is_some_and(|start| at >= start.latest)
+            && self.end.is_some_and(|end| at < end.earliest)
+        {
+            Ok(TimeMembership::Certain)
+        } else {
+            Ok(TimeMembership::Possible)
+        }
+    }
+
+    /// Compare nominal endpoints for display; missing endpoints remain uncertain.
+    pub fn nominally_contains(&self, at: EpochTime) -> Result<bool, TimeError> {
+        self.validate()?;
+        Ok((self.start.is_some() || self.end.is_some())
+            && self.start.is_none_or(|start| at >= start.nominal)
+            && self.end.is_none_or(|end| at < end.nominal))
+    }
+}
+
+/// Strength of temporal support for a queried instant.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum TimeMembership {
+    /// Every allowed endpoint excludes this instant.
+    Outside,
+    /// Some allowed endpoints include this instant.
+    Possible,
+    /// Every allowed endpoint includes this instant.
+    Certain,
+    /// Neither endpoint has been established.
+    Undated,
 }
 
 /// Time conversion or validation failure.
