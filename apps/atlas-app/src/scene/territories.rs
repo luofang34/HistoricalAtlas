@@ -16,7 +16,7 @@ pub fn features(
     layer: MapLayer,
 ) -> Result<Vec<Value>, NodalError> {
     let scopes: Vec<_> = match layer {
-        MapLayer::Observations => atlas
+        MapLayer::Observations | MapLayer::MappedPlaces => atlas
             .entry(id)
             .into_iter()
             .flat_map(|entry| &entry.records)

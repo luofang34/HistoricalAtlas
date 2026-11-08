@@ -233,6 +233,7 @@ fn shuffled_input_produces_identical_tiles_and_manifests() {
 
 #[cfg(test)]
 fn set_single_coordinate(input: &mut LedgerInput, longitude: f64, latitude: f64) {
+    input.place_maps.clear();
     let target = input
         .data
         .records
@@ -259,6 +260,7 @@ fn set_single_coordinate(input: &mut LedgerInput, longitude: f64, latitude: f64)
         !matches!(
             estimate.value,
             atlas_ledger::model::EstimateValue::Plate { .. }
+                | atlas_ledger::model::EstimateValue::MapLocation { .. }
         )
     });
 }

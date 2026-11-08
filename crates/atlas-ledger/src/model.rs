@@ -237,6 +237,19 @@ pub enum EstimateValue {
         /// Documented uncertainty radius, metres.
         uncertainty_m: f64,
     },
+    /// Position transformed from a map into its control observations' angular frame.
+    MapLocation {
+        /// Checked observation identifying the depicted place on the source sheet.
+        record_id: FactId,
+        /// Registered longitude and latitude.
+        point: LonLat,
+        /// Control datum, including an explicitly unspecified source datum.
+        datum: Datum,
+        /// Documented working positional allowance, metres.
+        uncertainty_m: f64,
+        /// Publication-relative registration artifact.
+        registration: String,
+    },
     /// Interpreted property during a historical interval.
     Temporal {
         /// Name, hierarchy, or demographics with interval uncertainty.

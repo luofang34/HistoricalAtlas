@@ -104,26 +104,77 @@ fn validate_value(
             datum,
             uncertainty_m,
         } => {
-            let entity = entities
-                .get(&estimate.entity_id)
-                .ok_or_else(|| fail(&estimate.key, "unknown entity"))?;
-            point.validate().map_err(|e| caused(&estimate.key, e))?;
-            datum
-                .validate_body(entity.body)
-                .map_err(|e| caused(&estimate.key, e))?;
-            if !uncertainty_m.is_finite()
-                || *uncertainty_m <= 0.0
-                || *datum == atlas_geo::coordinates::Datum::Unspecified
-            {
+            location(estimate, entities, *point, *datum, *uncertainty_m)?;
+            if *datum == atlas_geo::coordinates::Datum::Unspecified {
                 return Err(fail(
                     &estimate.key,
                     "location estimate needs a known datum and positive uncertainty",
                 ));
             }
         }
+        EstimateValue::MapLocation {
+            record_id,
+            point,
+            datum,
+            uncertainty_m,
+            registration,
+        } => {
+            location(estimate, entities, *point, *datum, *uncertainty_m)?;
+            map_location(estimate, records, *record_id, registration)?;
+        }
         EstimateValue::Temporal { assertion } => {
             super::temporal::validate_temporal(estimate, assertion, entities, records)?;
         }
+    }
+    Ok(())
+}
+
+fn map_location(
+    estimate: &Estimate,
+    records: &BTreeMap<FactId, &Record>,
+    record_id: FactId,
+    registration: &str,
+) -> Result<(), ValidationError> {
+    let name = registration
+        .strip_prefix("maps/")
+        .and_then(|p| p.strip_suffix(".json"));
+    if name.is_none_or(|n| {
+        n.is_empty()
+            || !n
+                .bytes()
+                .all(|c| c.is_ascii_lowercase() || c.is_ascii_digit() || c == b'-')
+    }) || !estimate.basis.contains(&record_id)
+        || !records
+            .get(&record_id)
+            .is_some_and(|r| r.entity_id == estimate.entity_id && r.scan_page.is_some())
+    {
+        return Err(fail(
+            &estimate.key,
+            "map location requires its subject sheet record and a registration artifact",
+        ));
+    }
+    Ok(())
+}
+
+fn location(
+    estimate: &Estimate,
+    entities: &BTreeMap<EntityId, &Entity>,
+    point: atlas_geo::coordinates::LonLat,
+    datum: atlas_geo::coordinates::Datum,
+    uncertainty_m: f64,
+) -> Result<(), ValidationError> {
+    let entity = entities
+        .get(&estimate.entity_id)
+        .ok_or_else(|| fail(&estimate.key, "unknown entity"))?;
+    point.validate().map_err(|e| caused(&estimate.key, e))?;
+    datum
+        .validate_body(entity.body)
+        .map_err(|e| caused(&estimate.key, e))?;
+    if !uncertainty_m.is_finite() || uncertainty_m <= 0.0 {
+        return Err(fail(
+            &estimate.key,
+            "location estimate needs positive uncertainty",
+        ));
     }
     Ok(())
 }

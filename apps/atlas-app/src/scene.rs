@@ -6,6 +6,7 @@ use atlas_geo::body::BodyId;
 use serde_json::{Value, json};
 
 pub mod basemap;
+mod locations;
 pub mod renderer;
 pub mod territories;
 
@@ -14,6 +15,8 @@ pub mod territories;
 pub enum MapLayer {
     /// All reviewed coordinates on the selected body.
     Observations,
+    /// Derived locations with their registration evidence and positional allowance.
+    MappedPlaces,
     /// Source anchors belonging to entities with evidence at the selected time.
     SelectedTime,
 }
@@ -26,6 +29,9 @@ pub fn features(
     layer: MapLayer,
     selected: Option<EntityId>,
 ) -> Value {
+    if layer == MapLayer::MappedPlaces {
+        return locations::features(atlas, body, selected);
+    }
     let features: Vec<_> = atlas
         .data
         .records
@@ -89,6 +95,10 @@ pub fn style(
         {"id": "observations", "type": "circle", "source": "observations",
             "filter": ["==", "geometry_role", "source_observation"],
             "paint": {"circle-radius": 4, "circle-color": "#8d3e32", "circle-stroke-width": 1,
+                "circle-stroke-color": "#fff5dc"}},
+        {"id": "mapped-places", "type": "circle", "source": "observations",
+            "filter": ["==", "geometry_role", "location_estimate"],
+            "paint": {"circle-radius": 5, "circle-color": "#176b78", "circle-stroke-width": 1.5,
                 "circle-stroke-color": "#fff5dc"}},
         {"id": "external-events", "type": "circle", "source": "observations",
             "filter": ["==", "geometry_role", "external_event"],

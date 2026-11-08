@@ -97,6 +97,13 @@ impl Application {
             self.dirty |= ui
                 .selectable_value(
                     &mut self.layer,
+                    MapLayer::MappedPlaces,
+                    "Map-derived locations",
+                )
+                .changed();
+            self.dirty |= ui
+                .selectable_value(
+                    &mut self.layer,
                     MapLayer::Observations,
                     "Source observations",
                 )

@@ -21,6 +21,10 @@ impl Application {
                 self.overlay_details(ui, id);
                 navigate = self.hierarchy(ui, id);
                 if let Some(entry) = self.atlas.entry(id) {
+                    if self.layer == crate::scene::MapLayer::MappedPlaces {
+                        mapped_locations(ui, &entry.estimates);
+                        ui.separator();
+                    }
                     ui.strong("Source observations");
                     for record in &entry.records {
                         if let Some(at) =
@@ -131,6 +135,29 @@ impl Application {
             date_target
         })
         .inner
+    }
+}
+
+fn mapped_locations(ui: &mut egui::Ui, estimates: &[atlas_ledger::model::Estimate]) {
+    for estimate in estimates {
+        if let atlas_ledger::model::EstimateValue::MapLocation {
+            point,
+            datum,
+            uncertainty_m,
+            ..
+        } = estimate.value
+        {
+            ui.strong("Map-derived location");
+            ui.label(format!(
+                "{:.5}°, {:.5}° · Datum: {datum:?}",
+                point.longitude, point.latitude
+            ));
+            ui.label(format!(
+                "Working positional allowance: {:.1} km",
+                uncertainty_m / 1000.0
+            ));
+            ui.collapsing("Registration details", |ui| ui.label(&estimate.brief));
+        }
     }
 }
 

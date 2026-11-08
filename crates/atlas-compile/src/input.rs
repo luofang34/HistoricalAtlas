@@ -19,6 +19,8 @@ use crate::plate_models::{PlateDocumentError, PlateModelDocument, validate_model
 /// Validated input bundle including the existing publication contract.
 #[derive(Debug)]
 pub struct LedgerInput {
+    /// Registered source maps supplying derived place locations.
+    pub place_maps: BTreeMap<String, crate::place_maps::PlaceMap>,
     /// Cited plate models available for reconstruction.
     pub plate_models: BTreeMap<String, PlateModelDocument>,
     /// Combined source catalog.
@@ -34,6 +36,15 @@ pub struct LedgerInput {
 /// File loading or ledger integrity failure.
 #[derive(Debug, Error)]
 pub enum InputError {
+    /// A source map could not supply validated place estimates.
+    #[error("invalid place map {path}: {source}")]
+    PlaceMap {
+        /// Map document path.
+        path: PathBuf,
+        /// Underlying evidence or registration failure.
+        #[source]
+        source: Box<crate::place_maps::PlaceMapError>,
+    },
     /// A source trace failed evidence or polygon validation.
     #[error("invalid map trace {path}: {source}")]
     Trace {
@@ -81,7 +92,7 @@ pub enum InputError {
     Empty(PathBuf),
 }
 
-/// Read source catalogs, ledger batches, and `*.plates.json` below a data directory.
+/// Read source catalogs, evidence batches, plate models, and source maps.
 pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
     let mut paths = Vec::new();
     collect_blocking(root, &mut paths)?;
@@ -92,14 +103,10 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
     let mut data = Dataset::default();
     let mut plate_models = BTreeMap::new();
     let mut traces = Vec::new();
+    let mut place_maps = Vec::new();
     for path in paths {
         if path.file_name().is_some_and(|name| name == "sources.toml") {
-            let content = read_blocking(&path)?;
-            let mut batch: SourceCatalog =
-                toml::from_str(&content).map_err(|source| InputError::Toml {
-                    path: path.clone(),
-                    source,
-                })?;
+            let mut batch = read_catalog_blocking(&path)?;
             catalog.sources.append(&mut batch.sources);
         } else if path.to_string_lossy().ends_with(".plates.json") {
             let document: PlateModelDocument = read_json_blocking(&path)?;
@@ -119,6 +126,8 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
             data.disputes.append(&mut batch.disputes);
         } else if path.to_string_lossy().ends_with(".trace.json") {
             traces.push((path.clone(), read_json_blocking(&path)?));
+        } else if path.to_string_lossy().ends_with(".places.json") {
+            place_maps.push((path.clone(), read_json_blocking(&path)?));
         }
     }
     if catalog.sources.is_empty() || !data.records.iter().any(|record| record.checked) {
@@ -129,13 +138,15 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
     let aliases = read_json_blocking(&root.join("aliases.json"))?;
     let published = read_json_blocking(&root.join("published.json"))?;
     verify_publication(&data, &aliases, &published)?;
-    let input = LedgerInput {
+    let mut input = LedgerInput {
+        place_maps: BTreeMap::new(),
         plate_models,
         catalog,
         data,
         aliases,
         published,
     };
+    load_place_maps(&mut input, place_maps)?;
     for (path, trace) in traces {
         crate::boundary::validate_trace(&input, &trace).map_err(|source| InputError::Trace {
             path,
@@ -143,6 +154,40 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
         })?;
     }
     Ok(input)
+}
+
+fn read_catalog_blocking(path: &Path) -> Result<SourceCatalog, InputError> {
+    toml::from_str(&read_blocking(path)?).map_err(|source| InputError::Toml {
+        path: path.to_owned(),
+        source,
+    })
+}
+
+fn load_place_maps(
+    input: &mut LedgerInput,
+    maps: Vec<(PathBuf, crate::place_maps::PlaceMap)>,
+) -> Result<(), InputError> {
+    for (path, map) in maps {
+        let (_, estimates) = crate::place_maps::register_places(input, &map).map_err(|source| {
+            InputError::PlaceMap {
+                path: path.clone(),
+                source: Box::new(source),
+            }
+        })?;
+        if input.place_maps.contains_key(&map.id) {
+            return Err(InputError::PlaceMap {
+                path,
+                source: Box::new(crate::place_maps::PlaceMapError::Evidence(format!(
+                    "duplicate map {}",
+                    map.id
+                ))),
+            });
+        }
+        input.data.estimates.extend(estimates);
+        input.place_maps.insert(map.id.clone(), map);
+    }
+    validate(&input.catalog, &input.data)?;
+    Ok(())
 }
 
 fn read_blocking(path: &Path) -> Result<String, InputError> {

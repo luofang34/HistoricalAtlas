@@ -93,21 +93,31 @@ impl Application {
     fn select(&mut self, id: EntityId, focus: bool) {
         self.selected = Some(id);
         self.dirty = true;
-        if focus
-            && let Some(point) = self.atlas.entry(id).and_then(|entry| {
-                entry
-                    .records
-                    .iter()
-                    .find_map(|record| record.observation.coordinate.as_ref())
-            })
-        {
-            self.camera.center = point.point;
+        if focus && let Some(point) = self.focus_point(id) {
+            self.camera.center = point;
             self.camera.zoom = if self.body == BodyId::Earth {
                 12.0
             } else {
                 5.0
             };
         }
+    }
+
+    fn focus_point(&self, id: EntityId) -> Option<atlas_geo::coordinates::LonLat> {
+        let entry = self.atlas.entry(id)?;
+        if self.layer == MapLayer::MappedPlaces {
+            return entry
+                .estimates
+                .iter()
+                .find_map(|estimate| match estimate.value {
+                    atlas_ledger::model::EstimateValue::MapLocation { point, .. } => Some(point),
+                    _ => None,
+                });
+        }
+        entry
+            .records
+            .iter()
+            .find_map(|record| record.observation.coordinate.as_ref().map(|c| c.point))
     }
 
     fn points(&self) -> Result<serde_json::Value, AppError> {
@@ -159,6 +169,18 @@ impl Application {
     }
 
     fn label(&self, id: EntityId) -> String {
+        if self.layer == MapLayer::MappedPlaces
+            && let Some(entry) = self.atlas.entry(id)
+            && let Some(record_id) = entry.estimates.iter().find_map(|e| match e.value {
+                atlas_ledger::model::EstimateValue::MapLocation { record_id, .. } => {
+                    Some(record_id)
+                }
+                _ => None,
+            })
+            && let Some(record) = entry.records.iter().find(|r| r.id == record_id)
+        {
+            return record.observation.name.clone();
+        }
         if self.layer == MapLayer::SelectedTime
             && let Some(names) = self
                 .selected_time

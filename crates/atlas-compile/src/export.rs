@@ -64,6 +64,20 @@ pub fn compile(input: &LedgerInput) -> Result<Artifacts, ExportError> {
     for (id, model) in &input.plate_models {
         insert(&mut output, &format!("plates/{id}.json"), model)?;
     }
+    let maps: Vec<_> = input.place_maps.keys().collect();
+    insert(&mut output, "maps/index.json", &maps)?;
+    for (id, map) in &input.place_maps {
+        let (registration, estimates) = crate::place_maps::register_places(input, map)
+            .map_err(|source| ExportError::PlaceMap(Box::new(source)))?;
+        insert(
+            &mut output,
+            &format!("maps/{id}.json"),
+            &serde_json::json!({
+                "map": map, "registration": registration,
+                "estimates": estimates.iter().map(|e| e.id).collect::<Vec<_>>()
+            }),
+        )?;
+    }
     Ok(output)
 }
 
@@ -194,6 +208,9 @@ pub fn write_blocking(output: &Path, artifacts: &Artifacts) -> Result<(), Export
 /// Static artifact construction or write failure.
 #[derive(Debug, Error)]
 pub enum ExportError {
+    /// A source map failed evidence or registration checks.
+    #[error("place map export: {0}")]
+    PlaceMap(#[source] Box<crate::place_maps::PlaceMapError>),
     /// Invalid model or missing plate-assignment evidence.
     #[error("plate model export: {0}")]
     Plate(#[from] crate::plate_models::PlateDocumentError),

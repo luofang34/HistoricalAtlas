@@ -3,6 +3,7 @@
 pub mod boundary;
 pub mod export;
 pub mod input;
+pub mod place_maps;
 pub mod plate_models;
 pub mod reconstruction;
 pub mod registration;

@@ -1,12 +1,25 @@
 use super::Application;
 
 impl Application {
+    fn map_caption(&self) -> &'static str {
+        if self.territory_visible {
+            return "Territory nodes and place locations · Drag to pan · Scroll to zoom";
+        }
+        match self.layer {
+            crate::scene::MapLayer::Observations => {
+                "Source coordinate anchors · Drag to pan · Scroll to zoom"
+            }
+            crate::scene::MapLayer::MappedPlaces => {
+                "Map-derived locations · Drag to pan · Scroll to zoom"
+            }
+            crate::scene::MapLayer::SelectedTime => {
+                "Time-selected source anchors · Drag to pan · Scroll to zoom"
+            }
+        }
+    }
+
     pub(super) fn map_panel(&mut self, ui: &mut egui::Ui) {
-        ui.label(if self.territory_visible {
-            "Territory nodes and source anchors · Drag to pan · Scroll to zoom"
-        } else {
-            "Source coordinate anchors · Drag to pan · Scroll to zoom"
-        });
+        ui.label(self.map_caption());
         if self.dirty {
             let points = match self.points() {
                 Ok(points) => points,

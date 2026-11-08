@@ -169,6 +169,7 @@ impl MapRenderer {
             &QueryOptions {
                 layers: Some(vec![
                     "observations".into(),
+                    "mapped-places".into(),
                     "external-events".into(),
                     "territory-nodes".into(),
                 ]),

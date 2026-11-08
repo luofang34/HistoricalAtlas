@@ -1,6 +1,49 @@
 use super::*;
 
 #[test]
+fn mapped_place_view_focuses_registered_location_and_shows_its_sheet_name() {
+    let mut app = Application::new(crate::catalog::tests::atlas()).unwrap();
+    let id = EntityId::from_key("earth/cn-gz/bijie/daqiao-commune").unwrap();
+    app.select(id, true);
+    let table = app.camera.center;
+    app.layer = MapLayer::MappedPlaces;
+    app.select(id, true);
+    assert!((app.camera.center.longitude - 105.2765584635).abs() < 1e-8);
+    assert_ne!(app.camera.center, table);
+    let collection = app.points().unwrap();
+    let features = collection["features"].as_array().unwrap();
+    assert_eq!(features.len(), 29);
+    let selected = features
+        .iter()
+        .find(|f| f["properties"]["selected"] == true)
+        .unwrap();
+    assert_eq!(selected["properties"]["geometry_role"], "location_estimate");
+    assert_eq!(selected["properties"]["datum"], "unspecified");
+    assert_eq!(selected["properties"]["uncertainty_m"], 4500.0);
+    assert_eq!(selected["properties"]["name"], "大桥公社");
+    let wuliping = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
+    assert_eq!(app.label(wuliping), "五里坪公社");
+    app.body = BodyId::Moon;
+    assert!(
+        app.points().unwrap()["features"]
+            .as_array()
+            .unwrap()
+            .is_empty()
+    );
+    app.body = BodyId::Earth;
+    app.layer = MapLayer::SelectedTime;
+    app.time.mode = crate::selection::TimeMode::MillionYears;
+    app.time.value = "240".into();
+    app.apply_time();
+    assert!(
+        app.points().unwrap()["features"]
+            .as_array()
+            .unwrap()
+            .is_empty()
+    );
+}
+
+#[test]
 fn street_search_displays_source_extent_without_focusing_an_invented_point() {
     let atlas = crate::catalog::tests::atlas();
     let id = EntityId::from_key("earth/cn-gz/bijie/urban/weining-west-road").unwrap();
