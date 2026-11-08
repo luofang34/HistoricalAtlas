@@ -34,6 +34,15 @@ pub struct LedgerInput {
 /// File loading or ledger integrity failure.
 #[derive(Debug, Error)]
 pub enum InputError {
+    /// A source trace failed evidence or polygon validation.
+    #[error("invalid map trace {path}: {source}")]
+    Trace {
+        /// Trace document path.
+        path: PathBuf,
+        /// Underlying evidence or geometry failure.
+        #[source]
+        source: Box<crate::boundary::BoundaryError>,
+    },
     /// Rotation model metadata or assignment failed validation.
     #[error("plate model input: {0}")]
     Plate(#[from] PlateDocumentError),
@@ -82,6 +91,7 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
     };
     let mut data = Dataset::default();
     let mut plate_models = BTreeMap::new();
+    let mut traces = Vec::new();
     for path in paths {
         if path.file_name().is_some_and(|name| name == "sources.toml") {
             let content = read_blocking(&path)?;
@@ -107,6 +117,8 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
             data.records.append(&mut batch.records);
             data.estimates.append(&mut batch.estimates);
             data.disputes.append(&mut batch.disputes);
+        } else if path.to_string_lossy().ends_with(".trace.json") {
+            traces.push((path.clone(), read_json_blocking(&path)?));
         }
     }
     if catalog.sources.is_empty() || !data.records.iter().any(|record| record.checked) {
@@ -117,13 +129,20 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
     let aliases = read_json_blocking(&root.join("aliases.json"))?;
     let published = read_json_blocking(&root.join("published.json"))?;
     verify_publication(&data, &aliases, &published)?;
-    Ok(LedgerInput {
+    let input = LedgerInput {
         plate_models,
         catalog,
         data,
         aliases,
         published,
-    })
+    };
+    for (path, trace) in traces {
+        crate::boundary::validate_trace(&input, &trace).map_err(|source| InputError::Trace {
+            path,
+            source: Box::new(source),
+        })?;
+    }
+    Ok(input)
 }
 
 fn read_blocking(path: &Path) -> Result<String, InputError> {

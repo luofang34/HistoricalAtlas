@@ -16,6 +16,8 @@ use thiserror::Error;
 
 use crate::input::LedgerInput;
 
+pub(crate) mod chunks;
+
 /// Strict upper bound for every static artifact in bytes.
 pub const MAX_FILE_BYTES: usize = 4_000_000;
 

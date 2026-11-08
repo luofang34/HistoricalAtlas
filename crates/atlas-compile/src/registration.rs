@@ -64,7 +64,7 @@ pub struct RasterFrame {
 }
 
 impl RasterFrame {
-    fn contains(self, point: PlanarPoint) -> bool {
+    pub(crate) fn contains(self, point: PlanarPoint) -> bool {
         self.width > 0
             && self.height > 0
             && (0.0..=f64::from(self.width)).contains(&point.x)

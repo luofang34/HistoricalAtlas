@@ -1,0 +1,346 @@
+{
+  "entities": [
+    {
+      "id": "d3b7c1c7-e72e-590a-b33f-01b7a4b6d140",
+      "key": "earth/cn-gz/zhijin/county",
+      "body": "earth",
+      "kind": "county"
+    },
+    {
+      "id": "b5e51141-9610-59e3-8052-d1f8530abbb5",
+      "key": "earth/cn-gz/zhijin/ertang-commune",
+      "body": "earth",
+      "kind": "commune"
+    },
+    {
+      "id": "cfc3c653-bbf6-52f9-915f-12a6cd4627be",
+      "key": "earth/cn-gz/zhijin/ertang/heba-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "236684db-927e-53ab-81d0-95b5a61550e9",
+      "key": "earth/cn-gz/zhijin/ertang/xinzhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c5d0a9ef-ee71-59ed-9f50-174c9eb3f5c0",
+      "key": "earth/cn-gz/zhijin/ertang/jinshan-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "3435c9a0-296d-5041-85e9-97f6477c5791",
+      "key": "earth/cn-gz/zhijin/ertang/lengchong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "93c12e4a-63a2-52fb-be49-9a045bc07114",
+      "key": "earth/cn-gz/zhijin/ertang/ertang-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "5da6b382-b940-5ff2-beb4-6e1cfb8b48f3",
+      "key": "earth/cn-gz/zhijin/ertang/ertang-village",
+      "body": "earth",
+      "kind": "settlement"
+    }
+  ],
+  "records": [
+    {
+      "id": "d52af87b-24f4-5a5c-a055-965637c3d235",
+      "key": "zhijin-gazetteer-scan-b/preface/county",
+      "entity_id": "d3b7c1c7-e72e-590a-b33f-01b7a4b6d140",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "凡例",
+      "scan_page": 4,
+      "locator": "Heading and paragraphs 1–3",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "织金县",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "county",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "45e7de98-49b3-5faf-8ebf-5b07ab9d8aef",
+      "key": "zhijin-gazetteer-scan-b/preface/boundary-method",
+      "entity_id": "d3b7c1c7-e72e-590a-b33f-01b7a4b6d140",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "凡例",
+      "scan_page": 4,
+      "locator": "Paragraph 10, construction of commune boundaries",
+      "verbatim_quote": "各公社地名图中，社界划线，系以公社所辖地名所在划线，均未进行实测",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "织金县",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "county",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "44e6371a-b506-5c81-9697-092e113622eb",
+      "key": "zhijin-gazetteer-scan-b/p32/ertang/boundary",
+      "entity_id": "b5e51141-9610-59e3-8052-d1f8530abbb5",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "32",
+      "scan_page": 40,
+      "locator": "Map title, scale 1:50,000, and outer commune boundary",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "二塘公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "d3b7c1c7-e72e-590a-b33f-01b7a4b6d140",
+        "rank": "commune",
+        "seat_id": "5da6b382-b940-5ff2-beb4-6e1cfb8b48f3",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "262028a7-382d-55d6-bf05-3de7e54fa41a",
+      "key": "zhijin-gazetteer-scan-b/p32/ertang/heba-brigade",
+      "entity_id": "cfc3c653-bbf6-52f9-915f-12a6cd4627be",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "32",
+      "scan_page": 40,
+      "locator": "Brigade label and seat symbol on the commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "河坝大队",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b5e51141-9610-59e3-8052-d1f8530abbb5",
+        "rank": "brigade",
+        "seat_id": "236684db-927e-53ab-81d0-95b5a61550e9",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5c182abb-e0aa-570b-9e55-ffc7f0998e1b",
+      "key": "zhijin-gazetteer-scan-b/p32/ertang/xinzhai",
+      "entity_id": "236684db-927e-53ab-81d0-95b5a61550e9",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "32",
+      "scan_page": 40,
+      "locator": "Named brigade seat on the commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "新寨",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "cfc3c653-bbf6-52f9-915f-12a6cd4627be",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a2a71ecf-68ac-5818-b373-38f3dc9fa1de",
+      "key": "zhijin-gazetteer-scan-b/p32/ertang/jinshan-brigade",
+      "entity_id": "c5d0a9ef-ee71-59ed-9f50-174c9eb3f5c0",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "32",
+      "scan_page": 40,
+      "locator": "Brigade label and seat symbol on the commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "金山大队",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b5e51141-9610-59e3-8052-d1f8530abbb5",
+        "rank": "brigade",
+        "seat_id": "3435c9a0-296d-5041-85e9-97f6477c5791",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ece9ff35-04fd-5535-b0dd-74beb7c4fa33",
+      "key": "zhijin-gazetteer-scan-b/p32/ertang/lengchong",
+      "entity_id": "3435c9a0-296d-5041-85e9-97f6477c5791",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "32",
+      "scan_page": 40,
+      "locator": "Named brigade seat on the commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "冷冲",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "c5d0a9ef-ee71-59ed-9f50-174c9eb3f5c0",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "19790256-b86e-59ba-8d66-552f004e47a6",
+      "key": "zhijin-gazetteer-scan-b/p32/ertang/ertang-brigade",
+      "entity_id": "93c12e4a-63a2-52fb-be49-9a045bc07114",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "32",
+      "scan_page": 40,
+      "locator": "Brigade label and seat symbol on the commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "二塘大队",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b5e51141-9610-59e3-8052-d1f8530abbb5",
+        "rank": "brigade",
+        "seat_id": "5da6b382-b940-5ff2-beb4-6e1cfb8b48f3",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "140dad38-40fd-51fd-9e70-0aaf738b375b",
+      "key": "zhijin-gazetteer-scan-b/p32/ertang/ertang-village",
+      "entity_id": "5da6b382-b940-5ff2-beb4-6e1cfb8b48f3",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "32",
+      "scan_page": 40,
+      "locator": "Named brigade seat on the commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "二塘",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "93c12e4a-63a2-52fb-be49-9a045bc07114",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b7c3d792-73e1-51aa-9ca6-a9ccdf61e272",
+      "key": "zhijin-gazetteer-scan-b/p33/ertang/overview",
+      "entity_id": "b5e51141-9610-59e3-8052-d1f8530abbb5",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "33",
+      "scan_page": 41,
+      "locator": "Overview paragraphs 1 and 4; composition and population",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "二塘公社",
+        "pinyin": null,
+        "population": 5299,
+        "households": 1048,
+        "ethnicities": [
+          "汉",
+          "青",
+          "布依",
+          "苗",
+          "南京",
+          "仡佬",
+          "蔡"
+        ],
+        "parent_id": "d3b7c1c7-e72e-590a-b33f-01b7a4b6d140",
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "辖三个大队、40个生产队39个自然村，1048户，5299人。"
+      }
+    },
+    {
+      "id": "a3fdbd1c-354c-5568-89ca-2125e6b166e7",
+      "key": "zhijin-gazetteer-scan-b/p33/ertang/printed-coordinate",
+      "entity_id": "b5e51141-9610-59e3-8052-d1f8530abbb5",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "33",
+      "scan_page": 41,
+      "locator": "First paragraph, printed geographical coordinate",
+      "verbatim_quote": "东经150°47′北纬26°45′",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "二塘公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "unresolved_coordinate": {
+          "longitude_text": "150°47′",
+          "latitude_text": "26°45′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified",
+          "reason": "The printed longitude is incompatible with the named Guizhou locality; no numeric correction is assigned."
+        }
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

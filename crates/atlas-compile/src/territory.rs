@@ -13,8 +13,7 @@ use crate::{
     input::{InputError, LedgerInput, load_blocking, read_json_blocking},
 };
 
-mod chunks;
-use chunks::{ChunkKind, insert_chunks};
+use crate::export::chunks::{ChunkKind, insert_chunks};
 
 #[derive(Serialize)]
 struct TerritoryManifest<'a> {

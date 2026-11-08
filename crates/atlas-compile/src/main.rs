@@ -3,6 +3,7 @@
 use std::{error::Error, path::Path};
 
 use atlas_compile::{
+    boundary::boundary_blocking,
     export::{compile, write_blocking},
     input::load_blocking,
     reconstruction::reconstruct_blocking,
@@ -19,7 +20,14 @@ fn main() -> Result<(), Box<dyn Error>> {
         .without_time()
         .init();
     let args: Vec<_> = std::env::args().skip(1).collect();
-    match args.as_slice() {
+    dispatch(&args)
+}
+
+fn dispatch(args: &[String]) -> Result<(), Box<dyn Error>> {
+    if boundary_command(args)? {
+        return Ok(());
+    }
+    match args {
         [command, root] if command == "verify" => {
             let input = load_blocking(Path::new(root))?;
             let artifacts = compile(&input)?;
@@ -77,9 +85,34 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
         _ => {
             return Err(
-                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | register <data> <controls.json> <new-result.json> | slice <data> <tt-ms> <nominal|possible|certain> <new-output-directory> | reconstruct <data> <request.json> <new-output-directory> | territory <data> <request.json> <new-output-directory> | tiles <data> <base-url> <max-zoom> <new-output-directory>".into(),
+                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | register <data> <controls.json> <new-result.json> | slice <data> <tt-ms> <nominal|possible|certain> <new-output-directory> | reconstruct <data> <request.json> <new-output-directory> | territory <data> <request.json> <new-output-directory> | trace <data> <trace.json> <new-output-directory> | boundary <data> <trace.json> <controls.json> <new-output-directory> | tiles <data> <base-url> <max-zoom> <new-output-directory>".into(),
             );
         }
     }
     Ok(())
+}
+
+fn boundary_command(args: &[String]) -> Result<bool, Box<dyn Error>> {
+    match args {
+        [command, root, trace, destination] if command == "trace" => {
+            let files = boundary_blocking(
+                Path::new(root),
+                Path::new(trace),
+                None,
+                Path::new(destination),
+            )?;
+            info!(files, destination, "Map trace compiled");
+        }
+        [command, root, trace, controls, destination] if command == "boundary" => {
+            let files = boundary_blocking(
+                Path::new(root),
+                Path::new(trace),
+                Some(Path::new(controls)),
+                Path::new(destination),
+            )?;
+            info!(files, destination, "Map boundary registered");
+        }
+        _ => return Ok(false),
+    }
+    Ok(true)
 }

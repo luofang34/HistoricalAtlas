@@ -10,6 +10,8 @@ Requires Rust 1.97.1 or later with the `wasm32-unknown-unknown` target, Python 3
 cargo run -p atlas-compile -- verify data
 cargo run -p atlas-compile -- build data dist
 cargo run -p atlas-compile -- register data controls.json registered.json
+cargo run -p atlas-compile -- trace data data/guizhou-1960s/zhijin/ertang.trace.json <new-output-directory>
+cargo run -p atlas-compile -- boundary data <trace.json> <boundary-controls.json> <new-output-directory>
 cargo run -p atlas-compile -- slice data <tt-ms> nominal <new-output-directory>
 cargo run -p atlas-compile -- reconstruct data data/paleogeography/panxian-240ma.reconstruction.json <new-output-directory>
 cargo run -p atlas-compile -- territory data data/guizhou-1960s/bijie/wuliping.territory.json <new-output-directory>
@@ -42,5 +44,9 @@ For page extraction, run `python3 tools/ocr-ingest/ingest.py --pdf <path> --page
 Group extracted table cells with `python3 tools/ocr-ingest/tables.py scratch/extraction scratch/tables --profile bijie`. Profiles are available for Bijie, Anshun, and Liuzhi. Table drafts retain the text boxes and mark fields that need review.
 
 Sheet registration accepts a `RegistrationJob` JSON document with a catalogued source, scan page, full-page raster dimensions, target CRS and units, referenced control points, independent check points, and traced vertices. Source coordinates use image pixels measured from the top-left corner. Choose `{"kind":"affine"}` or `{"kind":"thin_plate","smoothing":0.0}`. The result includes the scan fingerprint, transformed vertices, and residuals in the declared target units. See `atlas_compile::registration` in the generated Rust API documentation for the input fields.
+
+The `trace` command validates a `SheetTrace` and publishes its closed polygon rings in source pixels. Rings reference a shared vertex array; each unit cites a checked record on the traced sheet. `boundary_method` records `surveyed`, `compiled_from_places`, or `unstated`, with checked `method_basis` records for stated methods. `verify` also checks every `*.trace.json` in the data directory. The Ertang example traces the commune outline on printed page 32 and cites the edition's boundary-construction explanation.
+
+The `boundary` command adds a `BoundaryRegistration`: `target_frame`, `method`, `controls`, `check_points`, and a positive `maximum_segment_pixels`. It subdivides shared edges before registration and checks source and transformed topology, including self-intersections, holes, disconnected interiors, and overlapping multipolygon components. Outputs retain the original trace, sampled vertices, control references, residuals, and target CRS in files smaller than 4 MB. Earth output in `OGC:CRS84` with `degrees` also includes GeoJSON; other declared frames retain planar coordinates. Geographic rings crossing the antimeridian require split components. `surveyed_polygon` requires a cited survey method; other source-map outlines use `mapped_polygon`. Fit residuals measure registration quality, while the source's boundary-construction method remains separately recorded. Boundary validity stays unknown until dated boundary evidence is available.
 
 Code and tools are licensed under [GNU AGPL v3 or later](LICENSE). Curated data is licensed under [CC BY-SA 4.0](data/LICENSE). Attribute Historical Atlas and the cited sources when reusing the data, and identify your changes.

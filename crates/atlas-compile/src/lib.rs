@@ -1,5 +1,6 @@
 //! Deterministic static entity indexes compiled from a checked evidence ledger.
 
+pub mod boundary;
 pub mod export;
 pub mod input;
 pub mod plate_models;

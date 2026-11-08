@@ -3,12 +3,12 @@ use serde::Serialize;
 use crate::export::{Artifacts, ExportError, MAX_FILE_BYTES, insert_bytes};
 
 #[derive(Clone, Copy)]
-pub(super) enum ChunkKind {
+pub(crate) enum ChunkKind {
     Array,
     GeoJson,
 }
 
-pub(super) fn insert_chunks<T: Serialize>(
+pub(crate) fn insert_chunks<T: Serialize>(
     output: &mut Artifacts,
     prefix: &str,
     values: &[T],
