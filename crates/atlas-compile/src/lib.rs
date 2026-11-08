@@ -2,5 +2,7 @@
 
 pub mod export;
 pub mod input;
+pub mod plate_models;
+pub mod reconstruction;
 pub mod registration;
 pub mod slice;

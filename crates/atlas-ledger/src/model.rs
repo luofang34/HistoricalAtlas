@@ -10,6 +10,7 @@ use atlas_core::{
 use atlas_geo::{
     body::BodyId,
     coordinates::{CoordinateObservation, Datum, LonLat},
+    plates::PlateId,
 };
 use serde::{Deserialize, Serialize};
 
@@ -193,6 +194,13 @@ pub struct Estimate {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(tag = "kind", rename_all = "snake_case", deny_unknown_fields)]
 pub enum EstimateValue {
+    /// Association with a plate in a named reconstruction model.
+    Plate {
+        /// Stable model identifier, resolved by the compiler's model catalog.
+        model_id: String,
+        /// Numeric moving-plate identity in that model.
+        plate_id: PlateId,
+    },
     /// Formation or establishment of an entity.
     Origin {
         /// Date constraint, including one-sided or unquantified uncertainty.

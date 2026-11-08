@@ -34,6 +34,7 @@ pub type Artifacts = BTreeMap<PathBuf, Vec<u8>>;
 pub fn compile(input: &LedgerInput) -> Result<Artifacts, ExportError> {
     atlas_ledger::validation::validate(&input.catalog, &input.data)?;
     atlas_ledger::publication::verify_publication(&input.data, &input.aliases, &input.published)?;
+    crate::plate_models::validate_models(&input.plate_models, &input.catalog, &input.data)?;
     let shards = index_entities(input);
     let current: BTreeSet<_> = shards
         .values()
@@ -56,6 +57,11 @@ pub fn compile(input: &LedgerInput) -> Result<Artifacts, ExportError> {
     let mut sources: Vec<_> = input.catalog.sources.iter().collect();
     sources.sort_by(|a, b| a.id.cmp(&b.id));
     insert(&mut output, "sources.json", &sources)?;
+    let models: Vec<_> = input.plate_models.keys().collect();
+    insert(&mut output, "plates/models.json", &models)?;
+    for (id, model) in &input.plate_models {
+        insert(&mut output, &format!("plates/{id}.json"), model)?;
+    }
     Ok(output)
 }
 
@@ -178,6 +184,9 @@ pub fn write_blocking(output: &Path, artifacts: &Artifacts) -> Result<(), Export
 /// Static artifact construction or write failure.
 #[derive(Debug, Error)]
 pub enum ExportError {
+    /// Invalid model or missing plate-assignment evidence.
+    #[error("plate model export: {0}")]
+    Plate(#[from] crate::plate_models::PlateDocumentError),
     /// JSON serialization failed.
     #[error("index serialization: {0}")]
     Json(#[from] serde_json::Error),

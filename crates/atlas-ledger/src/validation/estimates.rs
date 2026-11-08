@@ -66,6 +66,26 @@ fn validate_value(
     records: &BTreeMap<FactId, &Record>,
 ) -> Result<(), ValidationError> {
     match &estimate.value {
+        EstimateValue::Plate { model_id, plate_id } => {
+            let on_earth = entities
+                .get(&estimate.entity_id)
+                .is_some_and(|entity| entity.body == atlas_geo::body::BodyId::Earth);
+            let subject_basis = estimate.basis.iter().any(|id| {
+                records
+                    .get(id)
+                    .is_some_and(|record| record.entity_id == estimate.entity_id)
+            });
+            if !on_earth
+                || !subject_basis
+                || model_id.trim().is_empty()
+                || matches!(plate_id.0, 0 | 999)
+            {
+                return Err(fail(
+                    &estimate.key,
+                    "plate assignment needs an Earth subject record, a model, and an active plate ID",
+                ));
+            }
+        }
         EstimateValue::Origin { time } => {
             time.validate().map_err(|e| caused(&estimate.key, e))?;
             if !estimate.basis.iter().any(|id| {

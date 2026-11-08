@@ -5,6 +5,7 @@ use std::{error::Error, path::Path};
 use atlas_compile::{
     export::{compile, write_blocking},
     input::load_blocking,
+    reconstruction::reconstruct_blocking,
     registration::register_blocking,
     slice::write_slice_blocking,
 };
@@ -48,6 +49,11 @@ fn main() -> Result<(), Box<dyn Error>> {
                 "Sheet registered"
             );
         }
+        [command, root, request, destination] if command == "reconstruct" => {
+            let files =
+                reconstruct_blocking(Path::new(root), Path::new(request), Path::new(destination))?;
+            info!(files, destination, "Plate reconstruction compiled");
+        }
         [command, root, ticks, selection, destination] if command == "slice" => {
             let files =
                 write_slice_blocking(Path::new(root), ticks, selection, Path::new(destination))?;
@@ -55,7 +61,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
         _ => {
             return Err(
-                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | register <data> <controls.json> <new-result.json> | slice <data> <tt-ms> <nominal|possible|certain> <new-output-directory>".into(),
+                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | register <data> <controls.json> <new-result.json> | slice <data> <tt-ms> <nominal|possible|certain> <new-output-directory> | reconstruct <data> <request.json> <new-output-directory>".into(),
             );
         }
     }

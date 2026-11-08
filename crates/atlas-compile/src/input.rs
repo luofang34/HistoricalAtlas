@@ -1,6 +1,7 @@
 //! Filesystem input with errors identifying the exact ledger document.
 
 use std::{
+    collections::BTreeMap,
     fs,
     path::{Path, PathBuf},
 };
@@ -13,9 +14,13 @@ use atlas_ledger::{
 use serde::de::DeserializeOwned;
 use thiserror::Error;
 
+use crate::plate_models::{PlateDocumentError, PlateModelDocument, validate_models};
+
 /// Validated input bundle including the existing publication contract.
 #[derive(Debug)]
 pub struct LedgerInput {
+    /// Cited plate models available for reconstruction.
+    pub plate_models: BTreeMap<String, PlateModelDocument>,
     /// Combined source catalog.
     pub catalog: SourceCatalog,
     /// Combined geographical batches.
@@ -29,6 +34,9 @@ pub struct LedgerInput {
 /// File loading or ledger integrity failure.
 #[derive(Debug, Error)]
 pub enum InputError {
+    /// Rotation model metadata or assignment failed validation.
+    #[error("plate model input: {0}")]
+    Plate(#[from] PlateDocumentError),
     /// Read or directory traversal failure.
     #[error("cannot read {path}: {source}")]
     Io {
@@ -64,7 +72,7 @@ pub enum InputError {
     Empty(PathBuf),
 }
 
-/// Read all `sources.toml` and `*.dataset.json` batches below a data directory.
+/// Read source catalogs, ledger batches, and `*.plates.json` below a data directory.
 pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
     let mut paths = Vec::new();
     collect_blocking(root, &mut paths)?;
@@ -73,6 +81,7 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
         sources: Vec::new(),
     };
     let mut data = Dataset::default();
+    let mut plate_models = BTreeMap::new();
     for path in paths {
         if path.file_name().is_some_and(|name| name == "sources.toml") {
             let content = read_blocking(&path)?;
@@ -82,6 +91,16 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
                     source,
                 })?;
             catalog.sources.append(&mut batch.sources);
+        } else if path.to_string_lossy().ends_with(".plates.json") {
+            let document: PlateModelDocument = read_json_blocking(&path)?;
+            let id = document.id.clone();
+            if plate_models.insert(id.clone(), document).is_some() {
+                return Err(PlateDocumentError::Invalid {
+                    model: id,
+                    reason: "duplicate model document".into(),
+                }
+                .into());
+            }
         } else if path.to_string_lossy().ends_with(".dataset.json") {
             let mut batch: Dataset = read_json_blocking(&path)?;
             data.entities.append(&mut batch.entities);
@@ -94,10 +113,12 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
         return Err(InputError::Empty(root.to_owned()));
     }
     validate(&catalog, &data)?;
+    validate_models(&plate_models, &catalog, &data)?;
     let aliases = read_json_blocking(&root.join("aliases.json"))?;
     let published = read_json_blocking(&root.join("published.json"))?;
     verify_publication(&data, &aliases, &published)?;
     Ok(LedgerInput {
+        plate_models,
         catalog,
         data,
         aliases,
