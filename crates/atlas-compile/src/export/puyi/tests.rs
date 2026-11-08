@@ -7,6 +7,9 @@ use atlas_ledger::{
     timeline::{TimeSelection, Timeline},
 };
 
+#[path = "huoma_shatian/tests.rs"]
+mod huoma_shatian;
+
 #[cfg(test)]
 fn input() -> LedgerInput {
     load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap()

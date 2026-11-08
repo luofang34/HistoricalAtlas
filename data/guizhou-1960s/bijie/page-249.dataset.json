@@ -1,0 +1,928 @@
+{
+  "entities": [
+    {
+      "id": "d91bba2b-fa9f-5d87-95fe-d4770527c79a",
+      "key": "earth/cn-gz/bijie/shatian/muwo/xiagou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "60f159c3-11a0-5854-aa10-7711021333f8",
+      "key": "earth/cn-gz/bijie/shatian/muwo/yanwo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "268c3edb-f145-5659-81b3-415890a2a3d3",
+      "key": "earth/cn-gz/bijie/shatian/muwo/dalubian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "559e9633-2fdf-59c4-aa13-5bc686b9a281",
+      "key": "earth/cn-gz/bijie/shatian/muwo/hegoutou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "e6456945-3472-5dba-9745-2fb17f2248be",
+      "key": "earth/cn-gz/bijie/shatian/muwo/xiaomuwo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "339b814b-386b-526f-93cc-132578cb5636",
+      "key": "earth/cn-gz/bijie/shatian/muwo/damuwo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "ed7c319c-617b-5111-b34c-2e9488cc1e6a",
+      "key": "earth/cn-gz/bijie/shatian/muwo/muwo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c3b7a7d5-845b-5851-85e3-92c5dc50f952",
+      "key": "earth/cn-gz/bijie/shatian/muwo/zhongchang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "177b02f5-fdbe-5645-bdc5-5280bf7b614f",
+      "key": "earth/cn-gz/bijie/shatian/muwo/dayuanzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "2e255419-eb80-52fa-a1ad-7a6b3e2fd077",
+      "key": "earth/cn-gz/bijie/shatian/baigai-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "c38fa778-b17a-5f52-aa2c-2a99ec10769b",
+      "key": "earth/cn-gz/bijie/shatian/baigai/baigai-west",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "a9e716ee-e0d0-5f8c-a2df-9feee5d5fcb0",
+      "key": "earth/cn-gz/bijie/shatian/baigai/zongjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c797e148-f5cb-5ae2-904c-7961d0e03d72",
+      "key": "earth/cn-gz/bijie/shatian/baigai/baigai-east",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "75bde675-6d72-5743-af2d-d918fd41dc34",
+      "key": "earth/cn-gz/bijie/shatian/baigai/yakoushang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c7eb8ed2-5290-5e09-98f4-cf06ffe06e2c",
+      "key": "earth/cn-gz/bijie/shatian/baigai/huanpian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "97c4f73d-cb56-5300-815b-82051618e6cf",
+      "key": "earth/cn-gz/bijie/shatian/baigai/yangtianwo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "40508e85-7c41-5a08-84d9-78c5b3465a26",
+      "key": "earth/cn-gz/bijie/shatian/baigai/laoyingyan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "0ceab29e-4af3-5043-8d7b-67aac02399f1",
+      "key": "earth/cn-gz/bijie/shatian/baigai/yantoushang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "7a2e8e4e-ce9f-50b8-b11a-d61194841cbc",
+      "key": "earth/cn-gz/bijie/shatian/baigai/datu",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "52f48d45-dc1c-5156-8d26-d0d1fac7d778",
+      "key": "earth/cn-gz/bijie/shatian/baigai/liuerhe",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "0a4f4060-d307-517c-bf43-ba4bd0d630a5",
+      "key": "earth/cn-gz/bijie/shatian/houzi-mountain",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "1547cd11-a6fb-5818-8050-e82e2b5d6a17",
+      "key": "earth/cn-gz/bijie/shatian/liuer-river",
+      "body": "earth",
+      "kind": "river"
+    }
+  ],
+  "records": [
+    {
+      "id": "30b8627a-a13f-53a3-983c-56705cb15df2",
+      "key": "bijie-gazetteer/p249/shatian/muwo/xiagou",
+      "entity_id": "d91bba2b-fa9f-5d87-95fe-d4770527c79a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 1: 下沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "下沟",
+        "pinyin": "Xiàgōu",
+        "population": 52,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "a007cc7a-c70c-5b17-a5c8-5b445f87baa6",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.616666666666667
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°37′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "57b0dcf8-abdd-58df-8175-c9b3fce29c9d",
+      "key": "bijie-gazetteer/p249/shatian/muwo/yanwo",
+      "entity_id": "60f159c3-11a0-5854-aa10-7711021333f8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 2: 燕窝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "燕窝",
+        "pinyin": "Yànwō",
+        "population": 53,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "a007cc7a-c70c-5b17-a5c8-5b445f87baa6",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.616666666666667
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°37′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4e2f08ab-643a-5a6c-8559-b4af86971f85",
+      "key": "bijie-gazetteer/p249/shatian/muwo/dalubian",
+      "entity_id": "268c3edb-f145-5659-81b3-415890a2a3d3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 3: 大路边",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大路边",
+        "pinyin": "Dàlùbiān",
+        "population": 102,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "南京"
+        ],
+        "parent_id": "a007cc7a-c70c-5b17-a5c8-5b445f87baa6",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f70f2dce-9c6e-525c-a817-044084fe78c4",
+      "key": "bijie-gazetteer/p249/shatian/muwo/hegoutou",
+      "entity_id": "559e9633-2fdf-59c4-aa13-5bc686b9a281",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 4: 河沟头",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "河沟头",
+        "pinyin": "Hégōutóu",
+        "population": 25,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "a007cc7a-c70c-5b17-a5c8-5b445f87baa6",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d344e80e-8972-5697-84c3-c47f741ba41b",
+      "key": "bijie-gazetteer/p249/shatian/muwo/xiaomuwo",
+      "entity_id": "e6456945-3472-5dba-9745-2fb17f2248be",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 5: 小木窝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小木窝",
+        "pinyin": "Xiǎomùwō",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "a007cc7a-c70c-5b17-a5c8-5b445f87baa6",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.616666666666667
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°37′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "包括下、中沟、龙家寨"
+      }
+    },
+    {
+      "id": "8397365b-07e0-5d38-9a19-61d5ce1a2f66",
+      "key": "bijie-gazetteer/p249/shatian/muwo/damuwo",
+      "entity_id": "339b814b-386b-526f-93cc-132578cb5636",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 6: 大木窝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大木窝",
+        "pinyin": "Dàmùwō",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "a007cc7a-c70c-5b17-a5c8-5b445f87baa6",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "包括大路边、河沟头、中厂、木窝、半坡"
+      }
+    },
+    {
+      "id": "37ddb28b-10de-5fdd-b099-a838e94f9829",
+      "key": "bijie-gazetteer/p249/shatian/muwo/muwo",
+      "entity_id": "ed7c319c-617b-5111-b34c-2e9488cc1e6a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 7: 木窝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "木窝",
+        "pinyin": "Mùwō",
+        "population": 110,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "a007cc7a-c70c-5b17-a5c8-5b445f87baa6",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "e962757b-a4b6-5c55-8725-b4ffbcb5a21f",
+      "key": "bijie-gazetteer/p249/shatian/muwo/zhongchang",
+      "entity_id": "c3b7a7d5-845b-5851-85e3-92c5dc50f952",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 8: 中厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "中厂",
+        "pinyin": "Zhōngchǎng",
+        "population": 125,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "a007cc7a-c70c-5b17-a5c8-5b445f87baa6",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5d1e5187-ab70-50d2-a654-bc8344f2605a",
+      "key": "bijie-gazetteer/p249/shatian/muwo/dayuanzi",
+      "entity_id": "177b02f5-fdbe-5645-bdc5-5280bf7b614f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 9: 大园子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大园子",
+        "pinyin": "Dàyuánzǐ",
+        "population": 72,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "a007cc7a-c70c-5b17-a5c8-5b445f87baa6",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.633333333333333
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°38′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "cca474a6-9428-5457-9014-a4e70744ff31",
+      "key": "bijie-gazetteer/p249/shatian/baigai-brigade",
+      "entity_id": "2e255419-eb80-52fa-a1ad-7a6b3e2fd077",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 10: 摆盖大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "摆盖大队",
+        "pinyin": "Bǎigài Dàduì",
+        "population": 972,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉",
+          "苗",
+          "京"
+        ],
+        "parent_id": "fd401a53-6de9-5f76-8cef-63645da4835a",
+        "rank": "brigade",
+        "seat_id": "75bde675-6d72-5743-af2d-d918fd41dc34",
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f66ef6cc-492c-5f75-b792-786645b1ee19",
+      "key": "bijie-gazetteer/p249/shatian/baigai/baigai-west",
+      "entity_id": "c38fa778-b17a-5f52-aa2c-2a99ec10769b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 11: 摆盖",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "摆盖",
+        "pinyin": "Bǎigài",
+        "population": 57,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "2e255419-eb80-52fa-a1ad-7a6b3e2fd077",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.633333333333333
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°38′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7398c7ca-3610-5dbc-830a-c1e9c1b5fdfe",
+      "key": "bijie-gazetteer/p249/shatian/baigai/zongjiazhai",
+      "entity_id": "a9e716ee-e0d0-5f8c-a2df-9feee5d5fcb0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 12: 宗家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "宗家寨",
+        "pinyin": "Zōngjiāzhài",
+        "population": 265,
+        "households": null,
+        "ethnicities": [
+          "京"
+        ],
+        "parent_id": "2e255419-eb80-52fa-a1ad-7a6b3e2fd077",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.633333333333333
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°38′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "0f9c5e6d-7b41-542a-9fcd-da0392cf3d54",
+      "key": "bijie-gazetteer/p249/shatian/baigai/baigai-east",
+      "entity_id": "c797e148-f5cb-5ae2-904c-7961d0e03d72",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 13: 摆盖",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "摆盖",
+        "pinyin": "Bǎigài",
+        "population": 78,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "2e255419-eb80-52fa-a1ad-7a6b3e2fd077",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.633333333333333
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°38′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e949ef35-513e-5520-b551-519dd7f7cf9a",
+      "key": "bijie-gazetteer/p249/shatian/baigai/yakoushang",
+      "entity_id": "75bde675-6d72-5743-af2d-d918fd41dc34",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 14: 垭口上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "垭口上",
+        "pinyin": "Yàkǒushàng",
+        "population": 155,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "京",
+          "苗"
+        ],
+        "parent_id": "2e255419-eb80-52fa-a1ad-7a6b3e2fd077",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "40f547df-8861-58fc-99fc-fb46542e9f2b",
+      "key": "bijie-gazetteer/p249/shatian/baigai/huanpian",
+      "entity_id": "c7eb8ed2-5290-5e09-98f4-cf06ffe06e2c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 15: 环偏",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "环偏",
+        "pinyin": "Huánpiān",
+        "population": 76,
+        "households": null,
+        "ethnicities": [
+          "京",
+          "汉",
+          "苗"
+        ],
+        "parent_id": "2e255419-eb80-52fa-a1ad-7a6b3e2fd077",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.633333333333333
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°38′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "0bd5cf3b-f484-59e5-bd28-b5a27592548d",
+      "key": "bijie-gazetteer/p249/shatian/baigai/yangtianwo",
+      "entity_id": "97c4f73d-cb56-5300-815b-82051618e6cf",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 16: 仰天窝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "仰天窝",
+        "pinyin": "Yǎngtiānwō",
+        "population": 17,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "2e255419-eb80-52fa-a1ad-7a6b3e2fd077",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "fdf21177-658b-57d9-ac8b-16daa4cf0900",
+      "key": "bijie-gazetteer/p249/shatian/baigai/laoyingyan",
+      "entity_id": "40508e85-7c41-5a08-84d9-78c5b3465a26",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 17: 老鹰岩",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "老鹰岩",
+        "pinyin": "Lǎoyīngyán",
+        "population": 36,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "京"
+        ],
+        "parent_id": "2e255419-eb80-52fa-a1ad-7a6b3e2fd077",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d480fad6-ec54-5a85-b074-c3986597162b",
+      "key": "bijie-gazetteer/p249/shatian/baigai/yantoushang",
+      "entity_id": "0ceab29e-4af3-5043-8d7b-67aac02399f1",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 18: 岩头上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "岩头上",
+        "pinyin": "Yántóushàng",
+        "population": 107,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "2e255419-eb80-52fa-a1ad-7a6b3e2fd077",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "110bb7f3-f7ca-59b0-bdb1-756a64c89749",
+      "key": "bijie-gazetteer/p249/shatian/baigai/datu",
+      "entity_id": "7a2e8e4e-ce9f-50b8-b11a-d61194841cbc",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 19: 大土",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大土",
+        "pinyin": "Dàtǔ",
+        "population": 60,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "2e255419-eb80-52fa-a1ad-7a6b3e2fd077",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.633333333333333
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°38′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b49546e0-55f3-5b15-bc5d-54675edd92ce",
+      "key": "bijie-gazetteer/p249/shatian/baigai/liuerhe",
+      "entity_id": "52f48d45-dc1c-5156-8d26-d0d1fac7d778",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 20: 溜耳河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "溜耳河",
+        "pinyin": "Liūěrhé",
+        "population": 121,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "2e255419-eb80-52fa-a1ad-7a6b3e2fd077",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.633333333333333
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°38′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "882cd128-304e-5c7f-9b45-025a3a411973",
+      "key": "bijie-gazetteer/p249/shatian/houzi-mountain",
+      "entity_id": "0a4f4060-d307-517c-bf43-ba4bd0d630a5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 21: 猴子山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "猴子山",
+        "pinyin": "Hóuzǐ Shān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "fd401a53-6de9-5f76-8cef-63645da4835a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1571.0米"
+      }
+    },
+    {
+      "id": "2b6c43cf-7c26-5fc8-ab5e-1e1bc47da008",
+      "key": "bijie-gazetteer/p249/shatian/liuer-river",
+      "entity_id": "1547cd11-a6fb-5818-8050-e82e2b5d6a17",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "249",
+      "scan_page": 284,
+      "locator": "Place table, row 22: 溜耳河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "溜耳河",
+        "pinyin": "Liūěr Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "fd401a53-6de9-5f76-8cef-63645da4835a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "河流",
+        "extent": "发源于标水岩，流经本社汇入赤水河，境内流长约8公里。"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

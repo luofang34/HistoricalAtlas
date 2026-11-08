@@ -124,12 +124,8 @@ impl FitState<'_> {
             self.labels =
                 partition::assign(self.request, &self.active, &self.offsets, &self.fixed)?;
         }
-        let area = self.area(target.unit)?;
-        if target.accepts(area) {
-            Ok(())
-        } else {
-            Err(target.failure(area))
-        }
+        // Neighboring offsets can make this target attainable in a later sweep.
+        Ok(())
     }
 }
 

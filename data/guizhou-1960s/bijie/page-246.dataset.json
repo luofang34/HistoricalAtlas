@@ -1,0 +1,1281 @@
+{
+  "entities": [
+    {
+      "id": "48a60af3-43d2-5881-a8df-d5aef2995596",
+      "key": "earth/cn-gz/bijie/huoma/huoma-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "3c2a4da7-45b0-505b-b572-9be095f1b02f",
+      "key": "earth/cn-gz/bijie/huoma/huoma/zhongjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "f46d7cce-7b0c-5008-9aac-f64d9e700478",
+      "key": "earth/cn-gz/bijie/huoma/huoma/chenjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "ba302e43-6581-5b19-a837-fa5b96b0727e",
+      "key": "earth/cn-gz/bijie/huoma/huoma/zhutouyan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "e3720ec0-1a43-5596-a267-db3afc3f7754",
+      "key": "earth/cn-gz/bijie/huoma/huoma/dafudi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "4f348952-aa7a-5caa-999b-2b37e615b3e1",
+      "key": "earth/cn-gz/bijie/huoma/huoma/longdongwan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "2482e512-3128-5a58-aa4e-1e050823785b",
+      "key": "earth/cn-gz/bijie/huoma/huoma/jiushenggong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "dc27d0a3-88b8-5812-9b8a-033c225ead57",
+      "key": "earth/cn-gz/bijie/huoma/huoma/xiutouzhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "705054eb-18f7-50b2-907b-65a4f238c925",
+      "key": "earth/cn-gz/bijie/huoma/huoma/wangjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "a017d30d-7ac4-5403-bab1-153347324ffe",
+      "key": "earth/cn-gz/bijie/huoma/huoma/huoma-toponym",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "ad0f8817-85bf-5370-b8dc-ad2ff9836424",
+      "key": "earth/cn-gz/bijie/huoma/huoma/huoma",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "f9ba2d25-8968-5407-aa9e-565a9cf39ad9",
+      "key": "earth/cn-gz/bijie/huoma/huoma/yibasan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "a959c9d1-228b-593b-be16-2c0646b3c2da",
+      "key": "earth/cn-gz/bijie/huoma/school",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "6ff637e3-f83b-52d9-8120-54b050551fae",
+      "key": "earth/cn-gz/bijie/huoma/longjiazhai-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "6da4eaf9-159d-5265-9488-3989e55c0895",
+      "key": "earth/cn-gz/bijie/huoma/longjiazhai/longjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "2995db38-30b5-50fc-8581-9a5f5c15225f",
+      "key": "earth/cn-gz/bijie/huoma/longjiazhai/lujiaying",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "d1a1e15d-4fd9-5897-b09e-61f95b6ed606",
+      "key": "earth/cn-gz/bijie/huoma/longjiazhai/shangjiayakou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "b90975ee-4359-5498-8ad7-fa1b43224d5c",
+      "key": "earth/cn-gz/bijie/huoma/daojiao-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "b26ea638-faf9-5d1a-99c3-e27ecc29a73b",
+      "key": "earth/cn-gz/bijie/huoma/daojiao/liangchahe",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "6eadad3a-0b95-5432-8367-25be9f11ee03",
+      "key": "earth/cn-gz/bijie/huoma/daojiao/wotuozhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "1260dd08-7d31-5ce8-8572-54df843624bb",
+      "key": "earth/cn-gz/bijie/huoma/daojiao/daojiao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "878048b1-1090-58ee-9e07-8232e9d95388",
+      "key": "earth/cn-gz/bijie/huoma/daojiao/yangniuchang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c8fa2514-ef44-5124-8d59-2d38f88a9bc8",
+      "key": "earth/cn-gz/bijie/huoma/daojiao/caishanping",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "7bee9356-1b50-55fb-9546-c687901d11cd",
+      "key": "earth/cn-gz/bijie/huoma/daojiao/pingzishang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "2d22bcd5-90f5-5feb-a27c-9ed8e25070d3",
+      "key": "earth/cn-gz/bijie/huoma/daojiao/baobaoshang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "399ba244-67b3-55c7-8f42-0f8cff95e42f",
+      "key": "earth/cn-gz/bijie/huoma/daojiao/yujiagou",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "1a5b4596-ea05-5a02-bac1-c871ec6ed446",
+      "key": "earth/cn-gz/bijie/huoma/daojiao/sijiaotian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "17dfe15e-2b25-58de-b8bf-81938d320bf6",
+      "key": "earth/cn-gz/bijie/huoma/liangchahe-ferry",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "554a2f8a-8429-56b9-bf7d-728681141fd9",
+      "key": "earth/cn-gz/bijie/huoma/wangxiang-river",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "f8b6037a-4a1b-5801-8ef7-492b04196cb3",
+      "key": "earth/cn-gz/bijie/chishui-river",
+      "body": "earth",
+      "kind": "river"
+    }
+  ],
+  "records": [
+    {
+      "id": "cb4b24bf-85bc-5772-b923-43b1800bd03f",
+      "key": "bijie-gazetteer/page-246/huoma-commune",
+      "entity_id": "0f9aebd8-38ad-5a6c-9f2c-e97ede421571",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 1: 火马公社",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "火马公社",
+        "pinyin": "Huǒmǎ Gōngshè",
+        "population": 3794,
+        "households": null,
+        "ethnicities": [
+          "藏",
+          "彝",
+          "汉",
+          "苗",
+          "满",
+          "布依"
+        ],
+        "parent_id": "d28c7c98-e211-58f2-9c63-31c025f37365",
+        "rank": "commune",
+        "seat_id": "3c2a4da7-45b0-505b-b572-9be095f1b02f",
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "83510c4e-3074-5460-aa88-4257de82bbe3",
+      "key": "bijie-gazetteer/p246/huoma/huoma-brigade",
+      "entity_id": "48a60af3-43d2-5881-a8df-d5aef2995596",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 2: 火马大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "火马大队",
+        "pinyin": "Huǒmǎ Dàduì",
+        "population": 1899,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "0f9aebd8-38ad-5a6c-9f2c-e97ede421571",
+        "rank": "brigade",
+        "seat_id": "3c2a4da7-45b0-505b-b572-9be095f1b02f",
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ca8a249c-5f43-5b10-8bab-a0079ff34f19",
+      "key": "bijie-gazetteer/p246/huoma/huoma/zhongjiazhai",
+      "entity_id": "3c2a4da7-45b0-505b-b572-9be095f1b02f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 3: 钟家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "钟家寨",
+        "pinyin": "Zhōngjiāzhài",
+        "population": 855,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "48a60af3-43d2-5881-a8df-d5aef2995596",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公社、大队驻地"
+      }
+    },
+    {
+      "id": "5120ca8f-ab05-59a1-828a-1d78318e9b5c",
+      "key": "bijie-gazetteer/p246/huoma/huoma/chenjiazhai",
+      "entity_id": "f46d7cce-7b0c-5008-9aac-f64d9e700478",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 4: 陈家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "陈家寨",
+        "pinyin": "Chénjiāzhài",
+        "population": 344,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "48a60af3-43d2-5881-a8df-d5aef2995596",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "1fc3dd32-cd43-5db8-af0d-bdbcad92c81e",
+      "key": "bijie-gazetteer/p246/huoma/huoma/zhutouyan",
+      "entity_id": "ba302e43-6581-5b19-a837-fa5b96b0727e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 5: 猪头岩",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "猪头岩",
+        "pinyin": "Zhūtóuyán",
+        "population": 72,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "48a60af3-43d2-5881-a8df-d5aef2995596",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.66666666666667,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°40′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a4fca1bd-b5f1-577c-bfca-7abb05a3fbaf",
+      "key": "bijie-gazetteer/p246/huoma/huoma/dafudi",
+      "entity_id": "e3720ec0-1a43-5596-a267-db3afc3f7754",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 6: 大夫第",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大夫第",
+        "pinyin": "Dàfūdì",
+        "population": 101,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "48a60af3-43d2-5881-a8df-d5aef2995596",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.66666666666667,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°40′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "aecd9f04-00dc-5c68-8275-9aca8ff12d2c",
+      "key": "bijie-gazetteer/p246/huoma/huoma/longdongwan",
+      "entity_id": "4f348952-aa7a-5caa-999b-2b37e615b3e1",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 7: 龙洞湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "龙洞湾",
+        "pinyin": "Lóngdòngwān",
+        "population": 55,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "48a60af3-43d2-5881-a8df-d5aef2995596",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f5acd2ab-9d60-5ef7-9408-8e02a0e66e64",
+      "key": "bijie-gazetteer/p246/huoma/huoma/jiushenggong",
+      "entity_id": "2482e512-3128-5a58-aa4e-1e050823785b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 8: 九圣宫",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "九圣宫",
+        "pinyin": "Jiǔshènggōng",
+        "population": 138,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "48a60af3-43d2-5881-a8df-d5aef2995596",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "27864c04-861d-5aa5-b505-521cede0d6a0",
+      "key": "bijie-gazetteer/p246/huoma/huoma/xiutouzhai",
+      "entity_id": "dc27d0a3-88b8-5812-9b8a-033c225ead57",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 9: 秀头寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "秀头寨",
+        "pinyin": "Xiùtóuzhài",
+        "population": 134,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "48a60af3-43d2-5881-a8df-d5aef2995596",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "unresolved_coordinate": {
+          "longitude_text": "105°41′",
+          "latitude_text": "27°39,",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified",
+          "reason": "The latitude ends with a comma rather than a minute mark. The intended angular notation is unresolved."
+        }
+      }
+    },
+    {
+      "id": "fcd8e526-d1f0-5f28-abc2-764fb98acb73",
+      "key": "bijie-gazetteer/p246/huoma/huoma/wangjiazhai",
+      "entity_id": "705054eb-18f7-50b2-907b-65a4f238c925",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 10: 王家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "王家寨",
+        "pinyin": "Wángjiāzhài",
+        "population": 72,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "48a60af3-43d2-5881-a8df-d5aef2995596",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "94b0a1a5-37c5-5cf9-8f3e-face75851622",
+      "key": "bijie-gazetteer/p246/huoma/huoma/huoma-toponym",
+      "entity_id": "a017d30d-7ac4-5403-bab1-153347324ffe",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 11: 火马",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "火马",
+        "pinyin": "Huǒmǎ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "48a60af3-43d2-5881-a8df-d5aef2995596",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "地名"
+      }
+    },
+    {
+      "id": "86584d92-e5ff-5a56-91a2-2e20a8ce320f",
+      "key": "bijie-gazetteer/p246/huoma/huoma/huoma",
+      "entity_id": "ad0f8817-85bf-5370-b8dc-ad2ff9836424",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 12: 火马",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "火马",
+        "pinyin": "Huǒmǎ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "48a60af3-43d2-5881-a8df-d5aef2995596",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "片村，包括：陈家寨、王家寨、一把伞等"
+      }
+    },
+    {
+      "id": "29cbeced-c022-595d-aa5e-0b477da3e9d8",
+      "key": "bijie-gazetteer/p246/huoma/huoma/yibasan",
+      "entity_id": "f9ba2d25-8968-5407-aa9e-565a9cf39ad9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 13: 一把伞",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "一把伞",
+        "pinyin": "Yībǎsǎn",
+        "population": 128,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "48a60af3-43d2-5881-a8df-d5aef2995596",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "0c760faa-5c8e-511f-b2fe-ac57b269db21",
+      "key": "bijie-gazetteer/p246/huoma/school",
+      "entity_id": "a959c9d1-228b-593b-be16-2c0646b3c2da",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 14: 火马学校",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "火马学校",
+        "pinyin": "Huǒmǎ Xuéxiào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "0f9aebd8-38ad-5a6c-9f2c-e97ede421571",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "校"
+      }
+    },
+    {
+      "id": "0b60f2ed-8c08-5c25-a431-95c1a8eaa204",
+      "key": "bijie-gazetteer/p246/huoma/longjiazhai-brigade",
+      "entity_id": "6ff637e3-f83b-52d9-8120-54b050551fae",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 15: 龙家寨大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "龙家寨大队",
+        "pinyin": "Lóngjiāzhài Dàduì",
+        "population": 990,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "0f9aebd8-38ad-5a6c-9f2c-e97ede421571",
+        "rank": "brigade",
+        "seat_id": "6da4eaf9-159d-5265-9488-3989e55c0895",
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8438e5b6-b50c-5bea-b0ba-d65a0742edeb",
+      "key": "bijie-gazetteer/p246/huoma/longjiazhai/longjiazhai",
+      "entity_id": "6da4eaf9-159d-5265-9488-3989e55c0895",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 16: 龙家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "龙家寨",
+        "pinyin": "Lóngjiāzhài",
+        "population": 337,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "6ff637e3-f83b-52d9-8120-54b050551fae",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "e311c38c-e8e6-5f27-ab13-2532ad8d4589",
+      "key": "bijie-gazetteer/p246/huoma/longjiazhai/lujiaying",
+      "entity_id": "2995db38-30b5-50fc-8581-9a5f5c15225f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 17: 卢家营",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "卢家营",
+        "pinyin": "Lújiāyíng",
+        "population": 362,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6ff637e3-f83b-52d9-8120-54b050551fae",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "08e35ae7-2ba7-54d5-94d8-8e4f613697fb",
+      "key": "bijie-gazetteer/p246/huoma/longjiazhai/shangjiayakou",
+      "entity_id": "d1a1e15d-4fd9-5897-b09e-61f95b6ed606",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 18: 商家垭口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "商家垭口",
+        "pinyin": "Shōngjiāyàkǒu",
+        "population": 211,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6ff637e3-f83b-52d9-8120-54b050551fae",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c041248d-36d4-5ed3-a301-de87c6dd0a45",
+      "key": "bijie-gazetteer/p246/huoma/daojiao-brigade",
+      "entity_id": "b90975ee-4359-5498-8ad7-fa1b43224d5c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 19: 道角大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "道角大队",
+        "pinyin": "Dàojiǎo Dàduì",
+        "population": 835,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "0f9aebd8-38ad-5a6c-9f2c-e97ede421571",
+        "rank": "brigade",
+        "seat_id": "7bee9356-1b50-55fb-9546-c687901d11cd",
+        "coordinate": {
+          "point": {
+            "longitude": 105.66666666666667,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°40′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ede6ce79-dfa7-5a5b-b70d-9460b885ac9c",
+      "key": "bijie-gazetteer/p246/huoma/daojiao/liangchahe",
+      "entity_id": "b26ea638-faf9-5d1a-99c3-e27ecc29a73b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 20: 两岔河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "两岔河",
+        "pinyin": "Liǎngchàhé",
+        "population": 103,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "b90975ee-4359-5498-8ad7-fa1b43224d5c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.66666666666667,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°40′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4eaba367-810b-5d2c-a8e5-1e095da3e7ef",
+      "key": "bijie-gazetteer/p246/huoma/daojiao/wotuozhai",
+      "entity_id": "6eadad3a-0b95-5432-8367-25be9f11ee03",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 21: 窝拖寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "窝拖寨",
+        "pinyin": "Wōtuōzhài",
+        "population": 225,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "b90975ee-4359-5498-8ad7-fa1b43224d5c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.66666666666667,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°40′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "1413cf19-b7d7-57b8-8029-a8aab0604795",
+      "key": "bijie-gazetteer/p246/huoma/daojiao/daojiao",
+      "entity_id": "1260dd08-7d31-5ce8-8572-54df843624bb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 22: 道角",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "道角",
+        "pinyin": "Dàojiǎo",
+        "population": null,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "b90975ee-4359-5498-8ad7-fa1b43224d5c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.66666666666667,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°40′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e74a0277-a843-5c94-9cb4-1c6bee8d0be0",
+      "key": "bijie-gazetteer/p246/huoma/daojiao/yangniuchang",
+      "entity_id": "878048b1-1090-58ee-9e07-8232e9d95388",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 23: 养牛厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "养牛厂",
+        "pinyin": "Yǎngniúchǎng",
+        "population": 105,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "b90975ee-4359-5498-8ad7-fa1b43224d5c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d6e996e4-c162-5c0a-b05b-1a7b2b7bcc09",
+      "key": "bijie-gazetteer/p246/huoma/daojiao/caishanping",
+      "entity_id": "c8fa2514-ef44-5124-8d59-2d38f88a9bc8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 24: 踩山坪",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "踩山坪",
+        "pinyin": "Cǎishānpíng",
+        "population": 150,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "b90975ee-4359-5498-8ad7-fa1b43224d5c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "468d9889-5c53-5889-baf3-d798e6619589",
+      "key": "bijie-gazetteer/p246/huoma/daojiao/pingzishang",
+      "entity_id": "7bee9356-1b50-55fb-9546-c687901d11cd",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 25: 坪子上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "坪子上",
+        "pinyin": "Píngzǐshàng",
+        "population": 195,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "b90975ee-4359-5498-8ad7-fa1b43224d5c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.66666666666667,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°40′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "cefc9e91-a968-5471-953d-ca8ecd0fc134",
+      "key": "bijie-gazetteer/p246/huoma/daojiao/baobaoshang",
+      "entity_id": "2d22bcd5-90f5-5feb-a27c-9ed8e25070d3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 26: 包包上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "包包上",
+        "pinyin": "Bāobāoshàng",
+        "population": 22,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "b90975ee-4359-5498-8ad7-fa1b43224d5c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bb5d5daa-a572-5328-9115-e2b8e556bf85",
+      "key": "bijie-gazetteer/p246/huoma/daojiao/yujiagou",
+      "entity_id": "399ba244-67b3-55c7-8f42-0f8cff95e42f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 27: 余家沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "余家沟",
+        "pinyin": "Yújiāgōu",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b90975ee-4359-5498-8ad7-fa1b43224d5c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "地名"
+      }
+    },
+    {
+      "id": "cfcd0d25-d215-51f3-8095-54b61103a472",
+      "key": "bijie-gazetteer/p246/huoma/daojiao/sijiaotian",
+      "entity_id": "1a5b4596-ea05-5a02-bac1-c871ec6ed446",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 28: 四角田",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "四角田",
+        "pinyin": "Sìjiǎotián",
+        "population": 35,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "b90975ee-4359-5498-8ad7-fa1b43224d5c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.65,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°39′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "51ecdd34-cfd7-5f14-8b62-01b2d1b6ae06",
+      "key": "bijie-gazetteer/p246/huoma/liangchahe-ferry",
+      "entity_id": "17dfe15e-2b25-58de-b8bf-81938d320bf6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 29: 两岔河渡口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "两岔河渡口",
+        "pinyin": "Liǎngchàhé dùkǒu",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "0f9aebd8-38ad-5a6c-9f2c-e97ede421571",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.68333333333334,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°41′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "渡口"
+      }
+    },
+    {
+      "id": "89f67f74-892d-5438-876b-aabaf0154a27",
+      "key": "bijie-gazetteer/p246/huoma/wangxiang-river",
+      "entity_id": "554a2f8a-8429-56b9-bf7d-728681141fd9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 30: 望乡河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "望乡河",
+        "pinyin": "Wàngxiāng Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "0f9aebd8-38ad-5a6c-9f2c-e97ede421571",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "河流",
+        "extent": "发源沙田，流经本社，注入赤水河，境内流长约2.5公里。"
+      }
+    },
+    {
+      "id": "56a9af63-ae0f-5b1d-b922-d503231976a8",
+      "key": "bijie-gazetteer/p246/chishui-river",
+      "entity_id": "f8b6037a-4a1b-5801-8ef7-492b04196cb3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "246",
+      "scan_page": 281,
+      "locator": "Place table, row 31: 赤水河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "赤水河",
+        "pinyin": "Chìshuǐ Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "河流",
+        "extent": "流经我社北面边境，在境内流长约2.5公里。"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

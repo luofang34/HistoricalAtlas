@@ -61,13 +61,20 @@ def load(publication):
         record = records[item['record_id']]
         entry = entries[record['entity_id']]
         boundary = entry['derived_boundaries'][0]
+        reference = next((a for a in item['anchors'] if a['kind'] == 'map_location'), None)
+        if reference is None:
+            direct = next((r for r in entry['records'] if r['source_id'] == recipe['source_id']
+                           and r['observation'].get('coordinate')), None)
+            reference = ({'kind': 'record', 'record_id': direct['id']}
+                         if direct else item['anchors'][0])
         parent = record['observation']['parent_id']
         if parent not in districts:
             districts.append(parent)
         region = boundary['region']
         units.append(dict(id=record['entity_id'], name=record['observation']['name'],
                           key=entry['entity']['key'].split('/')[-1], parent=parent,
-                          mapped_anchor=item['anchors'][0]['kind'] == 'map_location',
+                          mapped_anchor=reference['kind'] == 'map_location',
+                          reference=anchor(reference, records, estimates),
                           color=PALETTE[districts.index(parent)], boundary=boundary,
                           path=polygon_path(region['vertices'], region['polygons']),
                           seeds=[anchor(a, records, estimates) for a in item['anchors']]))
@@ -181,8 +188,8 @@ def overview(data, output):
     draw_geometry(ax, units, outline, points)
     lo, hi = extent(ax, outline.vertices, .045)
     for unit in units:
-        ax.scatter(*unit['seeds'][0], s=7, color=unit['color'], edgecolor=CREAM, lw=.4, zorder=6)
-    labels(fig, ax, [(u['seeds'][0], u['name'].removesuffix('公社'), u['color']) for u in units])
+        ax.scatter(*unit['reference'], s=7, color=unit['color'], edgecolor=CREAM, lw=.4, zorder=6)
+    labels(fig, ax, [(u['reference'], u['name'].removesuffix('公社'), u['color']) for u in units])
     scale(ax, lo, hi, 10)
     fig.text(.055, .95, 'BIJIE / SETTLEMENTS AND RECONSTRUCTED BOUNDARIES', fontsize=16)
     fig.text(.055, .923, 'Checked source locations · terrain partitions · source area constraints', fontsize=10)
@@ -232,7 +239,7 @@ def detail(data, selected, output):
         vertices = np.concatenate([vertices, locations])
     lo, hi = extent(ax, vertices, .15)
     scale(ax, lo, hi, 2, offset=.10)
-    names = [(u['seeds'][0], u['name'], INK) for u in chosen]
+    names = [(u['reference'], u['name'], INK) for u in chosen]
     citations = set()
     for point, name, owner, page, scan in points:
         if owner in selected and ax.get_xlim()[0] < point[0] < ax.get_xlim()[1] and ax.get_ylim()[0] < point[1] < ax.get_ylim()[1]:
@@ -240,7 +247,7 @@ def detail(data, selected, output):
             citations.add((int(page), scan))
     labels(fig, ax, names, size=8)
     for unit in chosen:
-        ax.scatter(*unit['seeds'][0], s=32, c=PALETTE[selected.index(unit['key'])], edgecolor=CREAM, lw=.8, zorder=6)
+        ax.scatter(*unit['reference'], s=32, c=PALETTE[selected.index(unit['key'])], edgecolor=CREAM, lw=.8, zorder=6)
     fig.text(.06, .945, 'BIJIE / SETTLEMENTS AND RECONSTRUCTED BOUNDARIES', fontsize=14)
     fig.text(.06, .91, ' · '.join(u['name'] for u in chosen), fontsize=12)
     fig.text(.79, .866, 'Area fitted / reported', fontsize=9)
