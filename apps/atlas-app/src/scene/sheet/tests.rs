@@ -48,3 +48,47 @@ fn published_drawings_reject_foreign_records_and_outside_pixels() {
         ));
     }
 }
+
+#[test]
+fn qimo_drawing_preserves_seat_disagreement_and_separate_commune_symbols() {
+    let atlas = crate::catalog::tests::atlas();
+    let id = |key| EntityId::from_key(&format!("earth/cn-gz/zhijin/{key}")).unwrap();
+    let commune = id("qimo-commune");
+    let drawing = atlas.drawings(commune)[0];
+    assert_eq!(drawing.scan_page, 36);
+    assert_eq!(drawing.places.len(), 57);
+    let symbols = points(&atlas, drawing);
+    assert_eq!(symbols.len(), 51);
+    let hits = pick(&symbols, |p| {
+        ((p.x - 279.0).powi(2) + (p.y - 783.0).powi(2)).sqrt() as f32
+    });
+    assert_eq!(
+        hits.into_iter().collect::<std::collections::BTreeSet<_>>(),
+        [commune, id("qimo/chenjia-zhai")].into()
+    );
+    assert!(
+        atlas
+            .drawings(id("ertang-commune"))
+            .iter()
+            .all(|sheet| sheet.scan_page == 40)
+    );
+    let brigade = atlas.entry(id("qimo/mofeng-brigade")).unwrap();
+    let seats: std::collections::BTreeSet<_> = brigade
+        .records
+        .iter()
+        .filter_map(|r| r.observation.seat_id)
+        .collect();
+    assert_eq!(
+        seats,
+        [id("qimo/jibu"), id("qimo/longtan-riverbank-tian")].into()
+    );
+    assert!(atlas.drawings(id("qimo/longtan-riverbank-tian")).is_empty());
+    assert!(
+        atlas
+            .entry(id("qimo/jibu"))
+            .unwrap()
+            .records
+            .iter()
+            .all(|r| r.observation.coordinate.is_none())
+    );
+}

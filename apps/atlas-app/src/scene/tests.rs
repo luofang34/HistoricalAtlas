@@ -11,7 +11,23 @@ fn time_layer_keeps_undated_coordinates_out_of_deep_time() {
     };
     let time = SelectedTime::query(&atlas, &control).unwrap();
     let observations = features(&atlas, BodyId::Earth, &time, MapLayer::Observations, None);
-    assert_eq!(observations["features"].as_array().unwrap().len(), 2019);
+    let qimo = EntityId::from_key("earth/cn-gz/zhijin/qimo-commune").unwrap();
+    let anchor = observations["features"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .find(|f| f["properties"]["entity_id"] == json!(qimo))
+        .unwrap();
+    assert_eq!(anchor["properties"]["datum"], "unspecified");
+    assert_eq!(anchor["properties"]["resolution_arcminutes"], 1.0);
+    for (actual, expected) in anchor["geometry"]["coordinates"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .zip([105.0 + 47.0 / 60.0, 26.0 + 44.0 / 60.0])
+    {
+        assert!((actual.as_f64().unwrap() - expected).abs() < 1e-12);
+    }
     let selected = features(&atlas, BodyId::Earth, &time, MapLayer::SelectedTime, None);
     assert!(selected["features"].as_array().unwrap().is_empty());
     let moon = features(&atlas, BodyId::Moon, &time, MapLayer::Observations, None);

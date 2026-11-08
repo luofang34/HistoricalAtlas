@@ -166,18 +166,27 @@ fn label(
     let text = point.names.first().map_or("", String::as_str);
     let galley = painter.layout_no_wrap(text.into(), FontId::proportional(13.0), color);
     let size = galley.size();
-    let candidates = [
-        pos + egui::vec2(7.0, -size.y / 2.0),
-        pos - egui::vec2(size.x + 7.0, size.y / 2.0),
-        pos + egui::vec2(7.0, -size.y - 7.0),
-        pos + egui::vec2(7.0, 7.0),
-    ];
+    let candidates = [7.0, 18.0, 29.0, 40.0].into_iter().flat_map(|gap| {
+        [
+            pos + egui::vec2(gap, -size.y / 2.0),
+            pos - egui::vec2(size.x + gap, size.y / 2.0),
+            pos + egui::vec2(gap, -size.y - gap),
+            pos + egui::vec2(gap, gap),
+            pos - egui::vec2(size.x + gap, size.y + gap),
+            pos + egui::vec2(-size.x - gap, gap),
+            pos - egui::vec2(size.x / 2.0, size.y + gap),
+            pos + egui::vec2(-size.x / 2.0, gap),
+        ]
+    });
     if let Some(rect) = candidates
-        .into_iter()
         .map(|p| Rect::from_min_size(p, size))
         .min_by_key(|r| occupied.iter().filter(|o| o.intersects(*r)).count())
     {
         occupied.push(rect.expand(2.0));
+        let nearest = rect.clamp(pos);
+        if nearest.distance(pos) > 12.0 {
+            painter.line_segment([pos, nearest], Stroke::new(0.5, color.gamma_multiply(0.5)));
+        }
         painter.galley(rect.min, galley, color);
     }
 }
