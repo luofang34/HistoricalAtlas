@@ -26,10 +26,12 @@ pub struct Source {
     pub publication_year: Option<i32>,
     /// Statistical reference year, if stated and uniform.
     pub reference_year: Option<i32>,
-    /// Number of pages in the consulted scan.
-    pub scan_pages: u32,
-    /// SHA-256 fingerprint identifying the consulted scan.
-    pub scan_sha256: String,
+    /// Number of pages in the consulted scan, paired with its fingerprint.
+    pub scan_pages: Option<u32>,
+    /// SHA-256 fingerprint identifying the consulted scan, when used.
+    pub scan_sha256: Option<String>,
+    /// Public source URL, including a DOI resolver when appropriate.
+    pub url: Option<String>,
 }
 
 /// Source catalog stored as TOML.
@@ -124,15 +126,15 @@ pub struct Record {
     pub entity_id: EntityId,
     /// Bibliographic source identifier.
     pub source_id: String,
-    /// Printed page number or sheet label.
-    pub page_or_sheet: String,
-    /// One-based page in the fingerprinted scan.
-    pub scan_page: u32,
+    /// Printed page number or sheet label, when the source is paginated.
+    pub page_or_sheet: Option<String>,
+    /// One-based page in the fingerprinted scan, when used.
+    pub scan_page: Option<u32>,
     /// Named row, heading, or location within the page.
     pub locator: String,
     /// Short quotation when needed to interpret an assertion.
     pub verbatim_quote: Option<String>,
-    /// Whether this transcription was compared with the source image.
+    /// Whether this transcription was compared with the cited source.
     pub checked: bool,
     /// Original temporal expression, if the record states one.
     pub source_date: Option<SourceDate>,
@@ -140,7 +142,7 @@ pub struct Record {
     pub observation: Observation,
 }
 
-/// Facts transcribed from a gazetteer row, without modern coordinate correction.
+/// Values transcribed from a source assertion, retaining their stated conventions.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Observation {

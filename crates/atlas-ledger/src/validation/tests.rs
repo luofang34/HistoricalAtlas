@@ -29,7 +29,7 @@ fn invalid_reference_page_identity_and_coordinate_are_rejected() {
     .unwrap();
     let catalog = catalog();
     let mut bad = dataset.clone();
-    bad.records[0].scan_page = 661;
+    bad.records[0].scan_page = Some(661);
     assert!(
         validate(&catalog, &bad)
             .unwrap_err()
@@ -127,7 +127,7 @@ fn estimates_require_checked_evidence_and_a_matching_datum() {
 }
 
 #[cfg(test)]
-fn catalog() -> SourceCatalog {
+pub(super) fn catalog() -> SourceCatalog {
     SourceCatalog {
         sources: vec![Source {
             id: "bijie-gazetteer".into(),
@@ -135,8 +135,11 @@ fn catalog() -> SourceCatalog {
             responsibility: None,
             publication_year: None,
             reference_year: None,
-            scan_pages: 660,
-            scan_sha256: "3591c54d1e4438ce87241df13858159c07135a4fd1efffe87df4aa6e1fd91bb1".into(),
+            scan_pages: Some(660),
+            scan_sha256: Some(
+                "3591c54d1e4438ce87241df13858159c07135a4fd1efffe87df4aa6e1fd91bb1".into(),
+            ),
+            url: None,
         }],
     }
 }

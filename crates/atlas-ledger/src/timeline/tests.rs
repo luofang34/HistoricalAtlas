@@ -26,8 +26,11 @@ fn ledger() -> (SourceCatalog, Dataset) {
             responsibility: None,
             publication_year: None,
             reference_year: None,
-            scan_pages: 660,
-            scan_sha256: "3591c54d1e4438ce87241df13858159c07135a4fd1efffe87df4aa6e1fd91bb1".into(),
+            scan_pages: Some(660),
+            scan_sha256: Some(
+                "3591c54d1e4438ce87241df13858159c07135a4fd1efffe87df4aa6e1fd91bb1".into(),
+            ),
+            url: None,
         }],
     };
     (catalog, data)
@@ -92,7 +95,7 @@ fn source_chronology_changes_names_and_rank_without_promoting_undated_rows() {
             assert!(candidate.basis.iter().all(|id| {
                 data.records
                     .iter()
-                    .any(|r| r.id == *id && r.checked && r.scan_page == 47)
+                    .any(|r| r.id == *id && r.checked && r.scan_page == Some(47))
             }));
         }
     }

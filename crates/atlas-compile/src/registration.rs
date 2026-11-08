@@ -159,7 +159,7 @@ fn validate_job(
         .ok_or_else(|| {
             RegistrationJobError::Evidence(format!("unknown source {}", job.source_id))
         })?;
-    if job.scan_page == 0 || job.scan_page > source.scan_pages {
+    if job.scan_page == 0 || source.scan_pages.is_none_or(|pages| job.scan_page > pages) {
         return Err(RegistrationJobError::Evidence(format!(
             "{} scan page {} out of range",
             source.id, job.scan_page
@@ -205,7 +205,9 @@ fn validate_job(
             )));
         }
     }
-    Ok(source.scan_sha256.clone())
+    source.scan_sha256.clone().ok_or_else(|| {
+        RegistrationJobError::Evidence(format!("{} has no scan fingerprint", source.id))
+    })
 }
 
 /// Read a registration job and write a new result file after fitting succeeds.

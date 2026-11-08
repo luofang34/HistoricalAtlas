@@ -3,6 +3,7 @@
 use std::collections::BTreeMap;
 
 use atlas_core::identity::{EntityId, FactId};
+mod citations;
 pub(crate) mod error;
 mod estimates;
 mod hierarchy;
@@ -12,6 +13,7 @@ use error::{caused, fail};
 use estimates::validate_estimates;
 
 use crate::model::{Dataset, Entity, Record, Source, SourceCatalog};
+use citations::validate_sources;
 
 /// Validate source fingerprints, identifiers, references, and interpreted values.
 pub fn validate(catalog: &SourceCatalog, data: &Dataset) -> Result<(), ValidationError> {
@@ -39,30 +41,6 @@ pub fn validate(catalog: &SourceCatalog, data: &Dataset) -> Result<(), Validatio
     Ok(())
 }
 
-fn validate_sources(catalog: &SourceCatalog) -> Result<BTreeMap<&str, &Source>, ValidationError> {
-    let mut sources = BTreeMap::new();
-    for source in &catalog.sources {
-        if source.id.trim().is_empty() || source.title.trim().is_empty() || source.scan_pages == 0 {
-            return Err(fail(
-                &source.id,
-                "source requires an id, title, and nonzero scan page count",
-            ));
-        }
-        if source.scan_sha256.len() != 64
-            || !source.scan_sha256.bytes().all(|b| b.is_ascii_hexdigit())
-        {
-            return Err(fail(
-                &source.id,
-                "source scan fingerprint must be a SHA-256 digest",
-            ));
-        }
-        if sources.insert(source.id.as_str(), source).is_some() {
-            return Err(fail(&source.id, "duplicate source id"));
-        }
-    }
-    Ok(sources)
-}
-
 fn validate_record(
     record: &Record,
     entities: &BTreeMap<EntityId, &Entity>,
@@ -74,14 +52,7 @@ fn validate_record(
     let source = sources
         .get(record.source_id.as_str())
         .ok_or_else(|| fail(&record.key, "unknown source"))?;
-    if record.scan_page == 0
-        || record.scan_page > source.scan_pages
-        || record.page_or_sheet.trim().is_empty()
-        || record.locator.trim().is_empty()
-        || record.observation.name.trim().is_empty()
-    {
-        return Err(fail(&record.key, "invalid page, locator, or name"));
-    }
+    citations::validate_citation(record, source)?;
     for target in record
         .observation
         .parent_id
