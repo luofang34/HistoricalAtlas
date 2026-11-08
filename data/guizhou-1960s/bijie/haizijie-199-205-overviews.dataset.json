@@ -1,0 +1,1097 @@
+{
+  "entities": [
+    {
+      "id": "a01ffd13-cf87-51bd-b441-ef3b1130d9eb",
+      "key": "earth/cn-gz/bijie/jinyinshan/herb-farm",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "b81d4cb3-9603-5750-b24f-a4bb714afdd8",
+      "key": "earth/cn-gz/bijie/jinyinshan/zhiqing-farm",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "f920a79a-4b34-5947-8b61-459f2e2b37b3",
+      "key": "earth/cn-gz/bijie/mulang/muxi-mountain",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "285d5ca3-75ff-54c1-a538-a87dfa69dfe0",
+      "key": "earth/cn-gz/bijie/mulang/muxi-pass",
+      "body": "earth",
+      "kind": "historic_site"
+    }
+  ],
+  "records": [
+    {
+      "id": "20024d0c-6716-534d-a46c-4f4746a9314a",
+      "key": "bijie-gazetteer/p199/jinyinshan-commune/extent",
+      "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, extent",
+      "verbatim_quote": "金银山公社，在毕节县城东北面，相距二十九公里，川滇东路经过公社，由南而北纵贯社境，公社驻地白泥坝就在公路边，全社位于东经105°21′至105°24′，北纬27°27′至27°31′之间，总面积33.7平方公里。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "金银山公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "东经105°21′至105°24′，北纬27°27′至27°31′；总面积33.7平方公里。"
+      }
+    },
+    {
+      "id": "8b955d3b-d8ab-5609-b509-5d2c03222411",
+      "key": "bijie-gazetteer/p199/jinyinshan-commune/neighbors",
+      "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, neighbors",
+      "verbatim_quote": "金银山公社，东与层台，东南与牧郎，南与八寨、新艾，西与对坡，北与河鱼河，东北与先进等公社相接壤。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "金银山公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "东邻层台，东南邻牧郎，南邻八寨、新艾，西邻对坡，北邻河鱼河，东北邻先进。"
+      }
+    },
+    {
+      "id": "7be11888-b7b3-5898-a07f-6393281963f8",
+      "key": "bijie-gazetteer/p199/jinyinshan-commune/seat",
+      "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, seat",
+      "verbatim_quote": "公社驻地白泥坝就在公路边。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "金银山公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "f6730aec-4540-5061-8296-52d2b4030162",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6ef154ef-db08-5da0-a407-41185d529356",
+      "key": "bijie-gazetteer/p199/jinyinshan-commune/name-history",
+      "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, name history",
+      "verbatim_quote": "由于该地有一山多黄壤——黄沙泥土，当地称金山，相对又一山多白胶泥土，称银山，故名金银山。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "金银山公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "655e23d7-ee94-5749-869b-7ddb2b0548ac",
+      "key": "bijie-gazetteer/p199/jinyinshan/datengliangzi/elevation",
+      "entity_id": "b57ff5c8-7867-52a8-8120-19d4efee88d4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, elevation",
+      "verbatim_quote": "大腾梁子亘塞中部，最高海拔1956.9米。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大腾梁子",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "最高海拔1956.9米。"
+      }
+    },
+    {
+      "id": "7291270f-105e-5755-aaf1-495ba9f367e0",
+      "key": "bijie-gazetteer/p199/jinyinshan-commune/relief",
+      "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, relief",
+      "verbatim_quote": "北面开口路板厂沟边，最低海拔1320米。东北有冷水河，北有板厂沟，落差大、切割深，故金银山素称高寒山区。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "金银山公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "cd482b70-100a-5703-b02d-f0ac03639d1c",
+      "key": "bijie-gazetteer/p199/jinyinshan-commune/chronology",
+      "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, chronology",
+      "verbatim_quote": "明代属毕节卫之东里也，清代仍属县之东里，民国沿称金银山属八寨乡辖地。解放后50年建村，54年建乡，办初级社，56年进入高级社，58年成立人民公社，命名金银山公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "金银山公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "cd2505b1-55fc-5a70-9374-e983004fae71",
+      "key": "bijie-gazetteer/p199/jinyinshan-commune/establishment",
+      "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "58年成立人民公社，命名金银山公社。",
+      "checked": true,
+      "source_date": {
+        "text": "58年",
+        "convention": "Gregorian year",
+        "conversion_basis": "The post-1949 chronology identifies the abbreviated year as 1958."
+      },
+      "observation": {
+        "name": "金银山公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "feab1edf-d9c7-5867-92d7-0f180c31034c",
+      "key": "bijie-gazetteer/p199/jinyinshan-commune/subdivisions",
+      "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, subdivisions",
+      "verbatim_quote": "辖：金银山、中厂、冷水河、岩口、板厂五个大队，39个生产队，36个自然村。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "金银山公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "80e21b6e-bdc3-5975-b9d4-8fc4b7afa854",
+      "key": "bijie-gazetteer/p199/jinyinshan-commune/population",
+      "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, population",
+      "verbatim_quote": "人口922户，4933人，居住着彝、布依、苗、汉等种民族，其中：彝族105人，布依族2人，苗族20人，其他民族387人，其余为汉族，均以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "金银山公社",
+        "pinyin": null,
+        "population": 4933,
+        "households": 922,
+        "ethnicities": [
+          "彝",
+          "布依",
+          "苗",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "彝族105人，布依族2人，苗族20人，其他民族387人，其余为汉族。"
+      }
+    },
+    {
+      "id": "aa9d5884-1a06-5981-acf2-92b91e88b69a",
+      "key": "bijie-gazetteer/p199/jinyinshan-commune/pottery",
+      "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, pottery",
+      "verbatim_quote": "金银山、白泥坝一带富有陶土资源，于清代就开办土碗厂，现在公社仍办有碗厂，陶器的传统技艺代代相传产品朴实，素有美名，为社队副业生产。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "金银山公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e2318258-40dd-5cad-b960-0a52d4273e8e",
+      "key": "bijie-gazetteer/p199/jinyinshan/livestock-farm/establishment",
+      "entity_id": "f2d6f102-1910-512c-99c3-1c9aee2e07a0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "1958年设有县畜牧场、兽医站，畜牧业比较发展。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "县畜牧场",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b09a02d2-b69d-5570-99f7-968fa5ba262f",
+      "key": "bijie-gazetteer/p199/jinyinshan/herb-farm/chronology",
+      "entity_id": "a01ffd13-cf87-51bd-b441-ef3b1130d9eb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, chronology",
+      "verbatim_quote": "同时办了药材场（79年下马）。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "药材场",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3d9d24cc-685f-5532-ad02-c4bfd4f8ab73",
+      "key": "bijie-gazetteer/p199/jinyinshan/zhiqing-farm/establishment",
+      "entity_id": "b81d4cb3-9603-5750-b24f-a4bb714afdd8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "1972年于此地办县知青农场，后来改为农工商联合企业公司。",
+      "checked": true,
+      "source_date": {
+        "text": "1972年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "县知青农场",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "99a292ea-6a23-5348-91aa-774e387ee487",
+      "key": "bijie-gazetteer/p199/jinyinshan/zhiqing-farm/company-name",
+      "entity_id": "b81d4cb3-9603-5750-b24f-a4bb714afdd8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "199",
+      "scan_page": 234,
+      "locator": "Overview, company name",
+      "verbatim_quote": "1972年于此地办县知青农场，后来改为农工商联合企业公司。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "农工商联合企业公司",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "县知青农场",
+            "source_date": {
+              "text": "1972年",
+              "convention": "Gregorian year",
+              "conversion_basis": null
+            },
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "2d6b27be-4a36-51ce-b09e-6bf6b8432495",
+      "key": "bijie-gazetteer/p203/xinai-commune/extent",
+      "entity_id": "4a84b95a-64be-52f2-b908-f68c1b1352c2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "203",
+      "scan_page": 238,
+      "locator": "Overview, extent",
+      "verbatim_quote": "新艾公社，在毕节县城东北部，相距二十四公里，川滇东路东侧，通公路。位于东经105°21′至105°22′，北纬27°24′至27°27′之间，总面积18平方公里。东接八寨，南抵鸭子塘，西连螃蟹，北枕金银山，西北角与对坡等公社接壤。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "新艾公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "东经105°21′至105°22′，北纬27°24′至27°27′；总面积18平方公里；东邻八寨，南邻鸭子塘，西邻螃蟹，北邻金银山，西北邻对坡。"
+      }
+    },
+    {
+      "id": "8f77ab28-a3c1-5463-a64e-1942457ed688",
+      "key": "bijie-gazetteer/p203/xinai/shuiying/name-history",
+      "entity_id": "f8a48391-2952-55c0-9e95-0b2df6841260",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "203",
+      "scan_page": 238,
+      "locator": "Overview, name history",
+      "verbatim_quote": "新艾在明、清时属县之东里地名水营，民国属八寨乡辖。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "水营",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "85873b73-2a07-5085-8647-38658fc02a7d",
+      "key": "bijie-gazetteer/p203/xinai-commune/chronology",
+      "entity_id": "4a84b95a-64be-52f2-b908-f68c1b1352c2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "203",
+      "scan_page": 238,
+      "locator": "Overview, chronology",
+      "verbatim_quote": "解放后，1950年在该地域分为新民村和爱民村，1954年建乡，办初级社，1956年进入高级社，1958年成立人民公社，将新民社和爱民社两社合并为一个公社，各取一字；命名为新艾（爱）公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "新艾公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d0d2fd65-784d-5638-ae51-ce2d80575719",
+      "key": "bijie-gazetteer/p203/xinai-commune/establishment",
+      "entity_id": "4a84b95a-64be-52f2-b908-f68c1b1352c2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "203",
+      "scan_page": 238,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "1958年成立人民公社，将新民社和爱民社两社合并为一个公社，各取一字；命名为新艾（爱）公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "新艾公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "490eaca3-658e-55f2-89de-3a0ebb0e1638",
+      "key": "bijie-gazetteer/p203/xinai-commune/seat",
+      "entity_id": "4a84b95a-64be-52f2-b908-f68c1b1352c2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "203",
+      "scan_page": 238,
+      "locator": "Overview, seat",
+      "verbatim_quote": "公社驻地水营村。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "新艾公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "f8a48391-2952-55c0-9e95-0b2df6841260",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "16f9033b-0269-5478-afb2-45c2cd84e8c8",
+      "key": "bijie-gazetteer/p203/xinai-commune/subdivisions",
+      "entity_id": "4a84b95a-64be-52f2-b908-f68c1b1352c2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "203",
+      "scan_page": 238,
+      "locator": "Overview, subdivisions",
+      "verbatim_quote": "辖：新艾、劳动、钟寨，三个大队，48个生产队，25个自然村。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "新艾公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "9547a46c-3fe8-5dbb-809d-8395ce7d4fd6",
+      "key": "bijie-gazetteer/p203/xinai-commune/population",
+      "entity_id": "4a84b95a-64be-52f2-b908-f68c1b1352c2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "203",
+      "scan_page": 238,
+      "locator": "Overview, population",
+      "verbatim_quote": "居住着彝、满、苗、汉等种民族，总人口：863户，4528人，其中：彝族54人，满族1人，苗族435人，其他民族507人，余为汉族。均以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "新艾公社",
+        "pinyin": null,
+        "population": 4528,
+        "households": 863,
+        "ethnicities": [
+          "彝",
+          "满",
+          "苗",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "彝族54人，满族1人，苗族435人，其他民族507人，余为汉族。"
+      }
+    },
+    {
+      "id": "cbb83464-b717-5aa9-a7fa-05d985e61bc9",
+      "key": "bijie-gazetteer/p203/xinai-commune/relief",
+      "entity_id": "4a84b95a-64be-52f2-b908-f68c1b1352c2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "203",
+      "scan_page": 238,
+      "locator": "Overview, relief",
+      "verbatim_quote": "公社的东北部与八寨公社交界处，最高海拔1836.8米，公社北面孙家寨较低，最低海拔1510米。东半部沟渠纵横，或出或伏，可开发利用。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "新艾公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d65d557a-2d92-5aa0-9dda-186532a7f124",
+      "key": "bijie-gazetteer/p205/mulang-commune/extent",
+      "entity_id": "e7512bc4-622d-5e4f-95da-4491bb54a0df",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "205",
+      "scan_page": 240,
+      "locator": "Overview, extent",
+      "verbatim_quote": "位于东经105°24′至105°26′，北纬27°25′至27°28′之间，总面积18.3平方公里。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "牧郎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "东经105°24′至105°26′，北纬27°25′至27°28′；总面积18.3平方公里。"
+      }
+    },
+    {
+      "id": "1eef423f-39cd-56d7-816d-90e32a9bd78e",
+      "key": "bijie-gazetteer/p205/mulang-commune/neighbors",
+      "entity_id": "e7512bc4-622d-5e4f-95da-4491bb54a0df",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "205",
+      "scan_page": 240,
+      "locator": "Overview, neighbors",
+      "verbatim_quote": "牧郎公社东邻层台，东南连总基，南与滥泥、果乐，西接八寨，北靠金银山等公社接壤。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "牧郎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "东邻层台，东南邻总基，南邻滥泥、果乐，西邻八寨，北邻金银山。"
+      }
+    },
+    {
+      "id": "3e4c780a-1910-56c4-93ee-d3f081e14772",
+      "key": "bijie-gazetteer/p205/mulang-commune/chronology",
+      "entity_id": "e7512bc4-622d-5e4f-95da-4491bb54a0df",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "205",
+      "scan_page": 240,
+      "locator": "Overview, chronology",
+      "verbatim_quote": "建国后，1950年建村，1954年建乡，办初级社，56年进入高级社，1958年成立公社命名为牧郎公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "牧郎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "851b779d-fd68-53cb-a5b3-ac4687311e1c",
+      "key": "bijie-gazetteer/p205/mulang-commune/establishment",
+      "entity_id": "e7512bc4-622d-5e4f-95da-4491bb54a0df",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "205",
+      "scan_page": 240,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "1958年成立公社命名为牧郎公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "牧郎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2d98ef2c-360b-519f-9842-effc4500457e",
+      "key": "bijie-gazetteer/p205/mulang-commune/name-history",
+      "entity_id": "e7512bc4-622d-5e4f-95da-4491bb54a0df",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "205",
+      "scan_page": 240,
+      "locator": "Overview, name history",
+      "verbatim_quote": "取“木稀”的“木”字为“牧”……隶海子街区。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "牧郎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "06220d38-0200-5988-a201-4ea8e0487fe2",
+      "key": "bijie-gazetteer/p205/mulang-commune/subdivisions",
+      "entity_id": "e7512bc4-622d-5e4f-95da-4491bb54a0df",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "205",
+      "scan_page": 240,
+      "locator": "Overview, subdivisions",
+      "verbatim_quote": "辖：瓦窑坪、罗汉山、华山、木樨四个大队，52个生产队，18个自然村。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "牧郎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6d27c800-de36-5ea0-91f6-4c067c9f552b",
+      "key": "bijie-gazetteer/p205/mulang-commune/population",
+      "entity_id": "e7512bc4-622d-5e4f-95da-4491bb54a0df",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "205",
+      "scan_page": 240,
+      "locator": "Overview, population",
+      "verbatim_quote": "有彝族和汉族，人口1041户，5437人，其中：彝族12人，其他民族377人，余为汉族。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "牧郎公社",
+        "pinyin": null,
+        "population": 5437,
+        "households": 1041,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "彝族12人，其他民族377人，余为汉族。"
+      }
+    },
+    {
+      "id": "68b4f38f-2b82-505a-8ee4-2f0757f704d3",
+      "key": "bijie-gazetteer/p205/mulang-commune/relief",
+      "entity_id": "e7512bc4-622d-5e4f-95da-4491bb54a0df",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "205",
+      "scan_page": 240,
+      "locator": "Overview, relief",
+      "verbatim_quote": "地貌复杂，四面大山环抱，北面较高，最高海拔1872.2米，西南较低，以郎沟最低海拔1500。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "牧郎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3505c53a-2ecb-575a-8a2e-81e4d68128dd",
+      "key": "bijie-gazetteer/p205/mulang-commune/coal-mine",
+      "entity_id": "e7512bc4-622d-5e4f-95da-4491bb54a0df",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "205",
+      "scan_page": 240,
+      "locator": "Overview, coal mine",
+      "verbatim_quote": "1980年在国家的扶持下，公社建了煤厂，年采煤890万斤，解决了本区民用煤和烤烟用煤。",
+      "checked": true,
+      "source_date": {
+        "text": "1980年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "牧郎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b40cd85d-23d1-5e8c-97d3-4283ab10b667",
+      "key": "bijie-gazetteer/p205/mulang/muxi-mountain/name-history",
+      "entity_id": "f920a79a-4b34-5947-8b61-459f2e2b37b3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "205",
+      "scan_page": 240,
+      "locator": "Overview, name history",
+      "verbatim_quote": "彝语称桂花为“木稀”，古来相传山上有桂花树，故名木稀山，木稀关。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "木稀山",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "67be6620-fc0c-505b-8fc7-c07b261fa2d0",
+      "key": "bijie-gazetteer/p205/mulang/muxi-pass/name-history",
+      "entity_id": "285d5ca3-75ff-54c1-a538-a87dfa69dfe0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "205",
+      "scan_page": 240,
+      "locator": "Overview, name history",
+      "verbatim_quote": "古名木稀关。彝语称桂花为“木稀”，古来相传山上有桂花树，故名木稀山，木稀关，清代废关设碉，名木稀碉，民国沿称，属八寨乡所辖。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "木稀碉",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "木稀关",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "4e5a7964-455a-5e53-b966-a679d470f710",
+      "key": "editorial/bijie/jinyinshan-commune/establishment",
+      "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+      "basis": [
+        "cd2505b1-55fc-5a70-9374-e983004fae71"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "39bf64ad-e47d-51ee-a69f-f281bbaaca19",
+      "key": "editorial/bijie/jinyinshan-commune/name",
+      "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+      "basis": [
+        "cd2505b1-55fc-5a70-9374-e983004fae71"
+      ],
+      "brief": "Use the stated commune name from its establishment year; the end date is unknown.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "金银山公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "15951409-c096-5988-9e6a-28ce08c030aa",
+      "key": "editorial/bijie/xinai-commune/establishment",
+      "entity_id": "4a84b95a-64be-52f2-b908-f68c1b1352c2",
+      "basis": [
+        "d0d2fd65-784d-5638-ae51-ce2d80575719"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "ef449766-c4c6-5e90-97b0-f9f0ad20bea4",
+      "key": "editorial/bijie/xinai-commune/name",
+      "entity_id": "4a84b95a-64be-52f2-b908-f68c1b1352c2",
+      "basis": [
+        "d0d2fd65-784d-5638-ae51-ce2d80575719"
+      ],
+      "brief": "Use the stated commune name from its establishment year; the end date is unknown.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "新艾公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "14d2428e-3791-53f9-9fc5-e3f4975379dd",
+      "key": "editorial/bijie/mulang-commune/establishment",
+      "entity_id": "e7512bc4-622d-5e4f-95da-4491bb54a0df",
+      "basis": [
+        "851b779d-fd68-53cb-a5b3-ac4687311e1c"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "f2a96da1-8845-5205-bf47-c0c33559ac2e",
+      "key": "editorial/bijie/mulang-commune/name",
+      "entity_id": "e7512bc4-622d-5e4f-95da-4491bb54a0df",
+      "basis": [
+        "851b779d-fd68-53cb-a5b3-ac4687311e1c"
+      ],
+      "brief": "Use the stated commune name from its establishment year; the end date is unknown.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "牧郎公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

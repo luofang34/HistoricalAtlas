@@ -25,6 +25,7 @@ def package(staging):
     subprocess.run(['cargo', 'run', '--locked', '-p', 'atlas-compile', '--',
                     'build', 'data', str(staging / 'data')], cwd=root, check=True)
     shutil.copyfile(root / 'apps/atlas-app/assets/OFL.txt', staging / 'FONT-LICENSE.txt')
+    shutil.copyfile(root / 'apps/atlas-app/assets/ARPHICPL.TXT', staging / 'ARPHICPL.TXT')
     shutil.copyfile(root / 'LICENSE', staging / 'LICENSE.txt')
     shutil.copyfile(root / 'data/LICENSE', staging / 'data/LICENSE.txt')
     for path in staging.rglob('*'):

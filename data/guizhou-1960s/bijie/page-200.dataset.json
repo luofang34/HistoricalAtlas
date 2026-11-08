@@ -1,0 +1,1402 @@
+{
+  "entities": [
+    {
+      "id": "927aad9c-f24c-52b4-8f4b-4a3c4ef8f447",
+      "key": "earth/cn-gz/bijie/jinyinshan/jinyinshan-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "d33b06d2-8c2f-5bf3-b1e0-f2291187bb66",
+      "key": "earth/cn-gz/bijie/jinyinshan/dateng-forest",
+      "body": "earth",
+      "kind": "forest"
+    },
+    {
+      "id": "ac8ac4b3-81e5-5ace-b52d-e3dc61008d53",
+      "key": "earth/cn-gz/bijie/jinyinshan/commune-bowl-factory",
+      "body": "earth",
+      "kind": "factory"
+    },
+    {
+      "id": "f6730aec-4540-5061-8296-52d2b4030162",
+      "key": "earth/cn-gz/bijie/jinyinshan/bainiba",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "65668e70-1aa9-519e-99b9-f5b4f2351028",
+      "key": "earth/cn-gz/bijie/jinyinshan/jinyinshan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "9500bdd3-64eb-50cd-acdc-b6bd7eb9ebae",
+      "key": "earth/cn-gz/bijie/jinyinshan/shanjiao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "540bb39a-4e2c-5dae-b925-27cb3753476c",
+      "key": "earth/cn-gz/bijie/jinyinshan/tunjiao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "9c912b8d-948a-5b26-a28d-05a59bf2c1ac",
+      "key": "earth/cn-gz/bijie/jinyinshan/taishaoping",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "f2d6f102-1910-512c-99c3-1c9aee2e07a0",
+      "key": "earth/cn-gz/bijie/jinyinshan/livestock-farm",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "76a25348-f00e-54b8-832d-30a94c12a210",
+      "key": "earth/cn-gz/bijie/jinyinshan/haiba",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "8a10ce40-64cd-5749-90b9-7973cf57f6e9",
+      "key": "earth/cn-gz/bijie/jinyinshan/biaoshuiyan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c3cbe536-a5ab-5d53-ba46-c8f4adebcf52",
+      "key": "earth/cn-gz/bijie/jinyinshan/zhongchang-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "40186439-b393-5b2b-a3e3-714cdbc95b27",
+      "key": "earth/cn-gz/bijie/jinyinshan/laowanchang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "6a9ac9ef-927a-57da-804a-9a5bebb8d152",
+      "key": "earth/cn-gz/bijie/jinyinshan/pingzishang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "f62b0909-a09c-5aa0-ac8b-a26a5e8e549a",
+      "key": "earth/cn-gz/bijie/jinyinshan/zhongwanchang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "d304e1d4-7a91-5d2f-8f31-4d6c89aa6053",
+      "key": "earth/cn-gz/bijie/jinyinshan/yanjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "ca657a09-9750-5ab3-9ee4-636dd9203769",
+      "key": "earth/cn-gz/bijie/jinyinshan/chenjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "e9aad532-7cf9-5bda-a342-012fc0b31f64",
+      "key": "earth/cn-gz/bijie/jinyinshan/lengshuihe-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "cac7c775-11be-5d58-af7f-d7b3e87e3e86",
+      "key": "earth/cn-gz/bijie/jinyinshan/tudiya",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "73610e8a-b118-5358-908d-6f69fdc22daf",
+      "key": "earth/cn-gz/bijie/jinyinshan/tangfang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "98f9be20-bfac-54d9-85f0-2bc4a9090894",
+      "key": "earth/cn-gz/bijie/jinyinshan/gongjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "7d7b5037-42fe-58d3-82d2-7cbaa3a316cf",
+      "key": "earth/cn-gz/bijie/jinyinshan/wumacao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "a7ed3499-ede9-504c-95f1-2af9b4ea3ba4",
+      "key": "earth/cn-gz/bijie/jinyinshan/xiaobaizaofen",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "32cd5c4c-02f9-5caf-9d39-ccf206ac9ee3",
+      "key": "earth/cn-gz/bijie/jinyinshan/dabaizaofen",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "630f347b-2c5a-5bbd-8de4-82205706389f",
+      "key": "earth/cn-gz/bijie/jinyinshan/lengshuihe",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "368f15a9-7aa7-5141-9cf0-d0ad2fff685b",
+      "key": "earth/cn-gz/bijie/jinyinshan/chongzitou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "1996bf9d-075f-5ff7-aa3e-cbf42bc10a18",
+      "key": "earth/cn-gz/bijie/jinyinshan/xintian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "ddaab64b-b4ff-50a1-84b4-f2be32c8a0b1",
+      "key": "earth/cn-gz/bijie/jinyinshan/yankou-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "695f81b2-0301-5c3e-9c68-60b4e2cf1549",
+      "key": "earth/cn-gz/bijie/jinyinshan/yankou-area",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "abb4b21f-5c87-5323-803b-9e2400237b39",
+      "key": "earth/cn-gz/bijie/jinyinshan/yinjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "0e5dd234-2635-5975-93fa-ac1219da2132",
+      "key": "earth/cn-gz/bijie/jinyinshan/shangjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "6a63a208-6d98-5cd0-a9a8-99e3d86b3bb4",
+      "key": "earth/cn-gz/bijie/jinyinshan/xiaoshijie",
+      "body": "earth",
+      "kind": "settlement"
+    }
+  ],
+  "records": [
+    {
+      "id": "f46e316e-3ccf-53d1-bbc3-e8d8604f1800",
+      "key": "bijie-gazetteer/p200/jinyinshan-commune",
+      "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 1: 金银山公社",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "金银山公社",
+        "pinyin": "Jinyīnshān Gōngshè",
+        "population": 4983,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "彝",
+          "布依",
+          "苗"
+        ],
+        "parent_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+        "rank": "commune",
+        "seat_id": "f6730aec-4540-5061-8296-52d2b4030162",
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.466666666666665
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°28′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "76d52599-95a2-5a2d-b1b6-8bdbcdfc284e",
+      "key": "bijie-gazetteer/p200/jinyinshan/jinyinshan-brigade",
+      "entity_id": "927aad9c-f24c-52b4-8f4b-4a3c4ef8f447",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 2: 金银山大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "金银山大队",
+        "pinyin": "Jinyīnshān Dàduì",
+        "population": 1499,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "彝",
+          "南京",
+          "菜"
+        ],
+        "parent_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+        "rank": "brigade",
+        "seat_id": "f6730aec-4540-5061-8296-52d2b4030162",
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.466666666666665
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°28′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "dd4a93ce-161b-502e-8a2e-0322841db409",
+      "key": "bijie-gazetteer/p200/jinyinshan/dateng-forest",
+      "entity_id": "d33b06d2-8c2f-5bf3-b1e0-f2291187bb66",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 3: 大腾林场",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大腾林场",
+        "pinyin": "Dàténg Línchǎng",
+        "population": 17,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "927aad9c-f24c-52b4-8f4b-4a3c4ef8f447",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.466666666666665
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°28′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "场"
+      }
+    },
+    {
+      "id": "5e7e7a3c-21d2-5f63-94ae-0ce36d134234",
+      "key": "bijie-gazetteer/p200/jinyinshan/commune-bowl-factory",
+      "entity_id": "ac8ac4b3-81e5-5ace-b52d-e3dc61008d53",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 4: 公社碗厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "公社碗厂",
+        "pinyin": "Gōngshè Wǎnchǎng",
+        "population": 104,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "彝",
+          "菜"
+        ],
+        "parent_id": "927aad9c-f24c-52b4-8f4b-4a3c4ef8f447",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bc266922-d9a9-583b-8469-b5f4c4d44688",
+      "key": "bijie-gazetteer/p200/jinyinshan/bainiba",
+      "entity_id": "f6730aec-4540-5061-8296-52d2b4030162",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 5: 白泥坝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "白泥坝",
+        "pinyin": "Báiníbà",
+        "population": 410,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "彝",
+          "南京",
+          "菜"
+        ],
+        "parent_id": "927aad9c-f24c-52b4-8f4b-4a3c4ef8f447",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.466666666666665
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°28′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公社、大队驻地"
+      }
+    },
+    {
+      "id": "0c2a1a2c-98b0-51f9-ba71-441cb5482dc8",
+      "key": "bijie-gazetteer/p200/jinyinshan/jinyinshan",
+      "entity_id": "65668e70-1aa9-519e-99b9-f5b4f2351028",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 6: 金银山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "金银山",
+        "pinyin": "Jinyīnshān",
+        "population": 181,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "菜"
+        ],
+        "parent_id": "927aad9c-f24c-52b4-8f4b-4a3c4ef8f447",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.466666666666665
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°28′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b7e818b5-d6f9-5e54-ac49-220c09aae437",
+      "key": "bijie-gazetteer/p200/jinyinshan/shanjiao",
+      "entity_id": "9500bdd3-64eb-50cd-acdc-b6bd7eb9ebae",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 7: 山脚",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "山脚",
+        "pinyin": "ShānJiǎo",
+        "population": 124,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "927aad9c-f24c-52b4-8f4b-4a3c4ef8f447",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.4,
+            "latitude": 27.466666666666665
+          },
+          "longitude_text": "105°24′",
+          "latitude_text": "27°28′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d6e7863d-7da1-512b-8ceb-4cf0d6c82baa",
+      "key": "bijie-gazetteer/p200/jinyinshan/tunjiao",
+      "entity_id": "540bb39a-4e2c-5dae-b925-27cb3753476c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 8: 屯脚",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "屯脚",
+        "pinyin": "Túnjiǎo",
+        "population": 188,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "927aad9c-f24c-52b4-8f4b-4a3c4ef8f447",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.466666666666665
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°28′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "441566c1-73ef-5d50-b42d-1265a2c7ee0c",
+      "key": "bijie-gazetteer/p200/jinyinshan/taishaoping",
+      "entity_id": "9c912b8d-948a-5b26-a28d-05a59bf2c1ac",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 9: 台稍平",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "台稍平",
+        "pinyin": "Táishāopíng",
+        "population": 92,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "927aad9c-f24c-52b4-8f4b-4a3c4ef8f447",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "81ca0685-7055-58c4-83d8-d28b8a737bb9",
+      "key": "bijie-gazetteer/p200/jinyinshan/livestock-farm",
+      "entity_id": "f2d6f102-1910-512c-99c3-1c9aee2e07a0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 10: 畜牧场",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "畜牧场",
+        "pinyin": "Xùmùchǎng",
+        "population": 163,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "927aad9c-f24c-52b4-8f4b-4a3c4ef8f447",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "场"
+      }
+    },
+    {
+      "id": "3ccabb52-2333-5d5e-b11f-59cf52400ab2",
+      "key": "bijie-gazetteer/p200/jinyinshan/haiba",
+      "entity_id": "76a25348-f00e-54b8-832d-30a94c12a210",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 11: 海坝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "海坝",
+        "pinyin": "Hǎibà",
+        "population": 40,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "927aad9c-f24c-52b4-8f4b-4a3c4ef8f447",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6afb117b-1eaa-58a7-975f-1e91fe035cb5",
+      "key": "bijie-gazetteer/p200/jinyinshan/biaoshuiyan",
+      "entity_id": "8a10ce40-64cd-5749-90b9-7973cf57f6e9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 12: 标水岩",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "标水岩",
+        "pinyin": "Biāshuǐyán",
+        "population": 180,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "927aad9c-f24c-52b4-8f4b-4a3c4ef8f447",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "714121fd-a591-5cc5-a567-f9a67b9c33f3",
+      "key": "bijie-gazetteer/p200/jinyinshan/zhongchang-brigade",
+      "entity_id": "c3cbe536-a5ab-5d53-ba46-c8f4adebcf52",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 13: 中厂大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "中厂大队",
+        "pinyin": "Zhōngchǎng Dàduì",
+        "population": 1128,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "彝",
+          "南京"
+        ],
+        "parent_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+        "rank": "brigade",
+        "seat_id": "f62b0909-a09c-5aa0-ac8b-a26a5e8e549a",
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.466666666666665
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°28′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a0de2df1-0b7f-55eb-b78d-40ce93247461",
+      "key": "bijie-gazetteer/p200/jinyinshan/laowanchang",
+      "entity_id": "40186439-b393-5b2b-a3e3-714cdbc95b27",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 14: 老碗厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "老碗厂",
+        "pinyin": "Lǎowǎnchǎng",
+        "population": 274,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c3cbe536-a5ab-5d53-ba46-c8f4adebcf52",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.466666666666665
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°28′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8e4fa78c-f023-5f10-9cfc-c9a0cf1d6734",
+      "key": "bijie-gazetteer/p200/jinyinshan/pingzishang",
+      "entity_id": "6a9ac9ef-927a-57da-804a-9a5bebb8d152",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 15: 坪子上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "坪子上",
+        "pinyin": "Píngzǐshàng",
+        "population": 92,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c3cbe536-a5ab-5d53-ba46-c8f4adebcf52",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "558266d3-f726-522c-8b35-ab0bdbe2211b",
+      "key": "bijie-gazetteer/p200/jinyinshan/zhongwanchang",
+      "entity_id": "f62b0909-a09c-5aa0-ac8b-a26a5e8e549a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 16: 中碗厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "中碗厂",
+        "pinyin": "Zhōngwǎnchǎng",
+        "population": 283,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c3cbe536-a5ab-5d53-ba46-c8f4adebcf52",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.466666666666665
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°28′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "e0f5fb50-0912-5f46-a6f1-550cd195f131",
+      "key": "bijie-gazetteer/p200/jinyinshan/yanjiazhai",
+      "entity_id": "d304e1d4-7a91-5d2f-8f31-4d6c89aa6053",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 17: 燕家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "燕家寨",
+        "pinyin": "Yànjiāzhài",
+        "population": 233,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c3cbe536-a5ab-5d53-ba46-c8f4adebcf52",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6c389ac1-8959-5d41-98f5-14dd9b6c70f2",
+      "key": "bijie-gazetteer/p200/jinyinshan/chenjiazhai",
+      "entity_id": "ca657a09-9750-5ab3-9ee4-636dd9203769",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 18: 陈家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "陈家寨",
+        "pinyin": "Chénjiāzhài",
+        "population": 123,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c3cbe536-a5ab-5d53-ba46-c8f4adebcf52",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "0079699c-eaf9-5376-9fb4-d5c8b48354c0",
+      "key": "bijie-gazetteer/p200/jinyinshan/lengshuihe-brigade",
+      "entity_id": "e9aad532-7cf9-5bda-a342-012fc0b31f64",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 19: 冷水河大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "冷水河大队",
+        "pinyin": "Lěngshuǐhé Dàduì",
+        "population": 730,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "南京"
+        ],
+        "parent_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+        "rank": "brigade",
+        "seat_id": "630f347b-2c5a-5bbd-8de4-82205706389f",
+        "coordinate": {
+          "point": {
+            "longitude": 105.4,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°24′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "0041ae26-8fb2-5195-8602-012f06d4eba9",
+      "key": "bijie-gazetteer/p200/jinyinshan/tudiya",
+      "entity_id": "cac7c775-11be-5d58-af7f-d7b3e87e3e86",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 20: 土地垭",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "土地垭",
+        "pinyin": "Tǔdìyā",
+        "population": 94,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "e9aad532-7cf9-5bda-a342-012fc0b31f64",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.4,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°24′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7025aa3c-10f6-5f1f-bd1f-66dd9d70874a",
+      "key": "bijie-gazetteer/p200/jinyinshan/tangfang",
+      "entity_id": "73610e8a-b118-5358-908d-6f69fdc22daf",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 21: 塘房",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "塘房",
+        "pinyin": "Tángfáng",
+        "population": 119,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "e9aad532-7cf9-5bda-a342-012fc0b31f64",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.4,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°24′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ca113fcf-5c99-5e40-b96e-19f4425861a7",
+      "key": "bijie-gazetteer/p200/jinyinshan/gongjiazhai",
+      "entity_id": "98f9be20-bfac-54d9-85f0-2bc4a9090894",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 22: 龚家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "龚家寨",
+        "pinyin": "Gōngjiāzhài",
+        "population": 106,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "e9aad532-7cf9-5bda-a342-012fc0b31f64",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.4,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°24′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7d0b5941-838e-5b32-9a32-de3a68e58913",
+      "key": "bijie-gazetteer/p200/jinyinshan/wumacao",
+      "entity_id": "7d7b5037-42fe-58d3-82d2-7cbaa3a316cf",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 23: 五马槽",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "五马槽",
+        "pinyin": "Wǔmǎcáo",
+        "population": 36,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "e9aad532-7cf9-5bda-a342-012fc0b31f64",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4bd216a7-32ec-5aac-abfd-0be8b1fca48b",
+      "key": "bijie-gazetteer/p200/jinyinshan/xiaobaizaofen",
+      "entity_id": "a7ed3499-ede9-504c-95f1-2af9b4ea3ba4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 24: 小白皂坟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小白皂坟",
+        "pinyin": "Xiǎobáizàofén",
+        "population": 42,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "e9aad532-7cf9-5bda-a342-012fc0b31f64",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7c0ac97e-7609-58dd-a9cf-7e53570d7a4c",
+      "key": "bijie-gazetteer/p200/jinyinshan/dabaizaofen",
+      "entity_id": "32cd5c4c-02f9-5caf-9d39-ccf206ac9ee3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 25: 大白皂坟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大白皂坟",
+        "pinyin": "Dàbáizàofén",
+        "population": 96,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "e9aad532-7cf9-5bda-a342-012fc0b31f64",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5f7bfc3d-eeeb-597e-b6fa-54248ff58dad",
+      "key": "bijie-gazetteer/p200/jinyinshan/lengshuihe",
+      "entity_id": "630f347b-2c5a-5bbd-8de4-82205706389f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 26: 冷水河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "冷水河",
+        "pinyin": "Lěngshuǐhé",
+        "population": 198,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "南京"
+        ],
+        "parent_id": "e9aad532-7cf9-5bda-a342-012fc0b31f64",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.4,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°24′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "30f372ad-8edb-5af9-87f1-3bdef922fd54",
+      "key": "bijie-gazetteer/p200/jinyinshan/chongzitou",
+      "entity_id": "368f15a9-7aa7-5141-9cf0-d0ad2fff685b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 27: 冲子头",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "冲子头",
+        "pinyin": "Chōngzǐtóu",
+        "population": 15,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "e9aad532-7cf9-5bda-a342-012fc0b31f64",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.4,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°24′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "9c3ccb62-4625-53cb-9e7c-69913530c0ae",
+      "key": "bijie-gazetteer/p200/jinyinshan/xintian",
+      "entity_id": "1996bf9d-075f-5ff7-aa3e-cbf42bc10a18",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 28: 新田",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "新田",
+        "pinyin": "Xīntián",
+        "population": 24,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "e9aad532-7cf9-5bda-a342-012fc0b31f64",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "058a9039-0852-5fa8-b4bb-e85a6e743c54",
+      "key": "bijie-gazetteer/p200/jinyinshan/yankou-brigade",
+      "entity_id": "ddaab64b-b4ff-50a1-84b4-f2be32c8a0b1",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 29: 岩口大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "岩口大队",
+        "pinyin": "Yánkǒu Dàduì",
+        "population": 897,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e",
+        "rank": "brigade",
+        "seat_id": "abb4b21f-5c87-5323-803b-9e2400237b39",
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "9304d10a-d397-5e99-a33f-9b3510ebc06c",
+      "key": "bijie-gazetteer/p200/jinyinshan/yankou-area",
+      "entity_id": "695f81b2-0301-5c3e-9c68-60b4e2cf1549",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 30: 岩口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "岩口",
+        "pinyin": "Yánkǒu",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "ddaab64b-b4ff-50a1-84b4-f2be32c8a0b1",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "包括尹家寨、尚家寨、仙人洞"
+      }
+    },
+    {
+      "id": "6074f414-2077-5810-8454-884ee7585c10",
+      "key": "bijie-gazetteer/p200/jinyinshan/yinjiazhai",
+      "entity_id": "abb4b21f-5c87-5323-803b-9e2400237b39",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 31: 尹家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "尹家寨",
+        "pinyin": "Yǐnjiāzhài",
+        "population": 320,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "ddaab64b-b4ff-50a1-84b4-f2be32c8a0b1",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "094892ce-3bca-55e8-85d5-8789468e2a07",
+      "key": "bijie-gazetteer/p200/jinyinshan/shangjiazhai",
+      "entity_id": "0e5dd234-2635-5975-93fa-ac1219da2132",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 32: 尚家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "尚家寨",
+        "pinyin": "Shàngjiāzhài",
+        "population": 310,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "ddaab64b-b4ff-50a1-84b4-f2be32c8a0b1",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "df3b124a-da5e-50be-9438-728cfbb14a56",
+      "key": "bijie-gazetteer/p200/jinyinshan/xiaoshijie",
+      "entity_id": "6a63a208-6d98-5cd0-a9a8-99e3d86b3bb4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "200",
+      "scan_page": 235,
+      "locator": "Place table, row 33: 小石街",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小石街",
+        "pinyin": "Xiǎoshíjiē",
+        "population": 103,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "ddaab64b-b4ff-50a1-84b4-f2be32c8a0b1",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

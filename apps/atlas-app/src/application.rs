@@ -225,12 +225,16 @@ pub fn configure_fonts(ctx: &egui::Context) {
         "Atlas CJK".into(),
         egui::FontData::from_static(include_bytes!("../assets/AtlasCJK.otf")).into(),
     );
+    fonts.font_data.insert(
+        "Atlas Han Supplement".into(),
+        egui::FontData::from_static(include_bytes!("../assets/AtlasHanSupplement.ttf")).into(),
+    );
     for family in [egui::FontFamily::Proportional, egui::FontFamily::Monospace] {
         fonts
             .families
             .entry(family)
             .or_default()
-            .push("Atlas CJK".into());
+            .extend(["Atlas CJK".into(), "Atlas Han Supplement".into()]);
     }
     ctx.set_fonts(fonts);
 }
