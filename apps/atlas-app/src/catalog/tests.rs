@@ -1,6 +1,35 @@
 use super::*;
 
 #[test]
+fn changchunbao_former_names_and_mine_spellings_resolve_to_cited_identities() {
+    let atlas = atlas();
+    for (name, key) in [
+        ("长春公社", "changchunbao-commune"),
+        ("丰乐公社", "qingfeng-commune"),
+        ("南加河", "changchunbao/changchun-river"),
+        ("垭关煤厂", "changchunbao/yaguan-coal"),
+        ("鸦关煤厂", "changchunbao/yaguan-coal"),
+    ] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{key}")).unwrap();
+        assert_eq!(atlas.search(name, BodyId::Earth), vec![id]);
+    }
+    let matches = atlas.search("倒洞坡", BodyId::Earth);
+    assert_eq!(matches.len(), 2);
+    for key in ["daodongpo", "daodongpo-cave"] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/qingfeng/{key}")).unwrap();
+        assert!(matches.contains(&id));
+        assert!(
+            atlas
+                .entry(id)
+                .unwrap()
+                .records
+                .iter()
+                .all(|record| record.page_or_sheet.as_deref() == Some("108"))
+        );
+    }
+}
+
+#[test]
 fn dahe_bridges_and_river_alias_resolve_to_their_distinct_evidence() {
     let atlas = atlas();
     let bridges = atlas.search("大河桥", BodyId::Earth);

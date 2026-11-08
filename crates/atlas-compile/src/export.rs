@@ -247,3 +247,7 @@ mod qingchang_tests;
 #[cfg(test)]
 #[path = "export/qingchang/communes/tests.rs"]
 mod qingchang_commune_tests;
+
+#[cfg(test)]
+#[path = "export/changchunbao/tests.rs"]
+mod changchunbao_tests;
