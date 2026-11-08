@@ -345,3 +345,7 @@ mod pingqiao_tests;
 #[cfg(test)]
 #[path = "export/alie/tests.rs"]
 mod alie_tests;
+
+#[cfg(test)]
+#[path = "export/yanzikou/tests.rs"]
+mod yanzikou_tests;

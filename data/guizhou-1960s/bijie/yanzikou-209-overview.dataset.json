@@ -1,0 +1,550 @@
+{
+  "entities": [
+    {
+      "id": "f226446a-eec7-5b3e-be09-205297a31838",
+      "key": "earth/cn-gz/bijie/yanzikou/dashuigou-liangzi",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "cb90a0b6-28c4-52a3-855f-0eae5cca3987",
+      "key": "earth/cn-gz/bijie/yanzikou/aluomi-garrison",
+      "body": "earth",
+      "kind": "historic_site"
+    }
+  ],
+  "records": [
+    {
+      "id": "d51a059b-1c2b-555b-9cfd-9514b978cbbd",
+      "key": "bijie-gazetteer/p209/yanzikou/yanzikou/name-history",
+      "entity_id": "e1a3b300-e3d9-514c-8c1f-9b00353f53b1",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, name history",
+      "verbatim_quote": "燕子口，在毕节县城东北面，相距五十四公里，其山形似飞燕，历来在山口赶场，逐渐形成丫形长街，宛若燕咀故名。明、清至今皆为县属的较大集镇。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "燕子口",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "61b0fcc7-5d0c-5fdf-a91e-149c153b2ac6",
+      "key": "bijie-gazetteer/p209/yanzikou-district/seat",
+      "entity_id": "c15f48b8-e10e-525c-aa8d-0f354d50a5b6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, seat",
+      "verbatim_quote": "又是区直党政机关单位驻地，形成燕子口区的政治、经济、文化中心。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "燕子口区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "e1a3b300-e3d9-514c-8c1f-9b00353f53b1",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b57ba43c-f07b-5aef-9116-0ea76e39c615",
+      "key": "bijie-gazetteer/p209/yanzikou-district/subdivisions",
+      "entity_id": "c15f48b8-e10e-525c-aa8d-0f354d50a5b6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, subdivisions",
+      "verbatim_quote": "区辖燕子口、洒鱼河、亮岩、先进、峨峰、太极六个公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "燕子口区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "994d28fd-f38b-5e19-9a29-4aa9c3cebfc0",
+      "key": "bijie-gazetteer/p209/yanzikou-district/establishment",
+      "entity_id": "c15f48b8-e10e-525c-aa8d-0f354d50a5b6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "解放后，1950年划为七区，燕子口街上建村，相继土改，1954年建立乡政权，办初级社，1956年更名为燕子口区，办高级社，1958年成立燕子口公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1950年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "七区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "3598db1c-f453-500e-b412-21cd4953cc68",
+        "rank": "district",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7d26dec5-4b5e-58da-a37d-facefdb13031",
+      "key": "bijie-gazetteer/p209/yanzikou-district/renaming",
+      "entity_id": "c15f48b8-e10e-525c-aa8d-0f354d50a5b6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, renaming",
+      "verbatim_quote": "1956年更名为燕子口区",
+      "checked": true,
+      "source_date": {
+        "text": "1956年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "燕子口区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "七区",
+            "source_date": {
+              "text": "1950年",
+              "convention": "Gregorian year",
+              "conversion_basis": null
+            },
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "1b84ceed-7400-51c6-8b3a-3c2130af99c8",
+      "key": "bijie-gazetteer/p209/yanzikou-commune/establishment",
+      "entity_id": "0643c1be-7622-5fb9-9518-49972efe9238",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "1958年成立燕子口公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "燕子口公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e165a1c5-1964-511e-a893-255556423104",
+      "key": "bijie-gazetteer/p209/yanzikou-commune/subdivisions",
+      "entity_id": "0643c1be-7622-5fb9-9518-49972efe9238",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, subdivisions",
+      "verbatim_quote": "燕子口公社辖：燕子口、中沟、云台、石街、甘沟河、黄泥坡、雄狮、罗福、金竹九个大队，101个生产队，74个自然村，居住着汉、苗、彝、布依族等。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "燕子口公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "彝",
+          "布依"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "9 brigades, 101 production teams, and 74 natural villages. The overview writes 甘沟河; the table on page 210 writes 甘河沟大队."
+      }
+    },
+    {
+      "id": "dff4bea9-d024-5eef-80f9-d8c7c426842d",
+      "key": "bijie-gazetteer/p209/yanzikou-commune/population",
+      "entity_id": "0643c1be-7622-5fb9-9518-49972efe9238",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, population",
+      "verbatim_quote": "现有人口2724户，14221人，其中：彝族71人，苗族946人，布依族3人，余为汉族。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "燕子口公社",
+        "pinyin": null,
+        "population": 14221,
+        "households": 2724,
+        "ethnicities": [
+          "彝",
+          "苗",
+          "布依",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "彝族71人，苗族946人，布依族3人，余为汉族。"
+      }
+    },
+    {
+      "id": "9c1b1a71-f460-581e-8ce6-c99cdadc494f",
+      "key": "bijie-gazetteer/p209/yanzikou-commune/extent",
+      "entity_id": "0643c1be-7622-5fb9-9518-49972efe9238",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, extent",
+      "verbatim_quote": "燕子口公社地处东经105°24′至105°27′，北纬27°34′至27°39′之间，总面积48.1平方公里。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "燕子口公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "东经105°24′至105°27′，北纬27°34′至27°39′；总面积48.1平方公里。"
+      }
+    },
+    {
+      "id": "672d1150-1416-5e93-95ee-2cfa7b8fa2c8",
+      "key": "bijie-gazetteer/p209/yanzikou-commune/neighbors",
+      "entity_id": "0643c1be-7622-5fb9-9518-49972efe9238",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, neighbors",
+      "verbatim_quote": "东与太极，西南与洒鱼河，南与先进，西与林口，北与亮岩等五个公社毗连。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "燕子口公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "东邻太极，西南邻洒鱼河，南邻先进，西邻林口，北邻亮岩。"
+      }
+    },
+    {
+      "id": "7b32312d-b900-5c4c-af24-ee8d0694715d",
+      "key": "bijie-gazetteer/p209/yanzikou-commune/relief",
+      "entity_id": "0643c1be-7622-5fb9-9518-49972efe9238",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, relief",
+      "verbatim_quote": "地貌：属石灰岩、砂页岩中中山谷地和丘陵洼地。因岩溶侵蚀，河谷深切，地貌交错，地形破碎零星，山高坡陡，水土流失严重。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "燕子口公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "27ce3805-c624-5f89-8997-c1bef18c9f35",
+      "key": "bijie-gazetteer/p209/yanzikou-commune/elevations",
+      "entity_id": "0643c1be-7622-5fb9-9518-49972efe9238",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, elevations",
+      "verbatim_quote": "北面最高处大水沟梁子海拔1930.1米，东面的板桥河边最低海拔1100米，西南面都是山坡，海拔高程在1400～1700米左右。地下蕴藏无烟煤矿。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "燕子口公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b417f973-0512-5bc7-bd24-c862ed84a2d2",
+      "key": "bijie-gazetteer/p209/yanzikou/dashuigou-liangzi/elevation",
+      "entity_id": "f226446a-eec7-5b3e-be09-205297a31838",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, elevation",
+      "verbatim_quote": "北面最高处大水沟梁子海拔1930.1米",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大水沟梁子",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "海拔1930.1米。"
+      }
+    },
+    {
+      "id": "5bc95b01-e8c1-5769-ac9b-f8fa6eeadfa9",
+      "key": "bijie-gazetteer/p209/yanzikou/aluomi-garrison/establishment",
+      "entity_id": "cb90a0b6-28c4-52a3-855f-0eae5cca3987",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "209",
+      "scan_page": 244,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "在燕子口街的东北约一公里处，于明洪武二十一年（公元1388年）置阿罗密千户所，清废所设铺名小铺，民国属燕岩乡。",
+      "checked": true,
+      "source_date": {
+        "text": "明洪武二十一年（公元1388年）",
+        "convention": "Chinese reign year with the source’s Gregorian concordance",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "阿罗密千户所",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "4db0fac8-4790-501b-bba0-b6213ac0ce9d",
+      "key": "editorial/bijie/yanzikou-district/establishment",
+      "entity_id": "c15f48b8-e10e-525c-aa8d-0f354d50a5b6",
+      "basis": [
+        "994d28fd-f38b-5e19-9a29-4aa9c3cebfc0"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1577880000000",
+            "nominal": "-1562112000001",
+            "latest": "-1546344000001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "91f315e4-c0ac-5767-9a50-2dd3b7f6c914",
+      "key": "editorial/bijie/yanzikou-commune/establishment",
+      "entity_id": "0643c1be-7622-5fb9-9518-49972efe9238",
+      "basis": [
+        "1b84ceed-7400-51c6-8b3a-3c2130af99c8"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "e992ad2f-2944-57c1-99d0-5f2827d8c637",
+      "key": "editorial/bijie/yanzikou-district/numbered-name",
+      "entity_id": "c15f48b8-e10e-525c-aa8d-0f354d50a5b6",
+      "basis": [
+        "994d28fd-f38b-5e19-9a29-4aa9c3cebfc0",
+        "7d26dec5-4b5e-58da-a37d-facefdb13031"
+      ],
+      "brief": "Use the stated name between the cited changes, retaining their date bounds.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1577880000000",
+              "nominal": "-1562112000001",
+              "latest": "-1546344000001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-1388577600000",
+              "nominal": "-1372766400001",
+              "latest": "-1356955200001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "七区",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "3518f210-160e-5e9b-b36e-cabc0ce783ae",
+      "key": "editorial/bijie/yanzikou-district/name",
+      "entity_id": "c15f48b8-e10e-525c-aa8d-0f354d50a5b6",
+      "basis": [
+        "7d26dec5-4b5e-58da-a37d-facefdb13031"
+      ],
+      "brief": "Use the stated name between the cited changes, retaining their date bounds.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1388577600000",
+              "nominal": "-1372766400001",
+              "latest": "-1356955200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "燕子口区",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "58056148-6296-5c81-a721-5366dd2cca7c",
+      "key": "editorial/bijie/yanzikou-commune/name",
+      "entity_id": "0643c1be-7622-5fb9-9518-49972efe9238",
+      "basis": [
+        "1b84ceed-7400-51c6-8b3a-3c2130af99c8"
+      ],
+      "brief": "Use the stated name between the cited changes, retaining their date bounds.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "燕子口公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}
