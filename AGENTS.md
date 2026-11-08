@@ -1,0 +1,11 @@
+# HistoricalAtlas
+
+Use the user-provided repository workflow and Rust rules. Use GitButler for version control.
+
+- Tools are AGPL-3.0-or-later. Curated data is CC-BY-SA-4.0. Keep source scans, full-page OCR, credentials, and local paths outside publication.
+- Every published assertion must cite a source and an exact printed page/sheet plus a one-based scan page where available. Keep original dates, coordinate notation, precision, and unknown values. Never promote OCR drafts to checked records without page review.
+- Source observations and derived estimates are separate. Do not invent exact dates, WGS84 coordinates, control points, or surveyed boundaries. Record uncertain interpretation and its basis explicitly.
+- Run `scripts/ci.sh` before pushing. It includes native and WASM checks, data validation, and structural gates. Do not change shared CI or force-push without the user's confirmation.
+- Keep Rust files under 500 lines, functions under 80 lines, and structs/enums under 30 fields/variants. `lib.rs` contains only crate documentation, module declarations, and re-exports and stays under 100 lines. Use domain names and `foo.rs` with `foo/`; no `mod.rs`, `utils.rs`, `helpers.rs`, or `common.rs`.
+- Use typed library errors and `tracing` diagnostics. Monotonic counters use `wrapping_add(1)`. Tests live in domain `tests.rs` modules and exercise behavior. Lint exemptions belong in `clippy.toml`.
+- Do not add task histories or status reports to documentation. Update essential usage instructions in place. Keep each published static file strictly smaller than 4,000,000 bytes; never use Git LFS.

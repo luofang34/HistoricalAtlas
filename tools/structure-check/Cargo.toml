@@ -1,0 +1,14 @@
+[package]
+name = "atlas-structure"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+syn = { version = "2", features = ["full", "visit"] }
+proc-macro2 = { version = "1", features = ["span-locations"] }
+tracing.workspace = true
+tracing-subscriber.workspace = true
+
+[lints]
+workspace = true
