@@ -6,6 +6,7 @@ use atlas_compile::{
     export::{compile, write_blocking},
     input::load_blocking,
     registration::register_blocking,
+    slice::write_slice_blocking,
 };
 use tracing::info;
 
@@ -47,9 +48,14 @@ fn main() -> Result<(), Box<dyn Error>> {
                 "Sheet registered"
             );
         }
+        [command, root, ticks, selection, destination] if command == "slice" => {
+            let files =
+                write_slice_blocking(Path::new(root), ticks, selection, Path::new(destination))?;
+            info!(files, ticks, selection, destination, "Time slice compiled");
+        }
         _ => {
             return Err(
-                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | register <data> <controls.json> <new-result.json>".into(),
+                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | register <data> <controls.json> <new-result.json> | slice <data> <tt-ms> <nominal|possible|certain> <new-output-directory>".into(),
             );
         }
     }

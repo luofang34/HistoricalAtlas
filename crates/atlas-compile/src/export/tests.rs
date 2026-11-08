@@ -71,3 +71,33 @@ fn shared_minute_coordinates_preserve_distinct_villages_and_their_parent() {
         assert_eq!(coordinate["datum"], "unspecified");
     }
 }
+
+#[test]
+fn temporal_hierarchy_cannot_publish_a_parent_without_checked_evidence() {
+    let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
+    let mut input = load_blocking(&root).unwrap();
+    let unchecked = input
+        .data
+        .records
+        .iter()
+        .find(|record| !record.checked)
+        .unwrap()
+        .entity_id;
+    let estimate = input
+        .data
+        .estimates
+        .iter_mut()
+        .find(|estimate| {
+            matches!(
+                &estimate.value, EstimateValue::Temporal { assertion }
+                    if matches!(assertion.value, TemporalValue::Hierarchy(_))
+            )
+        })
+        .unwrap();
+    if let EstimateValue::Temporal { assertion } = &mut estimate.value
+        && let TemporalValue::Hierarchy(hierarchy) = &mut assertion.value
+    {
+        hierarchy.parent_id = Some(unchecked);
+    }
+    assert!(matches!(compile(&input), Err(ExportError::MissingEvidence(id)) if id == unchecked));
+}

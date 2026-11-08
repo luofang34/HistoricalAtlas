@@ -3,3 +3,4 @@
 pub mod export;
 pub mod input;
 pub mod registration;
+pub mod slice;

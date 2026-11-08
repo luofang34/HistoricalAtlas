@@ -6,9 +6,9 @@ use std::{
     path::{Path, PathBuf},
 };
 
-use atlas_core::identity::EntityId;
+use atlas_core::{assertion::TemporalValue, identity::EntityId};
 use atlas_ledger::{
-    model::{Dispute, Entity, Estimate, Record},
+    model::{Dispute, Entity, Estimate, EstimateValue, Record},
     publication::Published,
 };
 use serde::Serialize;
@@ -115,16 +115,36 @@ fn verify_checked_references(
         }
     }
     for record in input.data.records.iter().filter(|r| r.checked) {
-        if let Some(parent) = record.observation.parent_id
-            && !current.contains(&parent)
+        for target in record
+            .observation
+            .parent_id
+            .iter()
+            .chain(&record.observation.seat_id)
         {
-            return Err(ExportError::MissingEvidence(parent));
+            if !current.contains(target) {
+                return Err(ExportError::MissingEvidence(*target));
+            }
+        }
+    }
+    for estimate in &input.data.estimates {
+        if let EstimateValue::Temporal { assertion } = &estimate.value
+            && let TemporalValue::Hierarchy(hierarchy) = &assertion.value
+        {
+            for target in hierarchy.parent_id.iter().chain(&hierarchy.seat_id) {
+                if !current.contains(target) {
+                    return Err(ExportError::MissingEvidence(*target));
+                }
+            }
         }
     }
     Ok(())
 }
 
-fn insert(output: &mut Artifacts, path: &str, value: &impl Serialize) -> Result<(), ExportError> {
+pub(crate) fn insert(
+    output: &mut Artifacts,
+    path: &str,
+    value: &impl Serialize,
+) -> Result<(), ExportError> {
     let bytes = serde_json::to_vec_pretty(value)?;
     if bytes.len() >= MAX_FILE_BYTES {
         return Err(ExportError::Oversize {
