@@ -1,56 +1,66 @@
 {
   "entities": [
     {
-      "id": "5dce219c-d0eb-5616-894c-5a5aaeecd2bb",
-      "key": "earth/cn-gz/bijie/liuwan/jianshanzi-brigade",
+      "id": "829f7dee-3e40-5e70-a476-451c3e30fbfd",
+      "key": "earth/cn-gz/bijie/daji/longling-brigade",
       "body": "earth",
       "kind": "brigade"
     },
     {
-      "id": "9b36c7dc-0a29-5798-9692-eb56ca0507f3",
-      "key": "earth/cn-gz/bijie/liuwan/jianshanzi/jianshanzi",
+      "id": "10d611e8-6458-5168-9524-7c700d6a3d4d",
+      "key": "earth/cn-gz/bijie/daji/longling/yuduo",
       "body": "earth",
       "kind": "settlement"
     },
     {
-      "id": "64db21e2-ef63-5c44-9a74-bd2d954304b0",
-      "key": "earth/cn-gz/bijie/liuwan/jianshanzi/damawo",
+      "id": "f57fd743-7717-5398-ac6e-35d06903173b",
+      "key": "earth/cn-gz/bijie/daji/longling/kuangjiaqing",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "e59f1a0a-c849-556e-9e54-0cd8a997a5da",
+      "key": "earth/cn-gz/bijie/hongyan/minzu-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "aad16344-75ff-53cb-aa23-a00d79e37046",
+      "key": "earth/cn-gz/bijie/hongyan/minzu/tianba",
       "body": "earth",
       "kind": "settlement"
     }
   ],
   "records": [
     {
-      "id": "09469d90-1c69-5cba-bfb3-17040b29c62b",
-      "key": "bijie-gazetteer/p264/liuwan/jianshanzi-brigade",
-      "entity_id": "5dce219c-d0eb-5616-894c-5a5aaeecd2bb",
+      "id": "5dcde592-9039-598c-a2e7-e668713e7568",
+      "key": "bijie-gazetteer/p278/daji/longling-brigade",
+      "entity_id": "829f7dee-3e40-5e70-a476-451c3e30fbfd",
       "source_id": "bijie-gazetteer",
-      "page_or_sheet": "264",
-      "scan_page": 299,
-      "locator": "Place table, row 10: 尖山子大队",
+      "page_or_sheet": "278",
+      "scan_page": 313,
+      "locator": "Place table, 龙岭大队 row",
       "verbatim_quote": null,
       "checked": true,
       "source_date": null,
       "observation": {
-        "name": "尖山子大队",
-        "pinyin": "Jiānshānzǐ Dàduì",
-        "population": 947,
+        "name": "龙岭大队",
+        "pinyin": "Lónglǐng Dàduì",
+        "population": 1750,
         "households": null,
         "ethnicities": [
-          "彝",
-          "汉",
-          "苗"
+          "汉"
         ],
-        "parent_id": "a8d1cc61-b619-50dc-832b-6f23b774fc9f",
+        "parent_id": "9198505c-2929-5f74-baf3-b3f4f789140d",
         "rank": "brigade",
-        "seat_id": "9b36c7dc-0a29-5798-9692-eb56ca0507f3",
+        "seat_id": "10d611e8-6458-5168-9524-7c700d6a3d4d",
         "coordinate": {
           "point": {
-            "longitude": 105.6,
-            "latitude": 27.6
+            "longitude": 105.55,
+            "latitude": 27.5
           },
-          "longitude_text": "105°36′",
-          "latitude_text": "27°36′",
+          "longitude_text": "105°33′",
+          "latitude_text": "27°30′",
           "resolution_arcminutes": 1.0,
           "datum": "unspecified"
         },
@@ -59,34 +69,34 @@
       }
     },
     {
-      "id": "9cf8c7a8-6db1-5056-a147-a3b20edd9d3c",
-      "key": "bijie-gazetteer/p264/liuwan/jianshanzi/jianshanzi",
-      "entity_id": "9b36c7dc-0a29-5798-9692-eb56ca0507f3",
+      "id": "804aa794-fc71-59d2-96de-4f760e02b780",
+      "key": "bijie-gazetteer/p279/daji/longling/yuduo",
+      "entity_id": "10d611e8-6458-5168-9524-7c700d6a3d4d",
       "source_id": "bijie-gazetteer",
-      "page_or_sheet": "264",
-      "scan_page": 299,
-      "locator": "Place table, row 20: 尖山子",
+      "page_or_sheet": "279",
+      "scan_page": 314,
+      "locator": "Place table, 雨朵 row",
       "verbatim_quote": null,
       "checked": true,
       "source_date": null,
       "observation": {
-        "name": "尖山子",
-        "pinyin": "Jiānshānzǐ",
-        "population": 160,
+        "name": "雨朵",
+        "pinyin": "Yǔduǒ",
+        "population": 161,
         "households": null,
         "ethnicities": [
           "汉"
         ],
-        "parent_id": "5dce219c-d0eb-5616-894c-5a5aaeecd2bb",
+        "parent_id": "829f7dee-3e40-5e70-a476-451c3e30fbfd",
         "rank": null,
         "seat_id": null,
         "coordinate": {
           "point": {
-            "longitude": 105.6,
-            "latitude": 27.6
+            "longitude": 105.55,
+            "latitude": 27.5
           },
-          "longitude_text": "105°36′",
-          "latitude_text": "27°36′",
+          "longitude_text": "105°33′",
+          "latitude_text": "27°30′",
           "resolution_arcminutes": 1.0,
           "datum": "unspecified"
         },
@@ -95,40 +105,113 @@
       }
     },
     {
-      "id": "1dc395b7-b32b-59d3-9030-466b6ccd9f77",
-      "key": "bijie-gazetteer/p264/liuwan/jianshanzi/damawo",
-      "entity_id": "64db21e2-ef63-5c44-9a74-bd2d954304b0",
+      "id": "9d729200-90f7-5d3f-b9bc-90cb42d81fda",
+      "key": "bijie-gazetteer/p279/daji/longling/kuangjiaqing",
+      "entity_id": "f57fd743-7717-5398-ac6e-35d06903173b",
       "source_id": "bijie-gazetteer",
-      "page_or_sheet": "264",
-      "scan_page": 299,
-      "locator": "Place table, row 11: 大麻窝",
+      "page_or_sheet": "279",
+      "scan_page": 314,
+      "locator": "Place table, 况家箐 row",
       "verbatim_quote": null,
       "checked": true,
       "source_date": null,
       "observation": {
-        "name": "大麻窝",
-        "pinyin": "Dàmáwō",
-        "population": 235,
+        "name": "况家箐",
+        "pinyin": "Kuàngjiā Qìng",
+        "population": 33,
         "households": null,
         "ethnicities": [
-          "汉",
-          "苗"
+          "汉"
         ],
-        "parent_id": "5dce219c-d0eb-5616-894c-5a5aaeecd2bb",
+        "parent_id": "829f7dee-3e40-5e70-a476-451c3e30fbfd",
         "rank": null,
         "seat_id": null,
         "coordinate": {
           "point": {
-            "longitude": 105.6,
+            "longitude": 105.56666666666666,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°34′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3c70abcd-b23d-559b-80c8-ea4485a4d1ef",
+      "key": "bijie-gazetteer/p312/hongyan/minzu-brigade",
+      "entity_id": "e59f1a0a-c849-556e-9e54-0cd8a997a5da",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "312",
+      "scan_page": 347,
+      "locator": "Place table, 民族大队 row",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "民族大队",
+        "pinyin": "Mínzú Dàduì",
+        "population": 1226,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "彝"
+        ],
+        "parent_id": "126109bd-1ae6-5c43-ab47-addc384047cf",
+        "rank": "brigade",
+        "seat_id": "aad16344-75ff-53cb-aa23-a00d79e37046",
+        "coordinate": {
+          "point": {
+            "longitude": 105.58333333333333,
             "latitude": 27.616666666666667
           },
-          "longitude_text": "105°36′",
+          "longitude_text": "105°35′",
           "latitude_text": "27°37′",
           "resolution_arcminutes": 1.0,
           "datum": "unspecified"
         },
         "former_names": [],
         "note": null
+      }
+    },
+    {
+      "id": "7cfb0166-a24b-538f-a405-446e5b697ba5",
+      "key": "bijie-gazetteer/p313/hongyan/minzu/tianba",
+      "entity_id": "aad16344-75ff-53cb-aa23-a00d79e37046",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "313",
+      "scan_page": 348,
+      "locator": "Place table, 田坝 row",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "田坝",
+        "pinyin": "Tiánbà",
+        "population": 70,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "e59f1a0a-c849-556e-9e54-0cd8a997a5da",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.58333333333333,
+            "latitude": 27.616666666666667
+          },
+          "longitude_text": "105°35′",
+          "latitude_text": "27°37′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
       }
     }
   ],

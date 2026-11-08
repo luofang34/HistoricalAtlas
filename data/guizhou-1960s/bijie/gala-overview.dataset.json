@@ -1,0 +1,405 @@
+{
+  "entities": [],
+  "records": [
+    {
+      "id": "c1f64cc0-0545-55a5-b543-27658405f22a",
+      "key": "bijie-gazetteer/p267/gala-commune/extent",
+      "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "267",
+      "scan_page": 302,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": "戛拉公社的地理位置，在毕节县城东北部，距城65公里，位于东经105°36′至105°39′，北纬27°31′至27°33′之间，总面积22.2平方公里。其东南面的边缘，为毕节与大方县的交界，西北毗连播扎公社，西、南接大吉公社，东北频临阿市公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "戛拉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "戛拉公社的地理位置，在毕节县城东北部，距城65公里，位于东经105°36′至105°39′，北纬27°31′至27°33′之间，总面积22.2平方公里。其东南面的边缘，为毕节与大方县的交界，西北毗连播扎公社，西、南接大吉公社，东北频临阿市公社。",
+        "territory": {
+          "area_square_km": 22.2,
+          "neighbors": [
+            {
+              "name": "大方县",
+              "entity_id": null
+            },
+            {
+              "name": "播扎",
+              "entity_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c"
+            },
+            {
+              "name": "大吉",
+              "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d"
+            },
+            {
+              "name": "阿市",
+              "entity_id": "9fe77231-5952-51da-9e9b-b928010cfe42"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "0ab645f7-8a2d-5a9b-b612-854e19b1faa4",
+      "key": "bijie-gazetteer/p267/gala-commune/chronology",
+      "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "267",
+      "scan_page": 302,
+      "locator": "Commune overview, chronology",
+      "verbatim_quote": "1949年解放，1950年建村，1954年建乡，办初级社，1958年成立人民公社，命名为中寨公社，现在已更名为戛拉公社，驻地李家寨。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "戛拉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "41802bbb-85ec-545d-9f42-ed3de686bff0",
+      "key": "bijie-gazetteer/p267/gala-commune/establishment",
+      "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "267",
+      "scan_page": 302,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "1958年成立人民公社，命名为中寨公社，",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "中寨公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6c4e5eb2-30ac-5148-9abd-4a6244e57a24",
+      "key": "bijie-gazetteer/p267/gala-commune/renaming",
+      "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "267",
+      "scan_page": 302,
+      "locator": "Commune overview, renaming",
+      "verbatim_quote": "中寨公社，1981年毕节县进行地名普查，因“中寨”属重名，故更名为“戛拉”，戛拉公社于1982年8月1日通告启用。",
+      "checked": true,
+      "source_date": {
+        "text": "1982年8月1日",
+        "convention": "Gregorian day",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "戛拉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "中寨公社",
+            "source_date": {
+              "text": "1958年",
+              "convention": "Gregorian year",
+              "conversion_basis": null
+            },
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "819e56e9-4ebd-5af4-8eee-a07808f92033",
+      "key": "bijie-gazetteer/p267/gala-commune/seat",
+      "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "267",
+      "scan_page": 302,
+      "locator": "Commune overview, seat",
+      "verbatim_quote": "驻地李家寨。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "戛拉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "07f0b3c8-5f09-5ff9-a672-e178590388a7",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "68aa326a-68c4-5dec-acd4-d85267554c57",
+      "key": "bijie-gazetteer/p267/gala-commune/population",
+      "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "267",
+      "scan_page": 302,
+      "locator": "Commune overview, population",
+      "verbatim_quote": "本社辖中寨、兴寨两个大队，十八个生产队，二十四个自然村，居住着汉、苗、彝、布依等民族，总人口509户，2592人，其中：苗族226人，彝族17人，布依族59人，仡佬族1人，其余是汉族，以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "戛拉公社",
+        "pinyin": null,
+        "population": 2592,
+        "households": 509,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "彝",
+          "布依",
+          "仡佬"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview counts two brigades, 18 production teams, and 24 natural villages; 226 Miao, 17 Yi, 59 Buyi, and one Gelao resident, with the remainder Han."
+      }
+    },
+    {
+      "id": "3f7d37f9-ecf4-57ef-ba5f-5a90536a1e91",
+      "key": "bijie-gazetteer/p267/gala/gala-gully/name",
+      "entity_id": "111f1742-e163-57b8-bc8b-f492f4552cd7",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "267",
+      "scan_page": 302,
+      "locator": "Commune overview, name",
+      "verbatim_quote": "戛拉：彝语含义垭口脚的黑箐林，元、明、清都是属彝族头目领地，清属八夷屯地，雍正七年（公元1729年）划归毕节县属平定里辖地，民国属普宜乡保甲地。深山黑箐，鸟道难行，古称戛拉山槽，又名戛拉沟，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "戛拉沟",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "戛拉山槽",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "7787f1d3-4cff-562e-a1d2-5ab6e92221b6",
+      "key": "bijie-gazetteer/p267/gala/jianshan-mountain/elevation",
+      "entity_id": "ae8587d8-7f6f-59a4-9a46-4a8c0f613542",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "267",
+      "scan_page": 302,
+      "locator": "Commune overview, elevation",
+      "verbatim_quote": "其东面之尖山最高海拔为1712米，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "尖山",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Reported elevation: 1,712 metres."
+      }
+    },
+    {
+      "id": "3f7d80a7-8e5d-5264-8466-67c4df865076",
+      "key": "bijie-gazetteer/p267/gala-commune/minimum-elevation",
+      "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "267",
+      "scan_page": 302,
+      "locator": "Commune overview, minimum elevation",
+      "verbatim_quote": "中部的岔河最低海拔1092米，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "戛拉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Reported minimum elevation: 1,092 metres, at 岔河."
+      }
+    },
+    {
+      "id": "9f1686bc-92e7-569a-8487-19ab469e1519",
+      "key": "bijie-gazetteer/p267/gala-commune/waterworks",
+      "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "267",
+      "scan_page": 302,
+      "locator": "Commune overview, waterworks",
+      "verbatim_quote": "于1980年在戛拉沟的沟门口兴建水电站一座，装机容量50瓩，可供社员照明。",
+      "checked": true,
+      "source_date": {
+        "text": "1980年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "戛拉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview describes construction at 沟门口 with 50 kilowatts of installed capacity; it does not name the station."
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "7d04604e-03a4-5905-87a4-998afad4e8c1",
+      "key": "editorial/bijie/gala-commune/establishment",
+      "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61",
+      "basis": [
+        "41802bbb-85ec-545d-9f42-ed3de686bff0"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "aeb2041d-1a56-57dc-a42e-301194d2a45f",
+      "key": "editorial/bijie/gala-commune/zhongzhai-name",
+      "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61",
+      "basis": [
+        "41802bbb-85ec-545d-9f42-ed3de686bff0",
+        "f89d17e6-4f5e-52dd-b9d5-6dc8fa78d792",
+        "6c4e5eb2-30ac-5148-9abd-4a6244e57a24"
+      ],
+      "brief": "Use 中寨公社 from establishment until the dated renaming notice, retaining year and day precision.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-549720000000",
+              "nominal": "-549676800001",
+              "latest": "-549633600001",
+              "precision": "day"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "中寨公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "f40e3411-835a-563e-ad6a-4e4e2134305a",
+      "key": "editorial/bijie/gala-commune/gala-name",
+      "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61",
+      "basis": [
+        "6c4e5eb2-30ac-5148-9abd-4a6244e57a24",
+        "f89d17e6-4f5e-52dd-b9d5-6dc8fa78d792"
+      ],
+      "brief": "Use 戛拉公社 from the dated notice, retaining the full Gregorian day as the transition interval.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-549720000000",
+              "nominal": "-549676800001",
+              "latest": "-549633600001",
+              "precision": "day"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "戛拉公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

@@ -9,6 +9,10 @@ use atlas_ledger::{
 
 #[path = "ashi_xiaohe/tests.rs"]
 mod ashi_xiaohe;
+#[path = "bozha_liuwan/tests.rs"]
+mod bozha_liuwan;
+#[path = "gongzihe_gala/tests.rs"]
+mod gongzihe_gala;
 #[path = "huoma_shatian/tests.rs"]
 mod huoma_shatian;
 

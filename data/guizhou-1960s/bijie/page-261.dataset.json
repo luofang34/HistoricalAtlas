@@ -1,0 +1,204 @@
+{
+  "entities": [
+    {
+      "id": "55523901-6559-52ec-8e99-ddcc05155d27",
+      "key": "earth/cn-gz/bijie/bozha/touzhuang/heduimen",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c0b12e35-0b52-5210-b729-5cef709e5299",
+      "key": "earth/cn-gz/bijie/bozha/touzhuang/yantoushang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "531f0876-8946-5c21-8004-09b12d6ac113",
+      "key": "earth/cn-gz/bijie/bozha/primary-school",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "707f1f75-53e8-5f58-b205-b5b7f4f4ac58",
+      "key": "earth/cn-gz/bijie/bozha/power-station",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "685f19a5-9ab3-5aa7-ba00-186956ed24ff",
+      "key": "earth/cn-gz/bijie/bozha/tianba-river",
+      "body": "earth",
+      "kind": "river"
+    }
+  ],
+  "records": [
+    {
+      "id": "ab1b8541-8dbb-5980-8b19-2f6e395bb5e3",
+      "key": "bijie-gazetteer/p261/bozha/touzhuang/heduimen",
+      "entity_id": "55523901-6559-52ec-8e99-ddcc05155d27",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "261",
+      "scan_page": 296,
+      "locator": "Place table, row 1: 河对门",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "河对门",
+        "pinyin": "Héduìmén",
+        "population": 37,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "7197c496-130e-5a59-8d3c-5c1a4d07a5d3",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.55
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°33′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "24e4f796-2fb7-5cf3-8981-c0ddf5055dee",
+      "key": "bijie-gazetteer/p261/bozha/touzhuang/yantoushang",
+      "entity_id": "c0b12e35-0b52-5210-b729-5cef709e5299",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "261",
+      "scan_page": 296,
+      "locator": "Place table, row 2: 岩头上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "岩头上",
+        "pinyin": "Yántóushàng",
+        "population": 124,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "7197c496-130e-5a59-8d3c-5c1a4d07a5d3",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.58333333333333,
+            "latitude": 27.533333333333335
+          },
+          "longitude_text": "105°35′",
+          "latitude_text": "27°32′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "23cd058c-ab14-5973-bad5-2afc4f95e3e9",
+      "key": "bijie-gazetteer/p261/bozha/primary-school",
+      "entity_id": "531f0876-8946-5c21-8004-09b12d6ac113",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "261",
+      "scan_page": 296,
+      "locator": "Place table, row 3: 播扎小学",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "播扎小学",
+        "pinyin": "Bōzá Xiǎoxué",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.58333333333333,
+            "latitude": 27.533333333333335
+          },
+          "longitude_text": "105°35′",
+          "latitude_text": "27°32′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "校"
+      }
+    },
+    {
+      "id": "7ee0d088-aa68-5974-bc59-9a2fb71fb837",
+      "key": "bijie-gazetteer/p261/bozha/power-station",
+      "entity_id": "707f1f75-53e8-5f58-b205-b5b7f4f4ac58",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "261",
+      "scan_page": 296,
+      "locator": "Place table, row 4: 播扎电站",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "播扎电站",
+        "pinyin": "Bōzá Diànzhàn",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.58333333333333,
+            "latitude": 27.55
+          },
+          "longitude_text": "105°35′",
+          "latitude_text": "27°33′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "电站"
+      }
+    },
+    {
+      "id": "d900479e-2702-51dc-98b1-8b0a0aea6e82",
+      "key": "bijie-gazetteer/p261/bozha/tianba-river",
+      "entity_id": "685f19a5-9ab3-5aa7-ba00-186956ed24ff",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "261",
+      "scan_page": 296,
+      "locator": "Place table, row 5: 田坝河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "田坝河",
+        "pinyin": "Tiánbà Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "上接阿市小格老水库，在田坝汇戛拉岔河，过境入望乡河，流长约8公里。"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

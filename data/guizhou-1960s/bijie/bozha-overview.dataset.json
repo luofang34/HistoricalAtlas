@@ -1,0 +1,352 @@
+{
+  "entities": [
+    {
+      "id": "ad791448-6258-5dd4-b7b5-839f1eadfc0a",
+      "key": "earth/cn-gz/bijie/bozha/toudao-river",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "29db163d-0f91-5cad-97b6-3f6475c00938",
+      "key": "earth/cn-gz/bijie/bozha/cha-river",
+      "body": "earth",
+      "kind": "river"
+    }
+  ],
+  "records": [
+    {
+      "id": "6501977e-d709-5bd3-8f37-f9850ce7f7f1",
+      "key": "bijie-gazetteer/p259/bozha-commune/extent",
+      "entity_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "259",
+      "scan_page": 294,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": "播扎公社，在毕节县城东北部，相距七十一公里，位于东经105°34′至105°38′北纬27°31′至27°33′之间，总面积18.4平方公里，东南频戛拉公社，西邻吉场区大吉公社，北接阿市公社，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "播扎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "播扎公社，在毕节县城东北部，相距七十一公里，位于东经105°34′至105°38′北纬27°31′至27°33′之间，总面积18.4平方公里，东南频戛拉公社，西邻吉场区大吉公社，北接阿市公社，",
+        "territory": {
+          "area_square_km": 18.4,
+          "neighbors": [
+            {
+              "name": "戛拉",
+              "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61"
+            },
+            {
+              "name": "吉场区大吉",
+              "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d"
+            },
+            {
+              "name": "阿市",
+              "entity_id": "9fe77231-5952-51da-9e9b-b928010cfe42"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "eb403f81-e1c8-533a-8a45-d594c2032041",
+      "key": "bijie-gazetteer/p259/bozha/tuansheng/bozha/name",
+      "entity_id": "7c387d8d-0ef6-5241-973c-010ba0c76d67",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "259",
+      "scan_page": 294,
+      "locator": "Commune overview, name",
+      "verbatim_quote": "播扎：即彝族头目播扎家而得名，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "播扎",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "9cbb29cb-78d0-5a95-9376-7588570d235e",
+      "key": "bijie-gazetteer/p259/bozha-commune/chronology",
+      "entity_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "259",
+      "scan_page": 294,
+      "locator": "Commune overview, chronology",
+      "verbatim_quote": "1949年解放，经过土地改革，属普宜区辖，50年建立村政权，办初级社，1956年进入高级社，1958年成立人民公社，命名为播扎公社至今。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "播扎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "298c8b5b-100e-59b7-b8af-b5e86dbf7181",
+      "key": "bijie-gazetteer/p259/bozha-commune/establishment",
+      "entity_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "259",
+      "scan_page": 294,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "1958年成立人民公社，命名为播扎公社至今。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "播扎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "463bc756-e48a-58df-a02f-e86bd5a769de",
+      "key": "bijie-gazetteer/p259/bozha-commune/seat",
+      "entity_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "259",
+      "scan_page": 294,
+      "locator": "Commune overview, seat",
+      "verbatim_quote": "播扎公社驻地田坝村，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "播扎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "1108e444-560f-5feb-8cc0-6e235b3dc026",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "183497b7-e077-5f98-b192-3bb8bf9b3142",
+      "key": "bijie-gazetteer/p259/bozha-commune/population",
+      "entity_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "259",
+      "scan_page": 294,
+      "locator": "Commune overview, population",
+      "verbatim_quote": "播扎公社驻地田坝村，辖垭口田、团胜、头庄三个大队，三十一个生产队，31个自然村，除木夫朗村为彝、苗等民族村，其余为汉、彝、苗等民族杂居，总人口692户，3446人，其中彝族168人，苗族448人，其他民族2人，其余为汉族，以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "播扎公社",
+        "pinyin": null,
+        "population": 3446,
+        "households": 692,
+        "ethnicities": [
+          "汉",
+          "彝",
+          "苗"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview counts three brigades, 31 production teams, and 31 natural villages; 168 Yi, 448 Miao, and two other residents, with the remainder Han."
+      }
+    },
+    {
+      "id": "c7229bcc-daaf-537b-ab20-c6c96272c703",
+      "key": "bijie-gazetteer/p259/bozha-commune/relief",
+      "entity_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "259",
+      "scan_page": 294,
+      "locator": "Commune overview, relief",
+      "verbatim_quote": "其东南角最高处海拔1636米，最低之东北角望乡河接口处海拔为950米。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "播扎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Reported elevation range: 950–1,636 metres."
+      }
+    },
+    {
+      "id": "7370a59b-d8c3-5ee2-970a-763598c3c3ed",
+      "key": "bijie-gazetteer/p259/bozha/toudao-river/route",
+      "entity_id": "ad791448-6258-5dd4-b7b5-839f1eadfc0a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "259",
+      "scan_page": 294,
+      "locator": "Commune overview, route",
+      "verbatim_quote": "北面的头道河发源于周家坟山之北，境内长约4公里，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "头道河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "发源于周家坟山之北，境内长约4公里"
+      }
+    },
+    {
+      "id": "aa38861c-8c23-5925-9241-592e43be2fb6",
+      "key": "bijie-gazetteer/p259/bozha/cha-river/route",
+      "entity_id": "29db163d-0f91-5cad-97b6-3f6475c00938",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "259",
+      "scan_page": 294,
+      "locator": "Commune overview, route",
+      "verbatim_quote": "南面的岔河发源于周家坟山之南麓在鱼洞村入境有沟水合汇流于田坝村，沿北流入沙坝田入大吉场为望乡河。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "岔河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "发源于周家坟山之南麓在鱼洞村入境有沟水合汇流于田坝村，沿北流入沙坝田入大吉场为望乡河"
+      }
+    },
+    {
+      "id": "d1be2324-2dbe-5cee-b5f3-2c99f2fd0fe7",
+      "key": "bijie-gazetteer/p259/bozha-commune/waterworks",
+      "entity_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "259",
+      "scan_page": 294,
+      "locator": "Commune overview, waterworks",
+      "verbatim_quote": "于田坝河修建水电站一座，装机容量150瓩，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "播扎公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview reports a 150-kilowatt hydroelectric station in 田坝河 without naming it."
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "7ad99aae-f89a-5a79-9b63-606ed1150061",
+      "key": "editorial/bijie/bozha-commune/establishment",
+      "entity_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+      "basis": [
+        "298c8b5b-100e-59b7-b8af-b5e86dbf7181"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "c18dd668-049b-5f34-bb6d-d381d2ddefe9",
+      "key": "editorial/bijie/bozha-commune/name",
+      "entity_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c",
+      "basis": [
+        "298c8b5b-100e-59b7-b8af-b5e86dbf7181",
+        "3f066ddc-d6a3-500b-9171-5faa57c62f03"
+      ],
+      "brief": "Use the table name from the cited establishment year.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "播扎公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

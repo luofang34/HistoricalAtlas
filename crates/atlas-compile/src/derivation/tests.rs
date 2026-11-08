@@ -143,6 +143,10 @@ fn source_comparisons_and_the_haogou_exclusion_follow_the_reconstructed_geometry
         ("shatian", 24.1, 6),
         ("ashi", 34.2, 6),
         ("xiaohe", 15.1, 5),
+        ("bozha", 18.4, 3),
+        ("liuwan", 12.2, 5),
+        ("gongzihe", 14.7, 3),
+        ("gala", 22.2, 4),
     ] {
         let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{slug}-commune")).unwrap();
         let boundary = boundaries
@@ -234,7 +238,7 @@ fn area_constraints_reject_unreviewed_or_other_units_evidence() {
         .filter(|(_, u)| u.area_constraint.is_some())
         .map(|(i, _)| i)
         .collect();
-    assert_eq!(constrained.len(), 12);
+    assert_eq!(constrained.len(), 16);
     let first = constrained[0];
     let constraint = request.units[first].area_constraint.clone().unwrap();
     request.units[first].area_constraint = request.units[constrained[1]].area_constraint.clone();
