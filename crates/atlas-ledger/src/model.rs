@@ -1,6 +1,7 @@
 //! Evidence records retain the source's precision and wording.
 
 use atlas_core::{
+    assertion::{AdministrativeRank, TemporalAssertion, TemporalValue},
     calendar::SourceDate,
     identity::{EntityId, FactId},
     time::TemporalSpan,
@@ -149,10 +150,16 @@ pub struct Observation {
     pub pinyin: Option<String>,
     /// Recorded population, absent for blank cells.
     pub population: Option<u64>,
+    /// Recorded household count.
+    pub households: Option<u64>,
     /// Source labels for population groups, in source order.
     pub ethnicities: Vec<String>,
     /// Parent indicated by the source's table hierarchy.
     pub parent_id: Option<EntityId>,
+    /// Administrative role stated by the source.
+    pub rank: Option<AdministrativeRank>,
+    /// Seat settlement identified by the source.
+    pub seat_id: Option<EntityId>,
     /// Transcribed coordinates, including datum and reporting resolution.
     pub coordinate: Option<CoordinateObservation>,
     /// Former names supported by the source.
@@ -192,12 +199,10 @@ pub enum EstimateValue {
         /// Documented uncertainty radius, metres.
         uncertainty_m: f64,
     },
-    /// Interpreted name use during a historical interval.
-    Name {
-        /// Chosen name.
-        name: String,
-        /// Supported interval.
-        validity: TemporalSpan,
+    /// Interpreted property during a historical interval.
+    Temporal {
+        /// Name, hierarchy, or demographics with interval uncertainty.
+        assertion: TemporalAssertion<TemporalValue>,
     },
 }
 

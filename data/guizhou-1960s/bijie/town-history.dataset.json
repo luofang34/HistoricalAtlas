@@ -1,0 +1,462 @@
+{
+  "entities": [],
+  "records": [
+    {
+      "id": "e245eb54-27c7-54a8-a76c-679eecb4b346",
+      "key": "bijie-gazetteer/p12/town-1950",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "12",
+      "scan_page": 47,
+      "locator": "town administrative chronology: 1950",
+      "verbatim_quote": "1950年建立城关区",
+      "checked": true,
+      "source_date": {
+        "text": "1950年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "城关区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "district",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "34db7dd5-3abb-5952-9f8c-2556a8a12bec",
+      "key": "bijie-gazetteer/p12/town-1958",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "12",
+      "scan_page": 47,
+      "locator": "town administrative chronology: 1958",
+      "verbatim_quote": "1958年建灯塔人民公社",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "灯塔人民公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5b2ea9f6-2192-504a-90eb-850feda57bc7",
+      "key": "bijie-gazetteer/p12/town-1962",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "12",
+      "scan_page": 47,
+      "locator": "town administrative chronology: 1962",
+      "verbatim_quote": "1962年命名为城关镇",
+      "checked": true,
+      "source_date": {
+        "text": "1962年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "城关镇",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "town",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "aa53f624-ca5c-54fb-a4db-0dbc0fff49c4",
+      "key": "bijie-gazetteer/p12/town-1981",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "12",
+      "scan_page": 47,
+      "locator": "town administrative chronology: 1981",
+      "verbatim_quote": "1981年经地名普查，因与地区各县城关镇重名，报经上级批准改标准名称为毕节镇。",
+      "checked": true,
+      "source_date": {
+        "text": "1981年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "毕节镇",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "town",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7fa4982e-c4cd-5f93-ae12-c27838682f6a",
+      "key": "bijie-gazetteer/p7/early-prc-town",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "7",
+      "scan_page": 42,
+      "locator": "early post-1949 administrative organization paragraph",
+      "verbatim_quote": "解放初县设区、乡、村，原有十六个区和一个镇——旧毕阳镇改为城关镇。",
+      "checked": true,
+      "source_date": {
+        "text": "解放初",
+        "convention": "early period after the 1949 liberation of Bijie",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "城关镇",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "town",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "毕阳镇",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "af9bfe0d-3916-5f6b-9d65-f46871d579a2",
+      "key": "editorial/bijie-town/1950-name",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "basis": [
+        "e245eb54-27c7-54a8-a76c-679eecb4b346",
+        "34db7dd5-3abb-5952-9f8c-2556a8a12bec"
+      ],
+      "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1577880000000",
+              "nominal": "-1562112000001",
+              "latest": "-1546344000001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "城关区",
+              "kind": "standard",
+              "language": "zh"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "37db2aae-1c59-587f-b108-59a143fdcc37",
+      "key": "editorial/bijie-town/1950-hierarchy",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "basis": [
+        "e245eb54-27c7-54a8-a76c-679eecb4b346",
+        "34db7dd5-3abb-5952-9f8c-2556a8a12bec"
+      ],
+      "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1577880000000",
+              "nominal": "-1562112000001",
+              "latest": "-1546344000001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "hierarchy",
+            "value": {
+              "rank": "district",
+              "parent_id": null,
+              "seat_id": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "bb8d1649-ea92-5e94-963a-bff05e19fada",
+      "key": "editorial/bijie-town/1958-name",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "basis": [
+        "34db7dd5-3abb-5952-9f8c-2556a8a12bec",
+        "5b2ea9f6-2192-504a-90eb-850feda57bc7"
+      ],
+      "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-1199188800000",
+              "nominal": "-1183420800001",
+              "latest": "-1167652800001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "灯塔人民公社",
+              "kind": "standard",
+              "language": "zh"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "66bb99d2-6a4c-5c04-8759-1cac0cad468f",
+      "key": "editorial/bijie-town/1958-hierarchy",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "basis": [
+        "34db7dd5-3abb-5952-9f8c-2556a8a12bec",
+        "5b2ea9f6-2192-504a-90eb-850feda57bc7"
+      ],
+      "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-1199188800000",
+              "nominal": "-1183420800001",
+              "latest": "-1167652800001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "hierarchy",
+            "value": {
+              "rank": "commune",
+              "parent_id": null,
+              "seat_id": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "fb336db8-c194-5b1a-a77e-d6c60aa5f0a8",
+      "key": "editorial/bijie-town/1962-name",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "basis": [
+        "5b2ea9f6-2192-504a-90eb-850feda57bc7",
+        "aa53f624-ca5c-54fb-a4db-0dbc0fff49c4"
+      ],
+      "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1199188800000",
+              "nominal": "-1183420800001",
+              "latest": "-1167652800001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "城关镇",
+              "kind": "standard",
+              "language": "zh"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "38944d40-a1c7-52cf-9ee6-9986b67cfa67",
+      "key": "editorial/bijie-town/1962-hierarchy",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "basis": [
+        "5b2ea9f6-2192-504a-90eb-850feda57bc7",
+        "aa53f624-ca5c-54fb-a4db-0dbc0fff49c4"
+      ],
+      "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1199188800000",
+              "nominal": "-1183420800001",
+              "latest": "-1167652800001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "hierarchy",
+            "value": {
+              "rank": "town",
+              "parent_id": null,
+              "seat_id": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "a51b7063-93bb-5640-a41f-d892cdd63a20",
+      "key": "editorial/bijie-town/1981-name",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "basis": [
+        "aa53f624-ca5c-54fb-a4db-0dbc0fff49c4"
+      ],
+      "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "毕节镇",
+              "kind": "standard",
+              "language": "zh"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "d5a825d2-d849-51cd-ae85-a67d40cdac46",
+      "key": "editorial/bijie-town/1981-hierarchy",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "basis": [
+        "aa53f624-ca5c-54fb-a4db-0dbc0fff49c4"
+      ],
+      "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "hierarchy",
+            "value": {
+              "rank": "town",
+              "parent_id": null,
+              "seat_id": null
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": [
+    {
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "alternatives": [
+        "e245eb54-27c7-54a8-a76c-679eecb4b346",
+        "7fa4982e-c4cd-5f93-ae12-c27838682f6a"
+      ],
+      "estimate_id": "af9bfe0d-3916-5f6b-9d65-f46871d579a2",
+      "brief": "The county history calls the early post-1949 unit Chengguan Town; the town overview explicitly dates Chengguan District to 1950. The timeline follows the dated town chronology. The passages may describe different administrative levels."
+    },
+    {
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "alternatives": [
+        "e245eb54-27c7-54a8-a76c-679eecb4b346",
+        "7fa4982e-c4cd-5f93-ae12-c27838682f6a"
+      ],
+      "estimate_id": "37db2aae-1c59-587f-b108-59a143fdcc37",
+      "brief": "The county history calls the early post-1949 unit Chengguan Town; the town overview explicitly dates Chengguan District to 1950. The timeline follows the dated town chronology. The passages may describe different administrative levels."
+    }
+  ]
+}

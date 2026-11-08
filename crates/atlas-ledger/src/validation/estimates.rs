@@ -37,7 +37,7 @@ pub(super) fn validate_estimates(
                 "estimate basis requires checked source records",
             ));
         }
-        validate_value(estimate, entities)?;
+        validate_value(estimate, entities, records)?;
     }
     for dispute in &data.disputes {
         let unique: BTreeSet<_> = dispute.alternatives.iter().collect();
@@ -63,6 +63,7 @@ pub(super) fn validate_estimates(
 fn validate_value(
     estimate: &Estimate,
     entities: &BTreeMap<EntityId, &Entity>,
+    records: &BTreeMap<FactId, &Record>,
 ) -> Result<(), ValidationError> {
     match &estimate.value {
         EstimateValue::Location {
@@ -87,11 +88,8 @@ fn validate_value(
                 ));
             }
         }
-        EstimateValue::Name { name, validity } => {
-            if name.trim().is_empty() {
-                return Err(fail(&estimate.key, "empty estimated name"));
-            }
-            validity.validate().map_err(|e| caused(&estimate.key, e))?;
+        EstimateValue::Temporal { assertion } => {
+            super::temporal::validate_temporal(estimate, assertion, entities, records)?;
         }
     }
     Ok(())

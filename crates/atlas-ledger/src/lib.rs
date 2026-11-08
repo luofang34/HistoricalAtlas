@@ -2,4 +2,5 @@
 
 pub mod model;
 pub mod publication;
+pub mod timeline;
 pub mod validation;

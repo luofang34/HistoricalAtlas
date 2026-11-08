@@ -5,6 +5,8 @@ use std::collections::BTreeMap;
 use atlas_core::identity::{EntityId, FactId};
 pub(crate) mod error;
 mod estimates;
+mod hierarchy;
+mod temporal;
 pub use error::{ValidationCause, ValidationError};
 use error::{caused, fail};
 use estimates::validate_estimates;
@@ -33,6 +35,7 @@ pub fn validate(catalog: &SourceCatalog, data: &Dataset) -> Result<(), Validatio
         }
     }
     validate_estimates(data, &entities, &facts)?;
+    hierarchy::validate_hierarchy(data)?;
     Ok(())
 }
 
@@ -79,10 +82,13 @@ fn validate_record(
     {
         return Err(fail(&record.key, "invalid page, locator, or name"));
     }
-    if let Some(parent) = record.observation.parent_id
-        && (parent == entity.id || !entities.contains_key(&parent))
+    for target in record
+        .observation
+        .parent_id
+        .iter()
+        .chain(&record.observation.seat_id)
     {
-        return Err(fail(&record.key, "unknown or self-referencing parent"));
+        temporal::validate_relation(&record.key, entity.id, *target, entities)?;
     }
     if let Some(coordinate) = &record.observation.coordinate {
         coordinate
