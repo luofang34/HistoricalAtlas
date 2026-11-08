@@ -1,0 +1,12 @@
+[build]
+target = "index.html"
+dist = "../../dist/site"
+filehash = false
+inject_scripts = false
+pattern_preload = ""
+locked = true
+
+[[hooks]]
+stage = "post_build"
+command = "python3"
+command_arguments = ["../../tools/package-web.py"]

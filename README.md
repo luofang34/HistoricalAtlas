@@ -4,7 +4,7 @@ A spatiotemporal atlas and evidence ledger for chronicle applications. Historica
 
 ## Usage
 
-Requires Rust with the `wasm32-unknown-unknown` target, Python 3.12 or later, Poppler, and Tesseract with the English model for extraction tests. Image recognition of Chinese sources also uses the `chi_sim` model.
+Requires Rust 1.97.1 or later with the `wasm32-unknown-unknown` target, Python 3.12 or later, Poppler, and Tesseract with the English model for extraction tests. Image recognition of Chinese sources also uses the `chi_sim` model.
 
 ```sh
 cargo run -p atlas-compile -- verify data
@@ -15,6 +15,10 @@ cargo run -p atlas-compile -- reconstruct data data/paleogeography/panxian-240ma
 cargo run -p atlas-compile -- tiles data https://example.org/atlas/ 14 <new-output-directory>
 sh scripts/ci.sh
 ```
+
+Open a compiled publication in the desktop map with `cargo run -p atlas-app -- dist`. The map supports Earth, Moon, and Mars, place-name and former-name search, source hierarchy browsing, and the evidence ledger. Select a Gregorian year, an integer age in Ma before J2000, or exact TT milliseconds. The 1950–1984 slider and uncertainty modes query the same timeline as `atlas-compile`. The source-observation layer displays reviewed coordinate anchors; the selected-time layer filters those anchors by dated evidence. Clicking coincident points lists each entity separately.
+
+For the browser application, install Trunk and run `cd apps/atlas-app && trunk build --release`. Serve `dist/site` from the repository root over HTTP; the build includes the evidence shards and divides the WASM module into checked parts smaller than 4 MB. Native and browser rendering use the pinned `maplibre-rs-experimental` dependency. The bundled Atlas CJK font is a subset of Noto Sans CJK SC under the [SIL Open Font License](apps/atlas-app/assets/OFL.txt). To expand its glyph coverage, install Python's `fonttools` package and run `python3 tools/subset-font.py <NotoSansCJK-SC-Regular.otf>`.
 
 Curated records live in `data/`. `scan_page` is one-based; `page_or_sheet` identifies the printed page. Online sources carry a URL and records identify the cited section or table in `locator`. `checked` records transcription review. Dates retain their source convention, and coordinates retain their stated datum and angular precision.
 

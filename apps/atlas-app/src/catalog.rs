@@ -1,0 +1,155 @@
+//! Reassemble published evidence shards and search enduring entity identities.
+
+use std::collections::{BTreeMap, BTreeSet};
+
+use atlas_core::identity::EntityId;
+use atlas_geo::body::BodyId;
+use atlas_ledger::model::{Dataset, Dispute, Entity, Estimate, Record, Source, SourceCatalog};
+use serde::Deserialize;
+
+use crate::error::AppError;
+
+/// A single entity's published evidence.
+#[derive(Debug, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct Entry {
+    /// Permanent geographical identity.
+    pub entity: Entity,
+    /// Reviewed source observations.
+    pub records: Vec<Record>,
+    /// Derived interpretations.
+    pub estimates: Vec<Estimate>,
+    /// Explicit source disagreements.
+    pub disputes: Vec<Dispute>,
+}
+
+/// The publication documents assembled by a filesystem or browser loader.
+#[derive(Debug, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct Publication {
+    /// Bibliography accompanying the entity indexes.
+    pub sources: Vec<Source>,
+    /// UUID-keyed entity evidence.
+    pub entries: BTreeMap<EntityId, Entry>,
+}
+
+/// Validated, searchable evidence shared by the native and browser applications.
+pub struct Atlas {
+    /// Bibliographic source catalog.
+    pub sources: SourceCatalog,
+    /// Evidence reconstructed from the published shards.
+    pub data: Dataset,
+    entries: BTreeMap<EntityId, Entry>,
+}
+
+impl Atlas {
+    /// Validate publication identity and evidence before making it visible.
+    pub fn new(publication: Publication) -> Result<Self, AppError> {
+        let sources = SourceCatalog {
+            sources: publication.sources,
+        };
+        let mut data = Dataset::default();
+        for (id, entry) in &publication.entries {
+            if *id != entry.entity.id {
+                return Err(AppError::EntryIdentity {
+                    key: *id,
+                    entity: entry.entity.id,
+                });
+            }
+            if entry.records.iter().any(|record| record.entity_id != *id)
+                || entry
+                    .estimates
+                    .iter()
+                    .any(|estimate| estimate.entity_id != *id)
+                || entry
+                    .disputes
+                    .iter()
+                    .any(|dispute| dispute.entity_id != *id)
+            {
+                return Err(AppError::EvidenceIdentity(*id));
+            }
+            if entry.records.iter().any(|record| !record.checked) {
+                return Err(AppError::Unchecked(*id));
+            }
+            data.entities.push(entry.entity.clone());
+            data.records.extend(entry.records.clone());
+            data.estimates.extend(entry.estimates.clone());
+            data.disputes.extend(entry.disputes.clone());
+        }
+        atlas_ledger::validation::validate(&sources, &data)?;
+        Ok(Self {
+            sources,
+            data,
+            entries: publication.entries,
+        })
+    }
+
+    /// Find an entity and its evidence by permanent identity.
+    pub fn entry(&self, id: EntityId) -> Option<&Entry> {
+        self.entries.get(&id)
+    }
+
+    /// Display the first published name for source browsing.
+    pub fn label(&self, id: EntityId) -> String {
+        self.entry(id)
+            .and_then(|entry| entry.records.first())
+            .map_or_else(
+                || id.0.to_string(),
+                |record| record.observation.name.clone(),
+            )
+    }
+
+    /// Search standard, pinyin, former names, semantic keys, and UUIDs on one body.
+    pub fn search(&self, query: &str, body: BodyId) -> Vec<EntityId> {
+        let query = query.trim().to_lowercase();
+        self.entries
+            .iter()
+            .filter(|(id, entry)| {
+                entry.entity.body == body
+                    && (query.is_empty()
+                        || id.0.to_string().contains(&query)
+                        || entry.entity.key.to_lowercase().contains(&query)
+                        || entry.records.iter().any(|record| {
+                            record.observation.name.to_lowercase().contains(&query)
+                                || record
+                                    .observation
+                                    .pinyin
+                                    .as_ref()
+                                    .is_some_and(|value| value.to_lowercase().contains(&query))
+                                || record
+                                    .observation
+                                    .former_names
+                                    .iter()
+                                    .any(|value| value.name.to_lowercase().contains(&query))
+                        }))
+            })
+            .map(|(id, _)| *id)
+            .collect()
+    }
+
+    /// Source-reported parents, retaining different undated claims.
+    pub fn parents(&self, id: EntityId) -> BTreeSet<EntityId> {
+        self.entry(id)
+            .into_iter()
+            .flat_map(|entry| &entry.records)
+            .filter_map(|record| record.observation.parent_id)
+            .collect()
+    }
+
+    /// Entities that a reviewed source places below this parent.
+    pub fn children(&self, parent: EntityId) -> Vec<EntityId> {
+        self.entries
+            .iter()
+            .filter(|(_, entry)| {
+                entry
+                    .records
+                    .iter()
+                    .any(|record| record.observation.parent_id == Some(parent))
+            })
+            .map(|(id, _)| *id)
+            .collect()
+    }
+}
+
+#[cfg(test)]
+pub(crate) mod tests;
