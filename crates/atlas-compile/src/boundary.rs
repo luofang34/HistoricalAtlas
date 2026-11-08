@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 use std::path::Path;
 
 use crate::{
-    export::{Artifacts, compile, write_blocking},
+    export::{Artifacts, compile, compile_with_boundaries, write_blocking},
     input::{LedgerInput, load_blocking, read_json_blocking},
     registration::{ReferencedControl, RegistrationMethod, TargetFrame},
 };
@@ -48,9 +48,12 @@ pub fn compile_boundary(
     trace: SheetTrace,
     controls: BoundaryRegistration,
 ) -> Result<Artifacts, BoundaryError> {
-    let mut artifacts = compile_trace(input, trace.clone())?;
+    validate_trace(input, &trace)?;
     let spacing = controls.maximum_segment_pixels;
     let (sheet, units) = transform::register(input, &trace, controls)?;
+    let boundaries = publication::geographic_boundaries(&trace, &sheet, &units)?;
+    let mut artifacts = compile_with_boundaries(input, &boundaries)?;
+    publication::write_trace(&mut artifacts, input, &trace)?;
     publication::write_registered(&mut artifacts, input, &trace, &sheet, &units, spacing)?;
     Ok(artifacts)
 }

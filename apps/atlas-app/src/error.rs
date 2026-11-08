@@ -6,6 +6,9 @@ use thiserror::Error;
 /// Atlas input or time selection failure.
 #[derive(Debug, Error)]
 pub enum AppError {
+    /// Registered boundary geometry or its evidence failed validation.
+    #[error(transparent)]
+    Boundary(#[from] atlas_boundary::geographic::GeographicError),
     /// Source-sheet geometry or citation validation failed.
     #[error(transparent)]
     Sheet(#[from] atlas_boundary::sheet::SheetError),

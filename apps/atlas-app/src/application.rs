@@ -118,12 +118,18 @@ impl Application {
                 .find_map(|estimate| match estimate.value {
                     atlas_ledger::model::EstimateValue::MapLocation { point, .. } => Some(point),
                     _ => None,
-                });
+                })
+                .or_else(|| scene::boundaries::center(&self.atlas, id));
         }
         entry
             .records
             .iter()
             .find_map(|record| record.observation.coordinate.as_ref().map(|c| c.point))
+            .or_else(|| {
+                (self.layer != MapLayer::SelectedTime)
+                    .then(|| scene::boundaries::center(&self.atlas, id))
+                    .flatten()
+            })
     }
 
     fn points(&self) -> Result<serde_json::Value, AppError> {
@@ -134,6 +140,17 @@ impl Application {
             self.layer,
             self.selected,
         );
+        if let Some(features) = collection
+            .get_mut("features")
+            .and_then(serde_json::Value::as_array_mut)
+        {
+            features.extend(scene::boundaries::features(
+                &self.atlas,
+                self.body,
+                self.layer,
+                self.selected,
+            )?);
+        }
         if self.territory_visible
             && let Some(id) = self.selected
             && let Some(features) = collection

@@ -6,6 +6,7 @@ use atlas_geo::body::BodyId;
 use serde_json::{Value, json};
 
 pub mod basemap;
+pub mod boundaries;
 mod locations;
 pub mod renderer;
 pub mod sheet;
@@ -86,6 +87,15 @@ pub fn style(
         {"id": "terrain", "type": "raster", "source": "terrain", "minzoom": 8, "layout": {"visibility": visibility}, "paint": {"raster-fade-duration": 0}},
         {"id": "graticule", "type": "line", "source": "grid",
             "paint": {"line-color": "#31505c", "line-width": 0.6, "line-opacity": 0.3}},
+        {"id": "boundaries", "type": "fill", "source": "observations",
+            "filter": ["==", "geometry_role", "registered_boundary"],
+            "paint": {"fill-color": "#367985", "fill-opacity": 0.15}},
+        {"id": "boundary-lines", "type": "line", "source": "observations",
+            "filter": ["==", "geometry_role", "registered_boundary"],
+            "paint": {"line-color": "#23616e", "line-width": 2}},
+        {"id": "boundary-selection", "type": "line", "source": "observations",
+            "filter": ["all", ["==", "geometry_role", "registered_boundary"], ["==", "selected", true]],
+            "paint": {"line-color": "#ef8d55", "line-width": 3}},
         {"id": "territory-links", "type": "line", "source": "observations",
             "filter": ["==", "geometry_role", "territory_link"],
             "paint": {"line-color": "#91b8cf", "line-width": 2, "line-dasharray": [3, 2]}},
@@ -106,7 +116,7 @@ pub fn style(
             "paint": {"circle-radius": 10, "circle-color": "#43c5c3", "circle-opacity": 0.65,
                 "circle-stroke-width": 2, "circle-stroke-color": "#bdf4e9"}},
         {"id": "selection", "type": "circle", "source": "observations",
-            "filter": ["==", "selected", true],
+            "filter": ["all", ["==", "$type", "Point"], ["==", "selected", true]],
             "paint": {"circle-radius": 8, "circle-color": "#ef8d55", "circle-stroke-width": 2,
                 "circle-stroke-color": "#ffffff"}}
     ]}))

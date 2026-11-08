@@ -172,6 +172,8 @@ impl MapRenderer {
                     "mapped-places".into(),
                     "external-events".into(),
                     "territory-nodes".into(),
+                    "boundaries".into(),
+                    "boundary-lines".into(),
                 ]),
                 ..Default::default()
             },

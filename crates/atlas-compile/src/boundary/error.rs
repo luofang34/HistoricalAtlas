@@ -6,6 +6,9 @@ use thiserror::Error;
 /// Evidence, geometry, registration, or publication failure for a boundary.
 #[derive(Debug, Error)]
 pub enum BoundaryError {
+    /// Registered geographic boundary or its evidence is invalid.
+    #[error(transparent)]
+    Geographic(#[from] atlas_boundary::geographic::GeographicError),
     /// Reviewed source-sheet geometry or evidence is invalid.
     #[error(transparent)]
     Sheet(#[from] atlas_boundary::sheet::SheetError),

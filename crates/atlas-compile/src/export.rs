@@ -6,6 +6,7 @@ use std::{
     path::{Path, PathBuf},
 };
 
+use atlas_boundary::geographic::GeographicBoundary;
 use atlas_core::{assertion::TemporalValue, identity::EntityId};
 use atlas_ledger::{
     model::{Dispute, Entity, Estimate, EstimateValue, Record},
@@ -29,6 +30,8 @@ struct IndexedEntity<'a> {
     disputes: Vec<&'a Dispute>,
     #[serde(skip_serializing_if = "Vec::is_empty")]
     drawings: Vec<&'a atlas_boundary::sheet::SheetTrace>,
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    boundaries: Vec<&'a GeographicBoundary>,
 }
 
 /// Named byte buffers ready to write into a publication directory.
@@ -36,13 +39,23 @@ pub type Artifacts = BTreeMap<PathBuf, Vec<u8>>;
 
 /// Build deterministic indexes; unchecked observations do not enter the output.
 pub fn compile(input: &LedgerInput) -> Result<Artifacts, ExportError> {
+    compile_with_boundaries(input, &[])
+}
+
+pub(crate) fn compile_with_boundaries(
+    input: &LedgerInput,
+    boundaries: &[GeographicBoundary],
+) -> Result<Artifacts, ExportError> {
     atlas_ledger::validation::validate(&input.catalog, &input.data)?;
     atlas_ledger::publication::verify_publication(&input.data, &input.aliases, &input.published)?;
     crate::plate_models::validate_models(&input.plate_models, &input.catalog, &input.data)?;
     for trace in &input.traces {
         atlas_boundary::sheet::validate(&input.catalog, &input.data, trace)?;
     }
-    let shards = index_entities(input);
+    for boundary in boundaries {
+        boundary.feature(&input.data, None)?;
+    }
+    let shards = index_entities(input, boundaries);
     let current: BTreeSet<_> = shards
         .values()
         .flat_map(|shard| shard.keys().copied())
@@ -86,7 +99,10 @@ pub fn compile(input: &LedgerInput) -> Result<Artifacts, ExportError> {
     Ok(output)
 }
 
-fn index_entities(input: &LedgerInput) -> BTreeMap<String, BTreeMap<EntityId, IndexedEntity<'_>>> {
+fn index_entities<'a>(
+    input: &'a LedgerInput,
+    boundaries: &'a [GeographicBoundary],
+) -> BTreeMap<String, BTreeMap<EntityId, IndexedEntity<'a>>> {
     let mut entities: BTreeMap<_, _> = input
         .data
         .entities
@@ -100,6 +116,7 @@ fn index_entities(input: &LedgerInput) -> BTreeMap<String, BTreeMap<EntityId, In
                     estimates: Vec::new(),
                     disputes: Vec::new(),
                     drawings: Vec::new(),
+                    boundaries: Vec::new(),
                 },
             )
         })
@@ -125,6 +142,17 @@ fn index_entities(input: &LedgerInput) -> BTreeMap<String, BTreeMap<EntityId, In
             && let Some(index) = entities.get_mut(&record.entity_id)
         {
             index.drawings.push(trace);
+        }
+    }
+    for boundary in boundaries {
+        if let Some(record) = input
+            .data
+            .records
+            .iter()
+            .find(|r| r.id == boundary.unit.record_id)
+            && let Some(index) = entities.get_mut(&record.entity_id)
+        {
+            index.boundaries.push(boundary);
         }
     }
     let mut shards: BTreeMap<String, BTreeMap<EntityId, IndexedEntity<'_>>> = BTreeMap::new();
@@ -222,6 +250,9 @@ pub fn write_blocking(output: &Path, artifacts: &Artifacts) -> Result<(), Export
 /// Static artifact construction or write failure.
 #[derive(Debug, Error)]
 pub enum ExportError {
+    /// Registered geographic boundary or its evidence is invalid.
+    #[error(transparent)]
+    Boundary(#[from] atlas_boundary::geographic::GeographicError),
     /// Reviewed source-sheet geometry or evidence failed validation.
     #[error(transparent)]
     Sheet(#[from] atlas_boundary::sheet::SheetError),

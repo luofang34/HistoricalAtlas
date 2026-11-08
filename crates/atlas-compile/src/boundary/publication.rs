@@ -8,8 +8,7 @@ use crate::{
     input::LedgerInput,
     registration::RegisteredSheet,
 };
-use atlas_boundary::polygon::resolve;
-use atlas_geo::body::BodyId;
+use atlas_boundary::geographic::GeographicBoundary;
 use serde_json::{Value, json};
 
 pub(super) fn write_trace(
@@ -97,7 +96,10 @@ pub(super) fn write_registered(
         BoundaryMethod::CompiledFromPlaces | BoundaryMethod::Unstated => "mapped_polygon",
     };
     let features = if sheet.job.target_frame.crs == "OGC:CRS84" {
-        let features = geographic_features(input, trace, sheet, boundaries, geometry_kind)?;
+        let features = geographic_boundaries(trace, sheet, boundaries)?
+            .iter()
+            .map(|boundary| boundary.feature(&input.data, None))
+            .collect::<Result<Vec<_>, _>>()?;
         insert_chunks(
             artifacts,
             "boundary/features",
@@ -132,67 +134,25 @@ pub(super) fn write_registered(
     Ok(())
 }
 
-fn geographic_features(
-    input: &LedgerInput,
+pub(super) fn geographic_boundaries(
     trace: &SheetTrace,
     sheet: &RegisteredSheet,
     units: &[TracedUnit],
-    kind: &str,
-) -> Result<Vec<Value>, BoundaryError> {
-    if sheet.job.target_frame.units != "degrees"
-        || sheet
-            .vertices
-            .iter()
-            .any(|p| !(-180.0..=180.0).contains(&p.x) || !(-90.0..=90.0).contains(&p.y))
-    {
-        return Err(BoundaryError::Evidence(
-            "OGC:CRS84 requires longitude/latitude in degrees within their domains".into(),
-        ));
+) -> Result<Vec<GeographicBoundary>, BoundaryError> {
+    if sheet.job.target_frame.crs != "OGC:CRS84" {
+        return Ok(Vec::new());
     }
-    let mut features = Vec::new();
-    for unit in units {
-        let record = evidence::record(input, unit.record_id)?;
-        if !input
-            .data
-            .entities
-            .iter()
-            .any(|entity| entity.id == record.entity_id && entity.body == BodyId::Earth)
-        {
-            return Err(BoundaryError::Evidence(
-                "OGC:CRS84 requires an Earth boundary".into(),
-            ));
-        }
-        let geometry = resolve(&sheet.vertices, &unit.polygons)?;
-        let mut polygons = Vec::new();
-        for polygon in geometry.0 {
-            let mut rings = Vec::new();
-            for ring in std::iter::once(polygon.exterior()).chain(polygon.interiors()) {
-                if ring
-                    .lines()
-                    .any(|line| (line.start.x - line.end.x).abs() > 180.0)
-                {
-                    return Err(BoundaryError::Evidence(
-                        "split geographic polygon edges at the antimeridian before GeoJSON export"
-                            .into(),
-                    ));
-                }
-                rings.push(
-                    ring.0
-                        .iter()
-                        .map(|point| [point.x, point.y])
-                        .collect::<Vec<_>>(),
-                );
-            }
-            polygons.push(rings);
-        }
-        features.push(json!({"type": "Feature", "id": record.entity_id,
-            "geometry": {"type": "MultiPolygon", "coordinates": polygons},
-            "properties": {"entity_id": record.entity_id, "record_id": record.id,
-                "source_id": trace.source_id, "page_or_sheet": record.page_or_sheet,
-                "scan_page": trace.scan_page, "geometry_kind": kind, "reconstructed": false,
-                "boundary_method": trace.boundary_method, "method_basis": trace.method_basis,
-                "rank": record.observation.rank, "validity": null,
-                "registration": "boundary/registration.json"}}));
+    if sheet.job.target_frame.units != "degrees" {
+        return Err(BoundaryError::Evidence("OGC:CRS84 requires degrees".into()));
     }
-    Ok(features)
+    Ok(units
+        .iter()
+        .map(|unit| GeographicBoundary {
+            unit: unit.clone(),
+            vertices: sheet.vertices.clone(),
+            boundary_method: trace.boundary_method,
+            method_basis: trace.method_basis.clone(),
+            registration: "boundary/registration.json".into(),
+        })
+        .collect())
 }

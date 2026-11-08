@@ -21,6 +21,7 @@ impl Application {
                 self.overlay_details(ui, id);
                 navigate = self.hierarchy(ui, id);
                 if let Some(entry) = self.atlas.entry(id) {
+                    mapped_boundaries(ui, &entry.boundaries);
                     if self.layer == crate::scene::MapLayer::MappedPlaces {
                         mapped_locations(ui, &entry.estimates);
                         ui.separator();
@@ -135,6 +136,26 @@ impl Application {
             date_target
         })
         .inner
+    }
+}
+
+fn mapped_boundaries(
+    ui: &mut egui::Ui,
+    boundaries: &[atlas_boundary::geographic::GeographicBoundary],
+) {
+    for boundary in boundaries {
+        ui.strong("Registered map boundary");
+        let method = match boundary.boundary_method {
+            atlas_boundary::sheet::BoundaryMethod::Surveyed => "Surveyed",
+            atlas_boundary::sheet::BoundaryMethod::CompiledFromPlaces => {
+                "Compiled from place locations"
+            }
+            atlas_boundary::sheet::BoundaryMethod::Unstated => "Unstated",
+        };
+        ui.label(format!("Source method: {method}"));
+        ui.label("Effective dates: unknown");
+        ui.label(format!("Registration: {}", boundary.registration));
+        ui.separator();
     }
 }
 

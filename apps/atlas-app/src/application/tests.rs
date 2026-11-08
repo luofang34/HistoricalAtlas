@@ -4,6 +4,47 @@ use super::*;
 mod sheet;
 
 #[test]
+fn registered_boundary_search_focuses_geography_and_displays_source_method() {
+    let atlas = Atlas::new(crate::scene::boundaries::tests::publication()).unwrap();
+    let id = EntityId::from_key("earth/cn-gz/zhijin/ertang-commune").unwrap();
+    let expected = crate::scene::boundaries::center(&atlas, id).unwrap();
+    let mut app = Application::new(atlas).unwrap();
+    app.select(id, true);
+    assert_eq!(app.camera.center, expected);
+    assert!(!app.sheet.visible);
+    let context = egui::Context::default();
+    configure_fonts(&context);
+    let output = date_frame(&context, &mut app, Vec::new());
+    for label in [
+        "Registered map boundary",
+        "Source method: Compiled from place locations",
+        "Effective dates: unknown",
+    ] {
+        assert!(
+            output.shapes.iter().any(|shape| matches!(&shape.shape,
+            egui::epaint::Shape::Text(text) if text.galley.job.text == label)),
+            "{label}"
+        );
+    }
+    let count = |app: &Application| {
+        app.points().unwrap()["features"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .filter(|f| f["properties"]["geometry_role"] == "registered_boundary")
+            .count()
+    };
+    assert_eq!(count(&app), 1);
+    app.layer = MapLayer::MappedPlaces;
+    app.select(id, true);
+    assert_eq!(app.camera.center, expected);
+    assert_eq!(count(&app), 1);
+    app.layer = MapLayer::SelectedTime;
+    assert_eq!(count(&app), 0);
+    assert!(app.focus_point(id).is_none());
+}
+
+#[test]
 fn mapped_place_view_focuses_registered_location_and_shows_its_sheet_name() {
     let mut app = Application::new(crate::catalog::tests::atlas()).unwrap();
     let id = EntityId::from_key("earth/cn-gz/bijie/daqiao-commune").unwrap();

@@ -14,6 +14,9 @@ use crate::error::AppError;
 #[derive(Debug, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Entry {
+    /// Registered source-map outlines in OGC:CRS84.
+    #[serde(default)]
+    pub boundaries: Vec<atlas_boundary::geographic::GeographicBoundary>,
     /// Reviewed vector drawings in the source map's pixel frame.
     #[serde(default)]
     pub drawings: Vec<atlas_boundary::sheet::SheetTrace>,
@@ -86,6 +89,16 @@ impl Atlas {
         }
         atlas_ledger::validation::validate(&sources, &data)?;
         for entry in publication.entries.values() {
+            for boundary in &entry.boundaries {
+                if !entry
+                    .records
+                    .iter()
+                    .any(|r| r.id == boundary.unit.record_id)
+                {
+                    return Err(AppError::EvidenceIdentity(entry.entity.id));
+                }
+                boundary.feature(&data, None)?;
+            }
             for drawing in &entry.drawings {
                 atlas_boundary::sheet::validate(&sources, &data, drawing)?;
             }

@@ -7,10 +7,10 @@ impl Application {
         }
         match self.layer {
             crate::scene::MapLayer::Observations => {
-                "Source coordinate anchors · Drag to pan · Scroll to zoom"
+                "Source locations and boundaries · Drag to pan · Scroll to zoom"
             }
             crate::scene::MapLayer::MappedPlaces => {
-                "Map-derived locations · Drag to pan · Scroll to zoom"
+                "Map-derived locations and boundaries · Drag to pan · Scroll to zoom"
             }
             crate::scene::MapLayer::SelectedTime => {
                 "Time-selected source anchors · Drag to pan · Scroll to zoom"
