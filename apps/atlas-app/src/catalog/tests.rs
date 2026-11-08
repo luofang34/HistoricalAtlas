@@ -1,6 +1,32 @@
 use super::*;
 
 #[test]
+fn tianbaqiao_and_pangxie_source_names_resolve_without_merging_distinct_places() {
+    let atlas = atlas();
+    for (name, key) in [
+        ("阿胖田坝", "tianbaqiao/tianbaqiao"),
+        ("大田坝", "tianbaqiao/tianbaqiao"),
+        ("疙兜街", "pangxie/pangxiejing"),
+        ("螃蟹井街上", "pangxie/pangxiejing"),
+        ("臭水井", "pangxie/xiushuijing-brigade"),
+        ("嗅水井大队", "pangxie/xiushuijing-brigade"),
+        ("硝灰洞", "pangxie/xiaohuidong-brigade"),
+        ("哨灰洞大队", "pangxie/xiaohuidong-brigade"),
+        ("石㮟㮟", "pangxie/shikala"),
+        ("田坝河", "tianbaqiao/tianba-river"),
+    ] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{key}")).unwrap();
+        assert!(atlas.search(name, BodyId::Earth).contains(&id), "{key}");
+    }
+    let village = EntityId::from_key("earth/cn-gz/bijie/pangxie/shanbeihou").unwrap();
+    let brigade = EntityId::from_key("earth/cn-gz/bijie/pangxie/xiaohuidong-brigade").unwrap();
+    assert_eq!(atlas.parents(village), BTreeSet::from([brigade]));
+    let village = EntityId::from_key("earth/cn-gz/bijie/tianbaqiao/heijiazhai").unwrap();
+    let commune = EntityId::from_key("earth/cn-gz/bijie/tianbaqiao-commune").unwrap();
+    assert_eq!(atlas.parents(village), BTreeSet::from([commune]));
+}
+
+#[test]
 fn haizijie_names_and_river_aliases_resolve_to_their_cited_entities() {
     let atlas = atlas();
     for (name, key) in [

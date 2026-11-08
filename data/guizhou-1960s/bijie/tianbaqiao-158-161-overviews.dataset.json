@@ -1,0 +1,796 @@
+{
+  "entities": [
+    {
+      "id": "b58d50a1-eb0f-5e39-9224-1238f204a747",
+      "key": "earth/cn-gz/bijie/tianbaqiao/tianba-river",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "5ad196f3-6ec7-5740-b7d8-1604f34f9672",
+      "key": "earth/cn-gz/bijie/tianbaqiao/tianba-bridge",
+      "body": "earth",
+      "kind": "bridge"
+    },
+    {
+      "id": "3476b992-a4ec-54e5-a164-ee33edcf0ee2",
+      "key": "earth/cn-gz/bijie/tianbaqiao/tianbaqiao",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "012f4163-cba1-5b9d-827d-948909d03a9e",
+      "key": "earth/cn-gz/bijie/tianbaqiao/xiniutang-dam",
+      "body": "earth",
+      "kind": "facility"
+    }
+  ],
+  "records": [
+    {
+      "id": "cbb9320b-b3fa-5ef1-9c51-157f6f697bd5",
+      "key": "bijie-gazetteer/p158/tianbaqiao-commune/extent",
+      "entity_id": "137efbe3-456a-5969-94b9-98fedf513436",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "158",
+      "scan_page": 193,
+      "locator": "Overview, extent",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "田坝桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在毕节县城北面，相距八公里，东邻鸭子塘，东南与迎宾，南接观音桥，西南连五里坪，西连大桥、何官屯，北枕螃蟹等公社相接壤，位于东经105°17′至105°20′，北纬27°20′至27°23′之间，总面积28.1平方公里。"
+      }
+    },
+    {
+      "id": "d2961e97-31ae-5495-aa85-e0171cab326f",
+      "key": "bijie-gazetteer/p158/tianbaqiao-commune/population",
+      "entity_id": "137efbe3-456a-5969-94b9-98fedf513436",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "158",
+      "scan_page": 193,
+      "locator": "Overview, population",
+      "verbatim_quote": "共有1100户，5891人，其中：彝族76人，苗族87人，余为汉族，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "田坝桥公社",
+        "pinyin": null,
+        "population": 5891,
+        "households": 1100,
+        "ethnicities": [
+          "彝",
+          "苗",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b089b52c-5eb3-55b7-8f9d-57d8c8885f9c",
+      "key": "bijie-gazetteer/p158/tianbaqiao-commune/subdivisions",
+      "entity_id": "137efbe3-456a-5969-94b9-98fedf513436",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "158",
+      "scan_page": 193,
+      "locator": "Overview, subdivisions",
+      "verbatim_quote": "直辖36个生产队，32个自然村。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "田坝桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8e48b626-8b64-5238-bb5d-4abb801b1fe3",
+      "key": "bijie-gazetteer/p158/tianbaqiao-commune/chronology",
+      "entity_id": "137efbe3-456a-5969-94b9-98fedf513436",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "158",
+      "scan_page": 193,
+      "locator": "Overview, chronology",
+      "verbatim_quote": "清为赵吉伍，清末民初，在桥北新街赶场，后来市集悄然停止，民国时属八寨乡，置保甲以辖。解放后1950年建村，相继土改，54年建乡，办初级社，56年进入高级社，58年成立田坝桥公社，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "田坝桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bc1452fc-02aa-5dfa-80dd-40ff41b8c807",
+      "key": "bijie-gazetteer/p158/tianbaqiao-commune/relief",
+      "entity_id": "137efbe3-456a-5969-94b9-98fedf513436",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "158",
+      "scan_page": 193,
+      "locator": "Overview, relief",
+      "verbatim_quote": "地势东南较高，大黑山最高海拔1832.8米，四面环山拱护，均在海拔1700米以上。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "田坝桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "最低处犀牛塘海拔1470米。"
+      }
+    },
+    {
+      "id": "61e2ee12-8237-5054-8f65-90a198dc7424",
+      "key": "bijie-gazetteer/p158/tianbaqiao/tianba-river/course",
+      "entity_id": "b58d50a1-eb0f-5e39-9224-1238f204a747",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "158",
+      "scan_page": 193,
+      "locator": "Overview, course",
+      "verbatim_quote": "中部稍平缓，有螃蟹井水北入南流，纵贯社境，灌溉田畴，名田坝河，于清代修建石桥于河上，得名田坝桥，河水于犀牛塘流入观音桥河，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "田坝河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "137efbe3-456a-5969-94b9-98fedf513436",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "螃蟹井水北入南流，纵贯社境；河水于犀牛塘流入观音桥河。"
+      }
+    },
+    {
+      "id": "13719c52-eb94-5fb0-88dc-cc3bb39f5cd5",
+      "key": "bijie-gazetteer/p158/tianbaqiao/tianba-bridge/construction",
+      "entity_id": "5ad196f3-6ec7-5740-b7d8-1604f34f9672",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "158",
+      "scan_page": 193,
+      "locator": "Overview, construction",
+      "verbatim_quote": "于清代修建石桥于河上，得名田坝桥，",
+      "checked": true,
+      "source_date": {
+        "text": "清代",
+        "convention": "Chinese historical period",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "田坝桥",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "137efbe3-456a-5969-94b9-98fedf513436",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c8e0c248-98c6-5cb1-bfc9-7b3b2fb254d4",
+      "key": "bijie-gazetteer/p158/tianbaqiao/tianbaqiao/name-history",
+      "entity_id": "3476b992-a4ec-54e5-a164-ee33edcf0ee2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "158",
+      "scan_page": 193,
+      "locator": "Overview, name history",
+      "verbatim_quote": "据《大定府志》作阿胖田坝，当地群众又叫“大田坝”，田坝桥清代于溪上修桥始得名。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "田坝桥",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "137efbe3-456a-5969-94b9-98fedf513436",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "阿胖田坝",
+            "source_date": null,
+            "validity": null
+          },
+          {
+            "name": "大田坝",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "ee0e02cb-a7ef-5d94-bb1b-52481018cd26",
+      "key": "bijie-gazetteer/p158/tianbaqiao/yangmaping/pasture",
+      "entity_id": "9ea1390f-612f-5ef4-a6f1-e2bd0de17ec8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "158",
+      "scan_page": 193,
+      "locator": "Overview, pasture",
+      "verbatim_quote": "其所辖的养马坪，是明代毕赤营的牧马场。",
+      "checked": true,
+      "source_date": {
+        "text": "明代",
+        "convention": "Chinese historical period",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "养马坪",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "fc83b71a-40e2-5043-8a05-0de10e346e5f",
+      "key": "bijie-gazetteer/p158/tianbaqiao/longwang-temple/construction",
+      "entity_id": "238b1fbd-8860-56c2-8103-09572d1aec5f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "158",
+      "scan_page": 193,
+      "locator": "Overview, construction",
+      "verbatim_quote": "清代建有龙王庙，大庙（已废），",
+      "checked": true,
+      "source_date": {
+        "text": "清代",
+        "convention": "Chinese historical period",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "龙王庙",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d052d316-43fa-5458-8bb2-8eb2bf474ddc",
+      "key": "bijie-gazetteer/p158/tianbaqiao/da-temple/construction",
+      "entity_id": "67cbd386-50dd-54a6-9ede-3b8f4c37b2ba",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "158",
+      "scan_page": 193,
+      "locator": "Overview, construction",
+      "verbatim_quote": "清代建有龙王庙，大庙（已废），",
+      "checked": true,
+      "source_date": {
+        "text": "清代",
+        "convention": "Chinese historical period",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "大庙",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "dc6dc0e7-0e28-5c21-837c-5f6ff3470d2d",
+      "key": "bijie-gazetteer/p158/tianbaqiao/xiniutang-dam/irrigation",
+      "entity_id": "012f4163-cba1-5b9d-827d-948909d03a9e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "158",
+      "scan_page": 193,
+      "locator": "Overview, irrigation",
+      "verbatim_quote": "田坝桥人民，勤劳朴实。在国家的扶持下，在犀牛塘筑起拦河大坝，引水灌溉观音桥、迎宾及海子街等公社近千亩稻田。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "犀牛塘拦河大坝",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "137efbe3-456a-5969-94b9-98fedf513436",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Descriptive label combining the cited location and structure type."
+      }
+    },
+    {
+      "id": "4b05dfa3-73a5-5981-b175-019d46a55afe",
+      "key": "bijie-gazetteer/p161/pangxie-commune/extent",
+      "entity_id": "783f0a9d-569f-5f2a-8600-3d7fef839aa9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "161",
+      "scan_page": 196,
+      "locator": "Overview, extent",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "螃蟹公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在毕节县城东面，相距十五公里。公社全境位于东经105°17′至105°20′，北纬27°23′至27°26′之间，总面积35.8平方公里，东与新艾、鸭子塘，南与田坝桥，西与何官屯，北与杉寨、对坡等公社接壤。"
+      }
+    },
+    {
+      "id": "ecc93245-f86d-56e9-860a-f24ec1379900",
+      "key": "bijie-gazetteer/p161/pangxie-commune/population",
+      "entity_id": "783f0a9d-569f-5f2a-8600-3d7fef839aa9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "161",
+      "scan_page": 196,
+      "locator": "Overview, population",
+      "verbatim_quote": "有苗、汉两种民族，人口总数：1187户，6844人，其中除苗族56人，彝族5人，余为汉族，均以农业为主，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "螃蟹公社",
+        "pinyin": null,
+        "population": 6844,
+        "households": 1187,
+        "ethnicities": [
+          "苗",
+          "汉",
+          "彝"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "985c3d2e-f23b-56eb-b341-f1472f8e0431",
+      "key": "bijie-gazetteer/p161/pangxie-commune/subdivisions",
+      "entity_id": "783f0a9d-569f-5f2a-8600-3d7fef839aa9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "161",
+      "scan_page": 196,
+      "locator": "Overview, subdivisions",
+      "verbatim_quote": "辖螃蟹、臭水井、高桥、硝灰洞四个大队，43个生产队，44个自然村，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "螃蟹公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2585331d-9a64-50b6-98fc-8ad6d82a96a0",
+      "key": "bijie-gazetteer/p161/pangxie/pangxie-brigade/brigade-name",
+      "entity_id": "a1446eba-a64d-5c31-a57e-3fbb2255444a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "161",
+      "scan_page": 196,
+      "locator": "Overview, brigade name",
+      "verbatim_quote": "辖螃蟹、臭水井、高桥、硝灰洞四个大队，43个生产队，44个自然村，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "螃蟹",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "783f0a9d-569f-5f2a-8600-3d7fef839aa9",
+        "rank": "brigade",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f2aadf04-fd8c-565d-967c-e9cf307adc95",
+      "key": "bijie-gazetteer/p161/pangxie/xiushuijing-brigade/brigade-name",
+      "entity_id": "08ad4333-d3af-5cb4-80e2-941a798f89ad",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "161",
+      "scan_page": 196,
+      "locator": "Overview, brigade name",
+      "verbatim_quote": "辖螃蟹、臭水井、高桥、硝灰洞四个大队，43个生产队，44个自然村，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "臭水井",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "783f0a9d-569f-5f2a-8600-3d7fef839aa9",
+        "rank": "brigade",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6b24b836-8d11-5c59-90d4-52a74ab5def5",
+      "key": "bijie-gazetteer/p161/pangxie/gaoqiao-brigade/brigade-name",
+      "entity_id": "28b80463-f663-5d2f-a38e-d6d71872e004",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "161",
+      "scan_page": 196,
+      "locator": "Overview, brigade name",
+      "verbatim_quote": "辖螃蟹、臭水井、高桥、硝灰洞四个大队，43个生产队，44个自然村，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "高桥",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "783f0a9d-569f-5f2a-8600-3d7fef839aa9",
+        "rank": "brigade",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "381a1d22-8c63-584a-875b-eaf4ab556622",
+      "key": "bijie-gazetteer/p161/pangxie/xiaohuidong-brigade/brigade-name",
+      "entity_id": "dee5286f-bf62-5207-bafa-f4682b0b1324",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "161",
+      "scan_page": 196,
+      "locator": "Overview, brigade name",
+      "verbatim_quote": "辖螃蟹、臭水井、高桥、硝灰洞四个大队，43个生产队，44个自然村，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "硝灰洞",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "783f0a9d-569f-5f2a-8600-3d7fef839aa9",
+        "rank": "brigade",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4ada0659-2a24-5a33-b735-f219992e3095",
+      "key": "bijie-gazetteer/p161/pangxie-commune/chronology",
+      "entity_id": "783f0a9d-569f-5f2a-8600-3d7fef839aa9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "161",
+      "scan_page": 196,
+      "locator": "Overview, chronology",
+      "verbatim_quote": "民国时属八寨乡辖。解放后50年建村，土改后54年建乡、办初级社，56年进入高级社。1958年成立螃蟹人民公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "螃蟹公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "70b48e95-fdbe-5a78-9cb4-daa08376ee63",
+      "key": "bijie-gazetteer/p161/pangxie-commune/relief-and-drainage",
+      "entity_id": "783f0a9d-569f-5f2a-8600-3d7fef839aa9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "161",
+      "scan_page": 196,
+      "locator": "Overview, relief and drainage",
+      "verbatim_quote": "社境西南最高海拔1868.2米，南面较低，最低海拔1500米；山势杂错，多溶洞，水源较差，有沟水出于螃蟹井的西面，境内流长约一公里许，流入观音桥河，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "螃蟹公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "社境西南最高海拔1868.2米，南面最低海拔1500米；沟水出于螃蟹井西面，境内流长约一公里，流入观音桥河。"
+      }
+    },
+    {
+      "id": "556dec54-3d40-50f6-828b-8f024b9315c1",
+      "key": "bijie-gazetteer/p161/pangxie/pangxiejing/market-name",
+      "entity_id": "4ea0f01f-869d-5e84-a270-e095043d98ac",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "161",
+      "scan_page": 196,
+      "locator": "Overview, market name",
+      "verbatim_quote": "因井中产螃蟹故得名。井前山麓，于清代成小集市，居民过着贫穷的生活饮食，都烧树根（土语叫树疙兜）每家门前都堆积许多树疙兜因此称为疙兜街，群众叫“螃蟹井街上”，民国初集市萧条而没有赶场了。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "螃蟹井",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "疙兜街",
+            "source_date": null,
+            "validity": null
+          },
+          {
+            "name": "螃蟹井街上",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "d0599f64-44d0-5967-82b4-71f4b57f1aa5",
+      "key": "bijie-gazetteer/p158/tianbaqiao-commune/establishment",
+      "entity_id": "137efbe3-456a-5969-94b9-98fedf513436",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "158",
+      "scan_page": 193,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "58年成立田坝桥公社，",
+      "checked": true,
+      "source_date": {
+        "text": "58年",
+        "convention": "Gregorian year",
+        "conversion_basis": "The paragraph gives 1950 explicitly before the abbreviated dates."
+      },
+      "observation": {
+        "name": "田坝桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "22c083c6-a253-5fec-82f8-50a1813224fb",
+      "key": "bijie-gazetteer/p161/pangxie-commune/establishment",
+      "entity_id": "783f0a9d-569f-5f2a-8600-3d7fef839aa9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "161",
+      "scan_page": 196,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "1958年成立螃蟹人民公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "螃蟹人民公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "8dcdc56c-0985-524e-a409-5951165b4cdd",
+      "key": "editorial/bijie/tianbaqiao-commune/establishment",
+      "entity_id": "137efbe3-456a-5969-94b9-98fedf513436",
+      "basis": [
+        "d0599f64-44d0-5967-82b4-71f4b57f1aa5"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "f319a730-9134-5d7b-b8bc-3f551ab13472",
+      "key": "editorial/bijie/tianbaqiao-commune/name",
+      "entity_id": "137efbe3-456a-5969-94b9-98fedf513436",
+      "basis": [
+        "d0599f64-44d0-5967-82b4-71f4b57f1aa5"
+      ],
+      "brief": "Use the stated establishment name from its bounded year; the end date is unknown.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "田坝桥公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "288829a9-079f-5f4c-9550-82dd8baaa168",
+      "key": "editorial/bijie/pangxie-commune/establishment",
+      "entity_id": "783f0a9d-569f-5f2a-8600-3d7fef839aa9",
+      "basis": [
+        "22c083c6-a253-5fec-82f8-50a1813224fb"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "6b443ff3-5154-599b-8133-b412d109ca74",
+      "key": "editorial/bijie/pangxie-commune/name",
+      "entity_id": "783f0a9d-569f-5f2a-8600-3d7fef839aa9",
+      "basis": [
+        "22c083c6-a253-5fec-82f8-50a1813224fb"
+      ],
+      "brief": "Use the stated establishment name from its bounded year; the end date is unknown.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "螃蟹人民公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

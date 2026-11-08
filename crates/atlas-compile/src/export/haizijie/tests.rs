@@ -55,7 +55,16 @@ fn names(input: &LedgerInput, key: &str, year: i64, selection: TimeSelection) ->
 fn complete_tables_export_all_reviewed_rows_with_their_source_fields() {
     let input = input();
     let output = compile(&input).unwrap();
-    for (page, count) in [(151, 34), (152, 3), (154, 13), (157, 20)] {
+    for (page, count) in [
+        (151, 34),
+        (152, 3),
+        (154, 13),
+        (157, 20),
+        (159, 37),
+        (160, 10),
+        (162, 36),
+        (163, 13),
+    ] {
         let rows: Vec<_> = input
             .data
             .records
@@ -77,6 +86,9 @@ fn complete_tables_export_all_reviewed_rows_with_their_source_fields() {
         }
     }
 }
+
+#[path = "communes/tests.rs"]
+mod communes;
 
 #[test]
 fn district_and_brigade_seats_follow_the_explicit_table_annotations() {

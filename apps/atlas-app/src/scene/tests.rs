@@ -11,7 +11,7 @@ fn time_layer_keeps_undated_coordinates_out_of_deep_time() {
     };
     let time = SelectedTime::query(&atlas, &control).unwrap();
     let observations = features(&atlas, BodyId::Earth, &time, MapLayer::Observations, None);
-    assert_eq!(observations["features"].as_array().unwrap().len(), 1679);
+    assert_eq!(observations["features"].as_array().unwrap().len(), 1774);
     let selected = features(&atlas, BodyId::Earth, &time, MapLayer::SelectedTime, None);
     assert!(selected["features"].as_array().unwrap().is_empty());
     let moon = features(&atlas, BodyId::Moon, &time, MapLayer::Observations, None);
