@@ -1,0 +1,1140 @@
+{
+  "entities": [
+    {
+      "id": "8a770ac5-a3e0-5fc7-a4d6-871574bf2125",
+      "key": "earth/cn-gz/bijie/caodi/shiba-he",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "24bdf4c2-7476-5511-b525-71a6ffb9e7ca",
+      "key": "earth/cn-gz/bijie/shiba/daqing-liangzi",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "f818015d-9e05-5f3c-a7ef-237d643a57aa",
+      "key": "earth/cn-gz/bijie/shiba/halangchong-stream",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "379cc8a3-df22-583c-925c-adac347cd112",
+      "key": "earth/cn-gz/bijie/shiba/weixian-qiao",
+      "body": "earth",
+      "kind": "bridge"
+    }
+  ],
+  "records": [
+    {
+      "id": "9c5a973a-b87e-5012-8000-1dfcfad4b2a5",
+      "key": "bijie-gazetteer/p53/shiba/establishment",
+      "entity_id": "6d543809-ee13-59dc-8556-a9cc007b3c23",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "53",
+      "scan_page": 88,
+      "locator": "Commune overview, administrative chronology: establishment",
+      "verbatim_quote": "1958年成立公社，命名十八公社，社驻地十八街。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "十八公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "655f2664-fb13-53df-a317-7f9c3c4410fb",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c6f1b6ef-0956-5bee-96b8-edd83768d4ba",
+      "key": "bijie-gazetteer/p57/caodi/establishment",
+      "entity_id": "8c6d150e-0641-5d0c-b4e9-c995b0ed2cee",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "57",
+      "scan_page": 92,
+      "locator": "Commune overview, administrative chronology: establishment; the overview names 干家桥村, while the table identifies 甘家桥 as the seat",
+      "verbatim_quote": "1958年成立人民公社，名草堤公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "草堤公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "公社驻地干家桥村，在公路旁。"
+      }
+    },
+    {
+      "id": "699d79e9-12e3-5904-a394-0f67c5b1dc7d",
+      "key": "bijie-gazetteer/p59/ganhegou/establishment",
+      "entity_id": "c1d19dad-1baa-5eee-ad59-0600721178fb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "59",
+      "scan_page": 94,
+      "locator": "Commune overview, administrative chronology: establishment",
+      "verbatim_quote": "1958年成立人民公社，命名甘河公社",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "甘河公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "a625119f-fc52-53b6-838b-1d807dab492d",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "19d3c478-cf63-54de-b61d-d500d44d11e6",
+      "key": "bijie-gazetteer/p61/songlin/establishment",
+      "entity_id": "c5ffa980-d3d3-56a3-848c-d231f5cf6e40",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "61",
+      "scan_page": 96,
+      "locator": "Commune overview, administrative chronology: establishment",
+      "verbatim_quote": "1958年成立人民公社，命名松林公社。驻地松林寨。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "松林公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "257d1907-ae07-5df7-a160-d519adeb1fd8",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b9306d7e-4187-5b5f-b7e8-07689cf37a78",
+      "key": "bijie-gazetteer/p63/lishu/establishment",
+      "entity_id": "b820f73d-a1c4-5335-80fc-527377c7fac3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "63",
+      "scan_page": 98,
+      "locator": "Commune overview, administrative chronology: establishment",
+      "verbatim_quote": "1958年成立人民公社，命名梨树公社，驻地梨树坪。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "梨树公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "bc5a5cd4-25d1-5ef3-9fbb-b450867cafd1",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a602f0f8-49dc-5bf1-a8e5-8ff41e4f9015",
+      "key": "bijie-gazetteer/p66/caoping/establishment",
+      "entity_id": "df6a2cde-0e91-5ce2-9f6c-e6184b443ca3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "66",
+      "scan_page": 101,
+      "locator": "Commune overview, administrative chronology: establishment",
+      "verbatim_quote": "1958年成立人民公社，命名草坪公社，驻地营脚。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "草坪公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "2ab1a80b-aed8-5b73-9c18-d52e4c89dad3",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e414131c-b1c1-5bbd-8281-7f40c7e3b70b",
+      "key": "bijie-gazetteer/p53/shiba/composition",
+      "entity_id": "6d543809-ee13-59dc-8556-a9cc007b3c23",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "53",
+      "scan_page": 88,
+      "locator": "Commune overview, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "十八公社",
+        "pinyin": null,
+        "population": 6471,
+        "households": 1321,
+        "ethnicities": [
+          "彝",
+          "布依",
+          "苗",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "辖：上坝、下坝、哈郎冲三个大队，74个生产队，28个自然村。居住着彝、布依、苗、汉等民族。总人口（普查）1321户，6471人，其中彝族379人，苗族2人，布依2人，其他民族79人。余为汉族，以农业为主。"
+      }
+    },
+    {
+      "id": "3b0b796c-56e1-59c7-8c48-01c973c4b017",
+      "key": "bijie-gazetteer/p57/caodi/composition",
+      "entity_id": "8c6d150e-0641-5d0c-b4e9-c995b0ed2cee",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "57",
+      "scan_page": 92,
+      "locator": "Commune overview, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "草堤公社",
+        "pinyin": null,
+        "population": 6293,
+        "households": 1367,
+        "ethnicities": [
+          "苗",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "公社辖：草堤、营中岩二个大队，65个生产队，20个自然村。人口总数：（普查）1367户，6293人，其中：苗族70余人，余为汉族以农业为主。"
+      }
+    },
+    {
+      "id": "dee5ae6f-1aef-51a2-a69a-906dcf9e8935",
+      "key": "bijie-gazetteer/p59/ganhegou/composition",
+      "entity_id": "c1d19dad-1baa-5eee-ad59-0600721178fb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "59",
+      "scan_page": 94,
+      "locator": "Commune overview, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "甘河沟公社",
+        "pinyin": null,
+        "population": 5003,
+        "households": 1004,
+        "ethnicities": [
+          "苗",
+          "彝",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "公社驻地新寨，共辖：甘河、红波萝、新寨、廖家坝四个大队，33个生产队，21个自然村，居住有苗、彝、汉等族。人口总数（普查）1004户，5003人。其中：苗族323人，彝族20人，其他民族160人，其余为汉族，均以农业为主。"
+      }
+    },
+    {
+      "id": "39707229-deba-568e-a79e-3a92fef4f418",
+      "key": "bijie-gazetteer/p61/songlin/composition",
+      "entity_id": "c5ffa980-d3d3-56a3-848c-d231f5cf6e40",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "61",
+      "scan_page": 96,
+      "locator": "Commune overview, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "松林公社",
+        "pinyin": null,
+        "population": 3141,
+        "households": 583,
+        "ethnicities": [
+          "傣",
+          "彝",
+          "苗",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "辖：平乡、联合两个大队，52个生产队，21个自然村。有傣族和彝、苗、汉等民族居住，总人口（普查数）583户，3141人。其中：少数民族有1829人，其余为汉族，均以农业为主。"
+      }
+    },
+    {
+      "id": "549b78c7-372a-58cf-aa1c-7fd84273600c",
+      "key": "bijie-gazetteer/p63/lishu/composition",
+      "entity_id": "b820f73d-a1c4-5335-80fc-527377c7fac3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "63",
+      "scan_page": 98,
+      "locator": "Commune overview, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "梨树公社",
+        "pinyin": null,
+        "population": 5590,
+        "households": 1064,
+        "ethnicities": [
+          "京",
+          "彝",
+          "苗",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "全社辖：二堡、梨树坪、水牛屯三个大队，47个生产队，25个自然村，总人口（普查数）1064户，5590人，有京、彝、苗、汉四种民族，其中：除京、彝、苗等民族750余人外，余为汉族，均以农业为主。"
+      }
+    },
+    {
+      "id": "e81b01c5-2a83-5771-a60c-1f9d5a749757",
+      "key": "bijie-gazetteer/p66/caoping/composition",
+      "entity_id": "df6a2cde-0e91-5ce2-9f6c-e6184b443ca3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "66",
+      "scan_page": 101,
+      "locator": "Commune overview, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "草坪公社",
+        "pinyin": null,
+        "population": 4857,
+        "households": 1002,
+        "ethnicities": [
+          "彝",
+          "苗",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "公社辖：草坪、足纳、沙朗、呆乃四个大队，47个生产队，20个自然村，居住彝、苗、汉等民族。人口数1002户，4857人，以农业为主。"
+      }
+    },
+    {
+      "id": "f018e6ca-95f2-58e9-aac2-29eabcf5b7d0",
+      "key": "bijie-gazetteer/p53/shiba/extent",
+      "entity_id": "6d543809-ee13-59dc-8556-a9cc007b3c23",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "53",
+      "scan_page": 88,
+      "locator": "Commune overview, coordinate range, adjacent communes, and area",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "十八公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "总面积15.1平方公里。",
+        "extent": "位于东经105°18′至105°20′，北纬27°14′至27°16′之间。东邻鸭池、南濒小屯沟、西接南箐、北靠草堤、东北连头步等公社。"
+      }
+    },
+    {
+      "id": "d9e6f779-b589-5b83-a410-d5aafa0542de",
+      "key": "bijie-gazetteer/p57/caodi/extent",
+      "entity_id": "8c6d150e-0641-5d0c-b4e9-c995b0ed2cee",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "57",
+      "scan_page": 92,
+      "locator": "Commune overview, coordinate range, adjacent communes, and area",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "草堤公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "总面积11.9平方公里。",
+        "extent": "位于东经105°17′至105°19′，北纬27°15′至27°16′之间。东北与头步，东南与十八，西南接南箐、清丰，西北连大兰等公社。"
+      }
+    },
+    {
+      "id": "3e89ec22-6051-5bf0-a141-93e99919e9ec",
+      "key": "bijie-gazetteer/p59/ganhegou/extent",
+      "entity_id": "c1d19dad-1baa-5eee-ad59-0600721178fb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "59",
+      "scan_page": 94,
+      "locator": "Commune overview, coordinate range, adjacent communes, and area",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "甘河沟公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "总面积16.4平方公里。",
+        "extent": "位于东经105°23′至105°25′，北纬27°12′至27°15′之间。东与松林，南连岔河，西接草坪、鸭池，北靠梨树等公社。"
+      }
+    },
+    {
+      "id": "d995865b-1fa1-5ab4-9b9f-9e1fbe355048",
+      "key": "bijie-gazetteer/p61/songlin/extent",
+      "entity_id": "c5ffa980-d3d3-56a3-848c-d231f5cf6e40",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "61",
+      "scan_page": 96,
+      "locator": "Commune overview, coordinate range, adjacent communes, and area",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "松林公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "总面积11.1平方公里。",
+        "extent": "位于东经105°24′至105°26′，北纬27°12′至27°14′之间。东邻大方县的文阁、归化两社，南接岔河，西与甘河沟，北靠梨树坪等公社。"
+      }
+    },
+    {
+      "id": "9c0b475b-78d3-5007-b71d-ae51319fb1e4",
+      "key": "bijie-gazetteer/p63/lishu/extent",
+      "entity_id": "b820f73d-a1c4-5335-80fc-527377c7fac3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "63",
+      "scan_page": 98,
+      "locator": "Commune overview, coordinate range, adjacent communes, and area",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "梨树公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "总面积18.7平方公里。",
+        "extent": "位于东经105°23′至105°26′，北纬27°15′至27°17′之间。东邻大方县界，西接头步、鸭池，南低甘河沟、松林，东北与中屯，北靠保河等公社。"
+      }
+    },
+    {
+      "id": "96759082-cd9b-5260-989d-53611a3d658e",
+      "key": "bijie-gazetteer/p66/caoping/extent",
+      "entity_id": "df6a2cde-0e91-5ce2-9f6c-e6184b443ca3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "66",
+      "scan_page": 101,
+      "locator": "Commune overview, coordinate range, adjacent communes, and area",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "草坪公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "总面积18.2平方公里。",
+        "extent": "位于东经105°20′至105°23′，北纬27°11′至27°13′之间。东接甘河沟，西南抵朱昌，西接小屯沟，南抵岔河，北靠鸭池等公社。"
+      }
+    },
+    {
+      "id": "1317c272-c0fb-5908-b0d6-d421b0d518d6",
+      "key": "bijie-gazetteer/p59/ganhegou/renaming",
+      "entity_id": "c1d19dad-1baa-5eee-ad59-0600721178fb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "59",
+      "scan_page": 94,
+      "locator": "Commune overview, 1981 commune renaming",
+      "verbatim_quote": "经普查属重名公社，1981年更名为甘河沟公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1981年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "甘河沟公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "甘河公社",
+            "source_date": {
+              "text": "1958年",
+              "convention": "Gregorian year",
+              "conversion_basis": null
+            },
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "9b9ed9fd-3898-522a-a836-b4d06a524f19",
+      "key": "bijie-gazetteer/p53/shiba/shiba-he-course",
+      "entity_id": "1fe2cb33-3e6a-5c74-9216-071235ffd99e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "53",
+      "scan_page": 88,
+      "locator": "Commune overview, river course within the commune",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "十八河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "6d543809-ee13-59dc-8556-a9cc007b3c23",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "十八河曲流西部，上接南箐，下入草堤。"
+      }
+    },
+    {
+      "id": "e245d01e-6ad8-53e5-8371-f5a8e242d0c7",
+      "key": "bijie-gazetteer/p57/caodi/shiba-he-course",
+      "entity_id": "8a770ac5-a3e0-5fc7-a4d6-871574bf2125",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "57",
+      "scan_page": 92,
+      "locator": "Commune overview, river course within the commune",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "十八河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "8c6d150e-0641-5d0c-b4e9-c995b0ed2cee",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "东边有十八河越境流入头步，小河口处最低海拔1440米。"
+      }
+    },
+    {
+      "id": "f2796ff6-a44f-5dfa-a28e-b8f9735c7489",
+      "key": "bijie-gazetteer/p59/ganhegou/gan-he-course",
+      "entity_id": "de4c60cf-1575-5426-9a38-727966838e12",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "59",
+      "scan_page": 94,
+      "locator": "Commune overview, river course within the commune",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "甘河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "c1d19dad-1baa-5eee-ad59-0600721178fb",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "因溪水流于峡峪间，水质清甜，“甘”“干”同音，雅意为甘河。",
+        "extent": "有溪水两条，一源于鸭池，小羊角冲。一源于草坪、沙朗，均于西面入境，汇成甘河，古名干河沟，经松林流入大方县归化河。"
+      }
+    },
+    {
+      "id": "3aa5f1c7-4ff5-5e59-b76f-eaa7db6aaccb",
+      "key": "bijie-gazetteer/p61/songlin/kuaqiao-he-course",
+      "entity_id": "028575f2-5a53-5d81-a58f-8ff3e319c283",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "61",
+      "scan_page": 96,
+      "locator": "Commune overview, river course within the commune",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "垮桥河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "c5ffa980-d3d3-56a3-848c-d231f5cf6e40",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "垮桥河由岔河流入，纵穿松林公社于北面磨香车村出境，流汇归化河，境内流长约七公里。"
+      }
+    },
+    {
+      "id": "ab78aa1c-be78-56c9-a1ef-e99a831572eb",
+      "key": "bijie-gazetteer/p63/lishu/feixiong-he-course",
+      "entity_id": "1ad46620-dd42-58ff-9d5e-6bed2fbf2028",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "63",
+      "scan_page": 98,
+      "locator": "Commune overview, river course within the commune",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "飞雄河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b820f73d-a1c4-5335-80fc-527377c7fac3",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "东面边界河上流为响水河，下流为老保河，由水牛屯东下折南名飞雄河，为毕节与大方分界河。"
+      }
+    },
+    {
+      "id": "5db44c6e-0e5e-56e7-be76-7b09eee96e30",
+      "key": "bijie-gazetteer/p53/shiba/daqing-liangzi",
+      "entity_id": "24bdf4c2-7476-5511-b525-71a6ffb9e7ca",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "53",
+      "scan_page": 88,
+      "locator": "Commune overview, highest point",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大箐梁子",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "6d543809-ee13-59dc-8556-a9cc007b3c23",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "南面最高处大箐梁子海拔1857.4米。"
+      }
+    },
+    {
+      "id": "344ea57c-5ce3-5605-88d0-1e0c635df875",
+      "key": "bijie-gazetteer/p53/shiba/halangchong-stream",
+      "entity_id": "f818015d-9e05-5f3c-a7ef-237d643a57aa",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "53",
+      "scan_page": 88,
+      "locator": "Commune overview, stream course",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "哈郎冲",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "6d543809-ee13-59dc-8556-a9cc007b3c23",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "哈郎冲溪水南源北流于垭口上入洞，形成冲坝。"
+      }
+    },
+    {
+      "id": "ee2d20a9-fcb2-5299-a29a-b718fe2836f8",
+      "key": "bijie-gazetteer/p53/shiba/weixian-qiao",
+      "entity_id": "379cc8a3-df22-583c-925c-adac347cd112",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "53",
+      "scan_page": 88,
+      "locator": "Commune overview, bridge construction and conversion; correspondence with the 十八桥 table entry remains unresolved",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": {
+        "text": "清代",
+        "convention": "Chinese historical period",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "维先桥",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "6d543809-ee13-59dc-8556-a9cc007b3c23",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "清代建有石桥一座，名“维先桥”横架于十八河上，现改为公路桥（载重10吨）。",
+        "extent": "横架于十八河上"
+      }
+    },
+    {
+      "id": "7a449b03-b181-5269-b930-f9315e4f24fc",
+      "key": "bijie-gazetteer/p53/shiba/street-history",
+      "entity_id": "655f2664-fb13-53df-a317-7f9c3c4410fb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "53",
+      "scan_page": 88,
+      "locator": "Commune overview, settlement and street history",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": {
+        "text": "清代",
+        "convention": "Chinese historical period",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "十八街",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "十八街形成于清代，清末民初曾为小集市。"
+      }
+    },
+    {
+      "id": "23afc536-6026-51a9-894c-fdc66642179f",
+      "key": "bijie-gazetteer/p57/caodi/locality-names",
+      "entity_id": "785246aa-1ed8-5146-82f7-3b75575433c6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "57",
+      "scan_page": 92,
+      "locator": "Commune overview, historical locality names",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "草堤冲",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "炒铁冲",
+            "source_date": {
+              "text": "明洪武时",
+              "convention": "Chinese reign period",
+              "conversion_basis": null
+            },
+            "validity": null
+          },
+          {
+            "name": "赵铁伍",
+            "source_date": {
+              "text": "清康熙时",
+              "convention": "Chinese reign period",
+              "conversion_basis": null
+            },
+            "validity": null
+          }
+        ],
+        "note": "在明洪武时属毕节卫置塘房，曾在此炒炼毛铁故名炒铁冲，并设屯堡以戍守。清康熙时划属县南里七伍之一，名赵铁伍。民国以来为草堤冲划属鸭池乡，设保长管。"
+      }
+    },
+    {
+      "id": "30b4ea79-306a-51f8-b366-9504ea8a0370",
+      "key": "bijie-gazetteer/p59/ganhegou/ganhe-power-station-construction",
+      "entity_id": "7c208fdc-8443-568c-8789-d89237bda329",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "59",
+      "scan_page": 94,
+      "locator": "Commune overview, power-station construction and installed capacity",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "甘河发电站",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "现在甘河已建有水电站一座，装机容量80千瓦。"
+      }
+    },
+    {
+      "id": "9082136e-c74e-5344-86f3-8214e2263fa7",
+      "key": "bijie-gazetteer/p61/songlin/songlin-power-station-construction",
+      "entity_id": "e4c94c40-7347-5dbf-a398-2a65b3b5c40f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "61",
+      "scan_page": 96,
+      "locator": "Commune overview, power-station construction and installed capacity",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": {
+        "text": "1976年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "松林电站",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "1976年在垮桥河上兴建松林电站一座，装机容量80千瓦。"
+      }
+    },
+    {
+      "id": "e3e6e18b-c8e4-5ae6-b541-4aac3b3d9752",
+      "key": "bijie-gazetteer/p63/lishu/shuiniutun-power-station-construction",
+      "entity_id": "02dd852f-df06-5d7a-8baf-f638b97e4eb9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "63",
+      "scan_page": 98,
+      "locator": "Commune overview, power-station construction and installed capacity",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": {
+        "text": "1975年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "水牛屯电站",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "水牛屯电站，在国家的投资下，于1975年动工兴建，装机2000千瓦，现已部分建成业已发电。"
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "4a71bf4d-8669-512a-9d04-2172503ef425",
+      "key": "editorial/bijie/shiba/establishment",
+      "entity_id": "6d543809-ee13-59dc-8556-a9cc007b3c23",
+      "basis": [
+        "9c5a973a-b87e-5012-8000-1dfcfad4b2a5"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year. Use TT calendar bounds and the interval midpoint for nominal display.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "b147a9e3-3f55-5621-9faf-ee884d7936ec",
+      "key": "editorial/bijie/caodi/establishment",
+      "entity_id": "8c6d150e-0641-5d0c-b4e9-c995b0ed2cee",
+      "basis": [
+        "c6f1b6ef-0956-5bee-96b8-edd83768d4ba"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year. Use TT calendar bounds and the interval midpoint for nominal display.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "869bc4d1-dbeb-5ec6-8059-6973bc010fb3",
+      "key": "editorial/bijie/ganhegou/establishment",
+      "entity_id": "c1d19dad-1baa-5eee-ad59-0600721178fb",
+      "basis": [
+        "699d79e9-12e3-5904-a394-0f67c5b1dc7d"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year. Use TT calendar bounds and the interval midpoint for nominal display.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "c0582416-f30e-56d4-add2-e77c9a26671e",
+      "key": "editorial/bijie/songlin/establishment",
+      "entity_id": "c5ffa980-d3d3-56a3-848c-d231f5cf6e40",
+      "basis": [
+        "19d3c478-cf63-54de-b61d-d500d44d11e6"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year. Use TT calendar bounds and the interval midpoint for nominal display.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "b6ce5a61-174e-5912-a655-69807babc922",
+      "key": "editorial/bijie/lishu/establishment",
+      "entity_id": "b820f73d-a1c4-5335-80fc-527377c7fac3",
+      "basis": [
+        "b9306d7e-4187-5b5f-b7e8-07689cf37a78"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year. Use TT calendar bounds and the interval midpoint for nominal display.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "375509d6-09ed-5061-a193-600cc7bd36ab",
+      "key": "editorial/bijie/caoping/establishment",
+      "entity_id": "df6a2cde-0e91-5ce2-9f6c-e6184b443ca3",
+      "basis": [
+        "a602f0f8-49dc-5bf1-a8e5-8ff41e4f9015"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year. Use TT calendar bounds and the interval midpoint for nominal display.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "5ac2644a-c297-5df6-a27b-f47d0735095f",
+      "key": "editorial/bijie/ganhegou/ganhe-name",
+      "entity_id": "c1d19dad-1baa-5eee-ad59-0600721178fb",
+      "basis": [
+        "699d79e9-12e3-5904-a394-0f67c5b1dc7d",
+        "1317c272-c0fb-5908-b0d6-d421b0d518d6"
+      ],
+      "brief": "The overview dates establishment to 1958 and renaming to 1981. Represent each transition with full Gregorian-year uncertainty; retain an unknown end for the later name.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "甘河公社",
+              "kind": "standard",
+              "language": "zh"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "0ed367f6-1dbb-51ee-8b3d-6d84b0c551d3",
+      "key": "editorial/bijie/ganhegou/ganhegou-name",
+      "entity_id": "c1d19dad-1baa-5eee-ad59-0600721178fb",
+      "basis": [
+        "1317c272-c0fb-5908-b0d6-d421b0d518d6"
+      ],
+      "brief": "The overview dates establishment to 1958 and renaming to 1981. Represent each transition with full Gregorian-year uncertainty; retain an unknown end for the later name.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "甘河沟公社",
+              "kind": "standard",
+              "language": "zh"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

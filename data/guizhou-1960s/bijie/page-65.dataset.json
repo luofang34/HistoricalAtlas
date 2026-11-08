@@ -1,0 +1,80 @@
+{
+  "entities": [
+    {
+      "id": "11d22a76-12ea-58dc-aa71-ee252ef2eca3",
+      "key": "earth/cn-gz/bijie/lishu/lishuping-qiao",
+      "body": "earth",
+      "kind": "bridge"
+    },
+    {
+      "id": "5b9d34e9-ee80-5e3a-a0d2-1c495889a56a",
+      "key": "earth/cn-gz/bijie/lishu/kuaqiao-he",
+      "body": "earth",
+      "kind": "river"
+    }
+  ],
+  "records": [
+    {
+      "id": "3d569ab9-c7e5-52d6-9468-425357017dff",
+      "key": "bijie-gazetteer/p65/lishu/lishuping-qiao",
+      "entity_id": "11d22a76-12ea-58dc-aa71-ee252ef2eca3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "65",
+      "scan_page": 100,
+      "locator": "Place table, row 1: 梨树坪桥; bridge notation transcribed as numerator 25—5 over denominator 8",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "梨树坪桥",
+        "pinyin": "Líshù pínQiáo",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b820f73d-a1c4-5335-80fc-527377c7fac3",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.41666666666667,
+            "latitude": 27.233333333333334
+          },
+          "longitude_text": "105°25′",
+          "latitude_text": "27°14′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "桥 25—5/8"
+      }
+    },
+    {
+      "id": "4b4f8e38-2847-5df0-90ef-2f71d71f2400",
+      "key": "bijie-gazetteer/p65/lishu/kuaqiao-he",
+      "entity_id": "5b9d34e9-ee80-5e3a-a0d2-1c495889a56a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "65",
+      "scan_page": 100,
+      "locator": "Place table, row 2: 垮桥河; river reach within the commune",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "垮桥河",
+        "pinyin": "Kuàqiáo Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b820f73d-a1c4-5335-80fc-527377c7fac3",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "河流",
+        "extent": "上接松林，下入飞雄流入大方。境内流长4公里。"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

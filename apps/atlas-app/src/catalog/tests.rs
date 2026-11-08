@@ -1,6 +1,19 @@
 use super::*;
 
 #[test]
+fn yachi_commune_renaming_and_source_spellings_remain_searchable() {
+    let atlas = atlas();
+    let commune = EntityId::from_key("earth/cn-gz/bijie/ganhegou-commune").unwrap();
+    assert_eq!(atlas.search("甘河公社", BodyId::Earth), vec![commune]);
+    assert!(atlas.search("甘河沟公社", BodyId::Earth).contains(&commune));
+    let locality = EntityId::from_key("earth/cn-gz/bijie/caodi/caodi-chong").unwrap();
+    assert_eq!(atlas.search("炒铁冲", BodyId::Earth), vec![locality]);
+    let river = EntityId::from_key("earth/cn-gz/bijie/songlin/kuaqiao-he").unwrap();
+    assert_eq!(atlas.search("跨桥河", BodyId::Earth), vec![river]);
+    assert!(atlas.search("垮桥河", BodyId::Earth).contains(&river));
+}
+
+#[test]
 fn yachi_street_history_and_cross_page_villages_are_searchable() {
     let atlas = atlas();
     let street = EntityId::from_key("earth/cn-gz/bijie/yachi/yachi-jie").unwrap();
