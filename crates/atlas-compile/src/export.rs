@@ -293,3 +293,7 @@ mod heguantun_tests;
 #[cfg(test)]
 #[path = "export/haizijie/tests.rs"]
 mod haizijie_tests;
+
+#[cfg(test)]
+#[path = "export/zhijin/tests.rs"]
+mod zhijin_tests;

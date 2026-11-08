@@ -347,6 +347,66 @@
       "key": "earth/cn-gz/zhijin/qimo/longtan-riverbank-tian",
       "body": "earth",
       "kind": "settlement"
+    },
+    {
+      "id": "b3455bca-13af-5121-8194-fe313ba73a41",
+      "key": "earth/cn-gz/zhijin/qimo/meidong-yan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "511660b8-84e5-5eaf-a13b-c9e85addf387",
+      "key": "earth/cn-gz/zhijin/qimo/qimo-locality",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "eefd5c7a-54f7-5e5f-8041-8d38f8807cea",
+      "key": "earth/cn-gz/zhijin/qimo/shuili-chong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "563c044f-e86a-578f-a73f-bbf0b6280937",
+      "key": "earth/cn-gz/zhijin/qimo/fuguang-tian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "410dc7f2-795d-5a1c-b67b-20f049bf34b5",
+      "key": "earth/cn-gz/zhijin/qimo/huagu-lin",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "7256c4fe-a940-57cf-92b1-0265824c0bdd",
+      "key": "earth/cn-gz/zhijin/qimo/tunjiao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "82557224-34f8-548d-a4cb-86dbe614d915",
+      "key": "earth/cn-gz/zhijin/qimo/taoshu-bend",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "8b5a19f6-4472-59e7-9e5a-9b5e2050a3be",
+      "key": "earth/cn-gz/zhijin/qimo/lujia-reed-chong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "9dc3a56e-2ad7-5aa6-be62-70f72731fe93",
+      "key": "earth/cn-gz/zhijin/qimo/sichong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "28e3de83-3671-5da2-a907-43779dfd78d1",
+      "key": "earth/cn-gz/zhijin/qimo/azuo-ba",
+      "body": "earth",
+      "kind": "settlement"
     }
   ],
   "records": [
@@ -1682,13 +1742,13 @@
       "source_id": "zhijin-gazetteer-scan-b",
       "page_or_sheet": "30",
       "scan_page": 38,
-      "locator": "陡岩 brigade heading, population and resident groups",
+      "locator": "陡岩 brigade heading, population and resident groups; seat identified by the 大队驻地 annotation",
       "verbatim_quote": null,
       "checked": true,
       "source_date": null,
       "observation": {
         "name": "陡岩大队",
-        "pinyin": null,
+        "pinyin": "Dǒuyándàduì",
         "population": 1339,
         "households": null,
         "ethnicities": [
@@ -1698,7 +1758,7 @@
         ],
         "parent_id": "a1fa9a30-1c42-5f68-b4d2-d9ab5cb77781",
         "rank": "brigade",
-        "seat_id": null,
+        "seat_id": "be27cef3-5173-5ab9-94ac-2af4c235234c",
         "coordinate": null,
         "former_names": [],
         "note": null
@@ -1736,13 +1796,13 @@
       "source_id": "zhijin-gazetteer-scan-b",
       "page_or_sheet": "30",
       "scan_page": 38,
-      "locator": "兴荣 brigade heading, population and resident groups",
+      "locator": "兴荣 brigade heading, population and resident groups; seat identified by the 大队驻地 annotation",
       "verbatim_quote": null,
       "checked": true,
       "source_date": null,
       "observation": {
         "name": "兴荣大队",
-        "pinyin": null,
+        "pinyin": "Xīngróng Dàduì",
         "population": 1585,
         "households": null,
         "ethnicities": [
@@ -1751,7 +1811,7 @@
         ],
         "parent_id": "a1fa9a30-1c42-5f68-b4d2-d9ab5cb77781",
         "rank": "brigade",
-        "seat_id": null,
+        "seat_id": "ee16bc80-7dde-50d3-ac71-1d19b76975e6",
         "coordinate": null,
         "former_names": [],
         "note": null
@@ -1789,13 +1849,13 @@
       "source_id": "zhijin-gazetteer-scan-b",
       "page_or_sheet": "30",
       "scan_page": 38,
-      "locator": "中营 brigade heading, population and resident groups",
+      "locator": "中营 brigade heading, population and resident groups; seat identified by the 大队驻地 annotation",
       "verbatim_quote": null,
       "checked": true,
       "source_date": null,
       "observation": {
         "name": "中营大队",
-        "pinyin": null,
+        "pinyin": "Zhōngxīng Dàduì",
         "population": 1664,
         "households": null,
         "ethnicities": [
@@ -1806,7 +1866,7 @@
         ],
         "parent_id": "a1fa9a30-1c42-5f68-b4d2-d9ab5cb77781",
         "rank": "brigade",
-        "seat_id": null,
+        "seat_id": "9e2f9054-9f14-523b-aa54-1a336a74d01b",
         "coordinate": null,
         "former_names": [],
         "note": null
@@ -1850,7 +1910,7 @@
       "source_date": null,
       "observation": {
         "name": "墨峰大队",
-        "pinyin": null,
+        "pinyin": "Mébieng Dàduì",
         "population": 1552,
         "households": null,
         "ethnicities": [
@@ -1898,13 +1958,13 @@
       "source_id": "zhijin-gazetteer-scan-b",
       "page_or_sheet": "31",
       "scan_page": 39,
-      "locator": "大木戛 brigade heading, population and resident groups",
+      "locator": "大木戛 brigade heading, population and resident groups; seat identified by the 大队驻地 annotation",
       "verbatim_quote": null,
       "checked": true,
       "source_date": null,
       "observation": {
         "name": "大木戛大队",
-        "pinyin": null,
+        "pinyin": "Dàmúgǎ Dàduì",
         "population": 1527,
         "households": null,
         "ethnicities": [
@@ -1915,7 +1975,7 @@
         ],
         "parent_id": "a1fa9a30-1c42-5f68-b4d2-d9ab5cb77781",
         "rank": "brigade",
-        "seat_id": null,
+        "seat_id": "181edb32-b6cd-5154-b92c-ae660ad70004",
         "coordinate": null,
         "former_names": [],
         "note": null
@@ -2003,7 +2063,7 @@
       "source_date": null,
       "observation": {
         "name": "龙滩田",
-        "pinyin": null,
+        "pinyin": "Lóngfāntián",
         "population": 180,
         "households": null,
         "ethnicities": [
@@ -2014,7 +2074,7 @@
         "seat_id": null,
         "coordinate": null,
         "former_names": [],
-        "note": "The table spells the name 龙滩田; the map labels a settlement 龙潭田. Their identity remains unresolved."
+        "note": "大队驻地. The table spells the name 龙滩田; the map labels a settlement 龙潭田. Their identity remains unresolved."
       }
     },
     {
@@ -2040,6 +2100,1336 @@
         "coordinate": null,
         "former_names": [],
         "note": "The table marks 龙滩田 as the brigade seat; the map labels the brigade seat 吉步."
+      }
+    },
+    {
+      "id": "83cb0693-140e-5cc8-8160-81236d406401",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/lijia-zhai",
+      "entity_id": "823e5ba6-d2a5-5d87-8c4f-60e1a3b4a1ea",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "李家寨 row in the douyan brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "李家寨",
+        "pinyin": "Lǐjiāzhài",
+        "population": 208,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "84b3df35-d015-5b43-98d1-56eb5b568768",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "13420652-fad0-5889-8a84-dbec3843b1fa",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/xiaoshi-yan",
+      "entity_id": "dbe79309-0ead-575c-a5e7-054a6c1beae5",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "小石岩 row in the douyan brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小石岩",
+        "pinyin": "Xiaǒshíyn",
+        "population": 258,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "青"
+        ],
+        "parent_id": "84b3df35-d015-5b43-98d1-56eb5b568768",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6ad79af0-7d20-5d15-911f-2b68cbbfc1f2",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/zhulin-zhai",
+      "entity_id": "be27cef3-5173-5ab9-94ac-2af4c235234c",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "竹林寨 row in the douyan brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "竹林寨",
+        "pinyin": "Zhúlínzhài",
+        "population": 214,
+        "households": null,
+        "ethnicities": [
+          "水"
+        ],
+        "parent_id": "84b3df35-d015-5b43-98d1-56eb5b568768",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "1003b18e-a8f0-5f1e-8a2f-debe13f43ed2",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/chenjia-zhai",
+      "entity_id": "d72d0b92-5008-539d-a743-563401497640",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "陈家寨 row in the douyan brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "陈家寨",
+        "pinyin": "Chénjiāzhài",
+        "population": 173,
+        "households": null,
+        "ethnicities": [
+          "水"
+        ],
+        "parent_id": "84b3df35-d015-5b43-98d1-56eb5b568768",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "公社驻地"
+      }
+    },
+    {
+      "id": "23a61313-eefa-5f33-9499-419d0a80a25b",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/qimo-village",
+      "entity_id": "79a86d2c-9684-5c7c-9856-c18a1600d8e3",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "绮陌 row in the douyan brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "绮陌",
+        "pinyin": "Qǐmò",
+        "population": 211,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "84b3df35-d015-5b43-98d1-56eb5b568768",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "fa13e597-1680-56c5-8871-848910e703ed",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/meidong-yan",
+      "entity_id": "b3455bca-13af-5121-8194-fe313ba73a41",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "煤洞岩 row in the douyan brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "煤洞岩",
+        "pinyin": "Meídòngzhài",
+        "population": 155,
+        "households": null,
+        "ethnicities": [
+          "水"
+        ],
+        "parent_id": "84b3df35-d015-5b43-98d1-56eb5b568768",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The table prints 煤洞岩; the map labels 煤洞寨."
+      }
+    },
+    {
+      "id": "ab58d18e-7615-513e-a636-865963aef413",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/douyan",
+      "entity_id": "4dbc999b-ee4e-5218-8008-8f555cc496b2",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "陡岩 row in the douyan brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "陡岩",
+        "pinyin": "Dǒuyán",
+        "population": 120,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "84b3df35-d015-5b43-98d1-56eb5b568768",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2f718750-e3ea-591d-b06e-b5405376bb5d",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/gantian-chong",
+      "entity_id": "6ee39ff3-f3d2-5068-b8be-ec66986529b7",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "干田冲 row in the douyan brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "干田冲",
+        "pinyin": "Gāntiánchāng",
+        "population": 11,
+        "households": null,
+        "ethnicities": [
+          "水"
+        ],
+        "parent_id": "84b3df35-d015-5b43-98d1-56eb5b568768",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "444854f0-dd45-5e80-9497-2263613177b2",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/qimo-locality",
+      "entity_id": "511660b8-84e5-5eaf-a13b-c9e85addf387",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "绮陌 row in the douyan brigade table section",
+      "verbatim_quote": "包括：龙潭田、岩脚、苗水寨、曾家寨",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "绮陌",
+        "pinyin": "Qǐmò",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "84b3df35-d015-5b43-98d1-56eb5b568768",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "包括：龙潭田、岩脚、苗水寨、曾家寨"
+      }
+    },
+    {
+      "id": "d3776bbc-8a28-510b-b46f-78fe89eb01e1",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/xinzhai",
+      "entity_id": "2f119924-f463-5025-ae15-c9b88aeb88bf",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "新寨 row in the xingrong brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "新寨",
+        "pinyin": "Xīnzhài",
+        "population": 133,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "44fe8069-cd1a-5e9f-a21e-edb5164d8172",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e080b0fd-efd6-5bce-a0b3-4540d86ae5ac",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/yaojing",
+      "entity_id": "335c1cb2-2393-581b-973d-ce54e50aa55a",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "腰井 row in the xingrong brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "腰井",
+        "pinyin": "Yāojing",
+        "population": 132,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "44fe8069-cd1a-5e9f-a21e-edb5164d8172",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "fba2be86-02ac-502d-9400-fc01eaae762c",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/dafang",
+      "entity_id": "3fc2e78c-258a-5db4-a220-8b4bd7e26d4a",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "大房 row in the xingrong brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大房",
+        "pinyin": "Dàfáng",
+        "population": 92,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "44fe8069-cd1a-5e9f-a21e-edb5164d8172",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "57a87599-a8b4-5680-981f-cf0f3db8e78f",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/jialuo",
+      "entity_id": "23dbbd88-45e8-5d7e-ab55-66472ee831de",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "家裸 row in the xingrong brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "家裸",
+        "pinyin": "Jiāluó",
+        "population": 100,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "44fe8069-cd1a-5e9f-a21e-edb5164d8172",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3333d518-f80e-5490-a60e-9be9b40acef3",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/yutang",
+      "entity_id": "c5b7b4e9-3212-5fe2-8ed1-f156d1fb99d0",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "鱼塘 row in the xingrong brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "鱼塘",
+        "pinyin": "Yútáng",
+        "population": 108,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "44fe8069-cd1a-5e9f-a21e-edb5164d8172",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2754d4e1-4149-5fba-be50-022867b4c20b",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/shiban-fang",
+      "entity_id": "77176752-c4dd-565e-8547-e984b1bcf384",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "石板房 row in the xingrong brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "石板房",
+        "pinyin": "Shíbǎnfáng",
+        "population": 104,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "44fe8069-cd1a-5e9f-a21e-edb5164d8172",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "be0375bb-051b-542c-b702-d46e2d8fe05e",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/gaozhai",
+      "entity_id": "2af40de3-5462-5306-90f0-22a73f92728b",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "高寨 row in the xingrong brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "高寨",
+        "pinyin": "Gāozhài",
+        "population": 135,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "44fe8069-cd1a-5e9f-a21e-edb5164d8172",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2280d0e1-b590-59cc-ad2e-bab196494f08",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/bana",
+      "entity_id": "ee16bc80-7dde-50d3-ac71-1d19b76975e6",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "把那 row in the xingrong brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "把那",
+        "pinyin": "Bǎnǎ",
+        "population": 120,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "44fe8069-cd1a-5e9f-a21e-edb5164d8172",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "219f5025-1d6c-5c55-86ed-0aef59f5590b",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/shuili-chong",
+      "entity_id": "eefd5c7a-54f7-5e5f-8041-8d38f8807cea",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "水梨冲 row in the xingrong brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "水梨冲",
+        "pinyin": "Múlíchōng",
+        "population": 196,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "44fe8069-cd1a-5e9f-a21e-edb5164d8172",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The table prints 水梨冲; the map labels 木梨冲."
+      }
+    },
+    {
+      "id": "7e0be404-8628-5f28-9876-5de48931c6c0",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/sijiao-tian",
+      "entity_id": "aa8f7630-4197-532a-abfa-84c0769e9fcf",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "四角田 row in the xingrong brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "四角田",
+        "pinyin": "Sìjiǎotián",
+        "population": 80,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "44fe8069-cd1a-5e9f-a21e-edb5164d8172",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6e27392b-5228-5c58-9582-b738be4a8f01",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/wangbing-dong",
+      "entity_id": "3df53620-1309-560d-a550-420c38c4c34f",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "汪炳洞 row in the xingrong brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "汪炳洞",
+        "pinyin": "Wāngbǐngdòng",
+        "population": 109,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "44fe8069-cd1a-5e9f-a21e-edb5164d8172",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "978c9644-9da5-515e-a7d2-cc3d7d5e21fa",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/fuguang-tian",
+      "entity_id": "563c044f-e86a-578f-a73f-bbf0b6280937",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "福广田 row in the xingrong brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "福广田",
+        "pinyin": "Fúguǎngtián",
+        "population": 138,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "44fe8069-cd1a-5e9f-a21e-edb5164d8172",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The table prints 福广田; the map labels 湖广田."
+      }
+    },
+    {
+      "id": "9fa3e58c-539d-54a4-b899-1520e2437e1e",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/yanjiao",
+      "entity_id": "bc4f5704-576e-5383-9dbb-fe3c6ae8fcdf",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "岩脚 row in the zhongying brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "岩脚",
+        "pinyin": "Yánjiǎo",
+        "population": 182,
+        "households": null,
+        "ethnicities": [
+          "苗"
+        ],
+        "parent_id": "7d51e676-0413-5953-ad57-0d724fe2ca5a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "56152b5d-594c-5027-a3fa-6c279e7c3f89",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/shiti-zi",
+      "entity_id": "1f374e96-34e0-5ad5-bbcc-59b75bdcc27a",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "石梯子 row in the zhongying brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "石梯子",
+        "pinyin": "Shítīzǐ",
+        "population": 158,
+        "households": null,
+        "ethnicities": [
+          "苗"
+        ],
+        "parent_id": "7d51e676-0413-5953-ad57-0d724fe2ca5a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "eea14b63-0c93-5dae-bf17-1bbfc3cfb05b",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/shanhou-chong",
+      "entity_id": "a7d191e6-5bc6-55be-a485-175c17b34d47",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "山后冲 row in the zhongying brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "山后冲",
+        "pinyin": "Shnǎhoùchōng",
+        "population": 120,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "7d51e676-0413-5953-ad57-0d724fe2ca5a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f08cf28f-f409-5fd0-bd86-e188df50bbda",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/liangfeng-dong",
+      "entity_id": "8bd4b653-a946-557b-a67e-e27aaa3781a0",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "凉风洞 row in the zhongying brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "凉风洞",
+        "pinyin": "Liángfēngdòng",
+        "population": 163,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "7d51e676-0413-5953-ad57-0d724fe2ca5a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "66d43e48-bc30-5c14-87af-814db9ea3d2d",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/wanchang",
+      "entity_id": "e199d118-8e59-50bd-bc42-35cc426ff645",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "碗厂 row in the zhongying brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "碗厂",
+        "pinyin": "Wǎnchǎng",
+        "population": 73,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "7d51e676-0413-5953-ad57-0d724fe2ca5a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "97bd14cb-ef8f-52c8-85b7-24327548d1e5",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/chongtou-shang",
+      "entity_id": "f5b7a8d8-b736-5b34-9b1b-93f2ef16279b",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "冲头上 row in the zhongying brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "冲头上",
+        "pinyin": "Chōngtóushàng",
+        "population": 213,
+        "households": null,
+        "ethnicities": [
+          "南"
+        ],
+        "parent_id": "7d51e676-0413-5953-ad57-0d724fe2ca5a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "0352647b-e02c-540b-9ade-01b1351cc9f6",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/jieshang",
+      "entity_id": "9e2f9054-9f14-523b-aa54-1a336a74d01b",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "街上 row in the zhongying brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "街上",
+        "pinyin": "Jiēshàng",
+        "population": 203,
+        "households": null,
+        "ethnicities": [
+          "南"
+        ],
+        "parent_id": "7d51e676-0413-5953-ad57-0d724fe2ca5a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "6ad2ddfb-2ca1-554e-a26d-5caebe1dd879",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/wafang-zhai",
+      "entity_id": "f1a1498d-0276-5c80-863a-888fcdb6b793",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "瓦房寨 row in the zhongying brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "瓦房寨",
+        "pinyin": "Wafángzhài",
+        "population": 95,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "7d51e676-0413-5953-ad57-0d724fe2ca5a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6959962e-b479-5fe8-8e77-9be4f68ec8cd",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/moshi-chong",
+      "entity_id": "6cbfa9d0-1f75-58f1-a58f-6c5e7a60a39b",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "磨石冲 row in the zhongying brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "磨石冲",
+        "pinyin": "Móshíchōog",
+        "population": 135,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "7d51e676-0413-5953-ad57-0d724fe2ca5a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2b4f332a-995a-5910-a161-3aa2e18d2199",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/huagu-lin",
+      "entity_id": "410dc7f2-795d-5a1c-b67b-20f049bf34b5",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "化梏林 row in the zhongying brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "化梏林",
+        "pinyin": "Hoùgǎolín",
+        "population": 91,
+        "households": null,
+        "ethnicities": [
+          "青",
+          "苗"
+        ],
+        "parent_id": "7d51e676-0413-5953-ad57-0d724fe2ca5a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The table prints 化梏林; the map labels 化槁林."
+      }
+    },
+    {
+      "id": "9b5b6ab0-8937-5217-b50f-1510f545de25",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/tiansheng-qiao",
+      "entity_id": "01ef24a2-efd1-57ba-9fd6-da6e64b6fe09",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "天生桥 row in the zhongying brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "天生桥",
+        "pinyin": "Tiānshēngqiúo",
+        "population": 68,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "7d51e676-0413-5953-ad57-0d724fe2ca5a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "88188f0d-077c-5209-b10d-211f105a855f",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/hebian",
+      "entity_id": "f4fa304a-231f-5f12-ae3b-7a2b7dd4e725",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "河边 row in the zhongying brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "河边",
+        "pinyin": "Hébiān",
+        "population": 163,
+        "households": null,
+        "ethnicities": [
+          "青",
+          "南"
+        ],
+        "parent_id": "7d51e676-0413-5953-ad57-0d724fe2ca5a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2234a386-9356-5425-8cf8-43a2c1077dda",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/tunjiao",
+      "entity_id": "7256c4fe-a940-57cf-92b1-0265824c0bdd",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "坉脚 row in the mofeng brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "坉脚",
+        "pinyin": "Tǔnjiǎo",
+        "population": 167,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "72942ef5-6238-5baa-9e64-002992e81c68",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The table prints 坉脚; the map labels 垂脚."
+      }
+    },
+    {
+      "id": "1d0b7c29-ebcc-506e-9891-ddf05514f71d",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/taoshu-bend",
+      "entity_id": "82557224-34f8-548d-a4cb-86dbe614d915",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "桃树弯 row in the mofeng brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "桃树弯",
+        "pinyin": "Taǒshùwān",
+        "population": 108,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "72942ef5-6238-5baa-9e64-002992e81c68",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The table prints 桃树弯; the map labels 桃树湾."
+      }
+    },
+    {
+      "id": "d1c47f48-bb15-5584-b2dc-73c691f4e82f",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/lujia-reed-chong",
+      "entity_id": "8b5a19f6-4472-59e7-9e5a-9b5e2050a3be",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "芦家冲 row in the mofeng brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "芦家冲",
+        "pinyin": "Lǔjiāchōng",
+        "population": 102,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "72942ef5-6238-5baa-9e64-002992e81c68",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The table prints 芦家冲; the map labels 卢家冲."
+      }
+    },
+    {
+      "id": "dfc81fe9-5409-5346-a203-3cd3578c6eea",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/daba",
+      "entity_id": "79f9f4c7-863b-58e6-85a4-cc61201771c4",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "大坝 row in the mofeng brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大坝",
+        "pinyin": "Dàbà",
+        "population": 69,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "72942ef5-6238-5baa-9e64-002992e81c68",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3b52899e-77d6-56b9-a68c-8ed6869c1308",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/laowuji",
+      "entity_id": "e7b2b9dd-f732-5e7f-9277-39df6795e482",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "老屋基 row in the mofeng brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "老屋基",
+        "pinyin": "Laǒwūjī",
+        "population": 150,
+        "households": null,
+        "ethnicities": [
+          "青",
+          "彝"
+        ],
+        "parent_id": "72942ef5-6238-5baa-9e64-002992e81c68",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8dc84ac4-6cb3-5833-88e9-4a65de545e08",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/jibu",
+      "entity_id": "a788eba7-4df7-5f7a-84be-569acc1e8fa1",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "吉步 row in the mofeng brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "吉步",
+        "pinyin": "Jíbù",
+        "population": 539,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "72942ef5-6238-5baa-9e64-002992e81c68",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "61d8cb19-4cd1-5da6-acfc-044a70f55b98",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/sichong",
+      "entity_id": "9dc3a56e-2ad7-5aa6-be62-70f72731fe93",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "私冲 row in the mofeng brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "私冲",
+        "pinyin": "Shīchōng",
+        "population": 130,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "72942ef5-6238-5baa-9e64-002992e81c68",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The table prints 私冲; the map labels 松冲."
+      }
+    },
+    {
+      "id": "ce6fd858-a8c5-5e17-9d29-69018766e049",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/potou-shang",
+      "entity_id": "4b06f80e-f3a3-5b72-92d2-4438957f5218",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "坡头上 row in the mofeng brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "坡头上",
+        "pinyin": "Potóushàng",
+        "population": 110,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "72942ef5-6238-5baa-9e64-002992e81c68",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4ff85d68-c749-58ff-a355-d80a6832192e",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/houchong",
+      "entity_id": "d0bdfba6-20d0-5136-b15b-ee930511c97e",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "后冲 row in the damuga brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "后冲",
+        "pinyin": "Hoùchōog",
+        "population": 200,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "水"
+        ],
+        "parent_id": "aecc0c09-41ea-5ef4-a51f-0cfd6d21c823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d236e1c0-6e48-5ea5-b672-02866b28a45b",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/damu-ga",
+      "entity_id": "53d7d07e-79e7-50a6-91a7-966ef02476b5",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "大木戛 row in the damuga brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大木戛",
+        "pinyin": "Dàmúgǎ",
+        "population": 330,
+        "households": null,
+        "ethnicities": [
+          "青",
+          "苗",
+          "水"
+        ],
+        "parent_id": "aecc0c09-41ea-5ef4-a51f-0cfd6d21c823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c02a47e5-59bd-51ed-968a-e5a4798d6823",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/qingtou",
+      "entity_id": "eb6b1949-6cb4-5682-b970-1c7c15885b21",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "箐头 row in the damuga brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "箐头",
+        "pinyin": "Qīngtóu",
+        "population": null,
+        "households": null,
+        "ethnicities": [
+          "青"
+        ],
+        "parent_id": "aecc0c09-41ea-5ef4-a51f-0cfd6d21c823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Population cell: an indistinct first digit followed by 7."
+      }
+    },
+    {
+      "id": "2e49cdf4-d935-5903-a1ca-e6c3b37e5b05",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/baila-shu",
+      "entity_id": "181edb32-b6cd-5154-b92c-ae660ad70004",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "白腊树 row in the damuga brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "白腊树",
+        "pinyin": "Bàilàshù",
+        "population": 90,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "aecc0c09-41ea-5ef4-a51f-0cfd6d21c823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "88bb6126-5368-5397-8c1d-30c26598b974",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/shachong",
+      "entity_id": "db710ccc-b2cd-5037-b7d6-0941459a07ed",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "沙冲 row in the damuga brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "沙冲",
+        "pinyin": "Shāchōng",
+        "population": 62,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "aecc0c09-41ea-5ef4-a51f-0cfd6d21c823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ed3b01db-c3be-57c8-98a9-51545d09d6a8",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/wangqiang",
+      "entity_id": "d6c292c8-1882-536e-b0f6-b8216dc291e6",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "汪强 row in the damuga brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "汪强",
+        "pinyin": "Wāngqiǎng",
+        "population": 74,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "aecc0c09-41ea-5ef4-a51f-0cfd6d21c823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e9e9bfd6-fa34-5ba8-a15a-ef537e1dbd19",
+      "key": "zhijin-gazetteer-scan-b/p31/qimo/azuo-ba",
+      "entity_id": "28e3de83-3671-5da2-a907-43779dfd78d1",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "31",
+      "scan_page": 39,
+      "locator": "啊作坝 row in the damuga brigade table section",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "啊作坝",
+        "pinyin": "Āzhúoba",
+        "population": 223,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "青"
+        ],
+        "parent_id": "aecc0c09-41ea-5ef4-a51f-0cfd6d21c823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The table prints 啊作坝; the map labels 安作坝."
+      }
+    },
+    {
+      "id": "9b990df4-7f53-5c3b-9c13-c6f662199556",
+      "key": "zhijin-gazetteer-scan-b/p30/qimo/commune-seat",
+      "entity_id": "a1fa9a30-1c42-5f68-b4d2-d9ab5cb77781",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "30",
+      "scan_page": 38,
+      "locator": "陈家寨 row, 公社驻地 annotation",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "绮陌公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "d72d0b92-5008-539d-a743-563401497640",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
       }
     }
   ],

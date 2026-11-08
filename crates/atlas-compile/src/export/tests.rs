@@ -113,7 +113,7 @@ fn bijie_record<'a>(input: &'a LedgerInput, key: &str) -> &'a Record {
 }
 
 #[cfg(test)]
-fn published_record(output: &Artifacts, record: &Record) -> serde_json::Value {
+pub(super) fn published_record(output: &Artifacts, record: &Record) -> serde_json::Value {
     let path = PathBuf::from(format!("entities/index/{}.json", record.entity_id.shard()));
     let shard: serde_json::Value = serde_json::from_slice(&output[&path]).unwrap();
     shard[record.entity_id.0.to_string()]["records"]
