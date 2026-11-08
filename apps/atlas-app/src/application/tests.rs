@@ -1,6 +1,28 @@
 use super::*;
 
 #[test]
+fn unresolved_coordinate_is_visible_in_the_evidence_card_without_a_map_point() {
+    let atlas = crate::catalog::tests::atlas();
+    let id = atlas.search("银河大队", BodyId::Earth)[0];
+    let mut app = Application::new(atlas).unwrap();
+    app.select(id, true);
+    let context = egui::Context::default();
+    configure_fonts(&context);
+    let output = date_frame(&context, &mut app, Vec::new());
+    assert!(output.shapes.iter().any(|shape| matches!(&shape.shape,
+        egui::epaint::Shape::Text(text) if text.galley.job.text.contains("185°20′"))));
+    assert!(output.shapes.iter().any(|shape| matches!(&shape.shape,
+        egui::epaint::Shape::Text(text) if text.galley.job.text.contains("exceeds 180°"))));
+    assert!(
+        !app.points().unwrap()["features"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .any(|feature| feature["properties"]["entity_id"] == id.0.to_string())
+    );
+}
+
+#[test]
 fn clicking_an_era_date_queries_its_converted_midpoint() {
     let atlas = crate::catalog::tests::atlas();
     let id = atlas.search("禄州", BodyId::Earth)[0];

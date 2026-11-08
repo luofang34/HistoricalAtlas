@@ -1,0 +1,725 @@
+{
+  "entities": [
+    {
+      "id": "fb415a13-ee6e-58dc-8559-478e9989a1b0",
+      "key": "earth/cn-gz/bijie/toubu/xindianzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "3579f414-3829-55ec-a649-c434ae2c5250",
+      "key": "earth/cn-gz/bijie/toubu/qingwan-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "4d17cac2-e278-5414-bd7d-724ca468901b",
+      "key": "earth/cn-gz/bijie/toubu/zhangjia-wanzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "1d829408-0e42-53b3-92ff-0cdecb3d78bc",
+      "key": "earth/cn-gz/bijie/toubu/qingshan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "b180c532-7a4c-5610-b64f-a81e92103fb2",
+      "key": "earth/cn-gz/bijie/toubu/cement-factory",
+      "body": "earth",
+      "kind": "factory"
+    },
+    {
+      "id": "3dbbb742-c9e3-51b2-81a7-51a3b8d8d34f",
+      "key": "earth/cn-gz/bijie/toubu/bijie-sixth-school",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "8f70f57c-8532-54f5-9975-8d9788d50572",
+      "key": "earth/cn-gz/bijie/toubu/dijun-miao",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "7c7b91e7-63be-5093-9f95-3a73c3b88a47",
+      "key": "earth/cn-gz/bijie/toubu/dongwang-miao",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "d7a10904-7c08-5aaa-819a-eff133639472",
+      "key": "earth/cn-gz/bijie/toubu/toubu-qiao-bridge",
+      "body": "earth",
+      "kind": "bridge"
+    },
+    {
+      "id": "562d4a43-106f-5350-8f66-4b714d3dd9c9",
+      "key": "earth/cn-gz/bijie/toubu/liucang-qiao-bridge",
+      "body": "earth",
+      "kind": "bridge"
+    },
+    {
+      "id": "c72ebcf3-86b3-5ff9-8399-527ab7362a92",
+      "key": "earth/cn-gz/bijie/toubu/bijie-teachers-college",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "aa615464-8e05-593e-b5d0-7725e17da44f",
+      "key": "earth/cn-gz/bijie/toubu/power-plant",
+      "body": "earth",
+      "kind": "factory"
+    },
+    {
+      "id": "00603c7f-a385-5764-98e1-aad2d60beaa8",
+      "key": "earth/cn-gz/bijie/toubu/power-plant-school",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "167dda00-ba72-593f-8616-241c294259b8",
+      "key": "earth/cn-gz/bijie/toubu/fertilizer-factory",
+      "body": "earth",
+      "kind": "factory"
+    },
+    {
+      "id": "cc9f4b97-83c1-5ccd-8334-7a47b0cd9609",
+      "key": "earth/cn-gz/bijie/toubu/tobacco-factory",
+      "body": "earth",
+      "kind": "factory"
+    },
+    {
+      "id": "3d81f50c-1fc1-5779-89da-0ba2f9b2f6bd",
+      "key": "earth/cn-gz/bijie/toubu/paper-factory",
+      "body": "earth",
+      "kind": "factory"
+    },
+    {
+      "id": "8612087f-521b-5370-9435-17543bcbb0eb",
+      "key": "earth/cn-gz/bijie/toubu/agricultural-machinery-school",
+      "body": "earth",
+      "kind": "facility"
+    }
+  ],
+  "records": [
+    {
+      "id": "250cac7b-86e6-56f8-9700-9408e703a994",
+      "key": "bijie-gazetteer/p39/toubu/xindianzi",
+      "entity_id": "fb415a13-ee6e-58dc-8559-478e9989a1b0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 1: 新店子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "新店子",
+        "pinyin": "Xīndiànzi",
+        "population": 105,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "9ac96e07-4d04-5707-bc36-adf7fd5f7411",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.266666666666666
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°16′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c786725d-b47e-5260-b76a-5313f78517bf",
+      "key": "bijie-gazetteer/p39/toubu/qingwan-brigade",
+      "entity_id": "3579f414-3829-55ec-a649-c434ae2c5250",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 2: 青湾大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "青湾大队",
+        "pinyin": "Qīngwān Dàduì",
+        "population": 892,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": "brigade",
+        "seat_id": "4d17cac2-e278-5414-bd7d-724ca468901b",
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.266666666666666
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°16′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6ddbea59-9728-5388-81ed-c42036c075a7",
+      "key": "bijie-gazetteer/p39/toubu/zhangjia-wanzi",
+      "entity_id": "4d17cac2-e278-5414-bd7d-724ca468901b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 3: 张家弯子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "张家弯子",
+        "pinyin": "ZhāngJiā Wānzǐ",
+        "population": 682,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "3579f414-3829-55ec-a649-c434ae2c5250",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.266666666666666
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°16′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "529c5eef-13c1-5eb7-8eff-fdaadd5766a2",
+      "key": "bijie-gazetteer/p39/toubu/qingshan",
+      "entity_id": "1d829408-0e42-53b3-92ff-0cdecb3d78bc",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 4: 青山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "青山",
+        "pinyin": "Qīngshān",
+        "population": 210,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "3579f414-3829-55ec-a649-c434ae2c5250",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.266666666666666
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°16′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4b7ea95a-a0e9-5fcc-8c72-7f733cc8ea62",
+      "key": "bijie-gazetteer/p39/toubu/cement-factory",
+      "entity_id": "b180c532-7a4c-5610-b64f-a81e92103fb2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 5: 地区水泥厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "地区水泥厂",
+        "pinyin": "Dìqū Shuǐní Chǎng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ddc505a0-987f-5633-bcd6-6e5c985500e1",
+      "key": "bijie-gazetteer/p39/toubu/bijie-sixth-school",
+      "entity_id": "3dbbb742-c9e3-51b2-81a7-51a3b8d8d34f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 6: 毕节六中",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "毕节六中",
+        "pinyin": "BǐJiè Liùzhōng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "43b91886-1ef1-51dc-8c99-0b30bf3cdc9d",
+      "key": "bijie-gazetteer/p39/toubu/dijun-miao",
+      "entity_id": "8f70f57c-8532-54f5-9975-8d9788d50572",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 7: 帝君庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "帝君庙",
+        "pinyin": "DìJūn Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "于1958年改建流沧小学"
+      }
+    },
+    {
+      "id": "ab1aa621-64e8-5f9b-a12d-a13431f3f85f",
+      "key": "bijie-gazetteer/p39/toubu/dongwang-miao",
+      "entity_id": "7c7b91e7-63be-5093-9f95-3a73c3b88a47",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 8: 东王庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "东王庙",
+        "pinyin": "Dōngwáng Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "现已废"
+      }
+    },
+    {
+      "id": "6c5c3db8-9dd1-530e-9456-df085db6bf80",
+      "key": "bijie-gazetteer/p39/toubu/daotianhe-river",
+      "entity_id": "6e78cd6d-250d-5c3a-a9eb-6fa7a2623dd6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 9: 倒天河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "倒天河",
+        "pinyin": "Dàotiān Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "上接德沟，与南加河汇合，流入以河。境内流长约6公里。"
+      }
+    },
+    {
+      "id": "99e8280a-9298-5b99-9db4-2009a0983f9f",
+      "key": "bijie-gazetteer/p39/toubu/toubu-qiao-bridge",
+      "entity_id": "d7a10904-7c08-5aaa-819a-eff133639472",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 10: 头步桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "头步桥",
+        "pinyin": "Tóubù Qiáo",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.3
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公路桥 (24—15)/8"
+      }
+    },
+    {
+      "id": "dd5a6e16-ae89-5e4b-a999-83fbff5ba1d2",
+      "key": "bijie-gazetteer/p39/toubu/liucang-qiao-bridge",
+      "entity_id": "562d4a43-106f-5350-8f66-4b714d3dd9c9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 11: 流沧桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "流沧桥",
+        "pinyin": "Lioúchāng Qiáo",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公路桥 (50—10)/10"
+      }
+    },
+    {
+      "id": "7c1364ce-be48-5140-b0ed-97671f19604c",
+      "key": "bijie-gazetteer/p39/toubu/bijie-teachers-college",
+      "entity_id": "c72ebcf3-86b3-5ff9-8399-527ab7362a92",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 12: 毕节师范专科学校",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "毕节师范专科学校",
+        "pinyin": "BǐJiè Shīfan Zhuānkē xuèxiào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.3
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4b9c7be1-b1fc-562e-a9f5-9eda72517604",
+      "key": "bijie-gazetteer/p39/toubu/power-plant",
+      "entity_id": "aa615464-8e05-593e-b5d0-7725e17da44f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 13: 电厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "电厂",
+        "pinyin": "Diàn Chǎng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "02174024-887e-57d7-bafc-979e2a602942",
+      "key": "bijie-gazetteer/p39/toubu/power-plant-school",
+      "entity_id": "00603c7f-a385-5764-98e1-aad2d60beaa8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 14: 电厂子校",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "电厂子校",
+        "pinyin": "Diànchang Zǐxiào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "207f8a6c-bb1a-5152-82e9-b2e831b2223d",
+      "key": "bijie-gazetteer/p39/toubu/fertilizer-factory",
+      "entity_id": "167dda00-ba72-593f-8616-241c294259b8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 15: 化肥厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "化肥厂",
+        "pinyin": "Huàfèn Chǎng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.266666666666666
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°16′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a65287ef-ee27-5060-8228-6dbd5a24b992",
+      "key": "bijie-gazetteer/p39/toubu/tobacco-factory",
+      "entity_id": "cc9f4b97-83c1-5ccd-8334-7a47b0cd9609",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 16: 地区烟厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "地区烟厂",
+        "pinyin": "Dìqū Yānchǎng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f8af94b2-7075-5c51-9cb7-839e1cffdfa3",
+      "key": "bijie-gazetteer/p39/toubu/paper-factory",
+      "entity_id": "3d81f50c-1fc1-5779-89da-0ba2f9b2f6bd",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 17: 纸厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "纸厂",
+        "pinyin": "Zhǐ Chǎng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.266666666666666
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°16′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "830140cd-ee9d-5b93-9308-183c95a482ee",
+      "key": "bijie-gazetteer/p39/toubu/agricultural-machinery-school",
+      "entity_id": "8612087f-521b-5370-9435-17543bcbb0eb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "39",
+      "scan_page": 74,
+      "locator": "row 18: 农机校",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "农机校",
+        "pinyin": "NóngJī Xiào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.266666666666666
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°16′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

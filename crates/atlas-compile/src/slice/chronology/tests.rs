@@ -1,6 +1,56 @@
 use super::*;
 
 #[test]
+fn wuliping_renaming_keeps_year_uncertainty_in_the_actual_timeline() {
+    use atlas_core::{
+        assertion::TemporalValue,
+        calendar::{Calendar, CivilDate},
+        identity::EntityId,
+    };
+    let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    let timeline = Timeline::new(&input.catalog, &input.data).unwrap();
+    let id = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
+    for (year, selection, expected) in [
+        (1957, TimeSelection::Certain, vec![]),
+        (1960, TimeSelection::Certain, vec!["五里公社"]),
+        (1981, TimeSelection::Certain, vec![]),
+        (
+            1981,
+            TimeSelection::Possible,
+            vec!["五里公社", "五里坪公社"],
+        ),
+        (1982, TimeSelection::Nominal, vec!["五里坪公社"]),
+        (1982, TimeSelection::Possible, vec!["五里坪公社"]),
+        (1982, TimeSelection::Certain, vec![]),
+    ] {
+        let at = CivilDate {
+            year,
+            month: 1,
+            day: 1,
+        }
+        .to_epoch(Calendar::Gregorian, 0)
+        .unwrap();
+        let slice = timeline.at(at, selection).unwrap();
+        let mut names: Vec<_> = slice
+            .entities
+            .iter()
+            .filter(|entity| entity.entity_id == id)
+            .flat_map(|entity| &entity.properties)
+            .flat_map(|property| &property.candidates)
+            .filter_map(|candidate| {
+                if let TemporalValue::Name(name) = &candidate.assertion.value {
+                    Some(name.text.as_str())
+                } else {
+                    None
+                }
+            })
+            .collect();
+        names.sort();
+        assert_eq!(names, expected, "{year} {selection:?}");
+    }
+}
+
+#[test]
 fn guard_properties_end_in_the_converted_lunar_month() {
     use atlas_core::calendar::{Calendar, CivilDate};
     let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();

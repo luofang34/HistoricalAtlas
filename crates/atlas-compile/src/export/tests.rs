@@ -133,6 +133,12 @@ fn bijie_export_keeps_printed_coordinate_anomalies_and_blank_cells() {
     for (key, latitude, longitude) in [
         ("bijie-gazetteer/p24/daqiao/zhongba", "27°28′", "105°16′"),
         ("bijie-gazetteer/p28/dalan/wujia-gou", "20°16′", "105°16′"),
+        ("bijie-gazetteer/p38/toubu/yakou", "24°17′", "105°19′"),
+        (
+            "bijie-gazetteer/p38/toubu/yingjiao-brigade",
+            "27°16′",
+            "106°21′",
+        ),
         (
             "bijie-gazetteer/p31/dehou/lujia-qiao-bridge",
             "27°18′",
@@ -243,7 +249,7 @@ fn shared_names_and_coordinates_do_not_merge_distinct_geographical_features() {
         .iter()
         .filter(|record| record.entity_id == river)
         .collect();
-    assert_eq!(records.len(), 2);
+    assert_eq!(records.len(), 4);
     assert!(
         records
             .iter()
@@ -254,6 +260,80 @@ fn shared_names_and_coordinates_do_not_merge_distinct_geographical_features() {
             .iter()
             .all(|record| published_record(&output, record)["observation"]["coordinate"].is_null())
     );
+}
+
+#[test]
+fn toubu_and_wuliping_tables_preserve_seats_continuations_and_source_disagreements() {
+    let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    let output = compile(&input).unwrap();
+    let continued = bijie_record(&input, "bijie-gazetteer/p39/toubu/xindianzi");
+    let brigade = bijie_record(&input, "bijie-gazetteer/p38/toubu/yingjiao-brigade");
+    assert_eq!(continued.observation.parent_id, Some(brigade.entity_id));
+    assert_eq!(continued.observation.population, Some(105));
+    for (overview, table, first, second) in [
+        (
+            "p37/toubu/composition",
+            "p38/toubu/toubu-commune",
+            9732,
+            9891,
+        ),
+        (
+            "p33/wuliping/composition",
+            "p35/wuliping/wuliping-commune",
+            3046,
+            3046,
+        ),
+    ] {
+        for (key, expected) in [(overview, first), (table, second)] {
+            let record = bijie_record(&input, &format!("bijie-gazetteer/{key}"));
+            assert_eq!(
+                published_record(&output, record)["observation"]["population"],
+                expected
+            );
+        }
+    }
+    for (prefix, place, landmark) in [
+        (
+            "wuliping",
+            "p35/wuliping/shiban-jing-village",
+            "p35/wuliping/shiban-jing-well",
+        ),
+        (
+            "toubu",
+            "p38/toubu/toubu-qiao-village",
+            "p39/toubu/toubu-qiao-bridge",
+        ),
+        (
+            "toubu",
+            "p38/toubu/liucang-qiao-village",
+            "p39/toubu/liucang-qiao-bridge",
+        ),
+    ] {
+        let village = bijie_record(&input, &format!("bijie-gazetteer/{place}"));
+        let landmark = bijie_record(&input, &format!("bijie-gazetteer/{landmark}"));
+        assert_ne!(village.entity_id, landmark.entity_id, "{prefix}");
+        assert_eq!(village.observation.name, landmark.observation.name);
+        for record in [village, landmark] {
+            assert_eq!(
+                published_record(&output, record)["id"],
+                record.id.0.to_string()
+            );
+        }
+    }
+    let commune = bijie_record(&input, "bijie-gazetteer/p35/wuliping/wuliping-commune");
+    let seat = bijie_record(&input, "bijie-gazetteer/p35/wuliping/miaopu");
+    assert_eq!(commune.observation.seat_id, Some(seat.entity_id));
+    assert!(published_record(&output, seat)["observation"]["population"].is_null());
+    let overview = bijie_record(
+        &input,
+        "bijie-gazetteer/p33/wuliping/zhaishang-population-group",
+    );
+    let table = bijie_record(&input, "bijie-gazetteer/p35/wuliping/zhaishang");
+    assert_eq!(overview.entity_id, table.entity_id);
+    assert_eq!(overview.observation.ethnicities, ["苗"]);
+    assert_eq!(table.observation.ethnicities, ["汉"]);
+    assert_eq!(table.observation.population, Some(273));
+    assert!(overview.verbatim_quote.as_ref().unwrap().contains("473"));
 }
 
 #[test]

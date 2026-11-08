@@ -104,16 +104,7 @@ impl Application {
             if let Some(pinyin) = &record.observation.pinyin {
                 ui.label(pinyin);
             }
-            if let Some(coordinate) = &record.observation.coordinate {
-                ui.label(format!(
-                    "{}  {}",
-                    coordinate.longitude_text, coordinate.latitude_text
-                ));
-                ui.label(format!(
-                    "Datum: {:?} · Resolution: {}′",
-                    coordinate.datum, coordinate.resolution_arcminutes
-                ));
-            }
+            coordinate_evidence(ui, record);
             if let Some(population) = record.observation.population {
                 ui.label(format!("Population: {population}"));
             }
@@ -137,6 +128,30 @@ impl Application {
             date_target
         })
         .inner
+    }
+}
+
+fn coordinate_evidence(ui: &mut egui::Ui, record: &Record) {
+    if let Some(coordinate) = &record.observation.coordinate {
+        ui.label(format!(
+            "{}  {}",
+            coordinate.longitude_text, coordinate.latitude_text
+        ));
+        ui.label(format!(
+            "Datum: {:?} · Resolution: {}′",
+            coordinate.datum, coordinate.resolution_arcminutes
+        ));
+    }
+    if let Some(coordinate) = &record.observation.unresolved_coordinate {
+        ui.label(format!(
+            "{}  {}",
+            coordinate.longitude_text, coordinate.latitude_text
+        ));
+        ui.label(format!(
+            "Datum: {:?} · Resolution: {}′",
+            coordinate.datum, coordinate.resolution_arcminutes
+        ));
+        ui.label(&coordinate.reason);
     }
 }
 

@@ -9,7 +9,7 @@ use atlas_core::{
 };
 use atlas_geo::{
     body::BodyId,
-    coordinates::{CoordinateObservation, Datum, LonLat},
+    coordinates::{CoordinateObservation, Datum, LonLat, UnresolvedCoordinate},
     plates::PlateId,
 };
 use serde::{Deserialize, Serialize};
@@ -174,6 +174,9 @@ pub struct Observation {
     pub seat_id: Option<EntityId>,
     /// Transcribed coordinates, including datum and reporting resolution.
     pub coordinate: Option<CoordinateObservation>,
+    /// Printed coordinate notation that has no resolved numeric location.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub unresolved_coordinate: Option<UnresolvedCoordinate>,
     /// Former names supported by the source.
     pub former_names: Vec<FormerName>,
     /// Short transcribed annotation.

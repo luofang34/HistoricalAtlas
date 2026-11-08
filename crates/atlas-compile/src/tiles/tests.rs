@@ -6,6 +6,42 @@ use super::*;
 
 const BASE: &str = "https://atlas.example/project/";
 
+#[test]
+fn unresolved_printed_longitude_remains_in_evidence_without_becoming_a_tile_point() {
+    let input = input();
+    let record = input
+        .data
+        .records
+        .iter()
+        .find(|record| record.key == "bijie-gazetteer/p38/toubu/yinhe-brigade")
+        .unwrap();
+    let output = compile_tiles(&input, BASE, 0).unwrap();
+    let layer = root_layer(&output, "earth");
+    assert!(
+        !layer
+            .features
+            .iter()
+            .any(|feature| properties(&layer, feature)["record_id"]
+                == text(&record.id.0.to_string()))
+    );
+    let path = PathBuf::from(format!("entities/index/{}.json", record.entity_id.shard()));
+    let shard: serde_json::Value = serde_json::from_slice(&output[&path]).unwrap();
+    let records = shard[record.entity_id.0.to_string()]["records"]
+        .as_array()
+        .unwrap();
+    let published = records
+        .iter()
+        .find(|value| value["id"] == record.id.0.to_string())
+        .unwrap();
+    assert!(published["observation"]["coordinate"].is_null());
+    let raw = &published["observation"]["unresolved_coordinate"];
+    assert_eq!(raw["longitude_text"], "185°20′");
+    assert_eq!(raw["latitude_text"], "27°17′");
+    assert_eq!(raw["resolution_arcminutes"], 1.0);
+    assert_eq!(published["scan_page"], 73);
+    assert_eq!(published["page_or_sheet"], "38");
+}
+
 #[cfg(test)]
 fn input() -> LedgerInput {
     load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap()

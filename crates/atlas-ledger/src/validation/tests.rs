@@ -1,6 +1,46 @@
 use super::*;
 
 #[test]
+fn unresolved_coordinate_requires_an_explanation_and_excludes_a_numeric_point() {
+    use atlas_geo::coordinates::{Datum, UnresolvedCoordinate};
+    let mut dataset: Dataset = serde_json::from_str(include_str!(
+        "../../../../data/guizhou-1960s/bijie/page-20.dataset.json"
+    ))
+    .unwrap();
+    let observation = &mut dataset.records[1].observation;
+    let numeric = observation.coordinate.take().unwrap();
+    observation.unresolved_coordinate = Some(UnresolvedCoordinate {
+        longitude_text: "185°20′".into(),
+        latitude_text: "27°17′".into(),
+        resolution_arcminutes: 1.0,
+        datum: Datum::Unspecified,
+        reason: "Printed longitude outside the angular domain.".into(),
+    });
+    validate(&catalog(), &dataset).unwrap();
+    dataset.records[1].observation.coordinate = Some(numeric);
+    assert!(
+        validate(&catalog(), &dataset)
+            .unwrap_err()
+            .problem
+            .contains("both")
+    );
+    dataset.records[1].observation.coordinate = None;
+    for field in ["reason", "longitude_text", "latitude_text"] {
+        let mut raw = serde_json::to_value(&dataset).unwrap();
+        raw["records"][1]["observation"]["unresolved_coordinate"][field] = "".into();
+        assert!(validate(&catalog(), &serde_json::from_value(raw).unwrap()).is_err());
+    }
+    for (field, value) in [
+        ("resolution_arcminutes", serde_json::json!(0)),
+        ("datum", serde_json::json!("moon_iau")),
+    ] {
+        let mut raw = serde_json::to_value(&dataset).unwrap();
+        raw["records"][1]["observation"]["unresolved_coordinate"][field] = value;
+        assert!(validate(&catalog(), &serde_json::from_value(raw).unwrap()).is_err());
+    }
+}
+
+#[test]
 fn reviewed_gazetteer_rows_pass_with_original_precision() {
     let dataset: Dataset = serde_json::from_str(include_str!(
         "../../../../data/guizhou-1960s/bijie/page-20.dataset.json"

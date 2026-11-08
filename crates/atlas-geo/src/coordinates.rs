@@ -105,9 +105,44 @@ impl CoordinateObservation {
     }
 }
 
+/// Printed angular notation that cannot supply a numeric map location.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct UnresolvedCoordinate {
+    /// Longitude exactly as printed.
+    pub longitude_text: String,
+    /// Latitude exactly as printed.
+    pub latitude_text: String,
+    /// Angular reporting resolution in arcminutes.
+    pub resolution_arcminutes: f64,
+    /// Datum stated by the source.
+    pub datum: Datum,
+    /// Explanation of the unresolved notation or angular-domain error.
+    pub reason: String,
+}
+
+impl UnresolvedCoordinate {
+    /// Validate the retained notation and explanation without inventing a point.
+    pub fn validate(&self, body: BodyId) -> Result<(), CoordinateError> {
+        if self.longitude_text.trim().is_empty()
+            || self.latitude_text.trim().is_empty()
+            || self.reason.trim().is_empty()
+        {
+            return Err(CoordinateError::IncompleteNotation);
+        }
+        if !self.resolution_arcminutes.is_finite() || self.resolution_arcminutes <= 0.0 {
+            return Err(CoordinateError::InvalidResolution);
+        }
+        self.datum.validate_body(body)
+    }
+}
+
 /// Invalid coordinate evidence.
 #[derive(Debug, Error)]
 pub enum CoordinateError {
+    /// Unresolved coordinates require both printed axes and an explanation.
+    #[error("unresolved coordinate requires both printed axes and a reason")]
+    IncompleteNotation,
     /// Values exceed the angular domain or are nonfinite.
     #[error("coordinate outside angular domain: {0:?}")]
     OutOfRange(LonLat),

@@ -299,6 +299,287 @@
         "former_names": [],
         "note": "库容650万立方米。有效灌溉面积6800亩，渠道33.21公里，主干渠17.35公里，支渠15.86公里。坝后式装机2000瓩，引水式装机66瓩。"
       }
+    },
+    {
+      "id": "3cbfff20-cead-5038-8588-221701516af6",
+      "key": "bijie-gazetteer/p33/wuliping/establishment",
+      "entity_id": "11eca88f-1da5-59a3-9e1f-f0be06c9d890",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "33",
+      "scan_page": 68,
+      "locator": "五里坪公社概述, third paragraph, commune establishment",
+      "verbatim_quote": "1958年成立五里公社，",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "五里公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "57a7d036-d7dd-55a0-947b-d44cd321a51e",
+      "key": "bijie-gazetteer/p33/wuliping/renaming",
+      "entity_id": "11eca88f-1da5-59a3-9e1f-f0be06c9d890",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "33",
+      "scan_page": 68,
+      "locator": "五里坪公社概述, third paragraph, renaming and brigade organization",
+      "verbatim_quote": "1981年经地名普查，因与地区内公社重名故更为五里坪公社，并将直辖的19个生产队划为花牌坊、花台、五里三个大队。",
+      "checked": true,
+      "source_date": {
+        "text": "1981年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "五里坪公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "五里公社",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "4c682905-2f9a-52d2-aac7-4dca442f566c",
+      "key": "bijie-gazetteer/p33/wuliping/composition",
+      "entity_id": "11eca88f-1da5-59a3-9e1f-f0be06c9d890",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "33",
+      "scan_page": 68,
+      "locator": "五里坪公社概述, third paragraph, totals and seat",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "五里坪公社",
+        "pinyin": null,
+        "population": 3046,
+        "households": 622,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "ecde259c-b594-5425-a617-6c44d16ce168",
+        "coordinate": null,
+        "former_names": [],
+        "note": "计15个自然村。总人口622户，3046人。公社驻地庙堡。"
+      }
+    },
+    {
+      "id": "a41c3555-9bb2-5da7-84b9-f2b52877b0ca",
+      "key": "bijie-gazetteer/p33/wuliping/extent",
+      "entity_id": "11eca88f-1da5-59a3-9e1f-f0be06c9d890",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "33",
+      "scan_page": 68,
+      "locator": "五里坪公社概述, first paragraph, location, neighbours and area",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "五里坪公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "位于东经105°18′，北纬27°20′之间，总面积4.6平方公里。东接观音桥，南连德厚，西南靠翠屏，西邻大桥，北枕田坝桥等公社。"
+      }
+    },
+    {
+      "id": "8a97ff93-90e9-5558-96e5-c57aae23a89b",
+      "key": "bijie-gazetteer/p33/wuliping/zhaishang-population-group",
+      "entity_id": "52dedf19-8e1e-5822-8543-aebc25d45c41",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "33",
+      "scan_page": 68,
+      "locator": "五里坪公社概述, third paragraph, Miao population in 寨上",
+      "verbatim_quote": "其中除寨上村有苗族473人外，其余全是汉族，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "寨上村",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [
+          "苗"
+        ],
+        "parent_id": null,
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7869994c-f301-5b4c-8a1e-0593e0624479",
+      "key": "bijie-gazetteer/p37/toubu/establishment",
+      "entity_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "37",
+      "scan_page": 72,
+      "locator": "头步公社概述, third paragraph, establishment",
+      "verbatim_quote": "1958年成立人民公社，依习惯名称命名头步公社，直辖73个生产队，",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "头步公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "头铺",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "38c37ea6-86c2-505d-bc60-b65393699eaa",
+      "key": "bijie-gazetteer/p37/toubu/composition",
+      "entity_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "37",
+      "scan_page": 72,
+      "locator": "头步公社概述, third paragraph, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "头步公社",
+        "pinyin": null,
+        "population": 9732,
+        "households": 2019,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "后划属毕节镇分为头步、望城、流沧、杨家塘、庙脚、银河、干海子、新坝、营脚、青湾十个大队，共29个自然村。"
+      }
+    },
+    {
+      "id": "c0f10508-2de1-57a4-91cf-15ac8c16d080",
+      "key": "bijie-gazetteer/p37/toubu/extent",
+      "entity_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "37",
+      "scan_page": 72,
+      "locator": "头步公社概述, first paragraph, coordinate range, neighbours and area",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "头步公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "0a723efe-939a-5973-9ac6-3320ff8ed494",
+        "coordinate": null,
+        "former_names": [],
+        "note": "位于东经105°18′～22′，北纬27°16′～18′之间，东接保河、梨树，南低鸭池、十八，西靠草堤、大兰、翠屏，北枕德厚等公社，相互接壤，总面积16.5平方公里。"
+      }
+    },
+    {
+      "id": "e4dde64b-af7f-5648-a9c9-f00544017ddc",
+      "key": "bijie-gazetteer/p37/yachi/seat-at-toubu",
+      "entity_id": "edfa75db-3e5a-5a70-bc4b-8ab025ee0f93",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "37",
+      "scan_page": 72,
+      "locator": "头步公社概述, final paragraph, district-office relocation",
+      "verbatim_quote": "鸭池区公所由鸭池街迁驻头步街上。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "鸭池区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "district",
+        "seat_id": "0a723efe-939a-5973-9ac6-3320ff8ed494",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "456ffb41-9e95-5de4-b3d0-8e72adc84e65",
+      "key": "bijie-gazetteer/p37/toubu/daotianhe-confluence",
+      "entity_id": "6e78cd6d-250d-5c3a-a9eb-6fa7a2623dd6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "37",
+      "scan_page": 72,
+      "locator": "头步公社概述, first paragraph, river confluence",
+      "verbatim_quote": "倒天河（响水河）由西入境。十八河（南加河）由南流入境汇于中部，架桥于河上。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "倒天河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
     }
   ],
   "estimates": [
@@ -361,6 +642,117 @@
             "nominal": "-1309651200001",
             "latest": "-1293883200001",
             "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "4e45c589-b7f5-52dc-aa49-8a06b0b424da",
+      "key": "editorial/bijie/wuliping/establishment",
+      "entity_id": "11eca88f-1da5-59a3-9e1f-f0be06c9d890",
+      "basis": [
+        "3cbfff20-cead-5038-8588-221701516af6"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year, using TT calendar bounds and their midpoint.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "5c53beb6-c74e-5502-864c-43bed70609ef",
+      "key": "editorial/bijie/toubu/establishment",
+      "entity_id": "b53262f8-17b3-5d17-a1a0-f67c616e2823",
+      "basis": [
+        "7869994c-f301-5b4c-8a1e-0593e0624479"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year, using TT calendar bounds and their midpoint.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "c506922d-982e-5c85-aa1f-ba0edeb34dc0",
+      "key": "editorial/bijie/wuliping/1958-name",
+      "entity_id": "11eca88f-1da5-59a3-9e1f-f0be06c9d890",
+      "basis": [
+        "3cbfff20-cead-5038-8588-221701516af6",
+        "57a7d036-d7dd-55a0-947b-d44cd321a51e"
+      ],
+      "brief": "The overview dates establishment to 1958 and renaming to 1981. Year-only transitions retain full-year uncertainty.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "五里公社",
+              "kind": "standard",
+              "language": "zh"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "4763ba5a-2dca-593c-a244-5ff3c724230e",
+      "key": "editorial/bijie/wuliping/1981-name",
+      "entity_id": "11eca88f-1da5-59a3-9e1f-f0be06c9d890",
+      "basis": [
+        "3cbfff20-cead-5038-8588-221701516af6",
+        "57a7d036-d7dd-55a0-947b-d44cd321a51e"
+      ],
+      "brief": "The overview dates establishment to 1958 and renaming to 1981. Year-only transitions retain full-year uncertainty.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "五里坪公社",
+              "kind": "standard",
+              "language": "zh"
+            }
           }
         }
       }

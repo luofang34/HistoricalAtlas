@@ -1,0 +1,915 @@
+{
+  "entities": [
+    {
+      "id": "5f5857db-393c-52a7-97da-4607a368fab5",
+      "key": "earth/cn-gz/bijie/wuliping/huapaifang-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "4feda6ad-413c-583b-b06d-63c40c23b5d8",
+      "key": "earth/cn-gz/bijie/wuliping/huapaifang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "682aa177-f658-5855-aadb-2f8e9d357229",
+      "key": "earth/cn-gz/bijie/wuliping/malubian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "426f2876-b816-5e56-a1d6-5b55d81f3246",
+      "key": "earth/cn-gz/bijie/wuliping/dengjia-wan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "b5e70c49-158a-55b5-8d77-1ebecd8135d7",
+      "key": "earth/cn-gz/bijie/wuliping/xiaojia-wan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "bf86ef26-ca71-577a-8dfd-bf75aff66118",
+      "key": "earth/cn-gz/bijie/wuliping/zhaojia-wan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "2bb3217b-979b-58aa-8fce-ef32c9623a65",
+      "key": "earth/cn-gz/bijie/wuliping/huatai-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "f263acaf-3203-586b-a4f3-5dd327a025bd",
+      "key": "earth/cn-gz/bijie/wuliping/huatai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "ef308154-7899-5f7a-8dbf-1417b9a93f8b",
+      "key": "earth/cn-gz/bijie/wuliping/baijia-wan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "52dedf19-8e1e-5822-8543-aebc25d45c41",
+      "key": "earth/cn-gz/bijie/wuliping/zhaishang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "a5f304bc-9a70-5524-8055-026ec3d5a8f2",
+      "key": "earth/cn-gz/bijie/wuliping/bijie-fifth-school",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "9ad425e0-7c5c-5ef9-9ccb-f77fe1ebaecb",
+      "key": "earth/cn-gz/bijie/wuliping/petroleum-warehouse",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "43b2c44f-3086-50ff-a035-88eb532b1dd4",
+      "key": "earth/cn-gz/bijie/wuliping/shiban-jing-village",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "fc39bcd0-053d-5710-b9f6-6621fe2b9cde",
+      "key": "earth/cn-gz/bijie/wuliping/wuli-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "ca9d39fb-b9e5-5c2f-8268-4cdd36b19401",
+      "key": "earth/cn-gz/bijie/wuliping/wuliping",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "ecde259c-b594-5425-a617-6c44d16ce168",
+      "key": "earth/cn-gz/bijie/wuliping/miaopu",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "51b16fa0-3230-59b9-901b-6faa663e1e4e",
+      "key": "earth/cn-gz/bijie/wuliping/dafa-gou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "9a859737-0ff5-5145-b482-ee507176fa31",
+      "key": "earth/cn-gz/bijie/wuliping/dongjia-yuan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "1df94aa8-6e16-5726-bc1a-a0bbf8306a5a",
+      "key": "earth/cn-gz/bijie/wuliping/hanjia-wan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "7ae96b6d-fa2c-518a-8965-6c09046b69ce",
+      "key": "earth/cn-gz/bijie/wuliping/wangjia-wan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "1cf7a0bf-3f27-5084-a556-2b125ce47cf0",
+      "key": "earth/cn-gz/bijie/wuliping/shiban-jing-well",
+      "body": "earth",
+      "kind": "historic_site"
+    }
+  ],
+  "records": [
+    {
+      "id": "eae3449f-f708-5ef0-8888-ae970e9f68fc",
+      "key": "bijie-gazetteer/p35/wuliping/wuliping-commune",
+      "entity_id": "11eca88f-1da5-59a3-9e1f-f0be06c9d890",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 1: 五里坪公社",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "五里坪公社",
+        "pinyin": "Wǔil Píng Gōngshè",
+        "population": 3046,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": "commune",
+        "seat_id": "ecde259c-b594-5425-a617-6c44d16ce168",
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ebe12c0f-cc9b-5cac-8106-9b29f272bf79",
+      "key": "bijie-gazetteer/p35/wuliping/huapaifang-brigade",
+      "entity_id": "5f5857db-393c-52a7-97da-4607a368fab5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 2: 花牌坊大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "花牌坊大队",
+        "pinyin": "Huāpáifang Dàduì",
+        "population": 1016,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "11eca88f-1da5-59a3-9e1f-f0be06c9d890",
+        "rank": "brigade",
+        "seat_id": "4feda6ad-413c-583b-b06d-63c40c23b5d8",
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a03c775d-5730-526b-a18d-2364632d8ad6",
+      "key": "bijie-gazetteer/p35/wuliping/huapaifang",
+      "entity_id": "4feda6ad-413c-583b-b06d-63c40c23b5d8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 3: 花牌坊",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "花牌坊",
+        "pinyin": "Huāpáifang",
+        "population": 193,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5f5857db-393c-52a7-97da-4607a368fab5",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.3
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "bf6ebc56-38fd-59f9-89dd-bba498a0a57e",
+      "key": "bijie-gazetteer/p35/wuliping/malubian",
+      "entity_id": "682aa177-f658-5855-aadb-2f8e9d357229",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 4: 马路边",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "马路边",
+        "pinyin": "Mǎlùbiān",
+        "population": 259,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5f5857db-393c-52a7-97da-4607a368fab5",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e2821358-72b7-5fa2-8ee0-a81c5ec67d39",
+      "key": "bijie-gazetteer/p35/wuliping/dengjia-wan",
+      "entity_id": "426f2876-b816-5e56-a1d6-5b55d81f3246",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 5: 邓家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "邓家湾",
+        "pinyin": "DènJiā Wān",
+        "population": 290,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5f5857db-393c-52a7-97da-4607a368fab5",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "765baa52-2dca-5ecc-aaf6-15621e22da1e",
+      "key": "bijie-gazetteer/p35/wuliping/xiaojia-wan",
+      "entity_id": "b5e70c49-158a-55b5-8d77-1ebecd8135d7",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 6: 肖家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "肖家湾",
+        "pinyin": "XiāoJiā Wān",
+        "population": 180,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5f5857db-393c-52a7-97da-4607a368fab5",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6b124df2-137f-57f2-bfb2-91f16a6235b1",
+      "key": "bijie-gazetteer/p35/wuliping/zhaojia-wan",
+      "entity_id": "bf86ef26-ca71-577a-8dfd-bf75aff66118",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 7: 赵家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "赵家湾",
+        "pinyin": "ZhàoJiā Wān",
+        "population": 94,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5f5857db-393c-52a7-97da-4607a368fab5",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b82f977c-646b-53a5-9580-67bd72fc501c",
+      "key": "bijie-gazetteer/p35/wuliping/huatai-brigade",
+      "entity_id": "2bb3217b-979b-58aa-8fce-ef32c9623a65",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 8: 花台大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "花台大队",
+        "pinyin": "Huātái Dàduì",
+        "population": 1126,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "11eca88f-1da5-59a3-9e1f-f0be06c9d890",
+        "rank": "brigade",
+        "seat_id": "f263acaf-3203-586b-a4f3-5dd327a025bd",
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "fa55837b-d01e-5b29-b84a-dd3ead9a5ff4",
+      "key": "bijie-gazetteer/p35/wuliping/huatai",
+      "entity_id": "f263acaf-3203-586b-a4f3-5dd327a025bd",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 9: 花台",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "花台",
+        "pinyin": "Huātái",
+        "population": 415,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "2bb3217b-979b-58aa-8fce-ef32c9623a65",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "cc021ff8-2dbe-5502-a6bf-03b4306b2adb",
+      "key": "bijie-gazetteer/p35/wuliping/baijia-wan",
+      "entity_id": "ef308154-7899-5f7a-8dbf-1417b9a93f8b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 10: 白家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "白家湾",
+        "pinyin": "BèiJiā Wān",
+        "population": 438,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "2bb3217b-979b-58aa-8fce-ef32c9623a65",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f6378e7f-f4b8-514a-995e-84751b6b434e",
+      "key": "bijie-gazetteer/p35/wuliping/zhaishang",
+      "entity_id": "52dedf19-8e1e-5822-8543-aebc25d45c41",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 11: 寨上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "寨上",
+        "pinyin": "Zhàishàng",
+        "population": 273,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "2bb3217b-979b-58aa-8fce-ef32c9623a65",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d6fea99e-bf4a-53d6-b905-dd67a1f60428",
+      "key": "bijie-gazetteer/p35/wuliping/bijie-fifth-school",
+      "entity_id": "a5f304bc-9a70-5524-8055-026ec3d5a8f2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 12: 毕节五中",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "毕节五中",
+        "pinyin": "BìJǐ Wǔzhōng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "2bb3217b-979b-58aa-8fce-ef32c9623a65",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°17′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "校"
+      }
+    },
+    {
+      "id": "d1f3db95-fefb-515f-85c4-f966fa6b315d",
+      "key": "bijie-gazetteer/p35/wuliping/petroleum-warehouse",
+      "entity_id": "9ad425e0-7c5c-5ef9-9ccb-f77fe1ebaecb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 13: 石油仓库",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "石油仓库",
+        "pinyin": "Shíyóu Cāngkù",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "2bb3217b-979b-58aa-8fce-ef32c9623a65",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "单位"
+      }
+    },
+    {
+      "id": "96656610-7809-51da-bd1a-aa757a8f6ee2",
+      "key": "bijie-gazetteer/p35/wuliping/shiban-jing-village",
+      "entity_id": "43b2c44f-3086-50ff-a035-88eb532b1dd4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 14: 石板井",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "石板井",
+        "pinyin": "Shíbǎn Jǐng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "2bb3217b-979b-58aa-8fce-ef32c9623a65",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "c6a663cf-f46b-51bc-8f91-c4afc976beab",
+      "key": "bijie-gazetteer/p35/wuliping/wuli-brigade",
+      "entity_id": "fc39bcd0-053d-5710-b9f6-6621fe2b9cde",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 15: 五里大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "五里大队",
+        "pinyin": "WǔLǐ Dàduì",
+        "population": 904,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "11eca88f-1da5-59a3-9e1f-f0be06c9d890",
+        "rank": "brigade",
+        "seat_id": "ecde259c-b594-5425-a617-6c44d16ce168",
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7da16eae-3193-5cec-ad97-7b947726b223",
+      "key": "bijie-gazetteer/p35/wuliping/wuliping",
+      "entity_id": "ca9d39fb-b9e5-5c2f-8268-4cdd36b19401",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 16: 五里坪",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "五里坪",
+        "pinyin": "WǔLǐ Píng",
+        "population": 237,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "fc39bcd0-053d-5710-b9f6-6621fe2b9cde",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a0b5cdd9-36e8-5f76-ba0d-c05c8cfbe73c",
+      "key": "bijie-gazetteer/p35/wuliping/miaopu",
+      "entity_id": "ecde259c-b594-5425-a617-6c44d16ce168",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 17: 庙堡",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "庙堡",
+        "pinyin": "Miào Pù",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "fc39bcd0-053d-5710-b9f6-6621fe2b9cde",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公社、大队驻地"
+      }
+    },
+    {
+      "id": "4fb24d67-1efe-583a-ae24-d8275d5ac041",
+      "key": "bijie-gazetteer/p35/wuliping/dafa-gou",
+      "entity_id": "51b16fa0-3230-59b9-901b-6faa663e1e4e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 18: 大发沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大发沟",
+        "pinyin": "Dàfā Gōn",
+        "population": 213,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "fc39bcd0-053d-5710-b9f6-6621fe2b9cde",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°17′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "46ae2d81-dc5a-571e-b33a-6b47f0142fee",
+      "key": "bijie-gazetteer/p35/wuliping/dongjia-yuan",
+      "entity_id": "9a859737-0ff5-5145-b482-ee507176fa31",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 19: 董家院",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "董家院",
+        "pinyin": "DongJiā Yuàn",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "fc39bcd0-053d-5710-b9f6-6621fe2b9cde",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°17′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "89752cba-c148-5713-a9ec-e7cc88f4d922",
+      "key": "bijie-gazetteer/p35/wuliping/hanjia-wan",
+      "entity_id": "1df94aa8-6e16-5726-bc1a-a0bbf8306a5a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 20: 韩家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "韩家湾",
+        "pinyin": "HánJiā Wān",
+        "population": 174,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "fc39bcd0-053d-5710-b9f6-6621fe2b9cde",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°17′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "46370263-cd06-5050-ad9b-8abda0f10a53",
+      "key": "bijie-gazetteer/p35/wuliping/wangjia-wan",
+      "entity_id": "7ae96b6d-fa2c-518a-8965-6c09046b69ce",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 21: 王家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "王家湾",
+        "pinyin": "WángJiā Wān",
+        "population": 280,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "fc39bcd0-053d-5710-b9f6-6621fe2b9cde",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5f7598cc-d2c0-5190-a92c-1fd493b8392c",
+      "key": "bijie-gazetteer/p35/wuliping/shiban-jing-well",
+      "entity_id": "1cf7a0bf-3f27-5084-a556-2b125ce47cf0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "35",
+      "scan_page": 70,
+      "locator": "row 22: 石板井",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "石板井",
+        "pinyin": "Shíbǎn Jǐng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "11eca88f-1da5-59a3-9e1f-f0be06c9d890",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "古井"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

@@ -72,6 +72,17 @@ fn validate_record(
             return Err(fail(&record.key, "coordinate requires original notation"));
         }
     }
+    if let Some(coordinate) = &record.observation.unresolved_coordinate {
+        if record.observation.coordinate.is_some() {
+            return Err(fail(
+                &record.key,
+                "coordinate cannot be both resolved and unresolved",
+            ));
+        }
+        coordinate
+            .validate(entity.body)
+            .map_err(|e| caused(&record.key, e))?;
+    }
     for former in &record.observation.former_names {
         if former.name.trim().is_empty() {
             return Err(fail(&record.key, "empty former name"));
