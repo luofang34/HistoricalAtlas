@@ -116602,7 +116602,11 @@
           "kind": "record",
           "record_id": "4c5fc02d-8f3f-53e2-b6d2-a107ceccfa40"
         }
-      ]
+      ],
+      "area_constraint": {
+        "record_id": "b41dec99-9310-5eb6-abbe-b97b6f89cc0d",
+        "tolerance_square_km": 0.1
+      }
     },
     {
       "record_id": "e53c7939-c003-5d50-8e7a-9267652da147",
@@ -118400,7 +118404,11 @@
           "kind": "record",
           "record_id": "95393815-f7de-56f3-9c1a-759b8baec207"
         }
-      ]
+      ],
+      "area_constraint": {
+        "record_id": "50bd4b5b-62a6-5137-a24b-c87cd6d03e7e",
+        "tolerance_square_km": 0.1
+      }
     },
     {
       "record_id": "a9d2de6e-fdca-57a2-9d3d-ee7ebf2d0ca2",
@@ -120356,7 +120364,11 @@
           "kind": "record",
           "record_id": "905c7690-3da1-5745-b347-434bd8805de6"
         }
-      ]
+      ],
+      "area_constraint": {
+        "record_id": "9cee6f4f-671d-5f53-b58c-e335e2079f2c",
+        "tolerance_square_km": 0.1
+      }
     },
     {
       "record_id": "3bc1eefc-3507-5b5d-88da-005ad8308205",

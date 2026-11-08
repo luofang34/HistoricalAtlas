@@ -149,7 +149,9 @@ fn source_comparisons_and_the_haogou_exclusion_follow_the_reconstructed_geometry
         assert_eq!(boundary.comparisons.len(), 1);
         let comparison = &boundary.comparisons[0];
         assert_eq!(comparison.reported_area_square_km, area);
+        assert_eq!(comparison.fitting_tolerance_square_km, Some(0.1));
         assert!(comparison.modeled_area_square_km > 0.0);
+        assert!((comparison.modeled_area_square_km - area).abs() <= 0.1);
         assert_eq!(comparison.neighbors.len(), neighbors);
         assert!(boundary.basis.contains(&comparison.record_id));
         assert!(
@@ -162,11 +164,27 @@ fn source_comparisons_and_the_haogou_exclusion_follow_the_reconstructed_geometry
         let mut changed = boundary.clone();
         changed.comparisons[0].modeled_area_square_km *= 2.0;
         assert!(changed.feature(&input.data, None).is_err());
-        if slug == "haogou" {
+        let mut invalid = boundary.clone();
+        invalid.comparisons[0].fitting_tolerance_square_km = Some(0.);
+        assert!(invalid.feature(&input.data, None).is_err());
+        if slug == "haogou" || slug == "baiyan" {
             assert_eq!(boundary.region.polygons.len(), 1);
             assert!(boundary.region.vertices.iter().all(|p| p.x > 105.4));
         }
+        if slug != "haogou" {
+            assert!(
+                comparison
+                    .neighbors
+                    .iter()
+                    .all(|n| n.shares_edge != Some(false))
+            );
+        }
     }
+    assert_printed_haogou_excluded(&input, request);
+}
+
+#[cfg(test)]
+fn assert_printed_haogou_excluded(input: &LedgerInput, request: &DerivationRequest) {
     let printed = input
         .data
         .records
@@ -192,5 +210,43 @@ fn source_comparisons_and_the_haogou_exclusion_follow_the_reconstructed_geometry
         !request.units.iter().flat_map(|u| &u.anchors).any(
             |a| matches!(a, AnchorReference::Record { record_id } if *record_id == printed.id)
         )
+    );
+}
+
+#[test]
+fn area_constraints_reject_unreviewed_or_other_units_evidence() {
+    let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
+    let mut input = load_blocking(&root).unwrap();
+    let mut request = input.derivations["bijie-communes-terrain"].clone();
+    let constrained: Vec<_> = request
+        .units
+        .iter()
+        .enumerate()
+        .filter(|(_, u)| u.area_constraint.is_some())
+        .map(|(i, _)| i)
+        .collect();
+    assert_eq!(constrained.len(), 3);
+    let first = constrained[0];
+    let constraint = request.units[first].area_constraint.clone().unwrap();
+    request.units[first].area_constraint = request.units[constrained[1]].area_constraint.clone();
+    assert!(
+        reconstruct(&input, &request)
+            .unwrap_err()
+            .to_string()
+            .contains("territory evidence")
+    );
+    request.units[first].area_constraint = Some(constraint.clone());
+    input
+        .data
+        .records
+        .iter_mut()
+        .find(|r| r.id == constraint.record_id)
+        .unwrap()
+        .checked = false;
+    assert!(
+        reconstruct(&input, &request)
+            .unwrap_err()
+            .to_string()
+            .contains("missing checked")
     );
 }

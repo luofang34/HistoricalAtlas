@@ -8,25 +8,32 @@ pub(super) fn regions(
     labels: &[Option<usize>],
     envelope: &MultiPolygon<f64>,
 ) -> Result<Vec<TerrainRegion>, TerrainError> {
-    let mut regions = Vec::new();
-    for unit in 0..request.units {
-        let mut pieces = Vec::new();
-        let mut cells = 0_usize;
-        for (row, owners) in labels.chunks(request.grid.width).enumerate() {
-            let mut start = None;
-            for (col, owner) in owners.iter().chain(std::iter::once(&None)).enumerate() {
-                if *owner == Some(unit) {
-                    start.get_or_insert(col);
-                    cells = cells.wrapping_add(1);
-                } else if let Some(first) = start.take() {
-                    pieces.push(request.grid.rectangle(row, first, col).to_polygon());
-                }
+    (0..request.units)
+        .map(|unit| region(request, labels, envelope, unit))
+        .collect()
+}
+
+pub(super) fn region(
+    request: &TerrainRequest,
+    labels: &[Option<usize>],
+    envelope: &MultiPolygon<f64>,
+    unit: usize,
+) -> Result<TerrainRegion, TerrainError> {
+    let mut pieces = Vec::new();
+    let mut cells = 0_usize;
+    for (row, owners) in labels.chunks(request.grid.width).enumerate() {
+        let mut start = None;
+        for (col, owner) in owners.iter().chain(std::iter::once(&None)).enumerate() {
+            if *owner == Some(unit) {
+                start.get_or_insert(col);
+                cells = cells.wrapping_add(1);
+            } else if let Some(first) = start.take() {
+                pieces.push(request.grid.rectangle(row, first, col).to_polygon());
             }
         }
-        let geometry = unary_union(&pieces).intersection(envelope);
-        regions.push(index_region(unit, cells, geometry)?);
     }
-    Ok(regions)
+    let geometry = unary_union(&pieces).intersection(envelope);
+    index_region(unit, cells, geometry)
 }
 
 fn index_region(

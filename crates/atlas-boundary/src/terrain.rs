@@ -9,11 +9,14 @@ use crate::polygon::{IndexedPolygon, resolve};
 
 mod boundary;
 mod cells;
+mod connectivity;
+mod fitting;
 mod partition;
 mod review;
 mod vectorize;
 pub use boundary::DerivedBoundary;
 pub use cells::ElevationGrid;
+pub use fitting::AreaTarget;
 pub use review::{BoundaryComparison, NeighborComparison, compare};
 
 /// One located member of a numbered administrative unit.
@@ -41,6 +44,8 @@ pub struct TerrainRequest {
     pub units: usize,
     /// Extra horizontal-equivalent metres per metre of elevation change.
     pub slope_weight: f64,
+    /// Source areas to fit while retaining every seed's unit membership.
+    pub areas: Vec<AreaTarget>,
 }
 
 /// A computed unit's vector geometry and occupied grid cells.
@@ -82,7 +87,7 @@ pub fn derive(request: &TerrainRequest) -> Result<Vec<TerrainRegion>, TerrainErr
     });
     request.grid.encloses(&envelope)?;
     validate_seeds(request, &angular)?;
-    let labels = partition::assign(request, &envelope)?;
+    let labels = fitting::assign(request, &envelope)?;
     vectorize::regions(request, &labels, &envelope)
 }
 
@@ -161,6 +166,18 @@ pub enum TerrainError {
     /// An enclosing component lacks a reachable seed.
     #[error("terrain envelope has {0} cells unreachable from its seeds")]
     Unreached(usize),
+    /// Cell resolution or competing constraints prevent the requested area fit.
+    #[error("terrain unit {unit} area {actual} km² cannot fit {target} ± {tolerance} km²")]
+    AreaFit {
+        /// Index in the ordered unit list.
+        unit: usize,
+        /// Last modeled area.
+        actual: f64,
+        /// Requested source area.
+        target: f64,
+        /// Permitted absolute area residual.
+        tolerance: f64,
+    },
     /// Source or reconstructed polygon failed topology validation.
     #[error("terrain polygon: {0}")]
     Topology(#[from] crate::polygon::TopologyError),

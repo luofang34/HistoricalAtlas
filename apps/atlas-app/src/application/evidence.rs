@@ -184,6 +184,11 @@ fn derived_boundaries(ui: &mut egui::Ui, boundaries: &[atlas_boundary::terrain::
                 "Area: {:.2} km² modeled · {:.2} km² reported",
                 comparison.modeled_area_square_km, comparison.reported_area_square_km
             ));
+            if let Some(tolerance) = comparison.fitting_tolerance_square_km {
+                ui.label(format!(
+                    "Fitted to the reported area · tolerance: {tolerance:.2} km²"
+                ));
+            }
             ui.collapsing("Neighbor checks", |ui| {
                 for neighbor in &comparison.neighbors {
                     let status = match neighbor.shares_edge {

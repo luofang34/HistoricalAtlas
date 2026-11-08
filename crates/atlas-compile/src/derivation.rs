@@ -12,7 +12,18 @@ use serde::{Deserialize, Serialize};
 use std::{collections::BTreeSet, path::Path};
 use thiserror::Error;
 
+mod areas;
 mod evidence;
+
+/// Checked source area and the permitted residual of its numerical fit.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct AreaConstraint {
+    /// Checked territory observation for this administrative unit and edition.
+    pub record_id: FactId,
+    /// Maximum absolute area residual in square kilometres.
+    pub tolerance_square_km: f64,
+}
 
 /// A checked observation or registered map location supplying one member position.
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -38,6 +49,9 @@ pub struct DerivationUnit {
     pub record_id: FactId,
     /// Selected commune or subordinate-place coordinates.
     pub anchors: Vec<AnchorReference>,
+    /// Optional source area used to constrain the terrain partition.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub area_constraint: Option<AreaConstraint>,
 }
 
 /// Coordinate evidence excluded from this particular reconstruction.
@@ -99,6 +113,7 @@ pub fn reconstruct(
             DerivationError::Evidence("envelope has no registered source boundary".into())
         })?;
     let (seeds, mut bases) = evidence::seeds(input, request, envelope.datum)?;
+    let areas = areas::resolve(input, request, &mut bases)?;
     let numeric = TerrainRequest {
         grid: request.grid.clone(),
         vertices: envelope.vertices,
@@ -106,6 +121,7 @@ pub fn reconstruct(
         seeds,
         units: request.units.len(),
         slope_weight: request.slope_weight,
+        areas,
     };
     let mut result = Vec::new();
     for region in derive(&numeric)? {
@@ -131,6 +147,7 @@ pub fn reconstruct(
         result.push(boundary);
     }
     atlas_boundary::terrain::compare(&input.data, &mut result)?;
+    areas::annotate(request, &mut result)?;
     Ok(result)
 }
 

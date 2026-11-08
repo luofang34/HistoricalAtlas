@@ -17,6 +17,9 @@ pub struct BoundaryComparison {
     pub modeled_area_square_km: f64,
     /// Area printed in the source passage.
     pub reported_area_square_km: f64,
+    /// Absolute residual permitted when this source area was used as a fitting target.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub fitting_tolerance_square_km: Option<f64>,
     /// Shared-edge checks for the explicitly named adjoining units.
     pub neighbors: Vec<NeighborComparison>,
 }
@@ -99,11 +102,12 @@ fn comparison(
         record_id: record.id,
         modeled_area_square_km: area_square_km(polygon),
         reported_area_square_km: territory.area_square_km,
+        fitting_tolerance_square_km: None,
         neighbors,
     })
 }
 
-fn area_square_km(polygon: &MultiPolygon<f64>) -> f64 {
+pub(super) fn area_square_km(polygon: &MultiPolygon<f64>) -> f64 {
     // Sub-square-metre floating-point differences must not change publication bytes.
     polygon.geodesic_area_unsigned().round() / 1_000_000.
 }
@@ -133,6 +137,15 @@ pub(super) fn validate(
         if comparison.reported_area_square_km != territory.area_square_km
             || !comparison.modeled_area_square_km.is_finite()
             || comparison.modeled_area_square_km != area_square_km(polygon)
+            || comparison
+                .fitting_tolerance_square_km
+                .is_some_and(|tolerance| {
+                    !tolerance.is_finite()
+                        || tolerance <= 0.
+                        || tolerance >= territory.area_square_km
+                        || (comparison.modeled_area_square_km - territory.area_square_km).abs()
+                            > tolerance
+                })
             || comparison.neighbors.len() != territory.neighbors.len()
             || comparison
                 .neighbors

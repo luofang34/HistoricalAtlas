@@ -183,7 +183,7 @@ fn lineage(
     )))
 }
 
-fn checked<'a>(
+pub(super) fn checked<'a>(
     input: &'a LedgerInput,
     id: FactId,
     source: &str,

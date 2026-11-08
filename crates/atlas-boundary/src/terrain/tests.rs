@@ -2,7 +2,7 @@ use super::*;
 use geo::{Area, BooleanOps, Contains, Point, unary_union};
 
 #[cfg(test)]
-fn request() -> TerrainRequest {
+pub(super) fn request() -> TerrainRequest {
     let grid = ElevationGrid {
         width: 12,
         height: 8,
@@ -37,6 +37,7 @@ fn request() -> TerrainRequest {
         seeds: vec![seed(0, 150., 450.), seed(1, 1050., 450.)],
         units: 2,
         slope_weight: 20.,
+        areas: vec![],
     }
 }
 
