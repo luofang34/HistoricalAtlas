@@ -1,0 +1,488 @@
+{
+  "entities": [
+    {
+      "id": "13589580-4431-5026-82a7-ca580657b2a6",
+      "key": "earth/cn-gz/bijie/guole/liujiawan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "0e47a7fd-2191-5c09-ae0f-837c81c1a145",
+      "key": "earth/cn-gz/bijie/guole/baiguowa",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "2c3d2552-9027-5ab7-a40f-81a12463a691",
+      "key": "earth/cn-gz/bijie/guole/guoleqiao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c65937ef-74f5-521a-bd90-e0e7eed3d8d8",
+      "key": "earth/cn-gz/bijie/guole/erdaohe",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "997edec6-5738-5c29-adf2-62b16ed46bde",
+      "key": "earth/cn-gz/bijie/guole/dujiachong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "ba38f915-fbfc-5ddf-b06a-bcc04f08e135",
+      "key": "earth/cn-gz/bijie/guole/qiligou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "666b0b34-eaa7-5c3f-be06-f2ec31d34fb3",
+      "key": "earth/cn-gz/bijie/guole/toudaogou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "2d3580a8-9f58-553b-89b0-ef09e451bc3a",
+      "key": "earth/cn-gz/bijie/guole/wangpoling",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "d6afb9da-7730-5094-b64c-9a8d10555b99",
+      "key": "earth/cn-gz/bijie/guole/wuba-wuji",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c0cecb79-31af-5954-923c-5810dc54f4f4",
+      "key": "earth/cn-gz/bijie/guole/guole-bridge",
+      "body": "earth",
+      "kind": "bridge"
+    }
+  ],
+  "records": [
+    {
+      "id": "2d9653d1-9c35-5b17-bc27-c781c5cb611a",
+      "key": "bijie-gazetteer/p176/guole-commune",
+      "entity_id": "10b464a4-336c-50c4-996c-ed31c0b34c77",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "176",
+      "scan_page": 211,
+      "locator": "Place table, row 1: 果乐公社",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "果乐公社",
+        "pinyin": "Guǒlè Gōngshè",
+        "population": 2267,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+        "rank": "commune",
+        "seat_id": "2c3d2552-9027-5ab7-a40f-81a12463a691",
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bf049f5b-27e7-5eb0-9260-b73b8df95740",
+      "key": "bijie-gazetteer/p176/guole/liujiawan",
+      "entity_id": "13589580-4431-5026-82a7-ca580657b2a6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "176",
+      "scan_page": 211,
+      "locator": "Place table, row 2: 刘家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "刘家湾",
+        "pinyin": "Liújiāwān",
+        "population": 332,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "10b464a4-336c-50c4-996c-ed31c0b34c77",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "836de0fa-03d5-5aa2-9d97-bc161e60af8e",
+      "key": "bijie-gazetteer/p176/guole/baiguowa",
+      "entity_id": "0e47a7fd-2191-5c09-ae0f-837c81c1a145",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "176",
+      "scan_page": 211,
+      "locator": "Place table, row 3: 白果凹",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "白果凹",
+        "pinyin": "Báiguǒwā",
+        "population": 277,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "10b464a4-336c-50c4-996c-ed31c0b34c77",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "79cd0f4c-d36f-53ba-a14e-a26490853a17",
+      "key": "bijie-gazetteer/p176/guole/guoleqiao",
+      "entity_id": "2c3d2552-9027-5ab7-a40f-81a12463a691",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "176",
+      "scan_page": 211,
+      "locator": "Place table, row 4: 果乐桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "果乐桥",
+        "pinyin": "Guǒlèqiáo",
+        "population": 267,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "10b464a4-336c-50c4-996c-ed31c0b34c77",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公社驻地"
+      }
+    },
+    {
+      "id": "9e9d8071-41b1-5cd1-9b6d-368ea2466f6a",
+      "key": "bijie-gazetteer/p176/guole/erdaohe",
+      "entity_id": "c65937ef-74f5-521a-bd90-e0e7eed3d8d8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "176",
+      "scan_page": 211,
+      "locator": "Place table, row 5: 二道河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "二道河",
+        "pinyin": "Èrdàohé",
+        "population": 116,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "10b464a4-336c-50c4-996c-ed31c0b34c77",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c8ef583b-dabc-5f34-a568-023ae5ecb384",
+      "key": "bijie-gazetteer/p176/guole/dujiachong",
+      "entity_id": "997edec6-5738-5c29-adf2-62b16ed46bde",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "176",
+      "scan_page": 211,
+      "locator": "Place table, row 6: 杜家冲",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "杜家冲",
+        "pinyin": "Dùjiāchōng",
+        "population": 252,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "10b464a4-336c-50c4-996c-ed31c0b34c77",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b5b9895a-200e-58ea-abff-69d1a6cd5223",
+      "key": "bijie-gazetteer/p176/guole/qiligou",
+      "entity_id": "ba38f915-fbfc-5ddf-b06a-bcc04f08e135",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "176",
+      "scan_page": 211,
+      "locator": "Place table, row 7: 七里沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "七里沟",
+        "pinyin": "Qīlǐgōu",
+        "population": 327,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "10b464a4-336c-50c4-996c-ed31c0b34c77",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.4,
+            "latitude": 27.4
+          },
+          "longitude_text": "105°24′",
+          "latitude_text": "27°24′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "0dd6bd6d-9fc3-559e-ad54-e77a6893d209",
+      "key": "bijie-gazetteer/p176/guole/toudaogou",
+      "entity_id": "666b0b34-eaa7-5c3f-be06-f2ec31d34fb3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "176",
+      "scan_page": 211,
+      "locator": "Place table, row 8: 头道沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "头道沟",
+        "pinyin": "Tóudàogōu",
+        "population": 127,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "10b464a4-336c-50c4-996c-ed31c0b34c77",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.4,
+            "latitude": 27.4
+          },
+          "longitude_text": "105°24′",
+          "latitude_text": "27°24′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "9479a0f7-534b-5cb2-8f21-cd2aab6aaed9",
+      "key": "bijie-gazetteer/p176/guole/wangpoling",
+      "entity_id": "2d3580a8-9f58-553b-89b0-ef09e451bc3a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "176",
+      "scan_page": 211,
+      "locator": "Place table, row 9: 王婆岭",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "王婆岭",
+        "pinyin": "Wángpólǐng",
+        "population": 126,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "10b464a4-336c-50c4-996c-ed31c0b34c77",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.4,
+            "latitude": 27.4
+          },
+          "longitude_text": "105°24′",
+          "latitude_text": "27°24′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5c935e7f-d28a-5081-b9b7-46082f70dd28",
+      "key": "bijie-gazetteer/p176/guole/wuba-wuji",
+      "entity_id": "d6afb9da-7730-5094-b64c-9a8d10555b99",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "176",
+      "scan_page": 211,
+      "locator": "Place table, row 10: 伍坝屋基",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "伍坝屋基",
+        "pinyin": "Wǔbàwūjī",
+        "population": 401,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "10b464a4-336c-50c4-996c-ed31c0b34c77",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.4
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°24′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b0d83536-77fe-5567-8ff4-528730f8b030",
+      "key": "bijie-gazetteer/p176/guole/guole-bridge",
+      "entity_id": "c0cecb79-31af-5954-923c-5810dc54f4f4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "176",
+      "scan_page": 211,
+      "locator": "Place table, row 11: 果乐桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "果乐桥",
+        "pinyin": "Guǒlè Qiáo",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "10b464a4-336c-50c4-996c-ed31c0b34c77",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.383333333333333
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°23′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "桥"
+      }
+    },
+    {
+      "id": "b7b8675e-736e-50ab-99db-1696af2c0d0e",
+      "key": "bijie-gazetteer/p176/haizijie/qiansuo-river",
+      "entity_id": "64faa8ab-1d6c-5f58-b203-1af9dde61053",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "176",
+      "scan_page": 211,
+      "locator": "Place table, row 12: 前所河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "前所河",
+        "pinyin": "Qiánsuǒ Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "上接八寨坪，下入海子街，在境内流长3.5公里"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

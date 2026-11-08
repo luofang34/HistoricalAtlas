@@ -1,5 +1,8 @@
 use super::*;
 
+#[path = "haizijie/tests.rs"]
+mod haizijie;
+
 #[test]
 fn shaogang_local_names_and_shashao_facilities_resolve_across_sources() {
     let atlas = atlas();
