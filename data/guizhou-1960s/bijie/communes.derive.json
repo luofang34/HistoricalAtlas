@@ -118221,6 +118221,10 @@
       "record_id": "8eac1883-c605-5122-aefa-3c45c271001f",
       "anchors": [
         {
+          "kind": "map_location",
+          "estimate_id": "e21e6f36-e1b4-58d4-849a-0a91ba47c0f7"
+        },
+        {
           "kind": "record",
           "record_id": "f229b012-0fba-5aaf-9961-2c563c60e0f6"
         },
@@ -118236,7 +118240,11 @@
           "kind": "record",
           "record_id": "05082004-c5ec-5cfe-bf14-b69ad1bdf7cb"
         }
-      ]
+      ],
+      "area_constraint": {
+        "record_id": "7f4561d9-83b1-572f-b878-bbbeea92f363",
+        "tolerance_square_km": 0.1
+      }
     },
     {
       "record_id": "4461ccfb-b10e-59c9-9dbb-a785bc2ab461",
@@ -118396,6 +118404,10 @@
     {
       "record_id": "67b54314-d033-530c-a21d-783027532f5e",
       "anchors": [
+        {
+          "kind": "map_location",
+          "estimate_id": "e3a56da8-98d7-5daf-a08d-a163a3c47700"
+        },
         {
           "kind": "record",
           "record_id": "1b4bfcad-7872-50b0-a651-be16f1035867"
@@ -121661,7 +121673,7 @@
     },
     {
       "record_id": "b02e195b-7d36-5f9e-b9aa-b91275f755cc",
-      "reason": "Printed p. 188 places the commune at 105°20′, while its named seat on the same page is at 105°28′ and the p. 187 overview gives 105°28′–29′. Subordinate settlement coordinates constrain this reconstruction."
+      "reason": "Printed p. 188 places the commune at 105°20′, while its named seat on the same page is at 105°28′ and the p. 187 overview gives 105°28′–29′. The registered county-map symbol and subordinate settlement coordinates constrain this reconstruction."
     },
     {
       "record_id": "b1713ccc-a0f7-5591-b5bb-df94413da308",

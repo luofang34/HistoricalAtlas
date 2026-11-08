@@ -133,6 +133,7 @@ fn source_comparisons_and_the_haogou_exclusion_follow_the_reconstructed_geometry
     for (slug, area, neighbors) in [
         ("baiyan", 12.5, 4),
         ("haogou", 9.5, 5),
+        ("liuhua", 7.6, 6),
         ("huangnichong", 47.9, 6),
     ] {
         let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{slug}-commune")).unwrap();
@@ -167,18 +168,16 @@ fn source_comparisons_and_the_haogou_exclusion_follow_the_reconstructed_geometry
         let mut invalid = boundary.clone();
         invalid.comparisons[0].fitting_tolerance_square_km = Some(0.);
         assert!(invalid.feature(&input.data, None).is_err());
-        if slug == "haogou" || slug == "baiyan" {
+        if slug != "huangnichong" {
             assert_eq!(boundary.region.polygons.len(), 1);
             assert!(boundary.region.vertices.iter().all(|p| p.x > 105.4));
         }
-        if slug != "haogou" {
-            assert!(
-                comparison
-                    .neighbors
-                    .iter()
-                    .all(|n| n.shares_edge != Some(false))
-            );
-        }
+        assert!(
+            comparison
+                .neighbors
+                .iter()
+                .all(|n| n.shares_edge != Some(false))
+        );
     }
     assert_printed_haogou_excluded(&input, request);
 }
@@ -225,7 +224,7 @@ fn area_constraints_reject_unreviewed_or_other_units_evidence() {
         .filter(|(_, u)| u.area_constraint.is_some())
         .map(|(i, _)| i)
         .collect();
-    assert_eq!(constrained.len(), 3);
+    assert_eq!(constrained.len(), 4);
     let first = constrained[0];
     let constraint = request.units[first].area_constraint.clone().unwrap();
     request.units[first].area_constraint = request.units[constrained[1]].area_constraint.clone();

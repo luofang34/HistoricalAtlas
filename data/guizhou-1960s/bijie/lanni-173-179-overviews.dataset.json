@@ -609,7 +609,36 @@
         "coordinate": null,
         "former_names": [],
         "note": null,
-        "extent": "东经105°29′，北纬27°21′至27°22′；总面积7.6平方公里；东邻小坝，南与豪沟，西连汉屯、王张，北靠十三亩，东北接王家坝。"
+        "extent": "东经105°29′，北纬27°21′至27°22′；总面积7.6平方公里；东邻小坝，南与豪沟，西连汉屯、王张，北靠十三亩，东北接王家坝。",
+        "territory": {
+          "area_square_km": 7.6,
+          "neighbors": [
+            {
+              "name": "小坝",
+              "entity_id": "8c5eb418-ed5b-5426-bc87-b8e434b0b07c"
+            },
+            {
+              "name": "豪沟",
+              "entity_id": "a152926c-eff4-5a9f-807a-94e1fd996fb6"
+            },
+            {
+              "name": "汉屯",
+              "entity_id": "6daa1864-9a90-5e6b-8f0f-38316cb644e7"
+            },
+            {
+              "name": "王张",
+              "entity_id": "f5864baa-258d-5313-ba43-be1c9f966a82"
+            },
+            {
+              "name": "十三亩",
+              "entity_id": "3f702e8a-e1f9-596a-8862-d055ecc91711"
+            },
+            {
+              "name": "王家坝",
+              "entity_id": "1dc52d1f-c3ea-5e91-85ed-2106cb3bdc12"
+            }
+          ]
+        }
       }
     },
     {

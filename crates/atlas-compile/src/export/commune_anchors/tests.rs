@@ -68,23 +68,30 @@ fn commune_rows_keep_their_printed_values_when_nearby_rows_differ() {
 }
 
 #[test]
-fn hantun_map_location_publishes_alongside_the_anomalous_table_longitude() {
+fn anomalous_commune_longitudes_publish_alongside_independent_map_locations() {
     let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
     let output = compile(&input).unwrap();
-    let id = EntityId::from_key("earth/cn-gz/bijie/hantun-commune").unwrap();
+    for (slug, page, longitude) in [("hantun", 186, "107°27′"), ("haogou", 188, "105°20′")] {
+        assert_independent_map_location(&output, slug, page, longitude);
+    }
+}
+
+#[cfg(test)]
+fn assert_independent_map_location(output: &Artifacts, slug: &str, page: u32, longitude: &str) {
+    let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{slug}-commune")).unwrap();
     let path = PathBuf::from(format!("entities/index/{}.json", id.shard()));
     let shard: serde_json::Value = serde_json::from_slice(&output[&path]).unwrap();
     let published = &shard[id.0.to_string()];
     let records: Vec<Record> = serde_json::from_value(published["records"].clone()).unwrap();
     let table = records
         .iter()
-        .find(|r| r.key == "bijie-gazetteer/p186/hantun-commune")
+        .find(|r| r.key == format!("bijie-gazetteer/p{page}/{slug}-commune"))
         .unwrap();
     let coordinate = table.observation.coordinate.as_ref().unwrap();
-    assert_eq!(coordinate.longitude_text, "107°27′");
+    assert_eq!(coordinate.longitude_text, longitude);
     let map_record = records
         .iter()
-        .find(|r| r.key == "bijie-gazetteer/county-map/hantun-commune")
+        .find(|r| r.key == format!("bijie-gazetteer/county-map/{slug}-commune"))
         .unwrap();
     assert_eq!(map_record.scan_page, Some(658));
     assert!(map_record.observation.coordinate.is_none());

@@ -145,7 +145,7 @@ fn county_registration_checks_the_whole_extent_against_independent_minute_coordi
     let (sheet, estimates) = register_places(&input, map).unwrap();
     assert_eq!(sheet.control_quality.points, 6);
     assert_eq!(sheet.check_quality.unwrap().points, 22);
-    assert_eq!(estimates.len(), 29);
+    assert_eq!(estimates.len(), 30);
     let controls: Vec<_> = sheet.job.controls.iter().map(|c| c.point).collect();
     let model = AffineRegistration::fit(&controls).unwrap();
     let mut maximum = 0.0_f64;
