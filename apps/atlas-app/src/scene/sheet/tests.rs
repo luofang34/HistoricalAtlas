@@ -124,3 +124,33 @@ fn pingqiao_drawing_selects_the_village_brigade_and_commune_at_the_shared_seat()
         vec![commune]
     );
 }
+
+#[test]
+fn alie_drawing_uses_the_mapped_brigade_seat_and_selects_the_commune_seat() {
+    let atlas = crate::catalog::tests::atlas();
+    let id = |key| EntityId::from_key(&format!("earth/cn-gz/zhijin/{key}")).unwrap();
+    let commune = id("alie-commune");
+    let drawing = atlas.drawings(commune)[0];
+    assert_eq!(drawing.scan_page, 44);
+    assert_eq!(drawing.units.len(), 1);
+    let symbols = points(&atlas, drawing);
+    assert_eq!(symbols.len(), 49);
+    for (x, y, expected) in [
+        (973.0, 640.0, [commune, id("alie/hebian-zhai")]),
+        (
+            1137.0,
+            741.0,
+            [id("alie/tanglishu-brigade"), id("alie/yakou-zhai")],
+        ),
+    ] {
+        let hits = pick(&symbols, |p| {
+            ((p.x - x).powi(2) + (p.y - y).powi(2)).sqrt() as f32
+        });
+        assert_eq!(
+            hits.into_iter().collect::<std::collections::BTreeSet<_>>(),
+            expected.into()
+        );
+    }
+    assert_eq!(atlas.drawings(id("alie/xiaolan-ba"))[0].scan_page, 44);
+    assert!(atlas.drawings(id("alie/maoli-yuan")).is_empty());
+}

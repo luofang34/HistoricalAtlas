@@ -341,3 +341,7 @@ mod zhijin_tests;
 #[cfg(test)]
 #[path = "export/pingqiao/tests.rs"]
 mod pingqiao_tests;
+
+#[cfg(test)]
+#[path = "export/alie/tests.rs"]
+mod alie_tests;
