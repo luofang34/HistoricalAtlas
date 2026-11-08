@@ -19,3 +19,21 @@ fn pan_wraps_and_zoom_preserves_the_pointer_anchor() {
     assert!((-180.0..180.0).contains(&camera.center.longitude));
     assert!(camera.center.latitude.abs() <= 85.051_128_779_806_6);
 }
+
+#[test]
+fn world_view_and_polar_drags_stay_inside_the_flat_map() {
+    let mut camera = Camera::for_body(BodyId::Earth);
+    camera.zoom_at(-20.0, [0.0, 0.0]);
+    camera.fit_height(900.0);
+    let world = 512.0 * 2.0_f64.powf(camera.zoom);
+    assert!((world - 900.0).abs() < 1e-10);
+    assert!(camera.center.latitude.abs() < 1e-10);
+    camera.zoom_at(3.0, [0.0, 0.0]);
+    for drag in [-1e6, 1e6] {
+        camera.pan(0.0, drag);
+        camera.fit_height(900.0);
+        let half = 900.0 / (512.0 * 2.0_f64.powf(camera.zoom)) / 2.0;
+        let y = project(camera.center)[1];
+        assert!(y - half >= -1e-12 && y + half <= 1.0 + 1e-12);
+    }
+}

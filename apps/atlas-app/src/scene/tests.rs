@@ -16,7 +16,12 @@ fn time_layer_keeps_undated_coordinates_out_of_deep_time() {
     assert!(selected["features"].as_array().unwrap().is_empty());
     let moon = features(&atlas, BodyId::Moon, &time, MapLayer::Observations, None);
     assert_eq!(moon["features"].as_array().unwrap().len(), 3);
-    let style = style(observations.clone()).unwrap();
+    let style = style(
+        observations.clone(),
+        BodyId::Earth,
+        maplibre::projection::ProjectionType::Mercator,
+    )
+    .unwrap();
     assert!(style.validate().is_ok());
     let layers = style
         .layers
@@ -59,7 +64,12 @@ fn event_layer_passes_through_maplibre_geojson_processing() {
     .unwrap();
     let markers = overlay.features(&atlas, BodyId::Moon, &time, None).unwrap();
     let collection = json!({"type": "FeatureCollection", "features": markers});
-    let style = style(collection.clone()).unwrap();
+    let style = style(
+        collection.clone(),
+        BodyId::Moon,
+        maplibre::projection::ProjectionType::Mercator,
+    )
+    .unwrap();
     assert!(style.validate().is_ok());
     let layers = style
         .layers

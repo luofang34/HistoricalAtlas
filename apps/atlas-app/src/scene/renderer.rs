@@ -2,11 +2,16 @@
 
 use crate::navigation::Camera;
 use atlas_core::identity::EntityId;
+use atlas_geo::body::BodyId;
 use egui_wgpu::RenderState;
 use maplibre::{
     background::BackgroundPlugin,
     coords::LatLon,
-    headless::{create_headless_renderer_on_host_gpu, map::HeadlessMap},
+    headless::{
+        create_headless_renderer_on_host_gpu,
+        map::{HeadlessMap, ProcessedLayers},
+    },
+    raster::{DefaultRasterTransferables, RasterPlugin},
     render::{
         RenderPlugin, host_gpu::HostGpu, settings::RendererSettings, view_state::CameraOptions,
     },
@@ -19,6 +24,12 @@ use thiserror::Error;
 /// A map operation failed without changing the evidence ledger.
 #[derive(Debug, Error)]
 pub enum RenderError {
+    /// Bundled physical tile could not be decoded.
+    #[error("physical basemap image: {0}")]
+    Image(#[from] image::ImageError),
+    /// A body-specific layer could not be changed.
+    #[error("map style: {0}")]
+    Style(#[from] maplibre::style::mutation::StyleMutationError),
     /// Shared renderer initialization failed.
     #[error("map GPU initialization: {0}")]
     Renderer(#[from] maplibre::headless::HeadlessRendererError),
@@ -64,16 +75,18 @@ impl MapRenderer {
         };
         let (kernel, renderer) =
             create_headless_renderer_on_host_gpu(1, 1, host, RendererSettings::default(), None)?;
-        let map = HeadlessMap::new(
+        let mut map = HeadlessMap::new(
             style,
             renderer,
             kernel,
             vec![
                 Box::new(RenderPlugin),
                 Box::new(BackgroundPlugin),
+                Box::new(RasterPlugin::<DefaultRasterTransferables>::default()),
                 Box::new(VectorPlugin::<DefaultVectorTransferables>::default()),
             ],
         )?;
+        map.render_source_frames(ProcessedLayers::default(), super::basemap::tiles()?, 1)?;
         let view = map.head_texture_view().ok_or(RenderError::Texture)?;
         let texture = gpu.renderer.write().register_native_texture(
             &gpu.device,
@@ -89,7 +102,17 @@ impl MapRenderer {
     }
 
     /// Refresh the visible point collection.
-    pub fn update(&mut self, points: serde_json::Value) -> Result<(), RenderError> {
+    pub fn update(&mut self, points: serde_json::Value, body: BodyId) -> Result<(), RenderError> {
+        let visibility = if body == BodyId::Earth {
+            "visible"
+        } else {
+            "none"
+        };
+        for id in ["natural-earth", "terrain"] {
+            self.map.mutate_style(|style| {
+                style.set_layout_property(id, "visibility", visibility.into())
+            })?;
+        }
         Ok(self.map.set_geojson_source("observations", points)?)
     }
 

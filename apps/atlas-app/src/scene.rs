@@ -5,6 +5,7 @@ use atlas_core::identity::EntityId;
 use atlas_geo::body::BodyId;
 use serde_json::{Value, json};
 
+pub mod basemap;
 pub mod renderer;
 pub mod territories;
 
@@ -54,16 +55,30 @@ pub fn features(
     json!({"type": "FeatureCollection", "features": features})
 }
 
-/// Style for source anchors, external events, and a latitude/longitude graticule.
-pub fn style(points: Value) -> Result<maplibre::style::Style, serde_json::Error> {
+/// Style with body-specific physical geography and an explicit display projection.
+pub fn style(
+    points: Value,
+    body: BodyId,
+    projection: maplibre::projection::ProjectionType,
+) -> Result<maplibre::style::Style, serde_json::Error> {
+    let visibility = if body == BodyId::Earth {
+        "visible"
+    } else {
+        "none"
+    };
     serde_json::from_value(json!({"version": 8, "center": [105.27, 27.3], "zoom": 10,
+    "projection": {"type": projection},
     "sources": {
+        "natural-earth": {"type": "raster", "tiles": ["atlas://natural-earth/{z}/{x}/{y}"], "tileSize": 512, "minzoom": 0, "maxzoom": 0},
+        "terrain": {"type": "raster", "tiles": ["atlas://terrain/{z}/{x}/{y}"], "tileSize": 512, "minzoom": 8, "maxzoom": 8, "bounds": [104.0625, 25.799891182088334, 106.875, 28.304380682962783]},
         "observations": {"type": "geojson", "data": points},
         "grid": {"type": "geojson", "data": graticule()}
     }, "layers": [
         {"id": "background", "type": "background", "paint": {"background-color": "#152c35"}},
+        {"id": "natural-earth", "type": "raster", "source": "natural-earth", "layout": {"visibility": visibility}, "paint": {"raster-fade-duration": 0, "raster-saturation": -0.3}},
+        {"id": "terrain", "type": "raster", "source": "terrain", "minzoom": 8, "layout": {"visibility": visibility}, "paint": {"raster-fade-duration": 0}},
         {"id": "graticule", "type": "line", "source": "grid",
-            "paint": {"line-color": "#31505c", "line-width": 1}},
+            "paint": {"line-color": "#31505c", "line-width": 0.6, "line-opacity": 0.3}},
         {"id": "territory-links", "type": "line", "source": "observations",
             "filter": ["==", "geometry_role", "territory_link"],
             "paint": {"line-color": "#91b8cf", "line-width": 2, "line-dasharray": [3, 2]}},
@@ -73,8 +88,8 @@ pub fn style(points: Value) -> Result<maplibre::style::Style, serde_json::Error>
                 "circle-stroke-color": "#91b8cf"}},
         {"id": "observations", "type": "circle", "source": "observations",
             "filter": ["==", "geometry_role", "source_observation"],
-            "paint": {"circle-radius": 5, "circle-color": "#e4bf80", "circle-stroke-width": 1,
-                "circle-stroke-color": "#172e39"}},
+            "paint": {"circle-radius": 4, "circle-color": "#8d3e32", "circle-stroke-width": 1,
+                "circle-stroke-color": "#fff5dc"}},
         {"id": "external-events", "type": "circle", "source": "observations",
             "filter": ["==", "geometry_role", "external_event"],
             "paint": {"circle-radius": 10, "circle-color": "#43c5c3", "circle-opacity": 0.65,

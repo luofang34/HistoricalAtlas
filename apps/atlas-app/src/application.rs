@@ -59,7 +59,14 @@ impl Application {
 
     /// Attach the GPU renderer after the window has a drawing surface.
     pub fn attach(&mut self, gpu: egui_wgpu::RenderState) -> Result<(), AppError> {
-        self.map = Some(MapRenderer::new(gpu, scene::style(self.points()?)?)?);
+        self.map = Some(MapRenderer::new(
+            gpu,
+            scene::style(
+                self.points()?,
+                self.body,
+                maplibre::projection::ProjectionType::Mercator,
+            )?,
+        )?);
         self.dirty = false;
         Ok(())
     }

@@ -16,7 +16,7 @@ impl Application {
                 }
             };
             if let Some(map) = &mut self.map {
-                match map.update(points) {
+                match map.update(points, self.body) {
                     Ok(()) => self.dirty = false,
                     Err(error) => self.error = Some(error.to_string()),
                 }
@@ -25,6 +25,7 @@ impl Application {
         let size = ui.available_size().max(egui::vec2(1.0, 1.0));
         let (rect, response) = ui.allocate_exact_size(size, egui::Sense::click_and_drag());
         self.gestures(ui, &response);
+        self.camera.fit_height(f64::from(size.y));
         let Some(map) = &mut self.map else {
             return;
         };
@@ -55,6 +56,17 @@ impl Application {
                 }
                 Err(error) => self.error = Some(error.to_string()),
             }
+        }
+        if self.body == atlas_geo::body::BodyId::Earth {
+            let text = "Natural Earth II · Terrain: Mapzen / USGS";
+            let position = rect.right_bottom() - egui::vec2(8.0, 8.0);
+            ui.painter().text(
+                position,
+                egui::Align2::RIGHT_BOTTOM,
+                text,
+                egui::FontId::proportional(11.0),
+                egui::Color32::from_rgb(40, 45, 38),
+            );
         }
     }
 

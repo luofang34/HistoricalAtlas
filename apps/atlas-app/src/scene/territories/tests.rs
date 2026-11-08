@@ -28,7 +28,12 @@ fn real_wuliping_source_network_has_seat_links_and_time_view_excludes_undated_hi
             .is_empty()
     );
     let points = serde_json::json!({"type": "FeatureCollection", "features": source});
-    let style = crate::scene::style(points).unwrap();
+    let style = crate::scene::style(
+        points,
+        atlas_geo::body::BodyId::Earth,
+        maplibre::projection::ProjectionType::Mercator,
+    )
+    .unwrap();
     assert!(
         style
             .layers

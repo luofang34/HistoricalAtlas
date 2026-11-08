@@ -45,6 +45,15 @@ impl Camera {
         self.zoom = (self.zoom + delta).clamp(0.0, 18.0);
         self.pan(x, y);
     }
+
+    /// Keep a flat viewport inside the projection's north and south edges.
+    pub fn fit_height(&mut self, height: f64) {
+        let height = height.max(1.0);
+        self.zoom = self.zoom.max((height / 512.0).log2().max(0.0));
+        let half = (height / (512.0 * 2.0_f64.powf(self.zoom)) / 2.0).min(0.5);
+        let [x, y] = project(self.center);
+        self.center = unproject([x, y.clamp(half, 1.0 - half)]);
+    }
 }
 
 fn project(point: LonLat) -> [f64; 2] {

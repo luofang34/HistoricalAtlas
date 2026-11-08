@@ -1,0 +1,53 @@
+{
+  "natural_earth": "https://www.naturalearthdata.com/downloads/50m-raster-data/50m-natural-earth-2/",
+  "terrain": "https://elevation-tiles-prod.s3.amazonaws.com/geotiff/{z}/{x}/{y}.tif",
+  "attribution": "Natural Earth II; Mapzen Terrain Tiles; SRTM and GMTED2010 courtesy of USGS",
+  "processing": "Web Mercator resampling; regional elevation hillshade with Natural Earth color tint",
+  "tiles": [
+    {
+      "source": "natural-earth",
+      "z": 0,
+      "x": 0,
+      "y": 0,
+      "file": "natural-earth-0-0-0.jpg",
+      "sha256": "de92b83976541f30e941908bf13be8649df3ae81ee73d4483c6e14e3b91068b2",
+      "input_sha256": "02ae944d9ee8a64ccacbd4f535220aac10b5c95e874118b6db8d6f07cea48e71"
+    },
+    {
+      "source": "terrain",
+      "z": 8,
+      "x": 202,
+      "y": 107,
+      "file": "terrain-8-202-107.jpg",
+      "sha256": "b86ed8b60ffccf9ee1bf7354f90dc45637e97d1e6b944d1b0ec12e2d40bf8d90",
+      "input_sha256": "b00f3b54fec6f584a36e8f9d9fd781440b1f544a4d246d39fffb56eaf4a0f6df"
+    },
+    {
+      "source": "terrain",
+      "z": 8,
+      "x": 203,
+      "y": 107,
+      "file": "terrain-8-203-107.jpg",
+      "sha256": "ba6c61d40475e4099346a5bd7d5ac4e00ec61f30d604630afb726690795071ff",
+      "input_sha256": "4bb8208a0e20d42474d0c9773c4f57421bbfaa8030a2dd102aa397d4b27d5232"
+    },
+    {
+      "source": "terrain",
+      "z": 8,
+      "x": 203,
+      "y": 108,
+      "file": "terrain-8-203-108.jpg",
+      "sha256": "b788b6f3c4d7f556620d2a56d165ec76776dc1690d98d7c78684161d3d796b71",
+      "input_sha256": "1f1db53f58fd0d272cdd36670c9ba60db51cc33819800c6fbcfe3e9d83f84990"
+    },
+    {
+      "source": "terrain",
+      "z": 8,
+      "x": 202,
+      "y": 108,
+      "file": "terrain-8-202-108.jpg",
+      "sha256": "fa25c7f4afcfe7276a39c2e2017c74e24e855179174bffde009f79e12e0884f2",
+      "input_sha256": "49cb1df4f4a2a0ff1445c0859612982ffbc0cb9e9abf0c4ce4118eb1121de85a"
+    }
+  ]
+}
