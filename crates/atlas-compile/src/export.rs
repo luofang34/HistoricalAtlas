@@ -152,6 +152,14 @@ pub(crate) fn insert(
     value: &impl Serialize,
 ) -> Result<(), ExportError> {
     let bytes = serde_json::to_vec_pretty(value)?;
+    insert_bytes(output, path, bytes)
+}
+
+pub(crate) fn insert_bytes(
+    output: &mut Artifacts,
+    path: &str,
+    bytes: Vec<u8>,
+) -> Result<(), ExportError> {
     if bytes.len() >= MAX_FILE_BYTES {
         return Err(ExportError::Oversize {
             path: path.into(),

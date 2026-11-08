@@ -12,10 +12,13 @@ cargo run -p atlas-compile -- build data dist
 cargo run -p atlas-compile -- register data controls.json registered.json
 cargo run -p atlas-compile -- slice data <tt-ms> nominal <new-output-directory>
 cargo run -p atlas-compile -- reconstruct data data/paleogeography/panxian-240ma.reconstruction.json <new-output-directory>
+cargo run -p atlas-compile -- tiles data https://example.org/atlas/ 14 <new-output-directory>
 sh scripts/ci.sh
 ```
 
 Curated records live in `data/`. `scan_page` is one-based; `page_or_sheet` identifies the printed page. Online sources carry a URL and records identify the cited section or table in `locator`. `checked` records transcription review. Dates retain their source convention, and coordinates retain their stated datum and angular precision.
+
+The `tiles` command publishes reviewed coordinate observations as body-separated MVT layers, TileJSON manifests, map styles, and the complete evidence index. Set `base-url` to the directory's final HTTP(S) address. `tiles/index.json` lists the available bodies; each tileset includes a sparse tile inventory. Points retain their record and entity UUIDs, original coordinate notation, source datum, reporting precision, and evidence URL. Dates remain source expressions; the time-slice indexes supply dated interpretations. The display projection is spherical Mercator, with buffered tile edges and an explicit error for coordinates outside its latitude domain.
 
 Time slices select dated name, hierarchy, and demographic estimates. Supply a signed decimal TT millisecond offset from J2000 and choose `nominal`, `possible`, or `certain`. The output includes `slice.json`, UUID shards under `slice/index/`, and the complete evidence index. Each selected value retains its interval, source-record links, uncertainty, and source disagreements. Competing values appear together with a conflict flag; different name languages occupy separate slots.
 

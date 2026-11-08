@@ -6,3 +6,4 @@ pub mod plate_models;
 pub mod reconstruction;
 pub mod registration;
 pub mod slice;
+pub mod tiles;

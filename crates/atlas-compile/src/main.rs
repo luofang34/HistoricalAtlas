@@ -8,6 +8,7 @@ use atlas_compile::{
     reconstruction::reconstruct_blocking,
     registration::register_blocking,
     slice::write_slice_blocking,
+    tiles::write_tiles_blocking,
 };
 use tracing::info;
 
@@ -59,9 +60,18 @@ fn main() -> Result<(), Box<dyn Error>> {
                 write_slice_blocking(Path::new(root), ticks, selection, Path::new(destination))?;
             info!(files, ticks, selection, destination, "Time slice compiled");
         }
+        [command, root, base_url, maxzoom, destination] if command == "tiles" => {
+            let files = write_tiles_blocking(
+                Path::new(root),
+                base_url,
+                maxzoom.parse()?,
+                Path::new(destination),
+            )?;
+            info!(files, destination, "Vector tiles compiled");
+        }
         _ => {
             return Err(
-                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | register <data> <controls.json> <new-result.json> | slice <data> <tt-ms> <nominal|possible|certain> <new-output-directory> | reconstruct <data> <request.json> <new-output-directory>".into(),
+                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | register <data> <controls.json> <new-result.json> | slice <data> <tt-ms> <nominal|possible|certain> <new-output-directory> | reconstruct <data> <request.json> <new-output-directory> | tiles <data> <base-url> <max-zoom> <new-output-directory>".into(),
             );
         }
     }
