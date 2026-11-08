@@ -1,0 +1,515 @@
+{
+  "entities": [
+    {
+      "id": "ef6af271-f307-5925-9f47-c314374ff5b9",
+      "key": "earth/cn-gz/bijie/puyi/qingjiao/qingjiao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "f838a53f-8684-590c-bb7c-c1814eb748c9",
+      "key": "earth/cn-gz/bijie/puyi/qingjiao/majiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "b8f55dfc-e587-5a46-8a67-5c14e6e9f5a7",
+      "key": "earth/cn-gz/bijie/puyi/qingjiao/yantoushang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "d6ba0cc5-7b49-54f1-bedc-d924e9f4e9d0",
+      "key": "earth/cn-gz/bijie/puyi/qingjiao/huangmaogou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "8f54414a-6304-5947-adf4-b9fc211f7fdc",
+      "key": "earth/cn-gz/bijie/puyi/qingjiao/bangzishang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "4c6cc5f1-98ca-5f1c-8d29-15df39fab914",
+      "key": "earth/cn-gz/bijie/puyi/qingjiao/dabang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "2a45035d-9190-5571-a64b-1e39805e154b",
+      "key": "earth/cn-gz/bijie/puyi/qingjiao/huangjiatu",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "4472765d-2afa-5b72-9a0f-36efca759b98",
+      "key": "earth/cn-gz/bijie/puyi/qingjiao/dalubian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "b68b3103-a016-5a6f-a52a-c3bae4051a7e",
+      "key": "earth/cn-gz/bijie/puyi/qingjiao/anjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "7dad9a9f-221e-5aea-8f3c-8047dff4fab0",
+      "key": "earth/cn-gz/bijie/puyi/qingjiao/mengjiagou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "0fce9efb-195b-5a38-84e5-01ebe0bda7c3",
+      "key": "earth/cn-gz/bijie/puyi/qingjiao/changlinggeng",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "3a83367f-7e77-50db-a398-1c552fb8bf73",
+      "key": "earth/cn-gz/bijie/puyi/qingjiao/shenjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    }
+  ],
+  "records": [
+    {
+      "id": "02e759df-a65a-530c-afe9-8c00bba68a4f",
+      "key": "bijie-gazetteer/p239/puyi/qingjiao/qingjiao",
+      "entity_id": "ef6af271-f307-5925-9f47-c314374ff5b9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "239",
+      "scan_page": 274,
+      "locator": "Place table, row 1: 箐脚",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "箐脚",
+        "pinyin": "Qìngjiǎo",
+        "population": 178,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "31018bab-c653-558d-9522-a4eddcadcf04",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "9c2612f4-880b-57df-87e4-fb80b5ee914f",
+      "key": "bijie-gazetteer/p239/puyi/qingjiao/majiazhai",
+      "entity_id": "f838a53f-8684-590c-bb7c-c1814eb748c9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "239",
+      "scan_page": 274,
+      "locator": "Place table, row 2: 马家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "马家寨",
+        "pinyin": "Mǎjiāzhài",
+        "population": 122,
+        "households": null,
+        "ethnicities": [
+          "苗"
+        ],
+        "parent_id": "31018bab-c653-558d-9522-a4eddcadcf04",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bfadb051-f089-5b49-9c39-506b3f4c9805",
+      "key": "bijie-gazetteer/p239/puyi/qingjiao/yantoushang",
+      "entity_id": "b8f55dfc-e587-5a46-8a67-5c14e6e9f5a7",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "239",
+      "scan_page": 274,
+      "locator": "Place table, row 3: 岩头上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "岩头上",
+        "pinyin": "Yántóushàng",
+        "population": 58,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "31018bab-c653-558d-9522-a4eddcadcf04",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7d39826e-be00-53ac-9236-8a2be25e26f2",
+      "key": "bijie-gazetteer/p239/puyi/qingjiao/huangmaogou",
+      "entity_id": "d6ba0cc5-7b49-54f1-bedc-d924e9f4e9d0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "239",
+      "scan_page": 274,
+      "locator": "Place table, row 4: 黄毛沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "黄毛沟",
+        "pinyin": "Huángmáogōu",
+        "population": 141,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "31018bab-c653-558d-9522-a4eddcadcf04",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d21ec8a3-1b35-51ee-9e73-3810af57a4f3",
+      "key": "bijie-gazetteer/p239/puyi/qingjiao/bangzishang",
+      "entity_id": "8f54414a-6304-5947-adf4-b9fc211f7fdc",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "239",
+      "scan_page": 274,
+      "locator": "Place table, row 5: 磅子上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "磅子上",
+        "pinyin": "Bàngzǐshàng",
+        "population": 27,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "31018bab-c653-558d-9522-a4eddcadcf04",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.65,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°39′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2845732f-3834-5b93-ab58-6772616e5c7f",
+      "key": "bijie-gazetteer/p239/puyi/qingjiao/dabang",
+      "entity_id": "4c6cc5f1-98ca-5f1c-8d29-15df39fab914",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "239",
+      "scan_page": 274,
+      "locator": "Place table, row 6: 大磅",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大磅",
+        "pinyin": "Dàbàng",
+        "population": 62,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "31018bab-c653-558d-9522-a4eddcadcf04",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "1ae687cd-5693-56de-ac58-72b9a68ace5e",
+      "key": "bijie-gazetteer/p239/puyi/qingjiao/huangjiatu",
+      "entity_id": "2a45035d-9190-5571-a64b-1e39805e154b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "239",
+      "scan_page": 274,
+      "locator": "Place table, row 7: 黄家土",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "黄家土",
+        "pinyin": "Huángjiātǔ",
+        "population": 17,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "31018bab-c653-558d-9522-a4eddcadcf04",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.61666666666666,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°37′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "33e014ad-9e6b-5a96-ae23-79ea99b01273",
+      "key": "bijie-gazetteer/p239/puyi/qingjiao/dalubian",
+      "entity_id": "4472765d-2afa-5b72-9a0f-36efca759b98",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "239",
+      "scan_page": 274,
+      "locator": "Place table, row 8: 大路边",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大路边",
+        "pinyin": "Dàlùbiān",
+        "population": 60,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "31018bab-c653-558d-9522-a4eddcadcf04",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c278d1f6-552a-537d-9ae2-f98dc8fadfde",
+      "key": "bijie-gazetteer/p239/puyi/qingjiao/anjiazhai",
+      "entity_id": "b68b3103-a016-5a6f-a52a-c3bae4051a7e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "239",
+      "scan_page": 274,
+      "locator": "Place table, row 9: 安家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "安家寨",
+        "pinyin": "Ānjiāzhài",
+        "population": 148,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "彝",
+          "苗"
+        ],
+        "parent_id": "31018bab-c653-558d-9522-a4eddcadcf04",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.65,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°39′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f96ea91d-81d0-5167-98d8-98a752f40b63",
+      "key": "bijie-gazetteer/p239/puyi/qingjiao/mengjiagou",
+      "entity_id": "7dad9a9f-221e-5aea-8f3c-8047dff4fab0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "239",
+      "scan_page": 274,
+      "locator": "Place table, row 10: 蒙家沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "蒙家沟",
+        "pinyin": "Méngjiāgōu",
+        "population": 147,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "31018bab-c653-558d-9522-a4eddcadcf04",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.65,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°39′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f32f39a6-9c2a-5263-856a-bfc485eaaa17",
+      "key": "bijie-gazetteer/p239/puyi/qingjiao/changlinggeng",
+      "entity_id": "0fce9efb-195b-5a38-84e5-01ebe0bda7c3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "239",
+      "scan_page": 274,
+      "locator": "Place table, row 11: 长岭埂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "长岭埂",
+        "pinyin": "Chánglǐnggěng",
+        "population": 29,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "31018bab-c653-558d-9522-a4eddcadcf04",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "be8ae33a-bd4c-5027-82bc-df6a1ba6e171",
+      "key": "bijie-gazetteer/p239/puyi/qingjiao/shenjiazhai",
+      "entity_id": "3a83367f-7e77-50db-a398-1c552fb8bf73",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "239",
+      "scan_page": 274,
+      "locator": "Place table, row 12: 申家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "申家寨",
+        "pinyin": "Shēnjiāzhài",
+        "population": 255,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "31018bab-c653-558d-9522-a4eddcadcf04",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.583333333333332
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°35′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

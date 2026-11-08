@@ -1,0 +1,178 @@
+{
+  "entities": [
+    {
+      "id": "a007cc7a-c70c-5b17-a5c8-5b445f87baa6",
+      "key": "earth/cn-gz/bijie/shatian/muwo-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "d04db9b3-c5dd-58c3-9cfe-2e1e2fa9fdac",
+      "key": "earth/cn-gz/bijie/shatian/muwo/banpo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "5dce219c-d0eb-5616-894c-5a5aaeecd2bb",
+      "key": "earth/cn-gz/bijie/liuwan/jianshanzi-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "9b36c7dc-0a29-5798-9692-eb56ca0507f3",
+      "key": "earth/cn-gz/bijie/liuwan/jianshanzi/jianshanzi",
+      "body": "earth",
+      "kind": "settlement"
+    }
+  ],
+  "records": [
+    {
+      "id": "94dd1803-f2ad-521d-bb56-b84105c2f081",
+      "key": "bijie-gazetteer/p248/shatian/muwo-brigade",
+      "entity_id": "a007cc7a-c70c-5b17-a5c8-5b445f87baa6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "248",
+      "scan_page": 283,
+      "locator": "Place table, row 29: 木窝大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "木窝大队",
+        "pinyin": "Mùwō Dàduì",
+        "population": 1249,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "fd401a53-6de9-5f76-8cef-63645da4835a",
+        "rank": "brigade",
+        "seat_id": "d04db9b3-c5dd-58c3-9cfe-2e1e2fa9fdac",
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "34bcb3a6-c41d-5a86-845f-cce88b72cadd",
+      "key": "bijie-gazetteer/p248/shatian/muwo/banpo",
+      "entity_id": "d04db9b3-c5dd-58c3-9cfe-2e1e2fa9fdac",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "248",
+      "scan_page": 283,
+      "locator": "Place table, row 30: 半坡",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "半坡",
+        "pinyin": "Bànpō",
+        "population": 197,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "a007cc7a-c70c-5b17-a5c8-5b445f87baa6",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.7,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°42′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "09469d90-1c69-5cba-bfb3-17040b29c62b",
+      "key": "bijie-gazetteer/p264/liuwan/jianshanzi-brigade",
+      "entity_id": "5dce219c-d0eb-5616-894c-5a5aaeecd2bb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "264",
+      "scan_page": 299,
+      "locator": "Place table, row 10: 尖山子大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "尖山子大队",
+        "pinyin": "Jiānshānzǐ Dàduì",
+        "population": 947,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉",
+          "苗"
+        ],
+        "parent_id": "a8d1cc61-b619-50dc-832b-6f23b774fc9f",
+        "rank": "brigade",
+        "seat_id": "9b36c7dc-0a29-5798-9692-eb56ca0507f3",
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "9cf8c7a8-6db1-5056-a147-a3b20edd9d3c",
+      "key": "bijie-gazetteer/p264/liuwan/jianshanzi/jianshanzi",
+      "entity_id": "9b36c7dc-0a29-5798-9692-eb56ca0507f3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "264",
+      "scan_page": 299,
+      "locator": "Place table, row 20: 尖山子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "尖山子",
+        "pinyin": "Jiānshānzǐ",
+        "population": 160,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5dce219c-d0eb-5616-894c-5a5aaeecd2bb",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

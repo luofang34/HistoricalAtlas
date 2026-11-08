@@ -419,6 +419,10 @@ mod alie_tests;
 mod yanzikou_tests;
 
 #[cfg(test)]
+#[path = "export/puyi/tests.rs"]
+mod puyi_tests;
+
+#[cfg(test)]
 #[path = "export/commune_anchors/tests.rs"]
 mod commune_anchor_tests;
 

@@ -1,0 +1,276 @@
+{
+  "entities": [],
+  "records": [
+    {
+      "id": "95971ac6-96f2-5e9b-a255-9c349e842917",
+      "key": "bijie-gazetteer/p241/ledu-commune/extent",
+      "entity_id": "046b16b1-ad9f-5bf7-b569-9562fc446384",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "241",
+      "scan_page": 276,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": "乐都公社在毕节县城东北面，距城84公里，位于东经105°38′～105°41′，北纬27°38′至27°40′之间，总面积38.8平方公里。东邻沙田，南频普宜，西南接柳湾，西靠小河，北抵火马等公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "乐都公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "乐都公社在毕节县城东北面，距城84公里，位于东经105°38′～105°41′，北纬27°38′至27°40′之间，总面积38.8平方公里。东邻沙田，南频普宜，西南接柳湾，西靠小河，北抵火马等公社。",
+        "territory": {
+          "area_square_km": 38.8,
+          "neighbors": [
+            {
+              "name": "沙田",
+              "entity_id": "fd401a53-6de9-5f76-8cef-63645da4835a"
+            },
+            {
+              "name": "普宜",
+              "entity_id": "ca4267ea-afb2-586c-ade4-92ebec8d7e3f"
+            },
+            {
+              "name": "柳湾",
+              "entity_id": "a8d1cc61-b619-50dc-832b-6f23b774fc9f"
+            },
+            {
+              "name": "小河",
+              "entity_id": "08922bef-7c60-5335-9fc8-01400b3b0f12"
+            },
+            {
+              "name": "火马",
+              "entity_id": "0f9aebd8-38ad-5a6c-9f2c-e97ede421571"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "15487d64-81dc-59d7-a541-3f840b0e6f0c",
+      "key": "bijie-gazetteer/p241/ledu/ledu/ledu/name",
+      "entity_id": "46ba5927-f6c1-5a98-8618-ef57bde4d45e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "241",
+      "scan_page": 276,
+      "locator": "Commune overview, name",
+      "verbatim_quote": "乐都：原名“裸都”，为彝族居住地系彝语地名，含义是煤洞，因该地产煤而得名。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "乐都",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "裸都",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "8086bd42-2968-5864-b088-003ce14a669a",
+      "key": "bijie-gazetteer/p241/ledu-commune/chronology",
+      "entity_id": "046b16b1-ad9f-5bf7-b569-9562fc446384",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "241",
+      "scan_page": 276,
+      "locator": "Commune overview, chronology",
+      "verbatim_quote": "1954年建立民族自治乡，办初级社，1956年进入高级社，1958年成立乐都人民公社，隶普宜区辖。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "乐都公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "001b8c1e-399f-55e1-a36d-1865f0cb7992",
+      "key": "bijie-gazetteer/p241/ledu-commune/establishment",
+      "entity_id": "046b16b1-ad9f-5bf7-b569-9562fc446384",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "241",
+      "scan_page": 276,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "1958年成立乐都人民公社，隶普宜区辖。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "乐都公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "59294a4f-4970-5823-b0a1-eca202809f03",
+      "key": "bijie-gazetteer/p241/ledu-commune/seat",
+      "entity_id": "046b16b1-ad9f-5bf7-b569-9562fc446384",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "241",
+      "scan_page": 276,
+      "locator": "Commune overview, seat",
+      "verbatim_quote": "公社驻地滥田湾。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "乐都公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "294971d1-a329-5be1-8a58-64e0f391ca9c",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ad7603f7-1de5-58da-8949-e9899eb78a6a",
+      "key": "bijie-gazetteer/p241/ledu-commune/population",
+      "entity_id": "046b16b1-ad9f-5bf7-b569-9562fc446384",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "241",
+      "scan_page": 276,
+      "locator": "Commune overview, population",
+      "verbatim_quote": "社辖乐都、田尾、大湾子、垭口上、冷水、太平场六个大队，四十七个生产队，四十八个自然村。为民族杂居地，总人口933户，4761人，其中：苗族139人，彝族1801人，及其他民族51人，占总人口的44%，余为汉族，均以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "乐都公社",
+        "pinyin": null,
+        "population": 4761,
+        "households": 933,
+        "ethnicities": [
+          "苗",
+          "彝",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview counts six brigades, 47 production teams, and 48 natural villages; 139 Miao, 1,801 Yi, and 51 other residents."
+      }
+    },
+    {
+      "id": "5907b221-65dd-52d3-a722-f79db8db56a7",
+      "key": "bijie-gazetteer/p241/ledu-commune/terrain",
+      "entity_id": "046b16b1-ad9f-5bf7-b569-9562fc446384",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "241",
+      "scan_page": 276,
+      "locator": "Commune overview, terrain",
+      "verbatim_quote": "中部凸起，下寨村之后山最高海拔1396米，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "乐都公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "66208301-b623-510d-9f20-5b26915887a0",
+      "key": "editorial/bijie/ledu-commune/establishment",
+      "entity_id": "046b16b1-ad9f-5bf7-b569-9562fc446384",
+      "basis": [
+        "001b8c1e-399f-55e1-a36d-1865f0cb7992"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "12b876fa-2220-5903-993a-106ee740f899",
+      "key": "editorial/bijie/ledu-commune/name",
+      "entity_id": "046b16b1-ad9f-5bf7-b569-9562fc446384",
+      "basis": [
+        "001b8c1e-399f-55e1-a36d-1865f0cb7992",
+        "23d4534b-b853-55eb-b2b9-dc3f6705cd70"
+      ],
+      "brief": "Use the table name from the cited establishment year.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "乐都公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}
