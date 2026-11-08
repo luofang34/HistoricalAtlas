@@ -2,7 +2,8 @@
 
 Use the user-provided repository workflow and Rust rules. Use GitButler for version control.
 
-- Tools are AGPL-3.0-or-later. Curated data is CC-BY-SA-4.0. Keep source scans, full-page OCR, credentials, and local paths outside publication.
+- Write project documentation and interface text in English. Preserve source titles, place names, and quotations in their original language. Keep prose direct and omit defensive disclaimers.
+- Tools are AGPL-3.0-or-later. Curated data is CC-BY-SA-4.0.
 - Every published assertion must cite a source and an exact printed page/sheet plus a one-based scan page where available. Keep original dates, coordinate notation, precision, and unknown values. Never promote OCR drafts to checked records without page review.
 - Source observations and derived estimates are separate. Do not invent exact dates, WGS84 coordinates, control points, or surveyed boundaries. Record uncertain interpretation and its basis explicitly.
 - Run `scripts/ci.sh` before pushing. It includes native and WASM checks, data validation, and structural gates. Do not change shared CI or force-push without the user's confirmation.
