@@ -135,6 +135,8 @@ fn source_comparisons_and_the_haogou_exclusion_follow_the_reconstructed_geometry
         ("haogou", 9.5, 5),
         ("liuhua", 7.6, 6),
         ("huangnichong", 47.9, 6),
+        ("houqing", 62.1, 8),
+        ("taiji", 47.7, 4),
     ] {
         let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{slug}-commune")).unwrap();
         let boundary = boundaries
@@ -170,6 +172,8 @@ fn source_comparisons_and_the_haogou_exclusion_follow_the_reconstructed_geometry
         assert!(invalid.feature(&input.data, None).is_err());
         if slug != "huangnichong" {
             assert_eq!(boundary.region.polygons.len(), 1);
+        }
+        if matches!(slug, "baiyan" | "haogou" | "liuhua") {
             assert!(boundary.region.vertices.iter().all(|p| p.x > 105.4));
         }
         assert!(
@@ -224,7 +228,7 @@ fn area_constraints_reject_unreviewed_or_other_units_evidence() {
         .filter(|(_, u)| u.area_constraint.is_some())
         .map(|(i, _)| i)
         .collect();
-    assert_eq!(constrained.len(), 4);
+    assert_eq!(constrained.len(), 6);
     let first = constrained[0];
     let constraint = request.units[first].area_constraint.clone().unwrap();
     request.units[first].area_constraint = request.units[constrained[1]].area_constraint.clone();

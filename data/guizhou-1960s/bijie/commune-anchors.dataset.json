@@ -2,40 +2,6 @@
   "entities": [],
   "records": [
     {
-      "id": "fc7e5de6-af08-5c32-93b0-a553cfba4503",
-      "key": "bijie-gazetteer/page-230/taiji-commune",
-      "entity_id": "a4625554-46ca-5407-a239-b84ce8bd31ff",
-      "source_id": "bijie-gazetteer",
-      "page_or_sheet": "230",
-      "scan_page": 265,
-      "locator": "太极公社 row: name and geographic coordinates",
-      "verbatim_quote": null,
-      "checked": true,
-      "source_date": null,
-      "observation": {
-        "name": "太极公社",
-        "pinyin": null,
-        "population": null,
-        "households": null,
-        "ethnicities": [],
-        "parent_id": null,
-        "rank": "commune",
-        "seat_id": null,
-        "coordinate": {
-          "point": {
-            "longitude": 105.48333333333333,
-            "latitude": 27.583333333333332
-          },
-          "longitude_text": "105°29′",
-          "latitude_text": "27°35′",
-          "resolution_arcminutes": 1.0,
-          "datum": "unspecified"
-        },
-        "former_names": [],
-        "note": null
-      }
-    },
-    {
       "id": "31b184c3-9558-5fc6-b4a4-dee344e0e065",
       "key": "bijie-gazetteer/page-238/puyi-commune",
       "entity_id": "ca4267ea-afb2-586c-ade4-92ebec8d7e3f",

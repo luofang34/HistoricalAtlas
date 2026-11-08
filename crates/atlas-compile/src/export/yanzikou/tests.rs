@@ -13,6 +13,9 @@ mod communes;
 #[path = "xianjin_efeng/tests.rs"]
 mod xianjin_efeng;
 
+#[path = "taiji/tests.rs"]
+mod taiji;
+
 #[cfg(test)]
 fn input() -> LedgerInput {
     load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap()

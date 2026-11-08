@@ -117625,7 +117625,11 @@
           "kind": "record",
           "record_id": "71cd7ea8-c4fe-573d-b05d-28b2eb125e97"
         }
-      ]
+      ],
+      "area_constraint": {
+        "record_id": "432ea019-1ec6-51f7-b8d1-03e87e6241a2",
+        "tolerance_square_km": 0.1
+      }
     },
     {
       "record_id": "22306ee5-0706-5871-a701-ace10cb93a15",
@@ -119368,14 +119372,6 @@
         },
         {
           "kind": "record",
-          "record_id": "fd401acc-a4eb-5ac6-9239-9749365d7e53"
-        },
-        {
-          "kind": "record",
-          "record_id": "056e8757-9845-5a98-af73-857ae050f66c"
-        },
-        {
-          "kind": "record",
           "record_id": "e5b235fb-213f-57de-916a-63bec4c6121a"
         },
         {
@@ -119764,8 +119760,360 @@
         {
           "kind": "record",
           "record_id": "fc7e5de6-af08-5c32-93b0-a553cfba4503"
+        },
+        {
+          "kind": "record",
+          "record_id": "7761f131-bfe5-574f-b2c1-a13549111d9b"
+        },
+        {
+          "kind": "record",
+          "record_id": "21e032a0-797d-5724-b91e-b9accd037400"
+        },
+        {
+          "kind": "record",
+          "record_id": "4078246a-746b-50bb-82ed-8abf63548aef"
+        },
+        {
+          "kind": "record",
+          "record_id": "0674533b-f68b-5aa3-a307-2c69b0c76e40"
+        },
+        {
+          "kind": "record",
+          "record_id": "186d27ff-4b7f-5303-b709-0f9f62b8fad6"
+        },
+        {
+          "kind": "record",
+          "record_id": "2025c0b5-5a57-57de-a30f-d04e7f1431f5"
+        },
+        {
+          "kind": "record",
+          "record_id": "cd6da95a-19c2-558b-a4ee-f02b027e6be7"
+        },
+        {
+          "kind": "record",
+          "record_id": "fa56073c-88f7-57d5-908a-7b8c9522708d"
+        },
+        {
+          "kind": "record",
+          "record_id": "4490143d-4a0b-5b5a-87ba-d0243c468c29"
+        },
+        {
+          "kind": "record",
+          "record_id": "d53766a9-40f8-5c81-b3ad-b6e64af2805f"
+        },
+        {
+          "kind": "record",
+          "record_id": "34e5be5e-170f-5f76-973b-dafb3a7fe1a9"
+        },
+        {
+          "kind": "record",
+          "record_id": "beb0cd3d-30d9-5abb-9b92-b03709100043"
+        },
+        {
+          "kind": "record",
+          "record_id": "75a1b8e0-288f-5c91-b863-8c44ae885f13"
+        },
+        {
+          "kind": "record",
+          "record_id": "68d6e57e-35a9-5978-8f86-4121ea8b93da"
+        },
+        {
+          "kind": "record",
+          "record_id": "a0c9ea31-6be4-5563-bc41-1c0c8a1a9b5b"
+        },
+        {
+          "kind": "record",
+          "record_id": "aacaa059-b70f-542e-a6af-a5cfa1ccd98f"
+        },
+        {
+          "kind": "record",
+          "record_id": "f40e4056-2066-5091-ba2f-de94e6d22e3e"
+        },
+        {
+          "kind": "record",
+          "record_id": "7ca208d4-df4b-5956-9e36-dc64355f1801"
+        },
+        {
+          "kind": "record",
+          "record_id": "7ae95d19-ad09-5c19-8a76-ccde97a454b3"
+        },
+        {
+          "kind": "record",
+          "record_id": "69ac53a2-5fb0-5826-b57e-0cb861ab370e"
+        },
+        {
+          "kind": "record",
+          "record_id": "81eb768f-1dfd-5312-9bf7-d68f0e6947df"
+        },
+        {
+          "kind": "record",
+          "record_id": "a61330af-6ead-5f04-901a-5167212d22b6"
+        },
+        {
+          "kind": "record",
+          "record_id": "b9603b0f-59e1-57f5-9b30-2c33c241ce69"
+        },
+        {
+          "kind": "record",
+          "record_id": "210dbad1-4075-5961-9a33-330ef98364d9"
+        },
+        {
+          "kind": "record",
+          "record_id": "fcb34c65-4ee1-5a2d-85e1-f92dc1b797cf"
+        },
+        {
+          "kind": "record",
+          "record_id": "6d7c8d95-59f0-53e3-95bb-e4d7c731eae5"
+        },
+        {
+          "kind": "record",
+          "record_id": "45d5b81d-f780-5235-bbe1-65fae2f5eb24"
+        },
+        {
+          "kind": "record",
+          "record_id": "c62ede41-d223-5302-9ddb-bc696bcf77d2"
+        },
+        {
+          "kind": "record",
+          "record_id": "38d13d74-0d7c-5126-a475-1126f4f017bf"
+        },
+        {
+          "kind": "record",
+          "record_id": "756e8393-0510-5ffd-ba90-c7a3788e5505"
+        },
+        {
+          "kind": "record",
+          "record_id": "5b68663d-a820-5555-b357-e09dd1ed78fd"
+        },
+        {
+          "kind": "record",
+          "record_id": "5e0ab334-25c8-5cfd-8ac1-b15d58947fd1"
+        },
+        {
+          "kind": "record",
+          "record_id": "c15a2483-afa2-5f8d-9851-6278a1c8e86a"
+        },
+        {
+          "kind": "record",
+          "record_id": "11defe3a-79c1-509b-b30f-22e09ed3ed2f"
+        },
+        {
+          "kind": "record",
+          "record_id": "4a2ce891-8a21-51c8-be0b-052a709f52bb"
+        },
+        {
+          "kind": "record",
+          "record_id": "974f7ec7-7695-5031-aac4-6820066c6de9"
+        },
+        {
+          "kind": "record",
+          "record_id": "fcd3b768-2b93-512f-b06f-73ba8e6b3c22"
+        },
+        {
+          "kind": "record",
+          "record_id": "802dc9e4-5fe3-51a5-8d1c-3ace502a796d"
+        },
+        {
+          "kind": "record",
+          "record_id": "f7dbe649-c1e1-5428-9478-da8a7617108d"
+        },
+        {
+          "kind": "record",
+          "record_id": "f84ea9a9-ae05-5af9-b23a-a6c8c450fa77"
+        },
+        {
+          "kind": "record",
+          "record_id": "597a1fcb-3f78-51a5-b815-d430ce9d555f"
+        },
+        {
+          "kind": "record",
+          "record_id": "600b8a12-b3f5-5468-8b9e-190a5e00bc3d"
+        },
+        {
+          "kind": "record",
+          "record_id": "2b465cc5-e351-5491-a635-9b695f829ea6"
+        },
+        {
+          "kind": "record",
+          "record_id": "284aedcf-f518-549e-9749-1129da1a5bc4"
+        },
+        {
+          "kind": "record",
+          "record_id": "430a8a8b-6e60-5213-be80-aa1e65ef792a"
+        },
+        {
+          "kind": "record",
+          "record_id": "cbc96eeb-6875-5517-be46-e307b9e7e1fb"
+        },
+        {
+          "kind": "record",
+          "record_id": "58201558-5bfd-57c1-8c7d-2d18b8a655e3"
+        },
+        {
+          "kind": "record",
+          "record_id": "8b7bbca2-7836-510b-b0ec-b6f3e22e195e"
+        },
+        {
+          "kind": "record",
+          "record_id": "0c8bd4d4-0ea8-559f-b37f-a734b81f6565"
+        },
+        {
+          "kind": "record",
+          "record_id": "fb800aba-8f29-5e23-8b72-56e31a5a2f4a"
+        },
+        {
+          "kind": "record",
+          "record_id": "9456932f-e6de-5aee-adfb-768331041799"
+        },
+        {
+          "kind": "record",
+          "record_id": "07f4e187-8cb7-50fe-a200-387f38bf5d92"
+        },
+        {
+          "kind": "record",
+          "record_id": "1a7150e6-9d02-5f06-a12e-0e34dc3ae609"
+        },
+        {
+          "kind": "record",
+          "record_id": "99a65756-b353-5a68-b51c-5eb492f471ad"
+        },
+        {
+          "kind": "record",
+          "record_id": "9a537913-61db-5ea1-9fa5-7933028ab2d1"
+        },
+        {
+          "kind": "record",
+          "record_id": "51f232ae-1569-5bb2-8a9a-884b5fb22e55"
+        },
+        {
+          "kind": "record",
+          "record_id": "bafa48c1-074d-5e93-be80-b7158692dd88"
+        },
+        {
+          "kind": "record",
+          "record_id": "42ffe572-6b19-501d-8099-90658f695c6f"
+        },
+        {
+          "kind": "record",
+          "record_id": "90344447-a6c6-53e8-a7f6-015121ab6750"
+        },
+        {
+          "kind": "record",
+          "record_id": "b0214f1f-a337-549c-86a3-ae36b3977722"
+        },
+        {
+          "kind": "record",
+          "record_id": "578ab446-56a8-5d7c-99f8-0a63a23d3d47"
+        },
+        {
+          "kind": "record",
+          "record_id": "cebdfa22-862a-5af2-a78c-e99f8b9a7a15"
+        },
+        {
+          "kind": "record",
+          "record_id": "01304c50-1724-516e-b953-fbdcd65bcc73"
+        },
+        {
+          "kind": "record",
+          "record_id": "5b3d45fe-f20f-5086-93b4-88f862207878"
+        },
+        {
+          "kind": "record",
+          "record_id": "17ad055c-db7e-5cce-8257-d9b165f5cb88"
+        },
+        {
+          "kind": "record",
+          "record_id": "a3f4bd43-d547-5613-8112-29f71c675914"
+        },
+        {
+          "kind": "record",
+          "record_id": "a8c90c02-bc1b-505e-91d2-41ffd04f11d5"
+        },
+        {
+          "kind": "record",
+          "record_id": "2238f2cd-fa3f-556d-ba0c-7a018c56b5bc"
+        },
+        {
+          "kind": "record",
+          "record_id": "bb511646-5638-539e-9246-5c6f5d73c913"
+        },
+        {
+          "kind": "record",
+          "record_id": "a31333c7-7a09-57f2-a92d-29f39dc598a6"
+        },
+        {
+          "kind": "record",
+          "record_id": "648f6779-a4f9-5968-8633-80fed8df7d9a"
+        },
+        {
+          "kind": "record",
+          "record_id": "e535abd7-119b-5854-911f-acd3d9e1a566"
+        },
+        {
+          "kind": "record",
+          "record_id": "bf246a36-67a7-5a3b-a8f7-f95a434014e7"
+        },
+        {
+          "kind": "record",
+          "record_id": "a0480e17-e06f-511f-93e3-3a00756d9f85"
+        },
+        {
+          "kind": "record",
+          "record_id": "a5ffefd3-9127-544f-9b1f-278bb680243b"
+        },
+        {
+          "kind": "record",
+          "record_id": "c450ea8f-624d-5570-b6d6-ee19295950e4"
+        },
+        {
+          "kind": "record",
+          "record_id": "931ed2e2-0ecc-5157-9f2e-d3ab00e53550"
+        },
+        {
+          "kind": "record",
+          "record_id": "b5ef73da-3126-572d-897c-b98c3c3ed2b4"
+        },
+        {
+          "kind": "record",
+          "record_id": "e2004ac8-fe23-5329-9673-00c2cde62f10"
+        },
+        {
+          "kind": "record",
+          "record_id": "fe073c64-b8b7-59ef-8d0c-3bb9bc8d06bc"
+        },
+        {
+          "kind": "record",
+          "record_id": "4230bc88-f160-5f03-9d07-4ca9eae290ca"
+        },
+        {
+          "kind": "record",
+          "record_id": "5387aba9-aa08-52f1-94d3-0250d5161864"
+        },
+        {
+          "kind": "record",
+          "record_id": "46d204e9-420a-5acc-9663-78fb3d913561"
+        },
+        {
+          "kind": "record",
+          "record_id": "5f6bb844-43a2-5aaf-9405-ae33aa32f920"
+        },
+        {
+          "kind": "record",
+          "record_id": "dcc8e7b3-2ed1-5bd4-9ccc-7fe4b2f8db26"
+        },
+        {
+          "kind": "record",
+          "record_id": "4db49238-dcd3-5561-a6d2-7a18919dc6ca"
+        },
+        {
+          "kind": "record",
+          "record_id": "d61f4160-f5a1-51ca-a34f-546d1b9e4314"
         }
-      ]
+      ],
+      "area_constraint": {
+        "record_id": "bee05b3f-da8f-5cad-b3cb-072ac9eac2ce",
+        "tolerance_square_km": 0.1
+      }
     },
     {
       "record_id": "9a1683e6-c5d3-5b58-862b-5542c14dcc2d",
@@ -120452,6 +120800,10 @@
       "reason": "This elevation cell has source coordinates assigned to different communes; the settlement position needs refinement before it can constrain a boundary."
     },
     {
+      "record_id": "056e8757-9845-5a98-af73-857ae050f66c",
+      "reason": "This elevation cell has source coordinates assigned to different communes; the settlement position needs refinement before it can constrain a boundary."
+    },
+    {
       "record_id": "06614b0a-4440-5a89-87de-fb84d5b632ce",
       "reason": "This elevation cell has source coordinates assigned to different communes; the settlement position needs refinement before it can constrain a boundary."
     },
@@ -120988,6 +121340,10 @@
       "reason": "The printed coordinate lies outside the registered county envelope."
     },
     {
+      "record_id": "5351a496-ac90-517f-91ee-80456a63cb70",
+      "reason": "This elevation cell has source coordinates assigned to different communes; the settlement position needs refinement before it can constrain a boundary."
+    },
+    {
       "record_id": "542d8d35-24ad-5f97-805e-c49c6d24ec6e",
       "reason": "This elevation cell has source coordinates assigned to different communes; the settlement position needs refinement before it can constrain a boundary."
     },
@@ -121018,6 +121374,10 @@
     {
       "record_id": "56feb365-9e96-5f43-ad62-7e448cc73f85",
       "reason": "The printed coordinate lies outside the registered county envelope."
+    },
+    {
+      "record_id": "57208dc6-f269-524e-9380-56d1487f1a3c",
+      "reason": "This elevation cell has source coordinates assigned to different communes; the settlement position needs refinement before it can constrain a boundary."
     },
     {
       "record_id": "572f3cbe-df97-5958-bf09-087fa794f0b4",
@@ -122257,6 +122617,10 @@
     },
     {
       "record_id": "fc637a12-3e21-5892-98c5-1f6bfbd2e32d",
+      "reason": "This elevation cell has source coordinates assigned to different communes; the settlement position needs refinement before it can constrain a boundary."
+    },
+    {
+      "record_id": "fd401acc-a4eb-5ac6-9239-9749365d7e53",
       "reason": "This elevation cell has source coordinates assigned to different communes; the settlement position needs refinement before it can constrain a boundary."
     },
     {

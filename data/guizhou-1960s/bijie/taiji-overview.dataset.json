@@ -1,0 +1,342 @@
+{
+  "entities": [],
+  "records": [
+    {
+      "id": "bee05b3f-da8f-5cad-b3cb-072ac9eac2ce",
+      "key": "bijie-gazetteer/p229/taiji-commune/extent",
+      "entity_id": "a4625554-46ca-5407-a239-b84ce8bd31ff",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "229",
+      "scan_page": 264,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": "太极公社在毕节县城东北，相距七十公里，位于东经105°26′至105°31′，北纬27°33′至27°37′之间，总面积47.7平方公里。东连红岩，西靠燕子口，南邻斯栗，北靠亮岩等公社，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "太极公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "太极公社在毕节县城东北，相距七十公里，位于东经105°26′至105°31′，北纬27°33′至27°37′之间，总面积47.7平方公里。东连红岩，西靠燕子口，南邻斯栗，北靠亮岩等公社，",
+        "territory": {
+          "area_square_km": 47.7,
+          "neighbors": [
+            {
+              "name": "红岩",
+              "entity_id": "126109bd-1ae6-5c43-ab47-addc384047cf"
+            },
+            {
+              "name": "燕子口",
+              "entity_id": "0643c1be-7622-5fb9-9518-49972efe9238"
+            },
+            {
+              "name": "斯栗",
+              "entity_id": "f88908f9-e391-5517-bfab-c9bc7bb6906c"
+            },
+            {
+              "name": "亮岩",
+              "entity_id": "771c134d-858b-591f-8568-42ab29fa33b7"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "895cdac2-d077-5c6d-8598-0cb83d341993",
+      "key": "bijie-gazetteer/p229/taiji-commune/chronology",
+      "entity_id": "a4625554-46ca-5407-a239-b84ce8bd31ff",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "229",
+      "scan_page": 264,
+      "locator": "Commune overview, chronology",
+      "verbatim_quote": "自明洪武置卫治，太极属赤水卫辖。清康熙时代划归毕节县属长乐里辖。民国属燕岩乡辖。解放后1950年建村政权，1952年经土改后于1954年建乡政府，办初级社，1956年进入高级社，1958年成立太极人民公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "太极公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ffb3fae6-7bd2-5a0a-b36a-3a7c0c5d5620",
+      "key": "bijie-gazetteer/p229/taiji-commune/establishment",
+      "entity_id": "a4625554-46ca-5407-a239-b84ce8bd31ff",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "229",
+      "scan_page": 264,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "1958年成立太极人民公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "太极公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "84794b1d-8f04-5819-993f-79cc6878ac4b",
+      "key": "bijie-gazetteer/p229/taiji-commune/population",
+      "entity_id": "a4625554-46ca-5407-a239-b84ce8bd31ff",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "229",
+      "scan_page": 264,
+      "locator": "Commune overview, population",
+      "verbatim_quote": "辖：太极、飞轮、官河、裕民、关沟、庆祝、雄峰、桥头、阳光九个大队，七十九个生产队，九十一个自然村。居住着汉、苗、彝等民族。总人口1858户，9339人，其中：苗族128人，彝族12人，余为汉族，均以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "太极公社",
+        "pinyin": null,
+        "population": 9339,
+        "households": 1858,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "彝"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview counts nine brigades, 79 production teams, and 91 natural villages; 128 Miao and 12 Yi residents."
+      }
+    },
+    {
+      "id": "7eba1b68-3bc0-5da9-a855-52d6acba29b1",
+      "key": "bijie-gazetteer/p229/taiji/taiji/taijichang/seat",
+      "entity_id": "94c0d66f-88f9-53dc-b312-cb7c6b6185de",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "229",
+      "scan_page": 264,
+      "locator": "Commune overview, seat",
+      "verbatim_quote": "有一古老市集名太极场（俗称场坝上）今为公社驻地。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "太极场",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview gives 场坝上 as the local name."
+      }
+    },
+    {
+      "id": "9bed526d-a814-5295-a14a-c153e1129aad",
+      "key": "bijie-gazetteer/p229/taiji-commune/seat",
+      "entity_id": "a4625554-46ca-5407-a239-b84ce8bd31ff",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "229",
+      "scan_page": 264,
+      "locator": "Commune overview, seat",
+      "verbatim_quote": "有一古老市集名太极场（俗称场坝上）今为公社驻地。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "太极公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "94c0d66f-88f9-53dc-b312-cb7c6b6185de",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b2135ecf-78ad-544c-9c4e-8316ea267400",
+      "key": "bijie-gazetteer/p229/taiji/lengsha-liangzi/elevation",
+      "entity_id": "e0af63d9-6248-5abf-b957-8d9e08768a24",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "229",
+      "scan_page": 264,
+      "locator": "Commune overview, elevation",
+      "verbatim_quote": "最高处为冷砂梁子，海拔1553.6米，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "冷砂梁子",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "a4625554-46ca-5407-a239-b84ce8bd31ff",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "海拔1553.6米"
+      }
+    },
+    {
+      "id": "7a04b8ab-5bbb-5e38-b534-285e74014c1b",
+      "key": "bijie-gazetteer/p229/taiji/taiji-river/route",
+      "entity_id": "96c066c5-12ac-598b-bbde-65692c44d36f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "229",
+      "scan_page": 264,
+      "locator": "Commune overview, route",
+      "verbatim_quote": "西南麻塘河流入境内，西北有板桥河流入中部，于岔河口汇入太极河，最低海拔880米。太极河向东北流出，入红岩公社，由于众山拱护，河流迂回其间，形似太极图，因此得名。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "太极河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "a4625554-46ca-5407-a239-b84ce8bd31ff",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "西南麻塘河与西北板桥河于岔河口汇入；向东北流入红岩公社。"
+      }
+    },
+    {
+      "id": "16618e37-dddc-5084-bf6f-26dfba122acc",
+      "key": "bijie-gazetteer/p229/taiji/dashanying/garrison",
+      "entity_id": "f2c3820b-8384-5a49-8441-508cb4a5b8d4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "229",
+      "scan_page": 264,
+      "locator": "Commune overview, garrison",
+      "verbatim_quote": "明、清时代属水西夷目领地，曾于西南面设过毛冲沟营盘，大山营（当地称苏官家大营）以屯兵驻守，今遗留为地名。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大山营",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview gives 苏官家大营 as the local name."
+      }
+    },
+    {
+      "id": "327dca58-bb7d-5620-858c-a9bdf624cf77",
+      "key": "bijie-gazetteer/p229/taiji/maochonggou-yingpan/garrison",
+      "entity_id": "bb1519fe-906e-5359-939a-128de004df9f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "229",
+      "scan_page": 264,
+      "locator": "Commune overview, garrison",
+      "verbatim_quote": "明、清时代属水西夷目领地，曾于西南面设过毛冲沟营盘，大山营（当地称苏官家大营）以屯兵驻守，今遗留为地名。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "毛冲沟营盘",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "1026b1b5-4571-591a-b6bc-7b961e465b45",
+      "key": "editorial/bijie/taiji-commune/establishment",
+      "entity_id": "a4625554-46ca-5407-a239-b84ce8bd31ff",
+      "basis": [
+        "ffb3fae6-7bd2-5a0a-b36a-3a7c0c5d5620"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "e6612cc6-7a0a-5e7e-be0a-e08d3a22e01f",
+      "key": "editorial/bijie/taiji-commune/name",
+      "entity_id": "a4625554-46ca-5407-a239-b84ce8bd31ff",
+      "basis": [
+        "ffb3fae6-7bd2-5a0a-b36a-3a7c0c5d5620",
+        "fc7e5de6-af08-5c32-93b0-a553cfba4503"
+      ],
+      "brief": "Use the table name from the cited establishment year.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "太极公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

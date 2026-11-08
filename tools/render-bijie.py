@@ -226,7 +226,11 @@ def detail(data, selected, output):
     ax = fig.add_axes([.06, .13, .70, .73])
     basemap(ax, precision=3)
     draw_geometry(ax, units, outline, points, selected)
-    lo, hi = extent(ax, np.concatenate([u['path'].vertices for u in chosen]), .15)
+    locations = [p[0] for p in points if p[2] in selected]
+    vertices = np.concatenate([u['path'].vertices for u in chosen])
+    if locations:
+        vertices = np.concatenate([vertices, locations])
+    lo, hi = extent(ax, vertices, .15)
     scale(ax, lo, hi, 2, offset=.10)
     names = [(u['seeds'][0], u['name'], INK) for u in chosen]
     citations = set()
@@ -237,7 +241,7 @@ def detail(data, selected, output):
     labels(fig, ax, names, size=8)
     for unit in chosen:
         ax.scatter(*unit['seeds'][0], s=32, c=PALETTE[selected.index(unit['key'])], edgecolor=CREAM, lw=.8, zorder=6)
-    fig.text(.06, .945, 'BIJIE / SOURCE AREAS AND ADJOINING COMMUNES', fontsize=16)
+    fig.text(.06, .945, 'BIJIE / SETTLEMENTS AND RECONSTRUCTED BOUNDARIES', fontsize=14)
     fig.text(.06, .91, ' · '.join(u['name'] for u in chosen), fontsize=12)
     fig.text(.79, .866, 'Area fitted / reported', fontsize=9)
     y = .83
