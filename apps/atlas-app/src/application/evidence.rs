@@ -105,6 +105,9 @@ impl Application {
                 ui.label(pinyin);
             }
             coordinate_evidence(ui, record);
+            if let Some(extent) = &record.observation.extent {
+                ui.label(format!("Extent: {extent}"));
+            }
             if let Some(population) = record.observation.population {
                 ui.label(format!("Population: {population}"));
             }

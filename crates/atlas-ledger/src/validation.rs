@@ -55,6 +55,14 @@ fn validate_record(
         .ok_or_else(|| fail(&record.key, "unknown source"))?;
     citations::validate_citation(record, source)?;
     dates::validate_dates(record, sources)?;
+    if record
+        .observation
+        .extent
+        .as_ref()
+        .is_some_and(|extent| extent.trim().is_empty())
+    {
+        return Err(fail(&record.key, "empty spatial extent"));
+    }
     for target in record
         .observation
         .parent_id

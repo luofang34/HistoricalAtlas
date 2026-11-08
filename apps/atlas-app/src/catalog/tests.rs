@@ -1,5 +1,30 @@
 use super::*;
 
+#[test]
+fn urban_search_keeps_same_named_temples_distinct_and_follows_office_hierarchy() {
+    let atlas = atlas();
+    let matches = atlas.search("财神庙", BodyId::Earth);
+    assert_eq!(matches.len(), 2);
+    let temple_notes: BTreeSet<_> = matches
+        .iter()
+        .flat_map(|id| &atlas.entry(*id).unwrap().records)
+        .filter_map(|record| record.observation.note.clone())
+        .collect();
+    assert_eq!(
+        temple_notes,
+        BTreeSet::from([
+            "已废，改居民住房。".into(),
+            "已废，民国时设商会，现为人民剧场。".into()
+        ])
+    );
+    let road = EntityId::from_key("earth/cn-gz/bijie/urban/guihua-road").unwrap();
+    let office = EntityId::from_key("earth/cn-gz/bijie/urban/weining-road-office").unwrap();
+    let town = EntityId::from_key("earth/cn-gz/bijie/bijie-town").unwrap();
+    assert_eq!(atlas.parents(road), BTreeSet::from([office]));
+    assert_eq!(atlas.parents(office), BTreeSet::from([town]));
+    assert!(atlas.children(office).contains(&road));
+}
+
 #[cfg(test)]
 pub(crate) fn publication() -> Publication {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
@@ -125,7 +150,13 @@ fn bijie_county_browses_all_districts_and_communes_from_compiled_evidence() {
         let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{slug}")).unwrap();
         assert!(districts.contains(&id), "{slug}");
         assert_eq!(atlas.parents(id), BTreeSet::from([county]), "{slug}");
-        let children = atlas.children(id);
+        let children: Vec<_> = atlas
+            .children(id)
+            .into_iter()
+            .filter(|child| {
+                atlas.entry(*child).unwrap().entity.kind == atlas_ledger::model::EntityKind::Commune
+            })
+            .collect();
         assert_eq!(children.len(), count, "{slug}");
         for child in children {
             assert!(

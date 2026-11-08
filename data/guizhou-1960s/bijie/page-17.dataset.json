@@ -1,0 +1,632 @@
+{
+  "entities": [
+    {
+      "id": "99d95d29-e104-5b18-89ff-0243c58e93f0",
+      "key": "earth/cn-gz/bijie/urban/wanshou-gong",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "0a5fe81d-6a1a-539c-847a-a74e3e0abdc9",
+      "key": "earth/cn-gz/bijie/urban/caishen-miao-residential-site",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "b8a55b0d-17e6-534b-9c8c-c578310adaf3",
+      "key": "earth/cn-gz/bijie/urban/shuangjing-si",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "35ed45a9-2d07-52a7-bf3c-1de362911a25",
+      "key": "earth/cn-gz/bijie/urban/meige-miao",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "aabf9c92-6945-5098-9c34-587db185d8d7",
+      "key": "earth/cn-gz/bijie/urban/dongyue-miao",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "9cccdc21-707d-58ae-9794-1c6335d47f7b",
+      "key": "earth/cn-gz/bijie/urban/taiping-bridge",
+      "body": "earth",
+      "kind": "bridge"
+    },
+    {
+      "id": "071ef883-47a8-5a6d-9ada-d19d149b9cb8",
+      "key": "earth/cn-gz/bijie/urban/gongyuan-bridge",
+      "body": "earth",
+      "kind": "bridge"
+    },
+    {
+      "id": "f11bd54f-5594-56f6-9ebd-c4c3a3305866",
+      "key": "earth/cn-gz/bijie/urban/nongshen-miao",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "be375dcb-0262-52c6-b850-c668c39266a3",
+      "key": "earth/cn-gz/bijie/urban/caishen-miao-theatre-site",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "5a180ffc-4668-5715-9e8c-f17eef388784",
+      "key": "earth/cn-gz/bijie/urban/caishen-lou",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "f59b931e-71b8-5d95-8a37-d233df91e9c4",
+      "key": "earth/cn-gz/bijie/urban/guansheng-dian",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "cc2af062-6cb6-5e66-95b0-2ebc6692f9c6",
+      "key": "earth/cn-gz/bijie/urban/wen-miao",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "bff393da-edc1-5af4-9135-6c484b91b7d0",
+      "key": "earth/cn-gz/bijie/urban/chenghuang-miao",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "4c729ceb-d1ec-501b-a21c-06a469aef63f",
+      "key": "earth/cn-gz/bijie/urban/chuanzhu-miao",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "91a9d71e-0567-5705-ae39-38f246c5da24",
+      "key": "earth/cn-gz/bijie/urban/huangzhou-miao",
+      "body": "earth",
+      "kind": "historic_site"
+    }
+  ],
+  "records": [
+    {
+      "id": "174d9fb2-4d67-5e1b-bf29-35582c82e36c",
+      "key": "bijie-gazetteer/p17/urban/wanshou-gong",
+      "entity_id": "99d95d29-e104-5b18-89ff-0243c58e93f0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 1: 万寿宫",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": {
+        "text": "清雍正年间",
+        "convention": "Chinese dynasty or reign expression",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "万寿宫",
+        "pinyin": "Wànshòugōng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°17′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "清雍正年间建，今县办六小。"
+      }
+    },
+    {
+      "id": "2d93c0f4-c053-51d3-8421-3b4e585b13bd",
+      "key": "bijie-gazetteer/p17/urban/caishen-miao-residential-site",
+      "entity_id": "0a5fe81d-6a1a-539c-847a-a74e3e0abdc9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 2: 财神庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "财神庙",
+        "pinyin": "Cháishén Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°17′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "已废，改居民住房。"
+      }
+    },
+    {
+      "id": "80809dea-156a-5e51-9984-807569cb0f91",
+      "key": "bijie-gazetteer/p17/urban/shuangjing-si",
+      "entity_id": "b8a55b0d-17e6-534b-9c8c-c578310adaf3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 3: 双井寺",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": {
+        "text": "明正统年间",
+        "convention": "Chinese dynasty or reign expression",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "双井寺",
+        "pinyin": "Shuāngjǐng Sì",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°17′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "明正统年间建，庙前有二井，故得名“双井寺”解放后改建县医院。"
+      }
+    },
+    {
+      "id": "b569a6ee-8bc9-54db-ac05-ddf8189a6e2c",
+      "key": "bijie-gazetteer/p17/urban/meige-miao",
+      "entity_id": "35ed45a9-2d07-52a7-bf3c-1de362911a25",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 4: 梅葛庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "梅葛庙",
+        "pinyin": "Méigé Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°17′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "已废，改居民住房。"
+      }
+    },
+    {
+      "id": "5a99b514-2869-5367-ac64-dba90b64d52d",
+      "key": "bijie-gazetteer/p17/urban/dongyue-miao",
+      "entity_id": "aabf9c92-6945-5098-9c34-587db185d8d7",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 5: 东岳庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": {
+        "text": "明时",
+        "convention": "Chinese dynasty or reign expression",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "东岳庙",
+        "pinyin": "Dōngyuè Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°17′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "明时建，清重修，现改建卫校。"
+      }
+    },
+    {
+      "id": "e7bd6cde-ec7f-51df-bca5-a73e324ca99e",
+      "key": "bijie-gazetteer/p17/urban/taiping-bridge",
+      "entity_id": "9cccdc21-707d-58ae-9794-1c6335d47f7b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 6: 太平桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "太平桥",
+        "pinyin": "Tàipíng Qiáo",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°17′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "古桥改公路桥"
+      }
+    },
+    {
+      "id": "651a3c4a-b92f-5b2a-a764-6a6e1ecbab91",
+      "key": "bijie-gazetteer/p17/urban/gongyuan-bridge",
+      "entity_id": "071ef883-47a8-5a6d-9ada-d19d149b9cb8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 7: 公园桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "公园桥",
+        "pinyin": "Gōngyuán Qiáo",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°17′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8e665ad4-7076-5b94-a85c-8f6ef0c67892",
+      "key": "bijie-gazetteer/p17/urban/nongshen-miao",
+      "entity_id": "f11bd54f-5594-56f6-9ebd-c4c3a3305866",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 8: 农神庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "农神庙",
+        "pinyin": "Nóngshén Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°17′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "已废，改建县木材公司。"
+      }
+    },
+    {
+      "id": "f64ff6c3-1b54-525e-b7a5-85306744d7d4",
+      "key": "bijie-gazetteer/p17/urban/caishen-miao-theatre-site",
+      "entity_id": "be375dcb-0262-52c6-b850-c668c39266a3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 9: 财神庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "财神庙",
+        "pinyin": "Cháishén Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°17′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "已废，民国时设商会，现为人民剧场。"
+      }
+    },
+    {
+      "id": "b3a318ea-ffc3-5b5c-9290-0341220f02d5",
+      "key": "bijie-gazetteer/p17/urban/caishen-lou",
+      "entity_id": "5a180ffc-4668-5715-9e8c-f17eef388784",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 10: 财神楼",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "财神楼",
+        "pinyin": "Cháishén Nóu",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°17′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "已废，改居民住房。"
+      }
+    },
+    {
+      "id": "87ead664-3ab1-5ce4-896a-02a80a1eeafd",
+      "key": "bijie-gazetteer/p17/urban/guansheng-dian",
+      "entity_id": "f59b931e-71b8-5d95-8a37-d233df91e9c4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 11: 关圣殿",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "关圣殿",
+        "pinyin": "Guānshén Diàn",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.26666666666667,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°16′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "已废，现改建三小。"
+      }
+    },
+    {
+      "id": "5457dfb9-1b6b-53d2-889c-18157a1be826",
+      "key": "bijie-gazetteer/p17/urban/wen-miao",
+      "entity_id": "cc2af062-6cb6-5e66-95b0-2ebc6692f9c6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 12: 文庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": {
+        "text": "明正统三年",
+        "convention": "Chinese dynasty or reign expression",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "文庙",
+        "pinyin": "Wén Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.26666666666667,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°16′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "始建于明正统三年，清重修，民国设小学，师范，解放后改建地区人民医院。"
+      }
+    },
+    {
+      "id": "d6c9e393-0594-5590-869f-a9e7e2d5dc9c",
+      "key": "bijie-gazetteer/p17/urban/chenghuang-miao",
+      "entity_id": "bff393da-edc1-5af4-9135-6c484b91b7d0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 13: 城隍庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": {
+        "text": "明时",
+        "convention": "Chinese dynasty or reign expression",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "城隍庙",
+        "pinyin": "Chénghuáng Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.26666666666667,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°16′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "明时建，民国改建法院，解放后为宿舍。"
+      }
+    },
+    {
+      "id": "6ed59a3b-0430-54ad-89b0-d3e7e281a945",
+      "key": "bijie-gazetteer/p17/urban/chuanzhu-miao",
+      "entity_id": "4c729ceb-d1ec-501b-a21c-06a469aef63f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 14: 川主庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "川主庙",
+        "pinyin": "Chuānzhǔ Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°17′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "已废，改地区人行宿舍。"
+      }
+    },
+    {
+      "id": "f56b9e47-dd34-5464-8b2f-c32f41644685",
+      "key": "bijie-gazetteer/p17/urban/huangzhou-miao",
+      "entity_id": "91a9d71e-0567-5705-ae39-38f246c5da24",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "17",
+      "scan_page": 52,
+      "locator": "Urban sites table, row 15: 黄州庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": {
+        "text": "清乾隆",
+        "convention": "Chinese dynasty or reign expression",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "黄州庙",
+        "pinyin": "Huángzhōu Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.28333333333333,
+            "latitude": 27.3
+          },
+          "datum": "unspecified",
+          "longitude_text": "105°17′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0
+        },
+        "former_names": [],
+        "note": "清乾隆湖广黄州商人建，今改为京剧团。"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

@@ -1,6 +1,35 @@
 use super::*;
 
 #[test]
+fn street_search_displays_source_extent_without_focusing_an_invented_point() {
+    let atlas = crate::catalog::tests::atlas();
+    let id = EntityId::from_key("earth/cn-gz/bijie/urban/weining-west-road").unwrap();
+    assert!(atlas.search("半边街", BodyId::Earth).contains(&id));
+    let mut app = Application::new(atlas).unwrap();
+    let center = app.camera.center;
+    let zoom = app.camera.zoom;
+    app.select(id, true);
+    assert_eq!(app.camera.center, center);
+    assert_eq!(app.camera.zoom, zoom);
+    let context = egui::Context::default();
+    configure_fonts(&context);
+    let output = date_frame(&context, &mut app, Vec::new());
+    assert!(
+        output.shapes.iter().any(|shape| matches!(&shape.shape,
+        egui::epaint::Shape::Text(text) if text.galley.job.text=="Extent: 东起威宁路，西止翠屏路"))
+    );
+    assert!(output.shapes.iter().any(|shape| matches!(&shape.shape,
+        egui::epaint::Shape::Text(text) if text.galley.job.text=="Former name: 半边街")));
+    assert!(
+        !app.points().unwrap()["features"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .any(|feature| feature["properties"]["entity_id"] == id.0.to_string())
+    );
+}
+
+#[test]
 fn territory_toggle_adds_links_and_respects_the_applied_hierarchy_mode() {
     let mut app = Application::new(crate::catalog::tests::atlas()).unwrap();
     let id = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();

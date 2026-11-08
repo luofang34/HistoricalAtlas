@@ -1,0 +1,113 @@
+{
+  "entities": [],
+  "records": [
+    {
+      "id": "105a49ac-9701-5d2c-95a4-28de837bcbf5",
+      "key": "bijie-gazetteer/p12/urban/town-composition",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "12",
+      "scan_page": 47,
+      "locator": "Town overview, final paragraph, street offices and suburban communes",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "毕节镇",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "3598db1c-f453-500e-b412-21cd4953cc68",
+        "rank": "town",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "毕节镇辖：解放路、威宁路、清毕路、双井路4个街道办事处，共56条街巷；镇郊有：翠屏、大桥、五里坪、德厚、头步、大兰等6个公社。"
+      }
+    },
+    {
+      "id": "fda53638-dcff-5563-9d35-4e67e67542dc",
+      "key": "bijie-gazetteer/p13/urban/town-population",
+      "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "13",
+      "scan_page": 48,
+      "locator": "First sentence, population paragraph continued from printed page 12 (scan 47)",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "毕节镇",
+        "pinyin": null,
+        "population": 113772,
+        "households": 24378,
+        "ethnicities": [],
+        "parent_id": "3598db1c-f453-500e-b412-21cd4953cc68",
+        "rank": "town",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "18种民族，24378户，113772人。镇人民政府驻天河路。"
+      }
+    },
+    {
+      "id": "022bfa21-bd37-563f-8126-9198f12f9e92",
+      "key": "bijie-gazetteer/p14/urban/chuandianqian-committee-site",
+      "entity_id": "ef5ada7f-382e-540d-8c29-b77d3070f78c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "14",
+      "scan_page": 49,
+      "locator": "Town overview, 名胜古迹及革命遗址 paragraph, provincial committee site",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": {
+        "text": "1936年2月",
+        "convention": "Gregorian year and month",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "中华苏维埃人民共和国川滇黔省革命委员会遗址",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "省级重点文物保护单位。",
+        "extent": "白花路（白花山）毕节一小右下侧"
+      }
+    },
+    {
+      "id": "251a80b8-de89-572c-af0e-3dad7cbc19a9",
+      "key": "bijie-gazetteer/p14/urban/anti-japanese-army-headquarters-site",
+      "entity_id": "2398b003-3d5c-5ade-9980-fd998b91bf09",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "14",
+      "scan_page": 49,
+      "locator": "Town overview, 名胜古迹及革命遗址 paragraph, headquarters site",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "抗日救国军司令部遗址",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "省级重点文物保护单位。",
+        "extent": "周素园先生住宅（今和平路74号）"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

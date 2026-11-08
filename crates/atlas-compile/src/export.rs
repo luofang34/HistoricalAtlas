@@ -227,3 +227,7 @@ pub enum ExportError {
 
 #[cfg(test)]
 mod tests;
+
+#[cfg(test)]
+#[path = "export/urban/tests.rs"]
+mod urban_tests;

@@ -66,9 +66,13 @@ pub enum EntityKind {
     Commune,
     /// Township.
     Township,
+    /// Urban street administration office.
+    StreetOffice,
+    /// Named street, road, or lane.
+    Street,
     /// Production brigade.
     Brigade,
-    /// Natural settlement.
+    /// Settlement or residential locality.
     Settlement,
     /// Named place whose type is not established by the row.
     Toponym,
@@ -177,6 +181,9 @@ pub struct Observation {
     /// Printed coordinate notation that has no resolved numeric location.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub unresolved_coordinate: Option<UnresolvedCoordinate>,
+    /// Source description of route endpoints, extent, or relative location.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub extent: Option<String>,
     /// Former names supported by the source.
     pub former_names: Vec<FormerName>,
     /// Short transcribed annotation.

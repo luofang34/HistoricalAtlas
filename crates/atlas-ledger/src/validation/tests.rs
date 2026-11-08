@@ -1,6 +1,24 @@
 use super::*;
 
 #[test]
+fn spatial_extent_is_optional_but_cannot_be_an_empty_description() {
+    let mut dataset: Dataset = serde_json::from_str(include_str!(
+        "../../../../data/guizhou-1960s/bijie/page-20.dataset.json"
+    ))
+    .unwrap();
+    assert!(dataset.records[1].observation.extent.is_none());
+    dataset.records[1].observation.extent = Some("East of the named bridge".into());
+    validate(&catalog(), &dataset).unwrap();
+    dataset.records[1].observation.extent = Some(" \n\t ".into());
+    assert!(
+        validate(&catalog(), &dataset)
+            .unwrap_err()
+            .problem
+            .contains("empty spatial extent")
+    );
+}
+
+#[test]
 fn unresolved_coordinate_requires_an_explanation_and_excludes_a_numeric_point() {
     use atlas_geo::coordinates::{Datum, UnresolvedCoordinate};
     let mut dataset: Dataset = serde_json::from_str(include_str!(
