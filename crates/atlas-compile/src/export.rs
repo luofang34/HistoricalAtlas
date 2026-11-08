@@ -231,3 +231,7 @@ mod tests;
 #[cfg(test)]
 #[path = "export/urban/tests.rs"]
 mod urban_tests;
+
+#[cfg(test)]
+#[path = "export/yachi/tests.rs"]
+mod yachi_tests;

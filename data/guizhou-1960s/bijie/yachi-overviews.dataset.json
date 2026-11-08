@@ -1,0 +1,699 @@
+{
+  "entities": [],
+  "records": [
+    {
+      "id": "78e3007b-7748-585d-911b-7b039dd0def2",
+      "key": "bijie-gazetteer/p43/yachi/establishment",
+      "entity_id": "75bcc2a0-349e-5b73-97e1-54230e71797d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "43",
+      "scan_page": 78,
+      "locator": "Commune overview, administrative chronology: establishment",
+      "verbatim_quote": "1958年成立人民公社，命名鸭池公社，区、社均在鸭池街。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "鸭池公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "a363d80e-d8c8-5e1f-bb85-d8d54f63e4cc",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "390d20fa-a1e1-5600-9b4a-655b6a31e108",
+      "key": "bijie-gazetteer/p45/yihe/establishment",
+      "entity_id": "433592a8-ae0f-5be8-a158-bd1a1b6c9230",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "45",
+      "scan_page": 80,
+      "locator": "Commune overview, administrative chronology: establishment",
+      "verbatim_quote": "1958年成立人民公社，命名以河公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "以河公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "896e52af-004f-5eeb-a39c-9da4ada42896",
+      "key": "bijie-gazetteer/p47/nanqing/establishment",
+      "entity_id": "b4cc6bec-10b7-561e-b737-19c4e12ef513",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "47",
+      "scan_page": 82,
+      "locator": "Commune overview, administrative chronology: establishment",
+      "verbatim_quote": "58年成立人民公社，命名南箐公社，公社驻地赶场坝。",
+      "checked": true,
+      "source_date": {
+        "text": "58年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "南箐公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "7fccf9fd-0d3e-5274-bfdd-813144caf52f",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e9ea8f69-cfa5-5d37-b861-fc4038de48c1",
+      "key": "bijie-gazetteer/p51/baohe/establishment",
+      "entity_id": "4e4899e9-8cf2-5399-a436-e06fc757b15e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "51",
+      "scan_page": 86,
+      "locator": "Commune overview, administrative chronology: establishment",
+      "verbatim_quote": "58年成立人民公社，命名保河公社至今。",
+      "checked": true,
+      "source_date": {
+        "text": "58年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "保河公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "77fcd39f-1b89-5c68-bbe9-45ee3a929ec7",
+      "key": "bijie-gazetteer/p43/yachi/composition",
+      "entity_id": "75bcc2a0-349e-5b73-97e1-54230e71797d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "43",
+      "scan_page": 78,
+      "locator": "Commune overview, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "鸭池公社",
+        "pinyin": null,
+        "population": 6124,
+        "households": 1178,
+        "ethnicities": [
+          "汉",
+          "彝",
+          "苗",
+          "壮"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "鸭池公社辖：鸭池、石桥、石格、干堰塘、王家湾五个大队，60个生产队，22个自然村。分布着汉、彝、苗、壮等种民族。总人口（普查）数1178户，6124人。其中彝族154人，壮族1人，苗族70人，其他民族89人，其余为汉族。"
+      }
+    },
+    {
+      "id": "d92f3173-9681-51be-8ed7-f0276abcd579",
+      "key": "bijie-gazetteer/p45/yihe/composition",
+      "entity_id": "433592a8-ae0f-5be8-a158-bd1a1b6c9230",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "45",
+      "scan_page": 80,
+      "locator": "Commune overview, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "以河公社",
+        "pinyin": null,
+        "population": 3159,
+        "households": 640,
+        "ethnicities": [
+          "汉",
+          "彝",
+          "苗"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "辖：八十、小寨、蚂蝗沟、河坝四个大队，25个生产队，12个自然村。居住汉、彝、苗等民族。共640户，3159人。其中：彝族1人，苗族14人，其他民族16人，其余为汉族。"
+      }
+    },
+    {
+      "id": "abb28bb9-522e-552a-8bc3-9921098ebf00",
+      "key": "bijie-gazetteer/p47/nanqing/composition",
+      "entity_id": "b4cc6bec-10b7-561e-b737-19c4e12ef513",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "47",
+      "scan_page": 82,
+      "locator": "Commune overview, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "南箐公社",
+        "pinyin": null,
+        "population": 11187,
+        "households": 2283,
+        "ethnicities": [
+          "汉",
+          "彝"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "全社辖干龙潭、中屯、瓦厂、煤冲、核桃、猫猫冲、赶场坝、岩头等八个大队，130个生产队，38个自然村。共有人口（普查数）2283户，11187人，其中：彝族10人，其他民族79人，其余为汉族。"
+      }
+    },
+    {
+      "id": "522ad67d-a0a3-5635-84c5-d3a802d838c6",
+      "key": "bijie-gazetteer/p51/baohe/composition",
+      "entity_id": "4e4899e9-8cf2-5399-a436-e06fc757b15e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "51",
+      "scan_page": 86,
+      "locator": "Commune overview, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "保河公社",
+        "pinyin": null,
+        "population": 3757,
+        "households": 740,
+        "ethnicities": [
+          "汉",
+          "彝"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "社辖：上小河、小屯沟、保河、车坝四个大队，29个生产队，17个自然村。有汉族和彝族及其他民族。普查人口数：740户，3757人。其中：彝族13人，其他民族692人，余为汉族以农业为主。"
+      }
+    },
+    {
+      "id": "c47f3aa4-b92a-5c02-939a-74dd953bab02",
+      "key": "bijie-gazetteer/p43/yachi/extent",
+      "entity_id": "75bcc2a0-349e-5b73-97e1-54230e71797d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "43",
+      "scan_page": 78,
+      "locator": "Commune overview, location, coordinate range, area, and neighboring communes",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "鸭池公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "总面积17.2平方公里。",
+        "extent": "在毕节县城东南面，相距8.5公里，位于东经105°20′至105°22′，北纬27°14′至27°16′之间。东接甘河、梨树，南抵草坪，西南与小屯，西靠十八，北枕头步等公社。"
+      }
+    },
+    {
+      "id": "35f39fe6-eb20-56fd-ba6c-a4ac598bce53",
+      "key": "bijie-gazetteer/p45/yihe/extent",
+      "entity_id": "433592a8-ae0f-5be8-a158-bd1a1b6c9230",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "45",
+      "scan_page": 80,
+      "locator": "Commune overview, location, coordinate range, area, and neighboring communes",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "以河公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "总面积15.4平方公里。",
+        "extent": "在毕节县城东，相距8公里。位于东经105°21′至105°23′，北纬27°17′至27°19′之间。东邻保河，南抵头步，西连德厚，北枕杠等公社。"
+      }
+    },
+    {
+      "id": "a4d7f139-cee4-5773-a957-8922a27462d6",
+      "key": "bijie-gazetteer/p47/nanqing/extent",
+      "entity_id": "b4cc6bec-10b7-561e-b737-19c4e12ef513",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "47",
+      "scan_page": 82,
+      "locator": "Commune overview, location, coordinate range, area, and neighboring communes",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "南箐公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "总面积25.9平方公里。",
+        "extent": "在毕节县城南十二公里处。位于东经105°14′至105°17′，北纬27°12至27°15′之间。南箐公社东与十八、小屯沟、朱昌，南与沙垮、干溪，西与王丰、清丰，北与草堤等公社接壤。"
+      }
+    },
+    {
+      "id": "450a4f51-a201-5fcf-ad6c-0085f465bab5",
+      "key": "bijie-gazetteer/p51/baohe/extent",
+      "entity_id": "4e4899e9-8cf2-5399-a436-e06fc757b15e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "51",
+      "scan_page": 86,
+      "locator": "Commune overview, location, coordinate range, area, and neighboring communes",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "保河公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "总面积16.2平方公里。",
+        "extent": "在毕节县城东约十二公里处。位于东经105°23′至105°25′，北纬27°17′至27°19′之间。东接中屯，南与梨树，西靠以河，西南角邻头步，北连烧杠等公社。"
+      }
+    },
+    {
+      "id": "de31014e-8472-595e-8b9d-0eef67c2e4ad",
+      "key": "bijie-gazetteer/p43/yachi/pond-description",
+      "entity_id": "9190b8a5-b1cb-52b3-8293-b5ee684bf975",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "43",
+      "scan_page": 78,
+      "locator": "Commune overview, natural-feature description",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "顾家塘",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "75bcc2a0-349e-5b73-97e1-54230e71797d",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "容量15万立方米，公社辟为养鱼塘。",
+        "extent": "东北隅有天然水塘名顾家塘"
+      }
+    },
+    {
+      "id": "097ac0e3-58cf-5660-aab6-5a9cb62c2c70",
+      "key": "bijie-gazetteer/p45/yihe/river-description",
+      "entity_id": "0b06f01c-c4e4-5a9a-87b9-516e8763577a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "45",
+      "scan_page": 80,
+      "locator": "Commune overview, natural-feature description",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "野鸡河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "433592a8-ae0f-5be8-a158-bd1a1b6c9230",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "溪水流于山谷之间，两岸多生长灌木草丛，因野鸡繁殖其间，当地人叫“野鸡河”、“野鸡沟”，故名以河。",
+        "extent": "有土地垭、小寨沟、蚂蝗沟三溪流入南面的野鸡河。"
+      }
+    },
+    {
+      "id": "171d37e2-8b2e-55a3-b38c-fc17a5eb556a",
+      "key": "bijie-gazetteer/p47/nanqing/river-description",
+      "entity_id": "ac9428a5-3a5e-57bf-87d4-8976ad7e3a9c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "47",
+      "scan_page": 82,
+      "locator": "Commune overview, natural-feature description",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "南箐河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "b4cc6bec-10b7-561e-b737-19c4e12ef513",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "南箐河横贯东西，于清丰公社宋官水库流经坝口入境，溪水汇聚，于坝塘垭口出境，境内流长约5公里，流入十八河。"
+      }
+    },
+    {
+      "id": "fce8ef74-9eec-5d54-a326-211697d91344",
+      "key": "bijie-gazetteer/p43/yachi/street-renaming",
+      "entity_id": "a363d80e-d8c8-5e1f-bb85-d8d54f63e4cc",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "43",
+      "scan_page": 78,
+      "locator": "Commune overview, settlement naming and 1942 street-name sentence",
+      "verbatim_quote": "清末民初遂发展为小市集，名“鸭子塘街”。",
+      "checked": true,
+      "source_date": {
+        "text": "1942年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "鸭池街",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "鸭子塘街",
+            "source_date": {
+              "text": "清末民初",
+              "convention": "Chinese historical period",
+              "conversion_basis": null
+            },
+            "validity": null
+          }
+        ],
+        "note": "1942年改名鸭池乡，街名鸭池街。"
+      }
+    },
+    {
+      "id": "d06b1649-a25d-53cc-ac29-44c1fc597ed6",
+      "key": "bijie-gazetteer/p43/yachi/district-1950",
+      "entity_id": "edfa75db-3e5a-5a70-bc4b-8ab025ee0f93",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "43",
+      "scan_page": 78,
+      "locator": "Commune overview, district establishment and renaming",
+      "verbatim_quote": "建国后，1950年划区，旧鸭池乡建为二区",
+      "checked": true,
+      "source_date": {
+        "text": "1950年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "二区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "district",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f8c7d910-84e3-5859-a8e4-16c6645fcf57",
+      "key": "bijie-gazetteer/p43/yachi/district-1954",
+      "entity_id": "edfa75db-3e5a-5a70-bc4b-8ab025ee0f93",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "43",
+      "scan_page": 78,
+      "locator": "Commune overview, district establishment and renaming",
+      "verbatim_quote": "1954年二区命名为鸭池区。",
+      "checked": true,
+      "source_date": {
+        "text": "1954年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "鸭池区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "district",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8fdea40b-56fc-52bc-ba61-5026e0894ddf",
+      "key": "bijie-gazetteer/p43/yachi/district-seat-relocation",
+      "entity_id": "edfa75db-3e5a-5a70-bc4b-8ab025ee0f93",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "43",
+      "scan_page": 78,
+      "locator": "Commune overview, district-seat relocation sentence",
+      "verbatim_quote": "七十年代区公所因交通不便，遂迁至头步桥。",
+      "checked": true,
+      "source_date": {
+        "text": "七十年代",
+        "convention": "Gregorian decade",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "鸭池区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "district",
+        "seat_id": "0a723efe-939a-5973-9ac6-3320ff8ed494",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "75c0fe4d-df84-5519-9464-834d9b2dcda8",
+      "key": "editorial/bijie/yachi/establishment",
+      "entity_id": "75bcc2a0-349e-5b73-97e1-54230e71797d",
+      "basis": [
+        "78e3007b-7748-585d-911b-7b039dd0def2"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year. Use TT calendar bounds and the interval midpoint for nominal display.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "c6d45460-297b-5fb0-906b-61a272953a2c",
+      "key": "editorial/bijie/yihe/establishment",
+      "entity_id": "433592a8-ae0f-5be8-a158-bd1a1b6c9230",
+      "basis": [
+        "390d20fa-a1e1-5600-9b4a-655b6a31e108"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year. Use TT calendar bounds and the interval midpoint for nominal display.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "46be0a8a-9278-50d0-946e-f68db8f05a8a",
+      "key": "editorial/bijie/nanqing/establishment",
+      "entity_id": "b4cc6bec-10b7-561e-b737-19c4e12ef513",
+      "basis": [
+        "896e52af-004f-5eeb-a39c-9da4ada42896"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year. Use TT calendar bounds and the interval midpoint for nominal display. The abbreviated year 58 follows the overview’s 1950s chronology and denotes 1958.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2345f93-be2b-5638-9d31-bb89da11d20c",
+      "key": "editorial/bijie/baohe/establishment",
+      "entity_id": "4e4899e9-8cf2-5399-a436-e06fc757b15e",
+      "basis": [
+        "e9ea8f69-cfa5-5d37-b861-fc4038de48c1"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year. Use TT calendar bounds and the interval midpoint for nominal display. The abbreviated year 58 follows the overview’s 1950s chronology and denotes 1958.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "984108b0-dd6b-525d-b3ae-979cee7c8248",
+      "key": "editorial/bijie/yachi-district/second-district-name",
+      "entity_id": "edfa75db-3e5a-5a70-bc4b-8ab025ee0f93",
+      "basis": [
+        "d06b1649-a25d-53cc-ac29-44c1fc597ed6",
+        "f8c7d910-84e3-5859-a8e4-16c6645fcf57"
+      ],
+      "brief": "The overview explicitly identifies 二区 as the district renamed 鸭池区 in 1954. Both transitions retain full Gregorian-year uncertainty.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1577880000000",
+              "nominal": "-1562112000001",
+              "latest": "-1546344000001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-1451649600000",
+              "nominal": "-1435881600001",
+              "latest": "-1420113600001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "二区",
+              "kind": "standard",
+              "language": "zh"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "089a1cd9-86ac-56fa-a9ee-de3cc06bfe62",
+      "key": "editorial/bijie/yachi-district/yachi-name",
+      "entity_id": "edfa75db-3e5a-5a70-bc4b-8ab025ee0f93",
+      "basis": [
+        "f8c7d910-84e3-5859-a8e4-16c6645fcf57"
+      ],
+      "brief": "The source dates the renaming to 1954 without giving a later name transition. Retain an unknown end and full Gregorian-year uncertainty at the start.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1451649600000",
+              "nominal": "-1435881600001",
+              "latest": "-1420113600001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "鸭池区",
+              "kind": "standard",
+              "language": "zh"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

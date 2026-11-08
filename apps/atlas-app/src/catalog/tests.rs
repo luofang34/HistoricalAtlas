@@ -1,6 +1,19 @@
 use super::*;
 
 #[test]
+fn yachi_street_history_and_cross_page_villages_are_searchable() {
+    let atlas = atlas();
+    let street = EntityId::from_key("earth/cn-gz/bijie/yachi/yachi-jie").unwrap();
+    assert_eq!(atlas.search("鸭子塘街", BodyId::Earth), vec![street]);
+    let village = EntityId::from_key("earth/cn-gz/bijie/nanqing/liujiadong").unwrap();
+    let brigade = EntityId::from_key("earth/cn-gz/bijie/nanqing/hetao-brigade").unwrap();
+    assert!(atlas.search("刘家洞", BodyId::Earth).contains(&village));
+    assert_eq!(atlas.parents(village), BTreeSet::from([brigade]));
+    let communes = atlas.children(EntityId::from_key("earth/cn-gz/bijie/yachi-district").unwrap());
+    assert_eq!(communes.len(), 10);
+}
+
+#[test]
 fn urban_search_keeps_same_named_temples_distinct_and_follows_office_hierarchy() {
     let atlas = atlas();
     let matches = atlas.search("财神庙", BodyId::Earth);

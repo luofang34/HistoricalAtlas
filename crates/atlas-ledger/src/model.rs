@@ -92,6 +92,8 @@ pub enum EntityKind {
     River,
     /// Reservoir.
     Reservoir,
+    /// Natural or managed pond.
+    Pond,
     /// Mountain.
     Mountain,
     /// Historical site.
