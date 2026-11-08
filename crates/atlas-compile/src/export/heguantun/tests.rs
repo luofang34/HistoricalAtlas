@@ -3,6 +3,9 @@ use crate::input::load_blocking;
 use atlas_core::calendar::{Calendar, CivilDate};
 use atlas_ledger::timeline::{TimeSelection, Timeline};
 
+#[path = "communes/tests.rs"]
+mod communes;
+
 #[cfg(test)]
 fn input() -> LedgerInput {
     load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap()
@@ -65,6 +68,12 @@ fn complete_tables_publish_each_reviewed_row_without_changing_its_fields() {
         (134, 37),
         (135, 35),
         (136, 2),
+        (138, 32),
+        (140, 37),
+        (141, 6),
+        (143, 35),
+        (144, 36),
+        (145, 9),
     ] {
         let rows: Vec<_> = input
             .data
@@ -91,7 +100,14 @@ fn complete_tables_publish_each_reviewed_row_without_changing_its_fields() {
 #[test]
 fn commune_hierarchies_keep_continued_rows_and_only_explicit_seats() {
     let input = input();
-    for (commune, count, seats) in [("heguantun", 7, 7), ("duipo", 8, 8), ("shuiqing", 9, 8)] {
+    for (commune, count, seats) in [
+        ("heguantun", 7, 7),
+        ("duipo", 8, 8),
+        ("shuiqing", 9, 8),
+        ("daba", 4, 4),
+        ("shanzhai", 4, 4),
+        ("houqing", 11, 11),
+    ] {
         let brigades: Vec<_> = input
             .data
             .records

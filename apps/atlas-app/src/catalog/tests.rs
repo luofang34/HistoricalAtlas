@@ -1,6 +1,36 @@
 use super::*;
 
 #[test]
+fn heguantun_communes_expose_same_named_places_and_cited_river_aliases() {
+    let atlas = atlas();
+    for (name, key) in [
+        ("白纸厂", "daba/baizhichang"),
+        ("大岩洞", "daba/dayandong"),
+        ("大岩洞", "daba/dayan-cave"),
+        ("杉寨", "shanzhai/shanzhai"),
+        ("杉寨", "shanzhai/shanzhai-place"),
+        ("背水岩洞", "shanzhai/beishuiyandong"),
+        ("背水岩洞", "shanzhai/beishuiyan-cave"),
+        ("胡家寨", "houqing/houqing-hujiazhai"),
+        ("胡家寨", "houqing/baiguo-hujiazhai"),
+        ("响水河", "heguantun-district/houqing-river"),
+        ("利民水库", "heguantun-district/limin-reservoir"),
+    ] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{key}")).unwrap();
+        assert!(atlas.search(name, BodyId::Earth).contains(&id), "{key}");
+    }
+    let commune = EntityId::from_key("earth/cn-gz/bijie/houqing-commune").unwrap();
+    let populations: BTreeSet<_> = atlas
+        .entry(commune)
+        .unwrap()
+        .records
+        .iter()
+        .filter_map(|record| record.observation.population)
+        .collect();
+    assert_eq!(populations, BTreeSet::from([4177, 14177]));
+}
+
+#[test]
 fn heguantun_names_and_shuiqing_unresolved_coordinates_remain_searchable() {
     let atlas = atlas();
     for (name, key) in [

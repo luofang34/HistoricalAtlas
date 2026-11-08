@@ -1,0 +1,256 @@
+{
+  "entities": [
+    {
+      "id": "1556b7cb-c99c-579f-8fa1-cd4a4e57eaa5",
+      "key": "earth/cn-gz/bijie/shanzhai/xiongjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "610a63a3-40c0-5bdb-8a41-62624a44279a",
+      "key": "earth/cn-gz/bijie/shanzhai/gaojiancao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "8f8d8873-d9bd-5727-bf1d-84fdcb518388",
+      "key": "earth/cn-gz/bijie/shanzhai/shiyakou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "3a25085f-e072-5dab-818d-b8ae170df06f",
+      "key": "earth/cn-gz/bijie/shanzhai/yakoushang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c69a3579-0e67-5a05-a191-6c44b2c2efe5",
+      "key": "earth/cn-gz/bijie/shanzhai/dawanzi",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "3713fb81-1ad0-5180-a9e4-3fdcb547148c",
+      "key": "earth/cn-gz/bijie/shanzhai/beishuiyan-cave",
+      "body": "earth",
+      "kind": "cave"
+    }
+  ],
+  "records": [
+    {
+      "id": "f4b5ed9c-788b-5a00-9d9f-f2e070fe6a3a",
+      "key": "bijie-gazetteer/p141/shanzhai/xiongjiazhai",
+      "entity_id": "1556b7cb-c99c-579f-8fa1-cd4a4e57eaa5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "141",
+      "scan_page": 176,
+      "locator": "Place table, row 1: 熊家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "熊家寨",
+        "pinyin": "Xióngjiāzhài",
+        "population": 60,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "3f6a9916-e2f8-52c0-8a65-5338ccddabe1",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.25,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°15′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d0a0f108-4354-5407-9104-fd890428297b",
+      "key": "bijie-gazetteer/p141/shanzhai/gaojiancao",
+      "entity_id": "610a63a3-40c0-5bdb-8a41-62624a44279a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "141",
+      "scan_page": 176,
+      "locator": "Place table, row 2: 高枧槽",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "高枧槽",
+        "pinyin": "Gāojiǎncáo",
+        "population": 20,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "3f6a9916-e2f8-52c0-8a65-5338ccddabe1",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.23333333333333,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°14′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "0c598dc7-555a-5691-8301-6c0725f74146",
+      "key": "bijie-gazetteer/p141/shanzhai/shiyakou",
+      "entity_id": "8f8d8873-d9bd-5727-bf1d-84fdcb518388",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "141",
+      "scan_page": 176,
+      "locator": "Place table, row 3: 石垭口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "石垭口",
+        "pinyin": "Shíyākǒu",
+        "population": 24,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "3f6a9916-e2f8-52c0-8a65-5338ccddabe1",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.26666666666667,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°16′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "163f8fec-11ed-549a-a610-e4c95a8f2bf5",
+      "key": "bijie-gazetteer/p141/shanzhai/yakoushang",
+      "entity_id": "3a25085f-e072-5dab-818d-b8ae170df06f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "141",
+      "scan_page": 176,
+      "locator": "Place table, row 4: 垭口上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "垭口上",
+        "pinyin": "Yākǒushan",
+        "population": 65,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "3f6a9916-e2f8-52c0-8a65-5338ccddabe1",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.25,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°15′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3bde0fd9-15b9-5c37-ba00-efae368d2825",
+      "key": "bijie-gazetteer/p141/shanzhai/dawanzi",
+      "entity_id": "c69a3579-0e67-5a05-a191-6c44b2c2efe5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "141",
+      "scan_page": 176,
+      "locator": "Place table, row 5: 大湾子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大湾子",
+        "pinyin": "Dàwānzǐ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "3f6a9916-e2f8-52c0-8a65-5338ccddabe1",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.26666666666667,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°16′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "地名"
+      }
+    },
+    {
+      "id": "40edcd36-ac22-5e2c-adc4-e7d1b8d50f80",
+      "key": "bijie-gazetteer/p141/shanzhai/beishuiyan-cave",
+      "entity_id": "3713fb81-1ad0-5180-a9e4-3fdcb547148c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "141",
+      "scan_page": 176,
+      "locator": "Place table, row 6: 背水岩洞",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "背水岩洞",
+        "pinyin": "Bèishuǐyán Dòng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "a4a73a44-d162-519a-ba2a-e6d0f296b07f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.26666666666667,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°16′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "洞穴1/3"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

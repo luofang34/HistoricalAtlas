@@ -1,0 +1,786 @@
+{
+  "entities": [
+    {
+      "id": "f6c1150f-325f-582d-b23b-e69d61be3235",
+      "key": "earth/cn-gz/bijie/daba/lehaigou",
+      "body": "earth",
+      "kind": "toponym"
+    }
+  ],
+  "records": [
+    {
+      "id": "819683cf-02d9-5617-b1dc-3a0334b2180f",
+      "key": "bijie-gazetteer/p137/daba-commune/extent",
+      "entity_id": "14065a0b-f4db-5ce7-b720-edfeef5a5dfb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "137",
+      "scan_page": 172,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大坝公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在毕节县北部，距城十六公里，位于东经105°14′～105°16′，北纬27°25′～27°28′之间，东北与北靠杉寨，东南连何官屯，西南与后箐，西北接云南省镇雄县界。全社总面积23.1平方公里。"
+      }
+    },
+    {
+      "id": "8b8f6115-0b74-5a8f-a2ae-6d40a9b40104",
+      "key": "bijie-gazetteer/p137/daba-commune/population",
+      "entity_id": "14065a0b-f4db-5ce7-b720-edfeef5a5dfb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "137",
+      "scan_page": 172,
+      "locator": "Commune overview, population",
+      "verbatim_quote": "人口（普查）总数887户，4369人，其中：彝族11人，其他民族3人，以农业为主，兼牧业和工副业。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大坝公社",
+        "pinyin": null,
+        "population": 4369,
+        "households": 887,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5b5a4539-1860-5025-a1b6-fcaae2f92293",
+      "key": "bijie-gazetteer/p137/daba-commune/organization",
+      "entity_id": "14065a0b-f4db-5ce7-b720-edfeef5a5dfb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "137",
+      "scan_page": 172,
+      "locator": "Commune overview, organization",
+      "verbatim_quote": "辖：大坝、大坪子、乐海、新华四个大队，30个生产队，24个自然村，多为汉族居住。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大坝公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "23f1cf53-1474-56ee-972d-2ccda10da271",
+      "key": "bijie-gazetteer/p139/shanzhai-commune/extent",
+      "entity_id": "a4a73a44-d162-519a-ba2a-e6d0f296b07f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "139",
+      "scan_page": 174,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "杉寨公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在毕节县城北面，相距二十五公里，位于东经105°14′至105°18′，北纬27°27′至27°30′之间。总面积34.9平方公里，东与对坡，南与螃蟹、何官屯，西与大坝，西北与云南省镇雄县，北与大银相毗连。"
+      }
+    },
+    {
+      "id": "a481fb9f-4ebb-5770-b92e-d7c28cd6abf5",
+      "key": "bijie-gazetteer/p139/shanzhai-commune/population",
+      "entity_id": "a4a73a44-d162-519a-ba2a-e6d0f296b07f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "139",
+      "scan_page": 174,
+      "locator": "Commune overview, population",
+      "verbatim_quote": "总人口6335人，其中：彝族46人，苗族62人，其他民族3人外，其余皆为汉族，以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "杉寨公社",
+        "pinyin": null,
+        "population": 6335,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "苗",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e7358820-37c6-52ba-aaf0-15a715ce2aa4",
+      "key": "bijie-gazetteer/p139/shanzhai-commune/organization",
+      "entity_id": "a4a73a44-d162-519a-ba2a-e6d0f296b07f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "139",
+      "scan_page": 174,
+      "locator": "Commune overview, organization",
+      "verbatim_quote": "辖：杉寨、田边、法泥、沟脚四个大队，30个生产队，36个自然村。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "杉寨公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "432ea019-1ec6-51f7-b8d1-03e87e6241a2",
+      "key": "bijie-gazetteer/p142/houqing-commune/extent",
+      "entity_id": "ac1ac0cc-e7b8-5466-ac6b-9091de5368b4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "142",
+      "scan_page": 177,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "后箐公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在毕节县西北，距城十公里，位于东经105°10′至105°14′，北纬27°18′至27°25′之间，总面积62.1平方公里，东频大桥，南连清丰、长春堡、黄泥冲，西靠水箐，西北邻云南省镇雄县，东北接何官屯、大坝等公社相毗连，略呈葫芦形。"
+      }
+    },
+    {
+      "id": "3cef0e6e-f1b9-54b2-ab81-ddfb124e0818",
+      "key": "bijie-gazetteer/p142/houqing-commune/population",
+      "entity_id": "ac1ac0cc-e7b8-5466-ac6b-9091de5368b4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "142",
+      "scan_page": 177,
+      "locator": "Commune overview, population",
+      "verbatim_quote": "总人口（普查数）2591户，14177人，其中：苗族155人，彝族588人，回族1人，余为汉族，皆以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "后箐公社",
+        "pinyin": null,
+        "population": 14177,
+        "households": 2591,
+        "ethnicities": [
+          "苗",
+          "彝",
+          "回",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f063c31d-79da-578c-83fb-78aa6162587b",
+      "key": "bijie-gazetteer/p142/houqing-commune/organization",
+      "entity_id": "ac1ac0cc-e7b8-5466-ac6b-9091de5368b4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "142",
+      "scan_page": 177,
+      "locator": "Commune overview, organization",
+      "verbatim_quote": "辖：唐官、中营、龙官桥、龙汉、白果、后箐、红峰、柳家、利民、羊塘、黑石坪十一个大队，99个生产队，55个自然村，为彝、苗、汉等民族杂居。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "后箐公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "86aa065e-23b0-5c5d-abed-cfe8f93392e4",
+      "key": "bijie-gazetteer/p137/daba-commune/establishment",
+      "entity_id": "14065a0b-f4db-5ce7-b720-edfeef5a5dfb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "137",
+      "scan_page": 172,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "58年成立人民公社，命名大坝公社。",
+      "checked": true,
+      "source_date": {
+        "text": "58年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "大坝公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "26dca0f7-c408-536c-8ecd-be9c37aa7953",
+      "key": "bijie-gazetteer/p139/shanzhai-commune/establishment",
+      "entity_id": "a4a73a44-d162-519a-ba2a-e6d0f296b07f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "139",
+      "scan_page": 174,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "58年成立杉寨人民公社。",
+      "checked": true,
+      "source_date": {
+        "text": "58年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "杉寨人民公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "00a8228a-bd2d-5b39-b9fb-3b45950de542",
+      "key": "bijie-gazetteer/p142/houqing-commune/establishment",
+      "entity_id": "ac1ac0cc-e7b8-5466-ac6b-9091de5368b4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "142",
+      "scan_page": 177,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "1958年成立后箐人民公社至今。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "后箐人民公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "833d4083-7a28-5dc2-bd7c-b4d54251237c",
+      "key": "bijie-gazetteer/p137/daba-commune/name-history",
+      "entity_id": "14065a0b-f4db-5ce7-b720-edfeef5a5dfb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "137",
+      "scan_page": 172,
+      "locator": "Commune overview, name history",
+      "verbatim_quote": "明为大坝村，清康熙为大坝伍，民国为官屯乡辖，解放后建村，54年建乡，办初级社，56年入高级社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大坝公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The passage describes earlier local administrative forms; their identities remain separate from the commune established in 1958."
+      }
+    },
+    {
+      "id": "82562f3b-0150-5b1d-948a-7229ba872da0",
+      "key": "bijie-gazetteer/p139/shanzhai-commune/name-history",
+      "entity_id": "a4a73a44-d162-519a-ba2a-e6d0f296b07f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "139",
+      "scan_page": 174,
+      "locator": "Commune overview, name history",
+      "verbatim_quote": "民国属对坡乡辖，解放后建村农协，54年建乡，办初级社，56年入高级社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "杉寨公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "dc459a8a-a228-5008-b282-2b3f8776910a",
+      "key": "bijie-gazetteer/p142/houqing-commune/name-history",
+      "entity_id": "ac1ac0cc-e7b8-5466-ac6b-9091de5368b4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "142",
+      "scan_page": 177,
+      "locator": "Commune overview, name history",
+      "verbatim_quote": "解放后50年置村，54年建乡，办初级社，56年进入高级社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "后箐公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "cf49e605-3182-5b0b-b100-6cd4f628fd7c",
+      "key": "bijie-gazetteer/p137/heguantun/luohuntai/elevation",
+      "entity_id": "0af5bb6c-3af3-5936-9628-71ae64f29d4c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "137",
+      "scan_page": 172,
+      "locator": "Commune overview, elevation",
+      "verbatim_quote": "大坝乃高寒山区，南面最高处落魂台，海拔2140.5米。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "落魂台",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "14065a0b-f4db-5ce7-b720-edfeef5a5dfb",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bdbdd96e-b777-507a-971f-ab095d308b46",
+      "key": "bijie-gazetteer/p137/daba/lehaigou/elevation",
+      "entity_id": "f6c1150f-325f-582d-b23b-e69d61be3235",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "137",
+      "scan_page": 172,
+      "locator": "Commune overview, elevation",
+      "verbatim_quote": "北西较低处乐海沟，最低海拔1550米。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "乐海沟",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "14065a0b-f4db-5ce7-b720-edfeef5a5dfb",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a0044a16-6ce9-5f9f-b397-836126fe3add",
+      "key": "bijie-gazetteer/p137/daba/shibanjing-sulfur-factory/operation",
+      "entity_id": "42804e6a-d8b9-599f-b2db-78fe4f5e5963",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "137",
+      "scan_page": 172,
+      "locator": "Commune overview, operation",
+      "verbatim_quote": "曾建县办大坝硫磺厂，该厂已下马，现为区社联办硫磺厂，大坝的石板井一带硫磺产量好，出磺率高，销路广，自73年办厂以来，全厂职工332人，从事硫磺生产，常年产磺1169吨，总产值479.29万元。",
+      "checked": true,
+      "source_date": {
+        "text": "73年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "大坝硫磺厂",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "14065a0b-f4db-5ce7-b720-edfeef5a5dfb",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The location, starting year and annual output identify the factory described in the district overview. The change of operator has no stated date."
+      }
+    },
+    {
+      "id": "e3b1ecc0-7052-5707-8f32-04279710067d",
+      "key": "bijie-gazetteer/p142/houqing-commune/seat",
+      "entity_id": "ac1ac0cc-e7b8-5466-ac6b-9091de5368b4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "142",
+      "scan_page": 177,
+      "locator": "Commune overview, seat",
+      "verbatim_quote": "公社驻地石山村。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "后箐公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "6f3c7a78-c5ba-5bae-bd1e-eb51607a3b9e",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "9ed90351-b91b-5100-bfc5-e14bb11140cf",
+      "key": "bijie-gazetteer/p142/heguantun-district/houqing-river/route",
+      "entity_id": "cc83ce7e-d2e8-50b1-83b2-663e6f4492a3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "142",
+      "scan_page": 177,
+      "locator": "Commune overview, route",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "后箐河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "ac1ac0cc-e7b8-5466-ac6b-9091de5368b4",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "响水河",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null,
+        "extent": "后箐河（响水河）发源于黄泥冲，由西向东，横流社境，东面出境处最低海拔1550米，下流入大桥公社入倒天河水库。"
+      }
+    },
+    {
+      "id": "1bfebb6e-872b-5880-a0d3-ae1d5ae50edc",
+      "key": "bijie-gazetteer/p142/houqing-commune/northern-waterway",
+      "entity_id": "ac1ac0cc-e7b8-5466-ac6b-9091de5368b4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "142",
+      "scan_page": 177,
+      "locator": "Commune overview, northern waterway",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "后箐公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview does not name the stream within the commune.",
+        "extent": "北面有溪流，出于上羊塘，自北南下折东，于山谷间建利民水库，下流入何官屯名小河，伏流出田坝桥，下为观音桥河（古威镇河）。"
+      }
+    },
+    {
+      "id": "5bb807ad-2dfe-5a26-bc09-17596687a02f",
+      "key": "bijie-gazetteer/p142/houqing/baiguo-river/route",
+      "entity_id": "521309d8-4305-53cf-ab77-d193ef591e91",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "142",
+      "scan_page": 177,
+      "locator": "Commune overview, route",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "白果河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "ac1ac0cc-e7b8-5466-ac6b-9091de5368b4",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "南部有白果河，源于席草坪，流经白果屯入倒天河，三条河流皆汇入大方县之落折河，为毕节县灌溉效益较大的河流。"
+      }
+    },
+    {
+      "id": "508a013f-42e6-5adc-8d82-f7f3cdd4ee88",
+      "key": "bijie-gazetteer/p142/heguantun-district/limin-reservoir/location",
+      "entity_id": "f6b513f1-d599-544e-ab14-f9a7cea0b7d6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "142",
+      "scan_page": 177,
+      "locator": "Commune overview, location",
+      "verbatim_quote": "北面有溪流，出于上羊塘，自北南下折东，于山谷间建利民水库。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "利民水库",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "ac1ac0cc-e7b8-5466-ac6b-9091de5368b4",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "93715cc2-0fe0-58a4-9027-6a5e03785d35",
+      "key": "editorial/bijie/daba-commune/establishment",
+      "entity_id": "14065a0b-f4db-5ce7-b720-edfeef5a5dfb",
+      "basis": [
+        "86aa065e-23b0-5c5d-abed-cfe8f93392e4"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "c4be4ce1-9f4c-50d9-9fa6-69e921f9101e",
+      "key": "editorial/bijie/daba-commune/name",
+      "entity_id": "14065a0b-f4db-5ce7-b720-edfeef5a5dfb",
+      "basis": [
+        "86aa065e-23b0-5c5d-abed-cfe8f93392e4"
+      ],
+      "brief": "Use the name stated at establishment; the source supplies no ending date.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "大坝公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "11389f5c-7bd5-553a-8d6f-4b55297ef721",
+      "key": "editorial/bijie/shanzhai-commune/establishment",
+      "entity_id": "a4a73a44-d162-519a-ba2a-e6d0f296b07f",
+      "basis": [
+        "26dca0f7-c408-536c-8ecd-be9c37aa7953"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "0357174e-04bd-5bdc-a5d5-e54f703703fb",
+      "key": "editorial/bijie/shanzhai-commune/name",
+      "entity_id": "a4a73a44-d162-519a-ba2a-e6d0f296b07f",
+      "basis": [
+        "26dca0f7-c408-536c-8ecd-be9c37aa7953"
+      ],
+      "brief": "Use the name stated at establishment; the source supplies no ending date.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "杉寨人民公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "c89d0d11-2ef5-57f3-a06c-ca97b412f6ff",
+      "key": "editorial/bijie/houqing-commune/establishment",
+      "entity_id": "ac1ac0cc-e7b8-5466-ac6b-9091de5368b4",
+      "basis": [
+        "00a8228a-bd2d-5b39-b9fb-3b45950de542"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "5bb524d3-d8e4-51d7-a496-81bbf3f0fa75",
+      "key": "editorial/bijie/houqing-commune/name",
+      "entity_id": "ac1ac0cc-e7b8-5466-ac6b-9091de5368b4",
+      "basis": [
+        "00a8228a-bd2d-5b39-b9fb-3b45950de542"
+      ],
+      "brief": "Use the name stated at establishment; the source supplies no ending date.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "后箐人民公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}
