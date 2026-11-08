@@ -74,6 +74,14 @@ pub enum EntityKind {
     Toponym,
     /// Industrial site.
     Factory,
+    /// Public-service, educational, or technical facility.
+    Facility,
+    /// Public park.
+    Park,
+    /// Cave or named underground opening.
+    Cave,
+    /// Forest or managed forest site.
+    Forest,
     /// Bridge.
     Bridge,
     /// River.

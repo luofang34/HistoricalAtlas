@@ -106,6 +106,13 @@ fn lunar_origins_select_deep_time_and_preserve_unquantified_ages() {
     use atlas_ledger::timeline::Timeline;
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
     let input = load_blocking(&root).unwrap();
+    let lunar_ids: std::collections::BTreeSet<_> = input
+        .data
+        .entities
+        .iter()
+        .filter(|entity| entity.body == atlas_geo::body::BodyId::Moon)
+        .map(|entity| entity.id)
+        .collect();
     let timeline = Timeline::new(&input.catalog, &input.data).unwrap();
     let at = |years| EpochTime::years_before(EpochTime::from_ticks(0), years).unwrap();
     for (age, count) in [
@@ -119,6 +126,7 @@ fn lunar_origins_select_deep_time_and_preserve_unquantified_ages() {
             slice
                 .entities
                 .iter()
+                .filter(|entity| lunar_ids.contains(&entity.entity_id))
                 .flat_map(|entity| &entity.origins)
                 .count(),
             count
@@ -143,6 +151,7 @@ fn lunar_origins_select_deep_time_and_preserve_unquantified_ages() {
     let names: Vec<_> = certain
         .entities
         .iter()
+        .filter(|entity| lunar_ids.contains(&entity.entity_id))
         .flat_map(|entity| &entity.origins)
         .map(|origin| {
             input
@@ -157,6 +166,95 @@ fn lunar_origins_select_deep_time_and_preserve_unquantified_ages() {
         .collect();
     assert_eq!(names.len(), 3);
     assert!(!names.iter().any(|name| name.contains("tycho")));
+}
+
+#[test]
+fn commune_and_cemetery_origins_follow_source_year_and_month_precision() {
+    use atlas_core::time::TimePrecision;
+    let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
+    let input = load_blocking(&root).unwrap();
+    for commune in ["daqiao", "dalan", "dehou"] {
+        assert_establishment_window(
+            &input,
+            &format!("editorial/bijie/{commune}/establishment"),
+            month_start(1958, 1),
+            month_start(1959, 1),
+            TimePrecision::Year,
+        );
+    }
+    assert_establishment_window(
+        &input,
+        "editorial/bijie/daqiao/lieshi-lingyuan/establishment",
+        month_start(1958, 4),
+        month_start(1958, 5),
+        TimePrecision::Month,
+    );
+}
+
+#[cfg(test)]
+fn month_start(year: i64, month: u8) -> EpochTime {
+    atlas_core::calendar::CivilDate {
+        year,
+        month,
+        day: 1,
+    }
+    .to_epoch(atlas_core::calendar::Calendar::Gregorian, 0)
+    .unwrap()
+}
+
+#[cfg(test)]
+fn assert_establishment_window(
+    input: &LedgerInput,
+    key: &str,
+    earliest: EpochTime,
+    end_exclusive: EpochTime,
+    precision: atlas_core::time::TimePrecision,
+) {
+    use atlas_core::origin::OriginTime;
+    use atlas_ledger::model::EstimateValue;
+    let timeline = Timeline::new(&input.catalog, &input.data).unwrap();
+    let estimate = input
+        .data
+        .estimates
+        .iter()
+        .find(|estimate| estimate.key == key)
+        .unwrap();
+    let EstimateValue::Origin {
+        time: OriginTime::Estimated { instant },
+    } = &estimate.value
+    else {
+        panic!("expected bounded establishment date");
+    };
+    let latest = end_exclusive.checked_add(-1).unwrap();
+    assert_eq!(instant.earliest, earliest);
+    assert_eq!(instant.latest, latest);
+    assert_eq!(instant.precision, precision);
+    let before = timeline
+        .at(earliest.checked_add(-1).unwrap(), TimeSelection::Possible)
+        .unwrap();
+    assert!(
+        !before
+            .entities
+            .iter()
+            .any(|entity| entity.entity_id == estimate.entity_id)
+    );
+    let during = timeline
+        .at(instant.nominal, TimeSelection::Certain)
+        .unwrap();
+    assert!(
+        !during
+            .entities
+            .iter()
+            .any(|entity| entity.entity_id == estimate.entity_id)
+    );
+    let after = compile_slice(input, latest, TimeSelection::Certain).unwrap();
+    let shard =
+        std::path::PathBuf::from(format!("slice/index/{}.json", estimate.entity_id.shard()));
+    let value: serde_json::Value = serde_json::from_slice(&after[&shard]).unwrap();
+    assert_eq!(
+        value[estimate.entity_id.0.to_string()]["origins"][0]["membership"],
+        "certain"
+    );
 }
 
 #[test]

@@ -101,3 +101,191 @@ fn temporal_hierarchy_cannot_publish_a_parent_without_checked_evidence() {
     }
     assert!(matches!(compile(&input), Err(ExportError::MissingEvidence(id)) if id == unchecked));
 }
+
+#[cfg(test)]
+fn bijie_record<'a>(input: &'a LedgerInput, key: &str) -> &'a Record {
+    input
+        .data
+        .records
+        .iter()
+        .find(|record| record.key == key)
+        .unwrap()
+}
+
+#[cfg(test)]
+fn published_record(output: &Artifacts, record: &Record) -> serde_json::Value {
+    let path = PathBuf::from(format!("entities/index/{}.json", record.entity_id.shard()));
+    let shard: serde_json::Value = serde_json::from_slice(&output[&path]).unwrap();
+    shard[record.entity_id.0.to_string()]["records"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .find(|value| value["id"] == record.id.0.to_string())
+        .unwrap()
+        .clone()
+}
+
+#[test]
+fn bijie_export_keeps_printed_coordinate_anomalies_and_blank_cells() {
+    let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
+    let input = load_blocking(&root).unwrap();
+    let output = compile(&input).unwrap();
+    for (key, latitude, longitude) in [
+        ("bijie-gazetteer/p24/daqiao/zhongba", "27°28′", "105°16′"),
+        ("bijie-gazetteer/p28/dalan/wujia-gou", "20°16′", "105°16′"),
+        (
+            "bijie-gazetteer/p31/dehou/lujia-qiao-bridge",
+            "27°18′",
+            "102°18′",
+        ),
+    ] {
+        let record = bijie_record(&input, key);
+        let published = published_record(&output, record);
+        let coordinate = &published["observation"]["coordinate"];
+        assert_eq!(coordinate["latitude_text"], latitude);
+        assert_eq!(coordinate["longitude_text"], longitude);
+        assert_eq!(coordinate["datum"], "unspecified");
+        assert_eq!(coordinate["resolution_arcminutes"], 1.0);
+    }
+    let blank = bijie_record(&input, "bijie-gazetteer/p24/daqiao/huangjia-dayuan");
+    let published = published_record(&output, blank);
+    assert!(published["observation"]["population"].is_null());
+    assert!(
+        published["observation"]["ethnicities"]
+            .as_array()
+            .unwrap()
+            .is_empty()
+    );
+    let fifteen = bijie_record(&input, "bijie-gazetteer/p24/daqiao/poping-zi");
+    assert_eq!(
+        published_record(&output, fifteen)["observation"]["population"],
+        15
+    );
+}
+
+#[test]
+fn explicit_brigade_notes_and_continued_tables_link_to_the_correct_parent() {
+    let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
+    let input = load_blocking(&root).unwrap();
+    let output = compile(&input).unwrap();
+    let daqiao = EntityId::from_key("earth/cn-gz/bijie/daqiao/daqiao-brigade").unwrap();
+    for slug in ["shuiguan-suo", "taoci-chang", "television-relay"] {
+        let record = bijie_record(&input, &format!("bijie-gazetteer/p24/daqiao/{slug}"));
+        assert_eq!(
+            published_record(&output, record)["observation"]["parent_id"],
+            daqiao.0.to_string()
+        );
+    }
+    let tianshengqiao =
+        EntityId::from_key("earth/cn-gz/bijie/daqiao/tianshengqiao-brigade").unwrap();
+    for slug in [
+        "xuhua-tun",
+        "maomao-chong",
+        "zhangji-tun",
+        "shuangshan",
+        "long-daishi",
+        "zhujia-shu",
+    ] {
+        let record = bijie_record(&input, &format!("bijie-gazetteer/p25/daqiao/{slug}"));
+        assert_eq!(
+            published_record(&output, record)["observation"]["parent_id"],
+            tianshengqiao.0.to_string()
+        );
+    }
+    let commune = bijie_record(&input, "bijie-gazetteer/p28/dalan/dalan-commune");
+    let seat = bijie_record(&input, "bijie-gazetteer/p28/dalan/maojia-yakou");
+    assert_eq!(
+        published_record(&output, commune)["observation"]["seat_id"],
+        seat.entity_id.0.to_string()
+    );
+}
+
+#[test]
+fn shared_names_and_coordinates_do_not_merge_distinct_geographical_features() {
+    let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
+    let input = load_blocking(&root).unwrap();
+    let output = compile(&input).unwrap();
+    for (first, second) in [
+        (
+            "bijie-gazetteer/p24/daqiao/xiaohe-seat",
+            "bijie-gazetteer/p24/daqiao/xiaohe-village",
+        ),
+        (
+            "bijie-gazetteer/p28/dalan/maoer-dong-village",
+            "bijie-gazetteer/p28/dalan/maoer-dong-cave",
+        ),
+        (
+            "bijie-gazetteer/p21/cuiping/chating-village",
+            "bijie-gazetteer/p21/cuiping/chating-pavilion",
+        ),
+    ] {
+        let first = bijie_record(&input, first);
+        let second = bijie_record(&input, second);
+        assert_ne!(first.entity_id, second.entity_id);
+        assert_eq!(first.observation.name, second.observation.name);
+        assert_eq!(
+            first.observation.coordinate.as_ref().unwrap().point,
+            second.observation.coordinate.as_ref().unwrap().point
+        );
+        assert_eq!(
+            published_record(&output, first)["id"],
+            first.id.0.to_string()
+        );
+        assert_eq!(
+            published_record(&output, second)["id"],
+            second.id.0.to_string()
+        );
+    }
+    let river = EntityId::from_key("earth/cn-gz/bijie/daotianhe-river").unwrap();
+    let records: Vec<_> = input
+        .data
+        .records
+        .iter()
+        .filter(|record| record.entity_id == river)
+        .collect();
+    assert_eq!(records.len(), 2);
+    assert!(
+        records
+            .iter()
+            .all(|record| record.observation.coordinate.is_none())
+    );
+    assert!(
+        records
+            .iter()
+            .all(|record| published_record(&output, record)["observation"]["coordinate"].is_null())
+    );
+}
+
+#[test]
+fn conflicting_source_totals_and_undated_parent_claims_survive_export() {
+    let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
+    let input = load_blocking(&root).unwrap();
+    let output = compile(&input).unwrap();
+    let overview = bijie_record(&input, "bijie-gazetteer/p29/dehou/composition");
+    let table = bijie_record(&input, "bijie-gazetteer/p30/dehou/dehou-commune");
+    assert_eq!(overview.entity_id, table.entity_id);
+    assert_eq!(
+        published_record(&output, overview)["observation"]["population"],
+        2882
+    );
+    assert_eq!(
+        published_record(&output, table)["observation"]["population"],
+        7882
+    );
+    let overview = bijie_record(&input, "bijie-gazetteer/p27/chating/parent");
+    let table = bijie_record(&input, "bijie-gazetteer/p21/cuiping/chating-brigade");
+    assert_eq!(overview.entity_id, table.entity_id);
+    assert_ne!(overview.observation.parent_id, table.observation.parent_id);
+    for record in [overview, table] {
+        let published = published_record(&output, record);
+        assert!(published["source_date"].is_null());
+        assert_eq!(
+            published["scan_page"].as_u64(),
+            record.scan_page.map(u64::from)
+        );
+        assert_eq!(
+            published["observation"]["parent_id"],
+            record.observation.parent_id.unwrap().0.to_string()
+        );
+    }
+}

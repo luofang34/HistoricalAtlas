@@ -1,0 +1,264 @@
+{
+  "entities": [
+    {
+      "id": "6b46710a-c014-52b0-9bcd-88f8ee7b0ed3",
+      "key": "earth/cn-gz/bijie/guanyinqiao-river",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "9bb37ceb-b670-5fe0-acbe-a440bb3f0300",
+      "key": "earth/cn-gz/bijie/dehou/jiaxiu-qiao",
+      "body": "earth",
+      "kind": "bridge"
+    },
+    {
+      "id": "6685da2f-fabb-56be-869b-9d8247fd4ac5",
+      "key": "earth/cn-gz/bijie/dehou/lujia-qiao-bridge",
+      "body": "earth",
+      "kind": "bridge"
+    },
+    {
+      "id": "0da3e262-a026-53b2-a667-0c528f5db149",
+      "key": "earth/cn-gz/bijie/dehou/guanmenshan-reservoir",
+      "body": "earth",
+      "kind": "reservoir"
+    },
+    {
+      "id": "d42ba4d2-1968-5991-964a-100a3df7bde1",
+      "key": "earth/cn-gz/bijie/dehou/chemical-factory",
+      "body": "earth",
+      "kind": "factory"
+    },
+    {
+      "id": "594407f1-4368-5fef-a475-c48ca30187b8",
+      "key": "earth/cn-gz/bijie/dehou/liquid-nitrogen-station",
+      "body": "earth",
+      "kind": "facility"
+    }
+  ],
+  "records": [
+    {
+      "id": "cc1bb72a-01a2-51c4-83d2-c72a70252b73",
+      "key": "bijie-gazetteer/p31/dehou/guanyinqiao-river",
+      "entity_id": "6b46710a-c014-52b0-9bcd-88f8ee7b0ed3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "31",
+      "scan_page": 66,
+      "locator": "row 1: 观音桥河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "观音桥河",
+        "pinyin": "Guānyīnqiáo Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "上接观音桥，在拱背桥汇入倒天河。"
+      }
+    },
+    {
+      "id": "1305c957-9150-566f-8c0f-ce43b5819507",
+      "key": "bijie-gazetteer/p31/dehou/daotianhe-river",
+      "entity_id": "6e78cd6d-250d-5c3a-a9eb-6fa7a2623dd6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "31",
+      "scan_page": 66,
+      "locator": "row 2: 倒天河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "倒天河",
+        "pinyin": "Dàotiān Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "倒天河水在拱背桥有观音桥河水汇入，下为跳墩河，入头步桥。"
+      }
+    },
+    {
+      "id": "6caf930a-2d42-51b6-9b0c-ec6075524f94",
+      "key": "bijie-gazetteer/p31/dehou/jiaxiu-qiao",
+      "entity_id": "9bb37ceb-b670-5fe0-acbe-a440bb3f0300",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "31",
+      "scan_page": 66,
+      "locator": "row 3: 甲秀桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "甲秀桥",
+        "pinyin": "Jiǎxiù Qiáo",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "684acf2e-382b-5f1c-a90c-b59acb932dba",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.3
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6025d100-8ec1-5ce1-ab88-09c8a802ed61",
+      "key": "bijie-gazetteer/p31/dehou/lujia-qiao-bridge",
+      "entity_id": "6685da2f-fabb-56be-869b-9d8247fd4ac5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "31",
+      "scan_page": 66,
+      "locator": "row 4: 路家桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "路家桥",
+        "pinyin": "LùJiā Qiáo",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "684acf2e-382b-5f1c-a90c-b59acb932dba",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 102.3,
+            "latitude": 27.3
+          },
+          "longitude_text": "102°18′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6b9d4b81-82c5-5e3a-8680-7af7dc400ace",
+      "key": "bijie-gazetteer/p31/dehou/guanmenshan-reservoir",
+      "entity_id": "0da3e262-a026-53b2-a667-0c528f5db149",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "31",
+      "scan_page": 66,
+      "locator": "row 5: 关门山水库",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "关门山水库",
+        "pinyin": "Guānménshān Shuǐkù",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "684acf2e-382b-5f1c-a90c-b59acb932dba",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "库容10万立方米，有效灌溉面积200亩"
+      }
+    },
+    {
+      "id": "3267228c-e7a4-5820-bec8-6fa35ffbee1b",
+      "key": "bijie-gazetteer/p31/dehou/chemical-factory",
+      "entity_id": "d42ba4d2-1968-5991-964a-100a3df7bde1",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "31",
+      "scan_page": 66,
+      "locator": "row 6: 毕节化工厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "毕节化工厂",
+        "pinyin": "BìJié Huàgōngchǎng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "684acf2e-382b-5f1c-a90c-b59acb932dba",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.3
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "352d7096-0e9a-581d-9b3f-bc7abd3dd85d",
+      "key": "bijie-gazetteer/p31/dehou/liquid-nitrogen-station",
+      "entity_id": "594407f1-4368-5fef-a475-c48ca30187b8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "31",
+      "scan_page": 66,
+      "locator": "row 7: 地区液氮站",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "地区液氮站",
+        "pinyin": "Dìqū Yèdànzhàn",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "684acf2e-382b-5f1c-a90c-b59acb932dba",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.3
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

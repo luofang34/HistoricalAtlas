@@ -1,0 +1,370 @@
+{
+  "entities": [],
+  "records": [
+    {
+      "id": "df068763-61d7-58a4-8d44-ea76627a320f",
+      "key": "bijie-gazetteer/p23/daqiao/establishment",
+      "entity_id": "5cd50971-ffa9-5f4a-9738-12a1ad6fb0af",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "23",
+      "scan_page": 58,
+      "locator": "大桥公社概述, second paragraph, establishment sentence",
+      "verbatim_quote": "1958年成立公社，即名大桥公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "大桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3da576d5-d5e6-58fa-8189-0ac48201849a",
+      "key": "bijie-gazetteer/p23/daqiao/composition",
+      "entity_id": "5cd50971-ffa9-5f4a-9738-12a1ad6fb0af",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "23",
+      "scan_page": 58,
+      "locator": "大桥公社概述, second paragraph, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大桥公社",
+        "pinyin": null,
+        "population": 9954,
+        "households": 2001,
+        "ethnicities": [
+          "汉",
+          "彝"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "辖：大桥、小河、天生桥、魏家屯、大坡、殷官屯六个大队，61个生产队，31个自然村。总人口2001户，9954人。"
+      }
+    },
+    {
+      "id": "b027d1b2-b576-503d-a93c-d4f90cf20a23",
+      "key": "bijie-gazetteer/p27/dalan/establishment",
+      "entity_id": "02630af6-9208-5ee5-8cdf-14b569bed157",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "27",
+      "scan_page": 62,
+      "locator": "大兰公社概述, second paragraph, commune establishment and seat",
+      "verbatim_quote": "1958年人民公社化，以村名的首字命为大兰公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "大兰公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "5b762a92-24f3-5668-b812-a4543c58c75b",
+        "coordinate": null,
+        "former_names": [],
+        "note": "公社驻地毛家垭口。"
+      }
+    },
+    {
+      "id": "2a572116-77f5-5a35-aa23-b621889295e6",
+      "key": "bijie-gazetteer/p27/dalan/composition",
+      "entity_id": "02630af6-9208-5ee5-8cdf-14b569bed157",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "27",
+      "scan_page": 62,
+      "locator": "大兰公社概述, third paragraph, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大兰公社",
+        "pinyin": null,
+        "population": 8062,
+        "households": 1628,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "社辖：大兰、环城、六合、茶亭四个大队，70个生产队，18个自然村。共有户口：1628户，8062人。其中：苗族63人，余为汉族。"
+      }
+    },
+    {
+      "id": "1f201303-96ea-5cb1-9855-b6ab75d46b11",
+      "key": "bijie-gazetteer/p27/chating/parent",
+      "entity_id": "85b0d7e5-7467-5bca-9ee2-e0874c003b41",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "27",
+      "scan_page": 62,
+      "locator": "大兰公社概述, third paragraph, 茶亭 in brigade list",
+      "verbatim_quote": "社辖：大兰、环城、六合、茶亭四个大队",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "茶亭",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "02630af6-9208-5ee5-8cdf-14b569bed157",
+        "rank": "brigade",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "22bdd59d-fd37-5774-89eb-a58822c08244",
+      "key": "bijie-gazetteer/p29/dehou/establishment",
+      "entity_id": "684acf2e-382b-5f1c-a90c-b59acb932dba",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "29",
+      "scan_page": 64,
+      "locator": "德厚公社概述, third paragraph, commune establishment and seat",
+      "verbatim_quote": "1958年人民公社化，将德沟、后河等地划为一个公社，命名为德厚公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "德厚公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "b1998e4a-0003-5354-ab9c-e776d5e2cf92",
+        "coordinate": null,
+        "former_names": [],
+        "note": "公社驻地德沟。"
+      }
+    },
+    {
+      "id": "4ad3059f-05e8-5d9b-882d-ff0c60bba0b9",
+      "key": "bijie-gazetteer/p29/dehou/composition",
+      "entity_id": "684acf2e-382b-5f1c-a90c-b59acb932dba",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "29",
+      "scan_page": 64,
+      "locator": "德厚公社概述, third paragraph, brigade list and demographic totals",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "德厚公社",
+        "pinyin": null,
+        "population": 2882,
+        "households": 1601,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "管辖：德厚、后河、烂泥三个大队，70个生产队，23个自然村。现有户口1601户，2882人，汉族。"
+      }
+    },
+    {
+      "id": "e752491a-30aa-5bc3-8766-079453db4790",
+      "key": "bijie-gazetteer/p23/daqiao/extent",
+      "entity_id": "5cd50971-ffa9-5f4a-9738-12a1ad6fb0af",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "23",
+      "scan_page": 58,
+      "locator": "大桥公社概述, first paragraph, coordinate range and area",
+      "verbatim_quote": "位于东经105°14′～17′，北纬27°18′～22′之间，总面积27.5平方公里。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "东接五里坪和观音桥，南频翠屏，西南青丰，西靠后箐，北抵何官屯等公社相接壤。"
+      }
+    },
+    {
+      "id": "8629a39f-e810-5eda-8294-7feb87323c9e",
+      "key": "bijie-gazetteer/p27/dalan/extent",
+      "entity_id": "02630af6-9208-5ee5-8cdf-14b569bed157",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "27",
+      "scan_page": 62,
+      "locator": "大兰公社概述, first paragraph, coordinate range and area",
+      "verbatim_quote": "位于东经105°16′～105°18′，北纬27°16′～27°17′之间，总面积14.2平方公里。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大兰公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "东邻头步公社，南靠草堤和清丰两社，西接清丰公社，北抵翠屏公社。"
+      }
+    },
+    {
+      "id": "80e0b5bb-71aa-5a91-ac3e-7191e35725a1",
+      "key": "bijie-gazetteer/p29/dehou/extent",
+      "entity_id": "684acf2e-382b-5f1c-a90c-b59acb932dba",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "29",
+      "scan_page": 64,
+      "locator": "德厚公社概述, first paragraph, coordinate range and area",
+      "verbatim_quote": "位于东经105°19′～21′，北纬27°18′～20′之间，总面积17.8平方公里。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "德厚公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "东接以河与烧杠，南连头步与草堤，西接翠屏，北靠五里坪与观音桥等公社相互接壤。"
+      }
+    },
+    {
+      "id": "932241dd-ecf1-5b6d-b010-bec0498e44e2",
+      "key": "bijie-gazetteer/p23/daotianhe-reservoir/construction",
+      "entity_id": "643f345d-b8ef-5f55-8372-4b9b5c49ab15",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "23",
+      "scan_page": 58,
+      "locator": "大桥公社概述, reservoir paragraph beginning 1957年",
+      "verbatim_quote": "1957年在大桥之南兴建规模较大的倒天河水库一座。",
+      "checked": true,
+      "source_date": {
+        "text": "1957年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "倒天河水库",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "库容650万立方米。有效灌溉面积6800亩，渠道33.21公里，主干渠17.35公里，支渠15.86公里。坝后式装机2000瓩，引水式装机66瓩。"
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "bad60b4c-bab1-5324-a3de-6c59cb3665d7",
+      "key": "editorial/bijie/daqiao/establishment",
+      "entity_id": "5cd50971-ffa9-5f4a-9738-12a1ad6fb0af",
+      "basis": [
+        "df068763-61d7-58a4-8d44-ea76627a320f"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year. Use TT calendar bounds and the interval midpoint for nominal display.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "3b821c5a-e8d2-5d05-ad3e-ddba65c92458",
+      "key": "editorial/bijie/dalan/establishment",
+      "entity_id": "02630af6-9208-5ee5-8cdf-14b569bed157",
+      "basis": [
+        "b027d1b2-b576-503d-a93c-d4f90cf20a23"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year. Use TT calendar bounds and the interval midpoint for nominal display.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "778adb34-a9e7-510d-b842-0c181df544b1",
+      "key": "editorial/bijie/dehou/establishment",
+      "entity_id": "684acf2e-382b-5f1c-a90c-b59acb932dba",
+      "basis": [
+        "22bdd59d-fd37-5774-89eb-a58822c08244"
+      ],
+      "brief": "Date commune establishment within the stated Gregorian year. Use TT calendar bounds and the interval midpoint for nominal display.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}
