@@ -1,0 +1,292 @@
+{
+  "entities": [
+    {
+      "id": "7151de6d-cf77-5ddb-b76a-2a32f8fa84ff",
+      "key": "earth/cn-gz/bijie/baojia/yudongchong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "54090a91-e6c4-54b5-8f29-2d9396bf666b",
+      "key": "earth/cn-gz/bijie/baojia/zhongduan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "a9116797-ab40-50c5-a66b-8a4c5b37cff8",
+      "key": "earth/cn-gz/bijie/baojia/dawanzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "b3abe0db-e11b-5b52-9fbc-8884c32fb5b9",
+      "key": "earth/cn-gz/bijie/baojia/toudaohe",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "aa133968-9432-5aef-a191-807c47dd1e24",
+      "key": "earth/cn-gz/bijie/baojia/matang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "6c6c3f1f-5d97-52ec-88d6-e1fb96e6e937",
+      "key": "earth/cn-gz/bijie/baojia/changyaoling",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "98d37e3f-f990-533d-a91e-b03e3ad9fad4",
+      "key": "earth/cn-gz/bijie/baojia/chahe-river",
+      "body": "earth",
+      "kind": "river"
+    }
+  ],
+  "records": [
+    {
+      "id": "bf99fb4a-6041-5252-a16e-37770915f10c",
+      "key": "bijie-gazetteer/p95/baojia/yudongchong",
+      "entity_id": "7151de6d-cf77-5ddb-b76a-2a32f8fa84ff",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "95",
+      "scan_page": 130,
+      "locator": "Place table, row 1: 鱼洞冲",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "鱼洞冲",
+        "pinyin": "Yúdòngchōng",
+        "population": 212,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5eccc667-321e-5491-bbe1-08764067b8f0",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.08333333333333,
+            "latitude": 27.366666666666667
+          },
+          "longitude_text": "105°05′",
+          "latitude_text": "27°22′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "00292216-e811-5001-9f57-81dd2ded3c82",
+      "key": "bijie-gazetteer/p95/baojia/zhongduan",
+      "entity_id": "54090a91-e6c4-54b5-8f29-2d9396bf666b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "95",
+      "scan_page": 130,
+      "locator": "Place table, row 2: 中断",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "中断",
+        "pinyin": "Zhōngduàn",
+        "population": 255,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5eccc667-321e-5491-bbe1-08764067b8f0",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.08333333333333,
+            "latitude": 27.366666666666667
+          },
+          "longitude_text": "105°05′",
+          "latitude_text": "27°22′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e7aa2c98-ca8d-53f2-b23b-d2b2d3c65ba6",
+      "key": "bijie-gazetteer/p95/baojia/dawanzi",
+      "entity_id": "a9116797-ab40-50c5-a66b-8a4c5b37cff8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "95",
+      "scan_page": 130,
+      "locator": "Place table, row 3: 大湾子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大湾子",
+        "pinyin": "Dàwānzǐ",
+        "population": 157,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5eccc667-321e-5491-bbe1-08764067b8f0",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.1,
+            "latitude": 27.366666666666667
+          },
+          "longitude_text": "105°06′",
+          "latitude_text": "27°22′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c95e6b8a-57ab-5193-ad1b-e9e5f41cfafd",
+      "key": "bijie-gazetteer/p95/baojia/toudaohe",
+      "entity_id": "b3abe0db-e11b-5b52-9fbc-8884c32fb5b9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "95",
+      "scan_page": 130,
+      "locator": "Place table, row 4: 头道河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "头道河",
+        "pinyin": "Tóudàohé",
+        "population": 143,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5eccc667-321e-5491-bbe1-08764067b8f0",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.1,
+            "latitude": 27.366666666666667
+          },
+          "longitude_text": "105°06′",
+          "latitude_text": "27°22′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "0857b1b2-c7f8-5a48-9756-223fa3557c2d",
+      "key": "bijie-gazetteer/p95/baojia/matang",
+      "entity_id": "aa133968-9432-5aef-a191-807c47dd1e24",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "95",
+      "scan_page": 130,
+      "locator": "Place table, row 5: 麻塘",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "麻塘",
+        "pinyin": "Mátáng",
+        "population": 308,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5eccc667-321e-5491-bbe1-08764067b8f0",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.08333333333333,
+            "latitude": 27.366666666666667
+          },
+          "longitude_text": "105°05′",
+          "latitude_text": "27°22′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "018b823f-330c-5756-83f1-14ff7d070ad9",
+      "key": "bijie-gazetteer/p95/baojia/changyaoling",
+      "entity_id": "6c6c3f1f-5d97-52ec-88d6-e1fb96e6e937",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "95",
+      "scan_page": 130,
+      "locator": "Place table, row 6: 长腰岭",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "长腰岭",
+        "pinyin": "Chángyāolǐng",
+        "population": 186,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5eccc667-321e-5491-bbe1-08764067b8f0",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.06666666666666,
+            "latitude": 27.366666666666667
+          },
+          "longitude_text": "105°04′",
+          "latitude_text": "27°22′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "fff782cb-3f6c-5842-ba28-48125f7f5b4e",
+      "key": "bijie-gazetteer/p95/baojia/chahe-river",
+      "entity_id": "98d37e3f-f990-533d-a91e-b03e3ad9fad4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "95",
+      "scan_page": 130,
+      "locator": "Place table, row 7: 岔河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "岔河",
+        "pinyin": "Chà Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "cda90177-1b2b-5f15-a9c3-53ceb9eb725c",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "河流",
+        "extent": "一条上接水箐，流入青场，境内流长约8公里。又一条由笋子山，入岔河，全长7公里。"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

@@ -243,3 +243,7 @@ mod yachi_commune_tests;
 #[cfg(test)]
 #[path = "export/qingchang/tests.rs"]
 mod qingchang_tests;
+
+#[cfg(test)]
+#[path = "export/qingchang/communes/tests.rs"]
+mod qingchang_commune_tests;

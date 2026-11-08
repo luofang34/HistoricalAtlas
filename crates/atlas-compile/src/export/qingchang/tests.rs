@@ -266,7 +266,8 @@ fn six_communes_join_the_district_with_year_level_uncertainty() {
     let input = input();
     let timeline = Timeline::new(&input.catalog, &input.data).unwrap();
     for (year, selection, count) in [
-        (1965, TimeSelection::Possible, 0),
+        (1964, TimeSelection::Possible, 0),
+        (1965, TimeSelection::Possible, 1),
         (1966, TimeSelection::Possible, 6),
         (1967, TimeSelection::Nominal, 6),
     ] {

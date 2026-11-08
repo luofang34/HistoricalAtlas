@@ -1,0 +1,784 @@
+{
+  "entities": [
+    {
+      "id": "a91a33be-53bd-5803-b679-bcfc0eac1517",
+      "key": "earth/cn-gz/bijie/dahe/guanzhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "7d7686a6-c07b-5c36-9473-7476e7fef64e",
+      "key": "earth/cn-gz/bijie/dahe/jijia-yuanzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "72b3cc3b-f093-598f-a735-be74aac7a7cb",
+      "key": "earth/cn-gz/bijie/dahe/qiujia-wuji",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "8432dbf1-eccf-5b29-b55d-0c6dad1e8b2a",
+      "key": "earth/cn-gz/bijie/dahe/tanguanyao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "2497bee2-e0eb-5b11-896f-a4d4ed1a271a",
+      "key": "earth/cn-gz/bijie/dahe/guanzhai-toponym",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "c809de5b-eb2d-5bcd-be26-8f943b6e53f5",
+      "key": "earth/cn-gz/bijie/dahe/keluoyuan-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "a6b93075-72fd-55ca-b392-40a373c6acad",
+      "key": "earth/cn-gz/bijie/dahe/keluoyuan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "90c9a4db-40eb-517e-a560-2426a5519d08",
+      "key": "earth/cn-gz/bijie/dahe/jikuaiping",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "420e6193-6d75-53ee-b924-d24992cc4e08",
+      "key": "earth/cn-gz/bijie/dahe/keluoyuan-zhangjia-yuanzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "7d32dcc8-5c44-5227-9685-9aa633c1e851",
+      "key": "earth/cn-gz/bijie/dahe/zhaojia-matang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "046d636a-dce8-5dc8-b6e2-bef9c8cbc3a9",
+      "key": "earth/cn-gz/bijie/dahe/banbi-yuanzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "b633793b-983c-51e6-bc63-e37c6f8a7405",
+      "key": "earth/cn-gz/bijie/dahe/dashuijing",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "8d39276c-f53a-58cb-a746-26f448cb4818",
+      "key": "earth/cn-gz/bijie/dahe/jimaiping",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "66d71fab-d22d-5ae0-971f-213de76640b6",
+      "key": "earth/cn-gz/bijie/dahe/laoyingjiao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c669e62a-9318-5625-987d-ea03ee10a747",
+      "key": "earth/cn-gz/bijie/dahe/oubuka",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "89ba0b09-5f80-588f-b4f8-bad9b2b914bc",
+      "key": "earth/cn-gz/bijie/dahe/baiduo-forest",
+      "body": "earth",
+      "kind": "forest"
+    },
+    {
+      "id": "856d7878-f5a4-5c7c-a8d8-8bc8126e1828",
+      "key": "earth/cn-gz/bijie/dahe/dahe-river",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "c92c31c5-da8b-50e1-a981-51f265237c0d",
+      "key": "earth/cn-gz/bijie/dahe/dahe-bridge-30m",
+      "body": "earth",
+      "kind": "bridge"
+    },
+    {
+      "id": "eebb7a40-4615-57a8-bca4-f69bc13fc78d",
+      "key": "earth/cn-gz/bijie/dahe/dahe-bridge-48m",
+      "body": "earth",
+      "kind": "bridge"
+    }
+  ],
+  "records": [
+    {
+      "id": "81c0b3f4-3d6d-56ad-bcba-5dfa35680d18",
+      "key": "bijie-gazetteer/p83/dahe/guanzhai",
+      "entity_id": "a91a33be-53bd-5803-b679-bcfc0eac1517",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 1: 官寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "官寨",
+        "pinyin": "Guānzhài",
+        "population": 142,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "fc6cc398-a2cf-5dbf-8804-f985c6bf795b",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.9,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "104°54′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5cae9043-fddb-5c28-a72e-d29927c43072",
+      "key": "bijie-gazetteer/p83/dahe/jijia-yuanzi",
+      "entity_id": "7d7686a6-c07b-5c36-9473-7476e7fef64e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 2: 吉家院子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "吉家院子",
+        "pinyin": "Jíjiā Yuànzǐ",
+        "population": 117,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "fc6cc398-a2cf-5dbf-8804-f985c6bf795b",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.9,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "104°54′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e9743262-bcf9-52a0-97e6-204ef8ab5efa",
+      "key": "bijie-gazetteer/p83/dahe/qiujia-wuji",
+      "entity_id": "72b3cc3b-f093-598f-a735-be74aac7a7cb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 3: 丘家屋基",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "丘家屋基",
+        "pinyin": "Qiūjiā Wūjī",
+        "population": 53,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "fc6cc398-a2cf-5dbf-8804-f985c6bf795b",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.91666666666667,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "104°55′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "01a9357f-efb4-55af-8be3-1d498b51c515",
+      "key": "bijie-gazetteer/p83/dahe/tanguanyao",
+      "entity_id": "8432dbf1-eccf-5b29-b55d-0c6dad1e8b2a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 4: 坛罐窑",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "坛罐窑",
+        "pinyin": "Tánguànyáo",
+        "population": 221,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "fc6cc398-a2cf-5dbf-8804-f985c6bf795b",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.91666666666667,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "104°55′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "b5653cc4-8380-5310-aa6f-740b7495fa3f",
+      "key": "bijie-gazetteer/p83/dahe/guanzhai-toponym",
+      "entity_id": "2497bee2-e0eb-5b11-896f-a4d4ed1a271a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 5: 官寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "官寨",
+        "pinyin": "Guānzhài",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "fc6cc398-a2cf-5dbf-8804-f985c6bf795b",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.9,
+            "latitude": 27.3
+          },
+          "longitude_text": "104°54′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "地名"
+      }
+    },
+    {
+      "id": "76fba852-4216-5796-8628-e254d177e236",
+      "key": "bijie-gazetteer/p83/dahe/keluoyuan-brigade",
+      "entity_id": "c809de5b-eb2d-5bcd-be26-8f943b6e53f5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 6: 柯罗院大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "柯罗院大队",
+        "pinyin": "Kēluóyuàn Dàduì",
+        "population": 1817,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "dd4b601f-8a25-5761-a7a1-7ba8f2416739",
+        "rank": "brigade",
+        "seat_id": "a6b93075-72fd-55ca-b392-40a373c6acad",
+        "coordinate": {
+          "point": {
+            "longitude": 104.93333333333334,
+            "latitude": 27.266666666666666
+          },
+          "longitude_text": "104°56′",
+          "latitude_text": "27°16′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "370d6c98-abeb-5bbf-9dab-e03b910a6db7",
+      "key": "bijie-gazetteer/p83/dahe/keluoyuan",
+      "entity_id": "a6b93075-72fd-55ca-b392-40a373c6acad",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 7: 柯罗院",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "柯罗院",
+        "pinyin": "Kéluóyuàn",
+        "population": 249,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c809de5b-eb2d-5bcd-be26-8f943b6e53f5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.93333333333334,
+            "latitude": 27.266666666666666
+          },
+          "longitude_text": "104°56′",
+          "latitude_text": "27°16′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "5c43ae3d-056c-5da3-96c5-ceaf238b2cce",
+      "key": "bijie-gazetteer/p83/dahe/jikuaiping",
+      "entity_id": "90c9a4db-40eb-517e-a560-2426a5519d08",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 8: 鸡块坪",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "鸡块坪",
+        "pinyin": "Jīkuàipíng",
+        "population": 230,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c809de5b-eb2d-5bcd-be26-8f943b6e53f5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.93333333333334,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "104°56′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a16f0909-9d9e-5307-a484-068cffceef09",
+      "key": "bijie-gazetteer/p83/dahe/keluoyuan-zhangjia-yuanzi",
+      "entity_id": "420e6193-6d75-53ee-b924-d24992cc4e08",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 9: 张家院子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "张家院子",
+        "pinyin": "Zhāngjiā Yuànzǐ",
+        "population": 244,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c809de5b-eb2d-5bcd-be26-8f943b6e53f5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.93333333333334,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "104°56′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bd919d69-6ff2-5b44-94ff-b15cbc0f18f4",
+      "key": "bijie-gazetteer/p83/dahe/zhaojia-matang",
+      "entity_id": "7d32dcc8-5c44-5227-9685-9aa633c1e851",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 10: 赵家麻塘",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "赵家麻塘",
+        "pinyin": "Zhàojiāmátáng",
+        "population": 249,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c809de5b-eb2d-5bcd-be26-8f943b6e53f5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.93333333333334,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "104°56′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7d0b46f6-e574-5a8a-9f22-23765d21e05e",
+      "key": "bijie-gazetteer/p83/dahe/banbi-yuanzi",
+      "entity_id": "046d636a-dce8-5dc8-b6e2-bef9c8cbc3a9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 11: 板壁院子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "板壁院子",
+        "pinyin": "Bǎnbì Yuànzǐ",
+        "population": 60,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c809de5b-eb2d-5bcd-be26-8f943b6e53f5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.91666666666667,
+            "latitude": 27.266666666666666
+          },
+          "longitude_text": "104°55′",
+          "latitude_text": "27°16′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "93c981c2-95df-5630-aee4-4a89bfa15e29",
+      "key": "bijie-gazetteer/p83/dahe/dashuijing",
+      "entity_id": "b633793b-983c-51e6-bc63-e37c6f8a7405",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 12: 大水井",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大水井",
+        "pinyin": "Dàshuǐjǐng",
+        "population": 325,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c809de5b-eb2d-5bcd-be26-8f943b6e53f5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.91666666666667,
+            "latitude": 27.266666666666666
+          },
+          "longitude_text": "104°55′",
+          "latitude_text": "27°16′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "9b0b2477-8d96-5abe-a65a-2c256ed3a022",
+      "key": "bijie-gazetteer/p83/dahe/jimaiping",
+      "entity_id": "8d39276c-f53a-58cb-a746-26f448cb4818",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 13: 机埋坪",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "机埋坪",
+        "pinyin": "Jīmáipíng",
+        "population": 127,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c809de5b-eb2d-5bcd-be26-8f943b6e53f5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.9,
+            "latitude": 27.25
+          },
+          "longitude_text": "104°54′",
+          "latitude_text": "27°15′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "73d758c1-d4f0-5ed4-ab5e-d574ba0f8999",
+      "key": "bijie-gazetteer/p83/dahe/laoyingjiao",
+      "entity_id": "66d71fab-d22d-5ae0-971f-213de76640b6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 14: 老营脚",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "老营脚",
+        "pinyin": "Nǎoyíngjiǎo",
+        "population": 168,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c809de5b-eb2d-5bcd-be26-8f943b6e53f5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.9,
+            "latitude": 27.25
+          },
+          "longitude_text": "104°54′",
+          "latitude_text": "27°15′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6142cac5-dafa-5c6c-b1a5-2b437224da89",
+      "key": "bijie-gazetteer/p83/dahe/oubuka",
+      "entity_id": "c669e62a-9318-5625-987d-ea03ee10a747",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 15: 欧不卡",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "欧不卡",
+        "pinyin": "Ōubùkǎ",
+        "population": 165,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c809de5b-eb2d-5bcd-be26-8f943b6e53f5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.91666666666667,
+            "latitude": 27.25
+          },
+          "longitude_text": "104°55′",
+          "latitude_text": "27°15′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ca5d1f9d-db62-57da-aa66-8cd908b1367f",
+      "key": "bijie-gazetteer/p83/dahe/baiduo-forest",
+      "entity_id": "89ba0b09-5f80-588f-b4f8-bad9b2b914bc",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 16: 百多林场",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "百多林场",
+        "pinyin": "Báiduō Línchǎng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "dd4b601f-8a25-5761-a7a1-7ba8f2416739",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.91666666666667,
+            "latitude": 27.3
+          },
+          "longitude_text": "104°55′",
+          "latitude_text": "27°18′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bb095a56-604a-5e4f-877a-a8eb77b61ccf",
+      "key": "bijie-gazetteer/p83/dahe/dahe-river",
+      "entity_id": "856d7878-f5a4-5c7c-a8d8-8bc8126e1828",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 17: 大河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大河",
+        "pinyin": "Dà Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "dd4b601f-8a25-5761-a7a1-7ba8f2416739",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "河流",
+        "extent": "上接青松，下接永安公社。境内流长约10公里。"
+      }
+    },
+    {
+      "id": "7db30827-1e53-58b8-933f-0560f4dece91",
+      "key": "bijie-gazetteer/p83/dahe/dahe-bridge-30m",
+      "entity_id": "c92c31c5-da8b-50e1-a981-51f265237c0d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 18: 大河桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大河桥",
+        "pinyin": "Dàhé Qiáo",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "dd4b601f-8a25-5761-a7a1-7ba8f2416739",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.9,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "104°54′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公路桥 (30.4–5.5)/15"
+      }
+    },
+    {
+      "id": "52569c00-5ede-5916-999f-2d363759872b",
+      "key": "bijie-gazetteer/p83/dahe/dahe-bridge-48m",
+      "entity_id": "eebb7a40-4615-57a8-bca4-f69bc13fc78d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "83",
+      "scan_page": 118,
+      "locator": "Place table, row 19: 大河桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大河桥",
+        "pinyin": "Dàhé Qiáo",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "dd4b601f-8a25-5761-a7a1-7ba8f2416739",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 104.9,
+            "latitude": 27.283333333333335
+          },
+          "longitude_text": "104°54′",
+          "latitude_text": "27°17′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公路桥 (48.5–5)/15"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

@@ -1,6 +1,29 @@
 use super::*;
 
 #[test]
+fn dahe_bridges_and_river_alias_resolve_to_their_distinct_evidence() {
+    let atlas = atlas();
+    let bridges = atlas.search("大河桥", BodyId::Earth);
+    let expected: BTreeSet<_> = ["dahe-bridge-30m", "dahe-bridge-48m"]
+        .map(|key| EntityId::from_key(&format!("earth/cn-gz/bijie/dahe/{key}")).unwrap())
+        .into_iter()
+        .collect();
+    assert_eq!(bridges.into_iter().collect::<BTreeSet<_>>(), expected);
+    let notes: BTreeSet<_> = expected
+        .iter()
+        .flat_map(|id| &atlas.entry(*id).unwrap().records)
+        .filter_map(|record| record.observation.note.as_deref())
+        .collect();
+    assert_eq!(
+        notes,
+        BTreeSet::from(["公路桥 (30.4–5.5)/15", "公路桥 (48.5–5)/15"])
+    );
+    let river = EntityId::from_key("earth/cn-gz/bijie/dahe/dahe-river").unwrap();
+    assert!(atlas.search("红岩河", BodyId::Earth).contains(&river));
+    assert!(atlas.search("大河", BodyId::Earth).contains(&river));
+}
+
+#[test]
 fn qingsong_river_alias_and_coincident_mountain_village_remain_searchable() {
     let atlas = atlas();
     let river = EntityId::from_key("earth/cn-gz/bijie/qingsong/dahe").unwrap();

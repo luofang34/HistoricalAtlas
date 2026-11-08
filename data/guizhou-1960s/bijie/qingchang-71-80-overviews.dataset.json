@@ -1298,15 +1298,16 @@
       "key": "editorial/bijie/kuaile/qingchang-district-membership",
       "entity_id": "41e97bf2-a865-5564-a942-a3dd189f2d86",
       "basis": [
-        "83f426c8-2257-5a69-b377-26688c925e56"
+        "83f426c8-2257-5a69-b377-26688c925e56",
+        "a07d8206-bfcb-5465-bd16-88da00f78ee0"
       ],
-      "brief": "The district overview dates the transfer to 1966. Preserve year-level uncertainty and an unknown end.",
+      "brief": "The district overview dates the transfer to 1966, while the commune overview gives 1965. Retain both years as bounds; the nominal date follows the district establishment account.",
       "value": {
         "kind": "temporal",
         "assertion": {
           "validity": {
             "start": {
-              "earliest": "-1072958400000",
+              "earliest": "-1104494400000",
               "nominal": "-1057190400001",
               "latest": "-1041422400001",
               "precision": "year"
