@@ -114,6 +114,7 @@ pub fn reconstruct(
         })?;
     let (seeds, mut bases) = evidence::seeds(input, request, envelope.datum)?;
     let areas = areas::resolve(input, request, &mut bases)?;
+    let neighbors = areas::neighbors(input, request, &mut bases)?;
     let numeric = TerrainRequest {
         grid: request.grid.clone(),
         vertices: envelope.vertices,
@@ -122,6 +123,7 @@ pub fn reconstruct(
         units: request.units.len(),
         slope_weight: request.slope_weight,
         areas,
+        neighbors,
     };
     let mut result = Vec::new();
     for region in derive(&numeric)? {

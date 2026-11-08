@@ -1,4 +1,4 @@
-use super::{TerrainError, TerrainRegion, TerrainRequest, unproject};
+use super::{ElevationGrid, TerrainError, TerrainRegion, TerrainRequest, unproject};
 use crate::polygon::{IndexedPolygon, resolve};
 use atlas_geo::registration::PlanarPoint;
 use geo::{BooleanOps, LineString, MultiPolygon, Polygon, unary_union};
@@ -33,24 +33,25 @@ pub(super) fn region(
         }
     }
     let geometry = unary_union(&pieces).intersection(envelope);
-    index_region(unit, cells, geometry)
+    index_region(unit, cells, geometry, &request.grid)
 }
 
 fn index_region(
     unit: usize,
     cells: usize,
     geometry: MultiPolygon<f64>,
+    grid: &ElevationGrid,
 ) -> Result<TerrainRegion, TerrainError> {
     let mut vertices = Vec::new();
     let polygons = geometry
         .0
         .iter()
         .map(|polygon: &Polygon<f64>| IndexedPolygon {
-            exterior: index_ring(polygon.exterior(), &mut vertices),
+            exterior: index_ring(polygon.exterior(), &mut vertices, grid),
             interiors: polygon
                 .interiors()
                 .iter()
-                .map(|r| index_ring(r, &mut vertices))
+                .map(|r| index_ring(r, &mut vertices, grid))
                 .collect(),
         })
         .collect::<Vec<_>>();
@@ -63,15 +64,32 @@ fn index_region(
     })
 }
 
-fn index_ring(ring: &LineString<f64>, vertices: &mut Vec<PlanarPoint>) -> Vec<usize> {
+fn index_ring(
+    ring: &LineString<f64>,
+    vertices: &mut Vec<PlanarPoint>,
+    grid: &ElevationGrid,
+) -> Vec<usize> {
     let start = vertices.len();
     vertices.extend(
         ring.0
             .iter()
             .take(ring.0.len().saturating_sub(1))
-            .map(|p| unproject(*p)),
+            .map(|p| vertex(*p, grid)),
     );
     let mut indices: Vec<_> = (start..vertices.len()).collect();
     indices.push(start);
     indices
+}
+
+fn vertex(mut point: geo::Coord<f64>, grid: &ElevationGrid) -> PlanarPoint {
+    let x = grid.west_m + ((point.x - grid.west_m) / grid.cell_m).round() * grid.cell_m;
+    let y = grid.north_m - ((grid.north_m - point.y) / grid.cell_m).round() * grid.cell_m;
+    // Polygon clipping can shift a shared grid line by floating-point roundoff.
+    if (point.x - x).abs() <= grid.cell_m * 1e-8 {
+        point.x = x;
+    }
+    if (point.y - y).abs() <= grid.cell_m * 1e-8 {
+        point.y = y;
+    }
+    unproject(point)
 }

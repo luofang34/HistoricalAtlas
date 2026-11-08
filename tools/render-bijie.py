@@ -205,7 +205,7 @@ def overview(data, output):
     fig.text(.80, .411, f'{sum(len(u["seeds"]) for u in units):,} membership constraints', fontsize=9)
     comparisons = [(u, c) for u in units for c in u['boundary'].get('comparisons', [])
                    if c.get('fitting_tolerance_square_km') is not None]
-    heading = 'Area fitted / reported' if len(comparisons) <= 4 else f'Area fits: 4 of {len(comparisons)}'
+    heading = 'Area fitted / reported' if len(comparisons) <= 4 else f'Area fits: 4/{len(comparisons)} shown'
     fig.text(.80, .366, heading, fontsize=11)
     pages = []
     for i, (unit, comparison) in enumerate(comparisons[:4]):

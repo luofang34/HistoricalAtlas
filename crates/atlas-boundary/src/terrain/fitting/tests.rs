@@ -139,3 +139,65 @@ fn incompatible_area_constraints_fail_together() {
         .collect();
     assert!(matches!(derive(&input), Err(TerrainError::AreaFit { .. })));
 }
+
+#[test]
+fn discrete_area_steps_refine_connected_regions_with_complementary_targets() {
+    let mut input = request();
+    let envelope = crate::polygon::resolve(&input.vertices, &input.envelope).unwrap();
+    let total = review::area_square_km(&envelope);
+    input.areas = vec![
+        AreaTarget {
+            unit: 0,
+            square_km: 0.47,
+            tolerance_square_km: 0.006,
+        },
+        AreaTarget {
+            unit: 1,
+            square_km: total - 0.47,
+            tolerance_square_km: 0.006,
+        },
+    ];
+    let result = derive(&input).unwrap();
+    let polygons: Vec<_> = result
+        .iter()
+        .map(|r| crate::polygon::resolve(&r.vertices, &r.polygons).unwrap())
+        .collect();
+    for target in &input.areas {
+        assert!(target.accepts(review::area_square_km(&polygons[target.unit])));
+        assert_eq!(result[target.unit].polygons.len(), 1);
+    }
+    for seed in &input.seeds {
+        assert!(
+            polygons[seed.unit].contains(&Point::new(seed.point.longitude, seed.point.latitude))
+        );
+    }
+    assert!(polygons[0].intersection(&polygons[1]).unsigned_area() < 1e-16);
+    assert!(unary_union(&polygons).xor(&envelope).unsigned_area() < 1e-16);
+    input.areas.reverse();
+    input.seeds.reverse();
+    assert_eq!(
+        serde_json::to_value(result).unwrap(),
+        serde_json::to_value(derive(&input).unwrap()).unwrap()
+    );
+}
+
+#[test]
+fn refinement_cannot_shrink_below_the_paths_joining_connected_seed_groups() {
+    let mut input = request();
+    let mut seed = input.seeds[0].clone();
+    for y in [150., 650.] {
+        let point = crate::terrain::unproject(geo::Coord { x: 150., y });
+        seed.point.longitude = point.x;
+        seed.point.latitude = point.y;
+        input.seeds.push(seed.clone());
+    }
+    input.areas = vec![AreaTarget {
+        unit: 0,
+        square_km: 0.04,
+        tolerance_square_km: 0.004,
+    }];
+    assert!(matches!(
+        derive(&input),
+        Err(TerrainError::AreaFit { unit: 0, .. })
+    ));
+}

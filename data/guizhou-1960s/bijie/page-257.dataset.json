@@ -1,0 +1,48 @@
+{
+  "entities": [
+    {
+      "id": "81744081-e961-59ef-a6d8-93c1575cfcf7",
+      "key": "earth/cn-gz/bijie/xiaohe/xiaohe-ferry",
+      "body": "earth",
+      "kind": "facility"
+    }
+  ],
+  "records": [
+    {
+      "id": "c5ad646a-7019-5ea5-9a70-8856b021735e",
+      "key": "bijie-gazetteer/p257/xiaohe/xiaohe-ferry",
+      "entity_id": "81744081-e961-59ef-a6d8-93c1575cfcf7",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "257",
+      "scan_page": 292,
+      "locator": "Place table, row 1: 小河渡口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小河渡口",
+        "pinyin": "Xiǎohé Dùkǒu",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "08922bef-7c60-5335-9fc8-01400b3b0f12",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.61666666666666,
+            "latitude": 27.65
+          },
+          "longitude_text": "105°37′",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "渡口"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

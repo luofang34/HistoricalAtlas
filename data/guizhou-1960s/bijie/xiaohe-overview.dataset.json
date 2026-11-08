@@ -1,0 +1,348 @@
+{
+  "entities": [],
+  "records": [
+    {
+      "id": "06725409-acc4-5c84-8531-89168c7facdb",
+      "key": "bijie-gazetteer/p255/xiaohe-commune/extent",
+      "entity_id": "08922bef-7c60-5335-9fc8-01400b3b0f12",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "255",
+      "scan_page": 290,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": "小河公社：在毕节县城东北面，距城85公里，位于东经105°37′至105°40′，北纬27°38′至27°41′之间，总面积15.1平方公里，东频乐都公社，东北连火马公社，南邻柳湾公社，西靠高山铺公社，北临赤水河与四川省古蔺县接界，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小河公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "小河公社：在毕节县城东北面，距城85公里，位于东经105°37′至105°40′，北纬27°38′至27°41′之间，总面积15.1平方公里，东频乐都公社，东北连火马公社，南邻柳湾公社，西靠高山铺公社，北临赤水河与四川省古蔺县接界，",
+        "territory": {
+          "area_square_km": 15.1,
+          "neighbors": [
+            {
+              "name": "乐都",
+              "entity_id": "046b16b1-ad9f-5bf7-b569-9562fc446384"
+            },
+            {
+              "name": "火马",
+              "entity_id": "0f9aebd8-38ad-5a6c-9f2c-e97ede421571"
+            },
+            {
+              "name": "柳湾",
+              "entity_id": "a8d1cc61-b619-50dc-832b-6f23b774fc9f"
+            },
+            {
+              "name": "高山铺",
+              "entity_id": "d9b33945-1e05-5e69-b53c-97978da19519"
+            },
+            {
+              "name": "四川省古蔺县",
+              "entity_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "dd40d3e7-abca-5a68-8820-5490c89a2e36",
+      "key": "bijie-gazetteer/p255/xiaohe/shuanghe/xiaohe/name",
+      "entity_id": "7304825e-5c26-5f13-ad64-29da926d82b5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "255",
+      "scan_page": 290,
+      "locator": "Commune overview, name",
+      "verbatim_quote": "小河：“清《乾隆邑志》有小河口”。为望乡河下游汇赤水河处，因与赤水河相比，古名小河。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "65b868d0-c125-55fe-b2e8-c416775429fa",
+      "key": "bijie-gazetteer/p255/xiaohe-commune/chronology",
+      "entity_id": "08922bef-7c60-5335-9fc8-01400b3b0f12",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "255",
+      "scan_page": 290,
+      "locator": "Commune overview, chronology",
+      "verbatim_quote": "1949年解放废除旧制，1950年建立村政权，土地改革后1954年建乡，办初级社，56年进入高级社，1958年成立人民公社，命名为小河人民公社至今。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小河公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "33c5f8af-c9f2-58fd-915a-3c9b00c7bfce",
+      "key": "bijie-gazetteer/p255/xiaohe-commune/establishment",
+      "entity_id": "08922bef-7c60-5335-9fc8-01400b3b0f12",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "255",
+      "scan_page": 290,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "1958年成立人民公社，命名为小河人民公社至今。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "小河公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "404bb9fd-6b6a-54bd-a542-9ec1f7fef934",
+      "key": "bijie-gazetteer/p255/xiaohe-commune/seat",
+      "entity_id": "08922bef-7c60-5335-9fc8-01400b3b0f12",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "255",
+      "scan_page": 290,
+      "locator": "Commune overview, seat",
+      "verbatim_quote": "小河公社驻地余家寨，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小河公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "76e6b1bc-5c76-5a03-9148-a9681b85461f",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4c9de638-4ce3-5de1-b019-1afcf0c02735",
+      "key": "bijie-gazetteer/p255/xiaohe-commune/population",
+      "entity_id": "08922bef-7c60-5335-9fc8-01400b3b0f12",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "255",
+      "scan_page": 290,
+      "locator": "Commune overview, population",
+      "verbatim_quote": "小河公社驻地余家寨，辖双河、沿河两个大队、20个生产队，26个自然村，总人口381户，计2026人，为汉、苗、仡佬、布依等民族杂居，其中汉族1504人、苗族185人、彝族139人、布依族1人、仡佬族8人、其他民族189人，均以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小河公社",
+        "pinyin": null,
+        "population": 2026,
+        "households": 381,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "仡佬",
+          "布依"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview counts two brigades, 20 production teams, and 26 natural villages; 1,504 Han, 185 Miao, 139 Yi, one Buyi, eight Gelao, and 189 other residents."
+      }
+    },
+    {
+      "id": "bc28bec8-8362-5eaa-947b-f4ec82071dc6",
+      "key": "bijie-gazetteer/p255/xiaohe-commune/terrain",
+      "entity_id": "08922bef-7c60-5335-9fc8-01400b3b0f12",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "255",
+      "scan_page": 290,
+      "locator": "Commune overview, terrain",
+      "verbatim_quote": "最高海拔1210米，最低处小河口、赤水河边，最低海拔550米，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小河公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "800267a6-3507-54bf-b9cc-4f54fe959c9e",
+      "key": "bijie-gazetteer/p255/xiaohe/xiaohe-river/route",
+      "entity_id": "030f3315-9eaf-5d56-ad3b-aee844d3d634",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "255",
+      "scan_page": 290,
+      "locator": "Commune overview, route",
+      "verbatim_quote": "有望乡河从小河公社西南之彭家寨入境，流经中部而北入赤水河，境内长约四公里许，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "望乡河从小河公社西南彭家寨入境，流经中部，北入赤水河；境内长约四公里。"
+      }
+    },
+    {
+      "id": "b100bf40-55b5-54fb-a877-3c84542e88c7",
+      "key": "bijie-gazetteer/p255/chishui-river/xiaohe-border",
+      "entity_id": "f8b6037a-4a1b-5801-8ef7-492b04196cb3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "255",
+      "scan_page": 290,
+      "locator": "Commune overview, xiaohe-border",
+      "verbatim_quote": "赤水河沿小河北面边界流去，约5.5公里。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "赤水河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "沿小河公社北面边界流长约5.5公里。"
+      }
+    },
+    {
+      "id": "1ba4a838-1556-572c-a3dc-7c83bc27d3a0",
+      "key": "bijie-gazetteer/p255/xiaohe/xiaohe-ferry/salt-route",
+      "entity_id": "81744081-e961-59ef-a6d8-93c1575cfcf7",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "255",
+      "scan_page": 290,
+      "locator": "Commune overview, salt-route",
+      "verbatim_quote": "小河渡口在满清王朝及国民党统治时期，为川盐入境的运输孔道，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小河渡口",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "87281c8d-ccc1-5bc5-8412-0398c08bd910",
+      "key": "editorial/bijie/xiaohe-commune/establishment",
+      "entity_id": "08922bef-7c60-5335-9fc8-01400b3b0f12",
+      "basis": [
+        "33c5f8af-c9f2-58fd-915a-3c9b00c7bfce"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "9e515a9b-42ce-59a2-befa-138028ac8e8d",
+      "key": "editorial/bijie/xiaohe-commune/name",
+      "entity_id": "08922bef-7c60-5335-9fc8-01400b3b0f12",
+      "basis": [
+        "33c5f8af-c9f2-58fd-915a-3c9b00c7bfce",
+        "9c4a1208-fecd-5727-bdf6-190bec86c45f"
+      ],
+      "brief": "Use the table name from the cited establishment year.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "小河公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

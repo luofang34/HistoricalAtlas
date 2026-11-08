@@ -1,0 +1,401 @@
+{
+  "entities": [
+    {
+      "id": "0005fb52-6870-5c19-97e2-bcf3e006b8ba",
+      "key": "earth/cn-gz/bijie/ashi/akai-river",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "d44d4f11-42c5-565c-a3b7-99e164d40375",
+      "key": "earth/cn-gz/bijie/ashi/wangxiang-river",
+      "body": "earth",
+      "kind": "river"
+    }
+  ],
+  "records": [
+    {
+      "id": "edb31704-f20b-5668-b796-fa87664e2b57",
+      "key": "bijie-gazetteer/p251/ashi-commune/extent",
+      "entity_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "251",
+      "scan_page": 286,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": "阿市公社：位于东经105°35′至105°40′，北纬27°34′至27°36′之间，总面积34.2平方公里，东临大方县界，南频戛拉、播扎，西靠公子河，北低柳湾和普宜等公社接壤。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "阿市公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "阿市公社：位于东经105°35′至105°40′，北纬27°34′至27°36′之间，总面积34.2平方公里，东临大方县界，南频戛拉、播扎，西靠公子河，北低柳湾和普宜等公社接壤。",
+        "territory": {
+          "area_square_km": 34.2,
+          "neighbors": [
+            {
+              "name": "大方县",
+              "entity_id": null
+            },
+            {
+              "name": "戛拉",
+              "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61"
+            },
+            {
+              "name": "播扎",
+              "entity_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c"
+            },
+            {
+              "name": "公子河",
+              "entity_id": "e5e83800-168f-5446-9fff-2b8c7a63a3d8"
+            },
+            {
+              "name": "柳湾",
+              "entity_id": "a8d1cc61-b619-50dc-832b-6f23b774fc9f"
+            },
+            {
+              "name": "普宜",
+              "entity_id": "ca4267ea-afb2-586c-ade4-92ebec8d7e3f"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "726f3f15-ae22-5640-ab47-e6e700b99984",
+      "key": "bijie-gazetteer/p251/ashi/ashi/ashi/name",
+      "entity_id": "cafb3abd-03ec-563e-a430-c24316eeb762",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "251",
+      "scan_page": 286,
+      "locator": "Commune overview, name",
+      "verbatim_quote": "阿市：又名“发朗”，系彝语地名译音，是一家彝族的称号，他的居住地就得名阿市。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "阿市",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "发朗",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "25ee4512-138b-527d-b21a-0a73a8b1648d",
+      "key": "bijie-gazetteer/p251/ashi-commune/chronology",
+      "entity_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "251",
+      "scan_page": 286,
+      "locator": "Commune overview, chronology",
+      "verbatim_quote": "1950年建立村政权经过土地改革，1954年建乡人民政府，办初级社，56年进入高级社，1958年成立人民公社，命名阿市公社至今。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "阿市公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "67a99063-ed90-5211-abb6-799c8e8c94ed",
+      "key": "bijie-gazetteer/p251/ashi-commune/establishment",
+      "entity_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "251",
+      "scan_page": 286,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "1958年成立人民公社，命名阿市公社至今。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "阿市公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "dc23a85b-a79b-56f9-abfd-85c55ed8ce06",
+      "key": "bijie-gazetteer/p251/ashi-commune/seat",
+      "entity_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "251",
+      "scan_page": 286,
+      "locator": "Commune overview, seat",
+      "verbatim_quote": "阿市公社驻地阿市，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "阿市公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "cafb3abd-03ec-563e-a430-c24316eeb762",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "31626265-947f-5f51-af12-0a60e5567954",
+      "key": "bijie-gazetteer/p251/ashi-commune/population",
+      "entity_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "251",
+      "scan_page": 286,
+      "locator": "Commune overview, population",
+      "verbatim_quote": "公社辖阿市、木拉、阿开河、麻窝四个大队、49个生产队、48个自然村，为民族杂居地，总人口（普查）1128户，5818人，其中彝族1025人，布依族1人，仡佬族3人，苗族149人，其他民族163人，余为汉族，以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "阿市公社",
+        "pinyin": null,
+        "population": 5818,
+        "households": 1128,
+        "ethnicities": [
+          "彝",
+          "布依",
+          "仡佬",
+          "苗",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview counts four brigades, 49 production teams, and 48 natural villages; 1,025 Yi, one Buyi, three Gelao, 149 Miao, and 163 other residents."
+      }
+    },
+    {
+      "id": "ff679bdf-d0c0-5e1c-9c71-ec0685d835e8",
+      "key": "bijie-gazetteer/p251/ashi/niujianbang-mountain/elevation",
+      "entity_id": "9eb4f16e-d858-5dea-8d84-f3b02bfec8f4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "251",
+      "scan_page": 286,
+      "locator": "Commune overview, elevation",
+      "verbatim_quote": "东南面的牛肩膀山最高海拔1532.0米，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "牛肩膀山",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "海拔1532.0米"
+      }
+    },
+    {
+      "id": "6f069496-a848-5233-b253-a5d6e2568a8e",
+      "key": "bijie-gazetteer/p251/ashi-commune/terrain",
+      "entity_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "251",
+      "scan_page": 286,
+      "locator": "Commune overview, terrain",
+      "verbatim_quote": "东南高西北低，东南面的牛肩膀山最高海拔1532.0米，西北角的望乡河边最低海拔680米。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "阿市公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ea57b5fa-9ff7-5c26-8597-6df06cffa2f9",
+      "key": "bijie-gazetteer/p251/ashi/akai-river/route",
+      "entity_id": "0005fb52-6870-5c19-97e2-bcf3e006b8ba",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "251",
+      "scan_page": 286,
+      "locator": "Commune overview, route",
+      "verbatim_quote": "东北有阿开河，源出普宜公社的岩头上村，流入阿市公社约长五公里于河尾巴村伏流，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "阿开河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "源出普宜公社岩头上村，流入阿市公社约长五公里，于河尾巴村伏流。"
+      }
+    },
+    {
+      "id": "9cdfa714-4367-511e-bd6c-934da85f59ce",
+      "key": "bijie-gazetteer/p251/ashi/wangxiang-river/route",
+      "entity_id": "d44d4f11-42c5-565c-a3b7-99e164d40375",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "251",
+      "scan_page": 286,
+      "locator": "Commune overview, route",
+      "verbatim_quote": "北面的望乡河流经阿市公社约一公里流入柳湾公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "望乡河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "流经阿市公社约一公里，流入柳湾公社。"
+      }
+    },
+    {
+      "id": "c37e7cec-0d15-555f-b81f-5d657067f6d8",
+      "key": "bijie-gazetteer/p251/ashi/xiaogelao-reservoir/construction",
+      "entity_id": "7ede034c-bf47-5c70-8b5f-f2cce963fd00",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "251",
+      "scan_page": 286,
+      "locator": "Commune overview, construction",
+      "verbatim_quote": "1969年兴建了小阁老水库一座，库容量30万立方米，有效灌溉面积达250亩。",
+      "checked": true,
+      "source_date": {
+        "text": "1969年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "小阁老水库",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Reported capacity: 300,000 cubic metres; irrigated area: 250 mu."
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "dde6a770-a0cb-57d1-8256-542dc86c3338",
+      "key": "editorial/bijie/ashi-commune/establishment",
+      "entity_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+      "basis": [
+        "67a99063-ed90-5211-abb6-799c8e8c94ed"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "a30c39eb-4af2-5d6a-b492-5bd9161c3b62",
+      "key": "editorial/bijie/ashi-commune/name",
+      "entity_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+      "basis": [
+        "67a99063-ed90-5211-abb6-799c8e8c94ed",
+        "d5a45a85-f3e8-5032-a8b9-194eba31046f"
+      ],
+      "brief": "Use the table name from the cited establishment year.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "阿市公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

@@ -11,6 +11,12 @@
       "key": "earth/cn-gz/bijie/liuwan/jianshanzi/jianshanzi",
       "body": "earth",
       "kind": "settlement"
+    },
+    {
+      "id": "64db21e2-ef63-5c44-9a74-bd2d954304b0",
+      "key": "earth/cn-gz/bijie/liuwan/jianshanzi/damawo",
+      "body": "earth",
+      "kind": "settlement"
     }
   ],
   "records": [
@@ -86,6 +92,43 @@
         },
         "former_names": [],
         "note": "大队驻地"
+      }
+    },
+    {
+      "id": "1dc395b7-b32b-59d3-9030-466b6ccd9f77",
+      "key": "bijie-gazetteer/p264/liuwan/jianshanzi/damawo",
+      "entity_id": "64db21e2-ef63-5c44-9a74-bd2d954304b0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "264",
+      "scan_page": 299,
+      "locator": "Place table, row 11: 大麻窝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大麻窝",
+        "pinyin": "Dàmáwō",
+        "population": 235,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "5dce219c-d0eb-5616-894c-5a5aaeecd2bb",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.616666666666667
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°37′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
       }
     }
   ],

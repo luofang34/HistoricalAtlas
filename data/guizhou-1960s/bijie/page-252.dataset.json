@@ -1,0 +1,1488 @@
+{
+  "entities": [
+    {
+      "id": "dc9b1e1c-3983-55ca-8499-504025891272",
+      "key": "earth/cn-gz/bijie/ashi/ashi-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "cafb3abd-03ec-563e-a430-c24316eeb762",
+      "key": "earth/cn-gz/bijie/ashi/ashi/ashi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c0a85e3f-f864-5cfe-ad9e-e4e8c676bac0",
+      "key": "earth/cn-gz/bijie/ashi/ashi/sunjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "13fb73bc-3940-5d7c-8b0b-a4573f2f023d",
+      "key": "earth/cn-gz/bijie/ashi/ashi/xiamuzhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "0bd1235e-8374-5faa-940c-e0418b3e2738",
+      "key": "earth/cn-gz/bijie/ashi/ashi/hujiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "660f7fcf-bbd4-5988-b6ba-9cd15c781ff5",
+      "key": "earth/cn-gz/bijie/ashi/ashi/lanaotian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "7ab9386e-b66d-5d57-9636-ab3dbf0dac94",
+      "key": "earth/cn-gz/bijie/ashi/ashi/jiebeihou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c7129950-df61-5391-864e-41f7ff7532f5",
+      "key": "earth/cn-gz/bijie/ashi/primary-school",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+      "key": "earth/cn-gz/bijie/ashi/mula-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "689829e7-8219-53e6-8b9e-08b6805cfe5b",
+      "key": "earth/cn-gz/bijie/ashi/mula/xiaogelao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "720f66af-7249-5fad-a3a9-48872c4cfb85",
+      "key": "earth/cn-gz/bijie/ashi/mula/xiaomula",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "5947e9c3-a315-5715-bb29-1915bca8f16d",
+      "key": "earth/cn-gz/bijie/ashi/mula/shiyakou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c159c90a-64a7-5cc8-affb-b3795dbc60e0",
+      "key": "earth/cn-gz/bijie/ashi/mula/yuanjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "57b6c60b-6ab3-5a4d-b7e0-bccd88a2ae02",
+      "key": "earth/cn-gz/bijie/ashi/mula/poshang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "959a5fac-7575-5fe1-b682-ca66be153e16",
+      "key": "earth/cn-gz/bijie/ashi/mula/yinping",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "3f7ffea5-6158-58ff-9546-8534c60e46d1",
+      "key": "earth/cn-gz/bijie/ashi/mula/haozhiwan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "9b0a896a-1c2e-58f2-bb20-c08d7d7b26ca",
+      "key": "earth/cn-gz/bijie/ashi/mula/guochangwanzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "e5c9e3db-e4f2-53ba-964a-43b513963542",
+      "key": "earth/cn-gz/bijie/ashi/mula/yanjiaozhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "2c471438-53df-5ccd-a4c2-6a1eb7b99c0f",
+      "key": "earth/cn-gz/bijie/ashi/mula/tiechang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "fef1a93b-b04d-5b83-8b3c-8e7120a0bf35",
+      "key": "earth/cn-gz/bijie/ashi/mula/gaoshangtou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "14a495bc-0b91-502f-82a1-f1af2b445098",
+      "key": "earth/cn-gz/bijie/ashi/mula/dapingzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "f406d79b-82fa-51d6-8233-3787124b4063",
+      "key": "earth/cn-gz/bijie/ashi/mula/zhongshan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "5645ac47-fb0f-5312-bfc2-20bd8399e51c",
+      "key": "earth/cn-gz/bijie/ashi/mula/zhaojiamawo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "cc955eb9-5618-56a3-9eeb-a9b322f8c5e5",
+      "key": "earth/cn-gz/bijie/ashi/mula/fazhong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "313493d6-8277-5db7-ac1f-3d2199180d95",
+      "key": "earth/cn-gz/bijie/ashi/akaihe-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "d87d7189-3cc2-5a8c-a7f3-741a07ec20b2",
+      "key": "earth/cn-gz/bijie/ashi/akaihe/maocaoping",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "f85619f6-2c08-543b-afd2-f6b684d2e13c",
+      "key": "earth/cn-gz/bijie/ashi/akaihe/akaihe",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "3a5a9d7b-be47-5cc3-ac1a-f7fbcb623f62",
+      "key": "earth/cn-gz/bijie/ashi/akaihe/qiaobian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "5afc44f9-1952-5488-9f0e-fa50d526586c",
+      "key": "earth/cn-gz/bijie/ashi/akaihe/dawanzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "de39e786-735c-56e3-a043-c5bf69427a7a",
+      "key": "earth/cn-gz/bijie/ashi/akaihe/bajiaogou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "b5d34a74-09e3-5b21-8ce1-5c7f7ba284a7",
+      "key": "earth/cn-gz/bijie/ashi/akaihe/falang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "e41d23f4-a34d-539d-8f26-d872e0609b7e",
+      "key": "earth/cn-gz/bijie/ashi/akaihe/meidongpo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "34d3be7c-7014-5f1a-aafb-28733626f5b2",
+      "key": "earth/cn-gz/bijie/ashi/akaihe/mawotang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "f94605e9-30ef-5e3a-ae42-73d2a0259a13",
+      "key": "earth/cn-gz/bijie/ashi/akaihe/andingshan",
+      "body": "earth",
+      "kind": "settlement"
+    }
+  ],
+  "records": [
+    {
+      "id": "d5a45a85-f3e8-5032-a8b9-194eba31046f",
+      "key": "bijie-gazetteer/page-252/ashi-commune",
+      "entity_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 1: 阿市公社",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "阿市公社",
+        "pinyin": "Āshì Gōngshè",
+        "population": 5818,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉",
+          "苗",
+          "布依",
+          "仡佬"
+        ],
+        "parent_id": "d28c7c98-e211-58f2-9c63-31c025f37365",
+        "rank": "commune",
+        "seat_id": "cafb3abd-03ec-563e-a430-c24316eeb762",
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "26cb0cd6-1caa-551a-9618-4150b99fe30a",
+      "key": "bijie-gazetteer/p252/ashi/ashi-brigade",
+      "entity_id": "dc9b1e1c-3983-55ca-8499-504025891272",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 2: 阿市大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "阿市大队",
+        "pinyin": "Āshì Dàduì",
+        "population": 1446,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉",
+          "苗"
+        ],
+        "parent_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+        "rank": "brigade",
+        "seat_id": "cafb3abd-03ec-563e-a430-c24316eeb762",
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "700d303d-86b1-5e87-970c-5aecf35275f0",
+      "key": "bijie-gazetteer/p252/ashi/ashi/ashi",
+      "entity_id": "cafb3abd-03ec-563e-a430-c24316eeb762",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 3: 阿市",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "阿市",
+        "pinyin": "Āshì",
+        "population": 438,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "dc9b1e1c-3983-55ca-8499-504025891272",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公社、大队驻地"
+      }
+    },
+    {
+      "id": "21b810d1-5aaa-5330-8959-7c49d25b57cb",
+      "key": "bijie-gazetteer/p252/ashi/ashi/sunjiazhai",
+      "entity_id": "c0a85e3f-f864-5cfe-ad9e-e4e8c676bac0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 4: 孙家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "孙家寨",
+        "pinyin": "Sūnjiāzhài",
+        "population": 85,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "dc9b1e1c-3983-55ca-8499-504025891272",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3d2b219d-65cf-5024-8afe-3947e990cbed",
+      "key": "bijie-gazetteer/p252/ashi/ashi/xiamuzhai",
+      "entity_id": "13fb73bc-3940-5d7c-8b0b-a4573f2f023d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 5: 修木寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "修木寨",
+        "pinyin": "Xiāmùzhài",
+        "population": 390,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "dc9b1e1c-3983-55ca-8499-504025891272",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.58333333333333,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°35′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "526bcc12-f7d4-5d1c-b1dc-ae869ec1ef87",
+      "key": "bijie-gazetteer/p252/ashi/ashi/hujiazhai",
+      "entity_id": "0bd1235e-8374-5faa-940c-e0418b3e2738",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 6: 胡家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "胡家寨",
+        "pinyin": "Hújiāzhài",
+        "population": 125,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "dc9b1e1c-3983-55ca-8499-504025891272",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.58333333333333,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°35′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a32e0bad-d287-5ecb-88d7-92775381acec",
+      "key": "bijie-gazetteer/p252/ashi/ashi/lanaotian",
+      "entity_id": "660f7fcf-bbd4-5988-b6ba-9cd15c781ff5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 7: 滥坳田",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "滥坳田",
+        "pinyin": "Lànàotián",
+        "population": 226,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "dc9b1e1c-3983-55ca-8499-504025891272",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.58333333333333,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°35′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7ffb67bc-e6fc-58de-b9f0-0079ffcc5fbb",
+      "key": "bijie-gazetteer/p252/ashi/ashi/jiebeihou",
+      "entity_id": "7ab9386e-b66d-5d57-9636-ab3dbf0dac94",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 8: 街背后",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "街背后",
+        "pinyin": "Jiēbèihòu",
+        "population": 182,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "dc9b1e1c-3983-55ca-8499-504025891272",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.583333333333332
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°35′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "51383d24-7860-5cce-b7ee-3c43026b145b",
+      "key": "bijie-gazetteer/p252/ashi/primary-school",
+      "entity_id": "c7129950-df61-5391-864e-41f7ff7532f5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 9: 阿市小学",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "阿市小学",
+        "pinyin": "Āshì Xiǎoxué",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "校"
+      }
+    },
+    {
+      "id": "f49ba1ec-0edf-5efc-925d-f38607ec9651",
+      "key": "bijie-gazetteer/p252/ashi/mula-brigade",
+      "entity_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 10: 木拉大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "木拉大队",
+        "pinyin": "Mùlā Dàduì",
+        "population": 1434,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+        "rank": "brigade",
+        "seat_id": "720f66af-7249-5fad-a3a9-48872c4cfb85",
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "722a6f98-93f4-522b-b12f-cec12d6e9ede",
+      "key": "bijie-gazetteer/p252/ashi/mula/xiaogelao",
+      "entity_id": "689829e7-8219-53e6-8b9e-08b6805cfe5b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 11: 小阁老",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小阁老",
+        "pinyin": "Xiǎogélǎo",
+        "population": 206,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.65,
+            "latitude": 27.55
+          },
+          "longitude_text": "105°39′",
+          "latitude_text": "27°33′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b2f7e86d-3a01-5ed0-8c9e-9d64d9caff26",
+      "key": "bijie-gazetteer/p252/ashi/mula/xiaomula",
+      "entity_id": "720f66af-7249-5fad-a3a9-48872c4cfb85",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 12: 小木拉",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小木拉",
+        "pinyin": "Xiǎomùlā",
+        "population": 274,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "ab9db5a6-5c49-5069-8673-aa758023441d",
+      "key": "bijie-gazetteer/p252/ashi/mula/shiyakou",
+      "entity_id": "5947e9c3-a315-5715-bb29-1915bca8f16d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 13: 石垭口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "石垭口",
+        "pinyin": "Shíyàkǒu",
+        "population": 36,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b182f955-e8fd-5dba-9cf6-0c1cafdade4b",
+      "key": "bijie-gazetteer/p252/ashi/mula/yuanjiazhai",
+      "entity_id": "c159c90a-64a7-5cc8-affb-b3795dbc60e0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 14: 袁家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "袁家寨",
+        "pinyin": "Yuánjiāzhài",
+        "population": 108,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.61666666666666,
+            "latitude": 27.55
+          },
+          "longitude_text": "105°37′",
+          "latitude_text": "27°33′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "9ccd455c-be2f-54fc-b9c6-a9318fd6ffde",
+      "key": "bijie-gazetteer/p252/ashi/mula/poshang",
+      "entity_id": "57b6c60b-6ab3-5a4d-b7e0-bccd88a2ae02",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 15: 坡上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "坡上",
+        "pinyin": "Pōshàng",
+        "population": 98,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b19af18f-6987-5bfa-aa50-f28a2a51b779",
+      "key": "bijie-gazetteer/p252/ashi/mula/yinping",
+      "entity_id": "959a5fac-7575-5fe1-b682-ca66be153e16",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 16: 银坪",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "银坪",
+        "pinyin": "Yínpíng",
+        "population": 53,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "96f52689-c04b-510a-bcef-42555fb81538",
+      "key": "bijie-gazetteer/p252/ashi/mula/haozhiwan",
+      "entity_id": "3f7ffea5-6158-58ff-9546-8534c60e46d1",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 17: 薅枝湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "薅枝湾",
+        "pinyin": "Hāozhīwān",
+        "population": 56,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "24b3e881-1055-58f5-a45a-816cd28e323b",
+      "key": "bijie-gazetteer/p252/ashi/mula/guochangwanzi",
+      "entity_id": "9b0a896a-1c2e-58f2-bb20-c08d7d7b26ca",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 18: 锅厂湾子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "锅厂湾子",
+        "pinyin": "Guōchǎngwānzǐ",
+        "population": 84,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "06021b07-ef1d-5ab7-9d00-5d2910cfb7e8",
+      "key": "bijie-gazetteer/p252/ashi/mula/yanjiaozhai",
+      "entity_id": "e5c9e3db-e4f2-53ba-964a-43b513963542",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 19: 岩脚寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "岩脚寨",
+        "pinyin": "Yánjiǎozhài",
+        "population": 15,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.65,
+            "latitude": 27.55
+          },
+          "longitude_text": "105°39′",
+          "latitude_text": "27°33′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "16ab972c-dd3a-53d8-b1e7-768bb6b0ac32",
+      "key": "bijie-gazetteer/p252/ashi/mula/tiechang",
+      "entity_id": "2c471438-53df-5ccd-a4c2-6a1eb7b99c0f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 20: 铁厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "铁厂",
+        "pinyin": "Tiěchǎng",
+        "population": 92,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.65,
+            "latitude": 27.55
+          },
+          "longitude_text": "105°39′",
+          "latitude_text": "27°33′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "55496c80-7159-5120-8cc6-ebf0c9a992f6",
+      "key": "bijie-gazetteer/p252/ashi/mula/gaoshangtou",
+      "entity_id": "fef1a93b-b04d-5b83-8b3c-8e7120a0bf35",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 21: 高上头",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "高上头",
+        "pinyin": "Gānshàngtóu",
+        "population": 135,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.65,
+            "latitude": 27.55
+          },
+          "longitude_text": "105°39′",
+          "latitude_text": "27°33′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "dd331a7e-630f-5e3f-8d16-ae7eed5dbfa2",
+      "key": "bijie-gazetteer/p252/ashi/mula/dapingzi",
+      "entity_id": "14a495bc-0b91-502f-82a1-f1af2b445098",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 22: 大坪子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大坪子",
+        "pinyin": "Dàpíngzǐ",
+        "population": 90,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.61666666666666,
+            "latitude": 27.583333333333332
+          },
+          "longitude_text": "105°37′",
+          "latitude_text": "27°35′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "1ab7c77d-8d4c-57b4-8d7b-93137e0bd55d",
+      "key": "bijie-gazetteer/p252/ashi/mula/zhongshan",
+      "entity_id": "f406d79b-82fa-51d6-8233-3787124b4063",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 23: 中山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "中山",
+        "pinyin": "Zhōngshān",
+        "population": 57,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "eb7bf87b-88a6-51b0-a55e-3c814bd3c3ef",
+      "key": "bijie-gazetteer/p252/ashi/mula/zhaojiamawo",
+      "entity_id": "5645ac47-fb0f-5312-bfc2-20bd8399e51c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 24: 赵家麻窝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "赵家麻窝",
+        "pinyin": "Zhàojiāmāwō",
+        "population": 36,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.55
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°33′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "47f6793a-7d57-59c0-b121-aeb01e14f1dc",
+      "key": "bijie-gazetteer/p252/ashi/mula/fazhong",
+      "entity_id": "cc955eb9-5618-56a3-9eeb-a9b322f8c5e5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 25: 发中",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "发中",
+        "pinyin": "Fāzhōng",
+        "population": 94,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.63333333333334,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°38′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "86438e6e-b087-5b0a-a8e2-fd66fc04231d",
+      "key": "bijie-gazetteer/p252/ashi/akaihe-brigade",
+      "entity_id": "313493d6-8277-5db7-ac1f-3d2199180d95",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 26: 阿开河大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "阿开河大队",
+        "pinyin": "Ākāihé Dàduì",
+        "population": 1885,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "9fe77231-5952-51da-9e9b-b928010cfe42",
+        "rank": "brigade",
+        "seat_id": "3a5a9d7b-be47-5cc3-ac1a-f7fbcb623f62",
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.583333333333332
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°35′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ad8bf5c7-15cd-571a-8dc1-43e2c4b8084f",
+      "key": "bijie-gazetteer/p252/ashi/akaihe/maocaoping",
+      "entity_id": "d87d7189-3cc2-5a8c-a7f3-741a07ec20b2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 27: 茅草坪",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "茅草坪",
+        "pinyin": "Máocǎopíng",
+        "population": 73,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "京"
+        ],
+        "parent_id": "313493d6-8277-5db7-ac1f-3d2199180d95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.583333333333332
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°35′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f5b08878-ba06-5424-8ca2-a560186ea040",
+      "key": "bijie-gazetteer/p252/ashi/akaihe/akaihe",
+      "entity_id": "f85619f6-2c08-543b-afd2-f6b684d2e13c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 28: 阿开河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "阿开河",
+        "pinyin": "Ākāihé",
+        "population": 231,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "313493d6-8277-5db7-ac1f-3d2199180d95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.61666666666666,
+            "latitude": 27.583333333333332
+          },
+          "longitude_text": "105°37′",
+          "latitude_text": "27°35′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "873698c3-63c8-5593-ab0e-282f7f760b76",
+      "key": "bijie-gazetteer/p252/ashi/akaihe/qiaobian",
+      "entity_id": "3a5a9d7b-be47-5cc3-ac1a-f7fbcb623f62",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 29: 桥边",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "桥边",
+        "pinyin": "Qiáobiān",
+        "population": 470,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "313493d6-8277-5db7-ac1f-3d2199180d95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.583333333333332
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°35′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "9254e8b4-e66c-5b0e-bc89-510498d0d171",
+      "key": "bijie-gazetteer/p252/ashi/akaihe/dawanzi",
+      "entity_id": "5afc44f9-1952-5488-9f0e-fa50d526586c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 30: 大湾子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大湾子",
+        "pinyin": "Dàwānzǐ",
+        "population": 80,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "313493d6-8277-5db7-ac1f-3d2199180d95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.58333333333333,
+            "latitude": 27.583333333333332
+          },
+          "longitude_text": "105°35′",
+          "latitude_text": "27°35′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4a1286ff-47e7-5066-95d4-383211fbbc81",
+      "key": "bijie-gazetteer/p252/ashi/akaihe/bajiaogou",
+      "entity_id": "de39e786-735c-56e3-a043-c5bf69427a7a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 31: 芭蕉沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "芭蕉沟",
+        "pinyin": "Bājiāogōu",
+        "population": 59,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "313493d6-8277-5db7-ac1f-3d2199180d95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.58333333333333,
+            "latitude": 27.583333333333332
+          },
+          "longitude_text": "105°35′",
+          "latitude_text": "27°35′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4507639e-13f4-5c78-aa74-68c1ca67da12",
+      "key": "bijie-gazetteer/p252/ashi/akaihe/falang",
+      "entity_id": "b5d34a74-09e3-5b21-8ce1-5c7f7ba284a7",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 32: 法朗",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "法朗",
+        "pinyin": "Fǎlǎng",
+        "population": 125,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "京"
+        ],
+        "parent_id": "313493d6-8277-5db7-ac1f-3d2199180d95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.58333333333333,
+            "latitude": 27.583333333333332
+          },
+          "longitude_text": "105°35′",
+          "latitude_text": "27°35′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c2f50c23-3a81-570e-afd0-0b4042522be3",
+      "key": "bijie-gazetteer/p252/ashi/akaihe/meidongpo",
+      "entity_id": "e41d23f4-a34d-539d-8f26-d872e0609b7e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 33: 煤洞坡",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "煤洞坡",
+        "pinyin": "Méidòngpō",
+        "population": 156,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "313493d6-8277-5db7-ac1f-3d2199180d95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.6
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°36′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "cbfac0bf-9624-518d-8ac5-6afe6afd5406",
+      "key": "bijie-gazetteer/p252/ashi/akaihe/mawotang",
+      "entity_id": "34d3be7c-7014-5f1a-aafb-28733626f5b2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 34: 麻窝塘",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "麻窝塘",
+        "pinyin": "Māwōtáng",
+        "population": 85,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "313493d6-8277-5db7-ac1f-3d2199180d95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.58333333333333,
+            "latitude": 27.583333333333332
+          },
+          "longitude_text": "105°35′",
+          "latitude_text": "27°35′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4eff92ae-5f19-5780-961f-19c006c04b3c",
+      "key": "bijie-gazetteer/p252/ashi/akaihe/andingshan",
+      "entity_id": "f94605e9-30ef-5e3a-ae42-73d2a0259a13",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "252",
+      "scan_page": 287,
+      "locator": "Place table, row 35: 安顶山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "安顶山",
+        "pinyin": "Āndǐngshān",
+        "population": 61,
+        "households": null,
+        "ethnicities": [
+          "彝",
+          "汉"
+        ],
+        "parent_id": "313493d6-8277-5db7-ac1f-3d2199180d95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.6,
+            "latitude": 27.583333333333332
+          },
+          "longitude_text": "105°36′",
+          "latitude_text": "27°35′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

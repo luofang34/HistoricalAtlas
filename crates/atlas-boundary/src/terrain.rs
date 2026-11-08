@@ -46,6 +46,8 @@ pub struct TerrainRequest {
     pub slope_weight: f64,
     /// Source areas to fit while retaining every seed's unit membership.
     pub areas: Vec<AreaTarget>,
+    /// Unit pairs whose initial adjacency must survive area fitting.
+    pub neighbors: Vec<[usize; 2]>,
 }
 
 /// A computed unit's vector geometry and occupied grid cells.
@@ -88,7 +90,9 @@ pub fn derive(request: &TerrainRequest) -> Result<Vec<TerrainRegion>, TerrainErr
     request.grid.encloses(&envelope)?;
     validate_seeds(request, &angular)?;
     let labels = fitting::assign(request, &envelope)?;
-    vectorize::regions(request, &labels, &envelope)
+    let regions = vectorize::regions(request, &labels, &envelope)?;
+    connectivity::validate_neighbors(request, &regions)?;
+    Ok(regions)
 }
 
 fn validate_seeds(

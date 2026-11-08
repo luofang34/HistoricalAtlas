@@ -7,6 +7,8 @@ use atlas_ledger::{
     timeline::{TimeSelection, Timeline},
 };
 
+#[path = "ashi_xiaohe/tests.rs"]
+mod ashi_xiaohe;
 #[path = "huoma_shatian/tests.rs"]
 mod huoma_shatian;
 
@@ -276,6 +278,7 @@ fn ambiguous_and_external_coordinates_remain_published_but_do_not_seed_boundarie
         (242, "ledu/tianwei/tianweifa"),
         (243, "ledu/yakoushang/jinjiazhai"),
         (238, "puyi/xinjie/taojianao"),
+        (264, "liuwan/jianshanzi/jianshanzi"),
     ] {
         let row = record(&input, page, key);
         assert!(row.observation.coordinate.is_some());
@@ -284,7 +287,7 @@ fn ambiguous_and_external_coordinates_remain_published_but_do_not_seed_boundarie
     }
     for (page, key) in [
         (248, "shatian/muwo/banpo"),
-        (264, "liuwan/jianshanzi/jianshanzi"),
+        (264, "liuwan/jianshanzi/damawo"),
     ] {
         let row = record(&input, page, key);
         assert!(row.checked);

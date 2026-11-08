@@ -38,6 +38,7 @@ pub(super) fn request() -> TerrainRequest {
         units: 2,
         slope_weight: 20.,
         areas: vec![],
+        neighbors: vec![],
     }
 }
 

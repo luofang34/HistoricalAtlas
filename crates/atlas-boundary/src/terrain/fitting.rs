@@ -2,6 +2,8 @@ use super::{TerrainError, TerrainRequest, connectivity, partition, review, vecto
 use geo::MultiPolygon;
 use std::collections::BTreeSet;
 
+mod refinement;
+
 /// Area constraint for a unit in the current angular frame.
 #[derive(Debug, Clone)]
 pub struct AreaTarget {
@@ -22,6 +24,11 @@ pub(super) fn assign(
     let offsets = vec![0.; request.units];
     let mut fixed = connectivity::seed_cells(request)?;
     let labels = partition::assign(request, &active, &offsets, &fixed)?;
+    if !connectivity::shared_neighbors(request, &labels)? {
+        return Err(TerrainError::Input(
+            "cited neighbor units have no initial shared edge".into(),
+        ));
+    }
     if request.areas.is_empty() {
         return Ok(labels);
     }
@@ -51,6 +58,7 @@ pub(super) fn assign(
             return Ok(state.labels);
         }
     }
+    refinement::refine(&mut state, &targets)?;
     for target in targets {
         let area = state.area(target.unit)?;
         if !target.accepts(area) {
@@ -99,16 +107,32 @@ impl FitState<'_> {
     fn fit(&mut self, target: &AreaTarget) -> Result<(), TerrainError> {
         let (mut lower, mut upper) = (None, None);
         let mut step = self.request.grid.cell_m;
+        let mut best = (f64::INFINITY, 0.);
+        let start = *self
+            .offsets
+            .get(target.unit)
+            .ok_or(TerrainError::Cell(target.unit))?;
         for _ in 0..40 {
             let area = self.area(target.unit)?;
-            if target.accepts(area) {
+            let connected = connectivity::shared_neighbors(self.request, &self.labels)?;
+            if connected && target.accepts(area) {
                 return Ok(());
             }
             let offset = self
                 .offsets
                 .get_mut(target.unit)
                 .ok_or(TerrainError::Cell(target.unit))?;
-            if area > target.square_km {
+            let error = (area - target.square_km).abs();
+            if connected && error < best.0 {
+                best = (error, *offset);
+            }
+            if !connected {
+                if *offset > start {
+                    upper = Some(*offset);
+                } else {
+                    lower = Some(*offset);
+                }
+            } else if area > target.square_km {
                 lower = Some(*offset);
             } else {
                 upper = Some(*offset);
@@ -124,6 +148,12 @@ impl FitState<'_> {
             self.labels =
                 partition::assign(self.request, &self.active, &self.offsets, &self.fixed)?;
         }
+        // A discrete area step can straddle the target; retain its nearer side.
+        *self
+            .offsets
+            .get_mut(target.unit)
+            .ok_or(TerrainError::Cell(target.unit))? = best.1;
+        self.labels = partition::assign(self.request, &self.active, &self.offsets, &self.fixed)?;
         // Neighboring offsets can make this target attainable in a later sweep.
         Ok(())
     }
