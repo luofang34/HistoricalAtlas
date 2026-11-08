@@ -1,0 +1,838 @@
+{
+  "entities": [
+    {
+      "id": "7a957732-17e8-54a6-86fa-5110da3d7e96",
+      "key": "earth/cn-gz/bijie/xianjin/matang-river",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "a8d9a306-ce51-5a7e-aecc-da1c1b50d4d0",
+      "key": "earth/cn-gz/bijie/efeng/daefeng",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "69e37dd3-ca94-5a54-8ac9-e388821be020",
+      "key": "earth/cn-gz/bijie/efeng/efenggou",
+      "body": "earth",
+      "kind": "toponym"
+    }
+  ],
+  "records": [
+    {
+      "id": "fd062e6c-d1e6-5578-9d10-6984ba352af5",
+      "key": "bijie-gazetteer/p221/xianjin/xianjinwan/name-history",
+      "entity_id": "df5b62b4-b7bc-595c-8ff7-e7164567ac14",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "221",
+      "scan_page": 256,
+      "locator": "Overview, name history",
+      "verbatim_quote": "清代此处有两山相对峙名相见坡，山上设哨、名大哨、小哨。山脚因此名相见湾，后讹为先进湾。民国沿称至今。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "先进湾",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "相见湾",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "efff2668-1c14-571d-a456-b86ed19e62dd",
+      "key": "bijie-gazetteer/p221/xianjin-commune/chronology",
+      "entity_id": "8e3f25ab-5d73-5216-929a-40aa22d5f278",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "221",
+      "scan_page": 256,
+      "locator": "Overview, chronology",
+      "verbatim_quote": "明属赤水卫，清康熙并入毕节县为常乐里地，民国属燕岩乡地，解放后1950年建村，土改后1954年建乡政权，乡公所设于小哨，办初级社，1956年进入高级社，58年成立人民公社故名先进公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "先进公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ae691bae-aa60-550e-848e-c1461d8e7a96",
+      "key": "bijie-gazetteer/p221/xianjin-commune/establishment",
+      "entity_id": "8e3f25ab-5d73-5216-929a-40aa22d5f278",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "221",
+      "scan_page": 256,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "58年成立人民公社故名先进公社。",
+      "checked": true,
+      "source_date": {
+        "text": "58年",
+        "convention": "Gregorian year",
+        "conversion_basis": "The preceding 1950, 1954, and 1956 chronology identifies 58年 as 1958."
+      },
+      "observation": {
+        "name": "先进公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bfc1f188-b353-5cdd-bf15-9283a69c6816",
+      "key": "bijie-gazetteer/p221/xianjin-commune/extent",
+      "entity_id": "8e3f25ab-5d73-5216-929a-40aa22d5f278",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "221",
+      "scan_page": 256,
+      "locator": "Overview, extent",
+      "verbatim_quote": "先进公社地处东经105°24′至105°26′，北纬27°31′至27°34′之间，总面积22.1平方公里",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "先进公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "东经105°24′至105°26′，北纬27°31′至27°34′；总面积22.1平方公里。"
+      }
+    },
+    {
+      "id": "61fc5c41-b938-55ca-8789-24bb38e2ce7a",
+      "key": "bijie-gazetteer/p221/xianjin-commune/seat",
+      "entity_id": "8e3f25ab-5d73-5216-929a-40aa22d5f278",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "221",
+      "scan_page": 256,
+      "locator": "Overview, seat",
+      "verbatim_quote": "公社驻地小哨",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "先进公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "ee122427-a729-5a9f-baf7-c306c3ed6ef0",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bd5c4f42-6e75-50ab-8867-084b97938dc5",
+      "key": "bijie-gazetteer/p221/xianjin-commune/subdivisions",
+      "entity_id": "8e3f25ab-5d73-5216-929a-40aa22d5f278",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "221",
+      "scan_page": 256,
+      "locator": "Overview, subdivisions",
+      "verbatim_quote": "辖：小哨、五里桥、一心三个大队，33个生产队，31个自然村，居住汉、苗、彝等民族",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "先进公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "彝"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "3 brigades, 33 production teams, and 31 natural villages."
+      }
+    },
+    {
+      "id": "d99a296b-fa30-56d5-8c7b-433fdad09932",
+      "key": "bijie-gazetteer/p221/xianjin-commune/population",
+      "entity_id": "8e3f25ab-5d73-5216-929a-40aa22d5f278",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "221",
+      "scan_page": 256,
+      "locator": "Overview, population",
+      "verbatim_quote": "总人口1024户，5184人。其中：彝族3人，苗族1156人，余为汉族",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "先进公社",
+        "pinyin": null,
+        "population": 5184,
+        "households": 1024,
+        "ethnicities": [
+          "彝",
+          "苗",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "彝族3人，苗族1156人，余为汉族。"
+      }
+    },
+    {
+      "id": "b4f4ec40-f0dc-5fe1-83ac-51aea15c8165",
+      "key": "bijie-gazetteer/p221/xianjin-commune/neighbors",
+      "entity_id": "8e3f25ab-5d73-5216-929a-40aa22d5f278",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "221",
+      "scan_page": 256,
+      "locator": "Overview, neighbors",
+      "verbatim_quote": "其四邻界限，东连荆栗，南接层台，西南与金银山，西邻沔鱼河，北靠燕子口等公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "先进公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "东邻荆栗，南邻层台，西南邻金银山，西邻沔鱼河，北邻燕子口。"
+      }
+    },
+    {
+      "id": "8067b423-c4a8-51b6-a711-9c7be5f811e2",
+      "key": "bijie-gazetteer/p221/xianjin/caihua-liangzi/elevation",
+      "entity_id": "74b8661e-64c4-5c01-91e1-649f7e195aca",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "221",
+      "scan_page": 256,
+      "locator": "Overview, elevation",
+      "verbatim_quote": "南面最高处采花梁子海拔1722米",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "采花梁子",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "海拔1722米。"
+      }
+    },
+    {
+      "id": "1c6faad8-ea7c-5408-bb41-f7c04ac776c1",
+      "key": "bijie-gazetteer/p221/xianjin-commune/relief",
+      "entity_id": "8e3f25ab-5d73-5216-929a-40aa22d5f278",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "221",
+      "scan_page": 256,
+      "locator": "Overview, relief",
+      "verbatim_quote": "地势属石灰岩、砂页岩低中山中切割谷地，南面最高处采花梁子海拔1722米，东北面的麻塘河边最低海拔1140米，西部有川滇东路南北纵贯。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "先进公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c931d7a4-afb2-566a-ab6e-3e4e7490cad2",
+      "key": "bijie-gazetteer/p221/xianjin/matang-river/course",
+      "entity_id": "7a957732-17e8-54a6-86fa-5110da3d7e96",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "221",
+      "scan_page": 256,
+      "locator": "Overview, course",
+      "verbatim_quote": "东部有孙家河，中部的孙家铺水注入，北有先进沟水注入，为麻塘河，南北穿流全境而入太极河，下入赤水河源之小河",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "麻塘河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "孙家铺水、先进沟水注入；南北穿流全境而入太极河，下入赤水河源之小河。"
+      }
+    },
+    {
+      "id": "c0961b5a-0d4b-509d-8c2c-56c2c0c69ba0",
+      "key": "bijie-gazetteer/p225/efeng-commune/chronology",
+      "entity_id": "e244a83d-46c8-5b3e-a478-089ad992c304",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "225",
+      "scan_page": 260,
+      "locator": "Overview, chronology",
+      "verbatim_quote": "峨峰，明属赤水卫，清康熙划归毕节县属长乐里辖，民国属燕岩乡辖，解放后1950年建村，经过土改后1954年建乡，办初级社，1956年进入高级社，1958年成立人民公社时，命名为峨峰公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "峨峰公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "1de1a584-4d67-5f3a-93ea-095fd633f0a4",
+      "key": "bijie-gazetteer/p225/efeng-commune/establishment",
+      "entity_id": "e244a83d-46c8-5b3e-a478-089ad992c304",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "225",
+      "scan_page": 260,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "1958年成立人民公社时，命名为峨峰公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "峨峰公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "df47bf97-4f9e-57db-bc3f-4b25a7852c90",
+      "key": "bijie-gazetteer/p225/efeng-commune/extent",
+      "entity_id": "e244a83d-46c8-5b3e-a478-089ad992c304",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "225",
+      "scan_page": 260,
+      "locator": "Overview, extent",
+      "verbatim_quote": "位于东经105°27′至105°30′，北纬27°39′至27°42′之间，总面积19.3平方公里。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "峨峰公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "东经105°27′至105°30′，北纬27°39′至27°42′；总面积19.3平方公里。"
+      }
+    },
+    {
+      "id": "d5a9bafa-c240-5d8c-8a5d-dd69597b2b15",
+      "key": "bijie-gazetteer/p225/efeng-commune/neighbors",
+      "entity_id": "e244a83d-46c8-5b3e-a478-089ad992c304",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "225",
+      "scan_page": 260,
+      "locator": "Overview, neighbors",
+      "verbatim_quote": "东邻耿官，南接亮岩，西与北连生机等公社",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "峨峰公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "东邻耿官，南邻亮岩，西与北邻生机。"
+      }
+    },
+    {
+      "id": "13bb9590-3b4a-50d4-9f85-e1c8aeef1a97",
+      "key": "bijie-gazetteer/p225/efeng-commune/subdivisions",
+      "entity_id": "e244a83d-46c8-5b3e-a478-089ad992c304",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "225",
+      "scan_page": 260,
+      "locator": "Overview, subdivisions",
+      "verbatim_quote": "辖峨峰沟、合欢、民丰三个大队，三十一个生产队，30个自然村。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "峨峰公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "3 brigades, 31 production teams, and 30 natural villages."
+      }
+    },
+    {
+      "id": "0487247a-9e89-5e45-b45e-4c0610df27b0",
+      "key": "bijie-gazetteer/p225/efeng-commune/population",
+      "entity_id": "e244a83d-46c8-5b3e-a478-089ad992c304",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "225",
+      "scan_page": 260,
+      "locator": "Overview, population",
+      "verbatim_quote": "居住汉、苗两种民族。共有人口4189人，其中苗族261人，余为汉族",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "峨峰公社",
+        "pinyin": null,
+        "population": 4189,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "苗族261人，余为汉族。"
+      }
+    },
+    {
+      "id": "994ef93d-aeda-5f75-973e-af18736981ae",
+      "key": "bijie-gazetteer/p225/efeng/neikou-liangzi/elevation",
+      "entity_id": "1473e215-7c8c-5f14-8e88-d4730aac6a47",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "225",
+      "scan_page": 260,
+      "locator": "Overview, elevation",
+      "verbatim_quote": "西面有内口梁子，最高海拔1868米，北有何家大山，东有老道山，南有毛草山",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "内口梁子",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "海拔1868米。"
+      }
+    },
+    {
+      "id": "e19682b5-6491-5e67-b295-fbca3cb3f931",
+      "key": "bijie-gazetteer/p225/efeng/daefeng/name",
+      "entity_id": "a8d9a306-ce51-5a7e-aecc-da1c1b50d4d0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "225",
+      "scan_page": 260,
+      "locator": "Overview, name",
+      "verbatim_quote": "四面群山巍峨奇险，当地群众习称为大峨峰",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大峨峰",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a429a2a2-4c8b-51e7-b420-d88dd64a8e78",
+      "key": "bijie-gazetteer/p225/efeng/efenggou/drainage",
+      "entity_id": "69e37dd3-ca94-5a54-8ac9-e388821be020",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "225",
+      "scan_page": 260,
+      "locator": "Overview, drainage",
+      "verbatim_quote": "中部有沟称峨峰沟，最低海拔940米，水沿山谷流出，东北角汇小河入赤水河",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "峨峰沟",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "最低海拔940米。",
+        "extent": "位于公社中部，水沿山谷流出，东北角汇小河入赤水河。"
+      }
+    },
+    {
+      "id": "d447a625-1612-5292-b415-7c4f3a881407",
+      "key": "bijie-gazetteer/p225/efeng/pipagou/drainage",
+      "entity_id": "aba4d0e6-9a00-5d98-8f2a-a09f352897db",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "225",
+      "scan_page": 260,
+      "locator": "Overview, drainage",
+      "verbatim_quote": "南面有枇杷沟水流入板桥河汇太极河。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "枇杷沟",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "位于公社南面，水流入板桥河汇太极河。"
+      }
+    },
+    {
+      "id": "ccfed259-22cf-526b-baf6-a91cd5c47e4d",
+      "key": "bijie-gazetteer/p225/efeng/bijiashan-reservoir/construction",
+      "entity_id": "20a632bf-c652-5bac-95a9-c0aaa8c1dee9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "225",
+      "scan_page": 260,
+      "locator": "Overview, construction",
+      "verbatim_quote": "于1974年修筑笔架山水库，库容量10万立方米，灌溉面积100亩",
+      "checked": true,
+      "source_date": {
+        "text": "1974年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "笔架山水库",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7f415b33-fb66-5200-8bf5-e128be708663",
+      "key": "bijie-gazetteer/p225/efeng/laoyingpo-reservoir/construction",
+      "entity_id": "449acd1c-39e1-5c65-8845-bc4017bbe35d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "225",
+      "scan_page": 260,
+      "locator": "Overview, construction",
+      "verbatim_quote": "75年修筑老鹰坡水库，库容量40万立方米，灌溉面积150亩",
+      "checked": true,
+      "source_date": {
+        "text": "75年",
+        "convention": "Gregorian year",
+        "conversion_basis": "The surrounding 1974 and 1977 construction dates identify 75年 as 1975."
+      },
+      "observation": {
+        "name": "老鹰坡水库",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "9fde49b2-3e33-5de7-a73e-f30f342ef5ab",
+      "key": "bijie-gazetteer/p225/efeng/xujiaping-reservoir/construction",
+      "entity_id": "fe89a5c6-6677-5fac-a827-3c3232ce4794",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "225",
+      "scan_page": 260,
+      "locator": "Overview, construction",
+      "verbatim_quote": "1977年又修筑许家坪水库，库容量10万立方米，灌溉面积200亩。",
+      "checked": true,
+      "source_date": {
+        "text": "1977年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "许家坪水库",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "0c6595ef-9005-5d2b-b1fc-6c142f45921a",
+      "key": "editorial/bijie/xianjin-commune/establishment",
+      "entity_id": "8e3f25ab-5d73-5216-929a-40aa22d5f278",
+      "basis": [
+        "ae691bae-aa60-550e-848e-c1461d8e7a96"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "beab659f-30c2-52ed-a8c9-ebf00d9f959d",
+      "key": "editorial/bijie/xianjin-commune/name",
+      "entity_id": "8e3f25ab-5d73-5216-929a-40aa22d5f278",
+      "basis": [
+        "ae691bae-aa60-550e-848e-c1461d8e7a96"
+      ],
+      "brief": "Use the stated name between the cited changes, retaining their date bounds.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "先进公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "a0780178-1b4a-5333-aa1d-3b1085e4aaf7",
+      "key": "editorial/bijie/efeng-commune/establishment",
+      "entity_id": "e244a83d-46c8-5b3e-a478-089ad992c304",
+      "basis": [
+        "1de1a584-4d67-5f3a-93ea-095fd633f0a4"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "cef7bb29-4add-5e4e-b302-a79c7b7f9859",
+      "key": "editorial/bijie/efeng-commune/name",
+      "entity_id": "e244a83d-46c8-5b3e-a478-089ad992c304",
+      "basis": [
+        "1de1a584-4d67-5f3a-93ea-095fd633f0a4"
+      ],
+      "brief": "Use the stated name between the cited changes, retaining their date bounds.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "峨峰公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "92c83415-b2bb-514a-b598-4108329148a7",
+      "key": "editorial/bijie/efeng/bijiashan-reservoir/establishment",
+      "entity_id": "20a632bf-c652-5bac-95a9-c0aaa8c1dee9",
+      "basis": [
+        "ccfed259-22cf-526b-baf6-a91cd5c47e4d"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-820497600000",
+            "nominal": "-804729600001",
+            "latest": "-788961600001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "c420d002-2950-556e-9241-8ef6f545f2d7",
+      "key": "editorial/bijie/efeng/laoyingpo-reservoir/establishment",
+      "entity_id": "449acd1c-39e1-5c65-8845-bc4017bbe35d",
+      "basis": [
+        "7f415b33-fb66-5200-8bf5-e128be708663"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-788961600000",
+            "nominal": "-773193600001",
+            "latest": "-757425600001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "e0f83887-d2d0-5eb8-818f-47ab7c429405",
+      "key": "editorial/bijie/efeng/xujiaping-reservoir/establishment",
+      "entity_id": "fe89a5c6-6677-5fac-a827-3c3232ce4794",
+      "basis": [
+        "9fde49b2-3e33-5de7-a73e-f30f342ef5ab"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-725803200000",
+            "nominal": "-710035200001",
+            "latest": "-694267200001",
+            "precision": "year"
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

@@ -1,0 +1,128 @@
+{
+  "entities": [
+    {
+      "id": "74b8661e-64c4-5c01-91e1-649f7e195aca",
+      "key": "earth/cn-gz/bijie/xianjin/caihua-liangzi",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "e2a3cc2e-d3c8-5c21-8277-84fa5b825c06",
+      "key": "earth/cn-gz/bijie/xianjin/lengsha-liangzi-west",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "2ea5b1dd-2315-5983-baca-c63b22a62c08",
+      "key": "earth/cn-gz/bijie/xianjin/lengsha-liangzi-east",
+      "body": "earth",
+      "kind": "mountain"
+    }
+  ],
+  "records": [
+    {
+      "id": "4b14deaf-6afa-5e74-b799-c99bfca2f869",
+      "key": "bijie-gazetteer/p223/xianjin/caihua-liangzi",
+      "entity_id": "74b8661e-64c4-5c01-91e1-649f7e195aca",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "223",
+      "scan_page": 258,
+      "locator": "Place table, row 1: 采花梁子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "采花梁子",
+        "pinyin": "Cǎihuā Liángzǐ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.41666666666667,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°25′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1722.0米"
+      }
+    },
+    {
+      "id": "ba0a8a90-94d7-5420-b9f9-9eda5a554c72",
+      "key": "bijie-gazetteer/p223/xianjin/lengsha-liangzi-west",
+      "entity_id": "e2a3cc2e-d3c8-5c21-8277-84fa5b825c06",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "223",
+      "scan_page": 258,
+      "locator": "Place table, row 2: 冷砂梁子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "冷砂梁子",
+        "pinyin": "Lěngshā Liángzǐ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.41666666666667,
+            "latitude": 27.533333333333335
+          },
+          "longitude_text": "105°25′",
+          "latitude_text": "27°32′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1522.5米"
+      }
+    },
+    {
+      "id": "6b5f2178-5c4c-5126-9ba8-c01350063276",
+      "key": "bijie-gazetteer/p223/xianjin/lengsha-liangzi-east",
+      "entity_id": "2ea5b1dd-2315-5983-baca-c63b22a62c08",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "223",
+      "scan_page": 258,
+      "locator": "Place table, row 3: 冷砂梁子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "冷砂梁子",
+        "pinyin": "Lěngshā Liángzǐ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.516666666666666
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°31′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1572.7米"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

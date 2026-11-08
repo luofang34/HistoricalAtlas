@@ -1,0 +1,435 @@
+{
+  "entities": [
+    {
+      "id": "8805f386-07c5-570a-88b8-fd9f6ed57ec4",
+      "key": "earth/cn-gz/bijie/efeng/yakoushang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "a72d178d-3ce0-5102-8d6b-909de00b311d",
+      "key": "earth/cn-gz/bijie/efeng/majiatian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "30f38862-b266-59ff-ae76-e5a740cde276",
+      "key": "earth/cn-gz/bijie/efeng/dayakou",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "4055eb7f-8d2f-5457-ac2c-5cb0245639fa",
+      "key": "earth/cn-gz/bijie/efeng/hejia-dashan",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "1473e215-7c8c-5f14-8e88-d4730aac6a47",
+      "key": "earth/cn-gz/bijie/efeng/neikou-liangzi",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "c5e93549-ce85-5677-8f8e-95763bf41c69",
+      "key": "earth/cn-gz/bijie/efeng/laodao-mountain",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "ca6f7a86-1a86-580b-9ba2-6c6ffef118ff",
+      "key": "earth/cn-gz/bijie/efeng/maocao-mountain",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "fe89a5c6-6677-5fac-a827-3c3232ce4794",
+      "key": "earth/cn-gz/bijie/efeng/xujiaping-reservoir",
+      "body": "earth",
+      "kind": "reservoir"
+    },
+    {
+      "id": "449acd1c-39e1-5c65-8845-bc4017bbe35d",
+      "key": "earth/cn-gz/bijie/efeng/laoyingpo-reservoir",
+      "body": "earth",
+      "kind": "reservoir"
+    },
+    {
+      "id": "20a632bf-c652-5bac-95a9-c0aaa8c1dee9",
+      "key": "earth/cn-gz/bijie/efeng/bijiashan-reservoir",
+      "body": "earth",
+      "kind": "reservoir"
+    }
+  ],
+  "records": [
+    {
+      "id": "39351b29-fc70-5e78-9634-a4cf4a884b75",
+      "key": "bijie-gazetteer/p227/efeng/yakoushang",
+      "entity_id": "8805f386-07c5-570a-88b8-fd9f6ed57ec4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "227",
+      "scan_page": 262,
+      "locator": "Place table, row 1: 垭口上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "垭口上",
+        "pinyin": "Yākǒushàng",
+        "population": 82,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "af680642-e945-5c29-ad3d-f460b434b8c2",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.48333333333333,
+            "latitude": 27.683333333333334
+          },
+          "longitude_text": "105°29′",
+          "latitude_text": "27°41′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "bc634fe1-bc11-51b6-97b6-67b92509e865",
+      "key": "bijie-gazetteer/p227/efeng/majiatian",
+      "entity_id": "a72d178d-3ce0-5102-8d6b-909de00b311d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "227",
+      "scan_page": 262,
+      "locator": "Place table, row 2: 马家田",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "马家田",
+        "pinyin": "Mǎjiātián",
+        "population": 30,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "af680642-e945-5c29-ad3d-f460b434b8c2",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.48333333333333,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°29′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "47218657-e478-519a-86c5-08d120ccaa3f",
+      "key": "bijie-gazetteer/p227/efeng/niujiaodong",
+      "entity_id": "a72be266-6109-5aed-b38f-ef6799bd73b5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "227",
+      "scan_page": 262,
+      "locator": "Place table, row 3: 牛角洞",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "牛角洞",
+        "pinyin": "Niújiǎo Dòng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.48333333333333,
+            "latitude": 27.7
+          },
+          "longitude_text": "105°29′",
+          "latitude_text": "27°42′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "洞穴，高/深7/100"
+      }
+    },
+    {
+      "id": "bb1d982a-fc98-5e2b-a80a-57569da4e6c9",
+      "key": "bijie-gazetteer/p227/efeng/dayakou",
+      "entity_id": "30f38862-b266-59ff-ae76-e5a740cde276",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "227",
+      "scan_page": 262,
+      "locator": "Place table, row 4: 大垭口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大垭口",
+        "pinyin": "Dàyàkǒu",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.683333333333334
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°41′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1790.0米"
+      }
+    },
+    {
+      "id": "5afd0920-a478-5930-a23f-78946c9f744b",
+      "key": "bijie-gazetteer/p227/efeng/hejia-dashan",
+      "entity_id": "4055eb7f-8d2f-5457-ac2c-5cb0245639fa",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "227",
+      "scan_page": 262,
+      "locator": "Place table, row 5: 何家大山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "何家大山",
+        "pinyin": "Héjiā Dàshān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.46666666666667,
+            "latitude": 27.7
+          },
+          "longitude_text": "105°28′",
+          "latitude_text": "27°42′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1624.0米"
+      }
+    },
+    {
+      "id": "c2431aa0-0267-5391-971f-cd7ef1ae3a39",
+      "key": "bijie-gazetteer/p227/efeng/neikou-liangzi",
+      "entity_id": "1473e215-7c8c-5f14-8e88-d4730aac6a47",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "227",
+      "scan_page": 262,
+      "locator": "Place table, row 6: 内口梁子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "内口梁子",
+        "pinyin": "Nèikǒu Liángzǐ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1868.0米"
+      }
+    },
+    {
+      "id": "95b175a3-33a9-54da-afd9-81ac11f8bf22",
+      "key": "bijie-gazetteer/p227/efeng/laodao-mountain",
+      "entity_id": "c5e93549-ce85-5677-8f8e-95763bf41c69",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "227",
+      "scan_page": 262,
+      "locator": "Place table, row 7: 老道山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "老道山",
+        "pinyin": "Lǎodào Shān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.48333333333333,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°29′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1681.0米"
+      }
+    },
+    {
+      "id": "88f80ffa-ffe3-53a8-8025-924db7992514",
+      "key": "bijie-gazetteer/p227/efeng/maocao-mountain",
+      "entity_id": "ca6f7a86-1a86-580b-9ba2-6c6ffef118ff",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "227",
+      "scan_page": 262,
+      "locator": "Place table, row 8: 毛草山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "毛草山",
+        "pinyin": "Máocǎo Shān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "山峰，海拔1705.9米",
+        "unresolved_coordinate": {
+          "longitude_text": "105°28°",
+          "latitude_text": "27°39′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified",
+          "reason": "The longitude prints a second degree symbol after 28. The intended angular notation is unresolved."
+        }
+      }
+    },
+    {
+      "id": "6ca43486-d722-5afd-9c83-a8d4da444ef2",
+      "key": "bijie-gazetteer/p227/efeng/xujiaping-reservoir",
+      "entity_id": "fe89a5c6-6677-5fac-a827-3c3232ce4794",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "227",
+      "scan_page": 262,
+      "locator": "Place table, row 9: 许家坪水库",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "许家坪水库",
+        "pinyin": "Xǔjiāpíng Shuǐkù",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.46666666666667,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°28′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "库容10万立方米，有效灌溉面积200亩；水库"
+      }
+    },
+    {
+      "id": "4f4eaf4c-5b3a-519d-b002-1242498982c5",
+      "key": "bijie-gazetteer/p227/efeng/laoyingpo-reservoir",
+      "entity_id": "449acd1c-39e1-5c65-8845-bc4017bbe35d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "227",
+      "scan_page": 262,
+      "locator": "Place table, row 10: 老鹰坡水库",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "老鹰坡水库",
+        "pinyin": "Lǎoyīngpō Shuǐkù",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "库容40万立方米，有效灌溉面积150亩；水库"
+      }
+    },
+    {
+      "id": "bdfb6296-f267-5db4-bd1a-176796435834",
+      "key": "bijie-gazetteer/p227/efeng/bijiashan-reservoir",
+      "entity_id": "20a632bf-c652-5bac-95a9-c0aaa8c1dee9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "227",
+      "scan_page": 262,
+      "locator": "Place table, row 11: 笔架山水库",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "笔架山水库",
+        "pinyin": "Bǐjiàshān Shuǐkù",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.46666666666667,
+            "latitude": 27.666666666666668
+          },
+          "longitude_text": "105°28′",
+          "latitude_text": "27°40′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "库容10万立方米，有效灌溉面积100亩；水库"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}
