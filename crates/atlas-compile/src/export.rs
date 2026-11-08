@@ -349,3 +349,7 @@ mod alie_tests;
 #[cfg(test)]
 #[path = "export/yanzikou/tests.rs"]
 mod yanzikou_tests;
+
+#[cfg(test)]
+#[path = "export/commune_anchors/tests.rs"]
+mod commune_anchor_tests;
