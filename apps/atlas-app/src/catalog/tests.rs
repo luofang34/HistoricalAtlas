@@ -1,6 +1,31 @@
 use super::*;
 
 #[test]
+fn shaogang_local_names_and_shashao_facilities_resolve_across_sources() {
+    let atlas = atlas();
+    for (name, key) in [
+        ("烧缸箐", "shaogang/shaogang"),
+        ("烧杠箐", "shaogang/shaogang"),
+        ("邵官堡", "shashao/shaoguanpu"),
+        ("王张官屯", "wangzhang/wangzhangjie"),
+        ("白马山", "shaogang/baimashan"),
+        ("白马山", "shaogang/dashan"),
+        ("白马山", "shaogang/baima-mountain"),
+        ("白马山", "wangzhang/baima-mountain"),
+        ("沙邵鱼场", "shashao/fish-farm"),
+        ("沙邵渔场", "shashao/fish-farm"),
+        ("海子街中学", "haizijie/middle-school"),
+        ("白马山林场", "haizijie/baimashan-state-forest"),
+    ] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{key}")).unwrap();
+        assert!(atlas.search(name, BodyId::Earth).contains(&id), "{key}");
+    }
+    let school = EntityId::from_key("earth/cn-gz/bijie/haizijie/middle-school").unwrap();
+    let brigade = EntityId::from_key("earth/cn-gz/bijie/shashao/shaoguan-brigade").unwrap();
+    assert_eq!(atlas.parents(school), BTreeSet::from([brigade]));
+}
+
+#[test]
 fn tianbaqiao_and_pangxie_source_names_resolve_without_merging_distinct_places() {
     let atlas = atlas();
     for (name, key) in [

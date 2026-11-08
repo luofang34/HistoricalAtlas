@@ -64,6 +64,10 @@ fn complete_tables_export_all_reviewed_rows_with_their_source_fields() {
         (160, 10),
         (162, 36),
         (163, 13),
+        (166, 34),
+        (167, 6),
+        (170, 28),
+        (172, 28),
     ] {
         let rows: Vec<_> = input
             .data
@@ -89,6 +93,9 @@ fn complete_tables_export_all_reviewed_rows_with_their_source_fields() {
 
 #[path = "communes/tests.rs"]
 mod communes;
+
+#[path = "shaogang/tests.rs"]
+mod shaogang;
 
 #[test]
 fn district_and_brigade_seats_follow_the_explicit_table_annotations() {

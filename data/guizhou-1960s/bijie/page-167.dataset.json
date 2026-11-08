@@ -1,0 +1,233 @@
+{
+  "entities": [
+    {
+      "id": "afa03862-a3e5-5bb0-a2c8-c4f8dd94855f",
+      "key": "earth/cn-gz/bijie/shaogang/lijiaying",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "dace7ae7-b73b-5bfd-9cd7-b15d6f478f2d",
+      "key": "earth/cn-gz/bijie/shaogang/dashan",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "6d5a0adc-6ed8-58f0-a63b-8f85416bce50",
+      "key": "earth/cn-gz/bijie/shaogang/guankouying",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "1a6bdacd-1882-5ba4-a3df-54a4ea7aaafb",
+      "key": "earth/cn-gz/bijie/shaogang/baima-mountain",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "8906b7b3-8a41-54be-8605-0358340730cd",
+      "key": "earth/cn-gz/bijie/shaogang/guanmen-mountain",
+      "body": "earth",
+      "kind": "mountain"
+    }
+  ],
+  "records": [
+    {
+      "id": "f4ac2890-a9fc-59e2-a948-c8f26c1f4d44",
+      "key": "bijie-gazetteer/p167/shaogang/lijiaying",
+      "entity_id": "afa03862-a3e5-5bb0-a2c8-c4f8dd94855f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "167",
+      "scan_page": 202,
+      "locator": "Place table, row 1: 李家营",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "李家营",
+        "pinyin": "Lǐjiāyíng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "1dd138e2-177d-5e04-a796-9ff67d55ceab",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.41666666666667,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°25′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1692.9米"
+      }
+    },
+    {
+      "id": "bb061ec0-a220-5a40-9839-b15589594e09",
+      "key": "bijie-gazetteer/p167/shaogang/dashan",
+      "entity_id": "dace7ae7-b73b-5bfd-9cd7-b15d6f478f2d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "167",
+      "scan_page": 202,
+      "locator": "Place table, row 2: 大山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大山",
+        "pinyin": "Dà Shān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "1dd138e2-177d-5e04-a796-9ff67d55ceab",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.41666666666667,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°25′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1823.5米"
+      }
+    },
+    {
+      "id": "64d3ebeb-b7ce-58b3-b2ec-b77e022b5ff3",
+      "key": "bijie-gazetteer/p167/shaogang/guankouying",
+      "entity_id": "6d5a0adc-6ed8-58f0-a63b-8f85416bce50",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "167",
+      "scan_page": 202,
+      "locator": "Place table, row 3: 关口营",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "关口营",
+        "pinyin": "Cuānkoúyíng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "1dd138e2-177d-5e04-a796-9ff67d55ceab",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1767.6米"
+      }
+    },
+    {
+      "id": "107467a8-31ed-5c63-be97-afb1966df299",
+      "key": "bijie-gazetteer/p167/shaogang/baima-mountain",
+      "entity_id": "1a6bdacd-1882-5ba4-a3df-54a4ea7aaafb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "167",
+      "scan_page": 202,
+      "locator": "Place table, row 4: 白马山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "白马山",
+        "pinyin": "Báimǎ Shān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "1dd138e2-177d-5e04-a796-9ff67d55ceab",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1730.0米"
+      }
+    },
+    {
+      "id": "1349733d-c68a-5ecf-b7e0-26c9689fab2e",
+      "key": "bijie-gazetteer/p167/shaogang/guanmen-mountain",
+      "entity_id": "8906b7b3-8a41-54be-8605-0358340730cd",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "167",
+      "scan_page": 202,
+      "locator": "Place table, row 5: 关门山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "关门山",
+        "pinyin": "Cuānmēn Shān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "1dd138e2-177d-5e04-a796-9ff67d55ceab",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1696.0米"
+      }
+    },
+    {
+      "id": "4adcc79c-de61-5b77-9779-4b7969267752",
+      "key": "bijie-gazetteer/p167/shaogang/dashan/local-name",
+      "entity_id": "dace7ae7-b73b-5bfd-9cd7-b15d6f478f2d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "167",
+      "scan_page": 202,
+      "locator": "Place table annotation, row 2: local name",
+      "verbatim_quote": "大山 Dà Shān（当地称白马山）",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "白马山",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}
