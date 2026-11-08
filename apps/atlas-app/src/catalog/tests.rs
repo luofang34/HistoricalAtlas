@@ -1,6 +1,34 @@
 use super::*;
 
 #[test]
+fn haizijie_names_and_river_aliases_resolve_to_their_cited_entities() {
+    let atlas = atlas();
+    for (name, key) in [
+        ("海子铺", "haizijie/haizijie"),
+        ("福集公社", "yingbin-commune"),
+        ("红卫公社", "guanyinqiao-commune"),
+        ("青岗林", "yingbin/qingganglin"),
+        ("青杠林", "yingbin/qingganglin"),
+        ("威镇河", "guanyinqiao-river"),
+        ("田坝桥河", "guanyinqiao-river"),
+        ("观音桥", "guanyinqiao/guanyinqiao"),
+        ("观音桥", "guanyinqiao/guanyin-bridge"),
+    ] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{key}")).unwrap();
+        assert!(atlas.search(name, BodyId::Earth).contains(&id), "{key}");
+    }
+    let commune = EntityId::from_key("earth/cn-gz/bijie/yingbin-commune").unwrap();
+    let populations: BTreeSet<_> = atlas
+        .entry(commune)
+        .unwrap()
+        .records
+        .iter()
+        .filter_map(|r| r.observation.population)
+        .collect();
+    assert_eq!(populations, BTreeSet::from([3079, 3135]));
+}
+
+#[test]
 fn heguantun_communes_expose_same_named_places_and_cited_river_aliases() {
     let atlas = atlas();
     for (name, key) in [

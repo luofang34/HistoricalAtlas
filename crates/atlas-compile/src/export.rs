@@ -255,3 +255,7 @@ mod changchunbao_tests;
 #[cfg(test)]
 #[path = "export/heguantun/tests.rs"]
 mod heguantun_tests;
+
+#[cfg(test)]
+#[path = "export/haizijie/tests.rs"]
+mod haizijie_tests;

@@ -1,0 +1,820 @@
+{
+  "entities": [
+    {
+      "id": "b827f9e9-fb1d-54a6-9834-5d831f97836a",
+      "key": "earth/cn-gz/bijie/guanyinqiao/taishaoba",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "94d86815-ba24-5e3c-8726-e1baa19b4fdc",
+      "key": "earth/cn-gz/bijie/guanyinqiao/gaijiawan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c68213de-f8cd-5000-9c63-712cc0f33295",
+      "key": "earth/cn-gz/bijie/guanyinqiao/tangfang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "50e16349-681e-57c1-b123-a129ea3ad7b2",
+      "key": "earth/cn-gz/bijie/guanyinqiao/lijiawan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "65cd4f99-fc6b-5a57-91c5-38d29dc85998",
+      "key": "earth/cn-gz/bijie/guanyinqiao/xiongjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c21760ed-3581-5e11-85c5-e311e33d4f74",
+      "key": "earth/cn-gz/bijie/guanyinqiao/songjiawan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "3e3dc5c8-a961-5261-8561-7aa2cc3ec642",
+      "key": "earth/cn-gz/bijie/guanyinqiao/xiaqingkou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "a2311b4c-53c7-5aa0-b582-5ae540f06056",
+      "key": "earth/cn-gz/bijie/guanyinqiao/hongshuigou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "106a1571-8855-5d59-a3b4-80bacb73c238",
+      "key": "earth/cn-gz/bijie/guanyinqiao/qiaobian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "bab2b2dd-446a-5cfb-9860-19e8bb116a0d",
+      "key": "earth/cn-gz/bijie/guanyinqiao/zhujiawan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "a42cc058-c0b1-5d1f-962b-9e72475e2406",
+      "key": "earth/cn-gz/bijie/guanyinqiao/shaojiawan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "16bad0c3-0213-58cb-8a85-161f48dbfa13",
+      "key": "earth/cn-gz/bijie/guanyinqiao/yanjiawa",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "16da55fb-d36e-5fe8-b071-060ce05f5c67",
+      "key": "earth/cn-gz/bijie/guanyinqiao/zhangjiawan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "6181f4ae-1b8f-5b83-9923-3640f2cde7f6",
+      "key": "earth/cn-gz/bijie/guanyinqiao/guanyinqiao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "67b355ed-1cff-51df-b943-f802c1e2a0fd",
+      "key": "earth/cn-gz/bijie/guanyinqiao/bijie-lightbulb-factory",
+      "body": "earth",
+      "kind": "factory"
+    },
+    {
+      "id": "e9e3587a-b68a-5fa3-a0b7-73633eafa870",
+      "key": "earth/cn-gz/bijie/guanyinqiao/power-station",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "30fc08e3-7ae1-5bd0-8fc7-0bd9b75462ef",
+      "key": "earth/cn-gz/bijie/guanyinqiao/guanyin-bridge",
+      "body": "earth",
+      "kind": "bridge"
+    },
+    {
+      "id": "0dd00b14-e151-5e92-8ce4-b5c8826c847b",
+      "key": "earth/cn-gz/bijie/guanyinqiao/leidashan",
+      "body": "earth",
+      "kind": "mountain"
+    }
+  ],
+  "records": [
+    {
+      "id": "abdc6654-80cd-5968-9fe5-a83be833923d",
+      "key": "bijie-gazetteer/p157/guanyinqiao-commune",
+      "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 1: 观音桥公社",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "观音桥公社",
+        "pinyin": "Guānyīnqiáo Gōngshè",
+        "population": 3931,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "彝"
+        ],
+        "parent_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+        "rank": "commune",
+        "seat_id": "106a1571-8855-5d59-a3b4-80bacb73c238",
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "0232ab10-c056-5c04-a4e1-90db1d2db332",
+      "key": "bijie-gazetteer/p157/guanyinqiao/taishaoba",
+      "entity_id": "b827f9e9-fb1d-54a6-9834-5d831f97836a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 2: 抬烧坝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "抬烧坝",
+        "pinyin": "Táishāobà",
+        "population": 353,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "578e4651-5908-5a8f-a06c-2bb86f45ddb5",
+      "key": "bijie-gazetteer/p157/guanyinqiao/gaijiawan",
+      "entity_id": "94d86815-ba24-5e3c-8726-e1baa19b4fdc",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 3: 盖家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "盖家湾",
+        "pinyin": "Gàijiāwān",
+        "population": 498,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "0573ed53-117a-5193-ad41-9f6b31057c5c",
+      "key": "bijie-gazetteer/p157/guanyinqiao/tangfang",
+      "entity_id": "c68213de-f8cd-5000-9c63-712cc0f33295",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 4: 塘房",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "塘房",
+        "pinyin": "Tángfáng",
+        "population": 228,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a832a323-3729-5faa-bbea-031eabbf9332",
+      "key": "bijie-gazetteer/p157/guanyinqiao/lijiawan",
+      "entity_id": "50e16349-681e-57c1-b123-a129ea3ad7b2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 5: 李家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "李家湾",
+        "pinyin": "Lǐjiāwān",
+        "population": 345,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e68846ef-c4db-55c3-bb5b-178948fcbad2",
+      "key": "bijie-gazetteer/p157/guanyinqiao/xiongjiazhai",
+      "entity_id": "65cd4f99-fc6b-5a57-91c5-38d29dc85998",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 6: 熊家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "熊家寨",
+        "pinyin": "Xióngjiāzhài",
+        "population": 319,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "9d852c1c-7829-5acb-b54f-c71f31d281a4",
+      "key": "bijie-gazetteer/p157/guanyinqiao/songjiawan",
+      "entity_id": "c21760ed-3581-5e11-85c5-e311e33d4f74",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 7: 宋家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "宋家湾",
+        "pinyin": "Sòngjiāwān",
+        "population": 616,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "80760c1e-799b-5ef5-a671-80809417ade9",
+      "key": "bijie-gazetteer/p157/guanyinqiao/xiaqingkou",
+      "entity_id": "3e3dc5c8-a961-5261-8561-7aa2cc3ec642",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 8: 下箐口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "下箐口",
+        "pinyin": "Xiàqīngkǒu",
+        "population": 186,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "36ad0226-c8c6-5bf3-8ee3-2bc9df019bb4",
+      "key": "bijie-gazetteer/p157/guanyinqiao/hongshuigou",
+      "entity_id": "a2311b4c-53c7-5aa0-b582-5ae540f06056",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 9: 洪水沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "洪水沟",
+        "pinyin": "Hóngshuǐgōu",
+        "population": 66,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "106868a7-4dec-5cc6-bcf7-133c9253e9fd",
+      "key": "bijie-gazetteer/p157/guanyinqiao/qiaobian",
+      "entity_id": "106a1571-8855-5d59-a3b4-80bacb73c238",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 10: 桥边",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "桥边",
+        "pinyin": "Qiáobiān",
+        "population": 100,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公社驻地"
+      }
+    },
+    {
+      "id": "69614536-8765-57dd-ad8d-9349db724813",
+      "key": "bijie-gazetteer/p157/guanyinqiao/zhujiawan",
+      "entity_id": "bab2b2dd-446a-5cfb-9860-19e8bb116a0d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 11: 朱家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "朱家湾",
+        "pinyin": "Zhūjiāwān",
+        "population": 225,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "69f08f19-2e3a-595e-aec6-655191fedda8",
+      "key": "bijie-gazetteer/p157/guanyinqiao/shaojiawan",
+      "entity_id": "a42cc058-c0b1-5d1f-962b-9e72475e2406",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 12: 邵家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "邵家湾",
+        "pinyin": "Shàojiāwān",
+        "population": 151,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ad1f8e67-8cff-5172-b025-945640e86943",
+      "key": "bijie-gazetteer/p157/guanyinqiao/yanjiawa",
+      "entity_id": "16bad0c3-0213-58cb-8a85-161f48dbfa13",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 13: 燕家垇",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "燕家垇",
+        "pinyin": "Yànjiāwà",
+        "population": 300,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.3,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°18′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ac0b43ec-c7cc-55e9-bed4-608042ba19b3",
+      "key": "bijie-gazetteer/p157/guanyinqiao/zhangjiawan",
+      "entity_id": "16da55fb-d36e-5fe8-b071-060ce05f5c67",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 14: 张家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "张家湾",
+        "pinyin": "Zhāngjiāwān",
+        "population": 200,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d5e16185-5e64-54d5-8c8b-e47a526870b1",
+      "key": "bijie-gazetteer/p157/guanyinqiao/guanyinqiao",
+      "entity_id": "6181f4ae-1b8f-5b83-9923-3640f2cde7f6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 15: 观音桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "观音桥",
+        "pinyin": "Guānyīnqiáo",
+        "population": 200,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ea1c6564-3731-5250-86d1-ad8211b236be",
+      "key": "bijie-gazetteer/p157/guanyinqiao/bijie-lightbulb-factory",
+      "entity_id": "67b355ed-1cff-51df-b943-f802c1e2a0fd",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 16: 毕节地区灯泡厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "毕节地区灯泡厂",
+        "pinyin": "Bìjié Dìqū Dēngpàochang",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.316666666666666
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°19′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "厂"
+      }
+    },
+    {
+      "id": "03e20534-1a04-5072-8191-d035f8ac3f16",
+      "key": "bijie-gazetteer/p157/guanyinqiao/power-station",
+      "entity_id": "e9e3587a-b68a-5fa3-a0b7-73633eafa870",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 17: 电站",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "电站",
+        "pinyin": "Diànzhàn",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "站"
+      }
+    },
+    {
+      "id": "8abf0731-99b3-53ea-b5a0-bc03b80cbea0",
+      "key": "bijie-gazetteer/p157/guanyinqiao/guanyin-bridge",
+      "entity_id": "30fc08e3-7ae1-5bd0-8fc7-0bd9b75462ef",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 18: 观音桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "观音桥",
+        "pinyin": "Guānyīn Qiáo",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公路石桥 (11—7)/15"
+      }
+    },
+    {
+      "id": "fdd372b9-f4b1-5964-aeff-926a30578dbc",
+      "key": "bijie-gazetteer/p157/guanyinqiao-river",
+      "entity_id": "6b46710a-c014-52b0-9bcd-88f8ee7b0ed3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 19: 观音桥河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "观音桥河",
+        "pinyin": "Guānyīn Qiáo Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "发源于何官屯，流经弯腰村、螃蟹井、田坝桥，入社境，境内长2公里入德厚公社。"
+      }
+    },
+    {
+      "id": "f5a6ea0e-b817-58a0-ab90-2fdc709c0b70",
+      "key": "bijie-gazetteer/p157/guanyinqiao/leidashan",
+      "entity_id": "0dd00b14-e151-5e92-8ce4-b5c8826c847b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "157",
+      "scan_page": 192,
+      "locator": "Place table, row 20: 雷打山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "雷打山",
+        "pinyin": "Léidǎ Shān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1727.5米"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

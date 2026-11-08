@@ -1,0 +1,1720 @@
+{
+  "entities": [
+    {
+      "id": "13c2b83d-8202-5e17-82ca-39416f692eea",
+      "key": "earth/cn-gz/bijie/haizijie/wugong-spring",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "bc782bd9-eba0-5be5-a1c2-c071598f184d",
+      "key": "earth/cn-gz/bijie/haizijie/longtan-spring",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "19ff9d13-4165-5e27-aa91-644b67a08a31",
+      "key": "earth/cn-gz/bijie/haizijie/daluo-spring",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "bda47ba9-321c-52fc-a8e6-6bf671f7f075",
+      "key": "earth/cn-gz/bijie/haizijie/dashui-spring",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "59d79319-3e95-5646-8719-0c11509de20d",
+      "key": "earth/cn-gz/bijie/haizijie/baimashan",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "6043a042-ec86-56f3-af9c-4ff5fd785469",
+      "key": "earth/cn-gz/bijie/haizijie/baimashan-state-forest",
+      "body": "earth",
+      "kind": "forest"
+    },
+    {
+      "id": "793c5bc1-5ae5-5300-b147-439d6062d5f4",
+      "key": "earth/cn-gz/bijie/haizijie/middle-school",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "ae745cd2-0c56-5a3e-8122-7a2a482309fb",
+      "key": "earth/cn-gz/bijie/haizijie/wujia-dalongmen",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "d3037c7b-a84b-5c84-8c8e-6aabc7362e16",
+      "key": "earth/cn-gz/bijie/haizijie/lanhua-cave",
+      "body": "earth",
+      "kind": "cave"
+    },
+    {
+      "id": "143fc655-2a7d-5f80-97ac-f2badfb5416d",
+      "key": "earth/cn-gz/bijie/haizijie/lishuwan",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "5f93a232-48da-5a97-bf03-4a198ff709d6",
+      "key": "earth/cn-gz/bijie/haizijie/reshuitian",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "1a7128e7-274f-5c49-8b38-1749ea2c0bef",
+      "key": "earth/cn-gz/bijie/guanyinqiao/guanyin-temple",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "b42505f7-2e4f-542f-b821-6b69634bfadb",
+      "key": "earth/cn-gz/bijie/guanyinqiao/tianba-shuiying",
+      "body": "earth",
+      "kind": "historic_site"
+    }
+  ],
+  "records": [
+    {
+      "id": "ba932d97-2571-569e-99f8-4dae64d02bff",
+      "key": "bijie-gazetteer/p149/haizijie-commune/extent",
+      "entity_id": "9712871f-0ecf-5dd4-b7b9-51902df69f46",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, extent",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "海子街公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "位于东经105°22′至105°24′，北纬27°21′至27°23′之间，总面积12.3平方公里，东屏沙邵，南抵烧杠，西南连迎宾，西北接鸭子塘，北枕果乐等公社。"
+      }
+    },
+    {
+      "id": "b2d7e7de-e725-52e4-8917-9e401c9b0375",
+      "key": "bijie-gazetteer/p149/haizijie-commune/population",
+      "entity_id": "9712871f-0ecf-5dd4-b7b9-51902df69f46",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, population",
+      "verbatim_quote": "总人口2107户，10852人，杂居着汉、苗、彝等种民族，其中苗族113人、彝族31人。其余多为汉族，其中：有非农业人口560人。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "海子街公社",
+        "pinyin": null,
+        "population": 10852,
+        "households": 2107,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "彝"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d50fded7-a2c0-5227-8dbb-417ead7e6133",
+      "key": "bijie-gazetteer/p149/haizijie-commune/subdivisions",
+      "entity_id": "9712871f-0ecf-5dd4-b7b9-51902df69f46",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, subdivisions",
+      "verbatim_quote": "辖海子街、周家桥、石牛口、前所、尚家寨、彭家寨、白杨林、小箐沟、大湾，共九个大队，55个生产队，20个自然村。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "海子街公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3e21aeef-6bf8-5c9b-9860-e1cbdcbe8478",
+      "key": "bijie-gazetteer/p149/haizijie-district/establishment",
+      "entity_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "1950年划为六区，1952年土改完成后命名为海子街区，辖二十二个公社，",
+      "checked": true,
+      "source_date": {
+        "text": "1950年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "六区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "3598db1c-f453-500e-b412-21cd4953cc68",
+        "rank": "district",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e3090bb5-990a-597d-80f3-6e71126b0b5f",
+      "key": "bijie-gazetteer/p149/haizijie-district/renaming",
+      "entity_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, renaming",
+      "verbatim_quote": "1952年土改完成后命名为海子街区",
+      "checked": true,
+      "source_date": {
+        "text": "1952年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "海子街区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "六区",
+            "source_date": {
+              "text": "1950年",
+              "convention": "Gregorian year",
+              "conversion_basis": null
+            },
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "b5fe4032-d0df-5c55-87e9-c0141cf62731",
+      "key": "bijie-gazetteer/p149/haizijie-commune/establishment",
+      "entity_id": "9712871f-0ecf-5dd4-b7b9-51902df69f46",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "1958年成立人民公社，以驻地命名为海子街公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "海子街公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "eb8f2cbf-a1bc-5862-81da-d83c49cf7ca7",
+      "key": "bijie-gazetteer/p149/haizijie/haizijie/naming",
+      "entity_id": "28b384a6-3c5e-5e42-96c6-9039ccbba5e1",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, naming",
+      "verbatim_quote": "海口的东北坡坪地，清代形成集市，得名海子街，设铺又名海子铺。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "海子街",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "海子铺",
+            "source_date": {
+              "text": "清代",
+              "convention": "Chinese historical period",
+              "conversion_basis": null
+            },
+            "validity": null
+          }
+        ],
+        "note": null,
+        "extent": "在毕节县城东北十三公里，川滇东路东侧一公里处。"
+      }
+    },
+    {
+      "id": "973b5727-62ab-5ccc-bc2b-1e46bad18ada",
+      "key": "bijie-gazetteer/p149/haizijie/haizijie/transport-office",
+      "entity_id": "28b384a6-3c5e-5e42-96c6-9039ccbba5e1",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, transport office",
+      "verbatim_quote": "公元1939年曾在此设川滇东路运输局。",
+      "checked": true,
+      "source_date": {
+        "text": "1939年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "海子街",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6eb23ba6-968b-535d-85ed-67606543e8b2",
+      "key": "bijie-gazetteer/p149/haizijie-commune/northern-waterway",
+      "entity_id": "9712871f-0ecf-5dd4-b7b9-51902df69f46",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, northern waterway",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "海子街公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview does not name this stream.",
+        "extent": "北部有溪流源出鸭子塘，流入小箐沟、进曹家塝，到周家桥东南入洞。"
+      }
+    },
+    {
+      "id": "b50d3984-2570-5af0-bc3f-4038cc37d00d",
+      "key": "bijie-gazetteer/p149/haizijie/wugong-spring",
+      "entity_id": "13c2b83d-8202-5e17-82ca-39416f692eea",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, 蜈蚣井",
+      "verbatim_quote": "在海口村附近有四个天然涌泉，水质清彻，名曰蜈蚣井、龙潭井、大锣井、大水井。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "蜈蚣井",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在海口村附近。"
+      }
+    },
+    {
+      "id": "05711421-987d-5427-8a9e-b46654891a3a",
+      "key": "bijie-gazetteer/p149/haizijie/longtan-spring",
+      "entity_id": "bc782bd9-eba0-5be5-a1c2-c071598f184d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, 龙潭井",
+      "verbatim_quote": "在海口村附近有四个天然涌泉，水质清彻，名曰蜈蚣井、龙潭井、大锣井、大水井。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "龙潭井",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在海口村附近。"
+      }
+    },
+    {
+      "id": "e3db8d33-bca9-559b-b023-7dbb829cc6a3",
+      "key": "bijie-gazetteer/p149/haizijie/daluo-spring",
+      "entity_id": "19ff9d13-4165-5e27-aa91-644b67a08a31",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, 大锣井",
+      "verbatim_quote": "在海口村附近有四个天然涌泉，水质清彻，名曰蜈蚣井、龙潭井、大锣井、大水井。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大锣井",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在海口村附近。"
+      }
+    },
+    {
+      "id": "6a12984d-66ae-510c-a248-81c4ccc3bef1",
+      "key": "bijie-gazetteer/p149/haizijie/dashui-spring",
+      "entity_id": "bda47ba9-321c-52fc-a8e6-6bf671f7f075",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, 大水井",
+      "verbatim_quote": "在海口村附近有四个天然涌泉，水质清彻，名曰蜈蚣井、龙潭井、大锣井、大水井。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大水井",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在海口村附近。"
+      }
+    },
+    {
+      "id": "f90b211f-a725-50f7-83e6-29bc6fb5aa85",
+      "key": "bijie-gazetteer/p149/haizijie/baimashan",
+      "entity_id": "59d79319-3e95-5646-8719-0c11509de20d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, 白马山",
+      "verbatim_quote": "于1958年在白马山建立国营林场一个。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "白马山",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "fd716e93-f04c-5f33-b6df-aa4faeb2b1f2",
+      "key": "bijie-gazetteer/p149/haizijie/baimashan-state-forest",
+      "entity_id": "6043a042-ec86-56f3-af9c-4ff5fd785469",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "149",
+      "scan_page": 184,
+      "locator": "Overview, 白马山国营林场",
+      "verbatim_quote": "于1958年在白马山建立国营林场一个。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "白马山国营林场",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The label combines the stated mountain and facility type."
+      }
+    },
+    {
+      "id": "ac29794e-90a5-519a-a49d-b4c3060da765",
+      "key": "bijie-gazetteer/p150/haizijie/qiansuo-river",
+      "entity_id": "64faa8ab-1d6c-5f58-b203-1af9dde61053",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "150",
+      "scan_page": 185,
+      "locator": "Overview, 前所河",
+      "verbatim_quote": "一源于海口，二源于尚家寨，三源于滥坝，汇流于前所成河，名前所河，下流入烧杠公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "前所河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "一源于海口，二源于尚家寨，三源于滥坝，汇流于前所，下流入烧杠公社。"
+      }
+    },
+    {
+      "id": "4287a76a-1563-5623-9528-c5a68b6afea5",
+      "key": "bijie-gazetteer/p150/haizijie/huangjiachong-reservoir",
+      "entity_id": "ce89c70b-0896-583b-a467-3e3923612a2b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "150",
+      "scan_page": 185,
+      "locator": "Overview, 黄家冲水库",
+      "verbatim_quote": "1958年在黄家冲修土筑水库一个，库容11万立方米，有效灌溉面积500亩。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "黄家冲水库",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "27a82126-3c3a-5945-952d-443f35372676",
+      "key": "bijie-gazetteer/p150/haizijie/middle-school",
+      "entity_id": "793c5bc1-5ae5-5300-b147-439d6062d5f4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "150",
+      "scan_page": 185,
+      "locator": "Overview, 海子街中学",
+      "verbatim_quote": "1971年始建海子街中学",
+      "checked": true,
+      "source_date": {
+        "text": "1971年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "海子街中学",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bcda2916-922a-563e-a849-031d236aa38c",
+      "key": "bijie-gazetteer/p150/haizijie/wujia-dalongmen",
+      "entity_id": "ae745cd2-0c56-5a3e-8122-7a2a482309fb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "150",
+      "scan_page": 185,
+      "locator": "Overview, 吴家大龙门",
+      "verbatim_quote": "长征时1936年路过此间，贺龙元帅的指挥部驻前所吴家大龙门",
+      "checked": true,
+      "source_date": {
+        "text": "1936年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "吴家大龙门",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "91e08091-19f9-535a-b1c0-a71c443612e1",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d8e7f49d-da17-55df-938d-7a6b9dd32338",
+      "key": "bijie-gazetteer/p150/haizijie/lanhua-cave",
+      "entity_id": "d3037c7b-a84b-5c84-8c8e-6aabc7362e16",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "150",
+      "scan_page": 185,
+      "locator": "Overview, 蘭花洞",
+      "verbatim_quote": "有古洞穴，名蘭花洞，在海子街的东北。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "蘭花洞",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在海子街的东北。"
+      }
+    },
+    {
+      "id": "126f1e29-750d-50f9-90c5-7cf36bdcfc83",
+      "key": "bijie-gazetteer/p150/haizijie/lishuwan",
+      "entity_id": "143fc655-2a7d-5f80-97ac-f2badfb5416d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "150",
+      "scan_page": 185,
+      "locator": "Overview, 梨树湾",
+      "verbatim_quote": "有温泉：《县志》云：“在城东海子铺（今海子街）梨树湾，冬夏皆热”，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "梨树湾",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f0010d8a-4006-5dba-8526-d36b0507855c",
+      "key": "bijie-gazetteer/p150/haizijie/reshuitian",
+      "entity_id": "5f93a232-48da-5a97-bf03-4a198ff709d6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "150",
+      "scan_page": 185,
+      "locator": "Overview, 热水田",
+      "verbatim_quote": "后人开为田，名热水田，温泉涌出处不生五谷，修川滇东路时，路面将泉水填塞",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "热水田",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "城东海子铺（今海子街）梨树湾。"
+      }
+    },
+    {
+      "id": "4fe4ced1-4247-5ea4-aa28-c438e84c4d64",
+      "key": "bijie-gazetteer/p153/yingbin-commune/extent",
+      "entity_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "153",
+      "scan_page": 188,
+      "locator": "Overview, extent",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "迎宾公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在毕节县城东北面，相距八公里，位于东经105°21′至105°22′，北纬27°21′至27°22′之间，总面积5.9平方公里，东与海子街，西南频烧杠、观音桥，西北连田坝桥，北靠鸭子塘等公社相接壤。"
+      }
+    },
+    {
+      "id": "10d249bc-9d96-51a3-9890-038e7dee0521",
+      "key": "bijie-gazetteer/p153/yingbin-commune/population",
+      "entity_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "153",
+      "scan_page": 188,
+      "locator": "Overview, population",
+      "verbatim_quote": "公社辖：迎宾、长征两个大队，16个生产队，8个自然村，居住着南京族和汉族，总人口，642户，3135人，其中：其他民族12人，其余为汉族。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "迎宾公社",
+        "pinyin": null,
+        "population": 3135,
+        "households": 642,
+        "ethnicities": [
+          "南京",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3f5f549e-9c81-5bb4-8102-b6a171625b52",
+      "key": "bijie-gazetteer/p153/yingbin-commune/relief",
+      "entity_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "153",
+      "scan_page": 188,
+      "locator": "Overview, relief",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "迎宾公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview prints the lowest elevation as 400 metres.",
+        "extent": "地势南、北皆为大山，北面最高海拔1755米，南面有青龙山，中部较平缓，西南的台烧坝较低，最低海拔400米，川滇东路横贯其间。"
+      }
+    },
+    {
+      "id": "32fb70d9-9593-576a-ad99-ffbb497a5691",
+      "key": "bijie-gazetteer/p153/yingbin-commune/local-name-history",
+      "entity_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "153",
+      "scan_page": 188,
+      "locator": "Overview, local name history",
+      "verbatim_quote": "明代该地曾炼制毛铁，故土名“毛鸡厂”。清乾隆时设铺名迎宾铺。成一条小街，群众仍叫“毛鸡厂”。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "迎宾公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3d113979-e9a5-58cd-804e-9d51bb87781f",
+      "key": "bijie-gazetteer/p153/yingbin-commune/predecessors",
+      "entity_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "153",
+      "scan_page": 188,
+      "locator": "Overview, predecessors",
+      "verbatim_quote": "解放后50年建村，成立农协会时，以村名“毛鸡”不雅，遂改名“福集”村，土改后54年建乡，隶海子街区，名福集乡，办初级社，56年入高级社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "迎宾公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "55ff25bd-65f3-5f8e-9b62-2171dec23996",
+      "key": "bijie-gazetteer/p153/yingbin-commune/establishment",
+      "entity_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "153",
+      "scan_page": 188,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "1958年成立福集公社，1981年地名普查复名为迎宾公社，公社驻地青岗林村。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "福集公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "feff481b-604a-57f1-982c-758f36df7900",
+      "key": "bijie-gazetteer/p153/yingbin-commune/renaming",
+      "entity_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "153",
+      "scan_page": 188,
+      "locator": "Overview, renaming",
+      "verbatim_quote": "1981年地名普查复名为迎宾公社，公社驻地青岗林村。",
+      "checked": true,
+      "source_date": {
+        "text": "1981年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "迎宾公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "8a3d39ad-94b9-542e-85e4-ede39299dfb0",
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "福集公社",
+            "source_date": {
+              "text": "1958年",
+              "convention": "Gregorian year",
+              "conversion_basis": null
+            },
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "4fd3ea7a-79cf-5e6f-9848-d629b7ecf833",
+      "key": "bijie-gazetteer/p153/yingbin/qingganglin/seat",
+      "entity_id": "8a3d39ad-94b9-542e-85e4-ede39299dfb0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "153",
+      "scan_page": 188,
+      "locator": "Overview, seat",
+      "verbatim_quote": "公社驻地青岗林村。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "青岗林",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "824a7c75-6d14-592d-b22a-3654eaf8a0ce",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "02ddc778-96ce-5a0c-aef4-1db5d80b15d4",
+      "key": "bijie-gazetteer/p156/guanyinqiao-commune/extent",
+      "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "156",
+      "scan_page": 191,
+      "locator": "Overview, extent",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "观音桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在毕节县城东北，相距五公里，川滇东路横穿东西，田坝桥河纵贯社境，北入南流，中部与公路交叉，成十字形。社境位于东经105°19′至105°20′，北纬27°20′至27°21′之间，总面积6.9平方公里。东邻迎宾，南频德厚，西接五里坪，北与田坝桥等公社接壤。"
+      }
+    },
+    {
+      "id": "e50d4b67-6438-585b-a4fc-9f28c49b67cf",
+      "key": "bijie-gazetteer/p156/guanyinqiao-commune/population",
+      "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "156",
+      "scan_page": 191,
+      "locator": "Overview, population",
+      "verbatim_quote": "直辖40个生产队，14个自然村，汉、彝、苗、蔡、南京等民族杂居。总人口：786户，3931人。其中：苗族152人，彝族42人，余为汉族。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "观音桥公社",
+        "pinyin": null,
+        "population": 3931,
+        "households": 786,
+        "ethnicities": [
+          "汉",
+          "彝",
+          "苗",
+          "蔡",
+          "南京"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c458fb19-ca78-55b0-8800-1de39e3597b4",
+      "key": "bijie-gazetteer/p156/guanyinqiao-commune/relief",
+      "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "156",
+      "scan_page": 191,
+      "locator": "Overview, relief",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "观音桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "地势北面最高海拔1762.3米，南面较低处下箐口，海拔1440米，中部成带形槽地。"
+      }
+    },
+    {
+      "id": "0f5e5bbb-d6ac-5e71-908e-f64ebb858d70",
+      "key": "bijie-gazetteer/p156/guanyinqiao-commune/predecessors",
+      "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "156",
+      "scan_page": 191,
+      "locator": "Overview, predecessors",
+      "verbatim_quote": "民国为八寨乡六保地，解放后设村，土改后建乡名观音乡，办初级社，56年进入高级社，并入田坝桥，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "观音桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "259cf5b0-d69d-5cd5-9cfd-119c446fc885",
+      "key": "bijie-gazetteer/p156/guanyinqiao-commune/establishment",
+      "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "156",
+      "scan_page": 191,
+      "locator": "Overview, establishment",
+      "verbatim_quote": "1958年成立人民公社时又分划为观音桥公社",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "观音桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "82be1daf-8da6-5e91-8abc-6b6724c6951d",
+      "key": "bijie-gazetteer/p156/guanyinqiao-commune/hongwei-renaming",
+      "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "156",
+      "scan_page": 191,
+      "locator": "Overview, hongwei renaming",
+      "verbatim_quote": "文革期间任意改名为红卫公社",
+      "checked": true,
+      "source_date": {
+        "text": "文革期间",
+        "convention": "Chinese historical period",
+        "conversion_basis": "ccp-history-resolution-1981, section 19 (https://www.12371.cn/2021/11/09/ARTI1636454249781129.shtml), dates the Cultural Revolution to May 1966 through October 1976. Retain that entire period as the renaming bounds; the midpoint is a representative value."
+      },
+      "observation": {
+        "name": "红卫公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "cd25c661-62bb-5d42-a3ee-ee2495aafb69",
+      "key": "bijie-gazetteer/p156/guanyinqiao-commune/restoration",
+      "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "156",
+      "scan_page": 191,
+      "locator": "Overview, restoration",
+      "verbatim_quote": "81年经地名普查后，根据历史沿称，复名观音桥公社。",
+      "checked": true,
+      "source_date": {
+        "text": "81年",
+        "convention": "Gregorian year",
+        "conversion_basis": "The overview places this restoration after the Cultural Revolution; interpret the abbreviated year as 1981."
+      },
+      "observation": {
+        "name": "观音桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "红卫公社",
+            "source_date": {
+              "text": "文革期间",
+              "convention": "Chinese historical period",
+              "conversion_basis": "ccp-history-resolution-1981, section 19 (https://www.12371.cn/2021/11/09/ARTI1636454249781129.shtml), dates the Cultural Revolution to May 1966 through October 1976. Retain that entire period as the renaming bounds; the midpoint is a representative value."
+            },
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "216fbe54-38af-5207-add6-dc9c3f03ab74",
+      "key": "bijie-gazetteer/p156/guanyinqiao-river",
+      "entity_id": "6b46710a-c014-52b0-9bcd-88f8ee7b0ed3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "156",
+      "scan_page": 191,
+      "locator": "Overview, 田坝桥河",
+      "verbatim_quote": "田坝桥河纵贯社境，北入南流，中部与公路交叉，成十字形，河流于明代得名威镇河",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "田坝桥河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "威镇河",
+            "source_date": {
+              "text": "明代",
+              "convention": "Chinese historical period",
+              "conversion_basis": null
+            },
+            "validity": null
+          }
+        ],
+        "note": null,
+        "extent": "纵贯社境，北入南流。"
+      }
+    },
+    {
+      "id": "0175761d-ec16-553a-81dc-ecd1a1a9b92b",
+      "key": "bijie-gazetteer/p156/guanyinqiao/guanyin-bridge",
+      "entity_id": "30fc08e3-7ae1-5bd0-8fc7-0bd9b75462ef",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "156",
+      "scan_page": 191,
+      "locator": "Overview, 观音桥",
+      "verbatim_quote": "建桥名威镇桥，上建庙祀关帝，清咸、同年间毁，后于桥西建观音庙，故得名观音桥。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "观音桥",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "威镇桥",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "4afbe1a4-9efb-562e-abfa-d438b9a23937",
+      "key": "bijie-gazetteer/p156/guanyinqiao/guanyin-temple",
+      "entity_id": "1a7128e7-274f-5c49-8b38-1749ea2c0bef",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "156",
+      "scan_page": 191,
+      "locator": "Overview, 观音庙",
+      "verbatim_quote": "桥西山麓的观音庙已改建县办完全小学，附设初中班",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "观音庙",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "桥西山麓。"
+      }
+    },
+    {
+      "id": "e5686e4e-e44a-50e2-8848-44842444eeb5",
+      "key": "bijie-gazetteer/p156/guanyinqiao/tianba-shuiying",
+      "entity_id": "b42505f7-2e4f-542f-b821-6b69634bfadb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "156",
+      "scan_page": 191,
+      "locator": "Overview, 田坝水营",
+      "verbatim_quote": "《县志》云：清为赵吉伍辖地，“曾设营于观音桥田坝中名田坝水营”。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "田坝水营",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "63a328a7-6dfd-5284-8a35-254dc1e27251",
+      "key": "bijie-gazetteer/p156/guanyinqiao/bijie-lightbulb-factory",
+      "entity_id": "67b355ed-1cff-51df-b943-f802c1e2a0fd",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "156",
+      "scan_page": 191,
+      "locator": "Overview, 毕节灯泡厂",
+      "verbatim_quote": "又地区设有毕节灯泡厂于塘房村的西侧有职工百余人。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "毕节灯泡厂",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "塘房村的西侧。"
+      }
+    },
+    {
+      "id": "4f882767-1526-5eac-b7bf-5a8bf91706f0",
+      "key": "bijie-gazetteer/p156/guanyinqiao/power-station",
+      "entity_id": "e9e3587a-b68a-5fa3-a0b7-73633eafa870",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "156",
+      "scan_page": 191,
+      "locator": "Overview, 电站",
+      "verbatim_quote": "公社在桥附近建小水电站一个，装机20瓩，供应照明和农副业加工用电。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "电站",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "桥附近。"
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "54db3384-0e95-5024-aa72-b1c7ddd93f71",
+      "key": "editorial/bijie/haizijie-district/establishment",
+      "entity_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+      "basis": [
+        "3e21aeef-6bf8-5c9b-9860-e1cbdcbe8478"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1577880000000",
+            "nominal": "-1562112000001",
+            "latest": "-1546344000001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "77ab2d97-a276-58c6-849f-d1c5cb127439",
+      "key": "editorial/bijie/haizijie-district/numbered-name",
+      "entity_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+      "basis": [
+        "3e21aeef-6bf8-5c9b-9860-e1cbdcbe8478",
+        "e3090bb5-990a-597d-80f3-6e71126b0b5f"
+      ],
+      "brief": "Use the stated name between the cited changes, retaining their date bounds.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1577880000000",
+              "nominal": "-1562112000001",
+              "latest": "-1546344000001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-1514808000000",
+              "nominal": "-1498996800001",
+              "latest": "-1483185600001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "六区",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ae1f5f32-61d9-5523-aaf1-a15a2ad070e9",
+      "key": "editorial/bijie/haizijie-district/name",
+      "entity_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+      "basis": [
+        "e3090bb5-990a-597d-80f3-6e71126b0b5f"
+      ],
+      "brief": "Use the stated name between the cited changes, retaining their date bounds.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1514808000000",
+              "nominal": "-1498996800001",
+              "latest": "-1483185600001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "海子街区",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "b0b1a4e3-9ffc-5dc8-844f-8b79d0d7fb5e",
+      "key": "editorial/bijie/haizijie-commune/establishment",
+      "entity_id": "9712871f-0ecf-5dd4-b7b9-51902df69f46",
+      "basis": [
+        "b5fe4032-d0df-5c55-87e9-c0141cf62731"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "995623b0-a2be-5fa0-8ccd-050bf770d354",
+      "key": "editorial/bijie/haizijie-commune/name",
+      "entity_id": "9712871f-0ecf-5dd4-b7b9-51902df69f46",
+      "basis": [
+        "b5fe4032-d0df-5c55-87e9-c0141cf62731"
+      ],
+      "brief": "Use the stated name between the cited changes, retaining their date bounds.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "海子街公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "2f7e3902-a794-56b4-a743-2a999d0dbb8e",
+      "key": "editorial/bijie/haizijie/baimashan-state-forest/establishment",
+      "entity_id": "6043a042-ec86-56f3-af9c-4ff5fd785469",
+      "basis": [
+        "fd716e93-f04c-5f33-b6df-aa4faeb2b1f2"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "91c8a343-550e-511c-921b-435121f54f8e",
+      "key": "editorial/bijie/haizijie/huangjiachong-reservoir/establishment",
+      "entity_id": "ce89c70b-0896-583b-a467-3e3923612a2b",
+      "basis": [
+        "4287a76a-1563-5623-9528-c5a68b6afea5"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "ad9a29f2-724f-5ed8-892b-7160c9ceebaa",
+      "key": "editorial/bijie/haizijie/middle-school/establishment",
+      "entity_id": "793c5bc1-5ae5-5300-b147-439d6062d5f4",
+      "basis": [
+        "27a82126-3c3a-5945-952d-443f35372676"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-915192000000",
+            "nominal": "-899424000001",
+            "latest": "-883656000001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "34802ff1-d6a4-52a2-9ab1-99cd68e60434",
+      "key": "editorial/bijie/yingbin-commune/establishment",
+      "entity_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+      "basis": [
+        "55ff25bd-65f3-5f8e-9b62-2171dec23996"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "fcaff8eb-202a-5b70-b787-b15643c1b2d9",
+      "key": "editorial/bijie/yingbin-commune/fuji-name",
+      "entity_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+      "basis": [
+        "55ff25bd-65f3-5f8e-9b62-2171dec23996",
+        "feff481b-604a-57f1-982c-758f36df7900"
+      ],
+      "brief": "Use the stated name between the cited changes, retaining their date bounds.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "福集公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "91a7525b-04a7-5768-9c6f-6a443d5a2865",
+      "key": "editorial/bijie/yingbin-commune/name",
+      "entity_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+      "basis": [
+        "feff481b-604a-57f1-982c-758f36df7900"
+      ],
+      "brief": "Use the stated name between the cited changes, retaining their date bounds.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "迎宾公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "faa0c66b-d498-5e86-a8c6-e4851f16f31b",
+      "key": "editorial/bijie/guanyinqiao-commune/establishment",
+      "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+      "basis": [
+        "259cf5b0-d69d-5cd5-9cfd-119c446fc885"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "38d1f7a4-a02c-59ad-8afa-736cd62ac6f1",
+      "key": "editorial/bijie/guanyinqiao-commune/initial-name",
+      "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+      "basis": [
+        "259cf5b0-d69d-5cd5-9cfd-119c446fc885",
+        "82be1daf-8da6-5e91-8abc-6b6724c6951d"
+      ],
+      "brief": "ccp-history-resolution-1981, section 19 (https://www.12371.cn/2021/11/09/ARTI1636454249781129.shtml), dates the Cultural Revolution to May 1966 through October 1976. Retain that entire period as the renaming bounds; the midpoint is a representative value.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-1062590400000",
+              "nominal": "-896832000001",
+              "latest": "-731073600001",
+              "precision": "decade"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "观音桥公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "b9bb50d2-509b-58c5-96e5-ed064e24e210",
+      "key": "editorial/bijie/guanyinqiao-commune/hongwei-name",
+      "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+      "basis": [
+        "82be1daf-8da6-5e91-8abc-6b6724c6951d",
+        "cd25c661-62bb-5d42-a3ee-ee2495aafb69"
+      ],
+      "brief": "ccp-history-resolution-1981, section 19 (https://www.12371.cn/2021/11/09/ARTI1636454249781129.shtml), dates the Cultural Revolution to May 1966 through October 1976. Retain that entire period as the renaming bounds; the midpoint is a representative value.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1062590400000",
+              "nominal": "-896832000001",
+              "latest": "-731073600001",
+              "precision": "decade"
+            },
+            "end": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "红卫公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "7957eb44-dd23-5570-8d5c-ee08ca747264",
+      "key": "editorial/bijie/guanyinqiao-commune/restored-name",
+      "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+      "basis": [
+        "cd25c661-62bb-5d42-a3ee-ee2495aafb69"
+      ],
+      "brief": "Use the stated name between the cited changes, retaining their date bounds.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "观音桥公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

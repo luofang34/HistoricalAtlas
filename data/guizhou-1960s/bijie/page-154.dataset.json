@@ -1,0 +1,542 @@
+{
+  "entities": [
+    {
+      "id": "c38b7ba0-c1e5-5492-adec-694ad7718a4f",
+      "key": "earth/cn-gz/bijie/yingbin/yingbin-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "82077a3f-f615-5648-a86d-8aec9577c059",
+      "key": "earth/cn-gz/bijie/yingbin/fuji",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "66092f97-a03a-5032-ac1c-f9a98b3fa069",
+      "key": "earth/cn-gz/bijie/yingbin/zuantianpo",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "824a7c75-6d14-592d-b22a-3654eaf8a0ce",
+      "key": "earth/cn-gz/bijie/yingbin/changzheng-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "8a3d39ad-94b9-542e-85e4-ede39299dfb0",
+      "key": "earth/cn-gz/bijie/yingbin/qingganglin",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "9348b979-bfa3-5901-8cbc-3ef3ddbaf4a2",
+      "key": "earth/cn-gz/bijie/yingbin/longtanwan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "896fa9a0-0697-56c6-8c0f-e70ac80de3d5",
+      "key": "earth/cn-gz/bijie/yingbin/maliupo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "aae225d7-fe08-56d8-80d7-90b2e4f037de",
+      "key": "earth/cn-gz/bijie/yingbin/xiaoyantang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "a7f22708-c77b-5162-bcc9-b38b2841722c",
+      "key": "earth/cn-gz/bijie/yingbin/zhenwushan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "80c95b4b-dafa-5493-9632-c7e5e05c6138",
+      "key": "earth/cn-gz/bijie/yingbin/baijiafen",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "70451853-1632-50ee-914a-4ee60bdce910",
+      "key": "earth/cn-gz/bijie/yingbin/xianshanpo",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "4a371f53-e564-5e86-a279-d7569a3f6db3",
+      "key": "earth/cn-gz/bijie/yingbin/qinglongshan",
+      "body": "earth",
+      "kind": "mountain"
+    }
+  ],
+  "records": [
+    {
+      "id": "eabcc8a6-e312-5c7e-8bdd-3531e8c72f9c",
+      "key": "bijie-gazetteer/p154/yingbin-commune",
+      "entity_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "154",
+      "scan_page": 189,
+      "locator": "Place table, row 1: 迎宾公社",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "迎宾公社",
+        "pinyin": "Yīnbīn Gōngshè",
+        "population": 3079,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "南京"
+        ],
+        "parent_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+        "rank": "commune",
+        "seat_id": "8a3d39ad-94b9-542e-85e4-ede39299dfb0",
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.35
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°21′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "89530dba-903d-5227-ba42-c1e61c5f9c58",
+      "key": "bijie-gazetteer/p154/yingbin/yingbin-brigade",
+      "entity_id": "c38b7ba0-c1e5-5492-adec-694ad7718a4f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "154",
+      "scan_page": 189,
+      "locator": "Place table, row 2: 迎宾大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "迎宾大队",
+        "pinyin": "Yīnbīu Dàduì",
+        "population": 996,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+        "rank": "brigade",
+        "seat_id": "82077a3f-f615-5648-a86d-8aec9577c059",
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.35
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°21′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a11858a9-26a6-5ce6-9673-6a2ba5b2affa",
+      "key": "bijie-gazetteer/p154/yingbin/fuji",
+      "entity_id": "82077a3f-f615-5648-a86d-8aec9577c059",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "154",
+      "scan_page": 189,
+      "locator": "Place table, row 3: 福集",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "福集",
+        "pinyin": "Fújí",
+        "population": 996,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c38b7ba0-c1e5-5492-adec-694ad7718a4f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.35
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°21′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "71838c0f-fef2-55c4-8209-5f1661bfb717",
+      "key": "bijie-gazetteer/p154/yingbin/zuantianpo",
+      "entity_id": "66092f97-a03a-5032-ac1c-f9a98b3fa069",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "154",
+      "scan_page": 189,
+      "locator": "Place table, row 4: 钻天坡",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "钻天坡",
+        "pinyin": "Zuāntiānpō",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "c38b7ba0-c1e5-5492-adec-694ad7718a4f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.35
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°21′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e3808129-4703-5123-836a-e30d15791546",
+      "key": "bijie-gazetteer/p154/yingbin/changzheng-brigade",
+      "entity_id": "824a7c75-6d14-592d-b22a-3654eaf8a0ce",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "154",
+      "scan_page": 189,
+      "locator": "Place table, row 5: 长征大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "长征大队",
+        "pinyin": "Chángzhēng Dàduì",
+        "population": 2083,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "南京"
+        ],
+        "parent_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+        "rank": "brigade",
+        "seat_id": "8a3d39ad-94b9-542e-85e4-ede39299dfb0",
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.35
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°21′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "0bb1caca-1fd0-5116-b25d-a33a178f4e61",
+      "key": "bijie-gazetteer/p154/yingbin/qingganglin",
+      "entity_id": "8a3d39ad-94b9-542e-85e4-ede39299dfb0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "154",
+      "scan_page": 189,
+      "locator": "Place table, row 6: 青杠林",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "青杠林",
+        "pinyin": "Qīnggānglín",
+        "population": 775,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "824a7c75-6d14-592d-b22a-3654eaf8a0ce",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.35
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°21′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "公社、大队驻地"
+      }
+    },
+    {
+      "id": "187c947c-8258-51eb-b2ff-76a5007ac791",
+      "key": "bijie-gazetteer/p154/yingbin/longtanwan",
+      "entity_id": "9348b979-bfa3-5901-8cbc-3ef3ddbaf4a2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "154",
+      "scan_page": 189,
+      "locator": "Place table, row 7: 龙潭湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "龙潭湾",
+        "pinyin": "Lóngtánwān",
+        "population": 443,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "824a7c75-6d14-592d-b22a-3654eaf8a0ce",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.35
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°21′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "26ae1018-7235-5202-bdaf-50943b71f0d6",
+      "key": "bijie-gazetteer/p154/yingbin/maliupo",
+      "entity_id": "896fa9a0-0697-56c6-8c0f-e70ac80de3d5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "154",
+      "scan_page": 189,
+      "locator": "Place table, row 8: 麻柳坡",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "麻柳坡",
+        "pinyin": "Maliupō",
+        "population": 455,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "824a7c75-6d14-592d-b22a-3654eaf8a0ce",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2ee83a2d-4004-54f2-af6c-0cca7c312cd5",
+      "key": "bijie-gazetteer/p154/yingbin/xiaoyantang",
+      "entity_id": "aae225d7-fe08-56d8-80d7-90b2e4f037de",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "154",
+      "scan_page": 189,
+      "locator": "Place table, row 9: 小堰塘",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小堰塘",
+        "pinyin": "Xiǎoyàntáng",
+        "population": 193,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "824a7c75-6d14-592d-b22a-3654eaf8a0ce",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.35
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°21′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5cc40d81-b875-51db-b8e8-571fdfeb4fca",
+      "key": "bijie-gazetteer/p154/yingbin/zhenwushan",
+      "entity_id": "a7f22708-c77b-5162-bcc9-b38b2841722c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "154",
+      "scan_page": 189,
+      "locator": "Place table, row 10: 真武山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "真武山",
+        "pinyin": "Zhēnwushān",
+        "population": 217,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "824a7c75-6d14-592d-b22a-3654eaf8a0ce",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "dc971ad6-7e06-5c6c-a9c1-ee6f5905405b",
+      "key": "bijie-gazetteer/p154/yingbin/baijiafen",
+      "entity_id": "80c95b4b-dafa-5493-9632-c7e5e05c6138",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "154",
+      "scan_page": 189,
+      "locator": "Place table, row 11: 百家坟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "百家坟",
+        "pinyin": "Bǎijiāfén",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "824a7c75-6d14-592d-b22a-3654eaf8a0ce",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.35
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°21′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村，人口并入真武山"
+      }
+    },
+    {
+      "id": "11a268fe-5017-5dcb-a318-84607495a6dc",
+      "key": "bijie-gazetteer/p154/yingbin/xianshanpo",
+      "entity_id": "70451853-1632-50ee-914a-4ee60bdce910",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "154",
+      "scan_page": 189,
+      "locator": "Place table, row 12: 献山坡",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "献山坡",
+        "pinyin": "Xiànshānpō",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1765.0米"
+      }
+    },
+    {
+      "id": "5b6dbab4-36e7-5029-a3ab-ae1fb1c570a4",
+      "key": "bijie-gazetteer/p154/yingbin/qinglongshan",
+      "entity_id": "4a371f53-e564-5e86-a279-d7569a3f6db3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "154",
+      "scan_page": 189,
+      "locator": "Place table, row 13: 青龙山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "青龙山",
+        "pinyin": "Qīnglóng Shān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "429a8238-4c50-5d24-b7b0-e9ceecde6e25",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.333333333333332
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°20′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1690.0米"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}
