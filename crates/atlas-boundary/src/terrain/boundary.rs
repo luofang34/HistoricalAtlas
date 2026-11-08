@@ -23,6 +23,9 @@ pub struct DerivedBoundary {
     pub slope_weight: f64,
     /// Publication-relative model document containing all inputs and exclusions.
     pub model: String,
+    /// Area and adjacency comparisons against checked descriptions of this unit.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub comparisons: Vec<super::BoundaryComparison>,
 }
 
 impl DerivedBoundary {
@@ -77,6 +80,7 @@ impl DerivedBoundary {
             ));
         }
         let geometry = crate::polygon::resolve(&self.region.vertices, &self.region.polygons)?;
+        super::review::validate(self, data, record.entity_id, &geometry)?;
         let polygons: Vec<_> = geometry
             .0
             .iter()

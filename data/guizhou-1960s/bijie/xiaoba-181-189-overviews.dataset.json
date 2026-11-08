@@ -681,7 +681,32 @@
         "coordinate": null,
         "former_names": [],
         "note": null,
-        "extent": "东经105°28′至105°29′，北纬27°19′至27°20′；总面积9.5平方公里；南接大方县凉水，东邻小坝，西接汉屯、中屯，北接刘华。"
+        "extent": "东经105°28′至105°29′，北纬27°19′至27°20′；总面积9.5平方公里；南接大方县凉水，东邻小坝，西接汉屯、中屯，北接刘华。",
+        "territory": {
+          "area_square_km": 9.5,
+          "neighbors": [
+            {
+              "name": "大方县的凉水公社",
+              "entity_id": null
+            },
+            {
+              "name": "小坝",
+              "entity_id": "8c5eb418-ed5b-5426-bc87-b8e434b0b07c"
+            },
+            {
+              "name": "汉屯",
+              "entity_id": "6daa1864-9a90-5e6b-8f0f-38316cb644e7"
+            },
+            {
+              "name": "中屯",
+              "entity_id": "577bc695-8ecc-5543-aed0-96d7e53a1bd4"
+            },
+            {
+              "name": "刘华",
+              "entity_id": "2d657b11-6531-5104-a49f-4300f5e783fb"
+            }
+          ]
+        }
       }
     },
     {

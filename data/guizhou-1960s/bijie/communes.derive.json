@@ -118394,10 +118394,6 @@
       "anchors": [
         {
           "kind": "record",
-          "record_id": "b02e195b-7d36-5f9e-b9aa-b91275f755cc"
-        },
-        {
-          "kind": "record",
           "record_id": "1b4bfcad-7872-50b0-a651-be16f1035867"
         },
         {
@@ -120279,6 +120275,86 @@
         {
           "kind": "record",
           "record_id": "b64593f4-6678-51e3-a322-7194c27cc682"
+        },
+        {
+          "kind": "record",
+          "record_id": "2ae45d77-e9e8-5ccf-bc54-169b250e755a"
+        },
+        {
+          "kind": "record",
+          "record_id": "bca455ba-8c9f-5ceb-9949-5b2cb63c68e2"
+        },
+        {
+          "kind": "record",
+          "record_id": "ae2aa910-63d8-550d-ae8e-faaed9a50106"
+        },
+        {
+          "kind": "record",
+          "record_id": "ee17cf71-f9da-52e1-ba33-1f39d53f5b4b"
+        },
+        {
+          "kind": "record",
+          "record_id": "e05ce3fb-f850-5506-b8e9-4ab3c351e49d"
+        },
+        {
+          "kind": "record",
+          "record_id": "b234973c-3c32-5abd-88f0-bf53e77da7b2"
+        },
+        {
+          "kind": "record",
+          "record_id": "b503a2bc-bb28-5a9f-80a1-a60b63ad5a56"
+        },
+        {
+          "kind": "record",
+          "record_id": "824d4244-20c2-5847-9df5-951c25ae0a5f"
+        },
+        {
+          "kind": "record",
+          "record_id": "31fb1bf9-90ac-5caa-b127-1b44abfecb40"
+        },
+        {
+          "kind": "record",
+          "record_id": "acb380eb-e3e7-5bb1-995b-bcf17c8d0fb4"
+        },
+        {
+          "kind": "record",
+          "record_id": "25d59293-bb82-5431-a66a-1856267a7751"
+        },
+        {
+          "kind": "record",
+          "record_id": "d3804828-9d97-5c63-8069-4d7bec16b95b"
+        },
+        {
+          "kind": "record",
+          "record_id": "14bf17fa-a4a1-5615-b6c7-95eefd74ef1c"
+        },
+        {
+          "kind": "record",
+          "record_id": "1f96ce0b-33dc-56ae-9dc3-e021eea30864"
+        },
+        {
+          "kind": "record",
+          "record_id": "d84faaf4-387c-5929-ad45-11a376bb4845"
+        },
+        {
+          "kind": "record",
+          "record_id": "559090a6-fda2-55a9-a505-fa607f9a284e"
+        },
+        {
+          "kind": "record",
+          "record_id": "bdedd410-5ed4-528d-9f6a-996c3c79ee8f"
+        },
+        {
+          "kind": "record",
+          "record_id": "97d67bb6-e2d3-5c95-b783-867fb1c2c434"
+        },
+        {
+          "kind": "record",
+          "record_id": "7e42d7d1-553d-5085-afdf-52ead4a46633"
+        },
+        {
+          "kind": "record",
+          "record_id": "905c7690-3da1-5745-b347-434bd8805de6"
         }
       ]
     },
@@ -121570,6 +121646,10 @@
     {
       "record_id": "b02a961a-ac91-547c-bb59-22da412eda19",
       "reason": "This elevation cell has source coordinates assigned to different communes; the settlement position needs refinement before it can constrain a boundary."
+    },
+    {
+      "record_id": "b02e195b-7d36-5f9e-b9aa-b91275f755cc",
+      "reason": "Printed p. 188 places the commune at 105°20′, while its named seat on the same page is at 105°28′ and the p. 187 overview gives 105°28′–29′. Subordinate settlement coordinates constrain this reconstruction."
     },
     {
       "record_id": "b1713ccc-a0f7-5591-b5bb-df94413da308",

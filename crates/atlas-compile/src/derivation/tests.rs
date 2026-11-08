@@ -123,3 +123,74 @@ fn reconstruction_rejects_a_seed_whose_review_has_been_withdrawn() {
             .contains("missing checked")
     );
 }
+
+#[test]
+fn source_comparisons_and_the_haogou_exclusion_follow_the_reconstructed_geometry() {
+    let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
+    let input = load_blocking(&root).unwrap();
+    let request = &input.derivations["bijie-communes-terrain"];
+    let boundaries = reconstruct(&input, request).unwrap();
+    for (slug, area, neighbors) in [
+        ("baiyan", 12.5, 4),
+        ("haogou", 9.5, 5),
+        ("huangnichong", 47.9, 6),
+    ] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{slug}-commune")).unwrap();
+        let boundary = boundaries
+            .iter()
+            .find(|b| {
+                input
+                    .data
+                    .records
+                    .iter()
+                    .any(|r| r.id == b.record_id && r.entity_id == id)
+            })
+            .unwrap();
+        assert_eq!(boundary.comparisons.len(), 1);
+        let comparison = &boundary.comparisons[0];
+        assert_eq!(comparison.reported_area_square_km, area);
+        assert!(comparison.modeled_area_square_km > 0.0);
+        assert_eq!(comparison.neighbors.len(), neighbors);
+        assert!(boundary.basis.contains(&comparison.record_id));
+        assert!(
+            comparison
+                .neighbors
+                .iter()
+                .filter(|n| n.entity_id.is_some())
+                .all(|n| n.shares_edge.is_some())
+        );
+        let mut changed = boundary.clone();
+        changed.comparisons[0].modeled_area_square_km *= 2.0;
+        assert!(changed.feature(&input.data, None).is_err());
+        if slug == "haogou" {
+            assert_eq!(boundary.region.polygons.len(), 1);
+            assert!(boundary.region.vertices.iter().all(|p| p.x > 105.4));
+        }
+    }
+    let printed = input
+        .data
+        .records
+        .iter()
+        .find(|r| r.key == "bijie-gazetteer/p188/haogou-commune")
+        .unwrap();
+    assert_eq!(
+        printed
+            .observation
+            .coordinate
+            .as_ref()
+            .unwrap()
+            .longitude_text,
+        "105°20′"
+    );
+    assert!(
+        request
+            .excluded
+            .iter()
+            .any(|a| a.record_id == printed.id && a.reason.contains("105°28′"))
+    );
+    assert!(
+        !request.units.iter().flat_map(|u| &u.anchors).any(
+            |a| matches!(a, AnchorReference::Record { record_id } if *record_id == printed.id)
+        )
+    );
+}

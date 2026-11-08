@@ -10,9 +10,11 @@ use crate::polygon::{IndexedPolygon, resolve};
 mod boundary;
 mod cells;
 mod partition;
+mod review;
 mod vectorize;
 pub use boundary::DerivedBoundary;
 pub use cells::ElevationGrid;
+pub use review::{BoundaryComparison, NeighborComparison, compare};
 
 /// One located member of a numbered administrative unit.
 #[derive(Debug, Clone, Serialize, Deserialize)]

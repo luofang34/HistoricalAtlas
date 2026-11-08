@@ -125,10 +125,12 @@ pub fn reconstruct(
             cell_m: request.grid.cell_m,
             slope_weight: request.slope_weight,
             model: format!("derived/{}.json", request.id),
+            comparisons: Vec::new(),
         };
         boundary.feature(&input.data, None)?;
         result.push(boundary);
     }
+    atlas_boundary::terrain::compare(&input.data, &mut result)?;
     Ok(result)
 }
 

@@ -1742,19 +1742,24 @@
       "source_id": "bijie-gazetteer",
       "page_or_sheet": "466",
       "scan_page": 501,
-      "locator": "白岩公社 row: name and geographic coordinates",
+      "locator": "Place table, row 1: 白岩公社",
       "verbatim_quote": null,
       "checked": true,
       "source_date": null,
       "observation": {
         "name": "白岩公社",
-        "pinyin": null,
-        "population": null,
+        "pinyin": "Báiyán Gōngshè",
+        "population": 2784,
         "households": null,
-        "ethnicities": [],
-        "parent_id": null,
+        "ethnicities": [
+          "苗",
+          "汉",
+          "彝",
+          "仡佬"
+        ],
+        "parent_id": "2120630c-df72-54eb-9450-6cb6894318eb",
         "rank": "commune",
-        "seat_id": null,
+        "seat_id": "4c8b861b-8afa-5679-8b89-4781b941fdfa",
         "coordinate": {
           "point": {
             "longitude": 105.75,

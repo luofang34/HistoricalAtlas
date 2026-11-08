@@ -48,6 +48,7 @@ fn record(name: &str, parent: Option<&str>, longitude: Option<f64>) -> Record {
             }),
             unresolved_coordinate: None,
             extent: None,
+            territory: None,
             former_names: vec![],
             note: None,
         },

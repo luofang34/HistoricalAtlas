@@ -9,6 +9,7 @@ pub(crate) mod error;
 mod estimates;
 mod hierarchy;
 mod temporal;
+mod territory;
 pub use error::{ValidationCause, ValidationError};
 use error::{caused, fail};
 use estimates::validate_estimates;
@@ -55,6 +56,7 @@ fn validate_record(
         .ok_or_else(|| fail(&record.key, "unknown source"))?;
     citations::validate_citation(record, source)?;
     dates::validate_dates(record, sources)?;
+    territory::validate(record, entity, entities)?;
     if record
         .observation
         .extent

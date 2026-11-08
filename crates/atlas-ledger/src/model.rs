@@ -14,6 +14,8 @@ use atlas_geo::{
 };
 use serde::{Deserialize, Serialize};
 
+pub mod territory;
+
 /// Bibliographic metadata for an identifiable source edition.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -188,6 +190,9 @@ pub struct Observation {
     /// Source description of route endpoints, extent, or relative location.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub extent: Option<String>,
+    /// Explicit area and neighboring units transcribed from an administrative overview.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub territory: Option<territory::TerritoryObservation>,
     /// Former names supported by the source.
     pub former_names: Vec<FormerName>,
     /// Short transcribed annotation.

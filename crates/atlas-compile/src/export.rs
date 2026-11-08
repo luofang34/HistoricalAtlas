@@ -247,6 +247,14 @@ fn verify_checked_references(
             .parent_id
             .iter()
             .chain(&record.observation.seat_id)
+            .chain(
+                record
+                    .observation
+                    .territory
+                    .iter()
+                    .flat_map(|t| &t.neighbors)
+                    .filter_map(|n| n.entity_id.as_ref()),
+            )
         {
             if !current.contains(target) {
                 return Err(ExportError::MissingEvidence(*target));
@@ -413,3 +421,7 @@ mod yanzikou_tests;
 #[cfg(test)]
 #[path = "export/commune_anchors/tests.rs"]
 mod commune_anchor_tests;
+
+#[cfg(test)]
+#[path = "export/baiyan/tests.rs"]
+mod baiyan_tests;

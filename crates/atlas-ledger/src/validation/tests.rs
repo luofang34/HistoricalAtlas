@@ -1,6 +1,59 @@
 use super::*;
 
 #[test]
+fn territory_descriptions_require_positive_area_and_distinct_linked_neighbors() {
+    use crate::model::territory::{NeighborObservation, TerritoryObservation};
+    let mut data: Dataset = serde_json::from_str(include_str!(
+        "../../../../data/guizhou-1960s/bijie/page-20.dataset.json"
+    ))
+    .unwrap();
+    let neighbor = data
+        .entities
+        .iter()
+        .find(|e| e.id != data.records[1].entity_id)
+        .unwrap()
+        .id;
+    data.records[1].observation.territory = Some(TerritoryObservation {
+        area_square_km: 12.5,
+        neighbors: vec![NeighborObservation {
+            name: "Named neighbor".into(),
+            entity_id: Some(neighbor),
+        }],
+    });
+    validate(&catalog(), &data).unwrap();
+    let mut invalid = data.clone();
+    invalid.records[1]
+        .observation
+        .territory
+        .as_mut()
+        .unwrap()
+        .area_square_km = 0.0;
+    assert!(
+        validate(&catalog(), &invalid)
+            .unwrap_err()
+            .problem
+            .contains("positive")
+    );
+    let mut invalid = data.clone();
+    let territory = invalid.records[1].observation.territory.as_mut().unwrap();
+    territory.neighbors.push(territory.neighbors[0].clone());
+    assert!(
+        validate(&catalog(), &invalid)
+            .unwrap_err()
+            .problem
+            .contains("distinct")
+    );
+    data.records[1]
+        .observation
+        .territory
+        .as_mut()
+        .unwrap()
+        .neighbors[0]
+        .entity_id = Some(EntityId::from_key("earth/missing").unwrap());
+    assert!(validate(&catalog(), &data).is_err());
+}
+
+#[test]
 fn spatial_extent_is_optional_but_cannot_be_an_empty_description() {
     let mut dataset: Dataset = serde_json::from_str(include_str!(
         "../../../../data/guizhou-1960s/bijie/page-20.dataset.json"

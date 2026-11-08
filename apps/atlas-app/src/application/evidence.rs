@@ -179,6 +179,22 @@ fn derived_boundaries(ui: &mut egui::Ui, boundaries: &[atlas_boundary::terrain::
             "Datum: {:?} · Effective dates: unknown",
             boundary.datum
         ));
+        for comparison in &boundary.comparisons {
+            ui.label(format!(
+                "Area: {:.2} km² modeled · {:.2} km² reported",
+                comparison.modeled_area_square_km, comparison.reported_area_square_km
+            ));
+            ui.collapsing("Neighbor checks", |ui| {
+                for neighbor in &comparison.neighbors {
+                    let status = match neighbor.shares_edge {
+                        Some(true) => "shared edge",
+                        Some(false) => "no shared edge",
+                        None => "boundary not mapped",
+                    };
+                    ui.label(format!("{}: {status}", neighbor.name));
+                }
+            });
+        }
         json_value(ui, "Reconstruction evidence", boundary);
         ui.separator();
     }
