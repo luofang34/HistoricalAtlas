@@ -2,6 +2,7 @@
 
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -34,6 +35,37 @@ def write_pdf(path, text):
 
 
 class ExtractionTest(unittest.TestCase):
+    def test_ocr_with_model_only_directory_and_changed_model(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            pdf, output, models = root / 'source.pdf', root / 'drafts', root / 'models'
+            models.mkdir()
+            model = models / 'eng.traineddata'
+            shutil.copyfile(ingest.model_directory(None) / model.name, model)
+            write_pdf(pdf, 'Atlas evidence')
+            command = [sys.executable, str(Path(ingest.__file__)), '--pdf', str(pdf),
+                       '--pages', '1', '--output', str(output), '--engine', 'tesseract',
+                       '--languages', 'eng', '--tessdata-dir', str(models), '--jobs', '2']
+            subprocess.run(command, check=True, capture_output=True)
+            draft = json.loads((output / 'page-0001.json').read_text())
+            self.assertEqual([word['text'] for word in draft['words']], ['Atlas', 'evidence'])
+            self.assertEqual(draft['recognition']['models']['eng'], ingest.fingerprint(model))
+            self.assertTrue(all(0 <= value <= 1 for word in draft['words'] for value in word['box']))
+            with model.open('ab') as stream:
+                stream.write(b'changed model')
+            result = subprocess.run(command, capture_output=True, text=True)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn('another source or extraction engine', result.stderr)
+
+    def test_recognized_quotes_do_not_consume_following_tsv_rows(self):
+        header = 'level\tpage_num\tblock_num\tpar_num\tline_num\tword_num\tleft\ttop\twidth\theight\tconf\ttext\n'
+        page = '1\t1\t0\t0\t0\t0\t0\t0\t200\t200\t-1\t\n'
+        coordinate = '5\t1\t1\t1\t1\t1\t20\t20\t30\t10\t80\t"105°16′\n'
+        name = '5\t1\t1\t1\t2\t1\t20\t40\t30\t10\t90\t新桥\n'
+        words = ingest.parse_tsv(header + page + coordinate + name, 55)
+        self.assertEqual([word['text'] for word in words], ['"105°16′', '新桥'])
+        self.assertEqual(words[1]['box'], [.1, .2, .25, .25])
+
     def test_extract_resume_and_source_mismatch(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

@@ -4,16 +4,21 @@ A spatiotemporal atlas and evidence ledger for chronicle applications. Historica
 
 ## Usage
 
-Requires Rust with the `wasm32-unknown-unknown` target, Python 3.12 or later, and Poppler.
+Requires Rust with the `wasm32-unknown-unknown` target, Python 3.12 or later, Poppler, and Tesseract with the English model for extraction tests. Image recognition of Chinese sources also uses the `chi_sim` model.
 
 ```sh
 cargo run -p atlas-compile -- verify data
 cargo run -p atlas-compile -- build data dist
+cargo run -p atlas-compile -- register data controls.json registered.json
 sh scripts/ci.sh
 ```
 
 Curated records live in `data/`. `scan_page` is one-based; `page_or_sheet` identifies the printed page. `checked` records transcription review. Dates retain their source convention, and coordinates retain their stated datum and angular precision.
 
-For page extraction, run `python3 tools/ocr-ingest/ingest.py --pdf <path> --pages 1:10 --output scratch/extraction`. The default engine reads the embedded text layer. Use `--engine tesseract --languages chi_sim+eng` for image recognition with installed Tesseract models. Extraction drafts include normalized text boxes and scan fingerprints for page review; rerunning the command resumes the same batch.
+For page extraction, run `python3 tools/ocr-ingest/ingest.py --pdf <path> --pages 1:10 --output scratch/extraction`. The default engine reads the embedded text layer. Use `--engine tesseract --languages chi_sim --tessdata-dir <models>` for image recognition; `--jobs 4` processes four pages concurrently. Extraction drafts include normalized text boxes, scan fingerprints, and recognition settings for page review; rerunning the command resumes the same batch.
+
+Group extracted table cells with `python3 tools/ocr-ingest/tables.py scratch/extraction scratch/tables --profile bijie`. Profiles are available for Bijie, Anshun, and Liuzhi. Table drafts retain the text boxes and mark fields that need review.
+
+Sheet registration accepts a `RegistrationJob` JSON document with a catalogued source, scan page, full-page raster dimensions, target CRS and units, referenced control points, independent check points, and traced vertices. Source coordinates use image pixels measured from the top-left corner. Choose `{"kind":"affine"}` or `{"kind":"thin_plate","smoothing":0.0}`. The result includes the scan fingerprint, transformed vertices, and residuals in the declared target units. See `atlas_compile::registration` in the generated Rust API documentation for the input fields.
 
 Code and tools are licensed under [GNU AGPL v3 or later](LICENSE). Curated data is licensed under [CC BY-SA 4.0](data/LICENSE). Attribute Historical Atlas and the cited sources when reusing the data, and identify your changes.
