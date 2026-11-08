@@ -249,7 +249,7 @@ fn shared_names_and_coordinates_do_not_merge_distinct_geographical_features() {
         .iter()
         .filter(|record| record.entity_id == river)
         .collect();
-    assert_eq!(records.len(), 4);
+    assert_eq!(records.len(), 6);
     assert!(
         records
             .iter()

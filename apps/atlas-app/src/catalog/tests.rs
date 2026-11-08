@@ -1,6 +1,38 @@
 use super::*;
 
 #[test]
+fn wangfeng_huangnichong_and_shaba_names_resolve_to_their_own_evidence() {
+    let atlas = atlas();
+    for (name, key) in [
+        ("王洪屯", "wangfeng/wangfengtun"),
+        ("黄泥公社", "huangnichong-commune"),
+        ("云山铺", "shaba/gaoshanpu"),
+        ("干河沟", "gezuo/gezuo-river"),
+    ] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{key}")).unwrap();
+        assert!(atlas.search(name, BodyId::Earth).contains(&id));
+    }
+    let matches = atlas.search("高山铺", BodyId::Earth);
+    let mut expected: BTreeSet<_> = ["gaoshanpu", "gaoshanpu-former-commune", "gaoshanpu-daoban"]
+        .map(|key| EntityId::from_key(&format!("earth/cn-gz/bijie/shaba/{key}")).unwrap())
+        .into_iter()
+        .collect();
+    expected.insert(EntityId::from_key("earth/cn-gz/bijie/gaoshanpu-commune").unwrap());
+    assert_eq!(matches.into_iter().collect::<BTreeSet<_>>(), expected);
+    for (commune, count) in [("wangfeng", 8), ("huangnichong", 4), ("shaba", 6)] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{commune}-commune")).unwrap();
+        let brigades = atlas
+            .children(id)
+            .into_iter()
+            .filter(|child| {
+                atlas.entry(*child).unwrap().entity.kind == atlas_ledger::model::EntityKind::Brigade
+            })
+            .count();
+        assert_eq!(brigades, count);
+    }
+}
+
+#[test]
 fn changchunbao_former_names_and_mine_spellings_resolve_to_cited_identities() {
     let atlas = atlas();
     for (name, key) in [

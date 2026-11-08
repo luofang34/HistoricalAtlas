@@ -1,0 +1,834 @@
+{
+  "entities": [
+    {
+      "id": "d8a9c301-6b4e-5c45-95dd-7445b5aa8521",
+      "key": "earth/cn-gz/bijie/shaba/zhongshan-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "a8f2f55e-929a-536a-b5eb-a6b9d8a1effc",
+      "key": "earth/cn-gz/bijie/shaba/jizhaodong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "c22cce6a-3c62-57c1-9a22-5f730cda8543",
+      "key": "earth/cn-gz/bijie/shaba/yangjiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "dd82d6f1-3498-5178-8435-6ad3020f90f7",
+      "key": "earth/cn-gz/bijie/shaba/shanbeihou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "39b14c1b-8767-57ac-93cb-747bde76f3b4",
+      "key": "earth/cn-gz/bijie/shaba/huoshishan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "f4b33ba7-e3b2-53d1-a3c3-9c5abf21fc07",
+      "key": "earth/cn-gz/bijie/shaba/jiaodingshan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "6b609bde-00ba-5aa7-92ee-161998ef1e4d",
+      "key": "earth/cn-gz/bijie/shaba/gaoshanpu-daoban",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "b98022e7-402d-54c6-947b-b4329b009f11",
+      "key": "earth/cn-gz/bijie/shaba/muguachong-daoban",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "f7d9c664-07a6-5407-a34c-b781892f1cee",
+      "key": "earth/cn-gz/bijie/shaba/chongfeng-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "faa54f26-997f-55b7-a18b-c079dd32fdd3",
+      "key": "earth/cn-gz/bijie/shaba/yuegu",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "66c69dac-f48d-53a4-a431-3e176ff002a3",
+      "key": "earth/cn-gz/bijie/shaba/anjia-wanzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "09715b78-5486-5217-84c5-8973a472f414",
+      "key": "earth/cn-gz/bijie/shaba/chuandong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "0b934943-efb4-5954-9b21-eb10b8a72724",
+      "key": "earth/cn-gz/bijie/shaba/meijia-yakou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "fa024d8f-25af-54b5-8512-eb9f8c790b6e",
+      "key": "earth/cn-gz/bijie/shaba/wujia-chongzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "9f7e759e-cf1b-581f-b1d4-ffbae61b3e92",
+      "key": "earth/cn-gz/bijie/shaba/qingkou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "390a17eb-ad73-5db9-bf06-0b4c66d487dc",
+      "key": "earth/cn-gz/bijie/shaba/zhujia-yandong-place",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "931f1fc7-6747-507e-bfe1-255141933003",
+      "key": "earth/cn-gz/bijie/shaba/zhujia-yandong-cave",
+      "body": "earth",
+      "kind": "cave"
+    },
+    {
+      "id": "b5ba81fb-ed6c-5310-bea4-4672e4b044e6",
+      "key": "earth/cn-gz/bijie/shaba/yemashan",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "ea02da36-065f-558c-8570-f4fbf80493ab",
+      "key": "earth/cn-gz/bijie/shaba/daqing-liangzi",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "b5739e51-14a3-527d-a3c7-d9d6bc6e239c",
+      "key": "earth/cn-gz/bijie/shaba/xinqiao",
+      "body": "earth",
+      "kind": "bridge"
+    }
+  ],
+  "records": [
+    {
+      "id": "000219c4-659d-513a-baee-a407c06ec6e8",
+      "key": "bijie-gazetteer/p121/shaba/zhongshan-brigade",
+      "entity_id": "d8a9c301-6b4e-5c45-95dd-7445b5aa8521",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 1: 中山大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "中山大队",
+        "pinyin": "Zhōngshān Dàduì",
+        "population": 729,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5647fad7-63d8-52de-9836-946e5b2a7b95",
+        "rank": "brigade",
+        "seat_id": "a8f2f55e-929a-536a-b5eb-a6b9d8a1effc",
+        "coordinate": {
+          "point": {
+            "longitude": 105.05,
+            "latitude": 27.25
+          },
+          "longitude_text": "105°03′",
+          "latitude_text": "27°15′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "00b747dd-e279-51e3-b9ca-230848ee05f0",
+      "key": "bijie-gazetteer/p121/shaba/jizhaodong",
+      "entity_id": "a8f2f55e-929a-536a-b5eb-a6b9d8a1effc",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 2: 鸡爪洞",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "鸡爪洞",
+        "pinyin": "Jīzhǎodòng",
+        "population": 266,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "d8a9c301-6b4e-5c45-95dd-7445b5aa8521",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.05,
+            "latitude": 27.25
+          },
+          "longitude_text": "105°03′",
+          "latitude_text": "27°15′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "9fce28bc-a294-539e-8ce7-23584da5496f",
+      "key": "bijie-gazetteer/p121/shaba/yangjiazhai",
+      "entity_id": "c22cce6a-3c62-57c1-9a22-5f730cda8543",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 3: 杨家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "杨家寨",
+        "pinyin": "Yángjiāzhài",
+        "population": 151,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "d8a9c301-6b4e-5c45-95dd-7445b5aa8521",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.06666666666666,
+            "latitude": 27.233333333333334
+          },
+          "longitude_text": "105°04′",
+          "latitude_text": "27°14′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "98d035d1-a61f-5a19-9309-47cd0a8f23f3",
+      "key": "bijie-gazetteer/p121/shaba/shanbeihou",
+      "entity_id": "dd82d6f1-3498-5178-8435-6ad3020f90f7",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 4: 山背后",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "山背后",
+        "pinyin": "Shānbèihòu",
+        "population": 60,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "d8a9c301-6b4e-5c45-95dd-7445b5aa8521",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.05,
+            "latitude": 27.25
+          },
+          "longitude_text": "105°03′",
+          "latitude_text": "27°15′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "04b34b6d-1f88-5cf9-82af-c0027bf96d7f",
+      "key": "bijie-gazetteer/p121/shaba/huoshishan",
+      "entity_id": "39b14c1b-8767-57ac-93cb-747bde76f3b4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 5: 火石山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "火石山",
+        "pinyin": "Huǒshíshān",
+        "population": 134,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "d8a9c301-6b4e-5c45-95dd-7445b5aa8521",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.05,
+            "latitude": 27.25
+          },
+          "longitude_text": "105°03′",
+          "latitude_text": "27°15′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f50fc553-8cad-5c89-bea0-1a4845b5afea",
+      "key": "bijie-gazetteer/p121/shaba/jiaodingshan",
+      "entity_id": "f4b33ba7-e3b2-53d1-a3c3-9c5abf21fc07",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 6: 轿顶山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "轿顶山",
+        "pinyin": "Jiàodǐngshān",
+        "population": 118,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "d8a9c301-6b4e-5c45-95dd-7445b5aa8521",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.05,
+            "latitude": 27.233333333333334
+          },
+          "longitude_text": "105°03′",
+          "latitude_text": "27°14′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f965c1fc-b97d-5678-bea8-44f88738dd91",
+      "key": "bijie-gazetteer/p121/shaba/gaoshanpu-daoban",
+      "entity_id": "6b609bde-00ba-5aa7-92ee-161998ef1e4d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 7: 高山铺道班",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "高山铺道班",
+        "pinyin": "Gāoshānpù Dàobān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "5647fad7-63d8-52de-9836-946e5b2a7b95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.1,
+            "latitude": 27.216666666666665
+          },
+          "longitude_text": "105°06′",
+          "latitude_text": "27°13′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "单位"
+      }
+    },
+    {
+      "id": "bad2480a-62bc-5792-8c3a-23605b15caa3",
+      "key": "bijie-gazetteer/p121/shaba/muguachong-daoban",
+      "entity_id": "b98022e7-402d-54c6-947b-b4329b009f11",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 8: 木瓜冲道班",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "木瓜冲道班",
+        "pinyin": "Mùguāchōng Dàobān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "5647fad7-63d8-52de-9836-946e5b2a7b95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.05,
+            "latitude": 27.2
+          },
+          "longitude_text": "105°03′",
+          "latitude_text": "27°12′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "单位"
+      }
+    },
+    {
+      "id": "2b0e168a-d336-5b68-89fd-cb383a4d1cad",
+      "key": "bijie-gazetteer/p121/shaba/chongfeng-brigade",
+      "entity_id": "f7d9c664-07a6-5407-a34c-b781892f1cee",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 9: 冲峰大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "冲峰大队",
+        "pinyin": "Chōngfēng Dàduì",
+        "population": 785,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "5647fad7-63d8-52de-9836-946e5b2a7b95",
+        "rank": "brigade",
+        "seat_id": "faa54f26-997f-55b7-a18b-c079dd32fdd3",
+        "coordinate": {
+          "point": {
+            "longitude": 105.1,
+            "latitude": 27.25
+          },
+          "longitude_text": "105°06′",
+          "latitude_text": "27°15′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "03c1afb7-1c9f-583b-ae8c-277f8cdbd4d3",
+      "key": "bijie-gazetteer/p121/shaba/yuegu",
+      "entity_id": "faa54f26-997f-55b7-a18b-c079dd32fdd3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 10: 乐姑",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "乐姑",
+        "pinyin": "Yuègū",
+        "population": 97,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "f7d9c664-07a6-5407-a34c-b781892f1cee",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.1,
+            "latitude": 27.25
+          },
+          "longitude_text": "105°06′",
+          "latitude_text": "27°15′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "2728a218-192c-5a36-8227-c96835c70910",
+      "key": "bijie-gazetteer/p121/shaba/anjia-wanzi",
+      "entity_id": "66c69dac-f48d-53a4-a431-3e176ff002a3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 11: 安家湾子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "安家湾子",
+        "pinyin": "ĀnjiāWānzǐ",
+        "population": 119,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "f7d9c664-07a6-5407-a34c-b781892f1cee",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.08333333333333,
+            "latitude": 27.25
+          },
+          "longitude_text": "105°05′",
+          "latitude_text": "27°15′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "433b9fe7-3897-5805-be9a-4b62b6cff2f5",
+      "key": "bijie-gazetteer/p121/shaba/chuandong",
+      "entity_id": "09715b78-5486-5217-84c5-8973a472f414",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 12: 穿洞",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "穿洞",
+        "pinyin": "Chuādòng",
+        "population": 133,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "f7d9c664-07a6-5407-a34c-b781892f1cee",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.08333333333333,
+            "latitude": 27.25
+          },
+          "longitude_text": "105°05′",
+          "latitude_text": "27°15′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b6e4bb7b-0ca1-5302-8c00-f7b8d2882499",
+      "key": "bijie-gazetteer/p121/shaba/meijia-yakou",
+      "entity_id": "0b934943-efb4-5954-9b21-eb10b8a72724",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 13: 麋家垭口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "麋家垭口",
+        "pinyin": "Méijiāyākǒu",
+        "population": 99,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "f7d9c664-07a6-5407-a34c-b781892f1cee",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.08333333333333,
+            "latitude": 27.233333333333334
+          },
+          "longitude_text": "105°05′",
+          "latitude_text": "27°14′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8341df71-6c6c-54a8-ba71-1cdb075180e2",
+      "key": "bijie-gazetteer/p121/shaba/wujia-chongzi",
+      "entity_id": "fa024d8f-25af-54b5-8512-eb9f8c790b6e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 14: 吴家冲子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "吴家冲子",
+        "pinyin": "Wújiāchōngzǐ",
+        "population": 181,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "f7d9c664-07a6-5407-a34c-b781892f1cee",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.1,
+            "latitude": 27.25
+          },
+          "longitude_text": "105°06′",
+          "latitude_text": "27°15′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6190c744-6940-5345-b443-f344bba4d537",
+      "key": "bijie-gazetteer/p121/shaba/qingkou",
+      "entity_id": "9f7e759e-cf1b-581f-b1d4-ffbae61b3e92",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 15: 箐口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "箐口",
+        "pinyin": "Qīngkǒu",
+        "population": 156,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "f7d9c664-07a6-5407-a34c-b781892f1cee",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.1,
+            "latitude": 27.233333333333334
+          },
+          "longitude_text": "105°06′",
+          "latitude_text": "27°14′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e779a81f-99a6-57cf-9ac1-1b4ea0e2b4ca",
+      "key": "bijie-gazetteer/p121/shaba/zhujia-yandong-place",
+      "entity_id": "390a17eb-ad73-5db9-bf06-0b4c66d487dc",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 16: 朱家岩洞",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "朱家岩洞",
+        "pinyin": "Zhūjiāyándòng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "f7d9c664-07a6-5407-a34c-b781892f1cee",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.08333333333333,
+            "latitude": 27.233333333333334
+          },
+          "longitude_text": "105°05′",
+          "latitude_text": "27°14′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "地名"
+      }
+    },
+    {
+      "id": "ebc34382-d164-5ae4-a6b8-3c8145b7623c",
+      "key": "bijie-gazetteer/p121/shaba/zhujia-yandong-cave",
+      "entity_id": "931f1fc7-6747-507e-bfe1-255141933003",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 17: 朱家岩洞",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "朱家岩洞",
+        "pinyin": "Zhūjiāyándòng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "5647fad7-63d8-52de-9836-946e5b2a7b95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.08333333333333,
+            "latitude": 27.233333333333334
+          },
+          "longitude_text": "105°05′",
+          "latitude_text": "27°14′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "洞穴，高/深4/5（米）"
+      }
+    },
+    {
+      "id": "34c92e74-62ea-5c80-a596-7056075fa390",
+      "key": "bijie-gazetteer/p121/shaba/yemashan",
+      "entity_id": "b5ba81fb-ed6c-5310-bea4-4672e4b044e6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 18: 野马山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "野马山",
+        "pinyin": "Yěmǎ Shān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "5647fad7-63d8-52de-9836-946e5b2a7b95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.06666666666666,
+            "latitude": 27.183333333333334
+          },
+          "longitude_text": "105°04′",
+          "latitude_text": "27°11′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰、海拔2008.9米"
+      }
+    },
+    {
+      "id": "19e21e38-3966-5eb1-8596-21d8f2dc1295",
+      "key": "bijie-gazetteer/p121/shaba/daqing-liangzi",
+      "entity_id": "ea02da36-065f-558c-8570-f4fbf80493ab",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 19: 大箐梁子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大箐梁子",
+        "pinyin": "Dàqīnliángzǐ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "5647fad7-63d8-52de-9836-946e5b2a7b95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.11666666666666,
+            "latitude": 27.216666666666665
+          },
+          "longitude_text": "105°07′",
+          "latitude_text": "27°13′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰、海拔2191.7米"
+      }
+    },
+    {
+      "id": "556d8b9b-0f42-5380-9cf0-d0c2719fdddd",
+      "key": "bijie-gazetteer/p121/shaba/xinqiao",
+      "entity_id": "b5739e51-14a3-527d-a3c7-d9d6bc6e239c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "121",
+      "scan_page": 156,
+      "locator": "Place table, row 20: 新桥",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "新桥",
+        "pinyin": "Xīn Qiáo",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "5647fad7-63d8-52de-9836-946e5b2a7b95",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.06666666666666,
+            "latitude": 27.216666666666665
+          },
+          "longitude_text": "105°04′",
+          "latitude_text": "27°13",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "桥 (10—6)/10"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

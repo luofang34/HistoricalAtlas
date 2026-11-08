@@ -4,6 +4,9 @@ use atlas_core::calendar::{Calendar, CivilDate};
 use atlas_ledger::model::EntityKind;
 use atlas_ledger::timeline::{TimeSelection, Timeline};
 
+#[path = "communes/tests.rs"]
+mod communes;
+
 #[cfg(test)]
 fn input() -> LedgerInput {
     load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap()
@@ -68,6 +71,12 @@ fn table_pages_publish_all_rows_with_their_original_fields() {
         (105, 9),
         (108, 33),
         (109, 1),
+        (112, 37),
+        (113, 13),
+        (116, 37),
+        (117, 19),
+        (120, 37),
+        (121, 20),
     ] {
         let rows: Vec<_> = input
             .data
@@ -94,9 +103,16 @@ fn table_pages_publish_all_rows_with_their_original_fields() {
 }
 
 #[test]
-fn three_commune_hierarchies_keep_all_brigades_and_continued_seats() {
+fn six_commune_hierarchies_keep_all_brigades_and_continued_seats() {
     let input = input();
-    for (commune, count) in [("changchunbao", 9), ("gezuo", 8), ("qingfeng", 6)] {
+    for (commune, count) in [
+        ("changchunbao", 9),
+        ("gezuo", 8),
+        ("qingfeng", 6),
+        ("wangfeng", 8),
+        ("huangnichong", 4),
+        ("shaba", 6),
+    ] {
         let brigades: Vec<_> = input
             .data
             .records
