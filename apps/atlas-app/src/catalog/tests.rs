@@ -1,6 +1,22 @@
 use super::*;
 
 #[test]
+fn qingsong_river_alias_and_coincident_mountain_village_remain_searchable() {
+    let atlas = atlas();
+    let river = EntityId::from_key("earth/cn-gz/bijie/qingsong/dahe").unwrap();
+    assert_eq!(atlas.search("青松河", BodyId::Earth), vec![river]);
+    assert!(atlas.search("大河", BodyId::Earth).contains(&river));
+    let names = atlas.search("苗营大山", BodyId::Earth);
+    for key in ["miaoying-dashan", "miaoying-dashan-village"] {
+        assert!(
+            names.contains(
+                &EntityId::from_key(&format!("earth/cn-gz/bijie/qingsong/{key}")).unwrap()
+            )
+        );
+    }
+}
+
+#[test]
 fn yachi_commune_renaming_and_source_spellings_remain_searchable() {
     let atlas = atlas();
     let commune = EntityId::from_key("earth/cn-gz/bijie/ganhegou-commune").unwrap();

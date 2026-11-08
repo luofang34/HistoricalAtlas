@@ -86,6 +86,8 @@ pub enum EntityKind {
     Cave,
     /// Forest or managed forest site.
     Forest,
+    /// Individually named or recorded tree.
+    Tree,
     /// Bridge.
     Bridge,
     /// River.
