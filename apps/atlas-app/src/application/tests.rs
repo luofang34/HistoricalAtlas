@@ -37,7 +37,10 @@ fn registered_boundary_search_focuses_geography_and_displays_source_method() {
             .as_array()
             .unwrap()
             .iter()
-            .filter(|f| f["properties"]["geometry_role"] == "registered_boundary")
+            .filter(|f| {
+                f["properties"]["geometry_role"] == "registered_boundary"
+                    && f["properties"]["entity_id"] == id.0.to_string()
+            })
             .count()
     };
     assert_eq!(count(&app), 1);
@@ -58,19 +61,29 @@ fn mapped_place_view_focuses_registered_location_and_shows_its_sheet_name() {
     let table = app.camera.center;
     app.layer = MapLayer::MappedPlaces;
     app.select(id, true);
-    assert!((app.camera.center.longitude - 105.2765584635).abs() < 1e-8);
     assert_ne!(app.camera.center, table);
     let collection = app.points().unwrap();
     let features = collection["features"].as_array().unwrap();
-    assert_eq!(features.len(), 29);
-    let selected = features
+    let selected: Vec<_> = features
         .iter()
-        .find(|f| f["properties"]["selected"] == true)
-        .unwrap();
-    assert_eq!(selected["properties"]["geometry_role"], "location_estimate");
-    assert_eq!(selected["properties"]["datum"], "unspecified");
-    assert_eq!(selected["properties"]["uncertainty_m"], 4500.0);
-    assert_eq!(selected["properties"]["name"], "大桥公社");
+        .filter(|f| f["properties"]["entity_id"] == id.0.to_string())
+        .collect();
+    assert_eq!(selected.len(), 2);
+    for feature in &selected {
+        assert_eq!(feature["properties"]["selected"], true);
+        assert_eq!(feature["properties"]["geometry_role"], "location_estimate");
+        assert_eq!(feature["properties"]["datum"], "unspecified");
+    }
+    assert!(selected.iter().any(
+        |f| f["properties"]["name"] == "大桥公社" && f["properties"]["uncertainty_m"] == 4500.0
+    ));
+    assert!(
+        selected.iter().any(
+            |f| f["properties"]["name"] == "大桥" && f["properties"]["uncertainty_m"] == 3500.0
+        )
+    );
+    assert!(selected.iter().any(|f| f["geometry"]["coordinates"]
+        == serde_json::json!([app.camera.center.longitude, app.camera.center.latitude])));
     let wuliping = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
     assert_eq!(app.label(wuliping), "五里坪公社");
     app.body = BodyId::Moon;
@@ -91,6 +104,33 @@ fn mapped_place_view_focuses_registered_location_and_shows_its_sheet_name() {
             .unwrap()
             .is_empty()
     );
+}
+
+#[test]
+fn county_search_fits_the_outline_to_the_map_viewport() {
+    let mut app = Application::new(crate::catalog::tests::atlas()).unwrap();
+    let id = EntityId::from_key("earth/cn-gz/bijie/bijie-county").unwrap();
+    assert!(app.atlas.search("毕节县", BodyId::Earth).contains(&id));
+    app.map_size = [800.0, 600.0];
+    app.select(id, true);
+    assert!((8.0..10.0).contains(&app.camera.zoom));
+    assert!(!app.sheet.visible);
+    let wide = app.camera.zoom;
+    app.map_size = [320.0, 600.0];
+    app.select(id, true);
+    assert!(app.camera.zoom < wide);
+    let collection = app.points().unwrap();
+    let boundary = collection["features"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .find(|f| {
+            f["properties"]["geometry_role"] == "registered_boundary"
+                && f["properties"]["entity_id"] == id.0.to_string()
+        })
+        .unwrap();
+    assert_eq!(boundary["properties"]["selected"], true);
+    assert_eq!(boundary["properties"]["scan_page"], 658);
 }
 
 #[test]

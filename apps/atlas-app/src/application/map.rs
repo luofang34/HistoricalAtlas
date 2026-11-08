@@ -39,6 +39,7 @@ impl Application {
             }
         }
         let size = ui.available_size().max(egui::vec2(1.0, 1.0));
+        self.map_size = [f64::from(size.x), f64::from(size.y)];
         let (rect, response) = ui.allocate_exact_size(size, egui::Sense::click_and_drag());
         self.gestures(ui, &response);
         self.camera.fit_height(f64::from(size.y));

@@ -29,6 +29,7 @@ pub struct Application {
     layer: MapLayer,
     territory_visible: bool,
     camera: Camera,
+    map_size: [f64; 2],
     map: Option<MapRenderer>,
     dirty: bool,
     error: Option<String>,
@@ -52,6 +53,7 @@ impl Application {
             layer: MapLayer::Observations,
             territory_visible: false,
             camera: Camera::for_body(BodyId::Earth),
+            map_size: [800.0, 600.0],
             map: None,
             dirty: true,
             error: None,
@@ -106,6 +108,13 @@ impl Application {
             } else {
                 5.0
             };
+        }
+        if focus
+            && self.layer != MapLayer::SelectedTime
+            && let Some(camera) = scene::boundaries::frame(&self.atlas, id, self.map_size)
+        {
+            self.camera = camera;
+            self.sheet.visible = false;
         }
     }
 

@@ -28,6 +28,22 @@ pub fn features(
 
 /// Bounding-box midpoint for navigating to an entity with a registered boundary.
 pub fn center(atlas: &Atlas, id: EntityId) -> Option<LonLat> {
+    let [low, high] = extent(atlas, id)?;
+    Some(LonLat {
+        longitude: (low.longitude + high.longitude) / 2.,
+        latitude: (low.latitude + high.latitude) / 2.,
+    })
+}
+
+/// Camera framing the complete registered boundary inside the map viewport.
+pub fn frame(atlas: &Atlas, id: EntityId, viewport: [f64; 2]) -> Option<crate::navigation::Camera> {
+    let bounds = extent(atlas, id)?;
+    let mut camera = crate::navigation::Camera::for_body(BodyId::Earth);
+    camera.fit_bounds(bounds, viewport);
+    Some(camera)
+}
+
+fn extent(atlas: &Atlas, id: EntityId) -> Option<[LonLat; 2]> {
     let boundary = atlas.entry(id)?.boundaries.first()?;
     let mut bounds = [
         f64::INFINITY,
@@ -47,10 +63,16 @@ pub fn center(atlas: &Atlas, id: EntityId) -> Option<LonLat> {
         bounds[2] = bounds[2].max(point.x);
         bounds[3] = bounds[3].max(point.y);
     }
-    Some(LonLat {
-        longitude: (bounds[0] + bounds[2]) / 2.,
-        latitude: (bounds[1] + bounds[3]) / 2.,
-    })
+    Some([
+        LonLat {
+            longitude: bounds[0],
+            latitude: bounds[1],
+        },
+        LonLat {
+            longitude: bounds[2],
+            latitude: bounds[3],
+        },
+    ])
 }
 
 #[cfg(test)]

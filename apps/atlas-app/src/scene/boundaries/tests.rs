@@ -60,8 +60,10 @@ fn registered_boundary_loads_with_source_evidence_and_stays_out_of_time_slices()
     let atlas = crate::publication::load_blocking(&path).unwrap();
     let id = EntityId::from_key("earth/cn-gz/zhijin/ertang-commune").unwrap();
     let boundaries = features(&atlas, BodyId::Earth, MapLayer::Observations, Some(id)).unwrap();
-    assert_eq!(boundaries.len(), 1);
-    let feature = &boundaries[0];
+    let feature = boundaries
+        .iter()
+        .find(|f| f["properties"]["entity_id"] == json!(id))
+        .unwrap();
     assert_eq!(feature["properties"]["entity_id"], json!(id));
     assert_eq!(feature["properties"]["page_or_sheet"], "32");
     assert_eq!(feature["properties"]["scan_page"], 40);
@@ -94,7 +96,9 @@ fn registered_boundary_loads_with_source_evidence_and_stays_out_of_time_slices()
     assert_eq!(
         features(&atlas, BodyId::Earth, MapLayer::MappedPlaces, None)
             .unwrap()
-            .len(),
+            .iter()
+            .filter(|f| f["properties"]["entity_id"] == json!(id))
+            .count(),
         1
     );
     assert!(center(&atlas, id).unwrap().validate().is_ok());

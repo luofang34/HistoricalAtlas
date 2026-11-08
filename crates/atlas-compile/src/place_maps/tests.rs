@@ -135,3 +135,57 @@ fn map_registration_rejects_wrong_sheet_duplicate_subject_and_outside_symbol() {
             .contains("outside")
     );
 }
+
+#[test]
+fn county_registration_checks_the_whole_extent_against_independent_minute_coordinates() {
+    use atlas_geo::registration::{AffineRegistration, Registration};
+
+    let input = input();
+    let map = &input.place_maps["bijie-county"];
+    let (sheet, estimates) = register_places(&input, map).unwrap();
+    assert_eq!(sheet.control_quality.points, 6);
+    assert_eq!(sheet.check_quality.unwrap().points, 22);
+    assert_eq!(estimates.len(), 28);
+    let controls: Vec<_> = sheet.job.controls.iter().map(|c| c.point).collect();
+    let model = AffineRegistration::fit(&controls).unwrap();
+    let mut maximum = 0.0_f64;
+    let mut squared_sum = 0.0;
+    for check in &sheet.job.check_points {
+        let actual = model.transform(check.point.source).unwrap();
+        let expected = check.point.target;
+        let dx = (actual.x - expected.x) * 111_195.0 * expected.y.to_radians().cos();
+        let dy = (actual.y - expected.y) * 111_195.0;
+        let error = dx.hypot(dy);
+        assert!(error + 1250.0 < map.uncertainty_m, "{}", check.landmark);
+        maximum = maximum.max(error);
+        squared_sum += error * error;
+    }
+    assert!((2000.0..2200.0).contains(&maximum));
+    assert!((900.0..1100.0).contains(&(squared_sum / 22.0).sqrt()));
+    assert_eq!(map.datum, Datum::Unspecified);
+    assert_eq!(map.uncertainty_m, 3500.0);
+    for control in map.controls.iter().chain(&map.check_points) {
+        let source = input
+            .data
+            .records
+            .iter()
+            .find(|r| r.id == control.coordinate_record_id)
+            .unwrap();
+        let coordinate = source.observation.coordinate.as_ref().unwrap();
+        assert_eq!(coordinate.resolution_arcminutes, 1.0);
+        assert_eq!(coordinate.datum, Datum::Unspecified);
+        assert_eq!(
+            source.scan_page,
+            Some(
+                source
+                    .page_or_sheet
+                    .as_ref()
+                    .unwrap()
+                    .parse::<u32>()
+                    .unwrap()
+                    + 35
+            )
+        );
+        assert!(estimates.iter().all(|e| e.basis.contains(&source.id)));
+    }
+}

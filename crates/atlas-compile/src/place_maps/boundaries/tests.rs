@@ -160,3 +160,66 @@ fn explicit_boundary_registration_replaces_the_automatic_fit_for_its_record() {
         assert!((actual.y - expected.y).abs() < 1e-12);
     }
 }
+
+#[test]
+fn county_outline_publishes_closed_geometry_containing_its_mapped_places() {
+    use atlas_core::identity::EntityId;
+
+    let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    let output = export::compile(&input).unwrap();
+    let id = EntityId::from_key("earth/cn-gz/bijie/bijie-county").unwrap();
+    let path = format!("entities/index/{}.json", id.shard());
+    let shard: serde_json::Value = serde_json::from_slice(&output[Path::new(&path)]).unwrap();
+    let boundary: GeographicBoundary =
+        serde_json::from_value(shard[id.0.to_string()]["boundaries"][0].clone()).unwrap();
+    let feature = boundary.feature(&input.data, None).unwrap();
+    assert_eq!(feature["properties"]["geometry_kind"], "mapped_polygon");
+    assert_eq!(feature["properties"]["scan_page"], 658);
+    assert_eq!(feature["properties"]["boundary_method"], "unstated");
+    assert!(feature["properties"]["validity"].is_null());
+    assert_eq!(boundary.datum, Datum::Unspecified);
+    assert_eq!(boundary.registration_allowance_m, Some(3500.0));
+    assert_eq!(boundary.registration, "maps/bijie-county.json");
+    let polygon = &boundary.unit.polygons[0];
+    assert!(polygon.interiors.is_empty());
+    assert_eq!(polygon.exterior.first(), polygon.exterior.last());
+    let ring: Vec<_> = polygon
+        .exterior
+        .iter()
+        .map(|i| boundary.vertices[*i])
+        .collect();
+    assert!(
+        ring.iter()
+            .all(|p| (104.8..106.0).contains(&p.x) && (27.0..27.9).contains(&p.y))
+    );
+    let (_, locations) = register_places(&input, &input.place_maps["bijie-county"]).unwrap();
+    for location in locations {
+        let EstimateValue::MapLocation { point, .. } = location.value else {
+            panic!("registered place expected")
+        };
+        assert!(
+            contains(
+                &ring,
+                PlanarPoint {
+                    x: point.longitude,
+                    y: point.latitude
+                }
+            ),
+            "{} lies outside the county outline",
+            location.key
+        );
+    }
+}
+
+#[cfg(test)]
+fn contains(ring: &[PlanarPoint], point: PlanarPoint) -> bool {
+    ring.windows(2)
+        .filter(|edge| {
+            let (a, b) = (edge[0], edge[1]);
+            (a.y > point.y) != (b.y > point.y)
+                && point.x < (b.x - a.x) * (point.y - a.y) / (b.y - a.y) + a.x
+        })
+        .count()
+        % 2
+        == 1
+}

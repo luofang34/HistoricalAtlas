@@ -46,6 +46,28 @@ impl Camera {
         self.pan(x, y);
     }
 
+    /// Frame a non-wrapping geographic extent with space around its edges.
+    pub fn fit_bounds(&mut self, [low, high]: [LonLat; 2], viewport: [f64; 2]) {
+        self.center = LonLat {
+            longitude: (low.longitude + high.longitude) / 2.0,
+            latitude: (low.latitude + high.latitude) / 2.0,
+        };
+        let center = project(self.center);
+        let a = project(low);
+        let b = project(high);
+        self.zoom = a
+            .into_iter()
+            .zip(b)
+            .zip(center)
+            .zip(viewport)
+            .map(|(((a, b), center), pixels)| {
+                let span = 2.0 * (a - center).abs().max((b - center).abs());
+                (pixels.max(1.0) * 0.85 / (512.0 * span.max(1e-12))).log2()
+            })
+            .fold(18.0_f64, f64::min)
+            .clamp(0.0, 18.0);
+    }
+
     /// Keep a flat viewport inside the projection's north and south edges.
     pub fn fit_height(&mut self, height: f64) {
         let height = height.max(1.0);

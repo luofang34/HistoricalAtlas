@@ -136,7 +136,7 @@ impl Application {
         painter.text(
             rect.left_bottom() + egui::vec2(12.0, -12.0),
             Align2::LEFT_BOTTOM,
-            "Commune boundary · Settlement and administrative seats",
+            "Administrative boundaries · Places and administrative seats",
             FontId::proportional(12.0),
             Color32::DARK_GRAY,
         );
