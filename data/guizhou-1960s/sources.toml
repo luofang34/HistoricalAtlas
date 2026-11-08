@@ -83,3 +83,9 @@ id = "puan-gazetteer"
 title = "普安县地名录"
 scan_pages = 186
 scan_sha256 = "80d5fc1d2a8a4c4e0e651f7ef1d649df74727053d77f5998ec48661e444a73f0"
+
+[[sources]]
+id = "academia-sinica-calendar"
+title = "兩千年中西曆轉換"
+responsibility = "中央研究院數位文化中心"
+url = "https://sinocal.sinica.edu.tw/"

@@ -1,9 +1,11 @@
-//! Explicit calendar conversion without an implicit UTC/TT or era-name guess.
+//! Civil calendar conversion and cited historical era concordances.
 
 use serde::{Deserialize, Serialize};
 use thiserror::Error;
 
 use crate::time::{EpochTime, TimeError};
+
+pub mod era;
 
 /// Calendar used to interpret a numeric civil date.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
@@ -27,6 +29,9 @@ pub struct SourceDate {
     pub convention: String,
     /// Citation or explanation for conversion, absent when unconverted.
     pub conversion_basis: Option<String>,
+    /// Reviewed era-to-civil concordance, including its calendar source.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub era_conversion: Option<era::EraConcordance>,
 }
 
 /// Numeric civil date using astronomical year numbering (year zero is 1 BCE).

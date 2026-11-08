@@ -4,6 +4,7 @@ use std::collections::BTreeMap;
 
 use atlas_core::identity::{EntityId, FactId};
 mod citations;
+mod dates;
 pub(crate) mod error;
 mod estimates;
 mod hierarchy;
@@ -53,6 +54,7 @@ fn validate_record(
         .get(record.source_id.as_str())
         .ok_or_else(|| fail(&record.key, "unknown source"))?;
     citations::validate_citation(record, source)?;
+    dates::validate_dates(record, sources)?;
     for target in record
         .observation
         .parent_id

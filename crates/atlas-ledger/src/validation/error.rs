@@ -1,4 +1,4 @@
-use atlas_core::{identity::InvalidKey, time::TimeError};
+use atlas_core::{calendar::era::EraError, identity::InvalidKey, time::TimeError};
 use atlas_geo::coordinates::CoordinateError;
 use thiserror::Error;
 
@@ -18,6 +18,9 @@ pub struct ValidationError {
 /// Domain errors retained when validating ledger evidence.
 #[derive(Debug, Error)]
 pub enum ValidationCause {
+    /// Historical era conversion failure.
+    #[error(transparent)]
+    Calendar(#[from] EraError),
     /// Semantic key failure.
     #[error(transparent)]
     Identity(#[from] InvalidKey),

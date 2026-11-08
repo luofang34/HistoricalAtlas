@@ -1,5 +1,5 @@
 use super::Application;
-use atlas_core::identity::EntityId;
+use atlas_core::{identity::EntityId, time::EpochTime};
 use atlas_ledger::model::Record;
 
 impl Application {
@@ -10,6 +10,7 @@ impl Application {
             return;
         };
         let mut navigate = None;
+        let mut date_target = None;
         egui::ScrollArea::vertical()
             .id_salt("evidence-scroll")
             .show(ui, |ui| {
@@ -20,7 +21,11 @@ impl Application {
                 if let Some(entry) = self.atlas.entry(id) {
                     ui.strong("Source observations");
                     for record in &entry.records {
-                        ui.push_id(record.id.0, |ui| self.record(ui, record));
+                        if let Some(at) =
+                            ui.push_id(record.id.0, |ui| self.record(ui, record)).inner
+                        {
+                            date_target = Some(at);
+                        }
                     }
                     ui.separator();
                     ui.strong("At selected time");
@@ -41,6 +46,11 @@ impl Application {
             });
         if let Some(id) = navigate {
             self.select(id, true);
+        }
+        if let Some(at) = date_target {
+            self.time.mode = crate::selection::TimeMode::Ticks;
+            self.time.value = at.ticks().to_string();
+            self.apply_time();
         }
     }
 
@@ -64,7 +74,7 @@ impl Application {
         target
     }
 
-    fn record(&self, ui: &mut egui::Ui, record: &Record) {
+    fn record(&self, ui: &mut egui::Ui, record: &Record) -> Option<EpochTime> {
         ui.group(|ui| {
             if let Some(source) = self
                 .atlas
@@ -107,9 +117,10 @@ impl Application {
             if let Some(households) = record.observation.households {
                 ui.label(format!("Households: {households}"));
             }
-            if let Some(date) = &record.source_date {
-                ui.label(format!("Source date: {}", date.text));
-            }
+            let date_target = record
+                .source_date
+                .as_ref()
+                .and_then(|date| self.source_date(ui, date));
             if let Some(quote) = &record.verbatim_quote {
                 ui.label(quote);
             }
@@ -120,7 +131,9 @@ impl Application {
                 ui.label(format!("Former name: {}", name.name));
             }
             json_value(ui, "Complete record", record);
-        });
+            date_target
+        })
+        .inner
     }
 }
 

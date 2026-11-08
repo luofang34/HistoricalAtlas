@@ -107,3 +107,7 @@ pub enum SliceError {
 
 #[cfg(test)]
 mod tests;
+
+#[cfg(test)]
+#[path = "slice/chronology/tests.rs"]
+mod chronology_tests;
