@@ -328,3 +328,7 @@ mod haizijie_tests;
 #[cfg(test)]
 #[path = "export/zhijin/tests.rs"]
 mod zhijin_tests;
+
+#[cfg(test)]
+#[path = "export/pingqiao/tests.rs"]
+mod pingqiao_tests;

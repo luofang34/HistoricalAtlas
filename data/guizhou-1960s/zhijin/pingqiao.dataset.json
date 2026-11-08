@@ -1,0 +1,2195 @@
+{
+  "entities": [
+    {
+      "id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+      "key": "earth/cn-gz/zhijin/pingqiao-commune",
+      "body": "earth",
+      "kind": "commune"
+    },
+    {
+      "id": "c48c9d80-9758-5689-a002-f85e85511245",
+      "key": "earth/cn-gz/zhijin/pingqiao/pingqiao-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "9efa8f9e-e5ab-5bde-b1b1-1ec9b0db53c5",
+      "key": "earth/cn-gz/zhijin/pingqiao/laowu-ji",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "23a50fd5-2305-59b7-acbd-a6cfb4c6039e",
+      "key": "earth/cn-gz/zhijin/pingqiao/huamu-wei",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "9637d564-77cc-5062-89e1-d9fcc7a5c9fd",
+      "key": "earth/cn-gz/zhijin/pingqiao/hewan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "26ca3ff3-5f23-52bb-9be4-99b18e36461f",
+      "key": "earth/cn-gz/zhijin/pingqiao/kengkeng-tian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "16b01e17-0c44-5658-b517-2e6e84aea5b0",
+      "key": "earth/cn-gz/zhijin/pingqiao/luokeng-tian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "6bff572b-2be7-56eb-a375-d4725d7ff1b5",
+      "key": "earth/cn-gz/zhijin/pingqiao/chaye-chang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "8fd25054-dee7-5cb7-b2c2-86e3feec447c",
+      "key": "earth/cn-gz/zhijin/pingqiao/chenjia-zhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
+      "key": "earth/cn-gz/zhijin/pingqiao/zhongba-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "3a348037-cb70-5ce7-9852-2bd4dd0548df",
+      "key": "earth/cn-gz/zhijin/pingqiao/ganba",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "03f51f99-24ca-5c6e-838d-c73db1c09ddf",
+      "key": "earth/cn-gz/zhijin/pingqiao/baima-dong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "a90301e9-9de3-56ce-8211-8b5ea6fb5eab",
+      "key": "earth/cn-gz/zhijin/pingqiao/gao-zhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "3a9a78d5-9b86-52ce-9fb2-54ebb28c72fd",
+      "key": "earth/cn-gz/zhijin/pingqiao/yangjia-wan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "6b99d65c-96a1-5c5e-bc3f-1daa1bc2c47f",
+      "key": "earth/cn-gz/zhijin/pingqiao/jiudao-wan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "1425d9d3-cb1f-5196-962b-d933e1fc2d1b",
+      "key": "earth/cn-gz/zhijin/pingqiao/miaofen-po",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "ceba911a-00fe-5810-9a5a-216535af9a71",
+      "key": "earth/cn-gz/zhijin/pingqiao/toutang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "8e1c39d5-30ed-5e06-b220-1c66f0444e16",
+      "key": "earth/cn-gz/zhijin/pingqiao/dashu-jiao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "0d0797c7-293d-5ed5-9fe6-f4e4824b18a4",
+      "key": "earth/cn-gz/zhijin/pingqiao/hou-chong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "0db02f02-3df1-56c2-9696-c1c533bbd31f",
+      "key": "earth/cn-gz/zhijin/pingqiao/miao-zhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "62e3dd39-7659-59d4-953d-5931319826f3",
+      "key": "earth/cn-gz/zhijin/pingqiao/yangliu-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "55271efb-b044-5738-8520-05236a000137",
+      "key": "earth/cn-gz/zhijin/pingqiao/yangliu-he",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "85cb345d-1797-50d9-a880-cabbdf6ca62d",
+      "key": "earth/cn-gz/zhijin/pingqiao/pianpo-zhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "8bb291de-d447-5895-a988-5e79aa9e257f",
+      "key": "earth/cn-gz/zhijin/pingqiao/renren-shan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "0ce425e3-0522-50b1-af12-f0c707b34493",
+      "key": "earth/cn-gz/zhijin/pingqiao/heipo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "982494a7-837e-5446-aa76-abe5fbeb1fd7",
+      "key": "earth/cn-gz/zhijin/pingqiao/tudi-ya",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "7226cd4d-d225-5317-9da1-1441ee17eea8",
+      "key": "earth/cn-gz/zhijin/pingqiao/xiaomu-ga",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "875692da-e7a7-52e7-a642-70f0545df8f7",
+      "key": "earth/cn-gz/zhijin/pingqiao/yantou-shang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "9280e5b2-e7d0-59d8-a3d5-3f720df1b435",
+      "key": "earth/cn-gz/zhijin/pingqiao/shiguan-kou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "200e3fef-54ac-561a-9c51-2809bd01c056",
+      "key": "earth/cn-gz/zhijin/pingqiao/tianjia-zhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "41aad126-f0bd-519a-864c-21578897c9fa",
+      "key": "earth/cn-gz/zhijin/pingqiao/shuiyan-chong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "3a084794-0f99-5884-8cef-c735ff05ee1b",
+      "key": "earth/cn-gz/zhijin/pingqiao/sanjia-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "34332762-dacc-54ec-8ca5-2c281e616a62",
+      "key": "earth/cn-gz/zhijin/pingqiao/dashi-ban",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "b4e8d4b5-203c-56c1-8759-6e074952a19d",
+      "key": "earth/cn-gz/zhijin/pingqiao/huangshui-gou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "27cc4b56-9501-58c0-bf0a-5e4648444e10",
+      "key": "earth/cn-gz/zhijin/pingqiao/yakou-tian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "9fd9faa7-6f0a-5d26-a4e0-5ebf94eb1026",
+      "key": "earth/cn-gz/zhijin/pingqiao/sanjia-shan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "0ba35cdd-9a39-5450-9516-64a1de9d275f",
+      "key": "earth/cn-gz/zhijin/pingqiao/sijiao-tian",
+      "body": "earth",
+      "kind": "settlement"
+    }
+  ],
+  "records": [
+    {
+      "id": "622d4397-e59e-5516-a2b1-0f4e143bef56",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/pingqiao-brigade",
+      "entity_id": "c48c9d80-9758-5689-a002-f85e85511245",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "Brigade heading and seat annotation in the following settlement rows",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "平桥大队",
+        "pinyin": null,
+        "population": 1047,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "brigade",
+        "seat_id": "9efa8f9e-e5ab-5bde-b1b1-1ec9b0db53c5",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2de31e15-e571-5968-a452-3b6864bc7c5d",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/laowu-ji",
+      "entity_id": "9efa8f9e-e5ab-5bde-b1b1-1ec9b0db53c5",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "平桥大队, settlement row 1: 老屋基",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "老屋基",
+        "pinyin": null,
+        "population": 182,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c48c9d80-9758-5689-a002-f85e85511245",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "1d9bd08b-dcfc-5e5e-8eb1-ad0face8fc3e",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/laowu-ji",
+      "entity_id": "9efa8f9e-e5ab-5bde-b1b1-1ec9b0db53c5",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "老屋基",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "18d4c97c-312d-5a79-8f82-e938684cd27a",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/huamu-wei",
+      "entity_id": "23a50fd5-2305-59b7-acbd-a6cfb4c6039e",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "平桥大队, settlement row 2: 化木尾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "化木尾",
+        "pinyin": null,
+        "population": 115,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c48c9d80-9758-5689-a002-f85e85511245",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "05b58a94-4d3a-5807-a295-44b00470d79c",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/huamu-wei",
+      "entity_id": "23a50fd5-2305-59b7-acbd-a6cfb4c6039e",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "化木尾",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "541ba620-27a5-51a1-873e-1ecd78dc586e",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/hewan",
+      "entity_id": "9637d564-77cc-5062-89e1-d9fcc7a5c9fd",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "平桥大队, settlement row 3: 河湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "河湾",
+        "pinyin": null,
+        "population": 207,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "c48c9d80-9758-5689-a002-f85e85511245",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "55441122-8cdb-5356-a258-a163b0b87fec",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/hewan",
+      "entity_id": "9637d564-77cc-5062-89e1-d9fcc7a5c9fd",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "河湾",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8ff447b1-d9ea-54c7-9ce0-0f5875a24bfe",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/kengkeng-tian",
+      "entity_id": "26ca3ff3-5f23-52bb-9be4-99b18e36461f",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "平桥大队, settlement row 4: 坑坑田",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "坑坑田",
+        "pinyin": null,
+        "population": 187,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "c48c9d80-9758-5689-a002-f85e85511245",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "94c4e213-8c51-5fcb-abf8-7f5f5b539e6e",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/luokeng-tian",
+      "entity_id": "16b01e17-0c44-5658-b517-2e6e84aea5b0",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "落坑田",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f65c12ff-98e5-51e7-93e5-03fcf83d4dfa",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/chaye-chang",
+      "entity_id": "6bff572b-2be7-56eb-a375-d4725d7ff1b5",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "平桥大队, settlement row 5: 茶叶厂",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "茶叶厂",
+        "pinyin": null,
+        "population": 106,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c48c9d80-9758-5689-a002-f85e85511245",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "07c066e7-3ca7-5dee-95fd-093264997f1d",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/chaye-chang",
+      "entity_id": "6bff572b-2be7-56eb-a375-d4725d7ff1b5",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "茶叶厂",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3c81a217-3c06-5c03-a692-65e19240430e",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/chenjia-zhai",
+      "entity_id": "8fd25054-dee7-5cb7-b2c2-86e3feec447c",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "平桥大队, settlement row 6: 陈家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "陈家寨",
+        "pinyin": null,
+        "population": 177,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c48c9d80-9758-5689-a002-f85e85511245",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "845a0bd8-e8b6-57b9-8845-7ff0f6bd1a50",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/chenjia-zhai",
+      "entity_id": "8fd25054-dee7-5cb7-b2c2-86e3feec447c",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "陈家寨",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "59879190-99af-51e6-8aac-b84374dd3dd3",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/pingqiao-brigade",
+      "entity_id": "c48c9d80-9758-5689-a002-f85e85511245",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Brigade label with a parenthesized seat at its map symbol",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "平桥大队",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "brigade",
+        "seat_id": "9efa8f9e-e5ab-5bde-b1b1-1ec9b0db53c5",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d938e956-5ed4-5462-8f30-49a8fe094290",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/zhongba-brigade",
+      "entity_id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "Brigade heading and seat annotation in the following settlement rows",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "中坝大队",
+        "pinyin": null,
+        "population": 1326,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "青",
+          "苗",
+          "仡佬"
+        ],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "brigade",
+        "seat_id": "3a348037-cb70-5ce7-9852-2bd4dd0548df",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8b661125-9cd1-5322-8aa0-c2b0563fe01e",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/ganba",
+      "entity_id": "3a348037-cb70-5ce7-9852-2bd4dd0548df",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "中坝大队, settlement row 1: 干坝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "干坝",
+        "pinyin": null,
+        "population": 213,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c5d6335f-aec6-59c8-b37d-eec6c1cd4ef8",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/ganba",
+      "entity_id": "3a348037-cb70-5ce7-9852-2bd4dd0548df",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "干坝",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "32ed76bd-a247-57bc-ba84-54e9812205de",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/baima-dong",
+      "entity_id": "03f51f99-24ca-5c6e-838d-c73db1c09ddf",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "中坝大队, settlement row 2: 白马洞",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "白马洞",
+        "pinyin": null,
+        "population": 81,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "仡佬"
+        ],
+        "parent_id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8090394f-de30-5df4-a9ff-5f84934aa5a0",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/baima-dong",
+      "entity_id": "03f51f99-24ca-5c6e-838d-c73db1c09ddf",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "白马洞",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7abb5672-b269-5293-9a99-d3836ce52f77",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/gao-zhai",
+      "entity_id": "a90301e9-9de3-56ce-8211-8b5ea6fb5eab",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "中坝大队, settlement row 3: 高寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "高寨",
+        "pinyin": null,
+        "population": 168,
+        "households": null,
+        "ethnicities": [
+          "苗"
+        ],
+        "parent_id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "068e084b-fa69-5c10-93d9-e15730f24f4e",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/gao-zhai",
+      "entity_id": "a90301e9-9de3-56ce-8211-8b5ea6fb5eab",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "高寨",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bc010eb0-d331-5ad5-960c-e3f1e06a84ed",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/yangjia-wan",
+      "entity_id": "3a9a78d5-9b86-52ce-9fb2-54ebb28c72fd",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "中坝大队, settlement row 4: 杨家湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "杨家湾",
+        "pinyin": null,
+        "population": 212,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "18d934ff-4f55-5484-b300-70155d359b66",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/yangjia-wan",
+      "entity_id": "3a9a78d5-9b86-52ce-9fb2-54ebb28c72fd",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "杨家湾",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "1e9f7550-03ae-5c6c-a05b-b692b7d5f17b",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/jiudao-wan",
+      "entity_id": "6b99d65c-96a1-5c5e-bc3f-1daa1bc2c47f",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "中坝大队, settlement row 5: 九道湾",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "九道湾",
+        "pinyin": null,
+        "population": 110,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "青",
+          "苗"
+        ],
+        "parent_id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2d5808e2-435c-5ee1-a075-f29c0ba49d5b",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/jiudao-wan",
+      "entity_id": "6b99d65c-96a1-5c5e-bc3f-1daa1bc2c47f",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "九道湾",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "37c5026c-f951-59ff-ba06-9c144f78cd8f",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/miaofen-po",
+      "entity_id": "1425d9d3-cb1f-5196-962b-d933e1fc2d1b",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "中坝大队, settlement row 6: 苗坟坡",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "苗坟坡",
+        "pinyin": null,
+        "population": 69,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "青"
+        ],
+        "parent_id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7edd5345-744b-59fa-b429-ad1cd39bbf13",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/miaofen-po",
+      "entity_id": "1425d9d3-cb1f-5196-962b-d933e1fc2d1b",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "苗坟坡",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8b00619a-39d4-542e-bfd4-b9b3c485d3fb",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/toutang",
+      "entity_id": "ceba911a-00fe-5810-9a5a-216535af9a71",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "中坝大队, settlement row 7: 头塘",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "头塘",
+        "pinyin": null,
+        "population": 132,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "781ba270-9090-590a-8958-c001c51706d8",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/toutang",
+      "entity_id": "ceba911a-00fe-5810-9a5a-216535af9a71",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "头塘",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d32eda45-03d0-5343-befc-fa96231b700b",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/dashu-jiao",
+      "entity_id": "8e1c39d5-30ed-5e06-b220-1c66f0444e16",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "中坝大队, settlement row 8: 大树脚",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大树脚",
+        "pinyin": null,
+        "population": 116,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6ef9a5a1-b2d9-52d0-a896-ef556cf9bbbf",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/dashu-jiao",
+      "entity_id": "8e1c39d5-30ed-5e06-b220-1c66f0444e16",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大树脚",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "71d31389-3f1d-5268-a04f-25b803603e13",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/hou-chong",
+      "entity_id": "0d0797c7-293d-5ed5-9fe6-f4e4824b18a4",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "中坝大队, settlement row 9: 后冲",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "后冲",
+        "pinyin": null,
+        "population": 149,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f1b62ad4-40c7-54a2-b868-e1a548d1855d",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/hou-chong",
+      "entity_id": "0d0797c7-293d-5ed5-9fe6-f4e4824b18a4",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "后冲",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "179b3a2c-d211-55b2-98a9-f8432a4ed721",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/miao-zhai",
+      "entity_id": "0db02f02-3df1-56c2-9696-c1c533bbd31f",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "中坝大队, settlement row 10: 苗寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "苗寨",
+        "pinyin": null,
+        "population": 30,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "26f9416f-4442-5772-98ae-b37a381933a3",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/miao-zhai",
+      "entity_id": "0db02f02-3df1-56c2-9696-c1c533bbd31f",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "苗寨",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "0de793b3-6505-551f-aa72-ef34bae15360",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/zhongba-brigade",
+      "entity_id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Brigade label with a parenthesized seat at its map symbol",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "中坝大队",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "brigade",
+        "seat_id": "3a348037-cb70-5ce7-9852-2bd4dd0548df",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "12908dfd-5ab3-5551-8ecc-19aa7534acc0",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/yangliu-brigade",
+      "entity_id": "62e3dd39-7659-59d4-953d-5931319826f3",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "Brigade heading and seat annotation in the following settlement rows",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "杨柳大队",
+        "pinyin": null,
+        "population": 1017,
+        "households": null,
+        "ethnicities": [
+          "苗",
+          "汉",
+          "青"
+        ],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "brigade",
+        "seat_id": "55271efb-b044-5738-8520-05236a000137",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7c382d60-7749-58b3-871f-4d49277c6b7a",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/yangliu-he",
+      "entity_id": "55271efb-b044-5738-8520-05236a000137",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "杨柳大队, settlement row 1: 杨柳河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "杨柳河",
+        "pinyin": null,
+        "population": 227,
+        "households": null,
+        "ethnicities": [
+          "苗",
+          "汉"
+        ],
+        "parent_id": "62e3dd39-7659-59d4-953d-5931319826f3",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f8a634be-4f52-5098-83b5-a7bb0aa347aa",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/yangliu-he",
+      "entity_id": "55271efb-b044-5738-8520-05236a000137",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "杨柳河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6c1a2097-eb92-5e3d-851d-170378709d21",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/pianpo-zhai",
+      "entity_id": "85cb345d-1797-50d9-a880-cabbdf6ca62d",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "杨柳大队, settlement row 2: 偏坡寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "偏坡寨",
+        "pinyin": null,
+        "population": 131,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "青"
+        ],
+        "parent_id": "62e3dd39-7659-59d4-953d-5931319826f3",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d2076f58-de38-5ae4-adde-607533d58e11",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/pianpo-zhai",
+      "entity_id": "85cb345d-1797-50d9-a880-cabbdf6ca62d",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "偏坡寨",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "1fac0e64-e589-5c9f-aa4c-75aeef28659d",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/renren-shan",
+      "entity_id": "8bb291de-d447-5895-a988-5e79aa9e257f",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "杨柳大队, settlement row 3: 人人山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "人人山",
+        "pinyin": null,
+        "population": 127,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "62e3dd39-7659-59d4-953d-5931319826f3",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "683e3ec3-a845-56db-b39b-f01b5cf7daa1",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/renren-shan",
+      "entity_id": "8bb291de-d447-5895-a988-5e79aa9e257f",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "人人山",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "65eb0464-a36b-58c9-9754-4411c217de95",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/heipo",
+      "entity_id": "0ce425e3-0522-50b1-af12-f0c707b34493",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "杨柳大队, settlement row 4: 黑坡",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "黑坡",
+        "pinyin": null,
+        "population": 61,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "62e3dd39-7659-59d4-953d-5931319826f3",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e74e32d0-dc6b-53f9-9bf2-cc07a4da31f0",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/heipo",
+      "entity_id": "0ce425e3-0522-50b1-af12-f0c707b34493",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "黑坡",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6bdcbd2f-0d47-5373-9755-3c88fbcb7cd6",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/tudi-ya",
+      "entity_id": "982494a7-837e-5446-aa76-abe5fbeb1fd7",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "杨柳大队, settlement row 5: 土地垭",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "土地垭",
+        "pinyin": null,
+        "population": 20,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "62e3dd39-7659-59d4-953d-5931319826f3",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "289ac483-1e37-5779-9ea2-b851b5f9bebf",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/tudi-ya",
+      "entity_id": "982494a7-837e-5446-aa76-abe5fbeb1fd7",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "土地垭",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "659bf704-54ec-58f4-84b4-f19c62cab0b6",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/xiaomu-ga",
+      "entity_id": "7226cd4d-d225-5317-9da1-1441ee17eea8",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "杨柳大队, settlement row 6: 小木戛",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小木戛",
+        "pinyin": null,
+        "population": 86,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "青"
+        ],
+        "parent_id": "62e3dd39-7659-59d4-953d-5931319826f3",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7382db9f-534a-5b98-9cfc-ad74ab29dcd5",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/xiaomu-ga",
+      "entity_id": "7226cd4d-d225-5317-9da1-1441ee17eea8",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小木戛",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a2c70005-22fe-5f58-86c3-42343413b273",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/yantou-shang",
+      "entity_id": "875692da-e7a7-52e7-a642-70f0545df8f7",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "杨柳大队, settlement row 7: 岩头上",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "岩头上",
+        "pinyin": null,
+        "population": 154,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "青"
+        ],
+        "parent_id": "62e3dd39-7659-59d4-953d-5931319826f3",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5359cef4-fe8c-5f51-9499-6b4b6b2f4539",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/yantou-shang",
+      "entity_id": "875692da-e7a7-52e7-a642-70f0545df8f7",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "岩头上",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "33aafb37-6b3b-52e9-aae6-3da77d35d053",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/shiguan-kou",
+      "entity_id": "9280e5b2-e7d0-59d8-a3d5-3f720df1b435",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "杨柳大队, settlement row 8: 石关口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "石关口",
+        "pinyin": null,
+        "population": 8,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "62e3dd39-7659-59d4-953d-5931319826f3",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8cf2f4f4-fb3e-5916-9371-bc660261b718",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/shiguan-kou",
+      "entity_id": "9280e5b2-e7d0-59d8-a3d5-3f720df1b435",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "石关口",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "30e3e36a-1126-5172-9e7c-c86bd960eee5",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/tianjia-zhai",
+      "entity_id": "200e3fef-54ac-561a-9c51-2809bd01c056",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "杨柳大队, settlement row 9: 田家寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "田家寨",
+        "pinyin": null,
+        "population": 100,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "62e3dd39-7659-59d4-953d-5931319826f3",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "f999c53d-2817-5501-b692-2974639b7b17",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/tianjia-zhai",
+      "entity_id": "200e3fef-54ac-561a-9c51-2809bd01c056",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "田家寨",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4c40732c-8e7a-53b4-9c2e-c2b68383387e",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/shuiyan-chong",
+      "entity_id": "41aad126-f0bd-519a-864c-21578897c9fa",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "杨柳大队, settlement row 10: 水淹冲",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "水淹冲",
+        "pinyin": null,
+        "population": 67,
+        "households": null,
+        "ethnicities": [
+          "苗"
+        ],
+        "parent_id": "62e3dd39-7659-59d4-953d-5931319826f3",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b085140e-db67-5f25-86b9-0be410c730ec",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/shuiyan-chong",
+      "entity_id": "41aad126-f0bd-519a-864c-21578897c9fa",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "水淹冲",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "65ced782-44d8-583a-b1c4-bd673a255088",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/yangliu-brigade",
+      "entity_id": "62e3dd39-7659-59d4-953d-5931319826f3",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Brigade label with a parenthesized seat at its map symbol",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "杨柳大队",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "brigade",
+        "seat_id": "55271efb-b044-5738-8520-05236a000137",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "848eda65-9f70-5f2e-8b87-d71f635ba62f",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/sanjia-brigade",
+      "entity_id": "3a084794-0f99-5884-8cef-c735ff05ee1b",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "Brigade heading and seat annotation in the following settlement rows",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "三架大队",
+        "pinyin": null,
+        "population": 1004,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "青"
+        ],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "brigade",
+        "seat_id": "34332762-dacc-54ec-8ca5-2c281e616a62",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "cdd5be49-804b-5d74-b37d-b72720a1c039",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/dashi-ban",
+      "entity_id": "34332762-dacc-54ec-8ca5-2c281e616a62",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "三架大队, settlement row 1: 大石板",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大石板",
+        "pinyin": null,
+        "population": 197,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "青"
+        ],
+        "parent_id": "3a084794-0f99-5884-8cef-c735ff05ee1b",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b6f83d2c-19f8-53ef-9f88-94bbef3675b2",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/dashi-ban",
+      "entity_id": "34332762-dacc-54ec-8ca5-2c281e616a62",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大石板",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "277e1432-82a2-5c8b-be05-2d47bf38b867",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/huangshui-gou",
+      "entity_id": "b4e8d4b5-203c-56c1-8759-6e074952a19d",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "三架大队, settlement row 2: 黄水沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "黄水沟",
+        "pinyin": null,
+        "population": 193,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "青"
+        ],
+        "parent_id": "3a084794-0f99-5884-8cef-c735ff05ee1b",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e0bad8ff-15ba-56d1-9940-3f38e4042674",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/huangshui-gou",
+      "entity_id": "b4e8d4b5-203c-56c1-8759-6e074952a19d",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "黄水沟",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "13e7ee03-8a77-520b-ae3a-50ca7b5f5ed5",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/yakou-tian",
+      "entity_id": "27cc4b56-9501-58c0-bf0a-5e4648444e10",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "三架大队, settlement row 3: 垭口田",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "垭口田",
+        "pinyin": null,
+        "population": 99,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "3a084794-0f99-5884-8cef-c735ff05ee1b",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4027e3ca-8961-561e-b97f-861f41c98f39",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/yakou-tian",
+      "entity_id": "27cc4b56-9501-58c0-bf0a-5e4648444e10",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "垭口田",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "93e31ab6-913c-5674-b630-4a6848eed2b6",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/sanjia-shan",
+      "entity_id": "9fd9faa7-6f0a-5d26-a4e0-5ebf94eb1026",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "三架大队, settlement row 4: 三架山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "三架山",
+        "pinyin": null,
+        "population": 103,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "3a084794-0f99-5884-8cef-c735ff05ee1b",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "be6035b0-25e0-508f-8441-836058c4e373",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/sanjia-shan",
+      "entity_id": "9fd9faa7-6f0a-5d26-a4e0-5ebf94eb1026",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "三架山",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d61083e1-d89f-5a36-8e80-e849d03b22a8",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/sijiao-tian",
+      "entity_id": "0ba35cdd-9a39-5450-9516-64a1de9d275f",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "三架大队, settlement row 5: 四角田",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "四角田",
+        "pinyin": null,
+        "population": 373,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "3a084794-0f99-5884-8cef-c735ff05ee1b",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "32c167a1-c40f-591b-8ca0-58c174422b85",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/sijiao-tian",
+      "entity_id": "0ba35cdd-9a39-5450-9516-64a1de9d275f",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Named settlement symbol on the 1:50,000 commune map",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "四角田",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "settlement",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ad318edc-1872-5ec6-9734-114194ad4545",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/sanjia-brigade",
+      "entity_id": "3a084794-0f99-5884-8cef-c735ff05ee1b",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Brigade label with a parenthesized seat at its map symbol",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "三架山大队",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+        "rank": "brigade",
+        "seat_id": "34332762-dacc-54ec-8ca5-2c281e616a62",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "12651e3a-4891-57b9-b5b9-221a8d4eb23f",
+      "key": "zhijin-gazetteer-scan-b/p25/pingqiao/boundary",
+      "entity_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "25",
+      "scan_page": 33,
+      "locator": "Map title, scale 1:50,000, commune seat and outer boundary",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "平桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "9efa8f9e-e5ab-5bde-b1b1-1ec9b0db53c5",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "84ed2afe-2883-58c2-a73e-74177d68b177",
+      "key": "zhijin-gazetteer-scan-b/p27/pingqiao/commune-seat",
+      "entity_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "27",
+      "scan_page": 35,
+      "locator": "老屋基 row, 公社、大队驻地 annotation",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "平桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": "9efa8f9e-e5ab-5bde-b1b1-1ec9b0db53c5",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "cb41aba0-69aa-58cf-a90b-d504cd085c3b",
+      "key": "zhijin-gazetteer-scan-b/p26/pingqiao/overview",
+      "entity_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "26",
+      "scan_page": 34,
+      "locator": "Overview first paragraph and dated signature",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": {
+        "text": "一九八一年九月十四日",
+        "convention": "Gregorian date of the overview",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "平桥公社",
+        "pinyin": null,
+        "population": 4394,
+        "households": 891,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "青",
+          "仡老",
+          "夷",
+          "水",
+          "菜"
+        ],
+        "parent_id": "d3b7c1c7-e72e-590a-b33f-01b7a4b6d140",
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview lists four brigades and 31 natural villages over approximately 24 square kilometres."
+      }
+    },
+    {
+      "id": "19151c13-6190-5cdb-ac12-60e54b968d59",
+      "key": "zhijin-gazetteer-scan-b/p26/pingqiao/printed-coordinate",
+      "entity_id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
+      "source_id": "zhijin-gazetteer-scan-b",
+      "page_or_sheet": "26",
+      "scan_page": 34,
+      "locator": "First paragraph, printed geographical coordinate",
+      "verbatim_quote": "东经105°47′北纬26°42′",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "平桥公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.78333333333333,
+            "latitude": 26.7
+          },
+          "longitude_text": "105°47′",
+          "latitude_text": "26°42′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

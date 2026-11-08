@@ -92,3 +92,35 @@ fn qimo_drawing_preserves_seat_disagreement_and_separate_commune_symbols() {
             .all(|r| r.observation.coordinate.is_none())
     );
 }
+
+#[test]
+fn pingqiao_drawing_selects_the_village_brigade_and_commune_at_the_shared_seat() {
+    let atlas = crate::catalog::tests::atlas();
+    let id = |key| EntityId::from_key(&format!("earth/cn-gz/zhijin/{key}")).unwrap();
+    let commune = id("pingqiao-commune");
+    let drawing = atlas.drawings(commune)[0];
+    assert_eq!(drawing.scan_page, 33);
+    assert_eq!(drawing.units.len(), 1);
+    assert_eq!(drawing.places.len(), 36);
+    assert_eq!(drawing.vertices.len(), 108);
+    let symbols = points(&atlas, drawing);
+    assert_eq!(symbols.len(), 31);
+    let hits = pick(&symbols, |p| {
+        ((p.x - 540.0).powi(2) + (p.y - 802.0).powi(2)).sqrt() as f32
+    });
+    assert_eq!(
+        hits.into_iter().collect::<std::collections::BTreeSet<_>>(),
+        [
+            commune,
+            id("pingqiao/laowu-ji"),
+            id("pingqiao/pingqiao-brigade")
+        ]
+        .into()
+    );
+    assert!(atlas.drawings(id("pingqiao/kengkeng-tian")).is_empty());
+    assert_eq!(atlas.drawings(id("pingqiao/luokeng-tian"))[0].scan_page, 33);
+    assert_eq!(
+        atlas.search("平桥公社", atlas_geo::body::BodyId::Earth),
+        vec![commune]
+    );
+}
