@@ -1,0 +1,168 @@
+{
+  "entities": [
+    {
+      "id": "c4f119c6-2b74-5487-b13e-4bc1109dc6dc",
+      "key": "earth/cn-gz/bijie/mianyuhe/longju-temple",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "33c75c8a-08b5-57d8-9a7b-db11a12fe909",
+      "key": "earth/cn-gz/bijie/mianyuhe/mahuangqing-liangzi",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "8547b625-fcf3-5754-8851-381e08504059",
+      "key": "earth/cn-gz/bijie/mianyuhe/baidao-liangzi",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "660a2ae4-ab14-5619-84df-2ae220aa713f",
+      "key": "earth/cn-gz/bijie/mianyuhe/bijiashan",
+      "body": "earth",
+      "kind": "mountain"
+    }
+  ],
+  "records": [
+    {
+      "id": "4dd38f51-6f31-5c68-ba12-fac478f5861c",
+      "key": "bijie-gazetteer/p216/mianyuhe/longju-temple",
+      "entity_id": "c4f119c6-2b74-5487-b13e-4bc1109dc6dc",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "216",
+      "scan_page": 251,
+      "locator": "Place table, row 1: 龙居庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "龙居庙",
+        "pinyin": "Lóngjū Miào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.36666666666666,
+            "latitude": 27.55
+          },
+          "longitude_text": "105°22′",
+          "latitude_text": "27°33′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "现已废"
+      }
+    },
+    {
+      "id": "7ba792ed-d816-5f6e-b775-85ba07d0a378",
+      "key": "bijie-gazetteer/p216/mianyuhe/mahuangqing-liangzi",
+      "entity_id": "33c75c8a-08b5-57d8-9a7b-db11a12fe909",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "216",
+      "scan_page": 251,
+      "locator": "Place table, row 2: 蚂蝗箐梁子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "蚂蝗箐梁子",
+        "pinyin": "Mǎhuángqīng Liángzǐ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.516666666666666
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°31′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1662.2米"
+      }
+    },
+    {
+      "id": "cd055e04-e046-5b2a-9586-c286045ff217",
+      "key": "bijie-gazetteer/p216/mianyuhe/baidao-liangzi",
+      "entity_id": "8547b625-fcf3-5754-8851-381e08504059",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "216",
+      "scan_page": 251,
+      "locator": "Place table, row 3: 百刀梁子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "百刀梁子",
+        "pinyin": "Bǎidāo Liángzǐ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.38333333333334,
+            "latitude": 27.566666666666666
+          },
+          "longitude_text": "105°23′",
+          "latitude_text": "27°34′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1570.8米"
+      }
+    },
+    {
+      "id": "fdd91bbf-0941-5fd4-b3ec-6318eb6e5805",
+      "key": "bijie-gazetteer/p216/mianyuhe/bijiashan",
+      "entity_id": "660a2ae4-ab14-5619-84df-2ae220aa713f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "216",
+      "scan_page": 251,
+      "locator": "Place table, row 4: 笔架山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "笔架山",
+        "pinyin": "Bǐjià Shān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰，海拔1747.2米"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}
