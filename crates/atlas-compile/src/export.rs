@@ -251,3 +251,7 @@ mod qingchang_commune_tests;
 #[cfg(test)]
 #[path = "export/changchunbao/tests.rs"]
 mod changchunbao_tests;
+
+#[cfg(test)]
+#[path = "export/heguantun/tests.rs"]
+mod heguantun_tests;

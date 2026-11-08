@@ -1,0 +1,453 @@
+{
+  "entities": [
+    {
+      "id": "b7880401-fe49-5858-b613-449440a74c0c",
+      "key": "earth/cn-gz/bijie/duipo/qingganglin",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "f46169af-ed5b-52ee-92cb-7b1b9aae9a09",
+      "key": "earth/cn-gz/bijie/duipo/erdengpo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "1fb5ffa1-959d-59ad-8d76-16d6f7c525d3",
+      "key": "earth/cn-gz/bijie/duipo/baiyanglin",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "163faa83-ef5c-5427-a96e-a3e993ad165f",
+      "key": "earth/cn-gz/bijie/duipo/shierguai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "2b80d4f1-a532-5034-a1ec-b6a7a974617d",
+      "key": "earth/cn-gz/bijie/duipo/dazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "10e85e60-8dab-5b20-a488-a1a754556df7",
+      "key": "earth/cn-gz/bijie/duipo/dapo",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "8225fc81-6c30-5200-975d-cc6c3b940f85",
+      "key": "earth/cn-gz/bijie/duipo/langchangpingzi",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "311041f1-026e-5bb0-8a65-9a98cbc25da2",
+      "key": "earth/cn-gz/bijie/duipo/changwanzi",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "2ad74b92-049f-5271-b788-6c9a61f5009b",
+      "key": "earth/cn-gz/bijie/duipo/mianyu-river",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "7222c117-aa40-5900-b43f-0263b5a1bea1",
+      "key": "earth/cn-gz/bijie/duipo/yingzuiyan",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "61b55b7c-440e-57ed-ac85-48f4a7b5fba6",
+      "key": "earth/cn-gz/bijie/duipo/yachayan",
+      "body": "earth",
+      "kind": "mountain"
+    }
+  ],
+  "records": [
+    {
+      "id": "2902ef72-6a2d-59d1-8eec-9889f92fc5f3",
+      "key": "bijie-gazetteer/p132/duipo/qingganglin",
+      "entity_id": "b7880401-fe49-5858-b613-449440a74c0c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "132",
+      "scan_page": 167,
+      "locator": "Place table, row 1: 青杠林",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "青杠林",
+        "pinyin": "Qīnggānglín",
+        "population": 44,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "彝"
+        ],
+        "parent_id": "31f7efea-1fe9-53e0-9920-b59f20b965a3",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c67e441b-b4ca-53b9-be14-039ad2482943",
+      "key": "bijie-gazetteer/p132/duipo/erdengpo",
+      "entity_id": "f46169af-ed5b-52ee-92cb-7b1b9aae9a09",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "132",
+      "scan_page": 167,
+      "locator": "Place table, row 2: 二等坡",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "二等坡",
+        "pinyin": "Érděngpō",
+        "population": 97,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "31f7efea-1fe9-53e0-9920-b59f20b965a3",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "396bdc03-713b-5a06-bd99-cffeb990765f",
+      "key": "bijie-gazetteer/p132/duipo/baiyanglin",
+      "entity_id": "1fb5ffa1-959d-59ad-8d76-16d6f7c525d3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "132",
+      "scan_page": 167,
+      "locator": "Place table, row 3: 柏杨林",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "柏杨林",
+        "pinyin": "Báiyánglín",
+        "population": 186,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "彝"
+        ],
+        "parent_id": "31f7efea-1fe9-53e0-9920-b59f20b965a3",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.516666666666666
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°31′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8670c07b-a12f-57eb-b4f5-1a6b7d509dbc",
+      "key": "bijie-gazetteer/p132/duipo/shierguai",
+      "entity_id": "163faa83-ef5c-5427-a96e-a3e993ad165f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "132",
+      "scan_page": 167,
+      "locator": "Place table, row 4: 十二拐",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "十二拐",
+        "pinyin": "Shíérguǎi",
+        "population": 73,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "南京"
+        ],
+        "parent_id": "31f7efea-1fe9-53e0-9920-b59f20b965a3",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "1d8815f7-c93c-5fa5-9fe2-e30789ab2bd7",
+      "key": "bijie-gazetteer/p132/duipo/dazhai",
+      "entity_id": "2b80d4f1-a532-5034-a1ec-b6a7a974617d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "132",
+      "scan_page": 167,
+      "locator": "Place table, row 5: 大寨",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大寨",
+        "pinyin": "Dàzhài",
+        "population": 698,
+        "households": null,
+        "ethnicities": [
+          "南京"
+        ],
+        "parent_id": "31f7efea-1fe9-53e0-9920-b59f20b965a3",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "d99909da-6478-5ea5-80ce-4f2cc9ecda53",
+      "key": "bijie-gazetteer/p132/duipo/dapo",
+      "entity_id": "10e85e60-8dab-5b20-a488-a1a754556df7",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "132",
+      "scan_page": 167,
+      "locator": "Place table, row 6: 大坡",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大坡",
+        "pinyin": "Dàpō",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "31f7efea-1fe9-53e0-9920-b59f20b965a3",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "地名"
+      }
+    },
+    {
+      "id": "8e38a91b-d250-5c0f-8d03-805723c270a7",
+      "key": "bijie-gazetteer/p132/duipo/langchangpingzi",
+      "entity_id": "8225fc81-6c30-5200-975d-cc6c3b940f85",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "132",
+      "scan_page": 167,
+      "locator": "Place table, row 7: 浪厂坪子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "浪厂坪子",
+        "pinyin": "Làngchǎngpíngzǐ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "31f7efea-1fe9-53e0-9920-b59f20b965a3",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.35,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°21′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "地名"
+      }
+    },
+    {
+      "id": "004c6126-421e-5948-9a31-ee38a43669fc",
+      "key": "bijie-gazetteer/p132/duipo/changwanzi",
+      "entity_id": "311041f1-026e-5bb0-8a65-9a98cbc25da2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "132",
+      "scan_page": 167,
+      "locator": "Place table, row 8: 长湾子",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "长湾子",
+        "pinyin": "Chángwānzǐ",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "31f7efea-1fe9-53e0-9920-b59f20b965a3",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "地名"
+      }
+    },
+    {
+      "id": "259f2fb4-1a73-51c8-8484-042e68f745fa",
+      "key": "bijie-gazetteer/p132/duipo/mianyu-river",
+      "entity_id": "2ad74b92-049f-5271-b788-6c9a61f5009b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "132",
+      "scan_page": 167,
+      "locator": "Place table, row 9: 沔鱼河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "沔鱼河",
+        "pinyin": "Miǎnyú Hé",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "7e36cb77-2f83-5ddc-9d57-025abd56f4dd",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "河流",
+        "extent": "源于何官屯鱼洞有板厂沟水注入，流经对坡，入燕子口龙洞，长约19公里。"
+      }
+    },
+    {
+      "id": "b2dac8eb-d986-52bb-a4cc-0cb13c1093bd",
+      "key": "bijie-gazetteer/p132/duipo/yingzuiyan",
+      "entity_id": "7222c117-aa40-5900-b43f-0263b5a1bea1",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "132",
+      "scan_page": 167,
+      "locator": "Place table, row 10: 鹰咀岩",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "鹰咀岩",
+        "pinyin": "Yīngzuǐyán",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "7e36cb77-2f83-5ddc-9d57-025abd56f4dd",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.33333333333333,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°20′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰、海拔1654米"
+      }
+    },
+    {
+      "id": "3bfbaab4-1725-558d-9061-1893d75a4594",
+      "key": "bijie-gazetteer/p132/duipo/yachayan",
+      "entity_id": "61b55b7c-440e-57ed-ac85-48f4a7b5fba6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "132",
+      "scan_page": 167,
+      "locator": "Place table, row 11: 垭叉岩",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "垭叉岩",
+        "pinyin": "Yāchāyán",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "7e36cb77-2f83-5ddc-9d57-025abd56f4dd",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.31666666666666,
+            "latitude": 27.516666666666666
+          },
+          "longitude_text": "105°19′",
+          "latitude_text": "27°31′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰、海拔1663.0米"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

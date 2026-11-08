@@ -1,6 +1,40 @@
 use super::*;
 
 #[test]
+fn heguantun_names_and_shuiqing_unresolved_coordinates_remain_searchable() {
+    let atlas = atlas();
+    for (name, key) in [
+        ("官屯公社", "heguantun-commune"),
+        ("北望村", "heguantun/heguantun"),
+        ("对坡区", "duipo/former-district"),
+        ("Qīngshīkālā", "shuiqing/qingshikala"),
+        ("下流水岩", "shuiqing/xialiushuiyan"),
+    ] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{key}")).unwrap();
+        assert!(atlas.search(name, BodyId::Earth).contains(&id));
+    }
+    for key in ["shisun", "shisun-rock"] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/heguantun/{key}")).unwrap();
+        assert!(atlas.search("石笋", BodyId::Earth).contains(&id));
+    }
+    let unresolved = EntityId::from_key("earth/cn-gz/bijie/shuiqing/xialiushuiyan").unwrap();
+    let entry = atlas.entry(unresolved).unwrap();
+    assert!(
+        entry
+            .records
+            .iter()
+            .all(|record| record.observation.coordinate.is_none())
+    );
+    assert!(entry.records.iter().any(|record| {
+        record
+            .observation
+            .unresolved_coordinate
+            .as_ref()
+            .is_some_and(|coordinate| coordinate.longitude_text == "105°87′")
+    }));
+}
+
+#[test]
 fn wangfeng_huangnichong_and_shaba_names_resolve_to_their_own_evidence() {
     let atlas = atlas();
     for (name, key) in [
@@ -250,11 +284,14 @@ fn reject_aliases_that_do_not_resolve_to_published_evidence() {
 }
 
 #[test]
-fn bijie_county_browses_all_districts_and_communes_from_compiled_evidence() {
+fn bijie_county_browses_the_current_index_and_the_cited_former_district() {
     let atlas = atlas();
     let county = EntityId::from_key("earth/cn-gz/bijie/bijie-county").unwrap();
     let districts = atlas.children(county);
-    assert_eq!(districts.len(), 15);
+    assert_eq!(districts.len(), 16);
+    let former = EntityId::from_key("earth/cn-gz/bijie/duipo/former-district").unwrap();
+    assert!(districts.contains(&former));
+    assert!(atlas.children(former).is_empty());
     let mut communes = BTreeSet::new();
     for (slug, count) in [
         ("bijie-town", 6),

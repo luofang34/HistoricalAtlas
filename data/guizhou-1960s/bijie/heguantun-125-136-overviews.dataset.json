@@ -1,0 +1,1455 @@
+{
+  "entities": [
+    {
+      "id": "f3e2c20b-e8d0-5c9a-b8f6-aaefd42784b0",
+      "key": "earth/cn-gz/bijie/duipo/former-district",
+      "body": "earth",
+      "kind": "district"
+    },
+    {
+      "id": "0af5bb6c-3af3-5936-9628-71ae64f29d4c",
+      "key": "earth/cn-gz/bijie/heguantun/luohuntai",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "12897fcb-f620-537a-bb5a-4b7b7297546d",
+      "key": "earth/cn-gz/bijie/heguantun/wolongshi",
+      "body": "earth",
+      "kind": "geological_site"
+    },
+    {
+      "id": "ab8bcb15-e773-5a50-91a2-c84b5ae63d50",
+      "key": "earth/cn-gz/bijie/heguantun/tongtiandong",
+      "body": "earth",
+      "kind": "cave"
+    },
+    {
+      "id": "73226a99-6652-59da-a0a3-936add8af389",
+      "key": "earth/cn-gz/bijie/heguantun/mijiadong",
+      "body": "earth",
+      "kind": "cave"
+    },
+    {
+      "id": "d3dddabe-390f-5075-9f19-8a4423222d39",
+      "key": "earth/cn-gz/bijie/heguantun/chengtianyan",
+      "body": "earth",
+      "kind": "geological_site"
+    },
+    {
+      "id": "a11fa7a8-cf44-5460-a78a-b03347db8519",
+      "key": "earth/cn-gz/bijie/heguantun-district/duipo-river",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "a3352a66-a31e-519b-b363-05a4a1a94798",
+      "key": "earth/cn-gz/bijie/heguantun-district/fani-river",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "cc83ce7e-d2e8-50b1-83b2-663e6f4492a3",
+      "key": "earth/cn-gz/bijie/heguantun-district/houqing-river",
+      "body": "earth",
+      "kind": "river"
+    },
+    {
+      "id": "f6b513f1-d599-544e-ab14-f9a7cea0b7d6",
+      "key": "earth/cn-gz/bijie/heguantun-district/limin-reservoir",
+      "body": "earth",
+      "kind": "reservoir"
+    },
+    {
+      "id": "efc0a59d-4da6-5f41-8b7e-e7d07132436f",
+      "key": "earth/cn-gz/bijie/heguantun-district/dapingzi-reservoir",
+      "body": "earth",
+      "kind": "reservoir"
+    },
+    {
+      "id": "60a585db-b6a5-5b57-a2db-5c14bea7f328",
+      "key": "earth/cn-gz/bijie/heguantun-district/limin-power-station",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "2ea5b34f-121e-50eb-8d99-61ac3778ad66",
+      "key": "earth/cn-gz/bijie/heguantun-district/houqing-bayi-power-station",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "42804e6a-d8b9-599f-b2db-78fe4f5e5963",
+      "key": "earth/cn-gz/bijie/daba/shibanjing-sulfur-factory",
+      "body": "earth",
+      "kind": "factory"
+    },
+    {
+      "id": "df892ad0-7015-520c-a380-9692aeffeece",
+      "key": "earth/cn-gz/bijie/heguantun/market-street",
+      "body": "earth",
+      "kind": "street"
+    },
+    {
+      "id": "76fc2335-1b7b-5b72-8aad-0f67ccbc7a74",
+      "key": "earth/cn-gz/bijie/heguantun/guantun-middle-school",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "b9b2c3b6-a9f1-557b-acea-cae2295fb7ac",
+      "key": "earth/cn-gz/bijie/duipo/market-street",
+      "body": "earth",
+      "kind": "street"
+    },
+    {
+      "id": "a7e989ee-e73e-5dd2-b9a5-c9de26cff2ea",
+      "key": "earth/cn-gz/bijie/shuiqing/xiaogaoshan",
+      "body": "earth",
+      "kind": "mountain"
+    }
+  ],
+  "records": [
+    {
+      "id": "279f58e3-4f91-54fa-9cc3-b96c4e55129c",
+      "key": "bijie-gazetteer/p125/heguantun-commune/extent",
+      "entity_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "125",
+      "scan_page": 160,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "何官屯公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在毕节县西北部，相距十一公里，位于东经105°14′至105°17′，北纬27°22′至27°26′之间，东螃蟹、田坝，东南大桥，西后箐，北大坝、杉寨等公社接壤，总面积37平方公里。"
+      }
+    },
+    {
+      "id": "052e182b-efc5-56d5-91ef-9743b106b9af",
+      "key": "bijie-gazetteer/p129/duipo-commune/extent",
+      "entity_id": "7e36cb77-2f83-5ddc-9d57-025abd56f4dd",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "129",
+      "scan_page": 164,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "对坡公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在毕节县北部，距县城三十三公里，位于东经105°17′～105°27′，北纬27°27′～27°32′之间，总面积57.1平方公里，东与金银山，东南邻新艾，南联螃蟹，西连杉寨，北靠大银，东北接洒鱼河，公社驻地对坡，因有两山对峙，故名。"
+      }
+    },
+    {
+      "id": "f8863f17-6f2a-57d2-b962-284a06563bbe",
+      "key": "bijie-gazetteer/p133/shuiqing-commune/extent",
+      "entity_id": "5629d9b4-02af-5e91-ac51-93bc3e3dfe76",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "133",
+      "scan_page": 168,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "水箐公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "在毕节县西北部，距县城十九公里，位于东经105°06′～105°11′，北纬27°19′～27°24′之间，总面积73.8平方公里，东邻后箐，西靠野角、鲍家，南与黄泥冲等公社毗连，北抵云南省镇雄县边界。"
+      }
+    },
+    {
+      "id": "e00a9808-0d1c-5aca-b251-c7d733e37253",
+      "key": "bijie-gazetteer/p125/heguantun-commune/population",
+      "entity_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "125",
+      "scan_page": 160,
+      "locator": "Commune overview, population",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "何官屯公社",
+        "pinyin": null,
+        "population": 11155,
+        "households": 2037,
+        "ethnicities": [
+          "苗",
+          "彝",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "7个大队，65个生产队，35个自然村。全社人口（普查数）2037户，11155人，其中：苗族26人、彝族371人、布依1人，余为汉族。"
+      }
+    },
+    {
+      "id": "54da4c2d-3df9-5fb4-bd1c-a2619c7cb64a",
+      "key": "bijie-gazetteer/p129/duipo-commune/population",
+      "entity_id": "7e36cb77-2f83-5ddc-9d57-025abd56f4dd",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "129",
+      "scan_page": 164,
+      "locator": "Commune overview, population",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "对坡公社",
+        "pinyin": null,
+        "population": 13461,
+        "households": 2614,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "彝"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "8个大队，92个生产队，65个自然村。总人口（普查数）2614户，13461人，其中：苗族588人、汉族11724人、彝族326人、其他民族823人。"
+      }
+    },
+    {
+      "id": "60cc3482-ee94-572f-aa66-fce36ac9d836",
+      "key": "bijie-gazetteer/p133/shuiqing-commune/population",
+      "entity_id": "5629d9b4-02af-5e91-ac51-93bc3e3dfe76",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "133",
+      "scan_page": 168,
+      "locator": "Commune overview, population",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "水箐公社",
+        "pinyin": null,
+        "population": 12033,
+        "households": 2293,
+        "ethnicities": [
+          "苗",
+          "彝",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "9个大队，83个生产队，57个自然村。总人口（普查数）2293户，12033人，其中：苗族721人、彝族150人、满族1人，余为汉族。"
+      }
+    },
+    {
+      "id": "73e9e580-2c0f-5a29-a002-71446041dbf4",
+      "key": "bijie-gazetteer/p125/heguantun-commune/establishment",
+      "entity_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "125",
+      "scan_page": 160,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "1958年成立人民公社命名官屯公社",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "官屯公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "48000dff-c1c1-596e-8817-4cd3a22ed8a0",
+      "key": "bijie-gazetteer/p125/heguantun-commune/renaming",
+      "entity_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "125",
+      "scan_page": 160,
+      "locator": "Commune overview, renaming",
+      "verbatim_quote": "1981年普查时，根据群众习惯称呼，故更为何官屯区、公社。区公所、公社驻地何官屯。",
+      "checked": true,
+      "source_date": {
+        "text": "1981年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "何官屯公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "b71c6310-71f0-5152-a24c-d5200d2f4926",
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "官屯公社",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "dabd4aa5-9150-5297-abba-3c4bfe394879",
+      "key": "bijie-gazetteer/p125/heguantun-district/district-history",
+      "entity_id": "bbbc5639-475f-5dcb-ad98-c99a39e907b9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "125",
+      "scan_page": 160,
+      "locator": "Commune overview, district history",
+      "verbatim_quote": "解放后划为县之五区，后改名官屯区",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "官屯区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "五区",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "4ab7aecd-e54c-54f3-8b74-ad6329f0ddee",
+      "key": "bijie-gazetteer/p125/heguantun-district/district-renaming",
+      "entity_id": "bbbc5639-475f-5dcb-ad98-c99a39e907b9",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "125",
+      "scan_page": 160,
+      "locator": "Commune overview, district renaming",
+      "verbatim_quote": "1981年普查时，根据群众习惯称呼，故更为何官屯区、公社。区公所、公社驻地何官屯。",
+      "checked": true,
+      "source_date": {
+        "text": "1981年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "何官屯区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "3598db1c-f453-500e-b412-21cd4953cc68",
+        "rank": "district",
+        "seat_id": "b71c6310-71f0-5152-a24c-d5200d2f4926",
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "官屯区",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "e5414518-57bb-5c78-8eee-3e641804a62a",
+      "key": "bijie-gazetteer/p125/heguantun/heguantun/historical-name",
+      "entity_id": "b71c6310-71f0-5152-a24c-d5200d2f4926",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "125",
+      "scan_page": 160,
+      "locator": "Commune overview, historical name",
+      "verbatim_quote": "《乾隆志》又作北望村",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "何官屯",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "北望村",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "2c59786f-bcae-5a3d-9697-6665fc333b74",
+      "key": "bijie-gazetteer/p129/duipo/former-district/district-establishment",
+      "entity_id": "f3e2c20b-e8d0-5c9a-b8f6-aaefd42784b0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "129",
+      "scan_page": 164,
+      "locator": "Commune overview, district establishment",
+      "verbatim_quote": "解放后1951年划为十四区，为区、公社驻地",
+      "checked": true,
+      "source_date": {
+        "text": "1951年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "十四区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "3598db1c-f453-500e-b412-21cd4953cc68",
+        "rank": "district",
+        "seat_id": "fe2556cc-46fb-50e6-b330-6b77ef492bbe",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "eac0c5c6-bfad-559b-a899-2ad6f807a69c",
+      "key": "bijie-gazetteer/p129/duipo/former-district/district-renaming",
+      "entity_id": "f3e2c20b-e8d0-5c9a-b8f6-aaefd42784b0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "129",
+      "scan_page": 164,
+      "locator": "Commune overview, district renaming",
+      "verbatim_quote": "54年更名为对坡区、对坡乡",
+      "checked": true,
+      "source_date": {
+        "text": "54年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "对坡区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "十四区",
+            "source_date": {
+              "text": "1951年",
+              "convention": "Gregorian year",
+              "conversion_basis": null
+            },
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "9d099a48-dc53-56b5-9db6-b735d70fbf5b",
+      "key": "bijie-gazetteer/p129/duipo/former-district/district-merger",
+      "entity_id": "f3e2c20b-e8d0-5c9a-b8f6-aaefd42784b0",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "129",
+      "scan_page": 164,
+      "locator": "Commune overview, district merger",
+      "verbatim_quote": "56年3月撤销对坡区与何官屯区合并为一个区。",
+      "checked": true,
+      "source_date": {
+        "text": "56年3月",
+        "convention": "Gregorian month",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "对坡区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8870a806-6d1e-5df0-baac-93c8d18530b0",
+      "key": "bijie-gazetteer/p129/duipo-commune/establishment",
+      "entity_id": "7e36cb77-2f83-5ddc-9d57-025abd56f4dd",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "129",
+      "scan_page": 164,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "58年成立人民公社命名对坡公社。",
+      "checked": true,
+      "source_date": {
+        "text": "58年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "对坡公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "8e903944-3b29-5ec2-aaee-fff4f19c05e9",
+      "key": "bijie-gazetteer/p133/shuiqing-commune/establishment",
+      "entity_id": "5629d9b4-02af-5e91-ac51-93bc3e3dfe76",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "133",
+      "scan_page": 168,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "58年成立人民公社，以驻地水箐口命名为水箐公社",
+      "checked": true,
+      "source_date": {
+        "text": "58年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "水箐公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "a11afd14-cf1f-5b30-a4df-23db16eb88a2",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "4eb74482-4303-5ceb-81b4-f94b672c56ac",
+      "key": "bijie-gazetteer/p133/shuiqing-commune/seat-relocation",
+      "entity_id": "5629d9b4-02af-5e91-ac51-93bc3e3dfe76",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "133",
+      "scan_page": 168,
+      "locator": "Commune overview, seat relocation",
+      "verbatim_quote": "后来公社迁往陈家岩脚，仍名水箐。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "水箐公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "b1ea9998-f488-502d-92e8-aae12fc4f7be",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3e4108fb-73d6-58e0-ae12-1298153b172f",
+      "key": "bijie-gazetteer/p125/heguantun/guantun-river/river-route",
+      "entity_id": "9581536f-cd85-5b49-aa79-1313a66fb2e2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "125",
+      "scan_page": 160,
+      "locator": "Commune overview, river route",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "官屯河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "官屯河由西北而东南于小河入洞，纵流社境，最低海拔1590米。"
+      }
+    },
+    {
+      "id": "1077e91c-2ccf-5634-8947-a86977521ad6",
+      "key": "bijie-gazetteer/p125/heguantun/luohuntai/description",
+      "entity_id": "0af5bb6c-3af3-5936-9628-71ae64f29d4c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "125",
+      "scan_page": 160,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "北面落魂台最高海拔2140.5米。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "落魂台",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "d530c802-efaf-55e6-a97d-49b6b68ba362",
+      "key": "bijie-gazetteer/p125/heguantun/wolongshi/description",
+      "entity_id": "12897fcb-f620-537a-bb5a-4b7b7297546d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "125",
+      "scan_page": 160,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "有卧龙石、石笋崎峰、通天洞、米家洞、撑天岩等胜境。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "卧龙石",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "69d3b7f2-5548-5642-b065-a1aaa3469275",
+      "key": "bijie-gazetteer/p125/heguantun/tongtiandong/description",
+      "entity_id": "ab8bcb15-e773-5a50-91a2-c84b5ae63d50",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "125",
+      "scan_page": 160,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "有卧龙石、石笋崎峰、通天洞、米家洞、撑天岩等胜境。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "通天洞",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "672ef198-8712-5fae-a432-e80d3558b513",
+      "key": "bijie-gazetteer/p125/heguantun/mijiadong/description",
+      "entity_id": "73226a99-6652-59da-a0a3-936add8af389",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "125",
+      "scan_page": 160,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "有卧龙石、石笋崎峰、通天洞、米家洞、撑天岩等胜境。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "米家洞",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5d4708a7-d080-504a-b883-3df0a2f13654",
+      "key": "bijie-gazetteer/p125/heguantun/chengtianyan/description",
+      "entity_id": "d3dddabe-390f-5075-9f19-8a4423222d39",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "125",
+      "scan_page": 160,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "有卧龙石、石笋崎峰、通天洞、米家洞、撑天岩等胜境。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "撑天岩",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "70976d56-425a-516d-856e-3eacf56f3d40",
+      "key": "bijie-gazetteer/p126/heguantun-district/duipo-river/description",
+      "entity_id": "a11fa7a8-cf44-5460-a78a-b03347db8519",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "126",
+      "scan_page": 161,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "有对坡、法泥、官屯、后箐等河流。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "对坡",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "bbbc5639-475f-5dcb-ad98-c99a39e907b9",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "543528c9-324d-5015-bd41-f5239fb2e9d4",
+      "key": "bijie-gazetteer/p126/heguantun-district/fani-river/description",
+      "entity_id": "a3352a66-a31e-519b-b363-05a4a1a94798",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "126",
+      "scan_page": 161,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "有对坡、法泥、官屯、后箐等河流。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "法泥",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "bbbc5639-475f-5dcb-ad98-c99a39e907b9",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6a69c112-4297-5506-b752-6c127ffed6e0",
+      "key": "bijie-gazetteer/p126/heguantun-district/houqing-river/description",
+      "entity_id": "cc83ce7e-d2e8-50b1-83b2-663e6f4492a3",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "126",
+      "scan_page": 161,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "有对坡、法泥、官屯、后箐等河流。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "后箐",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "bbbc5639-475f-5dcb-ad98-c99a39e907b9",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "679b894a-c20d-551d-be52-595ad5a937e0",
+      "key": "bijie-gazetteer/p126/heguantun-district/limin-reservoir/description",
+      "entity_id": "f6b513f1-d599-544e-ab14-f9a7cea0b7d6",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "126",
+      "scan_page": 161,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "修起了利民、大坪子等水库二座",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "利民",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "bbbc5639-475f-5dcb-ad98-c99a39e907b9",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "605a988b-6f3c-5425-ab00-f4ac67eb1015",
+      "key": "bijie-gazetteer/p126/heguantun-district/dapingzi-reservoir/description",
+      "entity_id": "efc0a59d-4da6-5f41-8b7e-e7d07132436f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "126",
+      "scan_page": 161,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "修起了利民、大坪子等水库二座",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大坪子",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "bbbc5639-475f-5dcb-ad98-c99a39e907b9",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "9e1e37f0-ef59-5611-a1ff-7e47c35e6441",
+      "key": "bijie-gazetteer/p126/heguantun-district/limin-power-station/description",
+      "entity_id": "60a585db-b6a5-5b57-a2db-5c14bea7f328",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "126",
+      "scan_page": 161,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "现在发电的有利民电站和后箐八一电站，供社员照明及农副业加工使用。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "利民电站",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "bbbc5639-475f-5dcb-ad98-c99a39e907b9",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "84d79ec3-7945-5aa1-8e93-34798113e27f",
+      "key": "bijie-gazetteer/p126/heguantun-district/houqing-bayi-power-station/description",
+      "entity_id": "2ea5b34f-121e-50eb-8d99-61ac3778ad66",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "126",
+      "scan_page": 161,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "现在发电的有利民电站和后箐八一电站，供社员照明及农副业加工使用。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "后箐八一电站",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "bbbc5639-475f-5dcb-ad98-c99a39e907b9",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c7a4a334-0348-5139-9bff-56779f07a20b",
+      "key": "bijie-gazetteer/p126/daba/shibanjing-sulfur-factory/description",
+      "entity_id": "42804e6a-d8b9-599f-b2db-78fe4f5e5963",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "126",
+      "scan_page": 161,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "以大坝公社石板井一带硫磺产量好出磺多，为该区的社队企业，至73年办厂以来，有300多人从事硫磺生产，常年产量达1169吨。",
+      "checked": true,
+      "source_date": {
+        "text": "73年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "石板井硫磺厂",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "14065a0b-f4db-5ce7-b720-edfeef5a5dfb",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The facility name combines the stated location and industry."
+      }
+    },
+    {
+      "id": "f125d216-2589-5eb2-b7cf-c1c55a7ee0a1",
+      "key": "bijie-gazetteer/p126/heguantun/market-street/description",
+      "entity_id": "df892ad0-7015-520c-a380-9692aeffeece",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "126",
+      "scan_page": 161,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "何官屯街清代形成小集市，现在每旬赶两场。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "何官屯街",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "1782710b-5af3-5a3a-99c7-6562316fdf24",
+      "key": "bijie-gazetteer/p126/heguantun/guantun-middle-school/description",
+      "entity_id": "76fc2335-1b7b-5b72-8aad-0f67ccbc7a74",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "126",
+      "scan_page": 161,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "1977年官屯中学有学生318人，教师19人，（13人是大专生），干部职工计7人。",
+      "checked": true,
+      "source_date": {
+        "text": "1977年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "官屯中学",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c6ddf92e-5362-570d-a548-39e63e308c80",
+      "key": "bijie-gazetteer/p129/duipo/market-street/description",
+      "entity_id": "b9b2c3b6-a9f1-557b-acea-cae2295fb7ac",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "129",
+      "scan_page": 164,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "对坡至今皆为集市，名对坡街。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "对坡街",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "7e36cb77-2f83-5ddc-9d57-025abd56f4dd",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7233b0f6-afd8-57dc-b96d-7e019d142c36",
+      "key": "bijie-gazetteer/p133/shuiqing/xiaogaoshan/description",
+      "entity_id": "a7e989ee-e73e-5dd2-b9a5-c9de26cff2ea",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "133",
+      "scan_page": 168,
+      "locator": "Commune overview, description",
+      "verbatim_quote": "东面小高山的最高处海拔2167.8米",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小高山",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "5629d9b4-02af-5e91-ac51-93bc3e3dfe76",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "0f4e454b-3981-5a52-b2d9-aef0bded4872",
+      "key": "editorial/bijie/heguantun-commune/establishment",
+      "entity_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+      "basis": [
+        "73e9e580-2c0f-5a29-a002-71446041dbf4"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "baa2d913-9d36-5e28-b7c0-81b2616795ec",
+      "key": "editorial/bijie/heguantun/guantun-commune-name",
+      "entity_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+      "basis": [
+        "73e9e580-2c0f-5a29-a002-71446041dbf4",
+        "48000dff-c1c1-596e-8817-4cd3a22ed8a0"
+      ],
+      "brief": "Apply the stated name within the cited time bounds; retain unknown endpoints.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "官屯公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "11467646-a4ef-5d6e-ab98-4547d340cc5f",
+      "key": "editorial/bijie/heguantun/heguantun-commune-name",
+      "entity_id": "79f7d490-5b85-5487-8c30-dd9d66181a4f",
+      "basis": [
+        "48000dff-c1c1-596e-8817-4cd3a22ed8a0"
+      ],
+      "brief": "Apply the stated name within the cited time bounds; retain unknown endpoints.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "何官屯公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "740ca658-51ff-5975-b02e-3c829615c16c",
+      "key": "editorial/bijie/heguantun/guantun-district-name",
+      "entity_id": "bbbc5639-475f-5dcb-ad98-c99a39e907b9",
+      "basis": [
+        "dabd4aa5-9150-5297-abba-3c4bfe394879",
+        "4ab7aecd-e54c-54f3-8b74-ad6329f0ddee"
+      ],
+      "brief": "Apply the stated name within the cited time bounds; retain unknown endpoints.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": null,
+            "end": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "官屯区",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "e142dbaa-9a97-5e8d-a635-062d46c18b85",
+      "key": "editorial/bijie/heguantun/heguantun-district-name",
+      "entity_id": "bbbc5639-475f-5dcb-ad98-c99a39e907b9",
+      "basis": [
+        "4ab7aecd-e54c-54f3-8b74-ad6329f0ddee"
+      ],
+      "brief": "Apply the stated name within the cited time bounds; retain unknown endpoints.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "何官屯区",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "e3063df6-661f-5845-8707-4bab1465935d",
+      "key": "editorial/bijie/duipo/former-district/establishment",
+      "entity_id": "f3e2c20b-e8d0-5c9a-b8f6-aaefd42784b0",
+      "basis": [
+        "2c59786f-bcae-5a3d-9697-6665fc333b74"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1546344000000",
+            "nominal": "-1530576000001",
+            "latest": "-1514808000001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "c29a54dd-2b33-52e2-8fc0-c65d17d42faa",
+      "key": "editorial/bijie/duipo/fourteenth-district-name",
+      "entity_id": "f3e2c20b-e8d0-5c9a-b8f6-aaefd42784b0",
+      "basis": [
+        "2c59786f-bcae-5a3d-9697-6665fc333b74",
+        "eac0c5c6-bfad-559b-a899-2ad6f807a69c"
+      ],
+      "brief": "Apply the stated name within the cited time bounds; retain unknown endpoints.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1546344000000",
+              "nominal": "-1530576000001",
+              "latest": "-1514808000001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-1451649600000",
+              "nominal": "-1435881600001",
+              "latest": "-1420113600001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "十四区",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "bf5a450a-b363-52c7-80ce-1df7031c2fa1",
+      "key": "editorial/bijie/duipo/duipo-district-name",
+      "entity_id": "f3e2c20b-e8d0-5c9a-b8f6-aaefd42784b0",
+      "basis": [
+        "eac0c5c6-bfad-559b-a899-2ad6f807a69c",
+        "9d099a48-dc53-56b5-9db6-b735d70fbf5b"
+      ],
+      "brief": "Apply the stated name within the cited time bounds; retain unknown endpoints.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1451649600000",
+              "nominal": "-1435881600001",
+              "latest": "-1420113600001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-1383393600000",
+              "nominal": "-1382054400001",
+              "latest": "-1380715200001",
+              "precision": "month"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "对坡区",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "41c1b042-52c7-5f8b-aec4-7ab276a39800",
+      "key": "editorial/bijie/duipo-commune/establishment",
+      "entity_id": "7e36cb77-2f83-5ddc-9d57-025abd56f4dd",
+      "basis": [
+        "8870a806-6d1e-5df0-baac-93c8d18530b0"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "a0a7545a-2c1a-5b84-920c-afac7d7769d0",
+      "key": "editorial/bijie/duipo/commune-name",
+      "entity_id": "7e36cb77-2f83-5ddc-9d57-025abd56f4dd",
+      "basis": [
+        "8870a806-6d1e-5df0-baac-93c8d18530b0"
+      ],
+      "brief": "Apply the stated name within the cited time bounds; retain unknown endpoints.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "对坡公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "21508d56-f611-5663-8608-4975d4aec175",
+      "key": "editorial/bijie/shuiqing-commune/establishment",
+      "entity_id": "5629d9b4-02af-5e91-ac51-93bc3e3dfe76",
+      "basis": [
+        "8e903944-3b29-5ec2-aaee-fff4f19c05e9"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "30ded1d7-d838-5b49-9ce8-d3834fa130db",
+      "key": "editorial/bijie/shuiqing/commune-name",
+      "entity_id": "5629d9b4-02af-5e91-ac51-93bc3e3dfe76",
+      "basis": [
+        "8e903944-3b29-5ec2-aaee-fff4f19c05e9",
+        "4eb74482-4303-5ceb-81b4-f94b672c56ac"
+      ],
+      "brief": "Apply the stated name within the cited time bounds; retain unknown endpoints.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "水箐公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "544d2218-b44a-5ba6-8ead-a0d38b68993f",
+      "key": "editorial/bijie/daba/shibanjing-sulfur-factory/establishment",
+      "entity_id": "42804e6a-d8b9-599f-b2db-78fe4f5e5963",
+      "basis": [
+        "c7a4a334-0348-5139-9bff-56779f07a20b"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-852033600000",
+            "nominal": "-836265600001",
+            "latest": "-820497600001",
+            "precision": "year"
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}
