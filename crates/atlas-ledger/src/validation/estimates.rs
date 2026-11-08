@@ -66,6 +66,19 @@ fn validate_value(
     records: &BTreeMap<FactId, &Record>,
 ) -> Result<(), ValidationError> {
     match &estimate.value {
+        EstimateValue::Origin { time } => {
+            time.validate().map_err(|e| caused(&estimate.key, e))?;
+            if !estimate.basis.iter().any(|id| {
+                records
+                    .get(id)
+                    .is_some_and(|record| record.entity_id == estimate.entity_id)
+            }) {
+                return Err(fail(
+                    &estimate.key,
+                    "origin basis must include the subject's source record",
+                ));
+            }
+        }
         EstimateValue::Location {
             point,
             datum,

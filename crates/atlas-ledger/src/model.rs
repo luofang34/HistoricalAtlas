@@ -4,6 +4,7 @@ use atlas_core::{
     assertion::{AdministrativeRank, TemporalAssertion, TemporalValue},
     calendar::SourceDate,
     identity::{EntityId, FactId},
+    origin::OriginTime,
     time::TemporalSpan,
 };
 use atlas_geo::{
@@ -192,6 +193,11 @@ pub struct Estimate {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(tag = "kind", rename_all = "snake_case", deny_unknown_fields)]
 pub enum EstimateValue {
+    /// Formation or establishment of an entity.
+    Origin {
+        /// Date constraint, including one-sided or unquantified uncertainty.
+        time: OriginTime,
+    },
     /// Interpreted location and its spatial uncertainty.
     Location {
         /// Chosen coordinate.

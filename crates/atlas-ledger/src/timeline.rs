@@ -15,6 +15,9 @@ use crate::{
     validation::{ValidationError, validate},
 };
 
+mod origins;
+pub use origins::SelectedOrigin;
+
 /// Which endpoint interpretation controls inclusion in a time slice.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize)]
 #[serde(rename_all = "snake_case")]
@@ -80,6 +83,8 @@ pub struct EntitySlice<'a> {
     pub entity_id: EntityId,
     /// Populated property slots in stable order.
     pub properties: Vec<PropertySlice<'a>>,
+    /// Formation claims whose occurrence is supported by the query mode.
+    pub origins: Vec<SelectedOrigin<'a>>,
 }
 
 /// Reproducible time query, including its uncertainty-selection mode.
@@ -106,7 +111,12 @@ impl<'a> Timeline<'a> {
         let mut estimates: Vec<_> = data
             .estimates
             .iter()
-            .filter(|estimate| matches!(estimate.value, EstimateValue::Temporal { .. }))
+            .filter(|estimate| {
+                matches!(
+                    estimate.value,
+                    EstimateValue::Temporal { .. } | EstimateValue::Origin { .. }
+                )
+            })
             .collect();
         estimates.sort_by_key(|estimate| estimate.id);
         let mut disputes: BTreeMap<_, Vec<_>> = BTreeMap::new();
@@ -154,10 +164,11 @@ impl<'a> Timeline<'a> {
                     });
             }
         }
-        let entities = entities
+        let mut entities: Vec<_> = entities
             .into_iter()
             .map(|(entity_id, properties)| EntitySlice {
                 entity_id,
+                origins: Vec::new(),
                 properties: properties
                     .into_iter()
                     .map(|(property, candidates)| {
@@ -175,6 +186,13 @@ impl<'a> Timeline<'a> {
                     .collect(),
             })
             .collect();
+        origins::merge(
+            &mut entities,
+            &self.estimates,
+            &self.disputes,
+            at,
+            selection,
+        )?;
         Ok(TimeSlice {
             at,
             selection,

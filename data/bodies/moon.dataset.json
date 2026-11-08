@@ -1,0 +1,371 @@
+{
+  "entities": [
+    {
+      "id": "4462864d-70ff-5bce-bd30-3ca38aba3644",
+      "key": "moon/body",
+      "body": "moon",
+      "kind": "body"
+    },
+    {
+      "id": "43c5bd1d-229c-5ae3-9146-063d9040a6a6",
+      "key": "moon/imbrium-basin",
+      "body": "moon",
+      "kind": "crater"
+    },
+    {
+      "id": "8736d6c5-b6fa-5436-ba63-d1ee868a5eed",
+      "key": "moon/tycho",
+      "body": "moon",
+      "kind": "crater"
+    },
+    {
+      "id": "69de861a-cc68-51d8-a087-089c734498d4",
+      "key": "moon/tranquility-base",
+      "body": "moon",
+      "kind": "historic_site"
+    }
+  ],
+  "records": [
+    {
+      "id": "bdbbdc70-6c53-51e5-a219-75de2dc39fd0",
+      "key": "barboni-2017/moon/minimum-age",
+      "entity_id": "4462864d-70ff-5bce-bd30-3ca38aba3644",
+      "source_id": "barboni-2017-lunar-formation",
+      "page_or_sheet": "3–4",
+      "scan_page": null,
+      "locator": "Results, final paragraph; Discussion, first paragraph",
+      "verbatim_quote": "4.51 ± 0.01 Gy (1σ)",
+      "checked": true,
+      "source_date": {
+        "text": "4.51 ± 0.01 Gy (1σ)",
+        "convention": "Geological age",
+        "conversion_basis": "Ages use Julian years of 365.25 days before J2000 TT as the atlas display convention; the source gives no calendar reference epoch."
+      },
+      "observation": {
+        "name": "Moon",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Lu-Hf zircon model ages provide a minimum age for lunar differentiation and formation. DOI: 10.1126/sciadv.1602365. Reviewed author copy: https://faculty.epss.ucla.edu/~eyoung/reprints/Barboni_etal_2017.pdf"
+      }
+    },
+    {
+      "id": "de4ed243-3ac0-5ed4-8abb-cf63a609dd5e",
+      "key": "norman-2023/imbrium/impact-age",
+      "entity_id": "43c5bd1d-229c-5ae3-9146-063d9040a6a6",
+      "source_id": "norman-2023-apollo14-impacts",
+      "page_or_sheet": "2",
+      "scan_page": null,
+      "locator": "Results and Discussion, phosphate resetting age",
+      "verbatim_quote": "3922±6 Ma",
+      "checked": true,
+      "source_date": {
+        "text": "3922±6 Ma",
+        "convention": "Geological age",
+        "conversion_basis": "Ages use Julian years of 365.25 days before J2000 TT as the atlas display convention; the source gives no calendar reference epoch."
+      },
+      "observation": {
+        "name": "Imbrium basin",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The authors associate phosphate resetting in Apollo 14 impact-melt fragments with the Imbrium impact."
+      }
+    },
+    {
+      "id": "1196c084-d1a3-5c74-b064-5da671189a08",
+      "key": "nasa-tycho-2019/formation-age",
+      "entity_id": "8736d6c5-b6fa-5436-ba63-d1ee868a5eed",
+      "source_id": "nasa-tycho-2019",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Paragraph beginning How old is Tycho?",
+      "verbatim_quote": "108 million years ago",
+      "checked": true,
+      "source_date": {
+        "text": "108 million years ago",
+        "convention": "Geological age",
+        "conversion_basis": "Ages use Julian years of 365.25 days before J2000 TT as the atlas display convention; the source gives no calendar reference epoch."
+      },
+      "observation": {
+        "name": "Tycho",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The age depends on assigning Apollo 17 impact-melt glass to Tycho ejecta; the page gives no numerical error range."
+      }
+    },
+    {
+      "id": "707e2e8d-a8d1-5b37-be8f-ad6a44a91e82",
+      "key": "nasa-nssdca/apollo11/landing",
+      "entity_id": "69de861a-cc68-51d8-a087-089c734498d4",
+      "source_id": "nasa-nssdca-apollo11",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Landed on Moon entry",
+      "verbatim_quote": "20 July 1969 UT 20:17:40",
+      "checked": true,
+      "source_date": {
+        "text": "20 July 1969 UT 20:17:40",
+        "convention": "Gregorian UT/GMT",
+        "conversion_basis": "Interpret NASA UT/GMT as UTC. Use USNO TAI-UTC history (1968 FEB 1 row): 4.2131700 + (MJD − 39126) × 0.002592 seconds, and TT = TAI + 32.184 seconds (https://maia.usno.navy.mil/ser7/tai-utc.dat; https://aa.usno.navy.mil/faq/TT). At 20:17:40, TT−UTC = 39.7585938 seconds; round the TT coordinate to milliseconds."
+      },
+      "observation": {
+        "name": "Apollo 11",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6961fe04-e60d-5aa3-aeb0-d39d7feb8e1f",
+      "key": "nasa-sp4029/apollo11/landing",
+      "entity_id": "69de861a-cc68-51d8-a087-089c734498d4",
+      "source_id": "nasa-sp4029-apollo11",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Paragraph beginning The LM landed on the Moon",
+      "verbatim_quote": "20:17:39 GMT (16:17:39 EDT) on 20 July 1969",
+      "checked": true,
+      "source_date": {
+        "text": "20 July 1969 20:17:39 GMT",
+        "convention": "Gregorian UT/GMT",
+        "conversion_basis": "Interpret NASA UT/GMT as UTC. Use USNO TAI-UTC history (1968 FEB 1 row): 4.2131700 + (MJD − 39126) × 0.002592 seconds, and TT = TAI + 32.184 seconds (https://maia.usno.navy.mil/ser7/tai-utc.dat; https://aa.usno.navy.mil/faq/TT). At 20:17:40, TT−UTC = 39.7585938 seconds; round the TT coordinate to milliseconds."
+      },
+      "observation": {
+        "name": "Apollo 11",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "c7cca4f2-47d2-56e7-bf8c-dd4ad3013db8",
+      "key": "nasa-apollo-coordinates/apollo11/lunar-module",
+      "entity_id": "69de861a-cc68-51d8-a087-089c734498d4",
+      "source_id": "nasa-apollo-coordinates-2017",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Apollo 11, Lunar Module row",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "Lunar Module",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 23.47314,
+            "latitude": 0.67416
+          },
+          "longitude_text": "23.47314° E",
+          "latitude_text": "0.67416° N",
+          "resolution_arcminutes": 0.0006,
+          "datum": "moon_mean_earth_de421"
+        },
+        "former_names": [],
+        "note": "Planetocentric Mean Earth/Polar Axis Lunar Reference System, DE421; positions from LRO images, Wagner et al., Icarus 283, 92–103 (2017)."
+      }
+    },
+    {
+      "id": "c9056927-35e9-5eda-abc8-816ad27dda89",
+      "key": "iau-usgs/tycho/center",
+      "entity_id": "8736d6c5-b6fa-5436-ba63-d1ee868a5eed",
+      "source_id": "iau-usgs-tycho",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Feature 6163, Location, default control network, center latitude and longitude",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "Tycho",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": -11.22,
+            "latitude": -43.3
+          },
+          "longitude_text": "-11.22°",
+          "latitude_text": "-43.30°",
+          "resolution_arcminutes": 0.6,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "Planetographic, east-positive coordinates shown by the default control network on 2026-11-07."
+      }
+    },
+    {
+      "id": "0cbd1959-6a79-5a7a-b735-d884776dae53",
+      "key": "lpi-lunar-crust/imbrium/center",
+      "entity_id": "43c5bd1d-229c-5ae3-9146-063d9040a6a6",
+      "source_id": "lpi-lunar-crust-landing-sites",
+      "page_or_sheet": "204",
+      "scan_page": null,
+      "locator": "Table 3.11, Imbrium row",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "Imbrium",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": -15.6,
+            "latitude": 32.8
+          },
+          "longitude_text": "-15.6",
+          "latitude_text": "32.8",
+          "resolution_arcminutes": 6.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "Center of the Imbrium impact basin; table attributes its basin classification to Namiki et al. (2009) and Matsumoto et al. (2010)."
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "d8c70f8f-158e-5e51-8f80-7c9a8b1d95ad",
+      "key": "editorial/moon/formation-limit",
+      "entity_id": "4462864d-70ff-5bce-bd30-3ca38aba3644",
+      "basis": [
+        "bdbbdc70-6c53-51e5-a219-75de2dc39fd0"
+      ],
+      "brief": "The lunar differentiation age supplies a latest formation constraint; its stated 1σ range dates the limiting evidence. Earlier formation remains possible. Ages use Julian years of 365.25 days before J2000 TT as the atlas display convention; the source gives no calendar reference epoch.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "no_later_than",
+          "limit": {
+            "earliest": "-142640352000000000000",
+            "nominal": "-142324776000000000000",
+            "latest": "-142009200000000000000",
+            "precision": "ga"
+          }
+        }
+      }
+    },
+    {
+      "id": "357f60b4-b10c-5d9c-a2fe-b53273fc751a",
+      "key": "editorial/imbrium/formation",
+      "entity_id": "43c5bd1d-229c-5ae3-9146-063d9040a6a6",
+      "basis": [
+        "de4ed243-3ac0-5ed4-8abb-cf63a609dd5e"
+      ],
+      "brief": "Use the reported phosphate-resetting age and ±6 Ma range under the authors’ Imbrium-impact interpretation. Ages use Julian years of 365.25 days before J2000 TT as the atlas display convention; the source gives no calendar reference epoch.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-123958252800000000000",
+            "nominal": "-123768907200000000000",
+            "latest": "-123579561600000000000",
+            "precision": "ma"
+          }
+        }
+      }
+    },
+    {
+      "id": "ab609c4c-b5a3-53cb-b87a-a40d4d407288",
+      "key": "editorial/tycho/formation",
+      "entity_id": "8736d6c5-b6fa-5436-ba63-d1ee868a5eed",
+      "basis": [
+        "1196c084-d1a3-5c74-b064-5da671189a08"
+      ],
+      "brief": "Use NASA’s 108 Ma estimate conditional on the proposed sample provenance. Its uncertainty is unquantified. Ages use Julian years of 365.25 days before J2000 TT as the atlas display convention; the source gives no calendar reference epoch.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "approximate",
+          "nominal": "-3408220800000000000",
+          "precision": "ma"
+        }
+      }
+    },
+    {
+      "id": "dcb37fa3-0e49-5bb5-86e8-c55eff408006",
+      "key": "editorial/tranquility-base/establishment",
+      "entity_id": "69de861a-cc68-51d8-a087-089c734498d4",
+      "basis": [
+        "707e2e8d-a8d1-5b37-be8f-ad6a44a91e82",
+        "6961fe04-e60d-5aa3-aeb0-d39d7feb8e1f"
+      ],
+      "brief": "Establish the landing site at lunar touchdown. Select NSSDCA’s 20:17:40; the 20:17:38.5–20:17:40.5 UTC envelope covers both reported seconds with nearest-second rounding. Apply the USNO pre-1972 UTC rate and TT offset recorded in the source-date conversion basis.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-960910901741",
+            "nominal": "-960910900241",
+            "latest": "-960910899741",
+            "precision": "second"
+          }
+        }
+      }
+    }
+  ],
+  "disputes": [
+    {
+      "entity_id": "69de861a-cc68-51d8-a087-089c734498d4",
+      "alternatives": [
+        "707e2e8d-a8d1-5b37-be8f-ad6a44a91e82",
+        "6961fe04-e60d-5aa3-aeb0-d39d7feb8e1f"
+      ],
+      "estimate_id": "dcb37fa3-0e49-5bb5-86e8-c55eff408006",
+      "brief": "NASA NSSDCA reports 20:17:40 UT; Apollo by the Numbers reports 20:17:39 GMT. The selected estimate keeps both citations and their one-second difference."
+    }
+  ]
+}

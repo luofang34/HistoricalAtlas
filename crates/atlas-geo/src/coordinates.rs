@@ -54,6 +54,8 @@ pub enum Datum {
     Wgs84,
     /// IAU Moon body-fixed coordinates.
     MoonIau,
+    /// Planetocentric lunar mean Earth/polar axis system using DE421.
+    MoonMeanEarthDe421,
     /// IAU Mars body-fixed coordinates.
     MarsIau,
 }
@@ -66,6 +68,7 @@ impl Datum {
             (_, Self::Unspecified)
                 | (BodyId::Earth, Self::Wgs84)
                 | (BodyId::Moon, Self::MoonIau)
+                | (BodyId::Moon, Self::MoonMeanEarthDe421)
                 | (BodyId::Mars, Self::MarsIau)
         ) {
             Ok(())

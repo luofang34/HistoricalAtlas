@@ -14,9 +14,11 @@ cargo run -p atlas-compile -- slice data <tt-ms> nominal <new-output-directory>
 sh scripts/ci.sh
 ```
 
-Curated records live in `data/`. `scan_page` is one-based; `page_or_sheet` identifies the printed page. `checked` records transcription review. Dates retain their source convention, and coordinates retain their stated datum and angular precision.
+Curated records live in `data/`. `scan_page` is one-based; `page_or_sheet` identifies the printed page. Online sources carry a URL and records identify the cited section or table in `locator`. `checked` records transcription review. Dates retain their source convention, and coordinates retain their stated datum and angular precision.
 
 Time slices select dated name, hierarchy, and demographic estimates. Supply a signed decimal TT millisecond offset from J2000 and choose `nominal`, `possible`, or `certain`. The output includes `slice.json`, UUID shards under `slice/index/`, and the complete evidence index. Each selected value retains its interval, source-record links, uncertainty, and source disagreements. Competing values appear together with a conflict flag; different name languages occupy separate slots.
+
+Entity slices also contain `origins`: evidence that formation or establishment had occurred by the selected time. Origin dates distinguish bounded estimates, latest-formation limits, and approximate ages with unquantified uncertainty. Nominal mode uses the representative date; possible and certain modes evaluate the supplied constraints. Later survival is described by separate temporal properties. Lunar records retain the geological age convention and the dated UTC-to-TT conversion used for Apollo 11.
 
 For page extraction, run `python3 tools/ocr-ingest/ingest.py --pdf <path> --pages 1:10 --output scratch/extraction`. The default engine reads the embedded text layer. Use `--engine tesseract --languages chi_sim --tessdata-dir <models>` for image recognition; `--jobs 4` processes four pages concurrently. Extraction drafts include normalized text boxes, scan fingerprints, and recognition settings for page review; rerunning the command resumes the same batch.
 

@@ -116,6 +116,14 @@ fn check_points_and_source_page_must_be_independent_and_identified() {
             .contains("out of range")
     );
     let mut request = job();
+    request.source_id = "nasa-nssdca-apollo11".into();
+    assert!(
+        register(&input, request)
+            .unwrap_err()
+            .to_string()
+            .contains("out of range")
+    );
+    let mut request = job();
     request.controls[0].reference.clear();
     assert!(
         register(&input, request)
