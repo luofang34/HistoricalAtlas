@@ -258,6 +258,7 @@ dependencies = [
 name = "atlas-app"
 version = "0.1.0"
 dependencies = [
+ "atlas-boundary",
  "atlas-compile",
  "atlas-core",
  "atlas-geo",
@@ -283,9 +284,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "atlas-boundary"
+version = "0.1.0"
+dependencies = [
+ "atlas-core",
+ "atlas-geo",
+ "atlas-ledger",
+ "serde",
+ "serde_json",
+ "thiserror 2.0.21",
+]
+
+[[package]]
 name = "atlas-compile"
 version = "0.1.0"
 dependencies = [
+ "atlas-boundary",
  "atlas-core",
  "atlas-geo",
  "atlas-ledger",

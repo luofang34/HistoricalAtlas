@@ -2,7 +2,11 @@ use super::Application;
 
 impl Application {
     pub(super) fn map_panel(&mut self, ui: &mut egui::Ui) {
-        ui.label("Source coordinate anchors · Drag to pan · Scroll to zoom");
+        ui.label(if self.territory_visible {
+            "Territory nodes and source anchors · Drag to pan · Scroll to zoom"
+        } else {
+            "Source coordinate anchors · Drag to pan · Scroll to zoom"
+        });
         if self.dirty {
             let points = match self.points() {
                 Ok(points) => points,

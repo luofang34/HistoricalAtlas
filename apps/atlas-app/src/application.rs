@@ -26,6 +26,7 @@ pub struct Application {
     search: String,
     hits: Vec<EntityId>,
     layer: MapLayer,
+    territory_visible: bool,
     camera: Camera,
     map: Option<MapRenderer>,
     dirty: bool,
@@ -47,6 +48,7 @@ impl Application {
             search: String::new(),
             hits: Vec::new(),
             layer: MapLayer::Observations,
+            territory_visible: false,
             camera: Camera::for_body(BodyId::Earth),
             map: None,
             dirty: true,
@@ -109,6 +111,19 @@ impl Application {
             self.layer,
             self.selected,
         );
+        if self.territory_visible
+            && let Some(id) = self.selected
+            && let Some(features) = collection
+                .get_mut("features")
+                .and_then(serde_json::Value::as_array_mut)
+        {
+            features.extend(scene::territories::features(
+                &self.atlas,
+                id,
+                &self.selected_time,
+                self.layer,
+            )?);
+        }
         if self.overlay.visible
             && let Some(overlay) = &self.overlay.source
             && let Some(features) = collection

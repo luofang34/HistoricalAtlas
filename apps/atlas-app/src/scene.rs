@@ -6,6 +6,7 @@ use atlas_geo::body::BodyId;
 use serde_json::{Value, json};
 
 pub mod renderer;
+pub mod territories;
 
 /// Visibility of coordinate observations in the map.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -63,6 +64,13 @@ pub fn style(points: Value) -> Result<maplibre::style::Style, serde_json::Error>
         {"id": "background", "type": "background", "paint": {"background-color": "#152c35"}},
         {"id": "graticule", "type": "line", "source": "grid",
             "paint": {"line-color": "#31505c", "line-width": 1}},
+        {"id": "territory-links", "type": "line", "source": "observations",
+            "filter": ["==", "geometry_role", "territory_link"],
+            "paint": {"line-color": "#91b8cf", "line-width": 2, "line-dasharray": [3, 2]}},
+        {"id": "territory-nodes", "type": "circle", "source": "observations",
+            "filter": ["==", "geometry_role", "territory_node"],
+            "paint": {"circle-radius": 8, "circle-color": "#31505c", "circle-stroke-width": 2,
+                "circle-stroke-color": "#91b8cf"}},
         {"id": "observations", "type": "circle", "source": "observations",
             "filter": ["==", "geometry_role", "source_observation"],
             "paint": {"circle-radius": 5, "circle-color": "#e4bf80", "circle-stroke-width": 1,

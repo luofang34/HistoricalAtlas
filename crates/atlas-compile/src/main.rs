@@ -8,6 +8,7 @@ use atlas_compile::{
     reconstruction::reconstruct_blocking,
     registration::register_blocking,
     slice::write_slice_blocking,
+    territory::territory_blocking,
     tiles::write_tiles_blocking,
 };
 use tracing::info;
@@ -55,6 +56,11 @@ fn main() -> Result<(), Box<dyn Error>> {
                 reconstruct_blocking(Path::new(root), Path::new(request), Path::new(destination))?;
             info!(files, destination, "Plate reconstruction compiled");
         }
+        [command, root, request, destination] if command == "territory" => {
+            let files =
+                territory_blocking(Path::new(root), Path::new(request), Path::new(destination))?;
+            info!(files, destination, "Node territory compiled");
+        }
         [command, root, ticks, selection, destination] if command == "slice" => {
             let files =
                 write_slice_blocking(Path::new(root), ticks, selection, Path::new(destination))?;
@@ -71,7 +77,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
         _ => {
             return Err(
-                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | register <data> <controls.json> <new-result.json> | slice <data> <tt-ms> <nominal|possible|certain> <new-output-directory> | reconstruct <data> <request.json> <new-output-directory> | tiles <data> <base-url> <max-zoom> <new-output-directory>".into(),
+                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | register <data> <controls.json> <new-result.json> | slice <data> <tt-ms> <nominal|possible|certain> <new-output-directory> | reconstruct <data> <request.json> <new-output-directory> | territory <data> <request.json> <new-output-directory> | tiles <data> <base-url> <max-zoom> <new-output-directory>".into(),
             );
         }
     }

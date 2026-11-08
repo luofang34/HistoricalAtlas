@@ -1,6 +1,29 @@
 use super::*;
 
 #[test]
+fn territory_toggle_adds_links_and_respects_the_applied_hierarchy_mode() {
+    let mut app = Application::new(crate::catalog::tests::atlas()).unwrap();
+    let id = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
+    app.select(id, false);
+    let roles = |app: &Application| {
+        app.points().unwrap()["features"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .filter(|feature| feature["properties"]["geometry_role"] == "territory_link")
+            .count()
+    };
+    assert_eq!(roles(&app), 0);
+    app.territory_visible = true;
+    assert!(roles(&app) > 0);
+    app.layer = MapLayer::SelectedTime;
+    assert_eq!(roles(&app), 0);
+    app.layer = MapLayer::Observations;
+    app.territory_visible = false;
+    assert_eq!(roles(&app), 0);
+}
+
+#[test]
 fn unresolved_coordinate_is_visible_in_the_evidence_card_without_a_map_point() {
     let atlas = crate::catalog::tests::atlas();
     let id = atlas.search("银河大队", BodyId::Earth)[0];

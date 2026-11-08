@@ -6,6 +6,9 @@ use thiserror::Error;
 /// Atlas input or time selection failure.
 #[derive(Debug, Error)]
 pub enum AppError {
+    /// Territorial relationship selection failed.
+    #[error("territory: {0}")]
+    Territory(#[from] atlas_boundary::nodal::NodalError),
     /// Map renderer failed.
     #[error(transparent)]
     Render(#[from] crate::scene::renderer::RenderError),

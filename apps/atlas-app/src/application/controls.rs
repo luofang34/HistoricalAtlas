@@ -108,6 +108,10 @@ impl Application {
                     "Evidence at selected time",
                 )
                 .changed();
+            self.dirty |= ui
+                .checkbox(&mut self.territory_visible, "Territory nodes")
+                .on_hover_text("Administrative and seat links for the selected place.")
+                .changed();
         });
     }
 

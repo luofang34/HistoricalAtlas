@@ -7,7 +7,7 @@ use atlas_core::{
     identity::{EntityId, FactId},
     time::{EpochTime, TimeError, TimeMembership},
 };
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 use thiserror::Error;
 
 use crate::{
@@ -19,7 +19,7 @@ mod origins;
 pub use origins::SelectedOrigin;
 
 /// Which endpoint interpretation controls inclusion in a time slice.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum TimeSelection {
     /// Include values at their nominal endpoints, retaining the uncertainty label.
