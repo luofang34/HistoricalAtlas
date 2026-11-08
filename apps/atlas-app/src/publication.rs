@@ -48,6 +48,7 @@ pub enum PublicationError {
 /// Load exactly the shards named by the publication manifest.
 pub fn load_blocking(root: &Path) -> Result<Atlas, PublicationError> {
     let sources = read_blocking(&root.join("sources.json"))?;
+    let aliases = read_blocking(&root.join("entities/aliases.json"))?;
     let shards: Vec<String> = read_blocking(&root.join("entities/shards.json"))?;
     let mut entries = BTreeMap::new();
     for shard in shards {
@@ -66,7 +67,11 @@ pub fn load_blocking(root: &Path) -> Result<Atlas, PublicationError> {
             }
         }
     }
-    Ok(Atlas::new(Publication { sources, entries })?)
+    Ok(Atlas::new(Publication {
+        sources,
+        entries,
+        aliases,
+    })?)
 }
 
 fn read_blocking<T: DeserializeOwned>(path: &Path) -> Result<T, PublicationError> {

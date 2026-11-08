@@ -4,7 +4,13 @@ impl Application {
     pub(super) fn map_panel(&mut self, ui: &mut egui::Ui) {
         ui.label("Source coordinate anchors · Drag to pan · Scroll to zoom");
         if self.dirty {
-            let points = self.points();
+            let points = match self.points() {
+                Ok(points) => points,
+                Err(error) => {
+                    self.error = Some(error.to_string());
+                    return;
+                }
+            };
             if let Some(map) = &mut self.map {
                 match map.update(points) {
                     Ok(()) => self.dirty = false,

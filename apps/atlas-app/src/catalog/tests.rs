@@ -12,7 +12,14 @@ pub(crate) fn publication() -> Publication {
         .filter(|(path, _)| path.starts_with("entities/index"))
         .flat_map(|(_, bytes)| serde_json::from_slice::<BTreeMap<EntityId, Entry>>(bytes).unwrap())
         .collect();
-    Publication { sources, entries }
+    let aliases =
+        serde_json::from_slice(&output[&std::path::PathBuf::from("entities/aliases.json")])
+            .unwrap();
+    Publication {
+        sources,
+        entries,
+        aliases,
+    }
 }
 
 #[cfg(test)]
@@ -75,6 +82,20 @@ fn reject_unreviewed_and_misfiled_evidence() {
         Atlas::new(publication),
         Err(AppError::EvidenceIdentity(_))
     ));
+}
+
+#[test]
+fn reject_aliases_that_do_not_resolve_to_published_evidence() {
+    let old = EntityId::from_key("earth/old-id").unwrap();
+    let missing = EntityId::from_key("earth/missing-id").unwrap();
+    for destination in [old, missing] {
+        let mut publication = publication();
+        publication.aliases.0.insert(old, destination);
+        assert!(matches!(
+            Atlas::new(publication),
+            Err(AppError::Validation(_))
+        ));
+    }
 }
 
 #[test]

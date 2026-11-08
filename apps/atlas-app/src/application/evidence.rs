@@ -1,6 +1,7 @@
 use super::Application;
 use atlas_core::{identity::EntityId, time::EpochTime};
 use atlas_ledger::model::Record;
+use egui::collapsing_header::CollapsingState;
 
 impl Application {
     pub(super) fn evidence(&mut self, ui: &mut egui::Ui) {
@@ -17,6 +18,7 @@ impl Application {
                 ui.heading(self.label(id));
                 ui.monospace(id.0.to_string());
                 ui.separator();
+                self.overlay_details(ui, id);
                 navigate = self.hierarchy(ui, id);
                 if let Some(entry) = self.atlas.entry(id) {
                     ui.strong("Source observations");
@@ -35,9 +37,10 @@ impl Application {
                         ui.label("No dated assertion matches this selection.");
                     }
                     for estimate in &entry.estimates {
-                        ui.collapsing(&estimate.brief, |ui| {
-                            json_value(ui, "Interpretation", estimate)
-                        });
+                        let id = ui.make_persistent_id(("estimate", estimate.id.0));
+                        CollapsingState::load_with_default_open(ui.ctx(), id, false)
+                            .show_header(ui, |ui| ui.label(&estimate.brief))
+                            .body(|ui| json_value(ui, "Interpretation", estimate));
                     }
                     for dispute in &entry.disputes {
                         json_value(ui, "Source disagreement", dispute);

@@ -5,8 +5,9 @@ export async function json(url) {
 }
 
 export async function loadPublication(base) {
-  const [sources, shards] = await Promise.all([
+  const [sources, shards, aliases] = await Promise.all([
     json(new URL('sources.json', base)), json(new URL('entities/shards.json', base)),
+    json(new URL('entities/aliases.json', base)),
   ]);
   if (!Array.isArray(shards) || shards.some(name => !/^[0-9a-f]{2}$/.test(name))) {
     throw new Error('Invalid entity shard manifest');
@@ -23,7 +24,7 @@ export async function loadPublication(base) {
       }
     }
   }
-  return { sources, entries };
+  return { sources, entries, aliases };
 }
 
 export async function loadBytes(manifest, base = import.meta.url) {

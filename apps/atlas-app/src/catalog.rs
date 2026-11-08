@@ -5,6 +5,7 @@ use std::collections::{BTreeMap, BTreeSet};
 use atlas_core::identity::EntityId;
 use atlas_geo::body::BodyId;
 use atlas_ledger::model::{Dataset, Dispute, Entity, Estimate, Record, Source, SourceCatalog};
+use atlas_ledger::publication::{Aliases, Published, verify_publication};
 use serde::Deserialize;
 
 use crate::error::AppError;
@@ -31,6 +32,9 @@ pub struct Publication {
     pub sources: Vec<Source>,
     /// UUID-keyed entity evidence.
     pub entries: BTreeMap<EntityId, Entry>,
+    /// Redirects preserving external references to merged entity identities.
+    #[serde(default)]
+    pub aliases: Aliases,
 }
 
 /// Validated, searchable evidence shared by the native and browser applications.
@@ -40,6 +44,7 @@ pub struct Atlas {
     /// Evidence reconstructed from the published shards.
     pub data: Dataset,
     entries: BTreeMap<EntityId, Entry>,
+    aliases: BTreeMap<EntityId, EntityId>,
 }
 
 impl Atlas {
@@ -77,16 +82,32 @@ impl Atlas {
             data.disputes.extend(entry.disputes.clone());
         }
         atlas_ledger::validation::validate(&sources, &data)?;
+        verify_publication(&data, &publication.aliases, &Published::default())?;
+        let aliases = publication
+            .aliases
+            .0
+            .keys()
+            .map(|id| publication.aliases.resolve(*id).map(|target| (*id, target)))
+            .collect::<Result<_, _>>()?;
         Ok(Self {
             sources,
             data,
             entries: publication.entries,
+            aliases,
         })
     }
 
     /// Find an entity and its evidence by permanent identity.
     pub fn entry(&self, id: EntityId) -> Option<&Entry> {
-        self.entries.get(&id)
+        self.entries.get(&self.resolve(id)?)
+    }
+
+    /// Resolve a permanent identity or published redirect to a current entity.
+    pub fn resolve(&self, id: EntityId) -> Option<EntityId> {
+        self.entries
+            .contains_key(&id)
+            .then_some(id)
+            .or_else(|| self.aliases.get(&id).copied())
     }
 
     /// Display the first published name for source browsing.
@@ -102,11 +123,16 @@ impl Atlas {
     /// Search standard, pinyin, former names, semantic keys, and UUIDs on one body.
     pub fn search(&self, query: &str, body: BodyId) -> Vec<EntityId> {
         let query = query.trim().to_lowercase();
+        let alias = self
+            .aliases
+            .iter()
+            .find_map(|(id, target)| (id.0.to_string() == query).then_some(*target));
         self.entries
             .iter()
             .filter(|(id, entry)| {
                 entry.entity.body == body
                     && (query.is_empty()
+                        || alias == Some(**id)
                         || id.0.to_string().contains(&query)
                         || entry.entity.key.to_lowercase().contains(&query)
                         || entry.records.iter().any(|record| {

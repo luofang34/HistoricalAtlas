@@ -23,6 +23,22 @@ pub struct BrowserAtlas(crate::host::BrowserControl);
 
 #[wasm_bindgen]
 impl BrowserAtlas {
+    /// Load a downloaded event package without replacing the atlas ledger.
+    pub fn load_overlay(&self, origin: String, document: String) {
+        self.0.overlay(crate::overlay::OverlayInput {
+            origin,
+            content: Ok(document),
+        });
+    }
+
+    /// Display a failed external request while retaining the loaded atlas.
+    pub fn overlay_error(&self, origin: String, message: String) {
+        self.0.overlay(crate::overlay::OverlayInput {
+            origin,
+            content: Err(message),
+        });
+    }
+
     /// Keep the rendering surface aligned with the browser viewport.
     pub fn resize(&self, width: f64, height: f64) {
         self.0.resize(width, height);

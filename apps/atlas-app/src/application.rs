@@ -14,6 +14,7 @@ mod controls;
 mod dates;
 mod evidence;
 mod map;
+mod overlay;
 
 /// Application state independent of the windowing platform.
 pub struct Application {
@@ -29,6 +30,7 @@ pub struct Application {
     map: Option<MapRenderer>,
     dirty: bool,
     error: Option<String>,
+    overlay: overlay::OverlayState,
 }
 
 impl Application {
@@ -49,12 +51,13 @@ impl Application {
             map: None,
             dirty: true,
             error: None,
+            overlay: overlay::OverlayState::default(),
         })
     }
 
     /// Attach the GPU renderer after the window has a drawing surface.
     pub fn attach(&mut self, gpu: egui_wgpu::RenderState) -> Result<(), AppError> {
-        self.map = Some(MapRenderer::new(gpu, scene::style(self.points())?)?);
+        self.map = Some(MapRenderer::new(gpu, scene::style(self.points()?)?)?);
         self.dirty = false;
         Ok(())
     }
@@ -64,10 +67,17 @@ impl Application {
         egui::Panel::top("controls").show(ui, |ui| self.controls(ui));
         egui::Panel::left("places")
             .default_size(240.0)
-            .show(ui, |ui| self.search_panel(ui));
+            .show(ui, |ui| {
+                ui.style_mut().wrap_mode = Some(egui::TextWrapMode::Wrap);
+                self.overlay_panel(ui);
+                self.search_panel(ui);
+            });
         egui::Panel::right("evidence")
             .default_size(340.0)
-            .show(ui, |ui| self.evidence(ui));
+            .show(ui, |ui| {
+                ui.style_mut().wrap_mode = Some(egui::TextWrapMode::Wrap);
+                self.evidence(ui);
+            });
         egui::CentralPanel::default().show(ui, |ui| self.map_panel(ui));
     }
 
@@ -91,14 +101,28 @@ impl Application {
         }
     }
 
-    fn points(&self) -> serde_json::Value {
-        scene::features(
+    fn points(&self) -> Result<serde_json::Value, AppError> {
+        let mut collection = scene::features(
             &self.atlas,
             self.body,
             &self.selected_time,
             self.layer,
             self.selected,
-        )
+        );
+        if self.overlay.visible
+            && let Some(overlay) = &self.overlay.source
+            && let Some(features) = collection
+                .get_mut("features")
+                .and_then(serde_json::Value::as_array_mut)
+        {
+            features.extend(overlay.features(
+                &self.atlas,
+                self.body,
+                &self.selected_time,
+                self.selected,
+            )?);
+        }
+        Ok(collection)
     }
 
     fn apply_time(&mut self) {

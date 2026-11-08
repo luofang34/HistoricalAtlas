@@ -5,6 +5,7 @@ pub mod catalog;
 pub mod error;
 pub mod host;
 pub mod navigation;
+pub mod overlay;
 pub mod scene;
 pub mod selection;
 

@@ -6,11 +6,14 @@ import { loadBytes, loadPublication } from './loader.mjs';
 test('publication loads valid UUID shards and rejects repeated or misfiled identities', async t => {
   const documents = new Map([
     ['/data/sources.json', []], ['/data/entities/shards.json', ['ab']],
+    ['/data/entities/aliases.json', { 'old-entity': 'ab-entity' }],
     ['/data/entities/index/ab.json', { 'ab-entity': { entity: { id: 'ab-entity' } } }],
   ]);
   t.mock.method(globalThis, 'fetch', async url => new Response(JSON.stringify(documents.get(url.pathname))));
   const base = new URL('https://atlas.example/data/');
-  assert.equal(Object.keys((await loadPublication(base)).entries).length, 1);
+  const publication = await loadPublication(base);
+  assert.equal(Object.keys(publication.entries).length, 1);
+  assert.deepEqual(publication.aliases, { 'old-entity': 'ab-entity' });
   documents.set('/data/entities/shards.json', ['ab', 'ab']);
   await assert.rejects(loadPublication(base), /repeated entity/);
   documents.set('/data/entities/shards.json', ['../private']);

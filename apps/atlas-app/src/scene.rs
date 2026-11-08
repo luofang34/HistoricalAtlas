@@ -53,7 +53,7 @@ pub fn features(
     json!({"type": "FeatureCollection", "features": features})
 }
 
-/// Style for source anchors and a latitude/longitude graticule.
+/// Style for source anchors, external events, and a latitude/longitude graticule.
 pub fn style(points: Value) -> Result<maplibre::style::Style, serde_json::Error> {
     serde_json::from_value(json!({"version": 8, "center": [105.27, 27.3], "zoom": 10,
     "sources": {
@@ -64,8 +64,13 @@ pub fn style(points: Value) -> Result<maplibre::style::Style, serde_json::Error>
         {"id": "graticule", "type": "line", "source": "grid",
             "paint": {"line-color": "#31505c", "line-width": 1}},
         {"id": "observations", "type": "circle", "source": "observations",
+            "filter": ["==", "geometry_role", "source_observation"],
             "paint": {"circle-radius": 5, "circle-color": "#e4bf80", "circle-stroke-width": 1,
                 "circle-stroke-color": "#172e39"}},
+        {"id": "external-events", "type": "circle", "source": "observations",
+            "filter": ["==", "geometry_role", "external_event"],
+            "paint": {"circle-radius": 10, "circle-color": "#43c5c3", "circle-opacity": 0.65,
+                "circle-stroke-width": 2, "circle-stroke-color": "#bdf4e9"}},
         {"id": "selection", "type": "circle", "source": "observations",
             "filter": ["==", "selected", true],
             "paint": {"circle-radius": 8, "circle-color": "#ef8d55", "circle-stroke-width": 2,

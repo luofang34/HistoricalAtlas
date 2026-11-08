@@ -144,7 +144,7 @@ impl MapRenderer {
         let features = self.map.query_rendered_features(
             geometry,
             &QueryOptions {
-                layers: Some(vec!["observations".into()]),
+                layers: Some(vec!["observations".into(), "external-events".into()]),
                 ..Default::default()
             },
         )?;

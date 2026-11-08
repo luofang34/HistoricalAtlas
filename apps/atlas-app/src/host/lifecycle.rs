@@ -1,5 +1,6 @@
 use super::{Host, HostError};
 use crate::catalog::Atlas;
+use crate::overlay::OverlayInput;
 use std::{cell::RefCell, rc::Rc, sync::Arc};
 use web_time::{Duration, Instant};
 use winit::{
@@ -16,6 +17,8 @@ enum Signal {
     Input(egui::Event),
     #[cfg(target_arch = "wasm32")]
     Resize(f64, f64),
+    #[cfg(target_arch = "wasm32")]
+    Overlay(OverlayInput),
 }
 
 struct Lifecycle {
@@ -25,6 +28,7 @@ struct Lifecycle {
     proxy: EventLoopProxy<Signal>,
     error: Option<HostError>,
     repaint_at: Option<Instant>,
+    pending_overlay: Option<OverlayInput>,
     #[cfg(target_arch = "wasm32")]
     canvas: web_sys::HtmlCanvasElement,
 }
@@ -33,7 +37,10 @@ impl Lifecycle {
     fn ready(&mut self, event_loop: &ActiveEventLoop) {
         let result = self.pending.borrow_mut().take();
         match result {
-            Some(Ok(host)) => {
+            Some(Ok(mut host)) => {
+                if let Some(input) = self.pending_overlay.take() {
+                    host.application.load_overlay(input);
+                }
                 let proxy = self.proxy.clone();
                 host.context.set_request_repaint_callback(move |info| {
                     proxy.send_event(Signal::Repaint(info.delay)).ok();
@@ -125,6 +132,15 @@ impl ApplicationHandler<Signal> for Lifecycle {
                     }
                 }
             }
+            #[cfg(target_arch = "wasm32")]
+            Signal::Overlay(input) => {
+                if let Some(host) = &mut self.host {
+                    host.application.load_overlay(input);
+                    host.window.request_redraw();
+                } else {
+                    self.pending_overlay = Some(input);
+                }
+            }
             Signal::Repaint(delay) => {
                 if let Some(deadline) = Instant::now().checked_add(delay) {
                     self.repaint_at =
@@ -158,7 +174,7 @@ impl ApplicationHandler<Signal> for Lifecycle {
 
 /// Run the desktop window while an explicit Tokio runtime is entered.
 #[cfg(not(target_arch = "wasm32"))]
-pub fn run_blocking(atlas: Atlas) -> Result<(), HostError> {
+pub fn run_blocking(atlas: Atlas, overlay: Option<OverlayInput>) -> Result<(), HostError> {
     let event_loop = EventLoop::<Signal>::with_user_event().build()?;
     let mut lifecycle = Lifecycle {
         atlas: Some(atlas),
@@ -167,6 +183,7 @@ pub fn run_blocking(atlas: Atlas) -> Result<(), HostError> {
         proxy: event_loop.create_proxy(),
         error: None,
         repaint_at: None,
+        pending_overlay: overlay,
     };
     event_loop.run_app(&mut lifecycle)?;
     match lifecycle.error {
@@ -191,6 +208,7 @@ pub fn spawn(
         proxy: event_loop.create_proxy(),
         error: None,
         repaint_at: None,
+        pending_overlay: None,
         canvas,
     };
     event_loop.spawn_app(lifecycle);
@@ -203,6 +221,11 @@ pub struct BrowserControl(EventLoopProxy<Signal>);
 
 #[cfg(target_arch = "wasm32")]
 impl BrowserControl {
+    /// Queue an external package or loading error, including during GPU startup.
+    pub fn overlay(&self, input: OverlayInput) {
+        self.0.send_event(Signal::Overlay(input)).ok();
+    }
+
     /// Queue an input event and wake the browser application.
     pub fn input(&self, event: egui::Event) {
         self.0.send_event(Signal::Input(event)).ok();

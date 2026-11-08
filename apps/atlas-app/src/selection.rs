@@ -69,6 +69,8 @@ impl TimeControl {
 pub struct SelectedTime {
     /// Exact query epoch.
     pub at: EpochTime,
+    /// Applied endpoint interpretation, independent of unsubmitted controls.
+    pub selection: TimeSelection,
     /// Per-entity selected assertions and formation constraints.
     pub evidence: BTreeMap<EntityId, serde_json::Value>,
     /// Date-selected names, including competing values.
@@ -100,6 +102,7 @@ impl SelectedTime {
         }
         Ok(Self {
             at,
+            selection: control.selection,
             evidence,
             names,
         })

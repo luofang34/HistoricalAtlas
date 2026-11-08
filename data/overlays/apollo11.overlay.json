@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "title": "Apollo 11 landing",
+  "events": [
+    {
+      "id": "apollo-11-lunar-landing",
+      "title": "Eagle lands at Tranquility Base",
+      "entities": ["69de861a-cc68-51d8-a087-089c734498d4"],
+      "validity": {
+        "start": {
+          "earliest": "-960910901741",
+          "nominal": "-960910900241",
+          "latest": "-960910899741",
+          "precision": "second"
+        },
+        "end": {
+          "earliest": "-960910901740",
+          "nominal": "-960910900240",
+          "latest": "-960910899740",
+          "precision": "second"
+        }
+      },
+      "description": "Apollo 11 landed on 20 July 1969. The time bounds follow the atlas's cited landing estimate, including the one-second difference between NASA accounts. The instant occupies one millisecond on the TT timeline.",
+      "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-4029/Apollo_11a_Summary.htm"
+    }
+  ]
+}
