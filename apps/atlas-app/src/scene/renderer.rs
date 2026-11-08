@@ -174,6 +174,8 @@ impl MapRenderer {
                     "territory-nodes".into(),
                     "boundaries".into(),
                     "boundary-lines".into(),
+                    "derived-boundaries".into(),
+                    "derived-lines".into(),
                 ]),
                 ..Default::default()
             },

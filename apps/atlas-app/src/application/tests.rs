@@ -54,19 +54,26 @@ fn registered_boundary_search_focuses_geography_and_displays_source_method() {
 }
 
 #[test]
-fn mapped_place_view_focuses_registered_location_and_shows_its_sheet_name() {
+fn mapped_place_view_keeps_registered_locations_and_frames_the_reconstruction() {
     let mut app = Application::new(crate::catalog::tests::atlas()).unwrap();
     let id = EntityId::from_key("earth/cn-gz/bijie/daqiao-commune").unwrap();
     app.select(id, true);
     let table = app.camera.center;
     app.layer = MapLayer::MappedPlaces;
     app.select(id, true);
-    assert_ne!(app.camera.center, table);
+    assert_eq!(app.camera.center, table);
+    assert_eq!(
+        app.camera.center,
+        scene::boundaries::center(&app.atlas, id).unwrap()
+    );
     let collection = app.points().unwrap();
     let features = collection["features"].as_array().unwrap();
     let selected: Vec<_> = features
         .iter()
-        .filter(|f| f["properties"]["entity_id"] == id.0.to_string())
+        .filter(|f| {
+            f["properties"]["entity_id"] == id.0.to_string()
+                && f["properties"]["geometry_role"] == "location_estimate"
+        })
         .collect();
     assert_eq!(selected.len(), 2);
     for feature in &selected {
@@ -82,8 +89,11 @@ fn mapped_place_view_focuses_registered_location_and_shows_its_sheet_name() {
             |f| f["properties"]["name"] == "大桥" && f["properties"]["uncertainty_m"] == 3500.0
         )
     );
-    assert!(selected.iter().any(|f| f["geometry"]["coordinates"]
-        == serde_json::json!([app.camera.center.longitude, app.camera.center.latitude])));
+    let point = app.focus_point(id).unwrap();
+    assert!(
+        selected.iter().any(|f| f["geometry"]["coordinates"]
+            == serde_json::json!([point.longitude, point.latitude]))
+    );
     let wuliping = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
     assert_eq!(app.label(wuliping), "五里坪公社");
     app.body = BodyId::Moon;

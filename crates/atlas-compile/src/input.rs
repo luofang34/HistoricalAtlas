@@ -19,6 +19,8 @@ use crate::plate_models::{PlateDocumentError, PlateModelDocument, validate_model
 /// Validated input bundle including the existing publication contract.
 #[derive(Debug)]
 pub struct LedgerInput {
+    /// Terrain reconstruction recipes keyed by publication name.
+    pub derivations: BTreeMap<String, crate::derivation::DerivationRequest>,
     /// Reviewed boundary and place drawings in source-sheet coordinates.
     pub traces: Vec<crate::boundary::SheetTrace>,
     /// Registered source maps supplying derived place locations.
@@ -38,6 +40,9 @@ pub struct LedgerInput {
 /// File loading or ledger integrity failure.
 #[derive(Debug, Error)]
 pub enum InputError {
+    /// Two terrain recipes use the same publication name.
+    #[error("duplicate terrain reconstruction {0}")]
+    DuplicateDerivation(String),
     /// A source map could not supply validated place estimates.
     #[error("invalid place map {path}: {source}")]
     PlaceMap {
@@ -106,6 +111,7 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
     let mut plate_models = BTreeMap::new();
     let mut traces = Vec::new();
     let mut place_maps = Vec::new();
+    let mut derivations = BTreeMap::new();
     for path in paths {
         if path.file_name().is_some_and(|name| name == "sources.toml") {
             let mut batch = read_catalog_blocking(&path)?;
@@ -119,6 +125,12 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
                     reason: "duplicate model document".into(),
                 }
                 .into());
+            }
+        } else if path.to_string_lossy().ends_with(".derive.json") {
+            let recipe: crate::derivation::DerivationRequest = read_json_blocking(&path)?;
+            let id = recipe.id.clone();
+            if derivations.insert(id.clone(), recipe).is_some() {
+                return Err(InputError::DuplicateDerivation(id));
             }
         } else if path.to_string_lossy().ends_with(".dataset.json") {
             let mut batch: Dataset = read_json_blocking(&path)?;
@@ -141,6 +153,7 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
     let published = read_json_blocking(&root.join("published.json"))?;
     verify_publication(&data, &aliases, &published)?;
     let mut input = LedgerInput {
+        derivations,
         traces: Vec::new(),
         place_maps: BTreeMap::new(),
         plate_models,

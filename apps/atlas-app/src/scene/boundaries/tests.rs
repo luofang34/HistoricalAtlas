@@ -148,6 +148,60 @@ fn mapped_polygons_tessellate_fill_outline_and_selection_for_both_projections() 
 }
 
 #[test]
+fn reconstructed_communes_load_frame_and_tessellate_with_dashed_outlines() {
+    let atlas = Atlas::new(crate::catalog::tests::publication()).unwrap();
+    let id = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
+    let boundaries = features(&atlas, BodyId::Earth, MapLayer::Observations, Some(id)).unwrap();
+    assert_eq!(
+        boundaries
+            .iter()
+            .filter(|f| f["properties"]["reconstructed"] == true)
+            .count(),
+        124
+    );
+    assert!(frame(&atlas, id, [800., 600.]).is_some());
+    assert!(
+        features(&atlas, BodyId::Earth, MapLayer::SelectedTime, Some(id))
+            .unwrap()
+            .is_empty()
+    );
+    let collection = json!({"type":"FeatureCollection","features":boundaries});
+    for projection in [
+        maplibre::projection::ProjectionType::Mercator,
+        maplibre::projection::ProjectionType::Globe,
+    ] {
+        let style =
+            crate::scene::style(collection.clone(), BodyId::Earth, projection.clone()).unwrap();
+        assert!(style.validate().is_ok());
+        for name in ["derived-boundaries", "derived-lines", "derived-selection"] {
+            let layers = style
+                .layers
+                .iter()
+                .filter(|l| l.id == name)
+                .cloned()
+                .collect();
+            let rendered = maplibre::headless::map::process_geojson_layers(
+                &collection,
+                "observations",
+                layers,
+                maplibre::coords::WorldTileCoords {
+                    x: 0,
+                    y: 0,
+                    z: maplibre::coords::ZoomLevel::new(0),
+                },
+                projection.clone(),
+            )
+            .unwrap();
+            assert!(!rendered.indexes.is_empty(), "{name}");
+            assert!(
+                rendered.vector.iter().any(|l| l.buffer.usable_indices > 0),
+                "{name}"
+            );
+        }
+    }
+}
+
+#[test]
 fn publication_rejects_misfiled_boundary_and_invalid_geometry_or_method() {
     let id = EntityId::from_key("earth/cn-gz/zhijin/ertang-commune").unwrap();
     let mut misplaced = publication();

@@ -4,3 +4,4 @@ pub mod geographic;
 pub mod nodal;
 pub mod polygon;
 pub mod sheet;
+pub mod terrain;

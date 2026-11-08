@@ -4,6 +4,7 @@ use std::{error::Error, path::Path};
 
 use atlas_compile::{
     boundary::boundary_blocking,
+    derivation::derive_blocking,
     export::{compile, write_blocking},
     input::load_blocking,
     reconstruction::reconstruct_blocking,
@@ -85,7 +86,7 @@ fn dispatch(args: &[String]) -> Result<(), Box<dyn Error>> {
         }
         _ => {
             return Err(
-                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | register <data> <controls.json> <new-result.json> | slice <data> <tt-ms> <nominal|possible|certain> <new-output-directory> | reconstruct <data> <request.json> <new-output-directory> | territory <data> <request.json> <new-output-directory> | trace <data> <trace.json> <new-output-directory> | boundary <data> <trace.json> <controls.json> <new-output-directory> | tiles <data> <base-url> <max-zoom> <new-output-directory>".into(),
+                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | derive <data> <request.json> <new-output-directory> | register <data> <controls.json> <new-result.json> | slice <data> <tt-ms> <nominal|possible|certain> <new-output-directory> | reconstruct <data> <request.json> <new-output-directory> | territory <data> <request.json> <new-output-directory> | trace <data> <trace.json> <new-output-directory> | boundary <data> <trace.json> <controls.json> <new-output-directory> | tiles <data> <base-url> <max-zoom> <new-output-directory>".into(),
             );
         }
     }
@@ -94,6 +95,11 @@ fn dispatch(args: &[String]) -> Result<(), Box<dyn Error>> {
 
 fn boundary_command(args: &[String]) -> Result<bool, Box<dyn Error>> {
     match args {
+        [command, root, request, destination] if command == "derive" => {
+            let files =
+                derive_blocking(Path::new(root), Path::new(request), Path::new(destination))?;
+            info!(files, destination, "Terrain boundaries reconstructed");
+        }
         [command, root, trace, destination] if command == "trace" => {
             let files = boundary_blocking(
                 Path::new(root),

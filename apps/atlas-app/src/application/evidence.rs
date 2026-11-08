@@ -22,6 +22,7 @@ impl Application {
                 navigate = self.hierarchy(ui, id);
                 if let Some(entry) = self.atlas.entry(id) {
                     mapped_boundaries(ui, &entry.boundaries);
+                    derived_boundaries(ui, &entry.derived_boundaries);
                     if self.layer == crate::scene::MapLayer::MappedPlaces {
                         mapped_locations(ui, &entry.estimates);
                         ui.separator();
@@ -162,6 +163,23 @@ fn mapped_boundaries(
         }
         ui.label("Effective dates: unknown");
         ui.label(format!("Registration: {}", boundary.registration));
+        ui.separator();
+    }
+}
+
+fn derived_boundaries(ui: &mut egui::Ui, boundaries: &[atlas_boundary::terrain::DerivedBoundary]) {
+    for boundary in boundaries {
+        ui.strong("Reconstructed boundary");
+        ui.label("Terrain-cost partition from source locations and administrative membership");
+        ui.label(format!(
+            "Grid: {:.0} projected metres · elevation cost: {}",
+            boundary.cell_m, boundary.slope_weight
+        ));
+        ui.label(format!(
+            "Datum: {:?} · Effective dates: unknown",
+            boundary.datum
+        ));
+        json_value(ui, "Reconstruction evidence", boundary);
         ui.separator();
     }
 }

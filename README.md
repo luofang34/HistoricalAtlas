@@ -9,6 +9,7 @@ Requires Rust 1.97.1 or later with the `wasm32-unknown-unknown` target, Python 3
 ```sh
 cargo run -p atlas-compile -- verify data
 cargo run -p atlas-compile -- build data dist
+cargo run -p atlas-compile -- derive data data/guizhou-1960s/bijie/communes.derive.json <new-output-directory>
 cargo run -p atlas-compile -- register data controls.json registered.json
 cargo run -p atlas-compile -- trace data data/guizhou-1960s/zhijin/ertang.trace.json <new-output-directory>
 cargo run -p atlas-compile -- boundary data <trace.json> <boundary-controls.json> <new-output-directory>
@@ -24,6 +25,8 @@ Open a compiled publication in the desktop map with `cargo run -p atlas-app -- d
 Earth uses a bundled [Natural Earth II](https://www.naturalearthdata.com/downloads/50m-raster-data/50m-natural-earth-2/) physical basemap, with elevation hillshade over the Bijie–Zhijin–Liuzhi–Anshun area from [Mapzen Terrain Tiles](https://registry.opendata.aws/terrain-tiles/). SRTM and GMTED2010 elevation data are courtesy of the U.S. Geological Survey. The basemap works offline. To regenerate it, install Python's `numpy` and `Pillow` packages and run `python3 tools/build-basemap.py <NE2_50M_SR_W.tif> <terrain-geotiff-directory> apps/atlas-app/assets/basemap`; `manifest.json` records tile coordinates, source URLs, and fingerprints. Map styles accept Mercator or globe projection independently of the source coordinates; the application uses Mercator navigation.
 
 Search for `毕节县` to view its registered county outline, or a place such as `二塘公社` or `陈家桥` to open its source drawing. Selecting a registered boundary fits its full outline to the map viewport. Switch between **Source drawing** and **Geographic map**, and click a settlement symbol to inspect its evidence; coincident administrative seats remain separately selectable.
+
+Terrain reconstructions appear with dashed outlines and translucent fills. `build` evaluates the `*.derive.json` recipes, using cited commune and subordinate-place coordinates as seeds, a registered county outline as the enclosing polygon, and cropped elevation cells from Terrain Tiles. The four-neighbor travel cost combines ground distance with weighted elevation change. Each reconstruction links to its complete recipe under `derived/`, including source tile fingerprints, the coordinate-alignment assumption, and excluded seed records. `derive` evaluates one recipe. Selecting a reconstructed commune frames its extent and displays its input evidence.
 
 For the browser application, install Trunk and run `cd apps/atlas-app && trunk build --release`. Serve `dist/site` from the repository root over HTTP; the build includes the evidence shards and divides the WASM module into checked parts smaller than 4 MB. Native and browser rendering use the pinned `maplibre-rs-experimental` dependency. The bundled Atlas CJK font is a subset of Noto Sans CJK SC under the [SIL Open Font License](apps/atlas-app/assets/OFL.txt). Rare characters use Atlas Han Supplement, a subset of [BabelStone Han](https://www.babelstone.co.uk/Fonts/Han.html) by Andrew West under the [Arphic Public License](apps/atlas-app/assets/ARPHICPL.TXT). To expand glyph coverage, install Python's `fonttools` package and run `python3 tools/subset-font.py <NotoSansCJK-SC-Regular.otf> --fallback-font <BabelStoneHan.ttf>`.
 

@@ -16,14 +16,24 @@ pub fn features(
     if body != BodyId::Earth || layer == MapLayer::SelectedTime {
         return Ok(Vec::new());
     }
-    atlas
+    let mut features: Vec<_> = atlas
         .data
         .entities
         .iter()
         .filter_map(|e| atlas.entry(e.id))
         .flat_map(|entry| &entry.boundaries)
         .map(|boundary| Ok(boundary.feature(&atlas.data, selected)?))
-        .collect()
+        .collect::<Result<_, AppError>>()?;
+    for boundary in atlas
+        .data
+        .entities
+        .iter()
+        .filter_map(|e| atlas.entry(e.id))
+        .flat_map(|entry| &entry.derived_boundaries)
+    {
+        features.push(boundary.feature(&atlas.data, selected)?);
+    }
+    Ok(features)
 }
 
 /// Bounding-box midpoint for navigating to an entity with a registered boundary.
@@ -44,24 +54,37 @@ pub fn frame(atlas: &Atlas, id: EntityId, viewport: [f64; 2]) -> Option<crate::n
 }
 
 fn extent(atlas: &Atlas, id: EntityId) -> Option<[LonLat; 2]> {
-    let boundary = atlas.entry(id)?.boundaries.first()?;
+    let entry = atlas.entry(id)?;
     let mut bounds = [
         f64::INFINITY,
         f64::INFINITY,
         f64::NEG_INFINITY,
         f64::NEG_INFINITY,
     ];
-    for point in boundary
-        .unit
-        .polygons
-        .iter()
-        .flat_map(|p| &p.exterior)
-        .filter_map(|index| boundary.vertices.get(*index))
-    {
+    let mapped = entry.boundaries.iter().flat_map(|boundary| {
+        boundary
+            .unit
+            .polygons
+            .iter()
+            .flat_map(|p| &p.exterior)
+            .filter_map(|index| boundary.vertices.get(*index))
+    });
+    let derived = entry.derived_boundaries.iter().flat_map(|boundary| {
+        boundary
+            .region
+            .polygons
+            .iter()
+            .flat_map(|p| &p.exterior)
+            .filter_map(|index| boundary.region.vertices.get(*index))
+    });
+    for point in mapped.chain(derived) {
         bounds[0] = bounds[0].min(point.x);
         bounds[1] = bounds[1].min(point.y);
         bounds[2] = bounds[2].max(point.x);
         bounds[3] = bounds[3].max(point.y);
+    }
+    if !bounds.iter().all(|value| value.is_finite()) {
+        return None;
     }
     Some([
         LonLat {

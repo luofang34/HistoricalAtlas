@@ -14,6 +14,9 @@ use crate::error::AppError;
 #[derive(Debug, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Entry {
+    /// Terrain-cost reconstructions with their source membership evidence.
+    #[serde(default)]
+    pub derived_boundaries: Vec<atlas_boundary::terrain::DerivedBoundary>,
     /// Registered source-map outlines in OGC:CRS84.
     #[serde(default)]
     pub boundaries: Vec<atlas_boundary::geographic::GeographicBoundary>,
@@ -89,6 +92,12 @@ impl Atlas {
         }
         atlas_ledger::validation::validate(&sources, &data)?;
         for entry in publication.entries.values() {
+            for boundary in &entry.derived_boundaries {
+                if !entry.records.iter().any(|r| r.id == boundary.record_id) {
+                    return Err(AppError::EvidenceIdentity(entry.entity.id));
+                }
+                boundary.feature(&data, None)?;
+            }
             for boundary in &entry.boundaries {
                 if !entry
                     .records

@@ -6,6 +6,9 @@ use thiserror::Error;
 /// Atlas input or time selection failure.
 #[derive(Debug, Error)]
 pub enum AppError {
+    /// Terrain reconstruction geometry or source evidence is invalid.
+    #[error(transparent)]
+    Derivation(#[from] atlas_boundary::terrain::TerrainError),
     /// Registered boundary geometry or its evidence failed validation.
     #[error(transparent)]
     Boundary(#[from] atlas_boundary::geographic::GeographicError),

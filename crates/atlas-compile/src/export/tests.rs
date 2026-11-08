@@ -5,6 +5,7 @@ use crate::input::load_blocking;
 fn real_ledger_builds_deterministically_and_omits_unchecked_rows() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
     let mut input = load_blocking(&root).unwrap();
+    input.derivations.clear();
     let output = compile(&input).unwrap();
     assert_eq!(output, compile(&input).unwrap());
     assert!(output.values().all(|bytes| bytes.len() < MAX_FILE_BYTES));

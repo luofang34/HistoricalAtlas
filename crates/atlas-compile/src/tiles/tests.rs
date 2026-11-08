@@ -228,12 +228,24 @@ fn shuffled_input_produces_identical_tiles_and_manifests() {
     input.data.entities.reverse();
     input.data.records.reverse();
     input.catalog.sources.reverse();
-    assert_eq!(expected, compile_tiles(&input, BASE, 3).unwrap());
+    let actual = compile_tiles(&input, BASE, 3).unwrap();
+    assert_eq!(
+        expected.keys().collect::<Vec<_>>(),
+        actual.keys().collect::<Vec<_>>()
+    );
+    for (path, bytes) in expected {
+        assert!(
+            bytes == actual[&path],
+            "artifact differs: {}",
+            path.display()
+        );
+    }
 }
 
 #[cfg(test)]
 fn set_single_coordinate(input: &mut LedgerInput, longitude: f64, latitude: f64) {
     input.place_maps.clear();
+    input.derivations.clear();
     let target = input
         .data
         .records

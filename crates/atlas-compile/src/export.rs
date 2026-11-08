@@ -32,6 +32,8 @@ struct IndexedEntity<'a> {
     drawings: Vec<&'a atlas_boundary::sheet::SheetTrace>,
     #[serde(skip_serializing_if = "Vec::is_empty")]
     boundaries: Vec<&'a GeographicBoundary>,
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    derived_boundaries: Vec<&'a atlas_boundary::terrain::DerivedBoundary>,
 }
 
 /// Named byte buffers ready to write into a publication directory.
@@ -39,12 +41,42 @@ pub type Artifacts = BTreeMap<PathBuf, Vec<u8>>;
 
 /// Build deterministic indexes; unchecked observations do not enter the output.
 pub fn compile(input: &LedgerInput) -> Result<Artifacts, ExportError> {
-    compile_with_boundaries(input, &[])
+    let mut derived = Vec::new();
+    for request in input.derivations.values() {
+        derived.extend(
+            crate::derivation::reconstruct(input, request)
+                .map_err(|e| ExportError::Derivation(Box::new(e)))?,
+        );
+    }
+    let mut artifacts = compile_with_derived(input, &derived)?;
+    for request in input.derivations.values() {
+        insert(
+            &mut artifacts,
+            &format!("derived/{}.json", request.id),
+            request,
+        )?;
+    }
+    Ok(artifacts)
 }
 
 pub(crate) fn compile_with_boundaries(
     input: &LedgerInput,
     boundaries: &[GeographicBoundary],
+) -> Result<Artifacts, ExportError> {
+    compile_geometry(input, boundaries, &[])
+}
+
+pub(crate) fn compile_with_derived(
+    input: &LedgerInput,
+    derived: &[atlas_boundary::terrain::DerivedBoundary],
+) -> Result<Artifacts, ExportError> {
+    compile_geometry(input, &[], derived)
+}
+
+fn compile_geometry(
+    input: &LedgerInput,
+    boundaries: &[GeographicBoundary],
+    derived: &[atlas_boundary::terrain::DerivedBoundary],
 ) -> Result<Artifacts, ExportError> {
     atlas_ledger::validation::validate(&input.catalog, &input.data)?;
     atlas_ledger::publication::verify_publication(&input.data, &input.aliases, &input.published)?;
@@ -64,7 +96,10 @@ pub(crate) fn compile_with_boundaries(
     for boundary in boundaries {
         boundary.feature(&input.data, None)?;
     }
-    let shards = index_entities(input, boundaries);
+    for boundary in derived {
+        boundary.feature(&input.data, None)?;
+    }
+    let shards = index_entities(input, boundaries, derived);
     let current: BTreeSet<_> = shards
         .values()
         .flat_map(|shard| shard.keys().copied())
@@ -111,6 +146,7 @@ pub(crate) fn compile_with_boundaries(
 fn index_entities<'a>(
     input: &'a LedgerInput,
     boundaries: &'a [GeographicBoundary],
+    derived: &'a [atlas_boundary::terrain::DerivedBoundary],
 ) -> BTreeMap<String, BTreeMap<EntityId, IndexedEntity<'a>>> {
     let mut entities: BTreeMap<_, _> = input
         .data
@@ -126,6 +162,7 @@ fn index_entities<'a>(
                     disputes: Vec::new(),
                     drawings: Vec::new(),
                     boundaries: Vec::new(),
+                    derived_boundaries: Vec::new(),
                 },
             )
         })
@@ -164,6 +201,23 @@ fn index_entities<'a>(
             index.boundaries.push(boundary);
         }
     }
+    for boundary in derived {
+        if let Some(record) = input
+            .data
+            .records
+            .iter()
+            .find(|r| r.id == boundary.record_id)
+            && let Some(index) = entities.get_mut(&record.entity_id)
+        {
+            index.derived_boundaries.push(boundary);
+        }
+    }
+    shard_entities(entities)
+}
+
+fn shard_entities(
+    entities: BTreeMap<EntityId, IndexedEntity<'_>>,
+) -> BTreeMap<String, BTreeMap<EntityId, IndexedEntity<'_>>> {
     let mut shards: BTreeMap<String, BTreeMap<EntityId, IndexedEntity<'_>>> = BTreeMap::new();
     for (id, mut index) in entities {
         if index.records.is_empty() {
@@ -259,6 +313,12 @@ pub fn write_blocking(output: &Path, artifacts: &Artifacts) -> Result<(), Export
 /// Static artifact construction or write failure.
 #[derive(Debug, Error)]
 pub enum ExportError {
+    /// A terrain recipe failed source resolution or reconstruction.
+    #[error("terrain reconstruction: {0}")]
+    Derivation(#[source] Box<crate::derivation::DerivationError>),
+    /// Terrain reconstruction failed evidence or topology validation.
+    #[error(transparent)]
+    Terrain(#[from] atlas_boundary::terrain::TerrainError),
     /// Registered geographic boundary or its evidence is invalid.
     #[error(transparent)]
     Boundary(#[from] atlas_boundary::geographic::GeographicError),
