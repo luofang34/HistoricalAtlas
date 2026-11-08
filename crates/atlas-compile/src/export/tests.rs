@@ -289,3 +289,48 @@ fn conflicting_source_totals_and_undated_parent_claims_survive_export() {
         );
     }
 }
+
+#[test]
+fn contents_citations_remain_distinct_from_main_text_pages_and_dates() {
+    let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
+    let input = load_blocking(&root).unwrap();
+    let output = compile(&input).unwrap();
+    let contents: Vec<_> = input
+        .data
+        .records
+        .iter()
+        .filter(|record| record.key.starts_with("bijie-gazetteer/contents-"))
+        .collect();
+    assert_eq!(contents.len(), 139);
+    for record in contents {
+        let published = published_record(&output, record);
+        let scan = published["scan_page"].as_u64().unwrap();
+        assert!((30..=35).contains(&scan));
+        assert_eq!(
+            published["page_or_sheet"],
+            format!("Contents {}", scan - 29)
+        );
+        assert!(published["source_date"].is_null());
+        assert!(published["observation"]["coordinate"].is_null());
+    }
+    let dehou = bijie_record(&input, "bijie-gazetteer/contents-1/dehou-commune");
+    let overview = bijie_record(&input, "bijie-gazetteer/p29/dehou/composition");
+    assert_eq!(dehou.entity_id, overview.entity_id);
+    assert!(
+        published_record(&output, dehou)["locator"]
+            .as_str()
+            .unwrap()
+            .ends_with("printed page 28")
+    );
+    assert_eq!(published_record(&output, overview)["page_or_sheet"], "29");
+    let census = bijie_record(&input, "bijie-gazetteer/foreword-3/survey-coverage");
+    assert_eq!(published_record(&output, census)["scan_page"], 6);
+    assert_eq!(
+        published_record(&output, census)["page_or_sheet"],
+        "Foreword 3"
+    );
+    assert_eq!(
+        published_record(&output, census)["source_date"]["text"],
+        "自1981年4月起，到1982年12月止"
+    );
+}

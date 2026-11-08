@@ -76,3 +76,69 @@ fn reject_unreviewed_and_misfiled_evidence() {
         Err(AppError::EvidenceIdentity(_))
     ));
 }
+
+#[test]
+fn bijie_county_browses_all_districts_and_communes_from_compiled_evidence() {
+    let atlas = atlas();
+    let county = EntityId::from_key("earth/cn-gz/bijie/bijie-county").unwrap();
+    let districts = atlas.children(county);
+    assert_eq!(districts.len(), 15);
+    let mut communes = BTreeSet::new();
+    for (slug, count) in [
+        ("bijie-town", 6),
+        ("yachi-district", 10),
+        ("qingchang-district", 6),
+        ("changchunbao-district", 6),
+        ("heguantun-district", 6),
+        ("haizijie-district", 22),
+        ("yanzikou-district", 6),
+        ("puyi-district", 10),
+        ("jichang-district", 6),
+        ("qingshuipu-district", 5),
+        ("zhuchang-district", 9),
+        ("yangjiawan-district", 7),
+        ("yindi-district", 7),
+        ("linkou-district", 7),
+        ("longchangying-district", 11),
+    ] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{slug}")).unwrap();
+        assert!(districts.contains(&id), "{slug}");
+        assert_eq!(atlas.parents(id), BTreeSet::from([county]), "{slug}");
+        let children = atlas.children(id);
+        assert_eq!(children.len(), count, "{slug}");
+        for child in children {
+            assert!(
+                communes.insert(child),
+                "commune assigned to multiple districts"
+            );
+            assert_eq!(atlas.parents(child), BTreeSet::from([id]));
+        }
+    }
+    assert_eq!(communes.len(), 124);
+    for (name, slug) in [
+        ("沔鱼河公社", "mianyuhe"),
+        ("戛拉公社", "gala"),
+        ("烙烘公社", "laohong"),
+    ] {
+        let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{slug}-commune")).unwrap();
+        assert!(atlas.search(name, BodyId::Earth).contains(&id));
+    }
+}
+
+#[test]
+fn bijie_village_can_follow_source_parents_to_the_county() {
+    let atlas = atlas();
+    let path = [
+        "daqiao/xuhua-tun",
+        "daqiao/tianshengqiao-brigade",
+        "daqiao-commune",
+        "bijie-town",
+        "bijie-county",
+    ];
+    for pair in path.windows(2) {
+        let child = EntityId::from_key(&format!("earth/cn-gz/bijie/{}", pair[0])).unwrap();
+        let parent = EntityId::from_key(&format!("earth/cn-gz/bijie/{}", pair[1])).unwrap();
+        assert!(atlas.parents(child).contains(&parent));
+        assert!(atlas.children(parent).contains(&child));
+    }
+}
