@@ -36,3 +36,38 @@ fn strict_file_budget_rejects_oversize_output() {
     ));
     assert!(artifacts.is_empty());
 }
+
+#[test]
+fn shared_minute_coordinates_preserve_distinct_villages_and_their_parent() {
+    let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
+    let input = load_blocking(&root).unwrap();
+    let village = |name: &str| {
+        input
+            .data
+            .records
+            .iter()
+            .find(|record| {
+                record.source_id == "anshun-county-gazetteer" && record.observation.name == name
+            })
+            .unwrap()
+    };
+    let shaer = village("厦耳");
+    let bengtushan = village("崩土山");
+    let brigade = village("厦耳大队");
+    assert_ne!(shaer.entity_id, bengtushan.entity_id);
+    assert_eq!(shaer.observation.parent_id, Some(brigade.entity_id));
+    assert_eq!(bengtushan.observation.parent_id, Some(brigade.entity_id));
+    let output = compile(&input).unwrap();
+    for record in [shaer, bengtushan] {
+        let path = PathBuf::from(format!("entities/index/{}.json", record.entity_id.shard()));
+        let shard: serde_json::Value = serde_json::from_slice(&output[&path]).unwrap();
+        let published = &shard[record.entity_id.0.to_string()]["records"][0];
+        assert_eq!(published["scan_page"], 19);
+        assert_eq!(published["page_or_sheet"], "12");
+        let coordinate = &published["observation"]["coordinate"];
+        assert_eq!(coordinate["longitude_text"], "105°56′");
+        assert_eq!(coordinate["latitude_text"], "26°23′");
+        assert_eq!(coordinate["resolution_arcminutes"], 1.0);
+        assert_eq!(coordinate["datum"], "unspecified");
+    }
+}
