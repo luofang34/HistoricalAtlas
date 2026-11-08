@@ -2,4 +2,5 @@
 
 pub mod body;
 pub mod coordinates;
+pub mod registration;
 pub mod rotation;

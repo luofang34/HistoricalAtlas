@@ -112,7 +112,7 @@ fn read_blocking(path: &Path) -> Result<String, InputError> {
     })
 }
 
-fn read_json_blocking<T: DeserializeOwned>(path: &Path) -> Result<T, InputError> {
+pub(crate) fn read_json_blocking<T: DeserializeOwned>(path: &Path) -> Result<T, InputError> {
     serde_json::from_str(&read_blocking(path)?).map_err(|source| InputError::Json {
         path: path.to_owned(),
         source,

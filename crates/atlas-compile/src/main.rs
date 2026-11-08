@@ -5,6 +5,7 @@ use std::{error::Error, path::Path};
 use atlas_compile::{
     export::{compile, write_blocking},
     input::load_blocking,
+    registration::register_blocking,
 };
 use tracing::info;
 
@@ -35,9 +36,20 @@ fn main() -> Result<(), Box<dyn Error>> {
                 destination, "Static indexes compiled"
             );
         }
+        [command, root, request, destination] if command == "register" => {
+            let result =
+                register_blocking(Path::new(root), Path::new(request), Path::new(destination))?;
+            info!(
+                controls = result.control_quality.points,
+                rms = result.control_quality.rms,
+                units = result.job.target_frame.units,
+                destination,
+                "Sheet registered"
+            );
+        }
         _ => {
             return Err(
-                "usage: atlas-compile verify <data> | build <data> <new-output-directory>".into(),
+                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | register <data> <controls.json> <new-result.json>".into(),
             );
         }
     }

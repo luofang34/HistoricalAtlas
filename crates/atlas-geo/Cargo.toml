@@ -8,6 +8,7 @@ license.workspace = true
 atlas-core.workspace = true
 serde.workspace = true
 thiserror.workspace = true
+nalgebra = { version = "0.33", default-features = false, features = ["std"] }
 
 [lints]
 workspace = true
