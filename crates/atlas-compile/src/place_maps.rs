@@ -7,8 +7,10 @@ use serde::{Deserialize, Serialize};
 
 use crate::{input::LedgerInput, registration::RegisteredSheet};
 
+mod boundaries;
 mod evidence;
 mod transform;
+pub(crate) use boundaries::register_boundaries;
 pub use evidence::PlaceMapError;
 
 /// A measured symbol linked to its checked map observation.

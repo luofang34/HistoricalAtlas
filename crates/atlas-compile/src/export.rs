@@ -52,6 +52,15 @@ pub(crate) fn compile_with_boundaries(
     for trace in &input.traces {
         atlas_boundary::sheet::validate(&input.catalog, &input.data, trace)?;
     }
+    let mut registered = crate::place_maps::register_boundaries(input)
+        .map_err(|source| ExportError::PlaceMap(Box::new(source)))?;
+    registered.retain(|b| {
+        !boundaries
+            .iter()
+            .any(|other| b.unit.record_id == other.unit.record_id)
+    });
+    registered.extend_from_slice(boundaries);
+    let boundaries = registered.as_slice();
     for boundary in boundaries {
         boundary.feature(&input.data, None)?;
     }

@@ -71,6 +71,8 @@ fn registered_boundary_loads_with_source_evidence_and_stays_out_of_time_slices()
         "compiled_from_places"
     );
     assert_eq!(feature["properties"]["selected"], true);
+    assert_eq!(feature["properties"]["datum"], "wgs84");
+    assert!(feature["properties"]["registration_allowance_m"].is_null());
     assert!(feature["properties"]["validity"].is_null());
     assert_eq!(
         feature["properties"]["registration"],
@@ -163,7 +165,7 @@ fn publication_rejects_misfiled_boundary_and_invalid_geometry_or_method() {
         Atlas::new(misplaced),
         Err(AppError::EvidenceIdentity(_))
     ));
-    for case in 0..5 {
+    for case in 0..9 {
         let mut input = publication();
         let boundary = &mut input.entries.get_mut(&id).unwrap().boundaries[0];
         match case {
@@ -175,6 +177,10 @@ fn publication_rejects_misfiled_boundary_and_invalid_geometry_or_method() {
                 .unwrap(),
             2 => boundary.method_basis.clear(),
             3 => boundary.registration = "../outside.json".into(),
+            4 => boundary.datum = atlas_geo::coordinates::Datum::MoonIau,
+            5 => boundary.registration_allowance_m = Some(-1.),
+            6 => boundary.registration_allowance_m = Some(f64::NAN),
+            7 => boundary.registration_allowance_m = Some(f64::INFINITY),
             _ => boundary.unit.polygons[0].exterior[1] = usize::MAX,
         }
         assert!(

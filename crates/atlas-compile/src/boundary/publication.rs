@@ -150,6 +150,8 @@ pub(super) fn geographic_boundaries(
         .map(|unit| GeographicBoundary {
             unit: unit.clone(),
             vertices: sheet.vertices.clone(),
+            datum: atlas_geo::coordinates::Datum::Wgs84,
+            registration_allowance_m: None,
             boundary_method: trace.boundary_method,
             method_basis: trace.method_basis.clone(),
             registration: "boundary/registration.json".into(),

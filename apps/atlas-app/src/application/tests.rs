@@ -5,8 +5,12 @@ mod sheet;
 
 #[test]
 fn registered_boundary_search_focuses_geography_and_displays_source_method() {
-    let atlas = Atlas::new(crate::scene::boundaries::tests::publication()).unwrap();
     let id = EntityId::from_key("earth/cn-gz/zhijin/ertang-commune").unwrap();
+    let mut publication = crate::scene::boundaries::tests::publication();
+    let boundary = &mut publication.entries.get_mut(&id).unwrap().boundaries[0];
+    boundary.datum = atlas_geo::coordinates::Datum::Unspecified;
+    boundary.registration_allowance_m = Some(4500.);
+    let atlas = Atlas::new(publication).unwrap();
     let expected = crate::scene::boundaries::center(&atlas, id).unwrap();
     let mut app = Application::new(atlas).unwrap();
     app.select(id, true);
@@ -18,6 +22,8 @@ fn registered_boundary_search_focuses_geography_and_displays_source_method() {
     for label in [
         "Registered map boundary",
         "Source method: Compiled from place locations",
+        "Datum: Unspecified",
+        "Registration allowance: 4.5 km",
         "Effective dates: unknown",
     ] {
         assert!(

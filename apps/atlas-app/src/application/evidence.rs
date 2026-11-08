@@ -153,6 +153,13 @@ fn mapped_boundaries(
             atlas_boundary::sheet::BoundaryMethod::Unstated => "Unstated",
         };
         ui.label(format!("Source method: {method}"));
+        ui.label(format!("Datum: {:?}", boundary.datum));
+        if let Some(allowance) = boundary.registration_allowance_m {
+            ui.label(format!(
+                "Registration allowance: {:.1} km",
+                allowance / 1000.0
+            ));
+        }
         ui.label("Effective dates: unknown");
         ui.label(format!("Registration: {}", boundary.registration));
         ui.separator();

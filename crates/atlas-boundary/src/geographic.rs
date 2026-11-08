@@ -1,11 +1,11 @@
-//! Registered Earth boundaries in OGC:CRS84 longitude and latitude degrees.
+//! Registered Earth boundaries retaining their source coordinate datum.
 
 use crate::{
     polygon::resolve,
     sheet::{BoundaryMethod, TracedUnit},
 };
 use atlas_core::identity::{EntityId, FactId};
-use atlas_geo::{body::BodyId, registration::PlanarPoint};
+use atlas_geo::{body::BodyId, coordinates::Datum, registration::PlanarPoint};
 use atlas_ledger::model::{Dataset, Record};
 use serde::{Deserialize, Serialize};
 use serde_json::{Value, json};
@@ -17,8 +17,12 @@ use thiserror::Error;
 pub struct GeographicBoundary {
     /// Checked sheet observation and indexed polygon components.
     pub unit: TracedUnit,
-    /// Longitude and latitude degrees in OGC:CRS84.
+    /// Longitude and latitude degrees in the declared datum.
     pub vertices: Vec<PlanarPoint>,
+    /// Datum supported by the registration controls.
+    pub datum: Datum,
+    /// Working registration allowance in metres, separate from boundary construction.
+    pub registration_allowance_m: Option<f64>,
     /// How the source constructed its boundary.
     pub boundary_method: BoundaryMethod,
     /// Same-edition observations establishing the source's method.
@@ -35,13 +39,22 @@ impl GeographicBoundary {
         selected: Option<EntityId>,
     ) -> Result<Value, GeographicError> {
         let record = self.record(data)?;
+        self.datum.validate_body(BodyId::Earth)?;
+        if self
+            .registration_allowance_m
+            .is_some_and(|value| !value.is_finite() || value <= 0.0)
+        {
+            return Err(GeographicError::Evidence(
+                "registration allowance must be finite and positive".into(),
+            ));
+        }
         if self
             .vertices
             .iter()
             .any(|p| !(-180.0..=180.0).contains(&p.x) || !(-90.0..=90.0).contains(&p.y))
         {
             return Err(GeographicError::Evidence(
-                "OGC:CRS84 coordinates exceed their domains".into(),
+                "boundary longitude or latitude exceeds its domain".into(),
             ));
         }
         let geometry = resolve(&self.vertices, &self.unit.polygons)?;
@@ -73,6 +86,7 @@ impl GeographicBoundary {
                 "geometry_role": "registered_boundary", "geometry_kind": kind,
                 "selected": selected == Some(record.entity_id), "reconstructed": false,
                 "boundary_method": self.boundary_method, "method_basis": self.method_basis,
+                "datum": self.datum, "registration_allowance_m": self.registration_allowance_m,
                 "rank": record.observation.rank, "validity": null,
                 "registration": self.registration}}))
     }
@@ -95,7 +109,7 @@ impl GeographicBoundary {
                 .any(|e| e.id == record.entity_id && e.body == BodyId::Earth)
         {
             return Err(GeographicError::Evidence(
-                "OGC:CRS84 requires a cited Earth map boundary".into(),
+                "geographic display requires a cited Earth map boundary".into(),
             ));
         }
         if self.boundary_method != BoundaryMethod::Unstated && self.method_basis.is_empty() {
@@ -133,6 +147,9 @@ impl GeographicBoundary {
 /// Invalid registered polygon or its source evidence.
 #[derive(Debug, Error)]
 pub enum GeographicError {
+    /// Coordinate datum belongs to a different celestial body.
+    #[error(transparent)]
+    Coordinate(#[from] atlas_geo::coordinates::CoordinateError),
     /// Geometry is not a valid polygon or multipolygon.
     #[error("registered boundary topology: {0}")]
     Topology(#[from] crate::polygon::TopologyError),

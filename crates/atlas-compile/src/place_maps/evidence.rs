@@ -9,6 +9,12 @@ use thiserror::Error;
 /// Invalid map evidence, registration, or derived location.
 #[derive(Debug, Error)]
 pub enum PlaceMapError {
+    /// A matching sheet contains invalid source geometry or evidence.
+    #[error("place map boundary sheet: {0}")]
+    Sheet(#[from] atlas_boundary::sheet::SheetError),
+    /// Registered boundary coordinates or evidence are invalid.
+    #[error("place map boundary: {0}")]
+    Boundary(#[from] atlas_boundary::geographic::GeographicError),
     /// Missing or incompatible map or coordinate evidence.
     #[error("place map evidence: {0}")]
     Evidence(String),
