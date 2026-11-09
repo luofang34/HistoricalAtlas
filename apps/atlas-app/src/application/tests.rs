@@ -139,11 +139,13 @@ fn mapped_place_view_keeps_registered_locations_and_frames_the_reconstruction() 
     app.time.mode = crate::selection::TimeMode::MillionYears;
     app.time.value = "240".into();
     app.apply_time();
+    // Undated 1960s coordinates stay out of deep time; only plate reconstructions remain.
     assert!(
         app.points().unwrap()["features"]
             .as_array()
             .unwrap()
-            .is_empty()
+            .iter()
+            .all(|feature| feature["properties"]["reconstructed"] == true)
     );
 }
 

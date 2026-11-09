@@ -30,6 +30,12 @@ pub enum AppError {
     /// Map renderer failed.
     #[error(transparent)]
     Render(#[from] crate::scene::renderer::RenderError),
+    /// A published plate model is misfiled or has invalid rotations.
+    #[error("plate model {0} is misfiled or has invalid rotations")]
+    PlateModel(String),
+    /// Paleogeographic reconstruction failed.
+    #[error("plate reconstruction: {0}")]
+    Plate(#[from] atlas_geo::plates::PlateModelError),
     /// A publication document could not be decoded.
     #[error("atlas JSON: {0}")]
     Json(#[from] serde_json::Error),

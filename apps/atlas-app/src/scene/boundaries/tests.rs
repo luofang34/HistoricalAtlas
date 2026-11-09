@@ -32,6 +32,7 @@ pub(crate) fn lunar_publication() -> Publication {
         sources: serde_json::from_value(json!([source])).unwrap(),
         entries: BTreeMap::from([(id, entry)]),
         aliases: Default::default(),
+        plate_models: Default::default(),
     }
 }
 
@@ -131,6 +132,7 @@ pub(crate) fn publication() -> Publication {
         sources,
         entries,
         aliases: Default::default(),
+        plate_models: Default::default(),
     }
 }
 

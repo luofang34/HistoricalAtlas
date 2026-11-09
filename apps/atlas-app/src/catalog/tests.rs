@@ -1,6 +1,7 @@
 use super::*;
 
 mod haizijie;
+mod plates;
 
 #[test]
 fn shaogang_local_names_and_shashao_facilities_resolve_across_sources() {
@@ -339,6 +340,7 @@ fn compile_publication(input: &atlas_compile::input::LedgerInput) -> Publication
         sources,
         entries,
         aliases,
+        plate_models: plates::published(&output),
     }
 }
 

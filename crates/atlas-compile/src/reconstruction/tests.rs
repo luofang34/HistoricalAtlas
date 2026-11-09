@@ -179,7 +179,7 @@ fn plates4_import_of_cited_samples_resolves_every_crossover() {
         }
     }
     let imported = atlas_geo::plates::RotationModel::from_rot(&text).unwrap();
-    let original = document.model(&input.catalog).unwrap();
+    let original = crate::plate_models::validated_model(document, &input.catalog).unwrap();
     for age in [
         0.0, 33.1, 79.1, 120.0, 150.0, 199.999999, 200.0, 200.000001, 240.0, 250.0,
     ] {

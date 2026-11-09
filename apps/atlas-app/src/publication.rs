@@ -40,6 +40,9 @@ pub enum PublicationError {
     /// Shard names must be two lowercase hexadecimal digits.
     #[error("invalid entity shard name {0:?}")]
     Shard(String),
+    /// Plate model names must be lowercase ASCII letters, digits and hyphens.
+    #[error("invalid plate model name {0:?}")]
+    Model(String),
     /// Entity identity was repeated in more than one shard.
     #[error("duplicate entity in shard {0}")]
     Duplicate(String),
@@ -82,10 +85,24 @@ pub fn load_blocking(root: &Path) -> Result<Atlas, PublicationError> {
             }
         }
     }
+    let models: Vec<String> = read_blocking(&root.join("plates/models.json"))?;
+    let mut plate_models = BTreeMap::new();
+    for id in models {
+        if id.is_empty()
+            || !id
+                .bytes()
+                .all(|byte| byte.is_ascii_lowercase() || byte.is_ascii_digit() || byte == b'-')
+        {
+            return Err(PublicationError::Model(id));
+        }
+        let document = read_blocking(&root.join(format!("plates/{id}.json")))?;
+        plate_models.insert(id, document);
+    }
     Ok(Atlas::new(Publication {
         sources,
         entries,
         aliases,
+        plate_models,
     })?)
 }
 

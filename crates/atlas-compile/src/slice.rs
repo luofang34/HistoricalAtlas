@@ -22,6 +22,9 @@ struct SliceManifest {
     selection: TimeSelection,
     shards: Vec<String>,
     geometry: Vec<String>,
+    /// Plate-rotated coordinates, present when a cited model covers the epoch.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    paleo: Option<String>,
 }
 
 /// Compile time-selected properties alongside the complete checked evidence index.
@@ -40,6 +43,19 @@ pub fn compile_slice(
         .map(|entity| entity.entity_id)
         .collect();
     let geometry = geometry::publish(&mut artifacts, &input.data, at, selection, &absent)?;
+    // A plate assignment places a coordinate at any covered age, whether or not
+    // dated evidence says the entity existed then; only recorded removal hides it.
+    let positions: Vec<_> =
+        atlas_ledger::plates::paleo_positions(&input.plate_models, &input.data, at)?
+            .into_iter()
+            .filter(|position| !absent.contains(&position.entity_id))
+            .collect();
+    let paleo = if positions.is_empty() {
+        None
+    } else {
+        insert(&mut artifacts, "slice/paleo.json", &positions)?;
+        Some("slice/paleo.json".to_owned())
+    };
     let mut shards: BTreeMap<String, BTreeMap<_, _>> = BTreeMap::new();
     for entity in slice.entities {
         shards
@@ -63,6 +79,7 @@ pub fn compile_slice(
             selection,
             shards: names,
             geometry,
+            paleo,
         },
     )?;
     Ok(artifacts)
@@ -113,6 +130,9 @@ pub enum SliceError {
     /// Static artifact generation failed.
     #[error("time-slice output: {0}")]
     Export(#[from] ExportError),
+    /// A cited plate model could not rotate a coordinate.
+    #[error("time-slice plate reconstruction: {0}")]
+    Plate(#[from] atlas_geo::plates::PlateModelError),
 }
 
 #[cfg(test)]

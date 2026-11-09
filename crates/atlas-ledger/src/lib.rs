@@ -2,6 +2,7 @@
 
 pub mod features;
 pub mod model;
+pub mod plates;
 pub mod publication;
 pub mod timeline;
 pub mod validation;

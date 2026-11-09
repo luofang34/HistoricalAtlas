@@ -94,6 +94,8 @@ pub struct SelectedTime {
     pub evidence: BTreeMap<EntityId, serde_json::Value>,
     /// Date-selected names, including competing values.
     pub names: BTreeMap<EntityId, Vec<String>>,
+    /// Coordinates rotated by cited plate models covering the epoch, by record.
+    pub paleo: BTreeMap<atlas_core::identity::FactId, atlas_ledger::plates::PaleoPosition>,
 }
 
 impl SelectedTime {
@@ -123,12 +125,18 @@ impl SelectedTime {
             names.insert(entity.entity_id, labels);
             evidence.insert(entity.entity_id, serde_json::to_value(entity)?);
         }
+        let paleo = atlas_ledger::plates::paleo_positions(&atlas.plate_models, &atlas.data, at)?
+            .into_iter()
+            .filter(|position| !absent.contains(&position.entity_id))
+            .map(|position| (position.record_id, position))
+            .collect();
         Ok(Self {
             absent,
             at,
             selection: control.selection,
             evidence,
             names,
+            paleo,
         })
     }
 }
