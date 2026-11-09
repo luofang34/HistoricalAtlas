@@ -53,6 +53,26 @@ pub enum TerrainInput {
     Inline(Box<RegistrationTerrain>),
 }
 
+impl TerrainInput {
+    /// The validated grid, embedded or loaded from its shared document.
+    pub fn resolve<'a>(
+        &'a self,
+        input: &'a LedgerInput,
+    ) -> Result<&'a RegistrationTerrain, RegistrationJobError> {
+        let terrain = match self {
+            Self::Inline(terrain) => terrain.as_ref(),
+            Self::Shared(shared) => input.terrains.get(&shared.terrain_id).ok_or_else(|| {
+                RegistrationJobError::Evidence(format!(
+                    "unknown terrain document {}",
+                    shared.terrain_id
+                ))
+            })?,
+        };
+        validate_terrain(&input.catalog, terrain)?;
+        Ok(terrain)
+    }
+}
+
 /// Check a terrain document's source rights, tile fingerprints and samples.
 pub fn validate_terrain(
     catalog: &SourceCatalog,
@@ -69,10 +89,20 @@ pub fn validate_terrain(
             terrain.source_id
         )));
     }
-    let digest = |value: &str| value.len() == 64 && value.bytes().all(|b| b.is_ascii_hexdigit());
-    if terrain.tiles.is_empty() || !terrain.tiles.iter().all(|tile| digest(&tile.sha256)) {
+    let digest = |value: &str| {
+        value.len() == 64
+            && value
+                .bytes()
+                .all(|b| b.is_ascii_hexdigit() && !b.is_ascii_uppercase())
+    };
+    let mut urls = std::collections::BTreeSet::new();
+    if terrain.tiles.is_empty()
+        || !terrain.tiles.iter().all(|tile| {
+            digest(&tile.sha256) && tile.url.starts_with("https://") && urls.insert(&tile.url)
+        })
+    {
         return Err(evidence(
-            "terrain grid requires fingerprinted source tiles".into(),
+            "terrain grid requires distinct HTTPS tiles with lowercase SHA-256 fingerprints".into(),
         ));
     }
     if terrain
@@ -259,13 +289,8 @@ fn validated_terrain<'a>(
                 "camera registration requires a terrain grid".into(),
             ));
         }
-        Some(TerrainInput::Inline(terrain)) => terrain.as_ref(),
-        Some(TerrainInput::Shared(shared)) => input
-            .terrains
-            .get(&shared.terrain_id)
-            .ok_or_else(|| evidence(format!("unknown terrain document {}", shared.terrain_id)))?,
+        Some(terrain) => terrain.resolve(input)?,
     };
-    validate_terrain(&input.catalog, terrain)?;
     Ok((terrain, body))
 }
 

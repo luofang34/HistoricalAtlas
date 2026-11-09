@@ -64,10 +64,12 @@ pub fn compile(input: &LedgerInput) -> Result<Artifacts, ExportError> {
     }
     let mut artifacts = compile_with_derived(input, &derived)?;
     for request in input.derivations.values() {
+        let recipe = crate::derivation::published(input, request)
+            .map_err(|e| ExportError::Derivation(Box::new(e)))?;
         insert(
             &mut artifacts,
             &format!("derived/{}.json", request.id),
-            request,
+            &recipe,
         )?;
     }
     Ok(artifacts)

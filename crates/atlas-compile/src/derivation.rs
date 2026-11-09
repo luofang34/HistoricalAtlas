@@ -5,7 +5,7 @@ use crate::{
     input::{InputError, LedgerInput, load_blocking, read_json_blocking},
 };
 use atlas_boundary::terrain::{
-    DerivedBoundary, ElevationGrid, NeighborExclusion, TerrainError, TerrainRequest, derive,
+    DerivedBoundary, NeighborExclusion, TerrainError, TerrainRequest, derive,
 };
 use atlas_core::identity::FactId;
 use serde::{Deserialize, Serialize};
@@ -94,12 +94,8 @@ pub struct DerivationRequest {
     pub source_id: String,
     /// Registered source-map boundary enclosing the partition.
     pub envelope_record_id: FactId,
-    /// Catalogued elevation dataset.
-    pub terrain_source_id: String,
-    /// Original numerical tile fingerprints and URLs.
-    pub terrain_tiles: Vec<TerrainTile>,
-    /// Cropped elevation samples and their GeoTIFF georeferencing.
-    pub grid: ElevationGrid,
+    /// Elevation grid with its catalogued source and tile fingerprints, embedded or shared.
+    pub terrain: crate::registration::TerrainInput,
     /// How historical coordinates are aligned with the modern terrain frame.
     pub alignment: String,
     /// Extra horizontal-equivalent metres per metre of elevation change.
@@ -116,6 +112,10 @@ pub fn reconstruct(
     request: &DerivationRequest,
 ) -> Result<Vec<DerivedBoundary>, DerivationError> {
     evidence::validate(input, request)?;
+    let terrain = request
+        .terrain
+        .resolve(input)
+        .map_err(|error| DerivationError::Evidence(error.to_string()))?;
     let envelope = crate::place_maps::register_boundaries(input)?
         .into_iter()
         .find(|b| b.unit.record_id == request.envelope_record_id)
@@ -126,7 +126,7 @@ pub fn reconstruct(
     let areas = areas::resolve(input, request, &mut bases)?;
     let neighbors = neighbors::resolve(input, request, &mut bases)?;
     let numeric = TerrainRequest {
-        grid: request.grid.clone(),
+        grid: terrain.grid.clone(),
         vertices: envelope.vertices,
         envelope: envelope.unit.polygons,
         seeds,
@@ -151,7 +151,7 @@ pub fn reconstruct(
             basis: basis.iter().copied().collect(),
             region,
             datum: envelope.datum,
-            cell_m: request.grid.cell_m,
+            cell_m: terrain.grid.cell_m,
             slope_weight: request.slope_weight,
             model: format!("derived/{}.json", request.id),
             comparisons: Vec::new(),
@@ -174,9 +174,24 @@ pub fn compile_derivation(
     insert(
         &mut artifacts,
         &format!("derived/{}.json", request.id),
-        request,
+        &published(input, request)?,
     )?;
     Ok(artifacts)
+}
+
+/// The recipe with shared terrain embedded, so a published model is complete on its own.
+pub fn published(
+    input: &LedgerInput,
+    request: &DerivationRequest,
+) -> Result<DerivationRequest, DerivationError> {
+    let terrain = request
+        .terrain
+        .resolve(input)
+        .map_err(|error| DerivationError::Evidence(error.to_string()))?;
+    Ok(DerivationRequest {
+        terrain: crate::registration::TerrainInput::Inline(Box::new(terrain.clone())),
+        ..request.clone()
+    })
 }
 
 /// Load a recipe and write a new publication directory.

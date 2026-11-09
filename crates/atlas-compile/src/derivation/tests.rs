@@ -19,8 +19,13 @@ fn real_commune_recipe_publishes_every_reconstruction_with_its_source_evidence()
             &output[Path::new("derived/bijie-communes-terrain.json")]
         )
         .unwrap(),
-        serde_json::to_value(&request).unwrap()
+        serde_json::to_value(published(&input, &request).unwrap()).unwrap()
     );
+    // The shared grid is cited by name in the data and embedded when published.
+    assert!(matches!(
+        request.terrain,
+        crate::registration::TerrainInput::Shared(_)
+    ));
     for unit in &request.units {
         let record = input
             .data
@@ -87,7 +92,9 @@ fn reconstruction_rejects_other_communes_anchors_and_uncited_exclusions() {
             .contains("reason")
     );
     let mut invalid = request;
-    invalid.terrain_tiles[0].sha256 = "invalid".into();
+    let mut terrain = invalid.terrain.resolve(&input).unwrap().clone();
+    terrain.tiles[0].sha256 = "invalid".into();
+    invalid.terrain = crate::registration::TerrainInput::Inline(Box::new(terrain));
     assert!(
         reconstruct(&input, &invalid)
             .unwrap_err()

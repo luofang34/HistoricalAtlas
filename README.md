@@ -4,7 +4,7 @@ A spatiotemporal atlas and evidence ledger for chronicle applications. Historica
 
 ## Usage
 
-Requires Rust 1.97.1 or later with the `wasm32-unknown-unknown` target, the Protocol Buffers compiler (`protoc`), Python 3.12 or later, Poppler, and Tesseract with the English model for extraction tests. Image recognition of Chinese sources also uses the `chi_sim` model.
+Requires Rust 1.97.1 or later with the `wasm32-unknown-unknown` target, the Protocol Buffers compiler (`protoc`), Python 3.12 or later, Poppler, Tesseract with the English model for extraction tests, Node.js for the browser loader tests, and `uv`, which `scripts/ci.sh` uses to run the asset-tool tests with numpy, Pillow, fontTools, and matplotlib. Image recognition of Chinese sources also uses the `chi_sim` model.
 
 ```sh
 cargo run -p atlas-compile -- verify data
@@ -25,7 +25,7 @@ Open a compiled publication in the desktop map with `cargo run -p atlas-app -- d
 
 Earth uses a bundled [Natural Earth II](https://www.naturalearthdata.com/downloads/50m-raster-data/50m-natural-earth-2/) physical basemap, with elevation hillshade over the Bijie–Zhijin–Liuzhi–Anshun area from [Mapzen Terrain Tiles](https://registry.opendata.aws/terrain-tiles/). SRTM and GMTED2010 elevation data are courtesy of the U.S. Geological Survey. Basemap tiles and font subsets load from `assets/` as separate files on desktop and in the browser. To regenerate it, install Python's `numpy` and `Pillow` packages and run `python3 tools/build-basemap.py <NE2_50M_SR_W.tif> <terrain-geotiff-directory> apps/atlas-app/assets/basemap`; `manifest.json` controls tile coverage, zooms, attribution, and fingerprints. Each tile may specify a `body` (default `earth`); adding regional tiles requires no Rust changes. `assets/fonts.json` lists the font files in fallback order. The application opens on a globe with rotation across the poles and pointer-anchored zoom. **Globe** returns to the world view; **Data extent** frames the mapped places on the selected body. **Source drawings** opens the traced map sheets with their measured settlement symbols and vector boundaries.
 
-The optional **Terrain estimates** layer displays reconstructed boundaries with dashed outlines. `build` evaluates every `*.derive.json` recipe from cited place anchors, registered envelopes, elevation grids, and optional area/adjacency constraints. Each polygon links to its recipe and source comparisons. `derive` evaluates one recipe; unattainable constraints fail the build.
+The optional **Terrain estimates** layer displays reconstructed boundaries with dashed outlines. `build` evaluates every `*.derive.json` recipe from cited place anchors, registered envelopes, elevation grids, and optional area/adjacency constraints. A recipe's `terrain` is an embedded grid or a `terrain_id` naming a shared `*.terrain.json` document; the published recipe under `derived/` embeds the grid and its tile fingerprints. Each polygon links to its recipe and source comparisons. `derive` evaluates one recipe; unattainable constraints fail the build.
 
 To render a static Bijie overview and a regional detail, install Python’s `matplotlib`, `numpy`, and `Pillow` packages and run `python3 tools/render-bijie.py <publication-directory> <output-directory> --detail haogou-commune liuhua-commune`. The renderer uses the bundled fonts and basemap, checks seed containment, and places commune labels without overlaps.
 

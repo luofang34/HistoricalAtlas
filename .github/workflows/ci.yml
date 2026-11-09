@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
       - name: Install build tools
         run: |
           rustup toolchain install stable --profile minimal --component clippy --component rustfmt --target wasm32-unknown-unknown
