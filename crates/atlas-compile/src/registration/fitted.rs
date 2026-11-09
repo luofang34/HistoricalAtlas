@@ -19,6 +19,7 @@ pub(super) enum Fitted {
 
 impl Fitted {
     pub(super) fn fit(
+        input: &crate::input::LedgerInput,
         job: &RegistrationJob,
         controls: &[ControlPoint],
     ) -> Result<Self, RegistrationJobError> {
@@ -32,7 +33,7 @@ impl Fitted {
                 ControlSupport::new(controls)?,
             ),
             RegistrationMethod::Camera { focal_px } => {
-                Self::Camera(Box::new(FittedCamera::fit(job, focal_px)?))
+                Self::Camera(Box::new(FittedCamera::fit(input, job, focal_px)?))
             }
         })
     }

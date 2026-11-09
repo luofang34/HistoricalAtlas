@@ -34,7 +34,7 @@ pub struct BoundaryRegistration {
     pub maximum_segment_pixels: f64,
     /// Elevation model required by the camera method.
     #[serde(default, skip_serializing_if = "Option::is_none")]
-    pub terrain: Option<crate::registration::RegistrationTerrain>,
+    pub terrain: Option<crate::registration::TerrainInput>,
 }
 
 /// Compile a source-pixel trace without assigning geographical coordinates.

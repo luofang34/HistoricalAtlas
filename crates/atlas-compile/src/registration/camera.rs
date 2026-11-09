@@ -15,6 +15,8 @@ use serde::{Deserialize, Serialize};
 
 use super::{ReferencedControl, RegistrationJob, RegistrationJobError};
 use crate::derivation::TerrainTile;
+use crate::input::LedgerInput;
+use atlas_ledger::model::SourceCatalog;
 
 /// Elevation model under a photographed scene, with its source tiles.
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -30,6 +32,59 @@ pub struct RegistrationTerrain {
     /// photograph sees through the water surface rather than at depth.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub water_surface_m: Option<f64>,
+}
+
+/// A reusable `*.terrain.json` document, named by its data-relative path without the suffix.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct SharedTerrain {
+    /// Such as `guadalcanal-1942/lunga` for `data/guadalcanal-1942/lunga.terrain.json`.
+    pub terrain_id: String,
+}
+
+/// Terrain for a registration: a shared document, so photographs of one area
+/// cite one grid, or a grid embedded in a standalone job.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum TerrainInput {
+    /// Reference to a loaded terrain document.
+    Shared(SharedTerrain),
+    /// Embedded grid and provenance.
+    Inline(Box<RegistrationTerrain>),
+}
+
+/// Check a terrain document's source rights, tile fingerprints and samples.
+pub fn validate_terrain(
+    catalog: &SourceCatalog,
+    terrain: &RegistrationTerrain,
+) -> Result<(), RegistrationJobError> {
+    let evidence = |message: String| RegistrationJobError::Evidence(message);
+    if !catalog
+        .sources
+        .iter()
+        .any(|source| source.id == terrain.source_id && source.rights.is_some())
+    {
+        return Err(evidence(format!(
+            "terrain source {} must be catalogued with a rights statement",
+            terrain.source_id
+        )));
+    }
+    let digest = |value: &str| value.len() == 64 && value.bytes().all(|b| b.is_ascii_hexdigit());
+    if terrain.tiles.is_empty() || !terrain.tiles.iter().all(|tile| digest(&tile.sha256)) {
+        return Err(evidence(
+            "terrain grid requires fingerprinted source tiles".into(),
+        ));
+    }
+    if terrain
+        .water_surface_m
+        .is_some_and(|height| !height.is_finite())
+    {
+        return Err(evidence("water surface height must be finite".into()));
+    }
+    terrain
+        .grid
+        .validate()
+        .map_err(|error| evidence(error.to_string()))
 }
 
 /// The surface a camera sees: terrain, raised to the water surface where submerged.
@@ -89,10 +144,11 @@ pub(super) struct FittedCamera {
 
 impl FittedCamera {
     pub(super) fn fit(
+        input: &LedgerInput,
         job: &RegistrationJob,
         focal_px: Option<f64>,
     ) -> Result<Self, RegistrationJobError> {
-        let (validated, body) = validated_terrain(job)?;
+        let (validated, body) = validated_terrain(input, job)?;
         let ellipsoid = body.ellipsoid();
         let terrain = VisibleSurface {
             grid: validated.grid.clone(),
@@ -182,35 +238,34 @@ impl FittedCamera {
     }
 }
 
-fn validated_terrain(
-    job: &RegistrationJob,
-) -> Result<(&RegistrationTerrain, BodyId), RegistrationJobError> {
-    let evidence = |message: &str| RegistrationJobError::Evidence(message.into());
+fn validated_terrain<'a>(
+    input: &'a LedgerInput,
+    job: &'a RegistrationJob,
+) -> Result<(&'a RegistrationTerrain, BodyId), RegistrationJobError> {
+    let evidence = |message: String| RegistrationJobError::Evidence(message);
     let body = job
         .target_frame
         .geographic_datum()?
         .and_then(Datum::body)
         .ok_or_else(|| {
-            evidence("camera registration requires longitude and latitude on a declared body datum")
+            evidence(
+                "camera registration requires longitude and latitude on a declared body datum"
+                    .into(),
+            )
         })?;
-    let terrain = job
-        .terrain
-        .as_ref()
-        .ok_or_else(|| evidence("camera registration requires a terrain grid"))?;
-    let digest = |value: &str| value.len() == 64 && value.bytes().all(|b| b.is_ascii_hexdigit());
-    if terrain.tiles.is_empty() || !terrain.tiles.iter().all(|tile| digest(&tile.sha256)) {
-        return Err(evidence("terrain grid requires fingerprinted source tiles"));
-    }
-    if terrain
-        .water_surface_m
-        .is_some_and(|height| !height.is_finite())
-    {
-        return Err(evidence("water surface height must be finite"));
-    }
-    terrain
-        .grid
-        .validate()
-        .map_err(|error| RegistrationJobError::Evidence(error.to_string()))?;
+    let terrain = match job.terrain.as_ref() {
+        None => {
+            return Err(evidence(
+                "camera registration requires a terrain grid".into(),
+            ));
+        }
+        Some(TerrainInput::Inline(terrain)) => terrain.as_ref(),
+        Some(TerrainInput::Shared(shared)) => input
+            .terrains
+            .get(&shared.terrain_id)
+            .ok_or_else(|| evidence(format!("unknown terrain document {}", shared.terrain_id)))?,
+    };
+    validate_terrain(&input.catalog, terrain)?;
     Ok((terrain, body))
 }
 

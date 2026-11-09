@@ -55,8 +55,17 @@ pub struct PlaceMap {
     pub datum: Datum,
     /// Reviewed symbols, each citing its own sheet record.
     pub places: Vec<MappedPlace>,
-    /// Correspondences included in the affine fit.
+    /// Table-coordinate correspondences included in the fit.
     pub controls: Vec<PlaceControl>,
+    /// Landmarks measured on a catalogued reference, for sheets without coordinate tables.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub reference_controls: Vec<crate::registration::ReferencedControl>,
+    /// Reference landmarks excluded from the fit.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub reference_check_points: Vec<crate::registration::ReferencedControl>,
+    /// Elevation model required by the camera method.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub terrain: Option<crate::registration::TerrainInput>,
     /// Correspondences excluded from the fit.
     pub check_points: Vec<PlaceControl>,
     /// Working positional allowance in metres.

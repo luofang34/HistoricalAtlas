@@ -47,6 +47,7 @@ fn input() -> LedgerInput {
         aliases: Default::default(),
         published: Default::default(),
         derivations: Default::default(),
+        terrains: Default::default(),
         traces: Vec::new(),
         place_maps: Default::default(),
         plate_models: Default::default(),
@@ -139,7 +140,7 @@ fn job(frame: &LocalFrame, target_frame: TargetFrame) -> RegistrationJob {
             .collect(),
         check_points: vec![control("check", pixel(800.0, 1400.0), frame)],
         vertices: vec![pixel(1700.0, 900.0)],
-        terrain: Some(RegistrationTerrain {
+        terrain: Some(TerrainInput::Inline(Box::new(RegistrationTerrain {
             source_id: "terrain".into(),
             tiles: vec![TerrainTile {
                 url: "https://example.org/terrain/1.tif".into(),
@@ -147,7 +148,7 @@ fn job(frame: &LocalFrame, target_frame: TargetFrame) -> RegistrationJob {
             }],
             grid: grid(),
             water_surface_m: None,
-        }),
+        }))),
     }
 }
 
@@ -251,4 +252,44 @@ fn lunar_camera_registration_uses_the_moon_ellipsoid() {
     };
     let error = register(&input(), job(&frame, unspecified)).unwrap_err();
     assert!(error.to_string().contains("body datum"), "{error}");
+}
+
+#[test]
+fn shared_terrain_documents_register_like_embedded_grids() {
+    let frame = LocalFrame::new(GeodeticPoint {
+        position: LonLat {
+            longitude: 160.05,
+            latitude: -9.43,
+        },
+        height_m: 0.0,
+    });
+    let wgs84 = TargetFrame {
+        datum: None,
+        crs: "OGC:CRS84".into(),
+        units: "degrees".into(),
+    };
+    let mut shared = job(&frame, wgs84);
+    let Some(TerrainInput::Inline(terrain)) = shared.terrain.take() else {
+        panic!("test job embeds its terrain");
+    };
+    let mut input = input();
+    input.terrains.insert("test/area".into(), *terrain);
+    shared.terrain = Some(TerrainInput::Shared(SharedTerrain {
+        terrain_id: "test/area".into(),
+    }));
+    let json = serde_json::to_value(&shared).unwrap();
+    assert_eq!(
+        json["terrain"],
+        serde_json::json!({"terrain_id": "test/area"})
+    );
+    let result = register(&input, shared.clone()).unwrap();
+    assert!((result.camera.unwrap().focal_px - 1800.0).abs() < 2.0);
+    shared.terrain = Some(TerrainInput::Shared(SharedTerrain {
+        terrain_id: "test/missing".into(),
+    }));
+    let error = register(&input, shared).unwrap_err();
+    assert!(
+        error.to_string().contains("unknown terrain document"),
+        "{error}"
+    );
 }

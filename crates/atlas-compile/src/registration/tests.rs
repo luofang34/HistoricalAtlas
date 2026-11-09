@@ -170,6 +170,7 @@ fn capture_input() -> LedgerInput {
         aliases: Default::default(),
         published: Default::default(),
         derivations: std::collections::BTreeMap::new(),
+        terrains: std::collections::BTreeMap::new(),
         traces: Vec::new(),
         place_maps: std::collections::BTreeMap::new(),
         plate_models: std::collections::BTreeMap::new(),

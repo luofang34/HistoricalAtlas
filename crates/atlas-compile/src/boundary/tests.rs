@@ -187,7 +187,7 @@ fn unpaginated_line_only_capture_registers_and_publishes_open_components() {
             "capture":{"medium":"aerial_photograph","sha256":"a".repeat(64),"frame":"17"}}]})).unwrap(),
         data: serde_json::from_value(json!({"entities":[{"id":entity,"key":"earth/test/river","body":"earth","kind":"river"}],
             "records":[{"id":fact,"key":"capture/river","entity_id":entity,"source_id":"capture","locator":"River","checked":true,"observation":{"name":"River"}}],"estimates":[],"disputes":[]})).unwrap(),
-        aliases: Default::default(), published: Default::default(), derivations: BTreeMap::new(),
+        aliases: Default::default(), published: Default::default(), derivations: BTreeMap::new(), terrains: BTreeMap::new(),
         traces: Vec::new(), place_maps: BTreeMap::new(), plate_models: BTreeMap::new(),
     });
     let trace: SheetTrace = serde_json::from_value(json!({"source_id":"capture","scan_page":null,

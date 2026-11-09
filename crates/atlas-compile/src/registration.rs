@@ -14,7 +14,9 @@ use thiserror::Error;
 mod camera;
 mod fitted;
 
-pub use camera::{CameraReport, RegistrationTerrain};
+pub use camera::{
+    CameraReport, RegistrationTerrain, SharedTerrain, TerrainInput, validate_terrain,
+};
 
 use crate::{
     export::MAX_FILE_BYTES,
@@ -124,7 +126,7 @@ pub struct RegistrationJob {
     pub vertices: Vec<PlanarPoint>,
     /// Elevation model required by the camera method.
     #[serde(default, skip_serializing_if = "Option::is_none")]
-    pub terrain: Option<RegistrationTerrain>,
+    pub terrain: Option<TerrainInput>,
 }
 
 /// A sheet registration result with provenance and measured fit quality.
@@ -161,7 +163,7 @@ pub fn register(
 ) -> Result<RegisteredSheet, RegistrationJobError> {
     let scan_sha256 = validate_job(input, &job)?;
     let controls: Vec<_> = job.controls.iter().map(|control| control.point).collect();
-    let model = fitted::Fitted::fit(&job, &controls)?;
+    let model = fitted::Fitted::fit(input, &job, &controls)?;
     let control_quality = model.evaluate(&controls)?;
     let check_quality = if job.check_points.is_empty() {
         None
@@ -214,18 +216,6 @@ fn validate_job(
         ));
     }
     job.target_frame.geographic_datum()?;
-    if let Some(terrain) = &job.terrain
-        && !input
-            .catalog
-            .sources
-            .iter()
-            .any(|source| source.id == terrain.source_id && source.rights.is_some())
-    {
-        return Err(RegistrationJobError::Evidence(format!(
-            "terrain source {} must be catalogued with a rights statement",
-            terrain.source_id
-        )));
-    }
     validate_controls(input, job)?;
     if job.source_frame.width == 0 || job.source_frame.height == 0 {
         return Err(RegistrationJobError::Evidence(

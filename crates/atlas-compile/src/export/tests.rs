@@ -25,6 +25,7 @@ fn input() -> LedgerInput {
         data,
         catalog,
         derivations: BTreeMap::new(),
+        terrains: BTreeMap::new(),
         traces: Vec::new(),
         place_maps: BTreeMap::new(),
         plate_models: BTreeMap::new(),
