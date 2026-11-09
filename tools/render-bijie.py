@@ -263,6 +263,8 @@ def detail(data, selected, output):
             y -= .033
             for neighbor in comparison['neighbors']:
                 status = 'shared edge' if neighbor['shares_edge'] else 'not mapped' if neighbor['shares_edge'] is None else 'no shared edge'
+                if neighbor.get('unresolved'):
+                    status = 'unresolved adjacency'
                 fig.text(.79, y, neighbor['name'] + ': ' + status, fontsize=8)
                 y -= .027
         y -= .03

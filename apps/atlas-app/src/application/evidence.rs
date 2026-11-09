@@ -197,6 +197,9 @@ fn derived_boundaries(ui: &mut egui::Ui, boundaries: &[atlas_boundary::terrain::
                         None => "boundary not mapped",
                     };
                     ui.label(format!("{}: {status}", neighbor.name));
+                    if let Some(review) = &neighbor.unresolved {
+                        ui.label(format!("Unresolved source adjacency: {}", review.reason));
+                    }
                 }
             });
         }

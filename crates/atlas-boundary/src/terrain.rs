@@ -18,7 +18,7 @@ mod vectorize;
 pub use boundary::DerivedBoundary;
 pub use cells::ElevationGrid;
 pub use fitting::AreaTarget;
-pub use review::{BoundaryComparison, NeighborComparison, compare};
+pub use review::{BoundaryComparison, NeighborComparison, NeighborExclusion, compare};
 
 /// One located member of a numbered administrative unit.
 #[derive(Debug, Clone, Serialize, Deserialize)]

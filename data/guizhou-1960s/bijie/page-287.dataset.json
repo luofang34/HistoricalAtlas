@@ -1,0 +1,508 @@
+{
+  "entities": [
+    {
+      "id": "66e443f1-b9b0-5c0f-a567-d56a34cb12b5",
+      "key": "earth/cn-gz/bijie/zongji/primary-school",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "6ea74dc1-47f0-573d-a4dd-4ff5a6207b94",
+      "key": "earth/cn-gz/bijie/zongji/nanfeng-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "61f187f4-ee44-5484-b798-a81f0d95ec71",
+      "key": "earth/cn-gz/bijie/zongji/nanfeng/sandaogou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "1e4c0aab-6594-55ce-8d15-377a45ff321a",
+      "key": "earth/cn-gz/bijie/zongji/nanfeng/hulutang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "790f5933-07ef-52ba-ab75-1ac5caf6c319",
+      "key": "earth/cn-gz/bijie/zongji/nanfeng/madigou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "adb069bd-2a35-552f-b52c-e00dbcfa40e7",
+      "key": "earth/cn-gz/bijie/zongji/nanfeng/lizilin",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "62bed274-8fb8-5ab7-9c06-932279557cd2",
+      "key": "earth/cn-gz/bijie/zongji/nanfeng/wujiayakou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "8913a1d7-05e8-5b8f-8a3c-821ba19b43c1",
+      "key": "earth/cn-gz/bijie/zongji/nanfeng/heduimen",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "210c60a3-fc9c-5d5a-a2cf-247ded9f6587",
+      "key": "earth/cn-gz/bijie/zongji/nanfeng/fangniuchang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "6adf8497-7f33-5000-82e0-62691f48bf90",
+      "key": "earth/cn-gz/bijie/zongji/nanfeng/maocaoping",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "e5a7e3df-bf83-507d-b82f-a27565602f8f",
+      "key": "earth/cn-gz/bijie/zongji/nanfeng/lanaotian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "0a2c0202-f016-5dad-806e-479b9147521d",
+      "key": "earth/cn-gz/bijie/zongji/road-station",
+      "body": "earth",
+      "kind": "facility"
+    }
+  ],
+  "records": [
+    {
+      "id": "98ea9123-f729-50fb-8843-3ecca26136fa",
+      "key": "bijie-gazetteer/p287/zongji/primary-school",
+      "entity_id": "66e443f1-b9b0-5c0f-a567-d56a34cb12b5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "287",
+      "scan_page": 322,
+      "locator": "Place table, row 1: 总基小学",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "总基小学",
+        "pinyin": "Zǒngjīxiǎoxué",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "de20053f-2452-573d-a782-3080ee1de75f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.46666666666667,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°28′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "校"
+      }
+    },
+    {
+      "id": "31c922e1-f11f-50a1-af10-f1ea613195aa",
+      "key": "bijie-gazetteer/p287/zongji/nanfeng-brigade",
+      "entity_id": "6ea74dc1-47f0-573d-a4dd-4ff5a6207b94",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "287",
+      "scan_page": 322,
+      "locator": "Place table, row 2: 南丰大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "南丰大队",
+        "pinyin": "Nánfēng Dàqiù",
+        "population": 1481,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "de20053f-2452-573d-a782-3080ee1de75f",
+        "rank": "brigade",
+        "seat_id": "8913a1d7-05e8-5b8f-8a3c-821ba19b43c1",
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.433333333333334
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°26′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6d49688e-c7b2-5a21-a5c8-db1d51e65d76",
+      "key": "bijie-gazetteer/p287/zongji/nanfeng/sandaogou",
+      "entity_id": "61f187f4-ee44-5484-b798-a81f0d95ec71",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "287",
+      "scan_page": 322,
+      "locator": "Place table, row 3: 三道沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "三道沟",
+        "pinyin": "Sāndàogōu",
+        "population": 60,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6ea74dc1-47f0-573d-a4dd-4ff5a6207b94",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.416666666666668
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°25′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7b9cc93d-d4b5-5659-ac12-2462db09fc1c",
+      "key": "bijie-gazetteer/p287/zongji/nanfeng/hulutang",
+      "entity_id": "1e4c0aab-6594-55ce-8d15-377a45ff321a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "287",
+      "scan_page": 322,
+      "locator": "Place table, row 4: 葫芦塘",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "葫芦塘",
+        "pinyin": "Fúlútáng",
+        "population": 97,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6ea74dc1-47f0-573d-a4dd-4ff5a6207b94",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.416666666666668
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°25′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "3bc4c89f-27db-5bb2-823b-d5a45a447298",
+      "key": "bijie-gazetteer/p287/zongji/nanfeng/madigou",
+      "entity_id": "790f5933-07ef-52ba-ab75-1ac5caf6c319",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "287",
+      "scan_page": 322,
+      "locator": "Place table, row 5: 麻地沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "麻地沟",
+        "pinyin": "Mádìgōu",
+        "population": 221,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6ea74dc1-47f0-573d-a4dd-4ff5a6207b94",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.433333333333334
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°26′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6eec72a5-0c74-5602-8da9-a9c948af13eb",
+      "key": "bijie-gazetteer/p287/zongji/nanfeng/lizilin",
+      "entity_id": "adb069bd-2a35-552f-b52c-e00dbcfa40e7",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "287",
+      "scan_page": 322,
+      "locator": "Place table, row 6: 李子林",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "李子林",
+        "pinyin": "Lǐzǐlín",
+        "population": 328,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6ea74dc1-47f0-573d-a4dd-4ff5a6207b94",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.433333333333334
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°26′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "62447c6e-3b93-5c67-a85e-512fdae13ac4",
+      "key": "bijie-gazetteer/p287/zongji/nanfeng/wujiayakou",
+      "entity_id": "62bed274-8fb8-5ab7-9c06-932279557cd2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "287",
+      "scan_page": 322,
+      "locator": "Place table, row 7: 吴家垭口",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "吴家垭口",
+        "pinyin": "Wújiāyàkǒu",
+        "population": 111,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6ea74dc1-47f0-573d-a4dd-4ff5a6207b94",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.416666666666668
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°25′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bade39b6-f5f1-5947-a061-cea486c1b17c",
+      "key": "bijie-gazetteer/p287/zongji/nanfeng/heduimen",
+      "entity_id": "8913a1d7-05e8-5b8f-8a3c-821ba19b43c1",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "287",
+      "scan_page": 322,
+      "locator": "Place table, row 8: 河对门",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "河对门",
+        "pinyin": "Héduìmén",
+        "population": 229,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6ea74dc1-47f0-573d-a4dd-4ff5a6207b94",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.433333333333334
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°26′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "761a1cb3-478d-53c4-933a-3ad142b5697f",
+      "key": "bijie-gazetteer/p287/zongji/nanfeng/fangniuchang",
+      "entity_id": "210c60a3-fc9c-5d5a-a2cf-247ded9f6587",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "287",
+      "scan_page": 322,
+      "locator": "Place table, row 9: 放牛场",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "放牛场",
+        "pinyin": "Fàngniúchǎng",
+        "population": 125,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6ea74dc1-47f0-573d-a4dd-4ff5a6207b94",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.416666666666668
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°25′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "6c352ff0-22b2-5d42-8ce8-bfc71451fbaa",
+      "key": "bijie-gazetteer/p287/zongji/nanfeng/maocaoping",
+      "entity_id": "6adf8497-7f33-5000-82e0-62691f48bf90",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "287",
+      "scan_page": 322,
+      "locator": "Place table, row 10: 茅草坪",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "茅草坪",
+        "pinyin": "Máocǎopíng",
+        "population": 90,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6ea74dc1-47f0-573d-a4dd-4ff5a6207b94",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.416666666666668
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°25′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "2bd7dbc0-995b-576b-ba5c-8c2b87453653",
+      "key": "bijie-gazetteer/p287/zongji/nanfeng/lanaotian",
+      "entity_id": "e5a7e3df-bf83-507d-b82f-a27565602f8f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "287",
+      "scan_page": 322,
+      "locator": "Place table, row 11: 滥坳田",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "滥坳田",
+        "pinyin": "Lànàotián",
+        "population": 220,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6ea74dc1-47f0-573d-a4dd-4ff5a6207b94",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.433333333333334
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°26′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "fc086f1c-3469-53a0-9181-277104fffd33",
+      "key": "bijie-gazetteer/p287/zongji/road-station",
+      "entity_id": "0a2c0202-f016-5dad-806e-479b9147521d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "287",
+      "scan_page": 322,
+      "locator": "Place table, row 12: 道班",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "道班",
+        "pinyin": "Dàobān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "de20053f-2452-573d-a782-3080ee1de75f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.416666666666668
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°25′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "道班"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

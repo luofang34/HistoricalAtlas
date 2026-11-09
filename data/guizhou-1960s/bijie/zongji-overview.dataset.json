@@ -1,0 +1,476 @@
+{
+  "entities": [
+    {
+      "id": "a36f2cf2-50f3-5fce-8913-59a3ab08bd5b",
+      "key": "earth/cn-gz/bijie/zongji/tuer-mountain",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "227ad4ef-9af4-532b-bf23-475a345129ad",
+      "key": "earth/cn-gz/bijie/zongji/zongji-gully",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "885e75d3-8ad1-5021-919c-8d8299c4ffd4",
+      "key": "earth/cn-gz/bijie/zongji/coal-deposit",
+      "body": "earth",
+      "kind": "geological_site"
+    }
+  ],
+  "records": [
+    {
+      "id": "065624e8-94ac-5ae3-a885-20fd04af9d68",
+      "key": "bijie-gazetteer/p285/zongji-commune/extent",
+      "entity_id": "de20053f-2452-573d-a782-3080ee1de75f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "285",
+      "scan_page": 320,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": "总基公社，在毕节县城之东北，相距35公里，位于东经105°27′～31′，北纬27°25′～28′之间，总面积27.6平方公里。东邻大吉公社，东南抵大方县界和我县的王家坝公社，南接十三亩、滥泥，西靠层台，北枕永兴等公社相互接壤，驻地弯腰树。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "总基公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "总基公社，在毕节县城之东北，相距35公里，位于东经105°27′～31′，北纬27°25′～28′之间，总面积27.6平方公里。东邻大吉公社，东南抵大方县界和我县的王家坝公社，南接十三亩、滥泥，西靠层台，北枕永兴等公社相互接壤，驻地弯腰树。",
+        "territory": {
+          "area_square_km": 27.6,
+          "neighbors": [
+            {
+              "name": "大吉",
+              "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d"
+            },
+            {
+              "name": "大方县",
+              "entity_id": null
+            },
+            {
+              "name": "王家坝",
+              "entity_id": "1dc52d1f-c3ea-5e91-85ed-2106cb3bdc12"
+            },
+            {
+              "name": "十三亩",
+              "entity_id": "3f702e8a-e1f9-596a-8862-d055ecc91711"
+            },
+            {
+              "name": "滥泥",
+              "entity_id": "883421c9-f8b4-5fa3-904a-333961c57a60"
+            },
+            {
+              "name": "层台",
+              "entity_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a"
+            },
+            {
+              "name": "永兴",
+              "entity_id": "d8b90f70-5465-5505-bf57-67c8eee3649c"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "e616922a-6cc1-5aad-8c83-ec0de81f7433",
+      "key": "bijie-gazetteer/p285/zongji-commune/chronology",
+      "entity_id": "de20053f-2452-573d-a782-3080ee1de75f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "285",
+      "scan_page": 320,
+      "locator": "Commune overview, chronology",
+      "verbatim_quote": "解放后1950年建村，土改后54年建乡办初级社，56年入高级社，1958年成立人民公社，命名为总基公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "总基公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "bb2a291d-2ba7-5527-af58-553df4218795",
+      "key": "bijie-gazetteer/p285/zongji-commune/establishment",
+      "entity_id": "de20053f-2452-573d-a782-3080ee1de75f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "285",
+      "scan_page": 320,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "1958年成立人民公社，命名为总基公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "总基公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "213ab4cd-06fd-5cea-95ee-1ce7fa35bc1f",
+      "key": "bijie-gazetteer/p285/zongji-commune/seat",
+      "entity_id": "de20053f-2452-573d-a782-3080ee1de75f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "285",
+      "scan_page": 320,
+      "locator": "Commune overview, seat",
+      "verbatim_quote": "驻地弯腰树。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "总基公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "f6251ed5-a9c3-537b-87fb-abab44b783bb",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e4ff4746-c81c-5b58-ae1c-456f338f6268",
+      "key": "bijie-gazetteer/p285/zongji-commune/population",
+      "entity_id": "de20053f-2452-573d-a782-3080ee1de75f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "285",
+      "scan_page": 320,
+      "locator": "Commune overview, population",
+      "verbatim_quote": "总基公社辖：总基、新龙、红旗、南山、南丰、中兴六个大队，94个生产队，39个自然村，居住着汉、彝、苗、满族及其他民族，人口（普查总数）1350户、6583人，其中：汉族5164人，彝族1011人，满族2人，其他民族404人，以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "总基公社",
+        "pinyin": null,
+        "population": 6583,
+        "households": 1350,
+        "ethnicities": [
+          "汉",
+          "彝",
+          "苗",
+          "满"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview lists six brigades, 94 production teams and 39 natural villages; 5,164 Han, 1,011 Yi, two Manchu and 404 other residents."
+      }
+    },
+    {
+      "id": "49aea7ef-0ec8-56af-a01f-0298fdc21505",
+      "key": "bijie-gazetteer/p285/zongji-commune/name",
+      "entity_id": "de20053f-2452-573d-a782-3080ee1de75f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "285",
+      "scan_page": 320,
+      "locator": "Commune overview, name",
+      "verbatim_quote": "总基系彝语译音，含义是屋基坎脚，另一含义为彝目领地称之为总基家，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "总基公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "44f147a3-6ccb-5f3f-b129-c31db859fcbe",
+      "key": "bijie-gazetteer/p285/zongji/nanshan/nanshanpu/fortress",
+      "entity_id": "43a5f931-e581-552d-be25-fbc3a90d9b3b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "285",
+      "scan_page": 320,
+      "locator": "Commune overview, fortress",
+      "verbatim_quote": "明洪武时设南山堡以屯军卒，今为自然村，南山大队驻地。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "南山堡",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "85f300b0-04ad-5cb0-86aa-a7929c74b505",
+      "key": "bijie-gazetteer/p285/zongji/tuer-mountain/elevation",
+      "entity_id": "a36f2cf2-50f3-5fce-8913-59a3ab08bd5b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "285",
+      "scan_page": 320,
+      "locator": "Commune overview, elevation",
+      "verbatim_quote": "其东南隅的兔耳山最高海拔1629米，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "兔耳山",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "de20053f-2452-573d-a782-3080ee1de75f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Reported elevation: 1,629 metres.",
+        "extent": "东南隅"
+      }
+    },
+    {
+      "id": "c84b0373-1953-5583-95a2-ecf4f35191ae",
+      "key": "bijie-gazetteer/p285/zongji/zongji-gully/elevation",
+      "entity_id": "227ad4ef-9af4-532b-bf23-475a345129ad",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "285",
+      "scan_page": 320,
+      "locator": "Commune overview, elevation",
+      "verbatim_quote": "北面的总基沟最低海拔1290米。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "总基沟",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "de20053f-2452-573d-a782-3080ee1de75f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Reported elevation: 1,290 metres.",
+        "extent": "北面"
+      }
+    },
+    {
+      "id": "93d5a3c7-ca48-5351-82a5-f1ea671dc90c",
+      "key": "bijie-gazetteer/p285/zongji-commune/drainage",
+      "entity_id": "de20053f-2452-573d-a782-3080ee1de75f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "285",
+      "scan_page": 320,
+      "locator": "Commune overview, drainage",
+      "verbatim_quote": "有两条小河，纵贯社境，由南向北缓流，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "总基公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The passage describes two rivers without naming them."
+      }
+    },
+    {
+      "id": "6ffc5d70-b336-5556-981c-aacb704f9f44",
+      "key": "bijie-gazetteer/p285/zongji-commune/hydropower",
+      "entity_id": "de20053f-2452-573d-a782-3080ee1de75f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "285",
+      "scan_page": 320,
+      "locator": "Commune overview, hydropower",
+      "verbatim_quote": "建成两个小水电站，可供两个大队的照明。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "总基公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The passage reports two completed small hydropower stations without naming them."
+      }
+    },
+    {
+      "id": "b7506f27-540b-5ed7-9f21-06b6fc46a55e",
+      "key": "bijie-gazetteer/p285/zongji/coal-deposit/extent",
+      "entity_id": "885e75d3-8ad1-5021-919c-8d8299c4ffd4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "285",
+      "scan_page": 320,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": "现在查明总基公社瓦岗寨两个煤矿，矿床从瓦岗寨至两合岩，长3公里，宽0.5公里。现开采的两层煤（砂煤和糠煤），煤层高3米，每层1.5米（储量6300万吨），开采潜力大。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "煤矿床",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "de20053f-2452-573d-a782-3080ee1de75f",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview prints 瓦岗寨; the settlement table prints 瓦缸寨. It reports two seams, each 1.5 metres thick, and reserves of 63 million tonnes.",
+        "extent": "瓦岗寨至两合岩，长3公里，宽0.5公里。"
+      }
+    },
+    {
+      "id": "50dac17e-3072-5dcc-9fdf-4be9b6a1d1f5",
+      "key": "bijie-gazetteer/p285/zongji/primary-school/establishment",
+      "entity_id": "66e443f1-b9b0-5c0f-a567-d56a34cb12b5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "285",
+      "scan_page": 320,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "1969年办起了完全小学一所并附设初中班，共有学生400多人，教师15人，",
+      "checked": true,
+      "source_date": {
+        "text": "1969年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "总基小学",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview dates the commune primary school and its attached junior middle-school class."
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "9591f016-ca43-5b6c-a4a1-83de1f8b5d65",
+      "key": "editorial/bijie/zongji-commune/establishment",
+      "entity_id": "de20053f-2452-573d-a782-3080ee1de75f",
+      "basis": [
+        "bb2a291d-2ba7-5527-af58-553df4218795"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "4fb5f92d-de01-5056-be1d-b6eaeff37f92",
+      "key": "editorial/bijie/zongji-commune/name",
+      "entity_id": "de20053f-2452-573d-a782-3080ee1de75f",
+      "basis": [
+        "bb2a291d-2ba7-5527-af58-553df4218795",
+        "2f45330f-26c4-5293-8566-6fe9338a1c8c"
+      ],
+      "brief": "Use the cited name from its stated establishment year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "总基公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "e661471c-7a82-5b5d-877b-52bfc31caff7",
+      "key": "editorial/bijie/zongji/primary-school/establishment",
+      "entity_id": "66e443f1-b9b0-5c0f-a567-d56a34cb12b5",
+      "basis": [
+        "50dac17e-3072-5dcc-9fdf-4be9b6a1d1f5"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-978264000000",
+            "nominal": "-962496000001",
+            "latest": "-946728000001",
+            "precision": "year"
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

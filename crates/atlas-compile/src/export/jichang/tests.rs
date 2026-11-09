@@ -7,6 +7,9 @@ use atlas_ledger::{
     timeline::{TimeSelection, Timeline},
 };
 
+#[path = "sili_zongji/tests.rs"]
+mod sili_zongji;
+
 #[cfg(test)]
 fn input() -> LedgerInput {
     load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap()

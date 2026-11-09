@@ -5,7 +5,7 @@ use geo::{
     GeodesicArea, MultiPolygon, Relate, coordinate_position::CoordPos, dimensions::Dimensions,
 };
 use serde::{Deserialize, Serialize};
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, BTreeSet};
 
 /// A model's area and adjoining units compared with one checked source passage.
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -34,6 +34,56 @@ pub struct NeighborComparison {
     pub entity_id: Option<EntityId>,
     /// Unknown when the adjoining unit has no polygon in this reconstruction.
     pub shares_edge: Option<bool>,
+    /// Conflicting evidence that leaves this source adjacency unresolved by the fit.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub unresolved: Option<NeighborExclusion>,
+}
+
+/// Cited evidence for retaining a neighbor claim without imposing it on the geometry.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct NeighborExclusion {
+    /// Named neighbor whose adjacency remains unresolved.
+    pub entity_id: EntityId,
+    /// Checked records including the adjacency claim and the conflicting evidence.
+    pub basis: Vec<FactId>,
+    /// Explanation of the conflict in the cited evidence.
+    pub reason: String,
+}
+
+impl NeighborExclusion {
+    /// Require a named neighbor and distinct, checked evidence from the same source.
+    pub fn validate(&self, data: &Dataset, record_id: FactId) -> Result<(), TerrainError> {
+        let record = data.records.iter().find(|r| r.id == record_id && r.checked);
+        let Some(record) = record else {
+            return Err(TerrainError::Input(
+                "unresolved adjacency lacks a checked claim".into(),
+            ));
+        };
+        let basis: BTreeSet<_> = self.basis.iter().copied().collect();
+        if self.reason.trim().is_empty()
+            || self.entity_id == record.entity_id
+            || basis.len() < 2
+            || basis.len() != self.basis.len()
+            || !basis.contains(&record_id)
+            || !record.observation.territory.as_ref().is_some_and(|t| {
+                t.neighbors
+                    .iter()
+                    .any(|n| n.entity_id == Some(self.entity_id))
+            })
+            || basis.iter().any(|id| {
+                !data
+                    .records
+                    .iter()
+                    .any(|r| r.id == *id && r.checked && r.source_id == record.source_id)
+            })
+        {
+            return Err(TerrainError::Input(
+                "unresolved adjacency needs a named neighbor, a reason and distinct checked source records".into(),
+            ));
+        }
+        Ok(())
+    }
 }
 
 /// Compare reconstructed geometry with checked descriptions from each unit's source.
@@ -87,6 +137,7 @@ fn comparison(
         .map(|neighbor| NeighborComparison {
             name: neighbor.name.clone(),
             entity_id: neighbor.entity_id,
+            unresolved: None,
             shares_edge: neighbor
                 .entity_id
                 .and_then(|id| geometry.get(&id))
@@ -134,6 +185,21 @@ pub(super) fn validate(
                 "comparison needs checked territory evidence".into(),
             ));
         };
+        for neighbor in &comparison.neighbors {
+            if let Some(unresolved) = &neighbor.unresolved {
+                unresolved.validate(data, comparison.record_id)?;
+                if neighbor.entity_id != Some(unresolved.entity_id)
+                    || unresolved
+                        .basis
+                        .iter()
+                        .any(|id| !boundary.basis.contains(id))
+                {
+                    return Err(TerrainError::Input(
+                        "unresolved adjacency differs from its evidence".into(),
+                    ));
+                }
+            }
+        }
         if comparison.reported_area_square_km != territory.area_square_km
             || !comparison.modeled_area_square_km.is_finite()
             || comparison.modeled_area_square_km != area_square_km(polygon)

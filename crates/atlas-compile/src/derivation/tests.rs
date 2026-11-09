@@ -149,6 +149,8 @@ fn source_comparisons_and_the_haogou_exclusion_follow_the_reconstructed_geometry
         ("gala", 22.2, 4),
         ("xiaoji", 30.4, 4),
         ("daji", 40.0, 9),
+        ("sili", 39.6, 6),
+        ("zongji", 27.6, 7),
     ] {
         let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{slug}-commune")).unwrap();
         let boundary = boundaries
@@ -188,14 +190,38 @@ fn source_comparisons_and_the_haogou_exclusion_follow_the_reconstructed_geometry
         if matches!(slug, "baiyan" | "haogou" | "liuhua") {
             assert!(boundary.region.vertices.iter().all(|p| p.x > 105.4));
         }
-        assert!(
-            comparison
-                .neighbors
-                .iter()
-                .all(|n| n.shares_edge != Some(false))
-        );
+        assert_neighbor_comparisons(&input, boundary, slug);
     }
     assert_printed_haogou_excluded(&input, request);
+}
+
+#[cfg(test)]
+fn assert_neighbor_comparisons(input: &LedgerInput, boundary: &DerivedBoundary, slug: &str) {
+    for neighbor in &boundary.comparisons[0].neighbors {
+        if slug == "zongji" && neighbor.name == "大吉" {
+            assert_eq!(neighbor.shares_edge, Some(false));
+            assert_eq!(
+                neighbor.entity_id,
+                Some(EntityId::from_key("earth/cn-gz/bijie/daji-commune").unwrap())
+            );
+            let review = neighbor.unresolved.as_ref().unwrap();
+            assert_eq!(review.basis.len(), 3);
+            assert!(review.reason.contains("27°28′"));
+            assert!(review.reason.contains("27°30′"));
+            assert!(review.basis.iter().all(|id| boundary.basis.contains(id)));
+            let mut changed = boundary.clone();
+            changed.comparisons[0].neighbors[0]
+                .unresolved
+                .as_mut()
+                .unwrap()
+                .basis
+                .clear();
+            assert!(changed.feature(&input.data, None).is_err());
+        } else {
+            assert_ne!(neighbor.shares_edge, Some(false));
+            assert!(neighbor.unresolved.is_none());
+        }
+    }
 }
 
 #[cfg(test)]
@@ -240,7 +266,7 @@ fn area_constraints_reject_unreviewed_or_other_units_evidence() {
         .filter(|(_, u)| u.area_constraint.is_some())
         .map(|(i, _)| i)
         .collect();
-    assert_eq!(constrained.len(), 18);
+    assert_eq!(constrained.len(), 20);
     let first = constrained[0];
     let constraint = request.units[first].area_constraint.clone().unwrap();
     request.units[first].area_constraint = request.units[constrained[1]].area_constraint.clone();

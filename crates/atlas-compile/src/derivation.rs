@@ -5,7 +5,7 @@ use crate::{
     input::{InputError, LedgerInput, load_blocking, read_json_blocking},
 };
 use atlas_boundary::terrain::{
-    DerivedBoundary, ElevationGrid, TerrainError, TerrainRequest, derive,
+    DerivedBoundary, ElevationGrid, NeighborExclusion, TerrainError, TerrainRequest, derive,
 };
 use atlas_core::identity::FactId;
 use serde::{Deserialize, Serialize};
@@ -14,6 +14,7 @@ use thiserror::Error;
 
 mod areas;
 mod evidence;
+mod neighbors;
 
 /// Checked source area and the permitted residual of its numerical fit.
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -23,6 +24,9 @@ pub struct AreaConstraint {
     pub record_id: FactId,
     /// Maximum absolute area residual in square kilometres.
     pub tolerance_square_km: f64,
+    /// Source adjacencies left unresolved because their cited evidence conflicts.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub unresolved_neighbors: Vec<NeighborExclusion>,
 }
 
 /// A checked observation or registered map location supplying one member position.
@@ -114,7 +118,7 @@ pub fn reconstruct(
         })?;
     let (seeds, mut bases) = evidence::seeds(input, request, envelope.datum)?;
     let areas = areas::resolve(input, request, &mut bases)?;
-    let neighbors = areas::neighbors(input, request, &mut bases)?;
+    let neighbors = neighbors::resolve(input, request, &mut bases)?;
     let numeric = TerrainRequest {
         grid: request.grid.clone(),
         vertices: envelope.vertices,

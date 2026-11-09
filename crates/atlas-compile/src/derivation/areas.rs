@@ -2,48 +2,7 @@ use super::{DerivationError, DerivationRequest, evidence};
 use crate::input::LedgerInput;
 use atlas_boundary::terrain::{AreaTarget, DerivedBoundary};
 use atlas_core::identity::FactId;
-use std::collections::{BTreeMap, BTreeSet};
-
-pub(super) fn neighbors(
-    input: &LedgerInput,
-    request: &DerivationRequest,
-    bases: &mut [BTreeSet<FactId>],
-) -> Result<Vec<[usize; 2]>, DerivationError> {
-    let subjects: BTreeMap<_, _> = request
-        .units
-        .iter()
-        .enumerate()
-        .map(|(i, u)| {
-            evidence::checked(input, u.record_id, &request.source_id).map(|r| (r.entity_id, i))
-        })
-        .collect::<Result<_, _>>()?;
-    let mut pairs = BTreeSet::new();
-    for (index, unit) in request.units.iter().enumerate() {
-        let Some(constraint) = &unit.area_constraint else {
-            continue;
-        };
-        let record = evidence::checked(input, constraint.record_id, &request.source_id)?;
-        let Some(territory) = &record.observation.territory else {
-            continue;
-        };
-        for other in territory
-            .neighbors
-            .iter()
-            .filter_map(|n| n.entity_id.and_then(|id| subjects.get(&id)).copied())
-        {
-            pairs.insert([index.min(other), index.max(other)]);
-            for affected in [index, other] {
-                bases
-                    .get_mut(affected)
-                    .ok_or_else(|| {
-                        DerivationError::Evidence("neighbor constraint has no unit basis".into())
-                    })?
-                    .insert(record.id);
-            }
-        }
-    }
-    Ok(pairs.into_iter().collect())
-}
+use std::collections::BTreeSet;
 
 pub(super) fn resolve(
     input: &LedgerInput,
@@ -104,6 +63,16 @@ pub(super) fn annotate(
                 ))
             })?;
         comparison.fitting_tolerance_square_km = Some(constraint.tolerance_square_km);
+        for unresolved in &constraint.unresolved_neighbors {
+            let neighbor = comparison
+                .neighbors
+                .iter_mut()
+                .find(|n| n.entity_id == Some(unresolved.entity_id))
+                .ok_or_else(|| {
+                    DerivationError::Evidence("unresolved adjacency has no source neighbor".into())
+                })?;
+            neighbor.unresolved = Some(unresolved.clone());
+        }
     }
     Ok(())
 }
