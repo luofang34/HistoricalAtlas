@@ -164,6 +164,7 @@ fn wangfeng_huangnichong_and_shaba_names_resolve_to_their_own_evidence() {
         .into_iter()
         .collect();
     expected.insert(EntityId::from_key("earth/cn-gz/bijie/gaoshanpu-commune").unwrap());
+    expected.insert(EntityId::from_key("earth/cn-gz/bijie/gaoshanpu/gaoshan/gaoshanpu").unwrap());
     assert_eq!(matches.into_iter().collect::<BTreeSet<_>>(), expected);
     for (commune, count) in [("wangfeng", 8), ("huangnichong", 4), ("shaba", 6)] {
         let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{commune}-commune")).unwrap();

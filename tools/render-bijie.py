@@ -149,7 +149,7 @@ def labels(fig, ax, items, size=8):
     occupied = []
     for point, name, color in items:
         placed = False
-        for radius in [5, 12, 20, 29, 39, 50, 62]:
+        for radius in [5, 12, 20, 29, 39, 50, 62, 76, 92]:
             for angle in [0, 180, 60, 120, 240, 300, 90, 270]:
                 dx, dy = radius * math.cos(math.radians(angle)), radius * math.sin(math.radians(angle))
                 label = ax.annotate(name, point, xytext=(dx, dy), textcoords='offset points',

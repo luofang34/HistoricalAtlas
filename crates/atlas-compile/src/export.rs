@@ -427,6 +427,10 @@ mod puyi_tests;
 mod jichang_tests;
 
 #[cfg(test)]
+#[path = "export/qingshuipu/tests.rs"]
+mod qingshuipu_tests;
+
+#[cfg(test)]
 #[path = "export/commune_anchors/tests.rs"]
 mod commune_anchor_tests;
 
