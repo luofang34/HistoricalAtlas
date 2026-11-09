@@ -3,17 +3,17 @@ use super::{Application, map_controls};
 impl Application {
     fn map_caption(&self) -> &'static str {
         if self.territory_visible {
-            return "Territory nodes and place locations · Drag to rotate · Scroll to zoom";
+            return "Territory nodes and place locations · Drag to rotate · Right- or Ctrl-drag to tilt · Scroll to zoom";
         }
         match self.layer {
             crate::scene::MapLayer::Observations => {
-                "Printed coordinates and source-map boundaries · Drag to rotate · Scroll to zoom"
+                "Printed coordinates and source-map boundaries · Drag to rotate · Right- or Ctrl-drag to tilt · Scroll to zoom"
             }
             crate::scene::MapLayer::MappedPlaces => {
-                "Source-map places and traced boundaries · Drag to rotate · Scroll to zoom"
+                "Source-map places and traced boundaries · Drag to rotate · Right- or Ctrl-drag to tilt · Scroll to zoom"
             }
             crate::scene::MapLayer::SelectedTime => {
-                "Time-selected source anchors · Drag to rotate · Scroll to zoom"
+                "Time-selected source anchors · Drag to rotate · Right- or Ctrl-drag to tilt · Scroll to zoom"
             }
         }
     }
@@ -223,7 +223,20 @@ impl Application {
             return;
         };
         let pixel = position - response.rect.min;
-        if response.dragged() {
+        let orbiting = response.dragged_by(egui::PointerButton::Secondary)
+            || (response.dragged_by(egui::PointerButton::Primary)
+                && ui.input(|input| input.modifiers.command));
+        if orbiting {
+            let delta = ui.input(|input| input.pointer.delta());
+            match map.orbit(delta) {
+                Ok(true) => {
+                    self.controls.manual_turn();
+                    ui.ctx().request_repaint();
+                }
+                Ok(false) => {}
+                Err(error) => tracing::warn!(%error, "map orbit rejected"),
+            }
+        } else if response.dragged() {
             let delta = ui.input(|input| input.pointer.delta());
             if map.drag(pixel - delta, pixel) {
                 self.controls.manual_move();
