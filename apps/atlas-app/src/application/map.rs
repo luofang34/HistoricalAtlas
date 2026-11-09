@@ -86,8 +86,8 @@ impl Application {
                 Err(error) => self.error = Some(error.to_string()),
             }
         }
-        if self.body == atlas_geo::body::BodyId::Earth {
-            let text = "Natural Earth II · Terrain: Mapzen / USGS";
+        if self.basemap.has_body(self.body) {
+            let text = &self.basemap.attribution;
             let position = rect.right_bottom() - egui::vec2(8.0, 8.0);
             ui.painter().text(
                 position,

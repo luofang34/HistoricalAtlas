@@ -26,9 +26,6 @@ use thiserror::Error;
 /// A map operation failed without changing the evidence ledger.
 #[derive(Debug, Error)]
 pub enum RenderError {
-    /// Bundled physical tile could not be decoded.
-    #[error("physical basemap image: {0}")]
-    Image(#[from] image::ImageError),
     /// A body-specific layer could not be changed.
     #[error("map style: {0}")]
     Style(#[from] maplibre::style::mutation::StyleMutationError),
@@ -63,6 +60,7 @@ pub struct MapRenderer {
     map: HeadlessMap,
     gpu: RenderState,
     texture: egui::TextureId,
+    raster_layers: Vec<(String, BodyId)>,
     dimensions: [u32; 2],
     picking: super::picking::Picking,
     selection_picking: super::picking::Picking,
@@ -70,7 +68,11 @@ pub struct MapRenderer {
 
 impl MapRenderer {
     /// Initialize the map on an existing application GPU.
-    pub fn new(gpu: RenderState, style: maplibre::style::Style) -> Result<Self, RenderError> {
+    pub fn new(
+        gpu: RenderState,
+        style: maplibre::style::Style,
+        basemap: &super::basemap::Manifest,
+    ) -> Result<Self, RenderError> {
         let host = HostGpu {
             instance: gpu.instance.clone(),
             adapter: gpu.adapter.clone(),
@@ -82,7 +84,7 @@ impl MapRenderer {
             1,
             host,
             RendererSettings::default(),
-            Some(super::basemap::loader()),
+            Some(super::basemap::loader(basemap)),
         )?;
         let mut map = HeadlessMap::new(
             style,
@@ -96,7 +98,7 @@ impl MapRenderer {
             ],
         )?;
         map.set_navigation_mode(NavigationMode::FreeGlobe)?;
-        map.render_source_frames(ProcessedLayers::default(), super::basemap::tiles()?, 1)?;
+        map.render_source_frames(ProcessedLayers::default(), Vec::new(), 1)?;
         let view = map.head_texture_view().ok_or(RenderError::Texture)?;
         let texture = gpu.renderer.write().register_native_texture(
             &gpu.device,
@@ -107,6 +109,7 @@ impl MapRenderer {
             map,
             gpu,
             texture,
+            raster_layers: basemap.layers(),
             dimensions: [1, 1],
             picking: Default::default(),
             selection_picking: Default::default(),
@@ -115,12 +118,12 @@ impl MapRenderer {
 
     /// Refresh the visible point collection.
     pub fn update(&mut self, points: serde_json::Value, body: BodyId) -> Result<(), RenderError> {
-        let visibility = if body == BodyId::Earth {
-            "visible"
-        } else {
-            "none"
-        };
-        for id in ["natural-earth", "terrain"] {
+        for (id, raster_body) in &self.raster_layers {
+            let visibility = if *raster_body == body {
+                "visible"
+            } else {
+                "none"
+            };
             self.map.mutate_style(|style| {
                 style.set_layout_property(id, "visibility", visibility.into())
             })?;

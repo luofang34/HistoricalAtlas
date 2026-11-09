@@ -9,7 +9,7 @@ fn selecting_unregistered_place_opens_the_source_drawing() {
     assert!(app.sheet.visible);
     assert_eq!(app.camera.center, center);
     let context = egui::Context::default();
-    configure_fonts(&context);
+    configure_fonts_blocking(&context).unwrap();
     let mut output = context.run_ui(
         egui::RawInput {
             screen_rect: Some(egui::Rect::from_min_size(
@@ -47,7 +47,7 @@ fn fitted_qimo_drawing_keeps_all_settlement_labels_readable() {
         .map(|p| p.names[0].clone())
         .collect();
     let context = egui::Context::default();
-    configure_fonts(&context);
+    configure_fonts_blocking(&context).unwrap();
     let mut output = context.run_ui(
         egui::RawInput {
             screen_rect: Some(egui::Rect::from_min_size(

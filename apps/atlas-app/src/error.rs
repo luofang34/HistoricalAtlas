@@ -6,6 +6,9 @@ use thiserror::Error;
 /// Atlas input or time selection failure.
 #[derive(Debug, Error)]
 pub enum AppError {
+    /// Physical imagery configuration is invalid.
+    #[error(transparent)]
+    Basemap(#[from] crate::scene::basemap::ManifestError),
     /// Geometry parts failed manifest, checksum, or JSON validation.
     #[error(transparent)]
     Geometry(#[from] atlas_boundary::publication::GeometryError),

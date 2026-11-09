@@ -3,6 +3,7 @@
 pub mod application;
 pub mod catalog;
 pub mod error;
+pub mod fonts;
 pub mod host;
 pub mod navigation;
 pub mod overlay;

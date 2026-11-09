@@ -46,7 +46,7 @@ fn registered_boundary_search_focuses_geography_and_displays_source_method() {
     assert_eq!(app.camera.center, expected);
     assert!(!app.sheet.visible);
     let context = egui::Context::default();
-    configure_fonts(&context);
+    configure_fonts_blocking(&context).unwrap();
     let output = date_frame(&context, &mut app, Vec::new());
     for label in [
         "Registered map boundary",
@@ -186,7 +186,7 @@ fn street_search_displays_source_extent_without_focusing_an_invented_point() {
     assert_eq!(app.camera.center, center);
     assert_eq!(app.camera.zoom, zoom);
     let context = egui::Context::default();
-    configure_fonts(&context);
+    configure_fonts_blocking(&context).unwrap();
     let output = date_frame(&context, &mut app, Vec::new());
     assert!(
         output.shapes.iter().any(|shape| matches!(&shape.shape,
@@ -232,7 +232,7 @@ fn unresolved_coordinate_is_visible_in_the_evidence_card_without_a_map_point() {
     let mut app = Application::new(atlas).unwrap();
     app.select(id, true);
     let context = egui::Context::default();
-    configure_fonts(&context);
+    configure_fonts_blocking(&context).unwrap();
     let output = date_frame(&context, &mut app, Vec::new());
     assert!(output.shapes.iter().any(|shape| matches!(&shape.shape,
         egui::epaint::Shape::Text(text) if text.galley.job.text.contains("185°20′"))));
@@ -264,7 +264,7 @@ fn clicking_an_era_date_queries_its_converted_midpoint() {
     let mut app = Application::new(atlas).unwrap();
     app.select(id, false);
     let context = egui::Context::default();
-    configure_fonts(&context);
+    configure_fonts_blocking(&context).unwrap();
     let output = date_frame(&context, &mut app, Vec::new());
     let position = output
         .shapes
@@ -330,7 +330,7 @@ fn common_ui_renders_source_evidence_and_chinese_glyphs() {
     let mut app = Application::new(atlas).unwrap();
     app.select(id, true);
     let context = egui::Context::default();
-    configure_fonts(&context);
+    configure_fonts_blocking(&context).unwrap();
     let mut output = context.run_ui(
         egui::RawInput {
             screen_rect: Some(egui::Rect::from_min_size(
@@ -413,7 +413,7 @@ fn event_controls_navigate_time_and_place_and_toggle_only_external_markers() {
         content: Ok(crate::overlay::tests::example().into()),
     });
     let context = egui::Context::default();
-    configure_fonts(&context);
+    configure_fonts_blocking(&context).unwrap();
     assert_eq!(event_markers(&app), 0);
     click_label(&context, &mut app, "Eagle lands at Tranquility Base");
     assert_eq!(app.body, BodyId::Moon);
@@ -454,7 +454,7 @@ fn external_event_description_wraps_within_the_evidence_panel() {
         content: Ok(crate::overlay::tests::example().into()),
     });
     let context = egui::Context::default();
-    configure_fonts(&context);
+    configure_fonts_blocking(&context).unwrap();
     click_label(&context, &mut app, "Eagle lands at Tranquility Base");
     let output = date_frame(&context, &mut app, Vec::new());
     let description = app.overlay.source.as_ref().unwrap().package().events[0]

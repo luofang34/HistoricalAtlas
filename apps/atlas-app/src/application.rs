@@ -24,6 +24,7 @@ pub struct Application {
     #[cfg(target_arch = "wasm32")]
     geometry: geometry::GeometryLoads,
     atlas: Atlas,
+    basemap: scene::basemap::Manifest,
     body: BodyId,
     time: TimeControl,
     selected_time: SelectedTime,
@@ -53,6 +54,7 @@ impl Application {
             #[cfg(target_arch = "wasm32")]
             geometry: geometry::GeometryLoads::new(&atlas),
             atlas,
+            basemap: scene::basemap::Manifest::bundled()?,
             body: BodyId::Earth,
             time,
             selected_time,
@@ -74,11 +76,22 @@ impl Application {
         })
     }
 
+    /// Set the publication asset inventory before attaching a GPU.
+    pub fn set_basemap(&mut self, manifest: scene::basemap::Manifest) {
+        self.basemap = manifest;
+    }
+
     /// Attach the GPU renderer after the window has a drawing surface.
     pub fn attach(&mut self, gpu: egui_wgpu::RenderState) -> Result<(), AppError> {
         self.map = Some(MapRenderer::new(
             gpu,
-            scene::style(self.points()?, self.body, crate::navigation::PROJECTION)?,
+            scene::style_with_basemap(
+                self.points()?,
+                self.body,
+                crate::navigation::PROJECTION,
+                &self.basemap,
+            )?,
+            &self.basemap,
         )?);
         self.dirty = true;
         Ok(())
@@ -243,26 +256,13 @@ impl Application {
     }
 }
 
-/// Install the publication's Chinese glyph subset alongside egui's default fonts.
+/// Install the publication font inventory alongside egui's default fonts.
 #[cfg(not(target_arch = "wasm32"))]
-pub fn configure_fonts(ctx: &egui::Context) {
-    let mut fonts = egui::FontDefinitions::default();
-    fonts.font_data.insert(
-        "Atlas CJK".into(),
-        egui::FontData::from_static(include_bytes!("../assets/AtlasCJK.otf")).into(),
-    );
-    fonts.font_data.insert(
-        "Atlas Han Supplement".into(),
-        egui::FontData::from_static(include_bytes!("../assets/AtlasHanSupplement.ttf")).into(),
-    );
-    for family in [egui::FontFamily::Proportional, egui::FontFamily::Monospace] {
-        fonts
-            .families
-            .entry(family)
-            .or_default()
-            .extend(["Atlas CJK".into(), "Atlas Han Supplement".into()]);
-    }
-    ctx.set_fonts(fonts);
+pub fn configure_fonts_blocking(ctx: &egui::Context) -> Result<(), crate::fonts::FontError> {
+    crate::fonts::configure_blocking(
+        ctx,
+        &std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("assets"),
+    )
 }
 
 #[cfg(test)]

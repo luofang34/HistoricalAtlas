@@ -64,24 +64,25 @@ pub fn style(
     points: Value,
     body: BodyId,
     projection: maplibre::projection::ProjectionType,
-) -> Result<maplibre::style::Style, serde_json::Error> {
-    let visibility = if body == BodyId::Earth {
-        "visible"
-    } else {
-        "none"
-    };
-    serde_json::from_value(json!({"version": 8, "center": [0.0, 0.0], "zoom": 0.5,
+) -> Result<maplibre::style::Style, basemap::ManifestError> {
+    style_with_basemap(points, body, projection, &basemap::Manifest::bundled()?)
+}
+
+/// Build a style using the host publication's physical imagery inventory.
+pub fn style_with_basemap(
+    points: Value,
+    body: BodyId,
+    projection: maplibre::projection::ProjectionType,
+    manifest: &basemap::Manifest,
+) -> Result<maplibre::style::Style, basemap::ManifestError> {
+    let mut value = json!({"version": 8, "center": [0.0, 0.0], "zoom": 0.5,
     "projection": {"type": projection},
     "sources": {
-        "natural-earth": {"type": "raster", "tiles": ["atlas://natural-earth/{z}/{x}/{y}"], "tileSize": 512, "minzoom": 0, "maxzoom": 0},
-        "terrain": {"type": "raster", "tiles": ["atlas://terrain/{z}/{x}/{y}"], "tileSize": 512, "minzoom": 8, "maxzoom": 8, "bounds": [104.0625, 25.799891182088334, 106.875, 28.304380682962783]},
         "observations": {"type": "geojson", "data": points},
         "selection": {"type": "geojson", "data": {"type": "FeatureCollection", "features": []}},
         "grid": {"type": "geojson", "data": graticule()}
     }, "layers": [
         {"id": "background", "type": "background", "paint": {"background-color": "#152c35"}},
-        {"id": "natural-earth", "type": "raster", "source": "natural-earth", "layout": {"visibility": visibility}, "paint": {"raster-fade-duration": 0, "raster-saturation": -0.3}},
-        {"id": "terrain", "type": "raster", "source": "terrain", "minzoom": 8, "layout": {"visibility": visibility}, "paint": {"raster-fade-duration": 0}},
         {"id": "graticule", "type": "line", "source": "grid",
             "paint": {"line-color": "#31505c", "line-width": 0.6, "line-opacity": 0.3}},
         {"id": "boundaries", "type": "fill", "source": "observations",
@@ -134,7 +135,9 @@ pub fn style(
             "filter": ["all", ["==", "$type", "Point"], ["==", "selected", true]],
             "paint": {"circle-radius": 8, "circle-color": "#ef8d55", "circle-stroke-width": 2,
                 "circle-stroke-color": "#ffffff"}}
-    ]}))
+    ]});
+    manifest.apply(&mut value, body);
+    Ok(serde_json::from_value(value)?)
 }
 
 fn graticule() -> Value {

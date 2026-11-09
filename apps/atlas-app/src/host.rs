@@ -15,6 +15,9 @@ pub use lifecycle::{BrowserControl, spawn};
 /// Application window initialization or execution failure.
 #[derive(Debug, thiserror::Error)]
 pub enum HostError {
+    /// A publication font cannot be loaded.
+    #[error(transparent)]
+    Font(#[from] crate::fonts::FontError),
     /// A static browser resource could not be loaded.
     #[error("atlas asset: {0}")]
     Resource(#[from] maplibre::io::source_client::SourceFetchError),
@@ -48,7 +51,7 @@ impl Host {
         let context = egui::Context::default();
         context.set_visuals(egui::Visuals::dark());
         #[cfg(not(target_arch = "wasm32"))]
-        crate::application::configure_fonts(&context);
+        crate::application::configure_fonts_blocking(&context)?;
         #[cfg(target_arch = "wasm32")]
         crate::resources::fonts(&context).await?;
         let mut painter = Painter::new(
@@ -68,6 +71,7 @@ impl Host {
             gpu.device.limits().max_texture_dimension_2d as usize,
         );
         let mut application = Application::new(atlas)?;
+        application.set_basemap(crate::scene::basemap::load().await?);
         application.attach(gpu)?;
         Ok(Self {
             application,

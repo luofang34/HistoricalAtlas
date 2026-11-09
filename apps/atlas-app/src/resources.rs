@@ -37,16 +37,13 @@ pub async fn bytes(url: &str) -> Result<Vec<u8>, SourceFetchError> {
 
 /// Load publication font subsets while retaining egui's Latin and symbol coverage.
 pub async fn fonts(context: &egui::Context) -> Result<(), SourceFetchError> {
-    let mut fonts = egui::FontDefinitions::default();
-    for name in ["AtlasCJK.otf", "AtlasHanSupplement.ttf"] {
+    let names = crate::fonts::names(&bytes("assets/fonts.json").await?)
+        .map_err(|error| SourceFetchError(Box::new(error)))?;
+    let mut files = Vec::new();
+    for name in names {
         let data = bytes(&format!("assets/{name}")).await?;
-        fonts
-            .font_data
-            .insert(name.into(), egui::FontData::from_owned(data).into());
-        for family in [egui::FontFamily::Proportional, egui::FontFamily::Monospace] {
-            fonts.families.entry(family).or_default().push(name.into());
-        }
+        files.push((name, data));
     }
-    context.set_fonts(fonts);
+    crate::fonts::install(context, files);
     Ok(())
 }

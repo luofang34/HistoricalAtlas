@@ -15,6 +15,7 @@ atlas-ledger.workspace = true
 atlas-boundary.workspace = true
 serde.workspace = true
 serde_json.workspace = true
+sha2 = "0.10"
 thiserror.workspace = true
 tracing.workspace = true
 url = "2"
