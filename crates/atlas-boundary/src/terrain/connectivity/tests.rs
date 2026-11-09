@@ -126,3 +126,28 @@ fn cited_neighbors_gain_an_edge_without_splitting_the_intervening_unit() {
         serde_json::to_value(derive(&input).unwrap()).unwrap()
     );
 }
+
+#[test]
+fn incompatible_neighbor_interfaces_exhaust_routes_without_splitting_seeded_units() {
+    let mut input = request();
+    input.units = 5;
+    for (unit, y) in [(2, 650.), (3, 350.), (4, 150.)] {
+        let point = unproject(geo::Coord { x: 650., y });
+        input.seeds.push(TerrainSeed {
+            unit,
+            point: LonLat {
+                longitude: point.x,
+                latitude: point.y,
+            },
+        });
+    }
+    input.neighbors = (0..5)
+        .flat_map(|a| ((a + 1)..5).map(move |b| [a, b]))
+        .collect();
+    assert!(
+        derive(&input)
+            .unwrap_err()
+            .to_string()
+            .contains("cannot be connected without splitting a unit or moving a seed")
+    );
+}

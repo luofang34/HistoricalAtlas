@@ -10,6 +10,9 @@ use atlas_ledger::{
 #[path = "sili_zongji/tests.rs"]
 mod sili_zongji;
 
+#[path = "yongxing_cengtai/tests.rs"]
+mod yongxing_cengtai;
+
 #[cfg(test)]
 fn input() -> LedgerInput {
     load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap()

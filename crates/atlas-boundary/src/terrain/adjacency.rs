@@ -66,30 +66,97 @@ fn viable_path(
     to: usize,
 ) -> Result<Option<Path>, TerrainError> {
     let mut blocked = BTreeSet::new();
-    while let Some(path) = shortest(request, labels, fixed, &blocked, from, to)? {
+    while let Some(mut path) = shortest(request, labels, fixed, &blocked, from, to)? {
+        let last_corridor_cell = path.cells.last().copied();
         let mut candidate = labels.to_vec();
-        let mut rejected = None;
         for &cell in &path.cells {
-            let owner = candidate
-                .get(cell)
-                .copied()
-                .flatten()
-                .ok_or(TerrainError::Cell(cell))?;
-            if !connectivity::removable(request, &candidate, cell, owner) {
-                rejected = Some(cell);
-                break;
-            }
             *candidate.get_mut(cell).ok_or(TerrainError::Cell(cell))? = Some(from);
         }
+        let rejected = complete_path(request, labels, &mut candidate, fixed, &mut path)?;
         if rejected.is_none() && retained.is_subset(&interfaces(request, &candidate)) {
             return Ok(Some(path));
         }
         let cell = rejected
-            .or_else(|| path.cells.last().copied())
+            .or(last_corridor_cell)
             .ok_or_else(|| TerrainError::Input("empty neighbor connection path".into()))?;
         blocked.insert(cell);
     }
     Ok(None)
+}
+
+fn complete_path(
+    request: &TerrainRequest,
+    labels: &[Option<usize>],
+    candidate: &mut [Option<usize>],
+    fixed: &[Option<usize>],
+    path: &mut Path,
+) -> Result<Option<usize>, TerrainError> {
+    let affected: BTreeSet<_> = path
+        .cells
+        .iter()
+        .filter_map(|&cell| labels.get(cell).copied().flatten())
+        .collect();
+    for unit in affected {
+        let parts = components(request, candidate, unit);
+        let protected = parts
+            .iter()
+            .filter(|part| {
+                part.iter()
+                    .any(|&cell| fixed.get(cell) == Some(&Some(unit)))
+            })
+            .count();
+        if protected > components(request, labels, unit).len() {
+            return Ok(path
+                .cells
+                .iter()
+                .rev()
+                .find(|&&cell| labels.get(cell) == Some(&Some(unit)))
+                .copied());
+        }
+        // A corridor may cut off an unseeded tip without separating located members.
+        for part in parts {
+            if part
+                .iter()
+                .any(|&cell| fixed.get(cell) == Some(&Some(unit)))
+            {
+                continue;
+            }
+            for cell in part {
+                *candidate.get_mut(cell).ok_or(TerrainError::Cell(cell))? = Some(path.unit);
+                path.cells.push(cell);
+            }
+        }
+    }
+    Ok(None)
+}
+
+fn components(request: &TerrainRequest, labels: &[Option<usize>], unit: usize) -> Vec<Vec<usize>> {
+    let mut visited = vec![false; labels.len()];
+    let mut parts = Vec::new();
+    for (cell, owner) in labels.iter().enumerate() {
+        if *owner != Some(unit) || visited.get(cell) == Some(&true) {
+            continue;
+        }
+        let mut part = Vec::new();
+        let mut pending = vec![cell];
+        while let Some(current) = pending.pop() {
+            let Some(seen) = visited.get_mut(current) else {
+                continue;
+            };
+            if *seen {
+                continue;
+            }
+            *seen = true;
+            part.push(current);
+            pending.extend(
+                partition::neighbors(current, request.grid.width, request.grid.height)
+                    .into_iter()
+                    .filter(|&next| labels.get(next) == Some(&Some(unit))),
+            );
+        }
+        parts.push(part);
+    }
+    parts
 }
 
 fn shortest(

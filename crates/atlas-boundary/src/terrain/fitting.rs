@@ -39,7 +39,7 @@ pub(super) fn assign(
     };
     let mut targets: Vec<_> = request.areas.iter().collect();
     targets.sort_by_key(|target| target.unit);
-    for _ in 0..8 {
+    for _ in 0..16 {
         for target in &targets {
             state.fit(target)?;
         }

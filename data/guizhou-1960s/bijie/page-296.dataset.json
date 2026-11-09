@@ -1,0 +1,574 @@
+{
+  "entities": [
+    {
+      "id": "818bbe4f-8b18-5ddb-a442-5c689744ef00",
+      "key": "earth/cn-gz/bijie/cengtai/qingchun/tangfang",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "611fa6d2-4806-59de-8c92-639d70145b3f",
+      "key": "earth/cn-gz/bijie/cengtai/qingchun/yangjiaguan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "3842de6e-73af-5573-8ecc-d0d7f7fc565f",
+      "key": "earth/cn-gz/bijie/cengtai/qingchun/meizigou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "6d681df7-251a-5870-8b6b-7a6ba88100c5",
+      "key": "earth/cn-gz/bijie/cengtai/guanxiang-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    {
+      "id": "a32160be-d5bf-57f6-b862-585edfb7440a",
+      "key": "earth/cn-gz/bijie/cengtai/guanxiang/guanxiangcheng",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "aef2fd7d-ad02-516c-b6d8-952badada96e",
+      "key": "earth/cn-gz/bijie/cengtai/guanxiang/doufugou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "500221c2-84a5-57e6-81af-3aa7da9b95c8",
+      "key": "earth/cn-gz/bijie/cengtai/guanxiang/xuejiaping",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "a133c165-f296-5f40-bd6c-7f596b948709",
+      "key": "earth/cn-gz/bijie/cengtai/guanxiang/shiwo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "b70e1ad5-4d41-5387-b278-ce268523a8f2",
+      "key": "earth/cn-gz/bijie/cengtai/guanxiang/beishan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "cc4a13a8-1a9b-5b62-bbf0-e800a99df638",
+      "key": "earth/cn-gz/bijie/cengtai/guanxiang/xieshanqing",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    {
+      "id": "03b9ab98-d845-5dc2-a0f6-b661fc06c58b",
+      "key": "earth/cn-gz/bijie/cengtai/guanxiang/yinggezui",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    {
+      "id": "521235d7-2362-5b56-a7ae-5d93c2a5bce2",
+      "key": "earth/cn-gz/bijie/cengtai/huangchang-mountain",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    {
+      "id": "dcc4d9c9-ad06-5a71-88eb-901485027dc5",
+      "key": "earth/cn-gz/bijie/cengtai/guanyin-temple",
+      "body": "earth",
+      "kind": "historic_site"
+    }
+  ],
+  "records": [
+    {
+      "id": "4c7952bf-c415-5ebd-88c5-3b66cef77957",
+      "key": "bijie-gazetteer/p296/cengtai/qingchun/tangfang",
+      "entity_id": "818bbe4f-8b18-5ddb-a442-5c689744ef00",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 1: 塘房",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "塘房",
+        "pinyin": "Tàngfàng",
+        "population": 74,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c46fb929-79ab-51cd-9420-efc7c4747b52",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.433333333333334
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°26′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "地"
+      }
+    },
+    {
+      "id": "857f9c78-41d7-57fc-ac1f-08caea79c06d",
+      "key": "bijie-gazetteer/p296/cengtai/qingchun/yangjiaguan",
+      "entity_id": "611fa6d2-4806-59de-8c92-639d70145b3f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 2: 杨家关",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "杨家关",
+        "pinyin": "Yàngjiāguān",
+        "population": 180,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c46fb929-79ab-51cd-9420-efc7c4747b52",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.41666666666667,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°25′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "a55bf4a0-f0ef-5a96-ab5e-abe7b1d9bd17",
+      "key": "bijie-gazetteer/p296/cengtai/qingchun/meizigou",
+      "entity_id": "3842de6e-73af-5573-8ecc-d0d7f7fc565f",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 3: 梅子沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "梅子沟",
+        "pinyin": "Méizǐgōu",
+        "population": 380,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "c46fb929-79ab-51cd-9420-efc7c4747b52",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.433333333333334
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°26′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "8ec2ce50-2854-5947-b4be-665dcdcbdec8",
+      "key": "bijie-gazetteer/p296/cengtai/guanxiang-brigade",
+      "entity_id": "6d681df7-251a-5870-8b6b-7a6ba88100c5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 4: 官厢大队",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "官厢大队",
+        "pinyin": "Guānxiāng Dàduǐ",
+        "population": 1791,
+        "households": null,
+        "ethnicities": [
+          "汉",
+          "苗"
+        ],
+        "parent_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+        "rank": "brigade",
+        "seat_id": "aef2fd7d-ad02-516c-b6d8-952badada96e",
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "e0989b66-a965-5405-8061-61bb373e71ee",
+      "key": "bijie-gazetteer/p296/cengtai/guanxiang/guanxiangcheng",
+      "entity_id": "a32160be-d5bf-57f6-b862-585edfb7440a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 5: 官厢城",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "官厢城",
+        "pinyin": "Guānxiāngchéug",
+        "population": 580,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6d681df7-251a-5870-8b6b-7a6ba88100c5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7aa424a6-4ff1-52d1-a34b-5a9c9e32cb64",
+      "key": "bijie-gazetteer/p296/cengtai/guanxiang/doufugou",
+      "entity_id": "aef2fd7d-ad02-516c-b6d8-952badada96e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 6: 豆腐沟",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "豆腐沟",
+        "pinyin": "Dòufǔgōu",
+        "population": 520,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6d681df7-251a-5870-8b6b-7a6ba88100c5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "大队驻地"
+      }
+    },
+    {
+      "id": "dff60456-b59c-58f1-b676-f26ee12f5aca",
+      "key": "bijie-gazetteer/p296/cengtai/guanxiang/xuejiaping",
+      "entity_id": "500221c2-84a5-57e6-81af-3aa7da9b95c8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 7: 薛家坪",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "薛家坪",
+        "pinyin": "Xuéjiāpíng",
+        "population": 246,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6d681df7-251a-5870-8b6b-7a6ba88100c5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "92411c6d-fb8a-513a-84c0-cf18cbbc80d2",
+      "key": "bijie-gazetteer/p296/cengtai/guanxiang/shiwo",
+      "entity_id": "a133c165-f296-5f40-bd6c-7f596b948709",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 8: 石窝",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "石窝",
+        "pinyin": "Shíwò",
+        "population": 310,
+        "households": null,
+        "ethnicities": [
+          "苗"
+        ],
+        "parent_id": "6d681df7-251a-5870-8b6b-7a6ba88100c5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "6ff1a8e6-1d6a-5232-9b1e-1a094852e011",
+      "key": "bijie-gazetteer/p296/cengtai/guanxiang/beishan",
+      "entity_id": "b70e1ad5-4d41-5387-b278-ce268523a8f2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 9: 北山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "北山",
+        "pinyin": "Béishān",
+        "population": 79,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6d681df7-251a-5870-8b6b-7a6ba88100c5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.45,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°27′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "32efc2f8-b52d-5873-b90c-da39997a54a3",
+      "key": "bijie-gazetteer/p296/cengtai/guanxiang/xieshanqing",
+      "entity_id": "cc4a13a8-1a9b-5b62-bbf0-e800a99df638",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 10: 谢山箐",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "谢山箐",
+        "pinyin": "Xièshāngǐng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "6d681df7-251a-5870-8b6b-7a6ba88100c5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.4,
+            "latitude": 27.483333333333334
+          },
+          "longitude_text": "105°24′",
+          "latitude_text": "27°29′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "地名"
+      }
+    },
+    {
+      "id": "18a5147e-68f0-548e-8d3a-ac947e8af991",
+      "key": "bijie-gazetteer/p296/cengtai/guanxiang/yinggezui",
+      "entity_id": "03b9ab98-d845-5dc2-a0f6-b661fc06c58b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 11: 鹦哥咀",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "鹦哥咀",
+        "pinyin": "Yīnggēzuǐ",
+        "population": 65,
+        "households": null,
+        "ethnicities": [
+          "汉"
+        ],
+        "parent_id": "6d681df7-251a-5870-8b6b-7a6ba88100c5",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.41666666666667,
+            "latitude": 27.5
+          },
+          "longitude_text": "105°25′",
+          "latitude_text": "27°30′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "村"
+      }
+    },
+    {
+      "id": "4fa0e8fd-c12a-5f58-81ba-fd11e0b3b5b6",
+      "key": "bijie-gazetteer/p296/cengtai/huangchang-mountain",
+      "entity_id": "521235d7-2362-5b56-a7ae-5d93c2a5bce2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 12: 磺厂大山",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "磺厂大山",
+        "pinyin": "Huàngchàngdàshān",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.41666666666667,
+            "latitude": 27.45
+          },
+          "longitude_text": "105°25′",
+          "latitude_text": "27°27′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "山峰、海拔1890.3米"
+      }
+    },
+    {
+      "id": "ec657b4b-4266-505d-a092-518494aa7b73",
+      "key": "bijie-gazetteer/p296/cengtai/guanyin-temple",
+      "entity_id": "dcc4d9c9-ad06-5a71-88eb-901485027dc5",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 13: 观音庙",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "观音庙",
+        "pinyin": "Guānyīnmiào",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.43333333333334,
+            "latitude": 27.416666666666668
+          },
+          "longitude_text": "105°26′",
+          "latitude_text": "27°25′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "现废"
+      }
+    },
+    {
+      "id": "4d22fca1-2d9d-5ff9-af49-4da04c10cacc",
+      "key": "bijie-gazetteer/p296/cengtai/wangguan-river",
+      "entity_id": "1f171bad-c2f6-57de-9a3e-ea873e1d1457",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "296",
+      "scan_page": 331,
+      "locator": "Place table, row 14: 王官河",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "王官河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "发源于放牛场脚，下接斯栗，境内流长8.5公里。河流"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

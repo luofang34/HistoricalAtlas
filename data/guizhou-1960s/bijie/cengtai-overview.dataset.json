@@ -1,0 +1,962 @@
+{
+  "entities": [
+    {
+      "id": "78e0864e-1c2d-5a76-8ba2-8f0cce2717eb",
+      "key": "earth/cn-gz/bijie/cengtai/houziqiao-power-station",
+      "body": "earth",
+      "kind": "facility"
+    },
+    {
+      "id": "8bb39f12-5f82-5634-b391-a82142e23497",
+      "key": "earth/cn-gz/bijie/cengtai/station-fortress",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "0bb1ff01-8454-5eca-a0d2-35e01b220c98",
+      "key": "earth/cn-gz/bijie/cengtai/guard",
+      "body": "earth",
+      "kind": "region"
+    },
+    {
+      "id": "c55bbf0b-e81a-513f-a5ed-57f14704389b",
+      "key": "earth/cn-gz/bijie/cengtai/chishui-front-office",
+      "body": "earth",
+      "kind": "region"
+    },
+    {
+      "id": "7328f1d7-4181-575d-8474-bce256880d10",
+      "key": "earth/cn-gz/bijie/cengtai/guanxiang-fortress",
+      "body": "earth",
+      "kind": "historic_site"
+    }
+  ],
+  "records": [
+    {
+      "id": "951e0337-9dc4-5228-a86b-709526a6e8ba",
+      "key": "bijie-gazetteer/p293/cengtai-commune/extent",
+      "entity_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": "层台公社在毕节县城东北部，相距35公里，位于东经105°25′～29′，北纬27°26′～30之间，总面积37.4平方公里。东连总基、永兴，南抵牧郎、滥泥，西邻金银山，北枕斯栗、先进（小哨）等公社相互接壤。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "层台公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "层台公社在毕节县城东北部，相距35公里，位于东经105°25′～29′，北纬27°26′～30之间，总面积37.4平方公里。东连总基、永兴，南抵牧郎、滥泥，西邻金银山，北枕斯栗、先进（小哨）等公社相互接壤。",
+        "territory": {
+          "area_square_km": 37.4,
+          "neighbors": [
+            {
+              "name": "总基",
+              "entity_id": "de20053f-2452-573d-a782-3080ee1de75f"
+            },
+            {
+              "name": "永兴",
+              "entity_id": "d8b90f70-5465-5505-bf57-67c8eee3649c"
+            },
+            {
+              "name": "牧郎",
+              "entity_id": "e7512bc4-622d-5e4f-95da-4491bb54a0df"
+            },
+            {
+              "name": "滥泥",
+              "entity_id": "883421c9-f8b4-5fa3-904a-333961c57a60"
+            },
+            {
+              "name": "金银山",
+              "entity_id": "cc94bd74-bbfd-5a61-8238-7c4ffbedd02e"
+            },
+            {
+              "name": "斯栗",
+              "entity_id": "f88908f9-e391-5517-bfab-c9bc7bb6906c"
+            },
+            {
+              "name": "先进（小哨）",
+              "entity_id": "8e3f25ab-5d73-5216-929a-40aa22d5f278"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "978f07fa-eb55-5ec0-adf7-8f17c4e436dc",
+      "key": "bijie-gazetteer/p293/cengtai/huangchang-mountain/elevation",
+      "entity_id": "521235d7-2362-5b56-a7ae-5d93c2a5bce2",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, elevation",
+      "verbatim_quote": "西面有磺厂大山，最高海拔1890.3米，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "磺厂大山",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Reported elevation: 1,890.3 metres."
+      }
+    },
+    {
+      "id": "4f62defa-5a75-533f-8d74-646272d99317",
+      "key": "bijie-gazetteer/p293/cengtai/xiangyang/xiaba/elevation",
+      "entity_id": "9ce9ffe7-dbe3-5479-aef4-058e52e792b8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, elevation",
+      "verbatim_quote": "东北隅的下坝最低海拔1240米。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "下坝",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Reported minimum elevation: 1,240 metres."
+      }
+    },
+    {
+      "id": "679dfdac-c036-52ba-8dcf-e1da6fe387ad",
+      "key": "bijie-gazetteer/p293/cengtai/wangguan-river/course",
+      "entity_id": "1f171bad-c2f6-57de-9a3e-ea873e1d1457",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, course",
+      "verbatim_quote": "有梅子沟水源出于南面塘房，顺东面北流入斯栗，公社为王官河在境内流长约8公里，是层台的水利资源。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "王官河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview describes an approximately 8 km course within Cengtai Commune; the table reports 8.5 km."
+      }
+    },
+    {
+      "id": "9685f83f-1731-593c-8ac8-d90816d99bfb",
+      "key": "bijie-gazetteer/p293/cengtai-commune/chronology",
+      "entity_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, chronology",
+      "verbatim_quote": "解放后1950年建村，54年建乡，56年入高级社，58年成立人民公社，名层台。文革时改名“红专”公社，1981年地名普查复名为层台公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "层台公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "cb83924d-1847-5202-a2fa-2a5fdb11b9a2",
+      "key": "bijie-gazetteer/p293/cengtai-commune/establishment",
+      "entity_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "58年成立人民公社，名层台。",
+      "checked": true,
+      "source_date": {
+        "text": "58年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "层台公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "310a3b54-2393-5c58-95dc-e72b1683a449",
+      "key": "bijie-gazetteer/p293/cengtai-commune/hongzhuan-renaming",
+      "entity_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, hongzhuan renaming",
+      "verbatim_quote": "文革时改名“红专”公社，",
+      "checked": true,
+      "source_date": {
+        "text": "文革时",
+        "convention": "Chinese historical period",
+        "conversion_basis": "ccp-history-resolution-1981, section 19 (https://www.12371.cn/2021/11/09/ARTI1636454249781129.shtml), dates the Cultural Revolution to May 1966 through October 1976. Retain that entire period as the renaming bounds; the midpoint is a representative value."
+      },
+      "observation": {
+        "name": "红专公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2c206566-4dec-5a58-aae7-233d4e70ff9f",
+      "key": "bijie-gazetteer/p293/cengtai-commune/name-restoration",
+      "entity_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, name restoration",
+      "verbatim_quote": "1981年地名普查复名为层台公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1981年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "层台公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "红专公社",
+            "source_date": {
+              "text": "文革时",
+              "convention": "Chinese historical period",
+              "conversion_basis": "ccp-history-resolution-1981, section 19 (https://www.12371.cn/2021/11/09/ARTI1636454249781129.shtml), dates the Cultural Revolution to May 1966 through October 1976. Retain that entire period as the renaming bounds; the midpoint is a representative value."
+            },
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "371905f2-dc59-5f78-ba01-1b41b36bcef4",
+      "key": "bijie-gazetteer/p293/cengtai-commune/seat",
+      "entity_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, seat",
+      "verbatim_quote": "驻地层台街。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "层台公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "1eab0d79-5db0-59c6-b4f0-27aed913dd6d",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b9d4e290-04bd-5b58-ac77-4d54b3d1df9b",
+      "key": "bijie-gazetteer/p293/cengtai-commune/population",
+      "entity_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, population",
+      "verbatim_quote": "公社辖：层台、官厢、青春、东沟、向阳、红岩、光辉七个大队，149个生产队，38个自然村。人口（普查总数）2176户，11091人，其中：苗族127人，藏、彝等民族各1人，余为汉族，均以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "层台公社",
+        "pinyin": null,
+        "population": 11091,
+        "households": 2176,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "藏",
+          "彝"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview lists seven brigades, 149 production teams and 38 natural villages; 127 Miao, one Tibetan and one Yi resident, with the remainder Han."
+      }
+    },
+    {
+      "id": "d4cda3bd-a604-5cf7-a132-1b7689790f13",
+      "key": "bijie-gazetteer/p293/cengtai/houziqiao-power-station/construction",
+      "entity_id": "78e0864e-1c2d-5a76-8ba2-8f0cce2717eb",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, construction",
+      "verbatim_quote": "兴建了猴子桥电站，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "猴子桥电站",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The paragraph places construction within the broadly stated period 建国三十余年来."
+      }
+    },
+    {
+      "id": "d08be8a2-a0ad-5fd8-a895-bd861ba30bd2",
+      "key": "bijie-gazetteer/p293/cengtai/station-fortress/construction",
+      "entity_id": "8bb39f12-5f82-5634-b391-a82142e23497",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, construction",
+      "verbatim_quote": "层台站城明洪武十三年（公元1380年）建，周围六百丈，女墙一千二百余垛",
+      "checked": true,
+      "source_date": {
+        "text": "明洪武十三年（公元1380年）",
+        "convention": "Chinese lunisolar era date",
+        "conversion_basis": "Academia Sinica calendar concordance, with Julian dates before 1582-10-15 and Gregorian dates thereafter. Civil-date bounds are expressed as TT calendar coordinates with a midpoint nominal value.",
+        "era_conversion": {
+          "dynasty": "明",
+          "era": "洪武",
+          "year": 13,
+          "period": {
+            "precision": "year"
+          },
+          "calendar": "reform1582",
+          "first_day": {
+            "year": 1380,
+            "month": 2,
+            "day": 7
+          },
+          "last_day": {
+            "year": 1381,
+            "month": 1,
+            "day": 25
+          },
+          "source_id": "academia-sinica-calendar",
+          "locator": "Chinese-to-Western query: 明, 洪武, year 13; reform date 1582-10-15; inclusive result dates"
+        }
+      },
+      "observation": {
+        "name": "层台站城",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "ed774a8b-8994-516b-b561-d606fa4f701f",
+      "key": "bijie-gazetteer/p293/cengtai/guard/establishment",
+      "entity_id": "0bb1ff01-8454-5eca-a0d2-35e01b220c98",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "二十一年（公元1383年）设卫，",
+      "checked": true,
+      "source_date": {
+        "text": "二十一年（公元1383年）",
+        "convention": "Chinese lunisolar era date",
+        "conversion_basis": "Academia Sinica calendar concordance, with Julian dates before 1582-10-15 and Gregorian dates thereafter. Civil-date bounds are expressed as TT calendar coordinates with a midpoint nominal value.",
+        "era_conversion": {
+          "dynasty": "明",
+          "era": "洪武",
+          "year": 21,
+          "period": {
+            "precision": "year"
+          },
+          "calendar": "reform1582",
+          "first_day": {
+            "year": 1388,
+            "month": 2,
+            "day": 8
+          },
+          "last_day": {
+            "year": 1389,
+            "month": 1,
+            "day": 27
+          },
+          "source_id": "academia-sinica-calendar",
+          "locator": "Chinese-to-Western query: 明, 洪武, year 21; reform date 1582-10-15; inclusive result dates"
+        }
+      },
+      "observation": {
+        "name": "层台",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "guard",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7c6e4746-f1bc-574b-b5bd-0a1cfacbeabe",
+      "key": "bijie-gazetteer/p293/cengtai/guard/printed-ce-year",
+      "entity_id": "0bb1ff01-8454-5eca-a0d2-35e01b220c98",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, printed ce year",
+      "verbatim_quote": "二十一年（公元1383年）设卫，",
+      "checked": true,
+      "source_date": {
+        "text": "公元1383年",
+        "convention": "CE year printed in the parenthesis alongside the era date",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "层台",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "guard",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "33ab0a9c-947a-5b8b-97b6-609840cbdf59",
+      "key": "bijie-gazetteer/p293/cengtai/guard/abolition",
+      "entity_id": "0bb1ff01-8454-5eca-a0d2-35e01b220c98",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, abolition",
+      "verbatim_quote": "二十七年（公元1394年）废卫置赤水前千户所，隶贵州都司。",
+      "checked": true,
+      "source_date": {
+        "text": "二十七年（公元1394年）",
+        "convention": "Chinese lunisolar era date",
+        "conversion_basis": "Academia Sinica calendar concordance, with Julian dates before 1582-10-15 and Gregorian dates thereafter. Civil-date bounds are expressed as TT calendar coordinates with a midpoint nominal value.",
+        "era_conversion": {
+          "dynasty": "明",
+          "era": "洪武",
+          "year": 27,
+          "period": {
+            "precision": "year"
+          },
+          "calendar": "reform1582",
+          "first_day": {
+            "year": 1394,
+            "month": 2,
+            "day": 1
+          },
+          "last_day": {
+            "year": 1395,
+            "month": 1,
+            "day": 21
+          },
+          "source_id": "academia-sinica-calendar",
+          "locator": "Chinese-to-Western query: 明, 洪武, year 27; reform date 1582-10-15; inclusive result dates"
+        }
+      },
+      "observation": {
+        "name": "层台",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "guard",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "cf5b994f-029c-5ecb-bbc7-cf6b89c3c79e",
+      "key": "bijie-gazetteer/p293/cengtai/chishui-front-office/establishment",
+      "entity_id": "c55bbf0b-e81a-513f-a5ed-57f14704389b",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "二十七年（公元1394年）废卫置赤水前千户所，隶贵州都司。",
+      "checked": true,
+      "source_date": {
+        "text": "二十七年（公元1394年）",
+        "convention": "Chinese lunisolar era date",
+        "conversion_basis": "Academia Sinica calendar concordance, with Julian dates before 1582-10-15 and Gregorian dates thereafter. Civil-date bounds are expressed as TT calendar coordinates with a midpoint nominal value.",
+        "era_conversion": {
+          "dynasty": "明",
+          "era": "洪武",
+          "year": 27,
+          "period": {
+            "precision": "year"
+          },
+          "calendar": "reform1582",
+          "first_day": {
+            "year": 1394,
+            "month": 2,
+            "day": 1
+          },
+          "last_day": {
+            "year": 1395,
+            "month": 1,
+            "day": 21
+          },
+          "source_id": "academia-sinica-calendar",
+          "locator": "Chinese-to-Western query: 明, 洪武, year 27; reform date 1582-10-15; inclusive result dates"
+        }
+      },
+      "observation": {
+        "name": "赤水前千户所",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "thousand_household",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "130d1bbc-4f10-5c24-9741-7f2b81d80d91",
+      "key": "bijie-gazetteer/p293/cengtai/guanxiang-fortress/construction",
+      "entity_id": "7328f1d7-4181-575d-8474-bce256880d10",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, construction",
+      "verbatim_quote": "万历六年（公元1578年）黄镆继建官厢城，平田安民居之",
+      "checked": true,
+      "source_date": {
+        "text": "万历六年（公元1578年）",
+        "convention": "Chinese lunisolar era date",
+        "conversion_basis": "Academia Sinica calendar concordance, with Julian dates before 1582-10-15 and Gregorian dates thereafter. Civil-date bounds are expressed as TT calendar coordinates with a midpoint nominal value.",
+        "era_conversion": {
+          "dynasty": "明",
+          "era": "万历",
+          "year": 6,
+          "period": {
+            "precision": "year"
+          },
+          "calendar": "reform1582",
+          "first_day": {
+            "year": 1578,
+            "month": 2,
+            "day": 7
+          },
+          "last_day": {
+            "year": 1579,
+            "month": 1,
+            "day": 26
+          },
+          "source_id": "academia-sinica-calendar",
+          "locator": "Chinese-to-Western query: 明, 万历, year 6; reform date 1582-10-15; inclusive result dates"
+        }
+      },
+      "observation": {
+        "name": "官厢城",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "cc0b8e77-1f88-5dbb-90de-7a716cf16464",
+      "key": "bijie-gazetteer/p293/cengtai/guanxiang/guanxiangcheng/site-name",
+      "entity_id": "a32160be-d5bf-57f6-b862-585edfb7440a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "293",
+      "scan_page": 328,
+      "locator": "Commune overview, site name",
+      "verbatim_quote": "明末奢崇明反，官厢城（今仍名）毁。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "官厢城",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview retains the site name used by the settlement table."
+      }
+    },
+    {
+      "id": "c84ceadd-2ac2-5ff4-b301-164523c6f30a",
+      "key": "bijie-gazetteer/p294/cengtai-commune/education",
+      "entity_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "294",
+      "scan_page": 329,
+      "locator": "Commune overview, education",
+      "verbatim_quote": "有县办完全小学一所，学生700余人，各大队有民办小学共7所，计有学生1100余人。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "层台公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The continuation counts schools without naming them."
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "e898e7b1-ddbb-5ffc-94ba-c94feb617dc5",
+      "key": "editorial/bijie/cengtai-commune/establishment",
+      "entity_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+      "basis": [
+        "cb83924d-1847-5202-a2fa-2a5fdb11b9a2"
+      ],
+      "brief": "Date establishment within the cited calendar bounds, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "0a3c4afd-30f6-5f49-8d3d-ac893d36ddd6",
+      "key": "editorial/bijie/cengtai-commune/initial-name",
+      "entity_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+      "basis": [
+        "cb83924d-1847-5202-a2fa-2a5fdb11b9a2",
+        "310a3b54-2393-5c58-95dc-e72b1683a449"
+      ],
+      "brief": "ccp-history-resolution-1981, section 19 (https://www.12371.cn/2021/11/09/ARTI1636454249781129.shtml), dates the Cultural Revolution to May 1966 through October 1976. Retain that entire period as the renaming bounds; the midpoint is a representative value.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-1062590400000",
+              "nominal": "-896832000001",
+              "latest": "-731073600001",
+              "precision": "decade"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "层台公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "4f626622-7ba3-5681-8667-b09c400f4ba5",
+      "key": "editorial/bijie/cengtai-commune/hongzhuan-name",
+      "entity_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+      "basis": [
+        "310a3b54-2393-5c58-95dc-e72b1683a449",
+        "2c206566-4dec-5a58-aae7-233d4e70ff9f"
+      ],
+      "brief": "ccp-history-resolution-1981, section 19 (https://www.12371.cn/2021/11/09/ARTI1636454249781129.shtml), dates the Cultural Revolution to May 1966 through October 1976. Retain that entire period as the renaming bounds; the midpoint is a representative value.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1062590400000",
+              "nominal": "-896832000001",
+              "latest": "-731073600001",
+              "precision": "decade"
+            },
+            "end": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "红专公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "3e774c64-7237-547e-9b2e-7ad362d79079",
+      "key": "editorial/bijie/cengtai-commune/restored-name",
+      "entity_id": "5cd0ac00-9241-5af7-8cd9-f152f10ba99a",
+      "basis": [
+        "2c206566-4dec-5a58-aae7-233d4e70ff9f"
+      ],
+      "brief": "Use the restored name from the cited year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-599572800000",
+              "nominal": "-583804800001",
+              "latest": "-568036800001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "层台公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "040cab6e-b529-548c-a668-19f3d5e415e8",
+      "key": "editorial/bijie/cengtai/station-fortress/establishment",
+      "entity_id": "8bb39f12-5f82-5634-b391-a82142e23497",
+      "basis": [
+        "d08be8a2-a0ad-5fd8-a895-bd861ba30bd2"
+      ],
+      "brief": "Date establishment within the cited calendar bounds, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-19561435200000",
+            "nominal": "-19546142400001",
+            "latest": "-19530849600001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "f11f0c77-956b-5e0b-af60-b5c206346ab9",
+      "key": "editorial/bijie/cengtai/guard/establishment",
+      "entity_id": "0bb1ff01-8454-5eca-a0d2-35e01b220c98",
+      "basis": [
+        "ed774a8b-8994-516b-b561-d606fa4f701f",
+        "7c6e4746-f1bc-574b-b5bd-0a1cfacbeabe"
+      ],
+      "brief": "Date establishment within the cited calendar bounds, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-19308888000000",
+            "nominal": "-19293552000001",
+            "latest": "-19278216000001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "8dc476fd-bc0c-5780-92ec-b5cf5c9de6d5",
+      "key": "editorial/bijie/cengtai/chishui-front-office/establishment",
+      "entity_id": "c55bbf0b-e81a-513f-a5ed-57f14704389b",
+      "basis": [
+        "cf5b994f-029c-5ecb-bbc7-cf6b89c3c79e"
+      ],
+      "brief": "Date establishment within the cited calendar bounds, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-19120104000000",
+            "nominal": "-19104768000001",
+            "latest": "-19089432000001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "25ed54a8-e983-5b1c-98a4-b76803858cc0",
+      "key": "editorial/bijie/cengtai/guanxiang-fortress/establishment",
+      "entity_id": "7328f1d7-4181-575d-8474-bce256880d10",
+      "basis": [
+        "130d1bbc-4f10-5c24-9741-7f2b81d80d91"
+      ],
+      "brief": "Date establishment within the cited calendar bounds, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-13312987200000",
+            "nominal": "-13297694400001",
+            "latest": "-13282401600001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "c6068874-6ab2-5ae8-a4ec-7e75f4dcd120",
+      "key": "editorial/bijie/cengtai/guard/rank",
+      "entity_id": "0bb1ff01-8454-5eca-a0d2-35e01b220c98",
+      "basis": [
+        "ed774a8b-8994-516b-b561-d606fa4f701f",
+        "33ab0a9c-947a-5b8b-97b6-609840cbdf59"
+      ],
+      "brief": "Apply the guard rank between the cited establishment and abolition years, using the converted lunar-year bounds.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-19308888000000",
+              "nominal": "-19293552000001",
+              "latest": "-19278216000001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-19120104000000",
+              "nominal": "-19104768000001",
+              "latest": "-19089432000001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "hierarchy",
+            "value": {
+              "rank": "guard",
+              "parent_id": null,
+              "seat_id": null
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": [
+    {
+      "entity_id": "0bb1ff01-8454-5eca-a0d2-35e01b220c98",
+      "alternatives": [
+        "ed774a8b-8994-516b-b561-d606fa4f701f",
+        "7c6e4746-f1bc-574b-b5bd-0a1cfacbeabe"
+      ],
+      "estimate_id": "f11f0c77-956b-5e0b-af60-b5c206346ab9",
+      "brief": "The overview pairs Hongwu year 21 with the printed CE year 1383. The Academia Sinica calendar concordance dates that era year to 1388-02-08 through 1389-01-27 Julian. The establishment estimate follows the era date and retains the printed CE claim."
+    }
+  ]
+}
