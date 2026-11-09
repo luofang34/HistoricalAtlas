@@ -32,6 +32,7 @@ wgpu = "30"
 image = { version = "0.25", default-features = false, features = ["jpeg"] }
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+dirs = "6"
 egui-winit = { version = "0.36.2", default-features = false, features = ["x11", "wayland", "links", "clipboard"] }
 tokio = { version = "1", features = ["rt-multi-thread"] }
 tracing-subscriber.workspace = true

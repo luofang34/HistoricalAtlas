@@ -62,6 +62,10 @@ pub struct MapRenderer {
     gpu: RenderState,
     texture: egui::TextureId,
     raster_layers: Vec<(String, BodyId)>,
+    terrain: Vec<(
+        BodyId,
+        Option<maplibre::style::terrain::TerrainSpecification>,
+    )>,
     dimensions: [u32; 2],
     picking: super::picking::Picking,
     selection_picking: super::picking::Picking,
@@ -95,11 +99,19 @@ impl MapRenderer {
                 Box::new(RenderPlugin),
                 Box::new(BackgroundPlugin),
                 Box::new(RasterPlugin::<DefaultRasterTransferables>::default()),
+                Box::new(maplibre::hillshade::HillshadePlugin),
                 Box::new(VectorPlugin::<DefaultVectorTransferables>::default()),
+                // Registered for every body: switching bodies sets or clears the style's
+                // terrain at run time, and the plugin idles while there is none.
+                Box::new(maplibre::terrain::TerrainPlugin::<
+                    maplibre::terrain::DefaultDemTransferables,
+                >::default()),
                 Box::new(NavigationHudPlugin),
             ],
         )?;
         map.set_navigation_mode(NavigationMode::FreeGlobe)?;
+        // Terrain is read by looking across it, as in MapLibre's 3D terrain example.
+        map.set_max_pitch(cgmath::Deg(85.0));
         map.render_source_frames(ProcessedLayers::default(), Vec::new(), 1)?;
         let view = map.head_texture_view().ok_or(RenderError::Texture)?;
         let texture = gpu.renderer.write().register_native_texture(
@@ -112,6 +124,15 @@ impl MapRenderer {
             gpu,
             texture,
             raster_layers: basemap.layers(),
+            terrain: [BodyId::Earth, BodyId::Moon, BodyId::Mars]
+                .into_iter()
+                .map(|body| {
+                    let spec = basemap
+                        .terrain(body)
+                        .and_then(|value| serde_json::from_value(value).ok());
+                    (body, spec)
+                })
+                .collect(),
             dimensions: [1, 1],
             picking: Default::default(),
             selection_picking: Default::default(),
@@ -130,6 +151,17 @@ impl MapRenderer {
                 style.set_layout_property(id, "visibility", visibility.into())
             })?;
         }
+        let terrain = self
+            .terrain
+            .iter()
+            .find(|(candidate, _)| *candidate == body)
+            .and_then(|(_, spec)| spec.clone());
+        self.map.mutate_style(|style| {
+            if style.terrain != terrain {
+                style.terrain = terrain;
+            }
+            Ok(maplibre::style::mutation::StyleChange::default())
+        })?;
         let picking = super::picking::Picking::new(&points)?;
         self.map.set_geojson_source("observations", points)?;
         self.picking = picking;

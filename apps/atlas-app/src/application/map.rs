@@ -108,15 +108,19 @@ impl Application {
     }
 
     fn attribution(&self, ui: &egui::Ui, rect: egui::Rect) {
-        if self.basemap.has_body(self.body) {
-            ui.painter().text(
-                rect.right_bottom() - egui::vec2(8.0, 8.0),
-                egui::Align2::RIGHT_BOTTOM,
-                &self.basemap.attribution,
-                egui::FontId::proportional(11.0),
-                egui::Color32::from_rgb(220, 226, 219),
-            );
+        if !self.basemap.has_body(self.body) {
+            return;
         }
+        // Credits wrap within the map so none of a provider's attribution is cut off.
+        let color = egui::Color32::from_rgb(220, 226, 219);
+        let galley = ui.painter().layout(
+            self.basemap.attribution(self.body),
+            egui::FontId::proportional(11.0),
+            color,
+            (rect.width() - 16.0).max(1.0),
+        );
+        let position = rect.right_bottom() - egui::vec2(8.0, 8.0) - galley.size();
+        ui.painter().galley(position, galley, color);
     }
 
     fn update_selection(&mut self) {
