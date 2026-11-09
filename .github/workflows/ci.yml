@@ -17,6 +17,6 @@ jobs:
           rustup toolchain install stable --profile minimal --component clippy --component rustfmt --target wasm32-unknown-unknown
           rustup default stable
           sudo apt-get update
-          sudo apt-get install -y poppler-utils tesseract-ocr tesseract-ocr-eng
+          sudo apt-get install -y poppler-utils tesseract-ocr tesseract-ocr-eng protobuf-compiler
       - name: Verify code and evidence
         run: sh scripts/ci.sh
