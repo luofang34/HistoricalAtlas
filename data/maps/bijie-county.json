@@ -151,6 +151,7 @@
     ],
     "datum": "unspecified",
     "id": "bijie-county",
+    "maximum_segment_pixels": 32.0,
     "method": {
       "kind": "affine"
     },
@@ -945,6 +946,7 @@
       "source_id": "bijie-gazetteer",
       "target_frame": {
         "crs": "ATLAS:source-angular:Unspecified",
+        "datum": "unspecified",
         "units": "degrees"
       },
       "vertices": [
