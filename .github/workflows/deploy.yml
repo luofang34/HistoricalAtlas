@@ -10,7 +10,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 env:
   SOURCE_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
@@ -34,12 +36,9 @@ jobs:
           echo "tip ${tip}, source ${SOURCE_SHA}, current ${current}"
           echo "current=${current}" >> "$GITHUB_OUTPUT"
 
-  publish:
+  build:
     needs: check
     if: needs.check.outputs.current == 'true'
-    concurrency:
-      group: pages
-      cancel-in-progress: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -60,18 +59,27 @@ jobs:
         run: |
           oversized=$(find dist/site -type f -size +3999999c)
           if [ -n "$oversized" ]; then echo "$oversized"; exit 1; fi
+      # Boundary review previews are published only from the gh-pages archive.
       - uses: actions/checkout@v4
         with:
           ref: gh-pages
-          path: pages
-      - name: Publish to gh-pages
-        # Review previews and the Jekyll opt-out live only on gh-pages.
-        run: |
-          rsync -a --delete --exclude .git --exclude previews --exclude .nojekyll dist/site/ pages/
-          cd pages
-          git add -A
-          if git diff --cached --quiet; then echo "Site unchanged"; exit 0; fi
-          git -c user.name="github-actions[bot]" \
-              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
-              commit -m "Publish the atlas from ${SOURCE_SHA::7}"
-          git push origin HEAD:gh-pages
+          path: archive
+          sparse-checkout: previews
+      - name: Add the review previews
+        run: cp -R archive/previews dist/site/previews
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/site
+
+  deploy:
+    needs: build
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
