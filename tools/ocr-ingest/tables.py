@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Group page text boxes into reviewable gazetteer table rows."""
+"""Group page text boxes into reviewable rows using declared column layouts."""
 
 import argparse
 import hashlib
@@ -33,9 +33,9 @@ def transcribed_text(words):
     return re.sub(r'(?<=[\u3400-\u9fff])\s+(?=[\u3400-\u9fff])', '', text).strip()
 
 
-def name_lines(words, left, right):
+def name_lines(words, left, right, pattern):
     selected = [word for word in words if left <= centre(word)[0] < right
-                and re.search(r'[\u3400-\u9fff]', word['text'])]
+                and re.search(pattern, word['text'])]
     return visual_lines(selected)
 
 
@@ -89,25 +89,50 @@ def parse_cells(cells):
     return {'population': population, 'longitude': longitude, 'latitude': latitude}, warnings
 
 
+def profile_definition(profile):
+    if isinstance(profile, str):
+        profile = dict(columns=PROFILES[profile], anchor_pattern=r'[\u3400-\u9fff]',
+                       header_pattern=r'标准.*名', row_end=.95)
+    columns = profile.get('columns', [])
+    if not columns or not 0 < profile.get('row_end', .95) <= 1:
+        raise ValueError('Profile requires columns and a row_end in (0, 1]')
+    names, previous = set(), 0
+    for column in columns:
+        if len(column) != 3:
+            raise ValueError('Each column requires a name and normalized left/right bounds')
+        name, left, right = column
+        if not isinstance(name, str) or not name or name in names or not previous <= left < right <= 1:
+            raise ValueError('Columns require unique names and ordered, non-overlapping bounds')
+        names.add(name)
+        previous = right
+    result = dict(columns=columns, anchor_pattern=profile.get('anchor_pattern', r'\S'),
+                  header_pattern=profile.get('header_pattern', ''), row_end=profile.get('row_end', .95))
+    for field in ['anchor_pattern', 'header_pattern']:
+        if not isinstance(result[field], str) or not result[field]:
+            raise ValueError(f'Profile requires {field}')
+        re.compile(result[field])
+    return result
+
+
 def extract_table(page, profile):
-    columns = PROFILES[profile]
+    definition = profile_definition(profile)
+    columns = definition['columns']
     _, left, right = columns[0]
     words = [word for word in page['words'] if not is_page_number(word)]
-    lines = name_lines(words, left, right)
-    header = next((line for line in lines if '标准' in transcribed_text(line)
-                   and '名' in transcribed_text(line)), None)
+    lines = name_lines(words, left, right, definition['anchor_pattern'])
+    header = next((line for line in lines if re.search(definition['header_pattern'], transcribed_text(line))), None)
     if header is None:
         return {'layout_detected': False, 'rows': [], 'warnings': ['header_not_detected']}
     header_bottom = max(word['box'][3] for word in header)
     anchors = [line for line in lines if min(word['box'][1] for word in line) > header_bottom
-               and centre(line[0])[1] < .95]
+               and centre(line[0])[1] < definition['row_end']]
     if not anchors:
         return {'layout_detected': False, 'rows': [], 'warnings': ['no_name_rows']}
     positions = [statistics.median(centre(word)[1] for word in line) for line in anchors]
     rows = [{name: {'text': '', 'regions': []} for name, _, _ in columns} for _ in anchors]
     for word in words:
         x, y = centre(word)
-        if y <= header_bottom or y >= .95:
+        if y <= header_bottom or y >= definition['row_end']:
             continue
         row = min(range(len(positions)), key=lambda index: abs(positions[index] - y))
         for name, xmin, xmax in columns:
@@ -127,18 +152,22 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('input', type=Path, help='Directory of extracted page JSON files')
     parser.add_argument('output', type=Path, help='Destination for table drafts')
-    parser.add_argument('--profile', choices=PROFILES, required=True)
+    profiles = parser.add_mutually_exclusive_group(required=True)
+    profiles.add_argument('--profile', choices=PROFILES)
+    profiles.add_argument('--profile-file', type=Path, help='JSON columns, anchor/header patterns, and optional row_end')
     args = parser.parse_args()
+    definition = profile_definition(json.loads(args.profile_file.read_text()) if args.profile_file else args.profile)
+    profile_name = args.profile_file.name if args.profile_file else args.profile
     logging.basicConfig(level=logging.INFO, format='%(levelname)s %(message)s')
     args.output.mkdir(parents=True, exist_ok=True)
     counts = {'pages': 0, 'tables': 0, 'rows': 0}
     for path in sorted(args.input.glob('page-*.json')):
         raw = path.read_bytes()
         page = json.loads(raw)
-        result = extract_table(page, args.profile)
+        result = extract_table(page, definition)
         result.update({'scan_sha256': page['scan_sha256'], 'scan_page': page['scan_page'],
                        'extraction_sha256': hashlib.sha256(raw).hexdigest(),
-                       'profile': args.profile, 'columns': PROFILES[args.profile], 'checked': False})
+                       'profile': profile_name, 'profile_definition': definition, 'columns': definition['columns'], 'checked': False})
         destination = args.output / path.name.replace('.json', '.table.json')
         destination.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
         counts['pages'] += 1
