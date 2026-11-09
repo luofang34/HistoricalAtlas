@@ -108,6 +108,13 @@ impl MapControls {
         self.state.on_manual_pan_or_zoom();
     }
 
+    /// Note a bearing or pitch turn made directly on the map, which leaves Auto-Tilt for
+    /// manual 3D as the shared HUD expects.
+    pub(super) fn manual_turn(&mut self) {
+        self.state.on_manual_bearing();
+        self.state.on_manual_tilt();
+    }
+
     /// Advance settle animations and HUD zoom requests; returns whether to draw again.
     pub(super) fn advance(&mut self, map: &mut dyn ControlledMap) -> bool {
         let now = Instant::now();

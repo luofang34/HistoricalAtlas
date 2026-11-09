@@ -30,4 +30,34 @@ impl MapRenderer {
         let view = self.map.view_state();
         (view.zoom().value(), view.camera().get_bearing())
     }
+
+    /// Turn the camera by a right- or Ctrl-drag: horizontal travel turns the bearing and
+    /// vertical travel the pitch, at the rate MapLibre's window host uses; returns whether
+    /// the camera moved.
+    pub fn orbit(
+        &mut self,
+        delta: egui::Vec2,
+    ) -> Result<bool, maplibre::render::view_state::NavigationError> {
+        let camera = self.map.view_state().camera();
+        let bearing = cgmath::Deg::from(camera.get_bearing());
+        let pitch = cgmath::Deg::from(camera.get_pitch());
+        let maximum = cgmath::Deg::from(camera.max_pitch());
+        let turned = cgmath::Deg(bearing.0 - f64::from(delta.x) * ORBIT_DEGREES_PER_PIXEL);
+        let tilted = cgmath::Deg(
+            (pitch.0 - f64::from(delta.y) * ORBIT_DEGREES_PER_PIXEL).clamp(0.0, maximum.0),
+        );
+        if turned == bearing && tilted == pitch {
+            return Ok(false);
+        }
+        self.map
+            .jump_to(maplibre::render::view_state::CameraOptions {
+                bearing: Some(turned),
+                pitch: Some(tilted),
+                ..Default::default()
+            })?;
+        Ok(true)
+    }
 }
+
+/// Degrees of bearing or pitch per logical pixel of an orbit drag.
+const ORBIT_DEGREES_PER_PIXEL: f64 = 0.35;

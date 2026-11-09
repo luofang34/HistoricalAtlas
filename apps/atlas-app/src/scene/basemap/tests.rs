@@ -22,6 +22,9 @@ fn publication_tiles_load_from_files_and_match_manifest_checksums() {
                 "atlas://terrain/0/0/0",
                 "atlas://terrain/8/201/107",
                 "atlas://../../secret",
+                // Only services the manifest declares may be fetched.
+                "https://example.org/0/0/0.png",
+                "https://tiles.maps.eox.at.example.org/0/0/0.jpg",
             ] {
                 assert!(loader.fetch(url).await.unwrap_err().is_not_found());
             }

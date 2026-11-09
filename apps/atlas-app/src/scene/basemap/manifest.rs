@@ -5,6 +5,9 @@ use serde::Deserialize;
 use serde_json::{Value, json};
 use std::collections::{BTreeMap, BTreeSet};
 
+mod remote;
+pub(in crate::scene) use remote::RemoteSource;
+
 /// Invalid publication asset configuration.
 #[derive(Debug, thiserror::Error)]
 pub enum ManifestError {
@@ -28,9 +31,12 @@ pub enum ManifestError {
 /// Physical imagery inventory; tile addresses determine its zooms and coverage.
 #[derive(Debug, Clone, Deserialize)]
 pub struct Manifest {
-    /// Attribution shown with physical imagery.
+    /// Attribution for the bundled imagery.
     pub attribution: String,
     pub(super) tiles: Vec<Tile>,
+    /// Online imagery and elevation services, drawn above the bundled imagery when reachable.
+    #[serde(default)]
+    pub(in crate::scene) remote: Vec<RemoteSource>,
 }
 
 #[derive(Debug, Clone, Deserialize)]
@@ -45,7 +51,7 @@ pub(super) struct Tile {
     pub body: BodyId,
 }
 
-fn earth() -> BodyId {
+pub(super) fn earth() -> BodyId {
     BodyId::Earth
 }
 
@@ -90,7 +96,34 @@ impl Manifest {
                 )));
             }
         }
+        let mut ids = BTreeSet::new();
+        for source in &result.remote {
+            source.validate()?;
+            if !ids.insert(&source.id) {
+                return Err(ManifestError::Invalid(format!("duplicate {}", source.id)));
+            }
+        }
         Ok(result)
+    }
+
+    /// Credits for the imagery and elevation shown on a body.
+    pub fn attribution(&self, body: BodyId) -> String {
+        let mut parts = Vec::new();
+        if self.has_body(body) {
+            parts.push(self.attribution.clone());
+        }
+        parts.extend(
+            self.remote
+                .iter()
+                .filter(|source| source.body == body)
+                .map(|source| source.attribution.clone()),
+        );
+        parts.join("; ")
+    }
+
+    /// The style's `terrain` for a body, when a declared elevation service covers it.
+    pub(in crate::scene) fn terrain(&self, body: BodyId) -> Option<Value> {
+        self.remote.iter().find_map(|source| source.terrain(body))
     }
 
     /// Default asset inventory for callers constructing a style without a host.
@@ -101,6 +134,7 @@ impl Manifest {
     /// Whether the publication includes physical imagery for a body.
     pub fn has_body(&self, body: BodyId) -> bool {
         self.tiles.iter().any(|tile| tile.body == body)
+            || self.remote.iter().any(|source| source.body == body)
     }
 
     /// Layer IDs and their body, shared by style creation and body switching.
@@ -112,6 +146,12 @@ impl Manifest {
                     .first()
                     .map(|tile| (format!("basemap-{source}-{z}"), tile.body))
             })
+            .chain(self.remote.iter().flat_map(|source| {
+                source
+                    .layer_ids()
+                    .into_iter()
+                    .map(move |id| (id, source.body))
+            }))
             .collect()
     }
 
@@ -141,6 +181,18 @@ impl Manifest {
                     "paint": {"raster-fade-duration": 0}}),
                 );
             }
+        }
+        for source in &self.remote {
+            let before = style
+                .get("layers")
+                .and_then(Value::as_array)
+                .and_then(|layers| {
+                    layers.iter().position(|layer| {
+                        layer.get("id").and_then(Value::as_str) == Some("graticule")
+                    })
+                })
+                .unwrap_or(usize::MAX);
+            source.apply(style, body, before);
         }
     }
 

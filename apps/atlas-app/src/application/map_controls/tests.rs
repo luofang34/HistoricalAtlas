@@ -100,3 +100,13 @@ fn a_click_pressed_and_released_within_one_frame_still_activates_the_button() {
     };
     assert!(!controls.pointer(&map, elsewhere));
 }
+
+#[test]
+fn a_manual_turn_leaves_auto_tilt_for_manual_three_dimensions() {
+    let mut controls = MapControls::default();
+    controls.state.auto_tilt = true;
+    controls.state.three_dimensional = false;
+    controls.manual_turn();
+    assert!(controls.state.three_dimensional);
+    assert!(!controls.state.auto_tilt);
+}
