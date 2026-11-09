@@ -9,11 +9,15 @@ use atlas_ledger::publication::{Aliases, Published, verify_publication};
 use serde::Deserialize;
 
 use crate::error::AppError;
+mod geometry;
 
 /// A single entity's published evidence.
 #[derive(Debug, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Entry {
+    /// External geometry parts loaded independently of the evidence index.
+    #[serde(default)]
+    pub geometry: Option<atlas_boundary::publication::GeometryReference>,
     /// Registered source linework, including rivers and infrastructure.
     #[serde(default)]
     pub lines: Vec<atlas_boundary::linear::GeographicLine>,
@@ -95,31 +99,7 @@ impl Atlas {
         }
         atlas_ledger::validation::validate(&sources, &data)?;
         for entry in publication.entries.values() {
-            for line in &entry.lines {
-                if !entry.records.iter().any(|r| r.id == line.line.record_id) {
-                    return Err(AppError::EvidenceIdentity(entry.entity.id));
-                }
-                line.feature(&data, None)?;
-            }
-            for boundary in &entry.derived_boundaries {
-                if !entry.records.iter().any(|r| r.id == boundary.record_id) {
-                    return Err(AppError::EvidenceIdentity(entry.entity.id));
-                }
-                boundary.feature(&data, None)?;
-            }
-            for boundary in &entry.boundaries {
-                if !entry
-                    .records
-                    .iter()
-                    .any(|r| r.id == boundary.unit.record_id)
-                {
-                    return Err(AppError::EvidenceIdentity(entry.entity.id));
-                }
-                boundary.feature(&data, None)?;
-            }
-            for drawing in &entry.drawings {
-                atlas_boundary::sheet::validate(&sources, &data, drawing)?;
-            }
+            entry.validate_geometry(&sources, &data)?;
         }
         verify_publication(&data, &publication.aliases, &Published::default())?;
         let aliases = publication

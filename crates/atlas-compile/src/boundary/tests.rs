@@ -206,7 +206,7 @@ fn unpaginated_line_only_capture_registers_and_publishes_open_components() {
         &format!("entities/index/{}.json", entity.shard()),
     );
     assert_eq!(
-        shard[entity.0.to_string()]["lines"]
+        crate::export::resolve_geometry(&artifacts, &shard[entity.0.to_string()]).unwrap()["lines"]
             .as_array()
             .unwrap()
             .len(),

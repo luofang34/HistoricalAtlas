@@ -103,3 +103,49 @@ fn hierarchy_cannot_publish_a_parent_without_checked_evidence() {
         Err(ExportError::MissingEvidence(_))
     ));
 }
+
+#[test]
+fn large_linework_is_loaded_from_verified_parts_without_growing_the_entity_shard() {
+    use atlas_boundary::{
+        linear::{GeographicLine, TracedLine},
+        publication::GeometryReference,
+    };
+    let input = input();
+    let record = &input.data.records[0];
+    let vertices = (0..150_000)
+        .map(|i| atlas_geo::registration::PlanarPoint {
+            x: 1.0 + f64::from(i) / 1000000.0,
+            y: 2.0 + f64::from(i).sin() / 1000.0,
+        })
+        .collect::<Vec<_>>();
+    let line = GeographicLine {
+        line: TracedLine {
+            record_id: record.id,
+            paths: vec![(0..vertices.len()).collect()],
+            validity: None,
+        },
+        vertices,
+        datum: atlas_geo::coordinates::Datum::Wgs84,
+        registration: "maps/test.json".into(),
+    };
+    assert!(serde_json::to_vec(&line).unwrap().len() > MAX_FILE_BYTES);
+    let output = compile_registered(&input, &[], std::slice::from_ref(&line)).unwrap();
+    assert!(output.values().all(|bytes| bytes.len() < MAX_FILE_BYTES));
+    let bytes =
+        &output[&PathBuf::from(format!("entities/index/{}.json", record.entity_id.shard()))];
+    assert!(bytes.len() < 5000);
+    let shard: serde_json::Value = serde_json::from_slice(bytes).unwrap();
+    let entry = &shard[record.entity_id.0.to_string()];
+    assert!(entry.get("lines").is_none());
+    let reference: GeometryReference = serde_json::from_value(entry["geometry"].clone()).unwrap();
+    assert!(reference.parts.len() >= 3);
+    let parts = reference
+        .parts
+        .iter()
+        .map(|part| output[&PathBuf::from(&part.path)].clone())
+        .collect::<Vec<_>>();
+    let bundle = reference.decode(&parts).unwrap();
+    assert_eq!(bundle.lines[0].vertices, line.vertices);
+    assert_eq!(bundle.lines[0].line.paths, line.line.paths);
+    assert!(reference.bounds.unwrap()[2] < 2.0);
+}

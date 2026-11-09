@@ -19,6 +19,8 @@ impl Application {
     }
 
     pub(super) fn map_panel(&mut self, ui: &mut egui::Ui) {
+        #[cfg(target_arch = "wasm32")]
+        self.load_visible_geometry(ui);
         self.view_controls(ui);
         if self.sheet_panel(ui) {
             return;
@@ -154,6 +156,19 @@ impl Application {
                 (self.atlas.entry(record.entity_id)?.entity.body == self.body)
                     .then_some(record.observation.coordinate.as_ref()?.point)
             }));
+        }
+        for entity in self
+            .atlas
+            .data
+            .entities
+            .iter()
+            .filter(|entity| entity.body == self.body)
+        {
+            if let Some(bounds) =
+                crate::scene::boundaries::extent(&self.atlas, entity.id, self.derived_visible, None)
+            {
+                points.extend(bounds);
+            }
         }
         let first = *points.first()?;
         Some(points.iter().fold([first, first], |[low, high], point| {

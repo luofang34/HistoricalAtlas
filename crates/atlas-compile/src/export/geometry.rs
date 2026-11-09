@@ -88,6 +88,7 @@ pub(crate) fn features(
     {
         let entries: BTreeMap<String, serde_json::Value> = serde_json::from_slice(bytes)?;
         for entry in entries.values() {
+            let entry = super::storage::resolve(output, entry)?;
             for key in ["boundaries", "derived_boundaries", "lines"] {
                 for shape in entry
                     .get(key)

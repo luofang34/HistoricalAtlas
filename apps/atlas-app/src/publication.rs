@@ -16,6 +16,9 @@ use crate::{
 /// Filesystem publication loading failure.
 #[derive(Debug, Error)]
 pub enum PublicationError {
+    /// Geometry parts failed verification.
+    #[error(transparent)]
+    Geometry(#[from] atlas_boundary::publication::GeometryError),
     /// A file could not be read.
     #[error("cannot read {path}: {source}")]
     Io {
@@ -61,7 +64,19 @@ pub fn load_blocking(root: &Path) -> Result<Atlas, PublicationError> {
         }
         let records: BTreeMap<_, Entry> =
             read_blocking(&root.join(format!("entities/index/{shard}.json")))?;
-        for (id, record) in records {
+        for (id, mut record) in records {
+            if let Some(reference) = &record.geometry {
+                reference.validate()?;
+                let parts = reference
+                    .parts
+                    .iter()
+                    .map(|part| {
+                        let path = root.join(&part.path);
+                        fs::read(&path).map_err(|source| PublicationError::Io { path, source })
+                    })
+                    .collect::<Result<Vec<_>, _>>()?;
+                record.attach_geometry(reference.decode(&parts)?);
+            }
             if entries.insert(id, record).is_some() {
                 return Err(PublicationError::Duplicate(shard));
             }

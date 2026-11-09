@@ -218,6 +218,45 @@ impl MapRenderer {
         Ok(())
     }
 
+    /// Geographic envelope for loading regional detail, unwrapped around the camera longitude.
+    pub fn detail_bounds(&self) -> Option<[f64; 4]> {
+        let view = self.map.view_state();
+        if view.zoom().value() < 4.0 {
+            return None;
+        }
+        let camera = maplibre::render::projection::globe_camera_for_view(view).ok()?;
+        let (width, height) = view.viewport_size();
+        let center = camera.center();
+        let mut bounds = [
+            center.longitude,
+            center.latitude,
+            center.longitude,
+            center.latitude,
+        ];
+        for x in [0., 0.5, 1.] {
+            for y in [0., 0.5, 1.] {
+                if let Some(point) =
+                    camera.screen_point_to_location(cgmath::Point2::new(x * width, y * height))
+                {
+                    let longitude = center.longitude
+                        + (point.longitude - center.longitude + 180.).rem_euclid(360.)
+                        - 180.;
+                    bounds = [
+                        bounds[0].min(longitude),
+                        bounds[1].min(point.latitude),
+                        bounds[2].max(longitude),
+                        bounds[3].max(point.latitude),
+                    ];
+                }
+            }
+        }
+        if bounds[1] < -80. || bounds[3] > 80. {
+            bounds[0] = center.longitude - 180.;
+            bounds[2] = center.longitude + 180.;
+        }
+        Some(bounds)
+    }
+
     /// Whether map work requests another GUI frame.
     pub fn needs_redraw(&self) -> bool {
         self.map.needs_redraw()

@@ -13,12 +13,16 @@ use atlas_geo::body::BodyId;
 mod controls;
 mod dates;
 mod evidence;
+#[cfg(target_arch = "wasm32")]
+mod geometry;
 mod map;
 mod overlay;
 mod sheet;
 
 /// Application state independent of the windowing platform.
 pub struct Application {
+    #[cfg(target_arch = "wasm32")]
+    geometry: geometry::GeometryLoads,
     atlas: Atlas,
     body: BodyId,
     time: TimeControl,
@@ -46,6 +50,8 @@ impl Application {
         let time = TimeControl::default();
         let selected_time = SelectedTime::query(&atlas, &time)?;
         Ok(Self {
+            #[cfg(target_arch = "wasm32")]
+            geometry: geometry::GeometryLoads::new(&atlas),
             atlas,
             body: BodyId::Earth,
             time,

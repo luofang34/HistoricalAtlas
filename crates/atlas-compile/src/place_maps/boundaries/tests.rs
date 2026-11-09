@@ -78,9 +78,9 @@ fn ordinary_build_registers_sheet_boundaries_with_the_same_place_controls_and_da
         .unwrap();
     let path = format!("entities/index/{}.json", estimate.entity_id.shard());
     let shard: serde_json::Value = serde_json::from_slice(&output[Path::new(&path)]).unwrap();
-    let boundaries = shard[estimate.entity_id.0.to_string()]["boundaries"]
-        .as_array()
-        .unwrap();
+    let geometry =
+        export::resolve_geometry(&output, &shard[estimate.entity_id.0.to_string()]).unwrap();
+    let boundaries = geometry["boundaries"].as_array().unwrap();
     assert_eq!(boundaries.len(), 1);
     let boundary: GeographicBoundary = serde_json::from_value(boundaries[0].clone()).unwrap();
     assert_eq!(boundary.datum, Datum::Unspecified);
@@ -148,9 +148,9 @@ fn explicit_boundary_registration_replaces_the_automatic_fit_for_its_record() {
         .unwrap();
     let path = format!("entities/index/{}.json", record.entity_id.shard());
     let shard: serde_json::Value = serde_json::from_slice(&output[Path::new(&path)]).unwrap();
-    let published = shard[record.entity_id.0.to_string()]["boundaries"]
-        .as_array()
-        .unwrap();
+    let geometry =
+        export::resolve_geometry(&output, &shard[record.entity_id.0.to_string()]).unwrap();
+    let published = geometry["boundaries"].as_array().unwrap();
     assert_eq!(published.len(), 1);
     let published: GeographicBoundary = serde_json::from_value(published[0].clone()).unwrap();
     assert_eq!(published.unit.record_id, explicit.unit.record_id);
@@ -175,8 +175,9 @@ fn county_outline_publishes_closed_geometry_containing_its_mapped_places() {
     let id = EntityId::from_key("earth/cn-gz/bijie/bijie-county").unwrap();
     let path = format!("entities/index/{}.json", id.shard());
     let shard: serde_json::Value = serde_json::from_slice(&output[Path::new(&path)]).unwrap();
+    let geometry = export::resolve_geometry(&output, &shard[id.0.to_string()]).unwrap();
     let boundary: GeographicBoundary =
-        serde_json::from_value(shard[id.0.to_string()]["boundaries"][0].clone()).unwrap();
+        serde_json::from_value(geometry["boundaries"][0].clone()).unwrap();
     let feature = boundary.feature(&input.data, None).unwrap();
     assert_eq!(feature["properties"]["geometry_kind"], "mapped_polygon");
     assert_eq!(feature["properties"]["scan_page"], 658);

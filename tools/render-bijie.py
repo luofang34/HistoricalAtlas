@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import hashlib
 import math
 from pathlib import Path
 
@@ -51,6 +52,18 @@ def load(publication):
     entries = {}
     for path in sorted((publication / 'entities/index').glob('*.json')):
         entries.update(json.loads(path.read_text()))
+    for entry in entries.values():
+        if reference := entry.get('geometry'):
+            parts = []
+            for part in reference['parts']:
+                path = publication / part['path']
+                if not path.resolve().is_relative_to(publication.resolve()):
+                    raise ValueError(f'Invalid geometry path: {path}')
+                content = path.read_bytes()
+                if len(content) != part['bytes'] or hashlib.sha256(content).hexdigest() != part['sha256']:
+                    raise ValueError(f'Invalid geometry part: {path}')
+                parts.append(content)
+            entry.update(json.loads(b''.join(parts)))
     records = {r['id']: r for e in entries.values() for r in e['records']}
     estimates = {e['id']: e for entry in entries.values() for e in entry.get('estimates', [])}
     recipe = json.loads((publication / 'derived/bijie-communes-terrain.json').read_text())

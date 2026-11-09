@@ -19,12 +19,15 @@ use crate::input::LedgerInput;
 
 pub(crate) mod chunks;
 pub(crate) mod geometry;
+mod storage;
 
 /// Strict upper bound for every static artifact in bytes.
 pub const MAX_FILE_BYTES: usize = 4_000_000;
 
 #[derive(Serialize)]
 struct IndexedEntity<'a> {
+    #[serde(skip_serializing_if = "Option::is_none")]
+    geometry: Option<atlas_boundary::publication::GeometryReference>,
     entity: &'a Entity,
     records: Vec<&'a Record>,
     estimates: Vec<&'a Estimate>,
@@ -41,6 +44,14 @@ struct IndexedEntity<'a> {
 
 /// Named byte buffers ready to write into a publication directory.
 pub type Artifacts = BTreeMap<PathBuf, Vec<u8>>;
+
+/// Resolve one entity's geometry parts, retaining support for inline publication geometry.
+pub fn resolve_geometry(
+    output: &Artifacts,
+    entry: &serde_json::Value,
+) -> Result<serde_json::Value, ExportError> {
+    storage::resolve(output, entry)
+}
 
 /// Build deterministic indexes; unchecked observations do not enter the output.
 pub fn compile(input: &LedgerInput) -> Result<Artifacts, ExportError> {
@@ -123,7 +134,7 @@ fn compile_geometry(
     for line in &lines {
         line.feature(&input.data, None)?;
     }
-    let shards = index_entities(input, boundaries, derived, &lines);
+    let mut shards = index_entities(input, boundaries, derived, &lines);
     let current: BTreeSet<_> = shards
         .values()
         .flat_map(|shard| shard.keys().copied())
@@ -131,6 +142,7 @@ fn compile_geometry(
     verify_checked_references(input, &current)?;
     let mut output = BTreeMap::new();
     let shard_names: Vec<_> = shards.keys().cloned().collect();
+    storage::detach(&mut output, &mut shards, &input.data)?;
     for (shard, entities) in shards {
         insert(
             &mut output,
@@ -168,6 +180,7 @@ fn index_entities<'a>(
             (
                 entity.id,
                 IndexedEntity {
+                    geometry: None,
                     entity,
                     records: Vec::new(),
                     estimates: Vec::new(),
@@ -312,6 +325,9 @@ pub fn write_blocking(output: &Path, artifacts: &Artifacts) -> Result<(), Export
 /// Static artifact construction or write failure.
 #[derive(Debug, Error)]
 pub enum ExportError {
+    /// External geometry manifest or data failed validation.
+    #[error(transparent)]
+    Geometry(#[from] atlas_boundary::publication::GeometryError),
     /// Registered linework or its source evidence is invalid.
     #[error(transparent)]
     Line(#[from] atlas_boundary::linear::LineError),

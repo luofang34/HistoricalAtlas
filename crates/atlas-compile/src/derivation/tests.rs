@@ -31,7 +31,9 @@ fn real_commune_recipe_publishes_every_reconstruction_with_its_source_evidence()
         let path = format!("entities/index/{}.json", record.entity_id.shard());
         let shard: serde_json::Value = serde_json::from_slice(&output[Path::new(&path)]).unwrap();
         let boundary: DerivedBoundary = serde_json::from_value(
-            shard[record.entity_id.0.to_string()]["derived_boundaries"][0].clone(),
+            crate::export::resolve_geometry(&output, &shard[record.entity_id.0.to_string()])
+                .unwrap()["derived_boundaries"][0]
+                .clone(),
         )
         .unwrap();
         let feature = boundary.feature(&input.data, None).unwrap();

@@ -317,11 +317,21 @@ fn compile_publication(input: &atlas_compile::input::LedgerInput) -> Publication
     let output = atlas_compile::export::compile(input).unwrap();
     let sources =
         serde_json::from_slice(&output[&std::path::PathBuf::from("sources.json")]).unwrap();
-    let entries = output
+    let mut entries: BTreeMap<EntityId, Entry> = output
         .iter()
         .filter(|(path, _)| path.starts_with("entities/index"))
         .flat_map(|(_, bytes)| serde_json::from_slice::<BTreeMap<EntityId, Entry>>(bytes).unwrap())
         .collect();
+    for entry in entries.values_mut() {
+        if let Some(reference) = &entry.geometry {
+            let parts = reference
+                .parts
+                .iter()
+                .map(|part| output[&std::path::PathBuf::from(&part.path)].clone())
+                .collect::<Vec<_>>();
+            entry.attach_geometry(reference.decode(&parts).unwrap());
+        }
+    }
     let aliases =
         serde_json::from_slice(&output[&std::path::PathBuf::from("entities/aliases.json")])
             .unwrap();

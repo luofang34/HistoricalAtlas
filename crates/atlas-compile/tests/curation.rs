@@ -12,11 +12,18 @@ fn every_checked_assertion_and_geometry_survives_publication() {
     let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
     let output = compile(&input).unwrap();
     assert!(output.values().all(|bytes| bytes.len() < MAX_FILE_BYTES));
-    let entities: BTreeMap<String, Value> = output
+    let mut entities: BTreeMap<String, Value> = output
         .iter()
         .filter(|(path, _)| path.starts_with("entities/index"))
         .flat_map(|(_, bytes)| serde_json::from_slice::<BTreeMap<String, Value>>(bytes).unwrap())
         .collect();
+    for entry in entities.values_mut() {
+        let geometry = atlas_compile::export::resolve_geometry(&output, entry).unwrap();
+        entry
+            .as_object_mut()
+            .unwrap()
+            .extend(geometry.as_object().unwrap().clone());
+    }
     let records: BTreeMap<_, _> = entities
         .values()
         .flat_map(|entity| entity["records"].as_array().unwrap())

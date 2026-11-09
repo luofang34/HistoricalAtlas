@@ -45,7 +45,7 @@ impl SheetView {
 
 impl Application {
     pub(super) fn source_drawings(&mut self, ui: &mut egui::Ui) {
-        let drawings: Vec<_> = self
+        let mut drawings: Vec<_> = self
             .atlas
             .data
             .entities
@@ -63,6 +63,12 @@ impl Application {
             .filter_map(|record_id| self.atlas.data.records.iter().find(|r| r.id == record_id))
             .map(|record| (record.entity_id, record.observation.name.clone()))
             .collect();
+        drawings.extend(
+            self.atlas
+                .geometry_references(self.body)
+                .filter(|(_, reference)| !reference.subjects.is_empty())
+                .map(|(id, _)| (id, self.atlas.label(id).to_owned())),
+        );
         egui::ComboBox::from_id_salt("source-drawings")
             .selected_text("Source drawings")
             .show_ui(ui, |ui| {

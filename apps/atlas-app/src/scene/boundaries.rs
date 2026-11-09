@@ -99,7 +99,8 @@ pub fn frame(
     Some(camera)
 }
 
-fn extent(
+/// Geographic extent of visible geometry or its unloaded resource manifest.
+pub fn extent(
     atlas: &Atlas,
     id: EntityId,
     include_derived: bool,
@@ -124,6 +125,14 @@ fn extent(
                 .is_some()
         })
     };
+    if time.is_none()
+        && let Some([w, s, e, n]) = entry
+            .geometry
+            .as_ref()
+            .and_then(|reference| reference.bounds)
+    {
+        bounds = [w, s, e, n];
+    }
     let mapped = entry
         .boundaries
         .iter()
@@ -165,6 +174,10 @@ fn extent(
         bounds[2] = bounds[2].max(point.x);
         bounds[3] = bounds[3].max(point.y);
     }
+    positions(bounds)
+}
+
+fn positions(bounds: [f64; 4]) -> Option<[LonLat; 2]> {
     if !bounds.iter().all(|value| value.is_finite()) {
         return None;
     }

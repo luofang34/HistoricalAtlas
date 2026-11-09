@@ -6,6 +6,9 @@ use thiserror::Error;
 /// Atlas input or time selection failure.
 #[derive(Debug, Error)]
 pub enum AppError {
+    /// Geometry parts failed manifest, checksum, or JSON validation.
+    #[error(transparent)]
+    Geometry(#[from] atlas_boundary::publication::GeometryError),
     /// Registered linework or its source evidence is invalid.
     #[error(transparent)]
     Line(#[from] atlas_boundary::linear::LineError),

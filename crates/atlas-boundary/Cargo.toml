@@ -11,6 +11,7 @@ atlas-ledger.workspace = true
 serde.workspace = true
 serde_json.workspace = true
 thiserror.workspace = true
+sha2 = "0.10"
 geo = { version = "0.33.1", default-features = false }
 
 [lints]
