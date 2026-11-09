@@ -84,11 +84,12 @@ fn index_ring(
 fn vertex(mut point: geo::Coord<f64>, grid: &ElevationGrid) -> PlanarPoint {
     let x = grid.west_m + ((point.x - grid.west_m) / grid.cell_m).round() * grid.cell_m;
     let y = grid.north_m - ((grid.north_m - point.y) / grid.cell_m).round() * grid.cell_m;
-    // Polygon clipping can shift a shared grid line by floating-point roundoff.
-    if (point.x - x).abs() <= grid.cell_m * 1e-8 {
+    // Boolean clipping quantizes against the whole envelope, not an individual cell.
+    let tolerance = grid.cell_m * grid.width.max(grid.height) as f64 * 1e-8;
+    if (point.x - x).abs() <= tolerance {
         point.x = x;
     }
-    if (point.y - y).abs() <= grid.cell_m * 1e-8 {
+    if (point.y - y).abs() <= tolerance {
         point.y = y;
     }
     unproject(point)

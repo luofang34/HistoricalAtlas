@@ -138,3 +138,43 @@ fn conflicting_seeds_voids_and_unseeded_components_are_rejected() {
             .contains("component needs a seed")
     );
 }
+
+#[test]
+fn clipped_mercator_regions_keep_exact_shared_grid_edges() {
+    let mut input = request();
+    input.grid.width = 120;
+    input.grid.height = 80;
+    input.grid.elevations_m = vec![0; 9600];
+    input.grid.west_m = 11_672_392.841_316_124;
+    input.grid.north_m = 3_219_680.505_428_195;
+    input.grid.cell_m = 305.748_113_140_703_94;
+    let point = |x: f64, y: f64| {
+        unproject(geo::Coord {
+            x: input.grid.west_m + x * input.grid.cell_m,
+            y: input.grid.north_m - y * input.grid.cell_m,
+        })
+    };
+    input.vertices = [(0.13, 0.19), (119.85, 0.27), (119.73, 79.81), (0.21, 79.73)]
+        .into_iter()
+        .map(|(x, y)| point(x, y))
+        .collect();
+    input.seeds = [(0, 15.5, 44.5), (1, 105.5, 44.5)]
+        .into_iter()
+        .map(|(unit, x, y)| {
+            let p = point(x, y);
+            TerrainSeed {
+                unit,
+                point: LonLat {
+                    longitude: p.x,
+                    latitude: p.y,
+                },
+            }
+        })
+        .collect();
+    input.neighbors = vec![[0, 1]];
+    let regions = derive(&input).unwrap();
+    connectivity::validate_neighbors(&input, &regions).unwrap();
+    let a = resolve(&regions[0].vertices, &regions[0].polygons).unwrap();
+    let b = resolve(&regions[1].vertices, &regions[1].polygons).unwrap();
+    assert!(a.intersection(&b).unsigned_area() < 1e-16);
+}
