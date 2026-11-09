@@ -2,6 +2,7 @@
 
 use atlas_boundary::terrain::ElevationGrid;
 use atlas_geo::{
+    body::BodyId,
     camera::{
         CameraControl, CameraError, CameraPose, PinholeCamera, ResectionOptions, Terrain,
         ViewAngles, intersect, resect,
@@ -32,10 +33,15 @@ pub struct RegistrationTerrain {
 }
 
 /// The surface a camera sees: terrain, raised to the water surface where submerged.
+///
+/// Elevation grids use Web Mercator cells scaled by the Earth's radius on every
+/// body, so their ground spacing is the cell size times the body's radius over
+/// the Earth's.
 #[derive(Debug, Clone)]
 struct VisibleSurface {
     grid: ElevationGrid,
     water_surface_m: Option<f64>,
+    spacing_scale: f64,
 }
 
 impl Terrain for VisibleSurface {
@@ -48,7 +54,7 @@ impl Terrain for VisibleSurface {
     }
 
     fn spacing_m(&self) -> f64 {
-        self.grid.spacing_m()
+        self.grid.spacing_m() * self.spacing_scale
     }
 }
 
@@ -86,13 +92,15 @@ impl FittedCamera {
         job: &RegistrationJob,
         focal_px: Option<f64>,
     ) -> Result<Self, RegistrationJobError> {
-        let validated = validated_terrain(job)?;
+        let (validated, body) = validated_terrain(job)?;
+        let ellipsoid = body.ellipsoid();
         let terrain = VisibleSurface {
             grid: validated.grid.clone(),
             water_surface_m: validated.water_surface_m,
+            spacing_scale: ellipsoid.semi_major_m / BodyId::Earth.ellipsoid().semi_major_m,
         };
         let origin = centroid(&job.controls)?;
-        let frame = LocalFrame::new(origin);
+        let frame = LocalFrame::with_ellipsoid(ellipsoid, origin);
         let ground = |control: &ReferencedControl| -> Result<CameraControl, RegistrationJobError> {
             let position = LonLat {
                 longitude: control.point.target.x,
@@ -174,13 +182,17 @@ impl FittedCamera {
     }
 }
 
-fn validated_terrain(job: &RegistrationJob) -> Result<&RegistrationTerrain, RegistrationJobError> {
+fn validated_terrain(
+    job: &RegistrationJob,
+) -> Result<(&RegistrationTerrain, BodyId), RegistrationJobError> {
     let evidence = |message: &str| RegistrationJobError::Evidence(message.into());
-    if job.target_frame.geographic_datum()? != Some(Datum::Wgs84) {
-        return Err(evidence(
-            "camera registration requires WGS84 longitude and latitude targets",
-        ));
-    }
+    let body = job
+        .target_frame
+        .geographic_datum()?
+        .and_then(Datum::body)
+        .ok_or_else(|| {
+            evidence("camera registration requires longitude and latitude on a declared body datum")
+        })?;
     let terrain = job
         .terrain
         .as_ref()
@@ -199,7 +211,7 @@ fn validated_terrain(job: &RegistrationJob) -> Result<&RegistrationTerrain, Regi
         .grid
         .validate()
         .map_err(|error| RegistrationJobError::Evidence(error.to_string()))?;
-    Ok(terrain)
+    Ok((terrain, body))
 }
 
 fn centroid(controls: &[ReferencedControl]) -> Result<GeodeticPoint, RegistrationJobError> {

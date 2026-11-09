@@ -27,3 +27,15 @@ fn local_frame_round_trips_and_measures_metric_offsets() {
     assert!((back.position.latitude + 9.45).abs() < 1e-9);
     assert!((back.height_m - 350.0).abs() < 1e-4);
 }
+
+#[test]
+fn lunar_frame_uses_the_moon_sphere() {
+    let moon = crate::body::BodyId::Moon.ellipsoid();
+    let frame = LocalFrame::with_ellipsoid(moon, point(23.473, 0.674, 0.0));
+    // One arc-minute on the 1737.4 km lunar sphere is about 505.4 m.
+    let north = frame.to_local(point(23.473, 0.674 + 1.0 / 60.0, 0.0));
+    assert!((north.y - 505.4).abs() < 0.5, "{north:?}");
+    let back = frame.to_geodetic(frame.to_local(point(23.5, 0.7, -1200.0)));
+    assert!((back.height_m + 1200.0).abs() < 1e-4);
+    assert!((back.position.latitude - 0.7).abs() < 1e-9);
+}

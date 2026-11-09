@@ -61,6 +61,16 @@ pub enum Datum {
 }
 
 impl Datum {
+    /// Body whose surface this datum describes; unspecified datums name none.
+    pub const fn body(self) -> Option<BodyId> {
+        match self {
+            Self::Unspecified => None,
+            Self::Wgs84 => Some(BodyId::Earth),
+            Self::MoonIau | Self::MoonMeanEarthDe421 => Some(BodyId::Moon),
+            Self::MarsIau => Some(BodyId::Mars),
+        }
+    }
+
     /// Check whether a datum belongs to the indicated celestial body.
     pub fn validate_body(self, body: BodyId) -> Result<(), CoordinateError> {
         if matches!(

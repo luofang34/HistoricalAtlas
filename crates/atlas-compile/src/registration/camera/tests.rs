@@ -55,7 +55,7 @@ fn input() -> LedgerInput {
 
 #[cfg(test)]
 fn truth(frame: &LocalFrame) -> (PinholeCamera, CameraPose) {
-    let (heading, depression) = (160.0_f64.to_radians(), 30.0_f64.to_radians());
+    let (heading, depression) = (160.0_f64.to_radians(), 45.0_f64.to_radians());
     let forward = Vector3::new(
         heading.sin() * depression.cos(),
         heading.cos() * depression.cos(),
@@ -65,10 +65,10 @@ fn truth(frame: &LocalFrame) -> (PinholeCamera, CameraPose) {
     let down = forward.cross(&right);
     let centre = frame.to_local(GeodeticPoint {
         position: LonLat {
-            longitude: 160.035,
-            latitude: -9.405,
+            longitude: 160.045,
+            latitude: -9.415,
         },
-        height_m: 700.0,
+        height_m: 250.0,
     });
     (
         PinholeCamera {
@@ -109,16 +109,13 @@ fn control(name: &str, pixel: PlanarPoint, frame: &LocalFrame) -> ReferencedCont
     }
 }
 
-#[test]
-fn camera_registration_recovers_the_photograph_and_projects_vertices_onto_terrain() {
-    let frame = LocalFrame::new(GeodeticPoint {
-        position: LonLat {
-            longitude: 160.05,
-            latitude: -9.43,
-        },
-        height_m: 0.0,
-    });
-    let pixel = |x: f64, y: f64| PlanarPoint { x, y };
+#[cfg(test)]
+fn pixel(x: f64, y: f64) -> PlanarPoint {
+    PlanarPoint { x, y }
+}
+
+#[cfg(test)]
+fn job(frame: &LocalFrame, target_frame: TargetFrame) -> RegistrationJob {
     let points = [
         (150.0, 500.0),
         (2250.0, 450.0),
@@ -126,25 +123,21 @@ fn camera_registration_recovers_the_photograph_and_projects_vertices_onto_terrai
         (250.0, 1750.0),
         (1200.0, 1100.0),
     ];
-    let mut job = RegistrationJob {
+    RegistrationJob {
         source_id: "oblique".into(),
         scan_page: None,
         source_frame: RasterFrame {
             width: 2400,
             height: 1800,
         },
-        target_frame: TargetFrame {
-            datum: None,
-            crs: "OGC:CRS84".into(),
-            units: "degrees".into(),
-        },
+        target_frame,
         method: RegistrationMethod::Camera { focal_px: None },
         controls: points
             .iter()
             .enumerate()
-            .map(|(index, (x, y))| control(&format!("c{index}"), pixel(*x, *y), &frame))
+            .map(|(index, (x, y))| control(&format!("c{index}"), pixel(*x, *y), frame))
             .collect(),
-        check_points: vec![control("check", pixel(800.0, 1400.0), &frame)],
+        check_points: vec![control("check", pixel(800.0, 1400.0), frame)],
         vertices: vec![pixel(1700.0, 900.0)],
         terrain: Some(RegistrationTerrain {
             source_id: "terrain".into(),
@@ -155,7 +148,26 @@ fn camera_registration_recovers_the_photograph_and_projects_vertices_onto_terrai
             grid: grid(),
             water_surface_m: None,
         }),
-    };
+    }
+}
+
+#[test]
+fn camera_registration_recovers_the_photograph_and_projects_vertices_onto_terrain() {
+    let frame = LocalFrame::new(GeodeticPoint {
+        position: LonLat {
+            longitude: 160.05,
+            latitude: -9.43,
+        },
+        height_m: 0.0,
+    });
+    let mut job = job(
+        &frame,
+        TargetFrame {
+            datum: None,
+            crs: "OGC:CRS84".into(),
+            units: "degrees".into(),
+        },
+    );
     let result = register(&input(), job.clone()).unwrap();
     let camera = result.camera.as_ref().unwrap();
     assert!(
@@ -164,7 +176,7 @@ fn camera_registration_recovers_the_photograph_and_projects_vertices_onto_terrai
         camera.focal_px
     );
     assert!(
-        (camera.centre[2] - 700.0).abs() < 2.0,
+        (camera.centre[2] - 250.0).abs() < 2.0,
         "{:?}",
         camera.centre
     );
@@ -192,11 +204,51 @@ fn submerged_samples_are_seen_at_the_water_surface() {
     let dry = VisibleSurface {
         grid: seafloor.clone(),
         water_surface_m: None,
+        spacing_scale: 1.0,
     };
     let wet = VisibleSurface {
         grid: seafloor,
         water_surface_m: Some(0.0),
+        spacing_scale: 1.0,
     };
     assert_eq!(dry.height_m(position), Some(-40.0));
     assert_eq!(wet.height_m(position), Some(0.0));
+}
+
+#[test]
+fn lunar_camera_registration_uses_the_moon_ellipsoid() {
+    let moon = BodyId::Moon.ellipsoid();
+    let frame = LocalFrame::with_ellipsoid(
+        moon,
+        GeodeticPoint {
+            position: LonLat {
+                longitude: 160.05,
+                latitude: -9.43,
+            },
+            height_m: 0.0,
+        },
+    );
+    let lunar = TargetFrame {
+        datum: Some(Datum::MoonIau),
+        crs: "IAU_2015:30100".into(),
+        units: "degrees".into(),
+    };
+    let result = register(&input(), job(&frame, lunar.clone())).unwrap();
+    let camera = result.camera.as_ref().unwrap();
+    assert!(
+        (camera.focal_px - 1800.0).abs() < 2.0,
+        "{}",
+        camera.focal_px
+    );
+    assert!(
+        (camera.centre[2] - 250.0).abs() < 2.0,
+        "{:?}",
+        camera.centre
+    );
+    let unspecified = TargetFrame {
+        datum: Some(Datum::Unspecified),
+        ..lunar
+    };
+    let error = register(&input(), job(&frame, unspecified)).unwrap_err();
+    assert!(error.to_string().contains("body datum"), "{error}");
 }
