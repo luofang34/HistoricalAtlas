@@ -53,6 +53,8 @@ pub struct Capture {
     pub frame: Option<String>,
     /// Archival locator independent of URLs or scan files.
     pub archive: Option<ArchiveReference>,
+    /// Rights statement given by the holding repository or host, per file.
+    pub rights: Option<String>,
 }
 
 /// Physical assertions attached to the record's citation.

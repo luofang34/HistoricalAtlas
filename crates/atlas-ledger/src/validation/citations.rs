@@ -35,6 +35,7 @@ pub(super) fn validate_sources(
                 .sortie
                 .iter()
                 .chain(&capture.frame)
+                .chain(&capture.rights)
                 .any(|value| value.trim().is_empty()))
         {
             return Err(fail(&source.id, "capture identifiers must be nonempty"));

@@ -1,0 +1,210 @@
+{
+  "entities": [
+    {
+      "id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+      "key": "earth/sb/guadalcanal/henderson-field",
+      "body": "earth",
+      "kind": {
+        "infrastructure": "airfield"
+      }
+    },
+    {
+      "id": "ba0953c0-fa62-5fb8-aba6-bca27646f6f8",
+      "key": "earth/sb/guadalcanal/fighter-one",
+      "body": "earth",
+      "kind": {
+        "infrastructure": "runway"
+      }
+    },
+    {
+      "id": "2d533d06-c7ce-5884-b2ae-70acd366e67f",
+      "key": "earth/sb/guadalcanal/pagoda-hill",
+      "body": "earth",
+      "kind": "historic_site"
+    }
+  ],
+  "records": [
+    {
+      "id": "5e758980-48e5-50d0-a16c-37784c1c6fbc",
+      "key": "commons-lunga-airfield-1942-07/henderson-field/caption",
+      "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+      "source_id": "commons-lunga-airfield-1942-07",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Wikimedia Commons file description; original 709×337 px",
+      "verbatim_quote": "The airfield at Lunga Point on Guadalcanal, later called Henderson Field by the Allies, seen under construction by the Japanese in July 1942. Mount Austen is in the center distance.",
+      "checked": true,
+      "source_date": {
+        "text": "July 1942",
+        "convention": "Gregorian date as captioned"
+      },
+      "observation": {
+        "note": "Caption asserts that the feature was photographed; it gives no coordinates."
+      }
+    },
+    {
+      "id": "9e5781af-9a91-5466-ac35-85532a9e3610",
+      "key": "commons-henderson-field-1942-08-07/henderson-field/caption",
+      "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+      "source_id": "commons-henderson-field-1942-08-07",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Wikimedia Commons file description; original 640×424 px",
+      "verbatim_quote": "Aerial view of Henderson Field on Guadalcanal, 7 August 1942.",
+      "checked": true,
+      "source_date": {
+        "text": "7 August 1942",
+        "convention": "Gregorian date as captioned"
+      },
+      "observation": {
+        "note": "Caption asserts that the feature was photographed; it gives no coordinates."
+      }
+    },
+    {
+      "id": "7a48839a-5b71-564a-91e8-a23868e817c3",
+      "key": "nhhc-80-g-12216/henderson-field/caption",
+      "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+      "source_id": "nhhc-80-g-12216",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Wikimedia Commons file description; original 4468×4957 px",
+      "verbatim_quote": "Aerial view of Henderson Field, Guadalcanal, on 22 August 1942, looking south-east. The buildings to south of runway \"were intended for shops. They have 7/8 inch steel roofs.\" The aircaft visible on the field are Grumman F4F-4 Wildcats.",
+      "checked": true,
+      "source_date": {
+        "text": "22 August 1942",
+        "convention": "Gregorian date as captioned"
+      },
+      "observation": {
+        "note": "Caption asserts that the feature was photographed; it gives no coordinates."
+      }
+    },
+    {
+      "id": "294dd7d4-0e60-58d7-a481-b3b7d5780ec5",
+      "key": "nhhc-80-g-16312/henderson-field/caption",
+      "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+      "source_id": "nhhc-80-g-16312",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Wikimedia Commons file description; original 5694×4544 px",
+      "verbatim_quote": "Henderson Field, Guadalcanal, photographed from a USS Saratoga (CV-3) plane in the latter part of August 1942, after U.S. aircraft had begun to use the airfield. The view looks about northwest, with the Lunga River running across the upper portion of the image. Iron Bottom Sound is just out of view at the top. Several planes are parked to the left, and numerous bomb and shell craters are visible.",
+      "checked": true,
+      "source_date": {
+        "text": "latter part of August 1942",
+        "convention": "Gregorian date as captioned"
+      },
+      "observation": {
+        "note": "Caption asserts that the feature was photographed; it gives no coordinates."
+      }
+    },
+    {
+      "id": "15469f60-1483-56dd-8fe6-fc19f8c475f9",
+      "key": "commons-80-g-29356-411c/pagoda-hill/caption",
+      "entity_id": "2d533d06-c7ce-5884-b2ae-70acd366e67f",
+      "source_id": "commons-80-g-29356-411c",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Wikimedia Commons file description; original 5624×4393 px",
+      "verbatim_quote": "Aerial view of \"Pagoda Hill\" at Henderson Field, Guadalcanal. The view seems to be taken shortly after its occupation by U.S. forces.",
+      "checked": true,
+      "source_date": {
+        "text": "circa August 1942",
+        "convention": "Gregorian date as captioned"
+      },
+      "observation": {
+        "note": "Caption asserts that the feature was photographed; it gives no coordinates."
+      }
+    },
+    {
+      "id": "f2d8c11c-9483-595a-aa90-acd21eacd59e",
+      "key": "commons-fighter-one-1942-11/fighter-one/caption",
+      "entity_id": "ba0953c0-fa62-5fb8-aba6-bca27646f6f8",
+      "source_id": "commons-fighter-one-1942-11",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Wikimedia Commons file description; original 5871×4685 px",
+      "verbatim_quote": "Aerial view of the Fighter 1 airstrip (foreground) and Henderson Field on Guadalcanal, in early November 1942.",
+      "checked": true,
+      "source_date": {
+        "text": "early November 1942",
+        "convention": "Gregorian date as captioned"
+      },
+      "observation": {
+        "note": "Caption asserts that the feature was photographed; it gives no coordinates."
+      }
+    },
+    {
+      "id": "75f85d29-43f7-5f0d-ba96-0030b8757b38",
+      "key": "commons-fighter-one-1942-11/henderson-field/caption",
+      "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+      "source_id": "commons-fighter-one-1942-11",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Wikimedia Commons file description; original 5871×4685 px",
+      "verbatim_quote": "Aerial view of the Fighter 1 airstrip (foreground) and Henderson Field on Guadalcanal, in early November 1942.",
+      "checked": true,
+      "source_date": {
+        "text": "early November 1942",
+        "convention": "Gregorian date as captioned"
+      },
+      "observation": {
+        "note": "Caption asserts that the feature was photographed; it gives no coordinates."
+      }
+    },
+    {
+      "id": "d22f1d0f-628b-57d3-aeed-855924a30dcf",
+      "key": "commons-henderson-field-late-1942/henderson-field/caption",
+      "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+      "source_id": "commons-henderson-field-late-1942",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Wikimedia Commons file description; original 1181×1174 px",
+      "verbatim_quote": "Aerial view of Henderson Field, Guadalcanal, circa in late 1942.",
+      "checked": true,
+      "source_date": {
+        "text": "circa late 1942",
+        "convention": "Gregorian date as captioned"
+      },
+      "observation": {
+        "note": "Caption asserts that the feature was photographed; it gives no coordinates."
+      }
+    },
+    {
+      "id": "6ec8e5bc-d79a-5c36-b33e-c8ebcb784477",
+      "key": "commons-henderson-field-1943-04-11/henderson-field/caption",
+      "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+      "source_id": "commons-henderson-field-1943-04-11",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Wikimedia Commons file description; original 600×463 px",
+      "verbatim_quote": "Henderson Field - Guadalcanal, Solomon Islands - 11 April 1943",
+      "checked": true,
+      "source_date": {
+        "text": "11 April 1943",
+        "convention": "Gregorian date as captioned"
+      },
+      "observation": {
+        "note": "Caption asserts that the feature was photographed; it gives no coordinates."
+      }
+    },
+    {
+      "id": "ff12baea-d5f4-5ead-9469-daaf8bb45aa7",
+      "key": "commons-henderson-field-1944-08/henderson-field/caption",
+      "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+      "source_id": "commons-henderson-field-1944-08",
+      "page_or_sheet": null,
+      "scan_page": null,
+      "locator": "Wikimedia Commons file description; original 640×418 px",
+      "verbatim_quote": "Aerial view of Henderson Field, Guadalcanal, Solomons, in August 1944.",
+      "checked": true,
+      "source_date": {
+        "text": "August 1944",
+        "convention": "Gregorian date as captioned"
+      },
+      "observation": {
+        "note": "Caption asserts that the feature was photographed; it gives no coordinates."
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}
