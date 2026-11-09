@@ -32,6 +32,8 @@ wgpu = "30"
 image = { version = "0.25", default-features = false, features = ["jpeg"] }
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+# Native tile loading runs on Tokio threads, which need Send futures.
+maplibre = { git = "https://github.com/luofang34/maplibre-rs-experimental", rev = "03889ee7caecba3b8ca0f18df1204e495acfe0c2", default-features = false, features = ["thread-safe-futures"] }
 dirs = "6"
 egui-winit = { version = "0.36.2", default-features = false, features = ["x11", "wayland", "links", "clipboard"] }
 tokio = { version = "1", features = ["rt-multi-thread"] }

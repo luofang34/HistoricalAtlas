@@ -23,7 +23,8 @@ struct PublishedBasemap {
     network: Network,
 }
 
-#[async_trait::async_trait(?Send)]
+#[cfg_attr(target_arch = "wasm32", async_trait::async_trait(?Send))]
+#[cfg_attr(not(target_arch = "wasm32"), async_trait::async_trait)]
 impl HttpClient for PublishedBasemap {
     async fn fetch(&self, url: &str) -> Result<Vec<u8>, SourceFetchError> {
         if self.remote.iter().any(|source| source.serves(url)) {

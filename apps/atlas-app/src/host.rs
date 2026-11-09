@@ -7,6 +7,8 @@ use winit::{event::WindowEvent, event_loop::ActiveEventLoop, window::Window};
 
 mod input;
 mod lifecycle;
+#[cfg(test)]
+mod tests;
 #[cfg(not(target_arch = "wasm32"))]
 pub use lifecycle::run_blocking;
 #[cfg(target_arch = "wasm32")]
@@ -83,7 +85,7 @@ impl Host {
     }
 
     fn event(&mut self, event_loop: &ActiveEventLoop, event: WindowEvent) {
-        let repaint = self.input.event(&self.window, &event);
+        let repaint = redraws_after(&event, self.input.event(&self.window, &event));
         match event {
             WindowEvent::CloseRequested => event_loop.exit(),
             WindowEvent::Resized(size) => {
@@ -126,4 +128,12 @@ impl Host {
             &self.window,
         );
     }
+}
+
+/// Whether a window event needs another frame. egui marks every event that may
+/// change the view as needing a repaint, including the redraw itself; answering a
+/// redraw with another one would render continuously, so further frames after a
+/// redraw come only from egui's repaint requests and the map's own redraw needs.
+fn redraws_after(event: &WindowEvent, egui_repaint: bool) -> bool {
+    egui_repaint && !matches!(event, WindowEvent::RedrawRequested)
 }
