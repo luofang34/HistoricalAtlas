@@ -16,6 +16,7 @@ mod evidence;
 #[cfg(target_arch = "wasm32")]
 mod geometry;
 mod map;
+mod map_controls;
 mod overlay;
 mod sheet;
 
@@ -43,6 +44,7 @@ pub struct Application {
     error: Option<String>,
     overlay: overlay::OverlayState,
     sheet: sheet::SheetView,
+    controls: map_controls::MapControls,
 }
 
 impl Application {
@@ -73,6 +75,7 @@ impl Application {
             error: None,
             overlay: overlay::OverlayState::default(),
             sheet: sheet::SheetView::default(),
+            controls: map_controls::MapControls::default(),
         })
     }
 

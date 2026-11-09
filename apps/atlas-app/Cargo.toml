@@ -27,7 +27,7 @@ egui = "0.36.2"
 egui-wgpu = { version = "0.36.2", features = ["winit"] }
 winit = "0.30.13"
 web-time = "1.1"
-maplibre = { git = "https://github.com/luofang34/maplibre-rs-experimental", rev = "7840c424a277db6278e63c693fa95255ae814cbb", default-features = false, features = ["headless", "geojson", "web-webgl"] }
+maplibre = { git = "https://github.com/luofang34/maplibre-rs-experimental", rev = "03889ee7caecba3b8ca0f18df1204e495acfe0c2", default-features = false, features = ["headless", "geojson", "web-webgl"] }
 wgpu = "30"
 image = { version = "0.25", default-features = false, features = ["jpeg"] }
 

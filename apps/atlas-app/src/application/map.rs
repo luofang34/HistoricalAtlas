@@ -1,4 +1,4 @@
-use super::Application;
+use super::{Application, map_controls};
 
 impl Application {
     fn map_caption(&self) -> &'static str {
@@ -48,10 +48,21 @@ impl Application {
         let size = ui.available_size().max(egui::vec2(1.0, 1.0));
         self.map_size = [f64::from(size.x), f64::from(size.y)];
         let (rect, response) = ui.allocate_exact_size(size, egui::Sense::click_and_drag());
-        self.gestures(ui, &response);
+        let on_controls = match &self.map {
+            Some(map) => self
+                .controls
+                .pointer(map, map_controls::Pointer::read(ui, &response)),
+            None => false,
+        };
+        if !on_controls {
+            self.gestures(ui, &response);
+        }
         let Some(map) = &mut self.map else {
             return;
         };
+        if self.controls.advance(map) {
+            ui.ctx().request_repaint();
+        }
         match map.frame(
             size,
             ui.ctx().pixels_per_point(),
@@ -72,27 +83,36 @@ impl Application {
             ui.ctx().request_repaint();
         }
         if response.clicked()
+            && !on_controls
             && let Some(point) = response.interact_pointer_pos()
         {
-            let relative = point - rect.min;
-            match map.pick([f64::from(relative.x), f64::from(relative.y)]) {
-                Ok(ids) => {
-                    self.error = None;
-                    self.hits = ids;
-                    if let Some(id) = self.hits.first().copied() {
-                        self.select(id, false);
-                    }
-                }
-                Err(error) => self.error = Some(error.to_string()),
-            }
+            self.pick(point - rect.min);
         }
+        self.attribution(ui, rect);
+    }
+
+    fn pick(&mut self, pixel: egui::Vec2) {
+        let Some(map) = &self.map else {
+            return;
+        };
+        match map.pick([f64::from(pixel.x), f64::from(pixel.y)]) {
+            Ok(ids) => {
+                self.error = None;
+                self.hits = ids;
+                if let Some(id) = self.hits.first().copied() {
+                    self.select(id, false);
+                }
+            }
+            Err(error) => self.error = Some(error.to_string()),
+        }
+    }
+
+    fn attribution(&self, ui: &egui::Ui, rect: egui::Rect) {
         if self.basemap.has_body(self.body) {
-            let text = &self.basemap.attribution;
-            let position = rect.right_bottom() - egui::vec2(8.0, 8.0);
             ui.painter().text(
-                position,
+                rect.right_bottom() - egui::vec2(8.0, 8.0),
                 egui::Align2::RIGHT_BOTTOM,
-                text,
+                &self.basemap.attribution,
                 egui::FontId::proportional(11.0),
                 egui::Color32::from_rgb(220, 226, 219),
             );
@@ -202,12 +222,14 @@ impl Application {
         if response.dragged() {
             let delta = ui.input(|input| input.pointer.delta());
             if map.drag(pixel - delta, pixel) {
+                self.controls.manual_move();
                 ui.ctx().request_repaint();
             }
         }
         if response.hovered() {
             let delta = ui.input(|input| input.smooth_scroll_delta.y);
             if delta != 0.0 && map.zoom(pixel, f64::from(delta) / 200.0) {
+                self.controls.manual_move();
                 ui.ctx().request_repaint();
             }
         }
