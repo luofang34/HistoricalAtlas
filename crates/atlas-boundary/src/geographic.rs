@@ -98,6 +98,7 @@ impl GeographicBoundary {
                 "boundary_method": self.boundary_method, "method_basis": self.method_basis,
                 "datum": self.datum, "registration_allowance_m": self.registration_allowance_m,
                 "rank": record.observation.rank, "validity": self.unit.validity,
+                "validity_basis": self.unit.validity_basis,
                 "registration": self.registration}}))
     }
 

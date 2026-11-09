@@ -52,6 +52,9 @@ pub struct DerivationUnit {
     /// Interval supported by the reconstruction's cited evidence.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub validity: Option<atlas_core::time::TemporalSpan>,
+    /// Checked records or estimates about the subject entity that establish `validity`.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub validity_basis: Vec<FactId>,
     /// Checked unit record from the selected gazetteer edition.
     pub record_id: FactId,
     /// Selected commune or subordinate-place coordinates.

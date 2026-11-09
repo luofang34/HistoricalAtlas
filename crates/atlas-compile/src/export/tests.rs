@@ -124,6 +124,7 @@ fn large_linework_is_loaded_from_verified_parts_without_growing_the_entity_shard
             record_id: record.id,
             paths: vec![(0..vertices.len()).collect()],
             validity: None,
+            validity_basis: Vec::new(),
         },
         vertices,
         datum: atlas_geo::coordinates::Datum::Wgs84,

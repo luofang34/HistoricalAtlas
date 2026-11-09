@@ -75,12 +75,22 @@ pub fn validate(
     validate_subjects(data, trace)?;
     for line in &trace.lines {
         crate::linear::validate(&trace.vertices, line)?;
+        crate::validity::validate(
+            data,
+            line.record_id,
+            line.validity.as_ref(),
+            &line.validity_basis,
+        )
+        .map_err(|error| SheetError::Evidence(error.to_string()))?;
     }
     for unit in &trace.units {
-        if let Some(span) = &unit.validity {
-            span.validate()
-                .map_err(|error| SheetError::Evidence(error.to_string()))?;
-        }
+        crate::validity::validate(
+            data,
+            unit.record_id,
+            unit.validity.as_ref(),
+            &unit.validity_basis,
+        )
+        .map_err(|error| SheetError::Evidence(error.to_string()))?;
         resolve(&trace.vertices, &unit.polygons).map_err(|source| SheetError::Topology {
             record_id: unit.record_id,
             source,

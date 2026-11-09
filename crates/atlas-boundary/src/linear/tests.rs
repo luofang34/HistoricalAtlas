@@ -7,6 +7,7 @@ fn line() -> TracedLine {
         record_id: FactId::from_key("survey/river").unwrap(),
         paths: vec![vec![0, 1, 2], vec![3, 4]],
         validity: None,
+        validity_basis: Vec::new(),
     }
 }
 

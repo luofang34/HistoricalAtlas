@@ -51,6 +51,7 @@ pub(super) fn register(
         })?;
         units.push(TracedUnit {
             validity: unit.validity.clone(),
+            validity_basis: unit.validity_basis.clone(),
             record_id: unit.record_id,
             polygons,
         });

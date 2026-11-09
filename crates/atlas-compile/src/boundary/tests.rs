@@ -193,7 +193,7 @@ fn unpaginated_line_only_capture_registers_and_publishes_open_components() {
     let trace: SheetTrace = serde_json::from_value(json!({"source_id":"capture","scan_page":null,
         "source_frame":{"width":1000,"height":1500},"boundary_method":"unstated","method_basis":[],
         "vertices":[{"x":100,"y":100},{"x":400,"y":100},{"x":600,"y":100},{"x":900,"y":100}],
-        "lines":[{"record_id":fact,"paths":[[0,1],[2,3]],"validity":{"start":{"earliest":"0","nominal":"0","latest":"0","precision":"day"},"end":null}}]})).unwrap();
+        "lines":[{"record_id":fact,"paths":[[0,1],[2,3]],"validity_basis":[fact],"validity":{"start":{"earliest":"0","nominal":"0","latest":"0","precision":"day"},"end":null}}]})).unwrap();
     let mut parameters = controls();
     parameters.method = RegistrationMethod::ThinPlate { smoothing: 0.0 };
     for control in &mut parameters.controls {

@@ -7,3 +7,4 @@ pub mod polygon;
 pub mod publication;
 pub mod sheet;
 pub mod terrain;
+pub mod validity;
