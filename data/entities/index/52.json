@@ -29,7 +29,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.41666666666669,
+              "longitude": 105.41666666666667,
               "latitude": 27.45
             },
             "longitude_text": "105°25′",
@@ -212,8 +212,8 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.46666666666668,
-              "latitude": 27.433333333333337
+              "longitude": 105.46666666666667,
+              "latitude": 27.433333333333334
             },
             "longitude_text": "105°28′",
             "latitude_text": "27°26′",
@@ -355,7 +355,7 @@
           "seat_id": "ba18bd09-7df4-5591-ae18-a34c37b6c61f",
           "coordinate": {
             "point": {
-              "longitude": 105.46666666666668,
+              "longitude": 105.46666666666667,
               "latitude": 27.733333333333334
             },
             "longitude_text": "105°28′",
@@ -450,8 +450,8 @@
           "seat_id": "f16f507d-0418-5165-a7ff-042d8cc467f2",
           "coordinate": {
             "point": {
-              "longitude": 105.46666666666668,
-              "latitude": 27.683333333333337
+              "longitude": 105.46666666666667,
+              "latitude": 27.683333333333334
             },
             "longitude_text": "105°28′",
             "latitude_text": "27°41′",
@@ -498,8 +498,8 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.23333333333332,
-              "latitude": 27.316666666666663
+              "longitude": 105.23333333333333,
+              "latitude": 27.316666666666666
             },
             "longitude_text": "105°14′",
             "latitude_text": "27°19′",
@@ -546,7 +546,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.53333333333332,
+              "longitude": 105.53333333333333,
               "latitude": 27.516666666666666
             },
             "longitude_text": "105°32′",
@@ -724,7 +724,7 @@
           "fc7e4357-3218-5dc2-a97d-1dd3d7f822c6",
           "fe0310a7-67ae-59c3-b596-0492097cafd1"
         ],
-        "brief": "Affine map position from 毕节镇地名图. Registration: maps/bijie-town.json. The 4.5 km working allowance rounds up the largest of 25 independent table checks (about 2.81 km at 煤洞) plus the half-cell diagonal of the one-arcminute reference grid (about 1.24 km). The registration preserves relative map positions in the source coordinates; the source datum is unspecified.",
+        "brief": "Registered map position from 毕节镇地名图. Registration: maps/bijie-town.json. The 4.5 km working allowance rounds up the largest of 25 independent table checks (about 2.81 km at 煤洞) plus the half-cell diagonal of the one-arcminute reference grid (about 1.24 km). The registration preserves relative map positions in the source coordinates; the source datum is unspecified.",
         "value": {
           "kind": "map_location",
           "record_id": "f327db95-647f-590b-b90e-b6a0a82182c9",
@@ -770,7 +770,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.46666666666668,
+              "longitude": 105.46666666666667,
               "latitude": 27.333333333333332
             },
             "longitude_text": "105°28′",

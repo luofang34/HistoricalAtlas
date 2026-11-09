@@ -80,7 +80,7 @@
           "coordinate": {
             "point": {
               "longitude": 105.61666666666666,
-              "latitude": 27.566666666666663
+              "latitude": 27.566666666666666
             },
             "longitude_text": "105°37′",
             "latitude_text": "27°34′",
@@ -391,7 +391,7 @@
           "f46e316e-3ccf-53d1-bbc3-e8d8604f1800",
           "feceb599-3b69-51cd-8be4-dead7a1c7d11"
         ],
-        "brief": "Affine map position from 中国工农红军长征经过毕节路线图. Registration: maps/bijie-county.json. The 3.5 km working allowance rounds up the largest of 22 independent table checks (2.10 km) plus the half-cell diagonal of the one-arcminute reference grid (about 1.24 km). Six widely separated place symbols supply the affine fit. Coordinates retain the source datum, which is unspecified.",
+        "brief": "Registered map position from 中国工农红军长征经过毕节路线图. Registration: maps/bijie-county.json. The 3.5 km working allowance rounds up the largest of 22 independent table checks (2.10 km) plus the half-cell diagonal of the one-arcminute reference grid (about 1.24 km). Six widely separated place symbols supply the affine fit. Coordinates retain the source datum, which is unspecified.",
         "value": {
           "kind": "map_location",
           "record_id": "c1459f7b-4d5a-53c3-842f-48953b0ca4a7",
@@ -1204,7 +1204,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.51666666666668,
+              "longitude": 105.51666666666667,
               "latitude": 27.7
             },
             "longitude_text": "105°31′",
@@ -1252,7 +1252,7 @@
           "seat_id": "ff2d2ec4-0b3c-515f-a93c-2ace0625e45e",
           "coordinate": {
             "point": {
-              "longitude": 105.46666666666668,
+              "longitude": 105.46666666666667,
               "latitude": 27.5
             },
             "longitude_text": "105°28′",
@@ -1395,7 +1395,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.21666666666668,
+              "longitude": 105.21666666666667,
               "latitude": 27.266666666666666
             },
             "longitude_text": "105°13′",

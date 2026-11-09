@@ -153,6 +153,9 @@
     ],
     "datum": "unspecified",
     "id": "bijie-town",
+    "method": {
+      "kind": "affine"
+    },
     "places": [
       {
         "point": {
@@ -369,36 +372,36 @@
   },
   "registration": {
     "check_quality": {
-      "maximum": 0.025280388362228384,
+      "maximum": 0.025280388362231898,
       "points": 25,
       "residuals": [
-        0.010126737096616338,
+        0.010126737096629458,
         0.009138945738719437,
         0.0015019877933679677,
-        0.0008911366110276672,
-        0.01336543997925993,
+        0.0008911366110253755,
+        0.013365439979273815,
         0.020273231866673208,
-        0.013481663277730396,
-        0.018094022857220733,
-        0.01846484934079662,
-        0.01563801926818307,
-        0.003692197007877719,
-        0.014566337508357438,
-        0.010952232967157804,
-        0.021658735932975855,
-        0.015192859483688287,
-        0.008632746351085316,
-        0.015721837958856177,
-        0.012546101673039827,
+        0.013481663277715838,
+        0.018094022857222995,
+        0.01846484934078747,
+        0.015638019268180644,
+        0.0036921970078812056,
+        0.014566337508349436,
+        0.01095223296716734,
+        0.021658735932983435,
+        0.015192859483680238,
+        0.008632746351099181,
+        0.015721837958862454,
+        0.01254610167305184,
         0.007769391222274143,
-        0.01804962215116962,
-        0.025280388362228384,
-        0.0062806360809038175,
-        0.004665631367759011,
-        0.005943328002193602,
+        0.01804962215117143,
+        0.025280388362231898,
+        0.006280636080904915,
+        0.004665631367762207,
+        0.005943328002196493,
         0.006983545748567557
       ],
-      "rms": 0.013518514945640272
+      "rms": 0.013518514945641833
     },
     "control_quality": {
       "maximum": 0.0043113063491410026,
@@ -414,6 +417,10 @@
     "job": {
       "check_points": [
         {
+          "basis": [
+            "526bd021-3d96-5bbd-898c-132760ad1cf1",
+            "c9835f25-b2fb-568b-9c51-f5bf263e7457"
+          ],
           "landmark": "大桥公社",
           "point": {
             "source": {
@@ -421,13 +428,17 @@
               "y": 1565.0
             },
             "target": {
-              "x": 105.26666666666668,
-              "y": 27.316666666666663
+              "x": 105.26666666666667,
+              "y": 27.316666666666666
             }
           },
           "reference": "bijie-gazetteer; record c9835f25-b2fb-568b-9c51-f5bf263e7457; printed page 24; scan page Some(59); 105°16′ 27°19′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "610e4c0e-f957-586b-83cb-47fa9a7e3c13",
+            "abdc6654-80cd-5968-9fe5-a83be833923d"
+          ],
           "landmark": "观音桥公社",
           "point": {
             "source": {
@@ -442,6 +453,10 @@
           "reference": "bijie-gazetteer; record abdc6654-80cd-5968-9fe5-a83be833923d; printed page 157; scan page Some(192); 105°19′ 27°20′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "623c2fb1-3957-51c2-82a7-0ee8d784afd3",
+            "ddfb132c-e649-59b0-8cdf-7c3d3d704b4a"
+          ],
           "landmark": "德厚公社",
           "point": {
             "source": {
@@ -456,6 +471,10 @@
           "reference": "bijie-gazetteer; record ddfb132c-e649-59b0-8cdf-7c3d3d704b4a; printed page 30; scan page Some(65); 105°19′ 27°18′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "13612164-eb54-5b80-9403-2221fa234831",
+            "eae3449f-f708-5ef0-8888-ae970e9f68fc"
+          ],
           "landmark": "五里坪公社",
           "point": {
             "source": {
@@ -464,12 +483,16 @@
             },
             "target": {
               "x": 105.3,
-              "y": 27.316666666666663
+              "y": 27.316666666666666
             }
           },
           "reference": "bijie-gazetteer; record eae3449f-f708-5ef0-8888-ae970e9f68fc; printed page 35; scan page Some(70); 105°18′ 27°19′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "54ce43f0-1680-5fb5-b351-372b70bb0eab",
+            "cb1ece7d-b5b9-5306-ade3-8b7b686be9f0"
+          ],
           "landmark": "小河大队",
           "point": {
             "source": {
@@ -477,13 +500,17 @@
               "y": 1545.0
             },
             "target": {
-              "x": 105.26666666666668,
+              "x": 105.26666666666667,
               "y": 27.35
             }
           },
           "reference": "bijie-gazetteer; record cb1ece7d-b5b9-5306-ade3-8b7b686be9f0; printed page 24; scan page Some(59); 105°16′ 27°21′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "53c17e88-1c81-5472-9714-b26671eb8fa4",
+            "fc7e4357-3218-5dc2-a97d-1dd3d7f822c6"
+          ],
           "landmark": "天生桥大队",
           "point": {
             "source": {
@@ -498,6 +525,10 @@
           "reference": "bijie-gazetteer; record fc7e4357-3218-5dc2-a97d-1dd3d7f822c6; printed page 24; scan page Some(59); 105°15′ 27°20′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "57957725-ca0b-51b0-ac7b-4b2d80c88a5f",
+            "111012a9-9038-526e-b96a-fe0d4574e3a1"
+          ],
           "landmark": "魏家屯大队",
           "point": {
             "source": {
@@ -505,13 +536,17 @@
               "y": 1931.0
             },
             "target": {
-              "x": 105.23333333333332,
-              "y": 27.316666666666663
+              "x": 105.23333333333333,
+              "y": 27.316666666666666
             }
           },
           "reference": "bijie-gazetteer; record 111012a9-9038-526e-b96a-fe0d4574e3a1; printed page 24; scan page Some(59); 105°14′ 27°19′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "17e831d9-4fa7-5394-bc5f-77fb789e1443",
+            "6fa04a1f-973c-5fd6-b677-af0cf5fca5fd"
+          ],
           "landmark": "殷官屯大队",
           "point": {
             "source": {
@@ -520,12 +555,16 @@
             },
             "target": {
               "x": 105.25,
-              "y": 27.316666666666663
+              "y": 27.316666666666666
             }
           },
           "reference": "bijie-gazetteer; record 6fa04a1f-973c-5fd6-b677-af0cf5fca5fd; printed page 24; scan page Some(59); 105°15′ 27°19′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "74b428cc-6262-56af-a3dc-8ca951fe67b6",
+            "9cdd6412-84b3-537e-a1e4-d4618804a719"
+          ],
           "landmark": "大坡大队",
           "point": {
             "source": {
@@ -533,13 +572,17 @@
               "y": 1931.0
             },
             "target": {
-              "x": 105.23333333333332,
+              "x": 105.23333333333333,
               "y": 27.3
             }
           },
           "reference": "bijie-gazetteer; record 9cdd6412-84b3-537e-a1e4-d4618804a719; printed page 24; scan page Some(59); 105°14′ 27°18′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "337c4f81-b41e-57e8-8364-34f10e3aaff7",
+            "b82f977c-646b-53a5-9580-67bd72fc501c"
+          ],
           "landmark": "花台大队",
           "point": {
             "source": {
@@ -548,12 +591,16 @@
             },
             "target": {
               "x": 105.3,
-              "y": 27.316666666666663
+              "y": 27.316666666666666
             }
           },
           "reference": "bijie-gazetteer; record b82f977c-646b-53a5-9580-67bd72fc501c; printed page 35; scan page Some(70); 105°18′ 27°19′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "defca568-c94e-581a-af87-0a09ae806328",
+            "ebe12c0f-cc9b-5cac-8106-9b29f272bf79"
+          ],
           "landmark": "花牌坊大队",
           "point": {
             "source": {
@@ -562,12 +609,16 @@
             },
             "target": {
               "x": 105.3,
-              "y": 27.316666666666663
+              "y": 27.316666666666666
             }
           },
           "reference": "bijie-gazetteer; record ebe12c0f-cc9b-5cac-8106-9b29f272bf79; printed page 35; scan page Some(70); 105°18′ 27°19′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "28fd172e-dd9d-59e3-b708-9a3f27b817a1",
+            "54b5eb8c-49ae-5ff5-b796-fa0c7928f20e"
+          ],
           "landmark": "大兰大队",
           "point": {
             "source": {
@@ -575,13 +626,17 @@
               "y": 1355.0
             },
             "target": {
-              "x": 105.28333333333332,
+              "x": 105.28333333333333,
               "y": 27.283333333333335
             }
           },
           "reference": "bijie-gazetteer; record 54b5eb8c-49ae-5ff5-b796-fa0c7928f20e; printed page 28; scan page Some(63); 105°17′ 27°17′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "96bebc52-4f17-5584-8138-4ce82003d960",
+            "6907ae0a-f25b-57f8-b8e3-70f944e8855a"
+          ],
           "landmark": "环城大队",
           "point": {
             "source": {
@@ -589,13 +644,17 @@
               "y": 1572.0
             },
             "target": {
-              "x": 105.26666666666668,
+              "x": 105.26666666666667,
               "y": 27.283333333333335
             }
           },
           "reference": "bijie-gazetteer; record 6907ae0a-f25b-57f8-b8e3-70f944e8855a; printed page 28; scan page Some(63); 105°16′ 27°17′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "fb7ebfda-b96a-5f31-9cce-3fa7bb8a21e6",
+            "3ad0d673-e9cd-5323-9d45-83055b55ccb2"
+          ],
           "landmark": "桂花大队",
           "point": {
             "source": {
@@ -603,13 +662,17 @@
               "y": 1524.0
             },
             "target": {
-              "x": 105.26666666666668,
+              "x": 105.26666666666667,
               "y": 27.3
             }
           },
           "reference": "bijie-gazetteer; record 3ad0d673-e9cd-5323-9d45-83055b55ccb2; printed page 20; scan page Some(55); 105°16′ 27°18′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "ebf8f056-000f-506d-b5f8-5ab8a8a0f03f",
+            "377fb544-f4b1-50b8-b078-657c2cd4ac9e"
+          ],
           "landmark": "双树大队",
           "point": {
             "source": {
@@ -617,13 +680,17 @@
               "y": 1359.0
             },
             "target": {
-              "x": 105.28333333333332,
+              "x": 105.28333333333333,
               "y": 27.3
             }
           },
           "reference": "bijie-gazetteer; record 377fb544-f4b1-50b8-b078-657c2cd4ac9e; printed page 20; scan page Some(55); 105°17′ 27°18′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "16c8f60e-9247-55be-9102-80f934894d16",
+            "c64e6c6f-c8c7-574a-8614-2802e8ac789b"
+          ],
           "landmark": "潘家冲",
           "point": {
             "source": {
@@ -631,13 +698,17 @@
               "y": 1590.0
             },
             "target": {
-              "x": 105.26666666666668,
+              "x": 105.26666666666667,
               "y": 27.333333333333332
             }
           },
           "reference": "bijie-gazetteer; record c64e6c6f-c8c7-574a-8614-2802e8ac789b; printed page 24; scan page Some(59); 105°16′ 27°20′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "260f4fa2-766f-53c9-bd1a-465bb89fec0f",
+            "3fa56487-d128-5f3a-a915-b3d64dda2d79"
+          ],
           "landmark": "余家沟",
           "point": {
             "source": {
@@ -645,13 +716,17 @@
               "y": 1617.0
             },
             "target": {
-              "x": 105.26666666666668,
+              "x": 105.26666666666667,
               "y": 27.333333333333332
             }
           },
           "reference": "bijie-gazetteer; record 3fa56487-d128-5f3a-a915-b3d64dda2d79; printed page 24; scan page Some(59); 105°16′ 27°20′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "8c452e95-898c-5b93-9eca-0bbf47eb45b2",
+            "74c54029-b30a-5e02-910e-6da94d78ae66"
+          ],
           "landmark": "水井坡",
           "point": {
             "source": {
@@ -659,13 +734,17 @@
               "y": 1568.0
             },
             "target": {
-              "x": 105.26666666666668,
+              "x": 105.26666666666667,
               "y": 27.333333333333332
             }
           },
           "reference": "bijie-gazetteer; record 74c54029-b30a-5e02-910e-6da94d78ae66; printed page 24; scan page Some(59); 105°16′ 27°20′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "5ac6c2e9-a92e-59fe-a1c2-2884ceec4722",
+            "67c5d781-e71e-558a-8d4c-03b8a97722dc"
+          ],
           "landmark": "三亩田",
           "point": {
             "source": {
@@ -680,6 +759,10 @@
           "reference": "bijie-gazetteer; record 67c5d781-e71e-558a-8d4c-03b8a97722dc; printed page 24; scan page Some(59); 105°15′ 27°18′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "5ca66ffe-33e5-592f-9aab-a6b158da23f7",
+            "acc21a5b-deca-537f-b996-0694439d322a"
+          ],
           "landmark": "大路边",
           "point": {
             "source": {
@@ -688,12 +771,16 @@
             },
             "target": {
               "x": 105.25,
-              "y": 27.316666666666663
+              "y": 27.316666666666666
             }
           },
           "reference": "bijie-gazetteer; record acc21a5b-deca-537f-b996-0694439d322a; printed page 24; scan page Some(59); 105°15′ 27°19′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "836b58a6-faea-5ae3-b68e-12063fcd9c42",
+            "7a004f1c-3d23-5870-a05a-77dd9f3d21cb"
+          ],
           "landmark": "煤洞",
           "point": {
             "source": {
@@ -702,12 +789,16 @@
             },
             "target": {
               "x": 105.25,
-              "y": 27.316666666666663
+              "y": 27.316666666666666
             }
           },
           "reference": "bijie-gazetteer; record 7a004f1c-3d23-5870-a05a-77dd9f3d21cb; printed page 24; scan page Some(59); 105°15′ 27°19′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "6335376a-eb5e-5d9d-9dfc-a7664cbfdc2e",
+            "6b124df2-137f-57f2-bfb2-91f16a6235b1"
+          ],
           "landmark": "赵家湾",
           "point": {
             "source": {
@@ -716,12 +807,16 @@
             },
             "target": {
               "x": 105.3,
-              "y": 27.316666666666663
+              "y": 27.316666666666666
             }
           },
           "reference": "bijie-gazetteer; record 6b124df2-137f-57f2-bfb2-91f16a6235b1; printed page 35; scan page Some(70); 105°18′ 27°19′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "5fa35cc7-405c-5e57-a1f0-f2373afa5503",
+            "e2821358-72b7-5fa2-8ee0-a81c5ec67d39"
+          ],
           "landmark": "邓家湾",
           "point": {
             "source": {
@@ -730,12 +825,16 @@
             },
             "target": {
               "x": 105.3,
-              "y": 27.316666666666663
+              "y": 27.316666666666666
             }
           },
           "reference": "bijie-gazetteer; record e2821358-72b7-5fa2-8ee0-a81c5ec67d39; printed page 35; scan page Some(70); 105°18′ 27°19′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "8f7d6d4c-5310-571d-adef-ae9bbfcb968c",
+            "7da16eae-3193-5cec-ad97-7b947726b223"
+          ],
           "landmark": "五里坪",
           "point": {
             "source": {
@@ -744,12 +843,16 @@
             },
             "target": {
               "x": 105.3,
-              "y": 27.316666666666663
+              "y": 27.316666666666666
             }
           },
           "reference": "bijie-gazetteer; record 7da16eae-3193-5cec-ad97-7b947726b223; printed page 35; scan page Some(70); 105°18′ 27°19′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "f327db95-647f-590b-b90e-b6a0a82182c9",
+            "f6378e7f-f4b8-514a-995e-84751b6b434e"
+          ],
           "landmark": "寨上",
           "point": {
             "source": {
@@ -766,6 +869,10 @@
       ],
       "controls": [
         {
+          "basis": [
+            "232a3ab5-4ef8-5929-95d1-1e0b10e46b7e",
+            "fe0310a7-67ae-59c3-b596-0492097cafd1"
+          ],
           "landmark": "田坝桥公社",
           "point": {
             "source": {
@@ -780,6 +887,10 @@
           "reference": "bijie-gazetteer; record fe0310a7-67ae-59c3-b596-0492097cafd1; printed page 159; scan page Some(194); 105°19′ 27°22′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "21f3ba91-ee20-5ed5-a26d-7084e1dd4ff9",
+            "eabcc8a6-e312-5c7e-8bdd-3531e8c72f9c"
+          ],
           "landmark": "迎宾公社",
           "point": {
             "source": {
@@ -794,6 +905,10 @@
           "reference": "bijie-gazetteer; record eabcc8a6-e312-5c7e-8bdd-3531e8c72f9c; printed page 154; scan page Some(189); 105°21′ 27°21′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "7b7c1c39-69c8-5326-9748-4608d21a60be",
+            "fb077623-d1d9-5d79-9b95-bbecbdf3d5a3"
+          ],
           "landmark": "以河公社",
           "point": {
             "source": {
@@ -808,6 +923,10 @@
           "reference": "bijie-gazetteer; record fb077623-d1d9-5d79-9b95-bbecbdf3d5a3; printed page 46; scan page Some(81); 105°22′ 27°17′; resolution 1 arcminutes; datum Unspecified"
         },
         {
+          "basis": [
+            "3e973736-1d2b-515a-bed6-96d4d93631e9",
+            "27366a25-bc87-5bce-8214-fcea844763bb"
+          ],
           "landmark": "草堤公社",
           "point": {
             "source": {

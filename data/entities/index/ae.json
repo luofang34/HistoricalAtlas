@@ -31,8 +31,8 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.46666666666668,
-              "latitude": 27.316666666666663
+              "longitude": 105.46666666666667,
+              "latitude": 27.316666666666666
             },
             "longitude_text": "105°28′",
             "latitude_text": "27°19′",
@@ -77,7 +77,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.16666666666669,
+              "longitude": 105.16666666666667,
               "latitude": 27.2
             },
             "longitude_text": "105°10′",
@@ -125,7 +125,7 @@
           "seat_id": "372d10df-19f0-5dc7-b204-3edaa8b9c422",
           "coordinate": {
             "point": {
-              "longitude": 105.51666666666668,
+              "longitude": 105.51666666666667,
               "latitude": 27.483333333333334
             },
             "longitude_text": "105°31′",
@@ -199,7 +199,7 @@
           "seat_id": "1a935bed-cc00-5823-b3ec-b41c328726eb",
           "coordinate": {
             "point": {
-              "longitude": 105.26666666666668,
+              "longitude": 105.26666666666667,
               "latitude": 27.35
             },
             "longitude_text": "105°16′",
@@ -277,7 +277,7 @@
           "fc7e4357-3218-5dc2-a97d-1dd3d7f822c6",
           "fe0310a7-67ae-59c3-b596-0492097cafd1"
         ],
-        "brief": "Affine map position from 毕节镇地名图. Registration: maps/bijie-town.json. The 4.5 km working allowance rounds up the largest of 25 independent table checks (about 2.81 km at 煤洞) plus the half-cell diagonal of the one-arcminute reference grid (about 1.24 km). The registration preserves relative map positions in the source coordinates; the source datum is unspecified.",
+        "brief": "Registered map position from 毕节镇地名图. Registration: maps/bijie-town.json. The 4.5 km working allowance rounds up the largest of 25 independent table checks (about 2.81 km at 煤洞) plus the half-cell diagonal of the one-arcminute reference grid (about 1.24 km). The registration preserves relative map positions in the source coordinates; the source datum is unspecified.",
         "value": {
           "kind": "map_location",
           "record_id": "54ce43f0-1680-5fb5-b351-372b70bb0eab",
@@ -414,7 +414,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.41666666666669,
+              "longitude": 105.41666666666667,
               "latitude": 27.516666666666666
             },
             "longitude_text": "105°25′",
@@ -462,7 +462,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.66666666666669,
+              "longitude": 105.66666666666667,
               "latitude": 27.616666666666667
             },
             "longitude_text": "105°40′",
@@ -581,7 +581,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.53333333333332,
+              "longitude": 105.53333333333333,
               "latitude": 27.65
             },
             "longitude_text": "105°32′",
@@ -926,7 +926,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.46666666666668,
+              "longitude": 105.46666666666667,
               "latitude": 27.55
             },
             "longitude_text": "105°28′",

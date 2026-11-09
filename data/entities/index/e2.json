@@ -260,8 +260,8 @@
           "seat_id": "d120013d-a342-5345-9ec6-300d9d8f6db6",
           "coordinate": {
             "point": {
-              "longitude": 105.46666666666668,
-              "latitude": 27.683333333333337
+              "longitude": 105.46666666666667,
+              "latitude": 27.683333333333334
             },
             "longitude_text": "105°28′",
             "latitude_text": "27°41′",
@@ -413,12 +413,12 @@
           "f46e316e-3ccf-53d1-bbc3-e8d8604f1800",
           "feceb599-3b69-51cd-8be4-dead7a1c7d11"
         ],
-        "brief": "Affine map position from 中国工农红军长征经过毕节路线图. Registration: maps/bijie-county.json. The 3.5 km working allowance rounds up the largest of 22 independent table checks (2.10 km) plus the half-cell diagonal of the one-arcminute reference grid (about 1.24 km). Six widely separated place symbols supply the affine fit. Coordinates retain the source datum, which is unspecified.",
+        "brief": "Registered map position from 中国工农红军长征经过毕节路线图. Registration: maps/bijie-county.json. The 3.5 km working allowance rounds up the largest of 22 independent table checks (2.10 km) plus the half-cell diagonal of the one-arcminute reference grid (about 1.24 km). Six widely separated place symbols supply the affine fit. Coordinates retain the source datum, which is unspecified.",
         "value": {
           "kind": "map_location",
           "record_id": "74641660-694d-584a-9750-3f93a6116583",
           "point": {
-            "longitude": 105.48228497655333,
+            "longitude": 105.48228497655332,
             "latitude": 27.675648515852885
           },
           "datum": "unspecified",
@@ -882,7 +882,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.33333333333331,
+              "longitude": 105.33333333333333,
               "latitude": 27.233333333333334
             },
             "longitude_text": "105°20′",
@@ -977,7 +977,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.41666666666669,
+              "longitude": 105.41666666666667,
               "latitude": 27.533333333333335
             },
             "longitude_text": "105°25′",
@@ -1023,7 +1023,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.46666666666668,
+              "longitude": 105.46666666666667,
               "latitude": 27.516666666666666
             },
             "longitude_text": "105°28′",
@@ -1117,7 +1117,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.46666666666668,
+              "longitude": 105.46666666666667,
               "latitude": 27.583333333333332
             },
             "longitude_text": "105°28′",

@@ -31,8 +31,8 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.41666666666669,
-              "latitude": 27.566666666666663
+              "longitude": 105.41666666666667,
+              "latitude": 27.566666666666666
             },
             "longitude_text": "105°25′",
             "latitude_text": "27°34′",
@@ -80,7 +80,7 @@
           "coordinate": {
             "point": {
               "longitude": 105.6,
-              "latitude": 27.566666666666663
+              "latitude": 27.566666666666666
             },
             "longitude_text": "105°36′",
             "latitude_text": "27°34′",
@@ -206,7 +206,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.46666666666668,
+              "longitude": 105.46666666666667,
               "latitude": 27.716666666666665
             },
             "longitude_text": "105°28′",
@@ -254,7 +254,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.53333333333332,
+              "longitude": 105.53333333333333,
               "latitude": 27.533333333333335
             },
             "longitude_text": "105°32′",
@@ -536,7 +536,7 @@
           "f46e316e-3ccf-53d1-bbc3-e8d8604f1800",
           "feceb599-3b69-51cd-8be4-dead7a1c7d11"
         ],
-        "brief": "Affine map position from 中国工农红军长征经过毕节路线图. Registration: maps/bijie-county.json. The 3.5 km working allowance rounds up the largest of 22 independent table checks (2.10 km) plus the half-cell diagonal of the one-arcminute reference grid (about 1.24 km). Six widely separated place symbols supply the affine fit. Coordinates retain the source datum, which is unspecified.",
+        "brief": "Registered map position from 中国工农红军长征经过毕节路线图. Registration: maps/bijie-county.json. The 3.5 km working allowance rounds up the largest of 22 independent table checks (2.10 km) plus the half-cell diagonal of the one-arcminute reference grid (about 1.24 km). Six widely separated place symbols supply the affine fit. Coordinates retain the source datum, which is unspecified.",
         "value": {
           "kind": "map_location",
           "record_id": "932cc59c-3156-57c1-8c9d-3f8444259ab4",
@@ -865,7 +865,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.48333333333332,
+              "longitude": 105.48333333333333,
               "latitude": 27.533333333333335
             },
             "longitude_text": "105°29′",
@@ -1179,7 +1179,7 @@
           "coordinate": {
             "point": {
               "longitude": 103.43333333333334,
-              "latitude": 27.683333333333337
+              "latitude": 27.683333333333334
             },
             "longitude_text": "103°26′",
             "latitude_text": "27°41′",
@@ -1226,8 +1226,8 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.48333333333332,
-              "latitude": 27.316666666666663
+              "longitude": 105.48333333333333,
+              "latitude": 27.316666666666666
             },
             "longitude_text": "105°29′",
             "latitude_text": "27°19′",

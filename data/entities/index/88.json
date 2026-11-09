@@ -115,8 +115,8 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.48333333333332,
-              "latitude": 27.683333333333337
+              "longitude": 105.48333333333333,
+              "latitude": 27.683333333333334
             },
             "longitude_text": "105°29′",
             "latitude_text": "27°41′",
@@ -163,7 +163,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.28333333333332,
+              "longitude": 105.28333333333333,
               "latitude": 27.3
             },
             "longitude_text": "105°17′",
@@ -305,8 +305,8 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.48333333333332,
-              "latitude": 27.566666666666663
+              "longitude": 105.48333333333333,
+              "latitude": 27.566666666666666
             },
             "longitude_text": "105°29′",
             "latitude_text": "27°34′",
@@ -382,7 +382,7 @@
           "seat_id": "2b673ed6-74a2-5c7c-ab9c-e3a6d2547f93",
           "coordinate": {
             "point": {
-              "longitude": 105.41666666666669,
+              "longitude": 105.41666666666667,
               "latitude": 27.383333333333333
             },
             "longitude_text": "105°25′",
@@ -903,7 +903,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.48333333333332,
+              "longitude": 105.48333333333333,
               "latitude": 27.533333333333335
             },
             "longitude_text": "105°29′",
@@ -989,7 +989,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.23333333333332,
+              "longitude": 105.23333333333333,
               "latitude": 27.416666666666668
             },
             "longitude_text": "105°14′",
@@ -1037,7 +1037,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.26666666666668,
+              "longitude": 105.26666666666667,
               "latitude": 27.266666666666666
             },
             "longitude_text": "105°16′",
@@ -1131,7 +1131,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.46666666666668,
+              "longitude": 105.46666666666667,
               "latitude": 27.6
             },
             "longitude_text": "105°28′",
@@ -1179,7 +1179,7 @@
           "seat_id": null,
           "coordinate": {
             "point": {
-              "longitude": 105.53333333333332,
+              "longitude": 105.53333333333333,
               "latitude": 27.666666666666668
             },
             "longitude_text": "105°32′",
@@ -1300,7 +1300,7 @@
           "seat_id": "9c52b3de-0169-5262-8a78-e4d2beba89a7",
           "coordinate": {
             "point": {
-              "longitude": 105.23333333333332,
+              "longitude": 105.23333333333333,
               "latitude": 27.3
             },
             "longitude_text": "105°14′",
@@ -1378,7 +1378,7 @@
           "fc7e4357-3218-5dc2-a97d-1dd3d7f822c6",
           "fe0310a7-67ae-59c3-b596-0492097cafd1"
         ],
-        "brief": "Affine map position from 毕节镇地名图. Registration: maps/bijie-town.json. The 4.5 km working allowance rounds up the largest of 25 independent table checks (about 2.81 km at 煤洞) plus the half-cell diagonal of the one-arcminute reference grid (about 1.24 km). The registration preserves relative map positions in the source coordinates; the source datum is unspecified.",
+        "brief": "Registered map position from 毕节镇地名图. Registration: maps/bijie-town.json. The 4.5 km working allowance rounds up the largest of 25 independent table checks (about 2.81 km at 煤洞) plus the half-cell diagonal of the one-arcminute reference grid (about 1.24 km). The registration preserves relative map positions in the source coordinates; the source datum is unspecified.",
         "value": {
           "kind": "map_location",
           "record_id": "74b428cc-6262-56af-a3dc-8ca951fe67b6",
