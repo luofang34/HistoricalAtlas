@@ -18,9 +18,12 @@ tracing-subscriber.workspace = true
 geozero = { version = "0.15", default-features = false, features = ["with-mvt", "with-geo"] }
 url = "2.5"
 geo = { version = "0.33.1", default-features = false }
+sha2 = "0.10"
+tiff = "0.11"
 
 [dev-dependencies]
 tempfile = "3"
+nalgebra = { version = "0.33", default-features = false, features = ["std"] }
 
 [lints]
 workspace = true

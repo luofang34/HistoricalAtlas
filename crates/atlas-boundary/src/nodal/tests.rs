@@ -69,6 +69,7 @@ fn fixture() -> (SourceCatalog, Dataset) {
             scan_pages: Some(1),
             scan_sha256: Some("0".repeat(64)),
             url: None,
+            rights: None,
         }],
     };
     let entities = [

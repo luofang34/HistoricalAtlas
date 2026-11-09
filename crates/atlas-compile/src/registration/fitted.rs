@@ -1,4 +1,7 @@
-use super::RegistrationMethod;
+use super::{
+    RegistrationJob, RegistrationJobError, RegistrationMethod,
+    camera::{CameraReport, FittedCamera},
+};
 use atlas_geo::registration::{
     AffineRegistration, ControlPoint, ControlSupport, PlanarPoint, ProjectiveRegistration,
     Registration, RegistrationError, ThinPlateSpline,
@@ -11,14 +14,15 @@ pub(super) enum Fitted {
     /// Projective fits are only defined between their controls, so evaluation
     /// outside the control hull is refused rather than extrapolated toward the horizon.
     Projective(ProjectiveRegistration, ControlSupport),
+    Camera(Box<FittedCamera>),
 }
 
 impl Fitted {
     pub(super) fn fit(
-        method: RegistrationMethod,
+        job: &RegistrationJob,
         controls: &[ControlPoint],
-    ) -> Result<Self, RegistrationError> {
-        Ok(match method {
+    ) -> Result<Self, RegistrationJobError> {
+        Ok(match job.method {
             RegistrationMethod::Affine => Self::Affine(AffineRegistration::fit(controls)?),
             RegistrationMethod::ThinPlate { smoothing } => {
                 Self::ThinPlate(ThinPlateSpline::fit(controls, smoothing)?)
@@ -27,7 +31,17 @@ impl Fitted {
                 ProjectiveRegistration::fit(controls)?,
                 ControlSupport::new(controls)?,
             ),
+            RegistrationMethod::Camera { focal_px } => {
+                Self::Camera(Box::new(FittedCamera::fit(job, focal_px)?))
+            }
         })
+    }
+
+    pub(super) fn camera_report(&self) -> Option<&CameraReport> {
+        match self {
+            Self::Camera(camera) => Some(&camera.report),
+            _ => None,
+        }
     }
 }
 
@@ -40,6 +54,7 @@ impl Registration for Fitted {
                 support.require(point)?;
                 model.transform(point)
             }
+            Self::Camera(camera) => camera.transform(point),
         }
     }
 }

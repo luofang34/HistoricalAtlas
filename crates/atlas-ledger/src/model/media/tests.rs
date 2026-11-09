@@ -43,7 +43,7 @@ fn archival_image_assertion_needs_neither_table_cells_nor_a_scan() {
         .clear();
     assert!(validate(&invalid, &data).is_err());
     let mut invalid = source.clone();
-    invalid.sources[0].capture.as_mut().unwrap().rights = Some(" ".into());
+    invalid.sources[0].rights = Some(" ".into());
     assert!(validate(&invalid, &data).is_err());
     let mut invalid = data.clone();
     invalid.records[0]

@@ -80,6 +80,12 @@ fn compiled() -> Artifacts {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
     let mut input = atlas_compile::input::load_blocking(&root).unwrap();
     input.derivations.clear();
+    input.catalog.sources.push(
+        serde_json::from_value(json!({"id": "synthetic-reference",
+            "title": "Synthetic registration test frame", "rights": "Public domain test fixture",
+            "capture": {"sha256": "0".repeat(64)}}))
+        .unwrap(),
+    );
     let trace: SheetTrace = serde_json::from_slice(
         &std::fs::read(root.join("guizhou-1960s/zhijin/ertang.trace.json")).unwrap(),
     )

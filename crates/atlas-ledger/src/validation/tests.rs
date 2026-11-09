@@ -252,6 +252,7 @@ pub(super) fn catalog() -> SourceCatalog {
                 "3591c54d1e4438ce87241df13858159c07135a4fd1efffe87df4aa6e1fd91bb1".into(),
             ),
             url: None,
+            rights: None,
         }],
     }
 }

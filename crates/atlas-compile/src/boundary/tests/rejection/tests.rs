@@ -1,12 +1,9 @@
 use super::*;
-
-#[cfg(test)]
-const SYNTHETIC_REFERENCE: &str =
-    "0000000000000000000000000000000000000000000000000000000000000000";
+use crate::registration::{SYNTHETIC_REFERENCE, with_synthetic_reference};
 
 #[test]
 fn ordinary_ledger_loading_checks_curated_trace_documents() {
-    let mut input = load_blocking(&root()).unwrap();
+    let mut input = with_synthetic_reference(load_blocking(&root()).unwrap());
     input.derivations.clear();
     let temp = tempfile::tempdir().unwrap();
     let mut catalog = input.catalog;
@@ -38,7 +35,7 @@ fn ordinary_ledger_loading_checks_curated_trace_documents() {
 
 #[test]
 fn trace_validation_rejects_wrong_editions_pages_and_unchecked_records() {
-    let mut input = load_blocking(&root()).unwrap();
+    let mut input = with_synthetic_reference(load_blocking(&root()).unwrap());
     input.derivations.clear();
     let mut request = trace();
     request.scan_page = Some(41);
@@ -64,7 +61,7 @@ fn trace_validation_rejects_wrong_editions_pages_and_unchecked_records() {
 
 #[test]
 fn geometry_and_method_claims_require_matching_evidence() {
-    let mut input = load_blocking(&root()).unwrap();
+    let mut input = with_synthetic_reference(load_blocking(&root()).unwrap());
     input.derivations.clear();
     let mut request = trace();
     request.method_basis.clear();
@@ -82,7 +79,7 @@ fn geometry_and_method_claims_require_matching_evidence() {
 
 #[test]
 fn nonlinear_registration_rejects_a_fold_in_valid_source_linework() {
-    let mut input = load_blocking(&root()).unwrap();
+    let mut input = with_synthetic_reference(load_blocking(&root()).unwrap());
     input.derivations.clear();
     let mut request = trace();
     request.vertices = vec![
@@ -123,7 +120,7 @@ fn nonlinear_registration_rejects_a_fold_in_valid_source_linework() {
 
 #[test]
 fn crs84_rejects_non_geographic_units_and_other_bodies() {
-    let mut input = load_blocking(&root()).unwrap();
+    let mut input = with_synthetic_reference(load_blocking(&root()).unwrap());
     input.derivations.clear();
     let mut parameters = controls();
     parameters.target_frame.units = "metres".into();

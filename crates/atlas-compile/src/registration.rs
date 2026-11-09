@@ -11,7 +11,10 @@ use atlas_geo::registration::{
 };
 use serde::{Deserialize, Serialize};
 use thiserror::Error;
+mod camera;
 mod fitted;
+
+pub use camera::{CameraReport, RegistrationTerrain};
 
 use crate::{
     export::MAX_FILE_BYTES,
@@ -53,6 +56,12 @@ pub enum RegistrationMethod {
     },
     /// Planar homography for photographs of level ground, evaluated only inside the control hull.
     Projective,
+    /// Pinhole camera resected against the job's terrain, for oblique views over relief.
+    Camera {
+        /// Fixed focal length in pixels; estimated from the controls when absent.
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        focal_px: Option<f64>,
+    },
 }
 
 /// Coordinate frame declared for every target control and output point.
@@ -113,6 +122,9 @@ pub struct RegistrationJob {
     pub check_points: Vec<ReferencedControl>,
     /// Source image vertices to transform, in the controls' pixel frame.
     pub vertices: Vec<PlanarPoint>,
+    /// Elevation model required by the camera method.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub terrain: Option<RegistrationTerrain>,
 }
 
 /// A sheet registration result with provenance and measured fit quality.
@@ -130,6 +142,9 @@ pub struct RegisteredSheet {
     pub check_quality: Option<RegistrationQuality>,
     /// Transformed vertices, in input order and target units.
     pub vertices: Vec<PlanarPoint>,
+    /// Fitted camera, for the camera method.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub camera: Option<CameraReport>,
 }
 
 impl RegisteredSheet {
@@ -146,7 +161,7 @@ pub fn register(
 ) -> Result<RegisteredSheet, RegistrationJobError> {
     let scan_sha256 = validate_job(input, &job)?;
     let controls: Vec<_> = job.controls.iter().map(|control| control.point).collect();
-    let model = fitted::Fitted::fit(job.method, &controls)?;
+    let model = fitted::Fitted::fit(&job, &controls)?;
     let control_quality = model.evaluate(&controls)?;
     let check_quality = if job.check_points.is_empty() {
         None
@@ -163,6 +178,7 @@ pub fn register(
         .iter()
         .map(|point| model.transform(*point))
         .collect::<Result<_, _>>()?;
+    let camera = model.camera_report().cloned();
     Ok(RegisteredSheet {
         model,
         scan_sha256,
@@ -170,6 +186,7 @@ pub fn register(
         control_quality,
         check_quality,
         vertices,
+        camera,
     })
 }
 
@@ -197,6 +214,18 @@ fn validate_job(
         ));
     }
     job.target_frame.geographic_datum()?;
+    if let Some(terrain) = &job.terrain
+        && !input
+            .catalog
+            .sources
+            .iter()
+            .any(|source| source.id == terrain.source_id && source.rights.is_some())
+    {
+        return Err(RegistrationJobError::Evidence(format!(
+            "terrain source {} must be catalogued with a rights statement",
+            terrain.source_id
+        )));
+    }
     validate_controls(input, job)?;
     if job.source_frame.width == 0 || job.source_frame.height == 0 {
         return Err(RegistrationJobError::Evidence(
@@ -252,13 +281,16 @@ fn validate_controls(
                 "every control requires a landmark and target reference".into(),
             ));
         }
-        validate_target_evidence(control)?;
+        validate_target_evidence(input, control)?;
     }
     Ok(())
 }
 
 /// A target must be traceable to checked facts or to a fingerprinted reference, never asserted.
-fn validate_target_evidence(control: &ReferencedControl) -> Result<(), RegistrationJobError> {
+fn validate_target_evidence(
+    input: &LedgerInput,
+    control: &ReferencedControl,
+) -> Result<(), RegistrationJobError> {
     let fingerprint = control.reference_sha256.as_deref();
     if fingerprint.is_some_and(|digest| {
         digest.len() != 64 || !digest.bytes().all(|byte| byte.is_ascii_hexdigit())
@@ -273,6 +305,18 @@ fn validate_target_evidence(control: &ReferencedControl) -> Result<(), Registrat
             "control {} requires checked basis facts or a fingerprinted reference",
             control.landmark
         )));
+    }
+    if let Some(digest) = fingerprint {
+        let reference = input.catalog.sources.iter().find(|source| {
+            source.scan_sha256.as_deref() == Some(digest)
+                || source.capture.as_ref().and_then(|c| c.sha256.as_deref()) == Some(digest)
+        });
+        if reference.is_none_or(|source| source.rights.is_none()) {
+            return Err(RegistrationJobError::Evidence(format!(
+                "control {} reference {digest} must be a catalogued source with a rights statement",
+                control.landmark
+            )));
+        }
     }
     if control
         .uncertainty
@@ -342,6 +386,32 @@ pub enum RegistrationJobError {
         #[source]
         source: std::io::Error,
     },
+}
+
+/// Fingerprint of the synthetic reference catalogued by [`with_synthetic_reference`].
+#[cfg(test)]
+pub(crate) const SYNTHETIC_REFERENCE: &str =
+    "0000000000000000000000000000000000000000000000000000000000000000";
+
+/// Catalogue a public-domain synthetic reference raster for tests that fit invented geometry.
+#[cfg(test)]
+pub(crate) fn with_synthetic_reference(mut input: LedgerInput) -> LedgerInput {
+    input.catalog.sources.push(atlas_ledger::model::Source {
+        capture: Some(atlas_ledger::model::media::Capture {
+            sha256: Some(SYNTHETIC_REFERENCE.into()),
+            ..Default::default()
+        }),
+        id: "synthetic-reference".into(),
+        title: "Synthetic registration test frame".into(),
+        responsibility: None,
+        publication_year: None,
+        reference_year: None,
+        scan_pages: None,
+        scan_sha256: None,
+        url: None,
+        rights: Some("Public domain test fixture".into()),
+    });
+    input
 }
 
 #[cfg(test)]

@@ -1,4 +1,4 @@
-use nalgebra::DMatrix;
+use nalgebra::{DMatrix, Matrix3};
 
 use super::{
     ControlPoint, PlanarPoint, Registration, RegistrationError,
@@ -62,6 +62,15 @@ impl ProjectiveRegistration {
             return Err(RegistrationError::DegenerateControls);
         }
         Ok(model)
+    }
+
+    /// Homography in the caller's source and target units, normalized to unit Frobenius norm.
+    pub fn matrix(&self) -> Matrix3<f64> {
+        let normalized = Matrix3::from_row_slice(&self.matrix);
+        let matrix = self.target_frame.restoring_matrix()
+            * normalized
+            * self.source_frame.normalizing_matrix();
+        matrix / matrix.norm()
     }
 
     fn scale(&self, point: PlanarPoint) -> f64 {

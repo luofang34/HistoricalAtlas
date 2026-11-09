@@ -1,8 +1,5 @@
 use super::*;
-
-#[cfg(test)]
-const SYNTHETIC_REFERENCE: &str =
-    "0000000000000000000000000000000000000000000000000000000000000000";
+use crate::registration::{SYNTHETIC_REFERENCE, with_synthetic_reference};
 
 #[cfg(test)]
 fn job() -> RegistrationJob {
@@ -53,6 +50,7 @@ fn job() -> RegistrationJob {
             },
         }],
         vertices: vec![PlanarPoint { x: 25.0, y: 25.0 }],
+        terrain: None,
     }
 }
 
@@ -62,7 +60,21 @@ fn registration_command_path_writes_quality_and_refuses_overwrite() {
     let directory = tempfile::tempdir().unwrap();
     let request = directory.path().join("controls.json");
     let output = directory.path().join("registered.json");
-    std::fs::write(&request, serde_json::to_vec(&job()).unwrap()).unwrap();
+    // The command reloads the ledger from disk, so its controls cite a checked fact there.
+    let fact = load_blocking(&root)
+        .unwrap()
+        .data
+        .records
+        .iter()
+        .find(|record| record.checked)
+        .unwrap()
+        .id;
+    let mut job = job();
+    for control in job.controls.iter_mut().chain(&mut job.check_points) {
+        control.reference_sha256 = None;
+        control.basis.push(fact);
+    }
+    std::fs::write(&request, serde_json::to_vec(&job).unwrap()).unwrap();
     let result = register_blocking(&root, &request, &output).unwrap();
     assert!(result.control_quality.rms < 1e-8);
     assert!(result.check_quality.unwrap().maximum < 1e-8);
@@ -87,7 +99,7 @@ fn registration_command_path_writes_quality_and_refuses_overwrite() {
 #[test]
 fn raster_frame_rejects_outside_vertices_and_empty_dimensions() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
-    let mut input = load_blocking(&root).unwrap();
+    let mut input = with_synthetic_reference(load_blocking(&root).unwrap());
     input.derivations.clear();
     let mut request = job();
     request.vertices[0].x = 101.0;
@@ -110,7 +122,7 @@ fn raster_frame_rejects_outside_vertices_and_empty_dimensions() {
 #[test]
 fn check_points_and_source_page_must_be_independent_and_identified() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
-    let mut input = load_blocking(&root).unwrap();
+    let mut input = with_synthetic_reference(load_blocking(&root).unwrap());
     input.derivations.clear();
     let mut request = job();
     request.check_points = vec![request.controls[0].clone()];
@@ -152,7 +164,7 @@ fn capture_input() -> LedgerInput {
         "id":"frame","title":"Test reconnaissance frame","capture":{"medium":"aerial_photograph",
         "frame":"17","sortie":"A","sha256":"a".repeat(64),"archive":{"repository":"Test archive","accession":"AIR/17"}}
     }]})).unwrap();
-    LedgerInput {
+    with_synthetic_reference(LedgerInput {
         catalog,
         data: Default::default(),
         aliases: Default::default(),
@@ -161,7 +173,7 @@ fn capture_input() -> LedgerInput {
         traces: Vec::new(),
         place_maps: std::collections::BTreeMap::new(),
         plate_models: std::collections::BTreeMap::new(),
-    }
+    })
 }
 
 #[test]
@@ -198,6 +210,12 @@ fn controls_without_checked_facts_or_a_fingerprinted_reference_are_rejected() {
         error.to_string().contains("fingerprinted reference"),
         "{error}"
     );
+    // The capture itself is catalogued but carries no rights statement.
+    request.controls[1].reference_sha256 = Some("a".repeat(64));
+    let error = register(&capture_input(), request.clone()).unwrap_err();
+    assert!(error.to_string().contains("rights statement"), "{error}");
+    request.controls[1].reference_sha256 = Some("f".repeat(64));
+    assert!(register(&capture_input(), request.clone()).is_err());
     request.controls[1].reference_sha256 = Some("not-a-digest".into());
     assert!(register(&capture_input(), request.clone()).is_err());
     request.controls[1].reference_sha256 = Some(SYNTHETIC_REFERENCE.into());

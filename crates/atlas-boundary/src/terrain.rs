@@ -14,6 +14,7 @@ mod connectivity;
 mod fitting;
 mod partition;
 mod review;
+mod surface;
 mod vectorize;
 pub use boundary::DerivedBoundary;
 pub use cells::ElevationGrid;

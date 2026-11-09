@@ -40,6 +40,7 @@ pub(super) fn register(
             controls,
             check_points,
             vertices: map.places.iter().map(|p| p.point).collect(),
+            terrain: None,
         },
     )?;
     let estimates = estimates(input, map, &sheet)?;

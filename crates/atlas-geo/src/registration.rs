@@ -34,7 +34,8 @@ impl PlanarPoint {
         }
     }
 
-    fn distance(self, other: Self) -> f64 {
+    /// Euclidean distance in the shared planar units.
+    pub fn distance(self, other: Self) -> f64 {
         (self.x - other.x).hypot(self.y - other.y)
     }
 }

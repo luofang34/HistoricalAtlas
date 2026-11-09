@@ -37,6 +37,7 @@ pub(super) fn register(
             controls: controls.controls,
             check_points: controls.check_points,
             vertices,
+            terrain: controls.terrain,
         },
     )?;
     let mut remaining = expanded.into_iter();

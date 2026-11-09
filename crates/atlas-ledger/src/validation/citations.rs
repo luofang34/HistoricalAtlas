@@ -8,7 +8,13 @@ pub(super) fn validate_sources(
 ) -> Result<BTreeMap<&str, &Source>, ValidationError> {
     let mut sources = BTreeMap::new();
     for source in &catalog.sources {
-        if source.id.trim().is_empty() || source.title.trim().is_empty() {
+        if source.id.trim().is_empty()
+            || source.title.trim().is_empty()
+            || source
+                .rights
+                .as_ref()
+                .is_some_and(|rights| rights.trim().is_empty())
+        {
             return Err(fail(&source.id, "source requires an id and title"));
         }
         match (source.scan_pages, &source.scan_sha256) {
@@ -35,7 +41,6 @@ pub(super) fn validate_sources(
                 .sortie
                 .iter()
                 .chain(&capture.frame)
-                .chain(&capture.rights)
                 .any(|value| value.trim().is_empty()))
         {
             return Err(fail(&source.id, "capture identifiers must be nonempty"));
