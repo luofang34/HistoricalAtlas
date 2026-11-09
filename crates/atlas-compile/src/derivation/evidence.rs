@@ -16,12 +16,6 @@ pub(super) fn validate(
             .bytes()
             .all(|c| c.is_ascii_lowercase() || c.is_ascii_digit() || c == b'-')
         || request.alignment.trim().is_empty()
-        || request.terrain_tiles.is_empty()
-        || !input
-            .catalog
-            .sources
-            .iter()
-            .any(|s| s.id == request.terrain_source_id)
         || !input
             .catalog
             .sources
@@ -31,21 +25,6 @@ pub(super) fn validate(
         return Err(DerivationError::Evidence(
             "recipe needs an identifier, alignment, and catalogued sources".into(),
         ));
-    }
-    let mut tiles = BTreeSet::new();
-    for tile in &request.terrain_tiles {
-        if !tile.url.starts_with("https://")
-            || !tiles.insert(&tile.url)
-            || tile.sha256.len() != 64
-            || !tile
-                .sha256
-                .bytes()
-                .all(|c| c.is_ascii_hexdigit() && !c.is_ascii_uppercase())
-        {
-            return Err(DerivationError::Evidence(
-                "invalid or duplicate terrain tile fingerprint".into(),
-            ));
-        }
     }
     let mut excluded = BTreeSet::new();
     for anchor in &request.excluded {
