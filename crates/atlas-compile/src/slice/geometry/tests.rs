@@ -1,4 +1,5 @@
 use super::*;
+use atlas_boundary::geographic::GeographicBoundary;
 use atlas_core::identity::FactId;
 use serde_json::json;
 use std::path::PathBuf;

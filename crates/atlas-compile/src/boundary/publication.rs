@@ -35,7 +35,7 @@ pub(super) fn write_trace(
             "version": 1, "geometry_kind": "map_trace", "source_id": trace.source_id,
             "scan_page": trace.scan_page, "scan_sha256": evidence::fingerprint(input, trace)?,
             "source_frame": trace.source_frame, "boundary_method": trace.boundary_method,
-            "places": trace.places,
+            "places": trace.places, "lines": trace.lines,
             "method_basis": trace.method_basis, "vertices": vertices, "units": units,
             "vertex_count": trace.vertices.len(), "unit_count": trace.units.len(),
         }),
@@ -71,6 +71,7 @@ pub(super) fn write_registered(
     trace: &SheetTrace,
     sheet: &RegisteredSheet,
     boundaries: &[TracedUnit],
+    lines: &[atlas_boundary::linear::TracedLine],
     spacing: f64,
 ) -> Result<(), BoundaryError> {
     let source_vertices = insert_chunks(
@@ -95,11 +96,14 @@ pub(super) fn write_registered(
         BoundaryMethod::Surveyed => "surveyed_polygon",
         BoundaryMethod::CompiledFromPlaces | BoundaryMethod::Unstated => "mapped_polygon",
     };
-    let features = if sheet.job.target_frame.crs == "OGC:CRS84" {
-        let features = geographic_boundaries(trace, sheet, boundaries)?
+    let features = if sheet.job.target_frame.geographic_datum()?.is_some() {
+        let mut features = geographic_boundaries(trace, sheet, boundaries)?
             .iter()
             .map(|boundary| boundary.feature(&input.data, None))
             .collect::<Result<Vec<_>, _>>()?;
+        for line in geographic_lines(sheet, lines)? {
+            features.push(line.feature(&input.data, None)?);
+        }
         insert_chunks(
             artifacts,
             "boundary/features",
@@ -127,7 +131,7 @@ pub(super) fn write_registered(
             "version": 1, "geometry_kind": geometry_kind, "reconstructed": false,
             "source_trace": "boundary-trace.json", "registration": "boundary/registration.json",
             "target_frame": sheet.job.target_frame, "vertices": vertices,
-            "units": units, "features": features, "vertex_count": sheet.vertices.len(),
+            "units": units, "lines": lines, "features": features, "vertex_count": sheet.vertices.len(),
             "unit_count": boundaries.len(),
         }),
     )?;
@@ -139,21 +143,36 @@ pub(super) fn geographic_boundaries(
     sheet: &RegisteredSheet,
     units: &[TracedUnit],
 ) -> Result<Vec<GeographicBoundary>, BoundaryError> {
-    if sheet.job.target_frame.crs != "OGC:CRS84" {
+    let Some(datum) = sheet.job.target_frame.geographic_datum()? else {
         return Ok(Vec::new());
-    }
-    if sheet.job.target_frame.units != "degrees" {
-        return Err(BoundaryError::Evidence("OGC:CRS84 requires degrees".into()));
-    }
+    };
     Ok(units
         .iter()
         .map(|unit| GeographicBoundary {
             unit: unit.clone(),
             vertices: sheet.vertices.clone(),
-            datum: atlas_geo::coordinates::Datum::Wgs84,
+            datum,
             registration_allowance_m: None,
             boundary_method: trace.boundary_method,
             method_basis: trace.method_basis.clone(),
+            registration: "boundary/registration.json".into(),
+        })
+        .collect())
+}
+
+pub(super) fn geographic_lines(
+    sheet: &RegisteredSheet,
+    lines: &[atlas_boundary::linear::TracedLine],
+) -> Result<Vec<atlas_boundary::linear::GeographicLine>, BoundaryError> {
+    let Some(datum) = sheet.job.target_frame.geographic_datum()? else {
+        return Ok(Vec::new());
+    };
+    Ok(lines
+        .iter()
+        .map(|line| atlas_boundary::linear::GeographicLine {
+            line: line.clone(),
+            vertices: sheet.vertices.clone(),
+            datum,
             registration: "boundary/registration.json".into(),
         })
         .collect())

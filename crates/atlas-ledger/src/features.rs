@@ -1,6 +1,6 @@
 //! Shared feature properties for interactive maps and static vector tiles.
 
-use crate::model::{Entity, Record};
+use crate::model::{Entity, Estimate, EstimateValue, Record};
 use atlas_geo::coordinates::CoordinateObservation;
 use serde_json::{Value, json};
 
@@ -23,4 +23,30 @@ pub fn observation_properties(
         "resolution_arcminutes": coordinate.resolution_arcminutes, "datum": coordinate.datum,
         "reconstructed": false, "geometry_role": "source_observation"
     })
+}
+
+/// Registered map point with the same evidence properties in interactive and tiled maps.
+pub fn map_location_feature(
+    estimate: &Estimate,
+    record: &Record,
+    entity: &Entity,
+) -> Option<Value> {
+    let EstimateValue::MapLocation {
+        record_id,
+        point,
+        datum,
+        uncertainty_m,
+        registration,
+    } = &estimate.value
+    else {
+        return None;
+    };
+    Some(
+        json!({"type":"Feature","geometry":{"type":"Point","coordinates":[point.longitude,point.latitude]},
+        "properties":{"entity_id":entity.id,"entity_kind":entity.kind,"estimate_id":estimate.id,"record_id":record_id,
+            "name":if record.observation.name.is_empty() { &entity.key } else { &record.observation.name },
+            "source_id":record.source_id,"page_or_sheet":record.page_or_sheet,"scan_page":record.scan_page,
+            "geometry_role":"location_estimate","datum":datum,"uncertainty_m":uncertainty_m,
+            "basis":estimate.basis,"brief":estimate.brief,"registration":registration,"reconstructed":false}}),
+    )
 }

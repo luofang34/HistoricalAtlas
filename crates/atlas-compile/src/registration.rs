@@ -51,10 +51,36 @@ pub enum RegistrationMethod {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct TargetFrame {
+    /// Geographic datum for angular output on a named celestial body.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub datum: Option<atlas_geo::coordinates::Datum>,
     /// CRS identifier or complete definition, such as an EPSG identifier.
     pub crs: String,
     /// Coordinate units; residuals use these same units.
     pub units: String,
+}
+
+impl TargetFrame {
+    /// Geographic publication datum; projected frames retain their native coordinates.
+    pub fn geographic_datum(
+        &self,
+    ) -> Result<Option<atlas_geo::coordinates::Datum>, RegistrationJobError> {
+        use atlas_geo::coordinates::Datum;
+        if (self.crs == "OGC:CRS84" || self.datum.is_some()) && self.units != "degrees" {
+            return Err(RegistrationJobError::Evidence(
+                "geographic output requires degree units".into(),
+            ));
+        }
+        if self.crs == "OGC:CRS84" {
+            if self.datum.is_some_and(|datum| datum != Datum::Wgs84) {
+                return Err(RegistrationJobError::Evidence(
+                    "OGC:CRS84 requires the WGS84 datum".into(),
+                ));
+            }
+            return Ok(Some(Datum::Wgs84));
+        }
+        Ok(self.datum)
+    }
 }
 
 pub use atlas_boundary::sheet::RasterFrame;
@@ -151,25 +177,18 @@ fn validate_job(
         .ok_or_else(|| {
             RegistrationJobError::Evidence(format!("unknown source {}", job.source_id))
         })?;
-    let valid_page = match (job.scan_page, source.scan_pages) {
-        (Some(page), Some(pages)) => (1..=pages).contains(&page),
-        (None, None) => source
-            .capture
-            .as_ref()
-            .is_some_and(|capture| capture.sha256.is_some()),
-        _ => false,
-    };
-    if !valid_page {
-        return Err(RegistrationJobError::Evidence(format!(
-            "{} scan page {:?} does not identify a source raster",
+    let fingerprint = source.raster_fingerprint(job.scan_page).ok_or_else(|| {
+        RegistrationJobError::Evidence(format!(
+            "{} raster {:?} has no fingerprint",
             source.id, job.scan_page
-        )));
-    }
+        ))
+    })?;
     if job.target_frame.crs.trim().is_empty() || job.target_frame.units.trim().is_empty() {
         return Err(RegistrationJobError::Evidence(
             "target CRS and units must be declared".into(),
         ));
     }
+    job.target_frame.geographic_datum()?;
     validate_controls(input, job)?;
     if job.source_frame.width == 0 || job.source_frame.height == 0 {
         return Err(RegistrationJobError::Evidence(
@@ -199,17 +218,7 @@ fn validate_job(
             )));
         }
     }
-    let fingerprint = if job.scan_page.is_some() {
-        source.scan_sha256.clone()
-    } else {
-        source
-            .capture
-            .as_ref()
-            .and_then(|capture| capture.sha256.clone())
-    };
-    fingerprint.ok_or_else(|| {
-        RegistrationJobError::Evidence(format!("{} has no scan fingerprint", source.id))
-    })
+    Ok(fingerprint.to_owned())
 }
 
 fn validate_controls(

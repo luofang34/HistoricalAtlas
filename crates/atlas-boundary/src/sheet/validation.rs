@@ -8,6 +8,9 @@ use thiserror::Error;
 /// Invalid source-sheet geometry or citation.
 #[derive(Debug, Error)]
 pub enum SheetError {
+    /// Open line geometry is invalid.
+    #[error(transparent)]
+    Line(#[from] crate::linear::LineError),
     /// Source evidence or pixel frame is inconsistent.
     #[error("source sheet: {0}")]
     Evidence(String),
@@ -40,15 +43,12 @@ pub fn validate(
         .iter()
         .find(|s| s.id == trace.source_id)
         .ok_or_else(|| SheetError::Evidence(format!("unknown source {}", trace.source_id)))?;
-    if trace.scan_page == 0
-        || source.scan_pages.is_none_or(|n| trace.scan_page > n)
-        || source.scan_sha256.is_none()
-    {
+    if source.raster_fingerprint(trace.scan_page).is_none() {
         return Err(SheetError::Evidence(
-            "sheet requires a fingerprinted scan and valid page".into(),
+            "sheet requires an identified source raster".into(),
         ));
     }
-    if trace.units.is_empty()
+    if (trace.units.is_empty() && trace.lines.is_empty())
         || trace.vertices.is_empty()
         || trace
             .vertices
@@ -57,7 +57,7 @@ pub fn validate(
             .any(|point| !trace.source_frame.contains(*point))
     {
         return Err(SheetError::Evidence(
-            "sheet requires boundaries and points inside its raster".into(),
+            "sheet requires geometry inside its raster".into(),
         ));
     }
     if trace.boundary_method != BoundaryMethod::Unstated && trace.method_basis.is_empty() {
@@ -73,6 +73,9 @@ pub fn validate(
         }
     }
     validate_subjects(data, trace)?;
+    for line in &trace.lines {
+        crate::linear::validate(&trace.vertices, line)?;
+    }
     for unit in &trace.units {
         if let Some(span) = &unit.validity {
             span.validate()
@@ -91,11 +94,12 @@ fn validate_subjects(data: &Dataset, trace: &SheetTrace) -> Result<(), SheetErro
     for ids in [
         trace.units.iter().map(|u| u.record_id).collect::<Vec<_>>(),
         trace.places.iter().map(|p| p.record_id).collect(),
+        trace.lines.iter().map(|line| line.record_id).collect(),
     ] {
         let mut subjects = BTreeSet::new();
         for id in ids {
             let r = record(data, id)?;
-            if r.source_id != trace.source_id || r.scan_page != Some(trace.scan_page) {
+            if r.source_id != trace.source_id || r.scan_page != trace.scan_page {
                 return Err(SheetError::Evidence(format!(
                     "{} does not cite the traced sheet",
                     r.key

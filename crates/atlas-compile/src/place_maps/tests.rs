@@ -114,7 +114,7 @@ fn map_registration_rejects_wrong_sheet_duplicate_subject_and_outside_symbol() {
     let input = input();
     let original = &input.place_maps["bijie-town"];
     let mut map = original.clone();
-    map.scan_page = 23;
+    map.scan_page = Some(23);
     assert!(
         register_places(&input, &map)
             .unwrap_err()

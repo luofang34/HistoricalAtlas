@@ -27,6 +27,7 @@ fn input() -> LedgerInput {
         .point;
     // A synthetic rectangle exercises registration with the reviewed Bijie controls.
     input.traces.push(SheetTrace {
+        lines: Vec::new(),
         registration_id: None,
         source_id: map.source_id.clone(),
         scan_page: map.scan_page,

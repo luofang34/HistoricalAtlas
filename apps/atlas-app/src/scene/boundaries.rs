@@ -22,6 +22,17 @@ pub fn features(
         .flat_map(|entry| &entry.boundaries)
         .map(|boundary| Ok(boundary.feature(&atlas.data, selected)?))
         .collect::<Result<_, AppError>>()?;
+    for entry in atlas
+        .data
+        .entities
+        .iter()
+        .filter(|e| e.body == body && time.is_none_or(|time| !time.absent.contains(&e.id)))
+        .filter_map(|e| atlas.entry(e.id))
+    {
+        for line in &entry.lines {
+            features.push(line.feature(&atlas.data, selected)?);
+        }
+    }
     if !include_derived {
         return select(features, time);
     }
@@ -137,7 +148,18 @@ fn extent(
                 .flat_map(|p| &p.exterior)
                 .filter_map(|index| boundary.region.vertices.get(*index))
         });
-    for point in mapped.chain(derived) {
+    let lines = entry
+        .lines
+        .iter()
+        .filter(|line| visible(line.line.validity.as_ref()))
+        .flat_map(|line| {
+            line.line
+                .paths
+                .iter()
+                .flatten()
+                .filter_map(|index| line.vertices.get(*index))
+        });
+    for point in mapped.chain(derived).chain(lines) {
         bounds[0] = bounds[0].min(point.x);
         bounds[1] = bounds[1].min(point.y);
         bounds[2] = bounds[2].max(point.x);

@@ -1,5 +1,6 @@
 //! Reviewed source-sheet geometry with pixel coordinates and evidence links.
 
+pub use crate::linear::TracedLine;
 use crate::polygon::IndexedPolygon;
 use atlas_core::identity::FactId;
 use atlas_geo::registration::PlanarPoint;
@@ -72,8 +73,8 @@ pub struct SheetTrace {
     pub registration_id: Option<String>,
     /// Bibliographic source edition.
     pub source_id: String,
-    /// One-based scan page containing the map.
-    pub scan_page: u32,
+    /// One-based scan page, or absent for an unpaginated capture.
+    pub scan_page: Option<u32>,
     /// Dimensions of the full-page raster used for tracing.
     pub source_frame: RasterFrame,
     /// Source boundary construction, independent of georeferencing accuracy.
@@ -85,6 +86,10 @@ pub struct SheetTrace {
     /// Reviewed places in the same full-page pixel frame.
     #[serde(default)]
     pub places: Vec<TracedPlace>,
-    /// Entity boundaries referencing the shared vertices.
+    /// Open linework referencing the shared vertices.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub lines: Vec<TracedLine>,
+    /// Entity polygons referencing the shared vertices.
+    #[serde(default)]
     pub units: Vec<TracedUnit>,
 }

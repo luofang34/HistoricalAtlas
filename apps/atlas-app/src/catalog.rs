@@ -14,6 +14,9 @@ use crate::error::AppError;
 #[derive(Debug, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Entry {
+    /// Registered source linework, including rivers and infrastructure.
+    #[serde(default)]
+    pub lines: Vec<atlas_boundary::linear::GeographicLine>,
     /// Terrain-cost reconstructions with their source membership evidence.
     #[serde(default)]
     pub derived_boundaries: Vec<atlas_boundary::terrain::DerivedBoundary>,
@@ -92,6 +95,12 @@ impl Atlas {
         }
         atlas_ledger::validation::validate(&sources, &data)?;
         for entry in publication.entries.values() {
+            for line in &entry.lines {
+                if !entry.records.iter().any(|r| r.id == line.line.record_id) {
+                    return Err(AppError::EvidenceIdentity(entry.entity.id));
+                }
+                line.feature(&data, None)?;
+            }
             for boundary in &entry.derived_boundaries {
                 if !entry.records.iter().any(|r| r.id == boundary.record_id) {
                     return Err(AppError::EvidenceIdentity(entry.entity.id));
@@ -145,6 +154,7 @@ impl Atlas {
             .flat_map(|e| &e.drawings)
             .filter(|d| {
                 d.units.iter().any(|u| records.contains(&u.record_id))
+                    || d.lines.iter().any(|line| records.contains(&line.record_id))
                     || d.places.iter().any(|p| records.contains(&p.record_id))
             })
             .collect()

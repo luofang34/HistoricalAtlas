@@ -63,7 +63,10 @@ fn root_layer(output: &Artifacts, body: &str) -> tile::Layer {
 }
 
 #[cfg(test)]
-fn properties(layer: &tile::Layer, feature: &tile::Feature) -> BTreeMap<String, TileValue> {
+pub(super) fn properties(
+    layer: &tile::Layer,
+    feature: &tile::Feature,
+) -> BTreeMap<String, TileValue> {
     assert_eq!(feature.tags.len() % 2, 0);
     feature
         .tags
@@ -352,4 +355,66 @@ fn invalid_configuration_polar_coordinates_and_oversized_tiles_fail_explicitly()
         compile_tiles(&input, BASE, 0),
         Err(TileError::PolarCoordinate { .. })
     ));
+}
+
+#[test]
+fn registered_map_points_publish_the_same_evidence_as_the_interactive_map() {
+    let input = input();
+    let output = compile_tiles(&input, BASE, 0).unwrap();
+    let path = PathBuf::from("tiles/earth/geometry/0/0/0.mvt");
+    let tile = Tile::decode(output[&path].as_slice()).unwrap();
+    let layer = tile
+        .layers
+        .iter()
+        .find(|layer| layer.name == "map_locations")
+        .unwrap();
+    let mut actual = BTreeSet::new();
+    for feature in &layer.features {
+        let values = properties(layer, feature);
+        let TileValue::Str(id) = &values["estimate_id"] else {
+            panic!("estimate id")
+        };
+        let estimate = input
+            .data
+            .estimates
+            .iter()
+            .find(|e| e.id.0.to_string() == *id)
+            .unwrap();
+        let atlas_ledger::model::EstimateValue::MapLocation { record_id, .. } = estimate.value
+        else {
+            panic!("map location")
+        };
+        let record = input
+            .data
+            .records
+            .iter()
+            .find(|r| r.id == record_id)
+            .unwrap();
+        let entity = input
+            .data
+            .entities
+            .iter()
+            .find(|e| e.id == estimate.entity_id)
+            .unwrap();
+        let shared =
+            atlas_ledger::features::map_location_feature(estimate, record, entity).unwrap();
+        let expected = features::scalars(shared["properties"].clone()).unwrap();
+        for (key, value) in expected {
+            assert_eq!(values[&key], value);
+        }
+        actual.insert(estimate.id);
+    }
+    let expected: BTreeSet<_> = input
+        .data
+        .estimates
+        .iter()
+        .filter(|e| {
+            matches!(
+                e.value,
+                atlas_ledger::model::EstimateValue::MapLocation { .. }
+            )
+        })
+        .map(|e| e.id)
+        .collect();
+    assert_eq!(actual, expected);
 }

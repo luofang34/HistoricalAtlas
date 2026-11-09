@@ -3,13 +3,20 @@ use crate::{
     input::LedgerInput,
     registration::{RegisteredSheet, RegistrationJob},
 };
+use atlas_boundary::linear::TracedLine;
 use atlas_boundary::polygon::{densify, resolve};
+
+pub(super) struct RegisteredTrace {
+    pub sheet: RegisteredSheet,
+    pub units: Vec<TracedUnit>,
+    pub lines: Vec<TracedLine>,
+}
 
 pub(super) fn register(
     input: &LedgerInput,
     trace: &SheetTrace,
     controls: BoundaryRegistration,
-) -> Result<(RegisteredSheet, Vec<TracedUnit>), BoundaryError> {
+) -> Result<RegisteredTrace, BoundaryError> {
     let polygons: Vec<_> = trace
         .units
         .iter()
@@ -17,11 +24,13 @@ pub(super) fn register(
         .collect();
     let (vertices, expanded) =
         densify(&trace.vertices, &polygons, controls.maximum_segment_pixels)?;
+    let (vertices, lines) =
+        atlas_boundary::linear::densify(&vertices, &trace.lines, controls.maximum_segment_pixels)?;
     let sheet = crate::registration::register(
         input,
         RegistrationJob {
             source_id: trace.source_id.clone(),
-            scan_page: Some(trace.scan_page),
+            scan_page: trace.scan_page,
             source_frame: trace.source_frame,
             target_frame: controls.target_frame,
             method: controls.method,
@@ -45,5 +54,9 @@ pub(super) fn register(
             polygons,
         });
     }
-    Ok((sheet, units))
+    Ok(RegisteredTrace {
+        sheet,
+        units,
+        lines,
+    })
 }

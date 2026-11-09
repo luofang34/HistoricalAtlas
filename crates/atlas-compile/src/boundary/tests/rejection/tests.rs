@@ -37,7 +37,7 @@ fn trace_validation_rejects_wrong_editions_pages_and_unchecked_records() {
     let mut input = load_blocking(&root()).unwrap();
     input.derivations.clear();
     let mut request = trace();
-    request.scan_page = 41;
+    request.scan_page = Some(41);
     assert!(
         compile_trace(&input, request)
             .unwrap_err()

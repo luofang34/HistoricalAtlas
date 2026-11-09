@@ -1,7 +1,9 @@
 use super::*;
+use atlas_core::identity::{EntityId, FactId};
 use atlas_geo::registration::ControlPoint;
 use atlas_geo::registration::PlanarPoint;
-use serde_json::Value;
+use serde_json::{Value, json};
+use std::collections::BTreeMap;
 
 mod rejection;
 
@@ -31,6 +33,7 @@ fn controls() -> BoundaryRegistration {
     };
     BoundaryRegistration {
         target_frame: TargetFrame {
+            datum: None,
             crs: "OGC:CRS84".into(),
             units: "degrees".into(),
         },
@@ -124,6 +127,7 @@ fn projected_boundary_preserves_crs_and_does_not_emit_projected_geojson() {
     input.derivations.clear();
     let mut parameters = controls();
     parameters.target_frame = TargetFrame {
+        datum: None,
         crs: "EPSG:32648".into(),
         units: "metres".into(),
     };
@@ -160,4 +164,64 @@ fn boundary_command_publishes_both_modes_and_refuses_existing_destinations() {
     boundary_blocking(&root(), &path, Some(&parameters), &registered).unwrap();
     assert!(registered.join("boundary.json").is_file());
     assert!(registered.join("boundary-trace.json").is_file());
+}
+
+#[test]
+fn unpaginated_line_only_capture_registers_and_publishes_open_components() {
+    let entity = EntityId::from_key("earth/test/river").unwrap();
+    let fact = FactId::from_key("capture/river").unwrap();
+    let mut input = LedgerInput {
+        catalog: serde_json::from_value(json!({"sources":[{"id":"capture","title":"Test frame",
+            "capture":{"medium":"aerial_photograph","sha256":"a".repeat(64),"frame":"17"}}]})).unwrap(),
+        data: serde_json::from_value(json!({"entities":[{"id":entity,"key":"earth/test/river","body":"earth","kind":"river"}],
+            "records":[{"id":fact,"key":"capture/river","entity_id":entity,"source_id":"capture","locator":"River","checked":true,"observation":{"name":"River"}}],"estimates":[],"disputes":[]})).unwrap(),
+        aliases: Default::default(), published: Default::default(), derivations: BTreeMap::new(),
+        traces: Vec::new(), place_maps: BTreeMap::new(), plate_models: BTreeMap::new(),
+    };
+    let trace: SheetTrace = serde_json::from_value(json!({"source_id":"capture","scan_page":null,
+        "source_frame":{"width":1000,"height":1500},"boundary_method":"unstated","method_basis":[],
+        "vertices":[{"x":100,"y":100},{"x":400,"y":100},{"x":600,"y":100},{"x":900,"y":100}],
+        "lines":[{"record_id":fact,"paths":[[0,1],[2,3]],"validity":{"start":{"earliest":"0","nominal":"0","latest":"0","precision":"day"},"end":null}}]})).unwrap();
+    let mut parameters = controls();
+    parameters.method = RegistrationMethod::ThinPlate { smoothing: 0.0 };
+    for control in &mut parameters.controls {
+        control.basis.push(fact);
+    }
+    let artifacts = compile_boundary(&input, trace.clone(), parameters.clone()).unwrap();
+    let manifest = json(&artifacts, "boundary.json");
+    let feature = &json(&artifacts, manifest["features"][0].as_str().unwrap())["features"][0];
+    assert_eq!(feature["geometry"]["type"], "MultiLineString");
+    assert_eq!(feature["properties"]["record_id"], json!(fact));
+    assert_eq!(feature["properties"]["validity"]["start"]["nominal"], "0");
+    let paths = feature["geometry"]["coordinates"].as_array().unwrap();
+    assert_eq!(paths.len(), 2);
+    assert!(
+        paths
+            .iter()
+            .all(|path| path.as_array().unwrap().len() == 31)
+    );
+    assert_ne!(paths[0][0], paths[0][30]);
+    let shard = json(
+        &artifacts,
+        &format!("entities/index/{}.json", entity.shard()),
+    );
+    assert_eq!(
+        shard[entity.0.to_string()]["lines"]
+            .as_array()
+            .unwrap()
+            .len(),
+        1
+    );
+    input.data.entities[0].body = atlas_geo::body::BodyId::Moon;
+    parameters.target_frame.crs = "IAU:Moon".into();
+    parameters.target_frame.datum = Some(atlas_geo::coordinates::Datum::MoonIau);
+    let lunar = compile_boundary(&input, trace.clone(), parameters.clone()).unwrap();
+    let lunar_manifest = json(&lunar, "boundary.json");
+    let lunar_features = json(&lunar, lunar_manifest["features"][0].as_str().unwrap());
+    assert_eq!(
+        lunar_features["features"][0]["properties"]["datum"],
+        "moon_iau"
+    );
+    input.data.records[0].checked = false;
+    assert!(compile_boundary(&input, trace, parameters).is_err());
 }

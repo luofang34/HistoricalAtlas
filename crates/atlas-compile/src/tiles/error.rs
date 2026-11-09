@@ -4,6 +4,19 @@ use thiserror::Error;
 /// Invalid tile publication parameters, coordinate, ledger, or output.
 #[derive(Debug, Error)]
 pub enum TileError {
+    /// A feature exceeds the bounded tile generation budget.
+    #[error(
+        "geometry covers {count} candidate tiles at zoom {zoom}; reduce maximum zoom or partition the feature"
+    )]
+    Coverage {
+        /// Requested zoom.
+        zoom: u8,
+        /// Candidate tile count.
+        count: i64,
+    },
+    /// Unsupported or inconsistent feature geometry.
+    #[error("tile geometry: {0}")]
+    Geometry(&'static str),
     /// Publication address could not be parsed.
     #[error("invalid publication URL: {0}")]
     Url(#[from] url::ParseError),

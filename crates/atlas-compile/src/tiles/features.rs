@@ -57,6 +57,10 @@ fn properties(
             json!(format!("{base}entities/index/{}.json", entity.id.shard())),
         );
     }
+    scalars(values)
+}
+
+pub(super) fn scalars(values: serde_json::Value) -> Result<BTreeMap<String, TileValue>, TileError> {
     let mut result = BTreeMap::new();
     if let serde_json::Value::Object(fields) = values {
         for (key, value) in fields {

@@ -6,6 +6,9 @@ use thiserror::Error;
 /// Atlas input or time selection failure.
 #[derive(Debug, Error)]
 pub enum AppError {
+    /// Registered linework or its source evidence is invalid.
+    #[error(transparent)]
+    Line(#[from] atlas_boundary::linear::LineError),
     /// Terrain reconstruction geometry or source evidence is invalid.
     #[error(transparent)]
     Derivation(#[from] atlas_boundary::terrain::TerrainError),

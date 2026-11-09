@@ -53,14 +53,14 @@ impl Application {
             .filter(|entity| entity.body == self.body)
             .filter_map(|entity| self.atlas.entry(entity.id))
             .flat_map(|entry| &entry.drawings)
-            .filter_map(|drawing| drawing.units.first())
-            .filter_map(|unit| {
-                self.atlas
-                    .data
-                    .records
-                    .iter()
-                    .find(|r| r.id == unit.record_id)
+            .filter_map(|drawing| {
+                drawing
+                    .units
+                    .first()
+                    .map(|unit| unit.record_id)
+                    .or_else(|| drawing.lines.first().map(|line| line.record_id))
             })
+            .filter_map(|record_id| self.atlas.data.records.iter().find(|r| r.id == record_id))
             .map(|record| (record.entity_id, record.observation.name.clone()))
             .collect();
         egui::ComboBox::from_id_salt("source-drawings")
@@ -113,7 +113,9 @@ impl Application {
             .unwrap_or("—");
         ui.label(format!(
             "Printed page {page} · Scan page {} · Sheet coordinates · Drag to pan · Scroll to zoom",
-            drawing.scan_page
+            drawing
+                .scan_page
+                .map_or_else(|| "Capture".into(), |page| page.to_string())
         ));
         let points = points(&self.atlas, &drawing);
         self.draw_sheet(ui, &drawing, &points);
@@ -170,7 +172,7 @@ impl Application {
         painter.text(
             rect.left_bottom() + egui::vec2(12.0, -12.0),
             Align2::LEFT_BOTTOM,
-            "Administrative boundaries · Places and administrative seats",
+            "Source polygons and linework · Places and administrative seats",
             FontId::proportional(12.0),
             Color32::DARK_GRAY,
         );
@@ -230,6 +232,19 @@ fn boundaries(
     drawing: &SheetTrace,
     transform: impl Fn(PlanarPoint) -> Pos2,
 ) {
+    for line in &drawing.lines {
+        for path in &line.paths {
+            let vertices = path
+                .iter()
+                .filter_map(|i| drawing.vertices.get(*i))
+                .map(|p| transform(*p))
+                .collect();
+            painter.add(Shape::line(
+                vertices,
+                Stroke::new(2.0, Color32::from_rgb(54, 119, 147)),
+            ));
+        }
+    }
     for unit in &drawing.units {
         for polygon in &unit.polygons {
             for ring in std::iter::once(&polygon.exterior).chain(&polygon.interiors) {

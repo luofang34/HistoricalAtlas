@@ -8,6 +8,8 @@ use rstar::{AABB, RTree, RTreeObject, primitives::GeomWithData};
 use serde::Deserialize;
 use serde_json::{Value, json};
 
+mod lines;
+
 type Located = GeomWithData<[f64; 3], (EntityId, LatLon)>;
 
 struct Region {
@@ -28,6 +30,8 @@ impl RTreeObject for Region {
 #[serde(tag = "type", content = "coordinates")]
 enum Geometry {
     Point([f64; 2]),
+    LineString(Vec<[f64; 2]>),
+    MultiLineString(Vec<Vec<[f64; 2]>>),
     Polygon(Vec<Vec<[f64; 2]>>),
     MultiPolygon(Vec<Vec<Vec<[f64; 2]>>>),
     #[serde(other)]
@@ -38,6 +42,7 @@ enum Geometry {
 #[derive(Default)]
 pub(super) struct Picking {
     points: RTree<Located>,
+    lines: lines::LineIndex,
     regions: RTree<Region>,
     entities: BTreeMap<EntityId, Vec<Value>>,
 }
@@ -47,6 +52,7 @@ impl Picking {
         let mut index = Self::default();
         let mut points = Vec::new();
         let mut regions = Vec::new();
+        let mut lines = Vec::new();
         for feature in collection
             .get("features")
             .and_then(Value::as_array)
@@ -67,10 +73,13 @@ impl Picking {
                 }
                 Geometry::Polygon(rings) => regions.extend(region(id, vec![rings])),
                 Geometry::MultiPolygon(polygons) => regions.extend(region(id, polygons)),
+                Geometry::LineString(path) => lines.push((id, vec![path])),
+                Geometry::MultiLineString(paths) => lines.push((id, paths)),
                 Geometry::Other => {}
             }
         }
         index.points = RTree::bulk_load(points);
+        index.lines = lines::LineIndex::new(lines);
         index.regions = RTree::bulk_load(regions);
         Ok(index)
     }
@@ -107,7 +116,11 @@ impl Picking {
             })
             .map(|p| distance_squared(anchor, sphere(p)))
             .fold(0.0, f64::max);
-        let mut hits = BTreeSet::new();
+        let mut hits: BTreeSet<_> = self
+            .lines
+            .pick(camera, pixel, anchor, reach)
+            .into_iter()
+            .collect();
         for point in self.points.locate_within_distance(anchor, reach) {
             if camera.is_location_occluded(point.data.1) {
                 continue;

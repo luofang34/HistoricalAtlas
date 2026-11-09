@@ -29,9 +29,10 @@ pub(super) fn register(
         input,
         RegistrationJob {
             source_id: map.source_id.clone(),
-            scan_page: Some(map.scan_page),
+            scan_page: map.scan_page,
             source_frame: map.source_frame,
             target_frame: TargetFrame {
+                datum: Some(map.datum),
                 crs: format!("ATLAS:source-angular:{:?}", map.datum),
                 units: "degrees".into(),
             },

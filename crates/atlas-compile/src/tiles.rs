@@ -13,8 +13,10 @@ use crate::{
 mod encoding;
 mod error;
 mod features;
+mod geometry;
 mod metadata;
 mod projection;
+mod shapes;
 
 pub use error::TileError;
 
@@ -73,6 +75,7 @@ pub fn compile_tiles(
         }));
     }
     insert(&mut output, "tiles/index.json", &bodies)?;
+    geometry::publish(input, &mut output, &base, maxzoom)?;
     Ok(output)
 }
 

@@ -18,7 +18,7 @@ fn compiled_ertang_sheet_draws_places_and_keeps_shared_seat_identities() {
     let brigade = EntityId::from_key("earth/cn-gz/zhijin/ertang/ertang-brigade").unwrap();
     assert_eq!(hits, vec![village, commune, brigade]);
     assert!(pick(&symbols, |_| 9.0).is_empty());
-    assert_eq!(atlas.drawings(village)[0].scan_page, 40);
+    assert_eq!(atlas.drawings(village)[0].scan_page, Some(40));
     let table_only = EntityId::from_key("earth/cn-gz/zhijin/ertang/luodi-chong").unwrap();
     assert!(atlas.drawings(table_only).is_empty());
     assert_eq!(
@@ -55,7 +55,7 @@ fn qimo_drawing_preserves_seat_disagreement_and_separate_commune_symbols() {
     let id = |key| EntityId::from_key(&format!("earth/cn-gz/zhijin/{key}")).unwrap();
     let commune = id("qimo-commune");
     let drawing = atlas.drawings(commune)[0];
-    assert_eq!(drawing.scan_page, 36);
+    assert_eq!(drawing.scan_page, Some(36));
     assert_eq!(drawing.places.len(), 57);
     let symbols = points(&atlas, drawing);
     assert_eq!(symbols.len(), 51);
@@ -70,7 +70,7 @@ fn qimo_drawing_preserves_seat_disagreement_and_separate_commune_symbols() {
         atlas
             .drawings(id("ertang-commune"))
             .iter()
-            .all(|sheet| sheet.scan_page == 40)
+            .all(|sheet| sheet.scan_page == Some(40))
     );
     let brigade = atlas.entry(id("qimo/mofeng-brigade")).unwrap();
     let seats: std::collections::BTreeSet<_> = brigade
@@ -99,7 +99,7 @@ fn pingqiao_drawing_selects_the_village_brigade_and_commune_at_the_shared_seat()
     let id = |key| EntityId::from_key(&format!("earth/cn-gz/zhijin/{key}")).unwrap();
     let commune = id("pingqiao-commune");
     let drawing = atlas.drawings(commune)[0];
-    assert_eq!(drawing.scan_page, 33);
+    assert_eq!(drawing.scan_page, Some(33));
     assert_eq!(drawing.units.len(), 1);
     assert_eq!(drawing.places.len(), 36);
     assert_eq!(drawing.vertices.len(), 108);
@@ -118,7 +118,10 @@ fn pingqiao_drawing_selects_the_village_brigade_and_commune_at_the_shared_seat()
         .into()
     );
     assert!(atlas.drawings(id("pingqiao/kengkeng-tian")).is_empty());
-    assert_eq!(atlas.drawings(id("pingqiao/luokeng-tian"))[0].scan_page, 33);
+    assert_eq!(
+        atlas.drawings(id("pingqiao/luokeng-tian"))[0].scan_page,
+        Some(33)
+    );
     assert_eq!(
         atlas.search("平桥公社", atlas_geo::body::BodyId::Earth),
         vec![commune]
@@ -131,7 +134,7 @@ fn alie_drawing_uses_the_mapped_brigade_seat_and_selects_the_commune_seat() {
     let id = |key| EntityId::from_key(&format!("earth/cn-gz/zhijin/{key}")).unwrap();
     let commune = id("alie-commune");
     let drawing = atlas.drawings(commune)[0];
-    assert_eq!(drawing.scan_page, 44);
+    assert_eq!(drawing.scan_page, Some(44));
     assert_eq!(drawing.units.len(), 1);
     let symbols = points(&atlas, drawing);
     assert_eq!(symbols.len(), 49);
@@ -151,6 +154,6 @@ fn alie_drawing_uses_the_mapped_brigade_seat_and_selects_the_commune_seat() {
             expected.into()
         );
     }
-    assert_eq!(atlas.drawings(id("alie/xiaolan-ba"))[0].scan_page, 44);
+    assert_eq!(atlas.drawings(id("alie/xiaolan-ba"))[0].scan_page, Some(44));
     assert!(atlas.drawings(id("alie/maoli-yuan")).is_empty());
 }

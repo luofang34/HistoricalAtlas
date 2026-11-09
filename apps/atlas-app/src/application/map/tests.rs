@@ -37,7 +37,7 @@ fn selecting_a_table_anchor_in_a_drawn_commune_opens_its_measured_symbols() {
     assert!(app.sheet.visible);
     assert_eq!(app.camera.center, before);
     let drawing = app.atlas.drawings(id)[0];
-    assert_eq!(drawing.scan_page, 33);
+    assert_eq!(drawing.scan_page, Some(33));
     assert_eq!(drawing.places.len(), 36);
     assert_eq!(drawing.units.len(), 1);
 }

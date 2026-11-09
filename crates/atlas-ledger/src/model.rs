@@ -15,6 +15,7 @@ use atlas_geo::{
 use serde::{Deserialize, Serialize};
 
 pub mod media;
+mod raster;
 pub mod territory;
 
 /// Bibliographic metadata for an identifiable source edition.

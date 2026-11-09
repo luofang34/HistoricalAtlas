@@ -26,6 +26,7 @@ fn job() -> RegistrationJob {
             height: 100,
         },
         target_frame: TargetFrame {
+            datum: None,
             crs: "EPSG:32648".into(),
             units: "metres".into(),
         },
@@ -117,7 +118,7 @@ fn check_points_and_source_page_must_be_independent_and_identified() {
         register(&input, request)
             .unwrap_err()
             .to_string()
-            .contains("does not identify a source raster")
+            .contains("has no fingerprint")
     );
     let mut request = job();
     request.source_id = "nasa-nssdca-apollo11".into();
@@ -125,7 +126,7 @@ fn check_points_and_source_page_must_be_independent_and_identified() {
         register(&input, request)
             .unwrap_err()
             .to_string()
-            .contains("does not identify a source raster")
+            .contains("has no fingerprint")
     );
     let mut request = job();
     request.controls[0].reference.clear();

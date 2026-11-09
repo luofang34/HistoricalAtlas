@@ -10,7 +10,7 @@ use crate::{input::LedgerInput, registration::RegisteredSheet};
 mod boundaries;
 mod evidence;
 mod transform;
-pub(crate) use boundaries::register_boundaries;
+pub(crate) use boundaries::{RegisteredMap, register_boundaries, register_shapes};
 pub use evidence::PlaceMapError;
 
 /// A measured symbol linked to its checked map observation.
@@ -37,6 +37,9 @@ pub struct PlaceControl {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct PlaceMap {
+    /// Maximum source-pixel line segment before registration.
+    #[serde(default = "default_spacing")]
+    pub maximum_segment_pixels: f64,
     /// Numerical transformation used for all geometry on this registration.
     #[serde(default)]
     pub method: crate::registration::RegistrationMethod,
@@ -44,8 +47,8 @@ pub struct PlaceMap {
     pub id: String,
     /// Bibliographic edition containing the sheet.
     pub source_id: String,
-    /// One-based scan page.
-    pub scan_page: u32,
+    /// One-based scan page, or absent for an unpaginated capture.
+    pub scan_page: Option<u32>,
     /// Dimensions of the full unrotated scan raster.
     pub source_frame: crate::registration::RasterFrame,
     /// Datum shared by every fitting and checking coordinate.
@@ -60,6 +63,10 @@ pub struct PlaceMap {
     pub uncertainty_m: f64,
     /// Evidence and calculation supporting the positional allowance.
     pub uncertainty_basis: String,
+}
+
+fn default_spacing() -> f64 {
+    32.0
 }
 
 /// Fit the map and derive locations without replacing coordinate transcriptions.

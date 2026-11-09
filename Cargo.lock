@@ -310,6 +310,7 @@ dependencies = [
  "atlas-core",
  "atlas-geo",
  "atlas-ledger",
+ "geo 0.33.1",
  "geozero 0.15.1",
  "serde",
  "serde_json",
@@ -1526,6 +1527,7 @@ checksum = "db5eda63aa99ac06160fd53328ed75c34f14e3196d3f56a3649e247ed796e54b"
 dependencies = [
  "base64 0.22.1",
  "dup-indexer 0.4.5",
+ "geo-types",
  "log",
  "prost 0.14.4",
  "prost-build 0.14.4",

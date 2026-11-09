@@ -73,3 +73,17 @@ fn selection_copies_only_one_entity_and_leaves_the_source_unchanged() {
             .is_empty()
     );
 }
+
+#[test]
+fn globe_line_pick_uses_segments_without_joining_components() {
+    let source = json!({"features":[feature("route",json!({"type":"MultiLineString","coordinates":[[[-15.0,-5.0],[15.0,-5.0]], [[-15.0,5.0],[15.0,5.0]]]}))]});
+    let index = Picking::new(&source).unwrap();
+    let camera = camera();
+    let pixel = camera.location_to_screen(LatLon::new(-5.0, 0.0), 0.0);
+    assert_eq!(
+        index.pick(&camera, pixel),
+        [EntityId::from_key("route").unwrap()]
+    );
+    assert!(index.pick(&camera, Point2::new(400.0, 300.0)).is_empty());
+    assert!(index.pick(&camera, Point2::new(0.0, 0.0)).is_empty());
+}

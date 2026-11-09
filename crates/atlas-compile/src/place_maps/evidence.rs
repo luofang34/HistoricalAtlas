@@ -8,6 +8,12 @@ use thiserror::Error;
 /// Invalid map evidence, registration, or derived location.
 #[derive(Debug, Error)]
 pub enum PlaceMapError {
+    /// Source polygon subdivision failed.
+    #[error(transparent)]
+    Sampling(#[from] atlas_boundary::polygon::TopologyError),
+    /// Registered linework or its source evidence is invalid.
+    #[error(transparent)]
+    Line(#[from] atlas_boundary::linear::LineError),
     /// A matching sheet contains invalid source geometry or evidence.
     #[error("place map boundary sheet: {0}")]
     Sheet(#[from] atlas_boundary::sheet::SheetError),
@@ -38,7 +44,9 @@ pub(super) fn record(input: &LedgerInput, id: FactId) -> Result<&Record, PlaceMa
 }
 
 pub(super) fn validate(input: &LedgerInput, map: &PlaceMap) -> Result<(), PlaceMapError> {
-    if map.id.is_empty()
+    if !map.maximum_segment_pixels.is_finite()
+        || map.maximum_segment_pixels <= 0.0
+        || map.id.is_empty()
         || !map
             .id
             .bytes()
@@ -74,7 +82,7 @@ pub(super) fn validate(input: &LedgerInput, map: &PlaceMap) -> Result<(), PlaceM
         }
         body = Some(entity.body);
         if record.source_id != map.source_id
-            || record.scan_page != Some(map.scan_page)
+            || record.scan_page != map.scan_page
             || !subjects.insert(record.entity_id)
         {
             return Err(PlaceMapError::Evidence(format!(
