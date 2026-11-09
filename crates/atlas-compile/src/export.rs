@@ -441,3 +441,7 @@ mod baiyan_tests;
 #[cfg(test)]
 #[path = "export/hongyan/tests.rs"]
 mod hongyan_tests;
+
+#[cfg(test)]
+#[path = "export/shengji/tests.rs"]
+mod shengji_tests;

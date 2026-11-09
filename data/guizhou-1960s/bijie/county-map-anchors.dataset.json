@@ -2,40 +2,6 @@
   "entities": [],
   "records": [
     {
-      "id": "6e6bbe50-3302-5ce0-a7cf-ab031c2e9254",
-      "key": "bijie-gazetteer/page-321/shengji-commune",
-      "entity_id": "29c3e2d3-39cf-5a67-b589-899c5d4c7660",
-      "source_id": "bijie-gazetteer",
-      "page_or_sheet": "321",
-      "scan_page": 356,
-      "locator": "生机公社 row: name and geographic coordinates",
-      "verbatim_quote": null,
-      "checked": true,
-      "source_date": null,
-      "observation": {
-        "name": "生机公社",
-        "pinyin": null,
-        "population": null,
-        "households": null,
-        "ethnicities": [],
-        "parent_id": null,
-        "rank": "commune",
-        "seat_id": null,
-        "coordinate": {
-          "point": {
-            "longitude": 105.46666666666667,
-            "latitude": 27.716666666666665
-          },
-          "longitude_text": "105°28′",
-          "latitude_text": "27°43′",
-          "resolution_arcminutes": 1.0,
-          "datum": "unspecified"
-        },
-        "former_names": [],
-        "note": null
-      }
-    },
-    {
       "id": "1876c715-47f4-5d8f-a243-25e0f4b2a72f",
       "key": "bijie-gazetteer/page-346/mulai-commune",
       "entity_id": "9549909e-8c92-5dbc-bb5f-80ed54946b12",

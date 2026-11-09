@@ -157,6 +157,7 @@ fn source_comparisons_and_the_haogou_exclusion_follow_the_reconstructed_geometry
         ("gaoshanpu", 46.1, 6),
         ("hongyan", 35.0, 6),
         ("gengguan", 32.7, 6),
+        ("shengji", 77.8, 5),
     ] {
         let id = EntityId::from_key(&format!("earth/cn-gz/bijie/{slug}-commune")).unwrap();
         let boundary = boundaries
@@ -272,7 +273,7 @@ fn area_constraints_reject_unreviewed_or_other_units_evidence() {
         .filter(|(_, u)| u.area_constraint.is_some())
         .map(|(i, _)| i)
         .collect();
-    assert_eq!(constrained.len(), 26);
+    assert_eq!(constrained.len(), 27);
     let first = constrained[0];
     let constraint = request.units[first].area_constraint.clone().unwrap();
     request.units[first].area_constraint = request.units[constrained[1]].area_constraint.clone();
