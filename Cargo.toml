@@ -14,7 +14,7 @@ atlas-geo = { path = "crates/atlas-geo" }
 atlas-ledger = { path = "crates/atlas-ledger" }
 atlas-boundary = { path = "crates/atlas-boundary" }
 serde = { version = "1", features = ["derive"] }
-serde_json = "1"
+serde_json = { version = "1", features = ["float_roundtrip"] }
 thiserror = "2"
 uuid = { version = "1", features = ["v5", "serde"] }
 tracing = "0.1"

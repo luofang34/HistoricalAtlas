@@ -73,6 +73,27 @@ fn strict_file_budget_rejects_oversize_output() {
 }
 
 #[test]
+fn computed_coordinates_survive_json_publication_without_rounding_again() {
+    let mut input = input();
+    let record = &mut input.data.records[0];
+    record
+        .observation
+        .coordinate
+        .as_mut()
+        .unwrap()
+        .point
+        .longitude = 105.87955975133923;
+    let id = record.entity_id;
+    let expected = serde_json::to_value(&*record).unwrap();
+    let output = compile(&input).unwrap();
+    let shard: serde_json::Value = serde_json::from_slice(
+        &output[&PathBuf::from(format!("entities/index/{}.json", id.shard()))],
+    )
+    .unwrap();
+    assert_eq!(shard[id.0.to_string()]["records"][0], expected);
+}
+
+#[test]
 fn hierarchy_cannot_publish_a_parent_without_checked_evidence() {
     let mut input = input();
     input.data.records[0].observation.parent_id = Some(input.data.entities[1].id);
