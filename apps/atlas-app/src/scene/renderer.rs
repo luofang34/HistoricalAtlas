@@ -69,6 +69,9 @@ pub struct MapRenderer {
     dimensions: [u32; 2],
     picking: super::picking::Picking,
     selection_picking: super::picking::Picking,
+    /// When the map started; the frame clock is the time since, so animations and
+    /// tile retry backoffs advance with real time.
+    started: web_time::Instant,
 }
 
 impl MapRenderer {
@@ -120,6 +123,7 @@ impl MapRenderer {
             wgpu::FilterMode::Linear,
         );
         Ok(Self {
+            started: web_time::Instant::now(),
             map,
             gpu,
             texture,
@@ -198,6 +202,7 @@ impl MapRenderer {
                 ..Default::default()
             })?;
         }
+        self.map.frame_input_mut().timestamp = self.started.elapsed();
         self.map.run_frame()?;
         // MapLibre replaces resized attachments during frame preparation.
         if resized {
