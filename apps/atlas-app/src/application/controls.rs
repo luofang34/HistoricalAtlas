@@ -13,6 +13,13 @@ impl Application {
                     .changed()
                 {
                     self.camera = Camera::for_body(body);
+                    self.camera_pending = true;
+                    self.layer = if body == BodyId::Earth {
+                        MapLayer::MappedPlaces
+                    } else {
+                        MapLayer::Observations
+                    };
+                    self.sheet.visible = false;
                     self.selected = None;
                     self.hits.clear();
                     self.dirty = true;
@@ -96,17 +103,13 @@ impl Application {
                 }
             }
             self.dirty |= ui
-                .selectable_value(
-                    &mut self.layer,
-                    MapLayer::MappedPlaces,
-                    "Map-derived locations",
-                )
+                .selectable_value(&mut self.layer, MapLayer::MappedPlaces, "Source-map places")
                 .changed();
             self.dirty |= ui
                 .selectable_value(
                     &mut self.layer,
                     MapLayer::Observations,
-                    "Source observations",
+                    "Printed coordinates",
                 )
                 .changed();
             self.dirty |= ui

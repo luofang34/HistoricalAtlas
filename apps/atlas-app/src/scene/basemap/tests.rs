@@ -41,7 +41,10 @@ fn bundled_physical_tiles_decode_and_cover_the_research_area() {
 #[test]
 fn projections_share_source_coordinates_and_earth_basemap_is_body_scoped() {
     let points = json!({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [105.3, 27.3]}, "properties": {"geometry_role": "source_observation"}}]});
-    for projection in [ProjectionType::Mercator, ProjectionType::Globe] {
+    for projection in [
+        ProjectionType::Mercator,
+        ProjectionType::VerticalPerspective,
+    ] {
         let style = crate::scene::style(points.clone(), BodyId::Earth, projection.clone()).unwrap();
         assert!(style.validate().is_ok());
         assert_eq!(
@@ -73,4 +76,45 @@ fn projections_share_source_coordinates_and_earth_basemap_is_body_scoped() {
     {
         assert_eq!(layer["layout"]["visibility"], "none");
     }
+}
+
+#[test]
+fn navigation_loads_bundled_resources_and_missing_tiles_without_network() {
+    use maplibre::io::source_client::ByteRange;
+    tokio::runtime::Builder::new_current_thread()
+        .build()
+        .unwrap()
+        .block_on(async {
+            let loader = loader();
+            assert_eq!(
+                loader.fetch("atlas://natural-earth/0/0/0").await.unwrap(),
+                WORLD
+            );
+            for (x, y, bytes) in TERRAIN {
+                let url = format!("atlas://terrain/8/{x}/{y}");
+                assert_eq!(loader.fetch(&url).await.unwrap(), bytes);
+                assert_eq!(
+                    loader
+                        .fetch_range(
+                            &url,
+                            ByteRange {
+                                offset: 0,
+                                length: 4
+                            }
+                        )
+                        .await
+                        .unwrap(),
+                    bytes[..4]
+                );
+            }
+            for url in [
+                "atlas://terrain/0/0/0",
+                "atlas://natural-earth/8/203/107",
+                "atlas://terrain/8/201/107",
+            ] {
+                let error = loader.fetch(url).await.unwrap_err();
+                assert!(error.is_not_found());
+                assert!(!error.is_retryable());
+            }
+        });
 }

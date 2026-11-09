@@ -59,7 +59,14 @@ fn registered_boundary_loads_with_source_evidence_and_stays_out_of_time_slices()
     write_blocking(&path, &artifacts).unwrap();
     let atlas = crate::publication::load_blocking(&path).unwrap();
     let id = EntityId::from_key("earth/cn-gz/zhijin/ertang-commune").unwrap();
-    let boundaries = features(&atlas, BodyId::Earth, MapLayer::Observations, Some(id)).unwrap();
+    let boundaries = features(
+        &atlas,
+        BodyId::Earth,
+        MapLayer::Observations,
+        Some(id),
+        true,
+    )
+    .unwrap();
     let feature = boundaries
         .iter()
         .find(|f| f["properties"]["entity_id"] == json!(id))
@@ -84,31 +91,37 @@ fn registered_boundary_loads_with_source_evidence_and_stays_out_of_time_slices()
         serde_json::from_slice(&artifacts[Path::new("boundary/registration.json")]).unwrap();
     assert!(proof["check_quality"]["maximum"].as_f64().unwrap() < 1e-12);
     assert!(
-        features(&atlas, BodyId::Moon, MapLayer::Observations, Some(id))
+        features(&atlas, BodyId::Moon, MapLayer::Observations, Some(id), true)
             .unwrap()
             .is_empty()
     );
     assert!(
-        features(&atlas, BodyId::Earth, MapLayer::SelectedTime, Some(id))
-            .unwrap()
-            .is_empty()
+        features(
+            &atlas,
+            BodyId::Earth,
+            MapLayer::SelectedTime,
+            Some(id),
+            true
+        )
+        .unwrap()
+        .is_empty()
     );
     assert_eq!(
-        features(&atlas, BodyId::Earth, MapLayer::MappedPlaces, None)
+        features(&atlas, BodyId::Earth, MapLayer::MappedPlaces, None, false)
             .unwrap()
             .iter()
             .filter(|f| f["properties"]["entity_id"] == json!(id))
             .count(),
         1
     );
-    assert!(center(&atlas, id).unwrap().validate().is_ok());
+    assert!(center(&atlas, id, false).unwrap().validate().is_ok());
 }
 
 #[test]
 fn mapped_polygons_tessellate_fill_outline_and_selection_for_both_projections() {
     let atlas = Atlas::new(publication()).unwrap();
     let id = EntityId::from_key("earth/cn-gz/zhijin/ertang-commune").unwrap();
-    let collection = json!({"type": "FeatureCollection", "features": features(&atlas, BodyId::Earth, MapLayer::Observations, Some(id)).unwrap()});
+    let collection = json!({"type": "FeatureCollection", "features": features(&atlas, BodyId::Earth, MapLayer::Observations, Some(id), true).unwrap()});
     for projection in [
         maplibre::projection::ProjectionType::Mercator,
         maplibre::projection::ProjectionType::Globe,
@@ -151,7 +164,14 @@ fn mapped_polygons_tessellate_fill_outline_and_selection_for_both_projections() 
 fn reconstructed_communes_load_frame_and_tessellate_with_dashed_outlines() {
     let atlas = Atlas::new(crate::catalog::tests::terrain_publication()).unwrap();
     let id = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
-    let boundaries = features(&atlas, BodyId::Earth, MapLayer::Observations, Some(id)).unwrap();
+    let boundaries = features(
+        &atlas,
+        BodyId::Earth,
+        MapLayer::Observations,
+        Some(id),
+        true,
+    )
+    .unwrap();
     assert_eq!(
         boundaries
             .iter()
@@ -159,11 +179,17 @@ fn reconstructed_communes_load_frame_and_tessellate_with_dashed_outlines() {
             .count(),
         124
     );
-    assert!(frame(&atlas, id, [800., 600.]).is_some());
+    assert!(frame(&atlas, id, [800., 600.], true).is_some());
     assert!(
-        features(&atlas, BodyId::Earth, MapLayer::SelectedTime, Some(id))
-            .unwrap()
-            .is_empty()
+        features(
+            &atlas,
+            BodyId::Earth,
+            MapLayer::SelectedTime,
+            Some(id),
+            true
+        )
+        .unwrap()
+        .is_empty()
     );
     let collection = json!({"type":"FeatureCollection","features":boundaries});
     for projection in [

@@ -74,7 +74,7 @@ pub fn style(
     } else {
         "none"
     };
-    serde_json::from_value(json!({"version": 8, "center": [105.27, 27.3], "zoom": 10,
+    serde_json::from_value(json!({"version": 8, "center": [105.27, 27.3], "zoom": 0.5,
     "projection": {"type": projection},
     "sources": {
         "natural-earth": {"type": "raster", "tiles": ["atlas://natural-earth/{z}/{x}/{y}"], "tileSize": 512, "minzoom": 0, "maxzoom": 0},

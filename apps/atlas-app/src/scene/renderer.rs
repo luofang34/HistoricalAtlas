@@ -13,7 +13,10 @@ use maplibre::{
     },
     raster::{DefaultRasterTransferables, RasterPlugin},
     render::{
-        RenderPlugin, host_gpu::HostGpu, settings::RendererSettings, view_state::CameraOptions,
+        RenderPlugin,
+        host_gpu::HostGpu,
+        settings::RendererSettings,
+        view_state::{CameraOptions, NavigationMode},
     },
     sdf::query::{QueryGeometry, QueryOptions},
     vector::{DefaultVectorTransferables, VectorPlugin},
@@ -73,8 +76,13 @@ impl MapRenderer {
             device: gpu.device.clone(),
             queue: gpu.queue.clone(),
         };
-        let (kernel, renderer) =
-            create_headless_renderer_on_host_gpu(1, 1, host, RendererSettings::default(), None)?;
+        let (kernel, renderer) = create_headless_renderer_on_host_gpu(
+            1,
+            1,
+            host,
+            RendererSettings::default(),
+            Some(super::basemap::loader()),
+        )?;
         let mut map = HeadlessMap::new(
             style,
             renderer,
@@ -86,6 +94,7 @@ impl MapRenderer {
                 Box::new(VectorPlugin::<DefaultVectorTransferables>::default()),
             ],
         )?;
+        map.set_navigation_mode(NavigationMode::FreeGlobe)?;
         map.render_source_frames(ProcessedLayers::default(), super::basemap::tiles()?, 1)?;
         let view = map.head_texture_view().ok_or(RenderError::Texture)?;
         let texture = gpu.renderer.write().register_native_texture(
@@ -121,7 +130,7 @@ impl MapRenderer {
         &mut self,
         size: egui::Vec2,
         ratio: f32,
-        camera: Camera,
+        camera: Option<Camera>,
     ) -> Result<egui::TextureId, RenderError> {
         let limit = self.gpu.device.limits().max_texture_dimension_2d;
         let dimensions = [
@@ -136,11 +145,16 @@ impl MapRenderer {
             self.dimensions = dimensions;
         }
         self.map.set_pixel_ratio(f64::from(ratio));
-        self.map.jump_to(CameraOptions {
-            center: Some(LatLon::new(camera.center.latitude, camera.center.longitude)),
-            zoom: Some(camera.zoom),
-            ..Default::default()
-        })?;
+        if let Some(camera) = camera {
+            self.map.jump_to(CameraOptions {
+                center: Some(LatLon::new(camera.center.latitude, camera.center.longitude)),
+                zoom: Some(camera.zoom),
+                bearing: Some(cgmath::Deg(0.0)),
+                pitch: Some(cgmath::Deg(0.0)),
+                roll: Some(cgmath::Deg(0.0)),
+                ..Default::default()
+            })?;
+        }
         self.map.run_frame()?;
         // MapLibre replaces resized attachments during frame preparation.
         if resized {
@@ -156,6 +170,22 @@ impl MapRenderer {
                 );
         }
         Ok(self.texture)
+    }
+
+    /// Rotate the globe between two viewport positions in logical pixels.
+    pub fn drag(&mut self, from: egui::Vec2, to: egui::Vec2) -> bool {
+        self.map.drag_globe(
+            cgmath::Point2::new(f64::from(from.x), f64::from(from.y)),
+            cgmath::Point2::new(f64::from(to.x), f64::from(to.y)),
+        )
+    }
+
+    /// Zoom with the ground under the pointer held in place.
+    pub fn zoom(&mut self, pixel: egui::Vec2, delta: f64) -> bool {
+        self.map.zoom_globe(
+            cgmath::Point2::new(f64::from(pixel.x), f64::from(pixel.y)),
+            delta,
+        )
     }
 
     /// Return every distinct entity beneath the pointer, including coincident villages.

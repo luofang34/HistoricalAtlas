@@ -114,6 +114,8 @@ impl Application {
             {
                 self.body = body;
                 self.camera = Camera::for_body(body);
+                self.camera_pending = true;
+                self.layer = crate::scene::MapLayer::Observations;
                 self.hits.clear();
             }
             self.select(target, true);

@@ -28,7 +28,9 @@ pub struct Application {
     hits: Vec<EntityId>,
     layer: MapLayer,
     territory_visible: bool,
+    derived_visible: bool,
     camera: Camera,
+    camera_pending: bool,
     map_size: [f64; 2],
     map: Option<MapRenderer>,
     dirty: bool,
@@ -38,7 +40,7 @@ pub struct Application {
 }
 
 impl Application {
-    /// Start with reviewed Earth observations and the 1982 time selection.
+    /// Start with source-map geometry on the Earth globe and the 1982 time selection.
     pub fn new(atlas: Atlas) -> Result<Self, AppError> {
         let time = TimeControl::default();
         let selected_time = SelectedTime::query(&atlas, &time)?;
@@ -50,9 +52,11 @@ impl Application {
             selected: None,
             search: String::new(),
             hits: Vec::new(),
-            layer: MapLayer::Observations,
+            layer: MapLayer::MappedPlaces,
             territory_visible: false,
+            derived_visible: false,
             camera: Camera::for_body(BodyId::Earth),
+            camera_pending: true,
             map_size: [800.0, 600.0],
             map: None,
             dirty: true,
@@ -66,11 +70,7 @@ impl Application {
     pub fn attach(&mut self, gpu: egui_wgpu::RenderState) -> Result<(), AppError> {
         self.map = Some(MapRenderer::new(
             gpu,
-            scene::style(
-                self.points()?,
-                self.body,
-                maplibre::projection::ProjectionType::Mercator,
-            )?,
+            scene::style(self.points()?, self.body, crate::navigation::PROJECTION)?,
         )?);
         self.dirty = false;
         Ok(())
@@ -102,6 +102,7 @@ impl Application {
             self.sheet = sheet::SheetView::open();
         }
         if focus && let Some(point) = self.focus_point(id) {
+            self.camera_pending = true;
             self.camera.center = point;
             self.camera.zoom = if self.body == BodyId::Earth {
                 12.0
@@ -111,9 +112,11 @@ impl Application {
         }
         if focus
             && self.layer != MapLayer::SelectedTime
-            && let Some(camera) = scene::boundaries::frame(&self.atlas, id, self.map_size)
+            && let Some(camera) =
+                scene::boundaries::frame(&self.atlas, id, self.map_size, self.derived_visible)
         {
             self.camera = camera;
+            self.camera_pending = true;
             self.sheet.visible = false;
         }
     }
@@ -128,7 +131,7 @@ impl Application {
                     atlas_ledger::model::EstimateValue::MapLocation { point, .. } => Some(point),
                     _ => None,
                 })
-                .or_else(|| scene::boundaries::center(&self.atlas, id));
+                .or_else(|| scene::boundaries::center(&self.atlas, id, self.derived_visible));
         }
         entry
             .records
@@ -136,7 +139,7 @@ impl Application {
             .find_map(|record| record.observation.coordinate.as_ref().map(|c| c.point))
             .or_else(|| {
                 (self.layer != MapLayer::SelectedTime)
-                    .then(|| scene::boundaries::center(&self.atlas, id))
+                    .then(|| scene::boundaries::center(&self.atlas, id, self.derived_visible))
                     .flatten()
             })
     }
@@ -158,6 +161,7 @@ impl Application {
                 self.body,
                 self.layer,
                 self.selected,
+                self.derived_visible,
             )?);
         }
         if self.territory_visible

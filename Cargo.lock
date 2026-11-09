@@ -258,11 +258,13 @@ dependencies = [
 name = "atlas-app"
 version = "0.1.0"
 dependencies = [
+ "async-trait",
  "atlas-boundary",
  "atlas-compile",
  "atlas-core",
  "atlas-geo",
  "atlas-ledger",
+ "cgmath",
  "egui",
  "egui-wgpu",
  "egui-winit",

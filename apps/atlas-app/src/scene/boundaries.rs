@@ -12,6 +12,7 @@ pub fn features(
     body: BodyId,
     layer: MapLayer,
     selected: Option<EntityId>,
+    include_derived: bool,
 ) -> Result<Vec<Value>, AppError> {
     if body != BodyId::Earth || layer == MapLayer::SelectedTime {
         return Ok(Vec::new());
@@ -24,6 +25,9 @@ pub fn features(
         .flat_map(|entry| &entry.boundaries)
         .map(|boundary| Ok(boundary.feature(&atlas.data, selected)?))
         .collect::<Result<_, AppError>>()?;
+    if !include_derived {
+        return Ok(features);
+    }
     for boundary in atlas
         .data
         .entities
@@ -37,8 +41,8 @@ pub fn features(
 }
 
 /// Bounding-box midpoint for navigating to an entity with a registered boundary.
-pub fn center(atlas: &Atlas, id: EntityId) -> Option<LonLat> {
-    let [low, high] = extent(atlas, id)?;
+pub fn center(atlas: &Atlas, id: EntityId, include_derived: bool) -> Option<LonLat> {
+    let [low, high] = extent(atlas, id, include_derived)?;
     Some(LonLat {
         longitude: (low.longitude + high.longitude) / 2.,
         latitude: (low.latitude + high.latitude) / 2.,
@@ -46,14 +50,19 @@ pub fn center(atlas: &Atlas, id: EntityId) -> Option<LonLat> {
 }
 
 /// Camera framing the complete registered boundary inside the map viewport.
-pub fn frame(atlas: &Atlas, id: EntityId, viewport: [f64; 2]) -> Option<crate::navigation::Camera> {
-    let bounds = extent(atlas, id)?;
+pub fn frame(
+    atlas: &Atlas,
+    id: EntityId,
+    viewport: [f64; 2],
+    include_derived: bool,
+) -> Option<crate::navigation::Camera> {
+    let bounds = extent(atlas, id, include_derived)?;
     let mut camera = crate::navigation::Camera::for_body(BodyId::Earth);
     camera.fit_bounds(bounds, viewport);
     Some(camera)
 }
 
-fn extent(atlas: &Atlas, id: EntityId) -> Option<[LonLat; 2]> {
+fn extent(atlas: &Atlas, id: EntityId, include_derived: bool) -> Option<[LonLat; 2]> {
     let entry = atlas.entry(id)?;
     let mut bounds = [
         f64::INFINITY,
@@ -69,14 +78,18 @@ fn extent(atlas: &Atlas, id: EntityId) -> Option<[LonLat; 2]> {
             .flat_map(|p| &p.exterior)
             .filter_map(|index| boundary.vertices.get(*index))
     });
-    let derived = entry.derived_boundaries.iter().flat_map(|boundary| {
-        boundary
-            .region
-            .polygons
-            .iter()
-            .flat_map(|p| &p.exterior)
-            .filter_map(|index| boundary.region.vertices.get(*index))
-    });
+    let derived = entry
+        .derived_boundaries
+        .iter()
+        .filter(|_| include_derived)
+        .flat_map(|boundary| {
+            boundary
+                .region
+                .polygons
+                .iter()
+                .flat_map(|p| &p.exterior)
+                .filter_map(|index| boundary.region.vertices.get(*index))
+        });
     for point in mapped.chain(derived) {
         bounds[0] = bounds[0].min(point.x);
         bounds[1] = bounds[1].min(point.y);

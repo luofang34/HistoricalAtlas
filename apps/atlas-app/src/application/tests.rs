@@ -11,7 +11,7 @@ fn registered_boundary_search_focuses_geography_and_displays_source_method() {
     boundary.datum = atlas_geo::coordinates::Datum::Unspecified;
     boundary.registration_allowance_m = Some(4500.);
     let atlas = Atlas::new(publication).unwrap();
-    let expected = crate::scene::boundaries::center(&atlas, id).unwrap();
+    let expected = crate::scene::boundaries::center(&atlas, id, false).unwrap();
     let mut app = Application::new(atlas).unwrap();
     app.select(id, true);
     assert_eq!(app.camera.center, expected);
@@ -57,6 +57,7 @@ fn registered_boundary_search_focuses_geography_and_displays_source_method() {
 fn mapped_place_view_keeps_registered_locations_and_frames_the_reconstruction() {
     let atlas = Atlas::new(crate::catalog::tests::terrain_publication()).unwrap();
     let mut app = Application::new(atlas).unwrap();
+    app.derived_visible = true;
     let id = EntityId::from_key("earth/cn-gz/bijie/daqiao-commune").unwrap();
     app.select(id, true);
     let table = app.camera.center;
@@ -65,7 +66,7 @@ fn mapped_place_view_keeps_registered_locations_and_frames_the_reconstruction() 
     assert_eq!(app.camera.center, table);
     assert_eq!(
         app.camera.center,
-        scene::boundaries::center(&app.atlas, id).unwrap()
+        scene::boundaries::center(&app.atlas, id, true).unwrap()
     );
     let collection = app.points().unwrap();
     let features = collection["features"].as_array().unwrap();

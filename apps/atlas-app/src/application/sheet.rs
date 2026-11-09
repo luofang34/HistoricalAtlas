@@ -44,6 +44,40 @@ impl SheetView {
 }
 
 impl Application {
+    pub(super) fn source_drawings(&mut self, ui: &mut egui::Ui) {
+        let drawings: Vec<_> = self
+            .atlas
+            .data
+            .entities
+            .iter()
+            .filter(|entity| entity.body == self.body)
+            .filter_map(|entity| self.atlas.entry(entity.id))
+            .flat_map(|entry| &entry.drawings)
+            .filter_map(|drawing| drawing.units.first())
+            .filter_map(|unit| {
+                self.atlas
+                    .data
+                    .records
+                    .iter()
+                    .find(|r| r.id == unit.record_id)
+            })
+            .map(|record| (record.entity_id, record.observation.name.clone()))
+            .collect();
+        egui::ComboBox::from_id_salt("source-drawings")
+            .selected_text("Source drawings")
+            .show_ui(ui, |ui| {
+                for (id, name) in drawings {
+                    if ui
+                        .selectable_label(self.sheet.visible && self.selected == Some(id), name)
+                        .clicked()
+                    {
+                        self.select(id, false);
+                        self.sheet = SheetView::open();
+                    }
+                }
+            });
+    }
+
     pub(super) fn sheet_panel(&mut self, ui: &mut egui::Ui) -> bool {
         let drawing = self
             .selected

@@ -2,6 +2,10 @@
 
 use maplibre::{
     coords::{WorldTileCoords, ZoomLevel},
+    io::{
+        resource_loader::SharedLoader,
+        source_client::{HttpClient, SourceFetchError},
+    },
     raster::{AvailableRasterLayerData, RasterSourceId},
 };
 
@@ -28,6 +32,28 @@ const TERRAIN: [(i32, i32, &[u8]); 4] = [
         include_bytes!("../../assets/basemap/terrain-8-203-108.jpg"),
     ),
 ];
+
+#[derive(Clone)]
+struct BundledBasemap;
+
+#[async_trait::async_trait(?Send)]
+impl HttpClient for BundledBasemap {
+    async fn fetch(&self, url: &str) -> Result<Vec<u8>, SourceFetchError> {
+        if url == "atlas://natural-earth/0/0/0" {
+            return Ok(WORLD.to_vec());
+        }
+        TERRAIN
+            .iter()
+            .find(|(x, y, _)| url == format!("atlas://terrain/8/{x}/{y}"))
+            .map(|(_, _, bytes)| bytes.to_vec())
+            .ok_or_else(|| SourceFetchError::not_found(url))
+    }
+}
+
+/// Serve bundled tiles when navigation requests or reloads their URLs.
+pub fn loader() -> SharedLoader {
+    SharedLoader::new(BundledBasemap)
+}
 
 /// Decode locally bundled tiles; both renderers use the same geographic coverage.
 pub fn tiles() -> Result<Vec<AvailableRasterLayerData>, image::ImageError> {
