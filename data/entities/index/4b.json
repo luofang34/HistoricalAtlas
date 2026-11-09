@@ -1,0 +1,1058 @@
+{
+  "4b06f80e-f3a3-5b72-92d2-4438957f5218": {
+    "entity": {
+      "id": "4b06f80e-f3a3-5b72-92d2-4438957f5218",
+      "key": "earth/cn-gz/zhijin/qimo/potou-shang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "ce6fd858-a8c5-5e17-9d29-69018766e049",
+        "key": "zhijin-gazetteer-scan-b/p31/qimo/potou-shang",
+        "entity_id": "4b06f80e-f3a3-5b72-92d2-4438957f5218",
+        "source_id": "zhijin-gazetteer-scan-b",
+        "page_or_sheet": "31",
+        "scan_page": 39,
+        "locator": "坡头上 row in the mofeng brigade table section",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "坡头上",
+          "pinyin": "Potóushàng",
+          "population": 110,
+          "households": null,
+          "ethnicities": [
+            "青"
+          ],
+          "parent_id": "72942ef5-6238-5baa-9e64-002992e81c68",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "dd229786-b251-5f42-8488-e82d49af17c9",
+        "key": "zhijin-gazetteer-scan-b/p28/qimo/potou-shang",
+        "entity_id": "4b06f80e-f3a3-5b72-92d2-4438957f5218",
+        "source_id": "zhijin-gazetteer-scan-b",
+        "page_or_sheet": "28",
+        "scan_page": 36,
+        "locator": "Settlement symbol and adjacent label on the commune map",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "坡头上",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "4b13e508-16cc-53f4-a503-9d03642b966f": {
+    "entity": {
+      "id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+      "key": "earth/cn-gz/bijie/bijie-town",
+      "body": "earth",
+      "kind": "town"
+    },
+    "records": [
+      {
+        "id": "09f482a5-6418-5e59-8ff2-594d099117e0",
+        "key": "bijie-gazetteer/p20/bijie-town",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "20",
+        "scan_page": 55,
+        "locator": "row 1: 毕节镇",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "毕节镇",
+          "pinyin": "Bìjié Zhèn",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": "town",
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "105a49ac-9701-5d2c-95a4-28de837bcbf5",
+        "key": "bijie-gazetteer/p12/urban/town-composition",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "12",
+        "scan_page": 47,
+        "locator": "Town overview, final paragraph, street offices and suburban communes",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "毕节镇",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "3598db1c-f453-500e-b412-21cd4953cc68",
+          "rank": "town",
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": "毕节镇辖：解放路、威宁路、清毕路、双井路4个街道办事处，共56条街巷；镇郊有：翠屏、大桥、五里坪、德厚、头步、大兰等6个公社。"
+        }
+      },
+      {
+        "id": "34db7dd5-3abb-5952-9f8c-2556a8a12bec",
+        "key": "bijie-gazetteer/p12/town-1958",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "12",
+        "scan_page": 47,
+        "locator": "town administrative chronology: 1958",
+        "verbatim_quote": "1958年建灯塔人民公社",
+        "checked": true,
+        "source_date": {
+          "text": "1958年",
+          "convention": "Gregorian year",
+          "conversion_basis": null
+        },
+        "observation": {
+          "name": "灯塔人民公社",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": "commune",
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "377104d8-4477-5dc4-8481-5fef4832d02a",
+        "key": "bijie-gazetteer/p15/urban/town-heading",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "15",
+        "scan_page": 50,
+        "locator": "Urban table, 毕节镇 row",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "毕节镇",
+          "pinyin": "Bìjié Zhèn",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "3598db1c-f453-500e-b412-21cd4953cc68",
+          "rank": "town",
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "599ef703-e581-5fb8-8718-0dc49282d56f",
+        "key": "bijie-gazetteer/contents-1/bijie-town",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "Contents 1",
+        "scan_page": 30,
+        "locator": "Table of contents: bijie town chapter heading",
+        "verbatim_quote": "毕节镇",
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "毕节镇",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "3598db1c-f453-500e-b412-21cd4953cc68",
+          "rank": "town",
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "5b2ea9f6-2192-504a-90eb-850feda57bc7",
+        "key": "bijie-gazetteer/p12/town-1962",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "12",
+        "scan_page": 47,
+        "locator": "town administrative chronology: 1962",
+        "verbatim_quote": "1962年命名为城关镇",
+        "checked": true,
+        "source_date": {
+          "text": "1962年",
+          "convention": "Gregorian year",
+          "conversion_basis": null
+        },
+        "observation": {
+          "name": "城关镇",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": "town",
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "7fa4982e-c4cd-5f93-ae12-c27838682f6a",
+        "key": "bijie-gazetteer/p7/early-prc-town",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "7",
+        "scan_page": 42,
+        "locator": "early post-1949 administrative organization paragraph",
+        "verbatim_quote": "解放初县设区、乡、村，原有十六个区和一个镇——旧毕阳镇改为城关镇。",
+        "checked": true,
+        "source_date": {
+          "text": "解放初",
+          "convention": "early period after the 1949 liberation of Bijie",
+          "conversion_basis": null
+        },
+        "observation": {
+          "name": "城关镇",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": "town",
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [
+            {
+              "name": "毕阳镇",
+              "source_date": null,
+              "validity": null
+            }
+          ],
+          "note": null
+        }
+      },
+      {
+        "id": "aa53f624-ca5c-54fb-a4db-0dbc0fff49c4",
+        "key": "bijie-gazetteer/p12/town-1981",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "12",
+        "scan_page": 47,
+        "locator": "town administrative chronology: 1981",
+        "verbatim_quote": "1981年经地名普查，因与地区各县城关镇重名，报经上级批准改标准名称为毕节镇。",
+        "checked": true,
+        "source_date": {
+          "text": "1981年",
+          "convention": "Gregorian year",
+          "conversion_basis": null
+        },
+        "observation": {
+          "name": "毕节镇",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": "town",
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "e245eb54-27c7-54a8-a76c-679eecb4b346",
+        "key": "bijie-gazetteer/p12/town-1950",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "12",
+        "scan_page": 47,
+        "locator": "town administrative chronology: 1950",
+        "verbatim_quote": "1950年建立城关区",
+        "checked": true,
+        "source_date": {
+          "text": "1950年",
+          "convention": "Gregorian year",
+          "conversion_basis": null
+        },
+        "observation": {
+          "name": "城关区",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": "district",
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "fda53638-dcff-5563-9d35-4e67e67542dc",
+        "key": "bijie-gazetteer/p13/urban/town-population",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "13",
+        "scan_page": 48,
+        "locator": "First sentence, population paragraph continued from printed page 12 (scan 47)",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "毕节镇",
+          "pinyin": null,
+          "population": 113772,
+          "households": 24378,
+          "ethnicities": [],
+          "parent_id": "3598db1c-f453-500e-b412-21cd4953cc68",
+          "rank": "town",
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": "18种民族，24378户，113772人。镇人民政府驻天河路。"
+        }
+      }
+    ],
+    "estimates": [
+      {
+        "id": "37db2aae-1c59-587f-b108-59a143fdcc37",
+        "key": "editorial/bijie-town/1950-hierarchy",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "basis": [
+          "e245eb54-27c7-54a8-a76c-679eecb4b346",
+          "34db7dd5-3abb-5952-9f8c-2556a8a12bec"
+        ],
+        "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+        "value": {
+          "kind": "temporal",
+          "assertion": {
+            "validity": {
+              "start": {
+                "earliest": "-1577880000000",
+                "nominal": "-1562112000001",
+                "latest": "-1546344000001",
+                "precision": "year"
+              },
+              "end": {
+                "earliest": "-1325419200000",
+                "nominal": "-1309651200001",
+                "latest": "-1293883200001",
+                "precision": "year"
+              }
+            },
+            "value": {
+              "property": "hierarchy",
+              "value": {
+                "rank": "district",
+                "parent_id": null,
+                "seat_id": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "38944d40-a1c7-52cf-9ee6-9986b67cfa67",
+        "key": "editorial/bijie-town/1962-hierarchy",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "basis": [
+          "5b2ea9f6-2192-504a-90eb-850feda57bc7",
+          "aa53f624-ca5c-54fb-a4db-0dbc0fff49c4"
+        ],
+        "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+        "value": {
+          "kind": "temporal",
+          "assertion": {
+            "validity": {
+              "start": {
+                "earliest": "-1199188800000",
+                "nominal": "-1183420800001",
+                "latest": "-1167652800001",
+                "precision": "year"
+              },
+              "end": {
+                "earliest": "-599572800000",
+                "nominal": "-583804800001",
+                "latest": "-568036800001",
+                "precision": "year"
+              }
+            },
+            "value": {
+              "property": "hierarchy",
+              "value": {
+                "rank": "town",
+                "parent_id": null,
+                "seat_id": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "66bb99d2-6a4c-5c04-8759-1cac0cad468f",
+        "key": "editorial/bijie-town/1958-hierarchy",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "basis": [
+          "34db7dd5-3abb-5952-9f8c-2556a8a12bec",
+          "5b2ea9f6-2192-504a-90eb-850feda57bc7"
+        ],
+        "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+        "value": {
+          "kind": "temporal",
+          "assertion": {
+            "validity": {
+              "start": {
+                "earliest": "-1325419200000",
+                "nominal": "-1309651200001",
+                "latest": "-1293883200001",
+                "precision": "year"
+              },
+              "end": {
+                "earliest": "-1199188800000",
+                "nominal": "-1183420800001",
+                "latest": "-1167652800001",
+                "precision": "year"
+              }
+            },
+            "value": {
+              "property": "hierarchy",
+              "value": {
+                "rank": "commune",
+                "parent_id": null,
+                "seat_id": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "a51b7063-93bb-5640-a41f-d892cdd63a20",
+        "key": "editorial/bijie-town/1981-name",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "basis": [
+          "aa53f624-ca5c-54fb-a4db-0dbc0fff49c4"
+        ],
+        "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+        "value": {
+          "kind": "temporal",
+          "assertion": {
+            "validity": {
+              "start": {
+                "earliest": "-599572800000",
+                "nominal": "-583804800001",
+                "latest": "-568036800001",
+                "precision": "year"
+              },
+              "end": null
+            },
+            "value": {
+              "property": "name",
+              "value": {
+                "text": "毕节镇",
+                "kind": "standard",
+                "language": "zh"
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "af9bfe0d-3916-5f6b-9d65-f46871d579a2",
+        "key": "editorial/bijie-town/1950-name",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "basis": [
+          "e245eb54-27c7-54a8-a76c-679eecb4b346",
+          "34db7dd5-3abb-5952-9f8c-2556a8a12bec"
+        ],
+        "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+        "value": {
+          "kind": "temporal",
+          "assertion": {
+            "validity": {
+              "start": {
+                "earliest": "-1577880000000",
+                "nominal": "-1562112000001",
+                "latest": "-1546344000001",
+                "precision": "year"
+              },
+              "end": {
+                "earliest": "-1325419200000",
+                "nominal": "-1309651200001",
+                "latest": "-1293883200001",
+                "precision": "year"
+              }
+            },
+            "value": {
+              "property": "name",
+              "value": {
+                "text": "城关区",
+                "kind": "standard",
+                "language": "zh"
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "bb8d1649-ea92-5e94-963a-bff05e19fada",
+        "key": "editorial/bijie-town/1958-name",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "basis": [
+          "34db7dd5-3abb-5952-9f8c-2556a8a12bec",
+          "5b2ea9f6-2192-504a-90eb-850feda57bc7"
+        ],
+        "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+        "value": {
+          "kind": "temporal",
+          "assertion": {
+            "validity": {
+              "start": {
+                "earliest": "-1325419200000",
+                "nominal": "-1309651200001",
+                "latest": "-1293883200001",
+                "precision": "year"
+              },
+              "end": {
+                "earliest": "-1199188800000",
+                "nominal": "-1183420800001",
+                "latest": "-1167652800001",
+                "precision": "year"
+              }
+            },
+            "value": {
+              "property": "name",
+              "value": {
+                "text": "灯塔人民公社",
+                "kind": "standard",
+                "language": "zh"
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "d5a825d2-d849-51cd-ae85-a67d40cdac46",
+        "key": "editorial/bijie-town/1981-hierarchy",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "basis": [
+          "aa53f624-ca5c-54fb-a4db-0dbc0fff49c4"
+        ],
+        "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+        "value": {
+          "kind": "temporal",
+          "assertion": {
+            "validity": {
+              "start": {
+                "earliest": "-599572800000",
+                "nominal": "-583804800001",
+                "latest": "-568036800001",
+                "precision": "year"
+              },
+              "end": null
+            },
+            "value": {
+              "property": "hierarchy",
+              "value": {
+                "rank": "town",
+                "parent_id": null,
+                "seat_id": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "fb336db8-c194-5b1a-a77e-d6c60aa5f0a8",
+        "key": "editorial/bijie-town/1962-name",
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "basis": [
+          "5b2ea9f6-2192-504a-90eb-850feda57bc7",
+          "aa53f624-ca5c-54fb-a4db-0dbc0fff49c4"
+        ],
+        "brief": "The overview presents successive administrative forms of the town. Year-only transitions use Gregorian year bounds on the TT calendar axis, with midpoint nominal dates.",
+        "value": {
+          "kind": "temporal",
+          "assertion": {
+            "validity": {
+              "start": {
+                "earliest": "-1199188800000",
+                "nominal": "-1183420800001",
+                "latest": "-1167652800001",
+                "precision": "year"
+              },
+              "end": {
+                "earliest": "-599572800000",
+                "nominal": "-583804800001",
+                "latest": "-568036800001",
+                "precision": "year"
+              }
+            },
+            "value": {
+              "property": "name",
+              "value": {
+                "text": "城关镇",
+                "kind": "standard",
+                "language": "zh"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "disputes": [
+      {
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "alternatives": [
+          "e245eb54-27c7-54a8-a76c-679eecb4b346",
+          "7fa4982e-c4cd-5f93-ae12-c27838682f6a"
+        ],
+        "estimate_id": "37db2aae-1c59-587f-b108-59a143fdcc37",
+        "brief": "The county history calls the early post-1949 unit Chengguan Town; the town overview explicitly dates Chengguan District to 1950. The timeline follows the dated town chronology. The passages may describe different administrative levels."
+      },
+      {
+        "entity_id": "4b13e508-16cc-53f4-a503-9d03642b966f",
+        "alternatives": [
+          "e245eb54-27c7-54a8-a76c-679eecb4b346",
+          "7fa4982e-c4cd-5f93-ae12-c27838682f6a"
+        ],
+        "estimate_id": "af9bfe0d-3916-5f6b-9d65-f46871d579a2",
+        "brief": "The county history calls the early post-1949 unit Chengguan Town; the town overview explicitly dates Chengguan District to 1950. The timeline follows the dated town chronology. The passages may describe different administrative levels."
+      }
+    ]
+  },
+  "4b47788b-457b-5d20-b1dd-084bbbe8eda2": {
+    "entity": {
+      "id": "4b47788b-457b-5d20-b1dd-084bbbe8eda2",
+      "key": "earth/cn-gz/bijie/yihe/yihe-miao",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    "records": [
+      {
+        "id": "cfac6cf1-81cb-531e-8544-a35f28384891",
+        "key": "bijie-gazetteer/p46/yihe/yihe-miao",
+        "entity_id": "4b47788b-457b-5d20-b1dd-084bbbe8eda2",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "46",
+        "scan_page": 81,
+        "locator": "Place table, row 28: 以河庙",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "以河庙",
+          "pinyin": "Yéhé Miào",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "433592a8-ae0f-5be8-a158-bd1a1b6c9230",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.36666666666666,
+              "latitude": 27.266666666666666
+            },
+            "longitude_text": "105°22′",
+            "latitude_text": "27°16′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "现已废"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "4b4e1a68-f880-5850-8f93-e66d74c80f3f": {
+    "entity": {
+      "id": "4b4e1a68-f880-5850-8f93-e66d74c80f3f",
+      "key": "earth/cn-gz/bijie/shaba/dazhuping",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    "records": [
+      {
+        "id": "49dac0b8-bcf6-52c3-932a-e174f6505855",
+        "key": "bijie-gazetteer/p120/shaba/dazhuping",
+        "entity_id": "4b4e1a68-f880-5850-8f93-e66d74c80f3f",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "120",
+        "scan_page": 155,
+        "locator": "Place table, row 29: 大竹坪",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "大竹坪",
+          "pinyin": "Dàzhúpíng",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "d9b3d74d-87a8-54f4-b1b6-e3cc66140f8c",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.1,
+              "latitude": 27.233333333333334
+            },
+            "longitude_text": "105°06′",
+            "latitude_text": "27°14′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "地名"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "4b55cca0-4895-518a-8375-c8ea33904fb2": {
+    "entity": {
+      "id": "4b55cca0-4895-518a-8375-c8ea33904fb2",
+      "key": "earth/cn-gz/bijie/wangfeng/zhangzhongling",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    "records": [
+      {
+        "id": "d7b87425-8cfb-5299-8cfd-2c537c26ac9f",
+        "key": "bijie-gazetteer/p113/wangfeng/zhangzhongling",
+        "entity_id": "4b55cca0-4895-518a-8375-c8ea33904fb2",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "113",
+        "scan_page": 148,
+        "locator": "Place table, row 6: 张中岭",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "张中岭",
+          "pinyin": "Zhāngzhōnglín",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "ef27dd38-ff2f-5849-be0a-a2b0b3d8772f",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.16666666666669,
+              "latitude": 27.216666666666665
+            },
+            "longitude_text": "105°10′",
+            "latitude_text": "27°13′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "山峰、海拔1906.9米"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "4b79e7b3-1870-535e-b273-45073ad55527": {
+    "entity": {
+      "id": "4b79e7b3-1870-535e-b273-45073ad55527",
+      "key": "earth/cn-gz/bijie/qingchang-district/saobalin-haizi",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    "records": [
+      {
+        "id": "3c28612b-d423-58a4-8bd2-1e1037c7f81a",
+        "key": "bijie-gazetteer/p71/qingchang-district/highest-point",
+        "entity_id": "4b79e7b3-1870-535e-b273-45073ad55527",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "71",
+        "scan_page": 106,
+        "locator": "District overview, highest-point name and elevation; correspondence with 少把林梁子 in the table remains unresolved",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "扫把林海子",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "8285bd93-e8fc-5b7f-9af7-2f48ba9b104e",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": "最高的扫把林海子海拔为2154.1米。"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "4b94ad49-6cde-5d90-a7df-17b3319ee820": {
+    "entity": {
+      "id": "4b94ad49-6cde-5d90-a7df-17b3319ee820",
+      "key": "earth/cn-gz/bijie/wangzhang/wangzhangjie",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "0db92d13-4b55-5d12-9025-540256cec4eb",
+        "key": "bijie-gazetteer/p172/wangzhang/wangzhangjie",
+        "entity_id": "4b94ad49-6cde-5d90-a7df-17b3319ee820",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "172",
+        "scan_page": 207,
+        "locator": "Place table, row 3: 王张街",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "王张街",
+          "pinyin": "Wángzhāngjiē",
+          "population": 1175,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "3f425a0d-36ac-5227-82a5-c49afce34f70",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.43333333333334,
+              "latitude": 27.35
+            },
+            "longitude_text": "105°26′",
+            "latitude_text": "27°21′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "公社、大队驻地"
+        }
+      },
+      {
+        "id": "2e96e19d-5a7f-5bcd-8d4c-3abce9deb0d0",
+        "key": "bijie-gazetteer/p171/wangzhang/wangzhangjie/name-history",
+        "entity_id": "4b94ad49-6cde-5d90-a7df-17b3319ee820",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "171",
+        "scan_page": 206,
+        "locator": "Overview, name history",
+        "verbatim_quote": "王张官屯，始置于明初，有王、张二姓官员戍守屯田，故得名。清代以后成小集市，名王张街，民国沿称属新张乡辖。",
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "王张街",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [
+            {
+              "name": "王张官屯",
+              "source_date": {
+                "text": "明初",
+                "convention": "Chinese historical period",
+                "conversion_basis": null
+              },
+              "validity": null
+            }
+          ],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "4ba63d3f-b6ca-5cbe-89a2-004047979674": {
+    "entity": {
+      "id": "4ba63d3f-b6ca-5cbe-89a2-004047979674",
+      "key": "earth/cn-gz/bijie/efeng/walong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "0c48be0b-9256-5b0f-b660-9918ef478e4c",
+        "key": "bijie-gazetteer/p226/efeng/walong",
+        "entity_id": "4ba63d3f-b6ca-5cbe-89a2-004047979674",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "226",
+        "scan_page": 261,
+        "locator": "Place table, row 22: 挖茏",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "挖茏",
+          "pinyin": "Wālóng",
+          "population": 32,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "7033d6d0-9619-5aa1-a877-3be762b3fb9d",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.45,
+              "latitude": 27.666666666666668
+            },
+            "longitude_text": "105°27′",
+            "latitude_text": "27°40′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "村"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "4bace9d2-8ca1-5872-b26c-0fe8808735c2": {
+    "entity": {
+      "id": "4bace9d2-8ca1-5872-b26c-0fe8808735c2",
+      "key": "earth/cn-gz/bijie/hongyan/hongyangou/yezhutang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "c6a7acd9-d03a-553d-83f8-0ce386559c77",
+        "key": "bijie-gazetteer/p312/hongyan/hongyangou/yezhutang",
+        "entity_id": "4bace9d2-8ca1-5872-b26c-0fe8808735c2",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "312",
+        "scan_page": 347,
+        "locator": "Place table, 野猪塘 row",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "野猪塘",
+          "pinyin": "Yězhūtáng",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "85c7ea06-044d-5d00-98c0-eddfd8f9b217",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.53333333333332,
+              "latitude": 27.616666666666667
+            },
+            "longitude_text": "105°32′",
+            "latitude_text": "27°37′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "村"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "4bc48f55-8994-5c6b-96d0-8f4401bd8b8d": {
+    "entity": {
+      "id": "4bc48f55-8994-5c6b-96d0-8f4401bd8b8d",
+      "key": "earth/cn-gz/bijie/hongyan/langou/langouyakou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "2f9126b4-fda2-503b-9f24-a867ad193186",
+        "key": "bijie-gazetteer/p313/hongyan/langou/langouyakou",
+        "entity_id": "4bc48f55-8994-5c6b-96d0-8f4401bd8b8d",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "313",
+        "scan_page": 348,
+        "locator": "Place table, 兰沟垭口 row",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "兰沟垭口",
+          "pinyin": "Nángōuyākǒu",
+          "population": 145,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "1899e61c-37b4-5fa8-bb20-325605664ebc",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.56666666666666,
+              "latitude": 27.616666666666667
+            },
+            "longitude_text": "105°34′",
+            "latitude_text": "27°37′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "大队驻地"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  }
+}

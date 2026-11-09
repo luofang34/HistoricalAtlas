@@ -1,0 +1,1647 @@
+{
+  "811d6276-4027-56c4-9fdf-3833c0efbe13": {
+    "entity": {
+      "id": "811d6276-4027-56c4-9fdf-3833c0efbe13",
+      "key": "earth/cn-gz/zhijin/qimo/lujia-chong",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "6c57f75a-9faf-52c0-95a0-01011ba38892",
+        "key": "zhijin-gazetteer-scan-b/p28/qimo/lujia-chong",
+        "entity_id": "811d6276-4027-56c4-9fdf-3833c0efbe13",
+        "source_id": "zhijin-gazetteer-scan-b",
+        "page_or_sheet": "28",
+        "scan_page": 36,
+        "locator": "Settlement symbol and adjacent label on the commune map",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "卢家冲",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "81205b73-dd00-50c8-b4d2-f81f5773e316": {
+    "entity": {
+      "id": "81205b73-dd00-50c8-b4d2-f81f5773e316",
+      "key": "earth/cn-gz/bijie/gaoshanpu/xiaogou/xinlin",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "b1a7e4c9-91df-5d1b-8c5b-14d37ffdc13d",
+        "key": "bijie-gazetteer/p307/gaoshanpu/xiaogou/xinlin",
+        "entity_id": "81205b73-dd00-50c8-b4d2-f81f5773e316",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "307",
+        "scan_page": 342,
+        "locator": "Place table, row 32: 新林",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "新林",
+          "pinyin": "Xīnlín",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "d1a1b418-0bc0-53e9-a704-cf3b59c161af",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.58333333333331,
+              "latitude": 27.683333333333337
+            },
+            "longitude_text": "105°35′",
+            "latitude_text": "27°41′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "村"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "8120e4aa-8131-5446-9a99-ef20acd5027b": {
+    "entity": {
+      "id": "8120e4aa-8131-5446-9a99-ef20acd5027b",
+      "key": "earth/cn-gz/bijie/yihe/yihe",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "f9463038-fb19-585d-aa28-d7ff9e457c7d",
+        "key": "bijie-gazetteer/p46/yihe/yihe",
+        "entity_id": "8120e4aa-8131-5446-9a99-ef20acd5027b",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "46",
+        "scan_page": 81,
+        "locator": "Place table, row 3: 以河",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "以河",
+          "pinyin": "Yǐhé",
+          "population": 500,
+          "households": null,
+          "ethnicities": [
+            "汉",
+            "苗",
+            "南京"
+          ],
+          "parent_id": "a4745b9e-4474-54f2-a258-5b41a742b488",
+          "rank": "settlement",
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.36666666666666,
+              "latitude": 27.283333333333335
+            },
+            "longitude_text": "105°22′",
+            "latitude_text": "27°17′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "公社、大队驻地"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "812c4295-7186-520e-a1fb-ddbf14017236": {
+    "entity": {
+      "id": "812c4295-7186-520e-a1fb-ddbf14017236",
+      "key": "earth/cn-gz/bijie/taiji/qiaotou/linglingshang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "69ac53a2-5fb0-5826-b57e-0cb861ab370e",
+        "key": "bijie-gazetteer/p231/taiji/qiaotou/linglingshang",
+        "entity_id": "812c4295-7186-520e-a1fb-ddbf14017236",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "231",
+        "scan_page": 266,
+        "locator": "Place table, row 22: 岭岭上",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "岭岭上",
+          "pinyin": "Lǐnglǐngshàng",
+          "population": 95,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "68a1f139-1d38-53c8-b712-1afefa5c431c",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.45,
+              "latitude": 27.583333333333332
+            },
+            "longitude_text": "105°27′",
+            "latitude_text": "27°35′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "8154fa36-96ac-574d-ab9b-4e921a819465": {
+    "entity": {
+      "id": "8154fa36-96ac-574d-ab9b-4e921a819465",
+      "key": "earth/cn-gz/bijie/puyi/banpo/banlitian",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "eb9e6f17-0404-5109-9dca-811060594aa8",
+        "key": "bijie-gazetteer/p238/puyi/banpo/banlitian",
+        "entity_id": "8154fa36-96ac-574d-ab9b-4e921a819465",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "238",
+        "scan_page": 273,
+        "locator": "Place table, row 25: 板栗田",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "板栗田",
+          "pinyin": "Bǎnlìtián",
+          "population": 67,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "394f3932-47ad-53e1-a913-d9e5a0d32775",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.65,
+              "latitude": 27.583333333333332
+            },
+            "longitude_text": "105°39′",
+            "latitude_text": "27°35′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "8156385a-6d86-5892-9aed-51ed577b6ff9": {
+    "entity": {
+      "id": "8156385a-6d86-5892-9aed-51ed577b6ff9",
+      "key": "earth/cn-gz/bijie/pangxie/gaoqiao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "4444aea1-e591-5549-bfa3-c9dda7ce2813",
+        "key": "bijie-gazetteer/p163/pangxie/gaoqiao",
+        "entity_id": "8156385a-6d86-5892-9aed-51ed577b6ff9",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "163",
+        "scan_page": 198,
+        "locator": "Place table, row 4: 高桥",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "高桥",
+          "pinyin": "Gāoqiáo",
+          "population": 141,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "28b80463-f663-5d2f-a38e-d6d71872e004",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.28333333333332,
+              "latitude": 27.416666666666668
+            },
+            "longitude_text": "105°17′",
+            "latitude_text": "27°25′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "大队驻地"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "81744081-e961-59ef-a6d8-93c1575cfcf7": {
+    "entity": {
+      "id": "81744081-e961-59ef-a6d8-93c1575cfcf7",
+      "key": "earth/cn-gz/bijie/xiaohe/xiaohe-ferry",
+      "body": "earth",
+      "kind": "facility"
+    },
+    "records": [
+      {
+        "id": "1ba4a838-1556-572c-a3dc-7c83bc27d3a0",
+        "key": "bijie-gazetteer/p255/xiaohe/xiaohe-ferry/salt-route",
+        "entity_id": "81744081-e961-59ef-a6d8-93c1575cfcf7",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "255",
+        "scan_page": 290,
+        "locator": "Commune overview, salt-route",
+        "verbatim_quote": "小河渡口在满清王朝及国民党统治时期，为川盐入境的运输孔道，",
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "小河渡口",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "c5ad646a-7019-5ea5-9a70-8856b021735e",
+        "key": "bijie-gazetteer/p257/xiaohe/xiaohe-ferry",
+        "entity_id": "81744081-e961-59ef-a6d8-93c1575cfcf7",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "257",
+        "scan_page": 292,
+        "locator": "Place table, row 1: 小河渡口",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "小河渡口",
+          "pinyin": "Xiǎohé Dùkǒu",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "08922bef-7c60-5335-9fc8-01400b3b0f12",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.61666666666666,
+              "latitude": 27.65
+            },
+            "longitude_text": "105°37′",
+            "latitude_text": "27°39′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "渡口"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "818021c9-5505-53b1-bd87-b44c1d69e1a6": {
+    "entity": {
+      "id": "818021c9-5505-53b1-bd87-b44c1d69e1a6",
+      "key": "earth/cn-gz/bijie/guole/wangpo-ridge",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    "records": [
+      {
+        "id": "73b7e81b-ebd9-5be0-a1d3-0586bd1146ba",
+        "key": "bijie-gazetteer/p175/guole/wangpo-ridge/height",
+        "entity_id": "818021c9-5505-53b1-bd87-b44c1d69e1a6",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "175",
+        "scan_page": 210,
+        "locator": "Overview, height",
+        "verbatim_quote": "东北最高处王婆岭海拔1862.1米，",
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "王婆岭",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "10b464a4-336c-50c4-996c-ed31c0b34c77",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "818bbe4f-8b18-5ddb-a442-5c689744ef00": {
+    "entity": {
+      "id": "818bbe4f-8b18-5ddb-a442-5c689744ef00",
+      "key": "earth/cn-gz/bijie/cengtai/qingchun/tangfang",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    "records": [
+      {
+        "id": "4c7952bf-c415-5ebd-88c5-3b66cef77957",
+        "key": "bijie-gazetteer/p296/cengtai/qingchun/tangfang",
+        "entity_id": "818bbe4f-8b18-5ddb-a442-5c689744ef00",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "296",
+        "scan_page": 331,
+        "locator": "Place table, row 1: 塘房",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "塘房",
+          "pinyin": "Tàngfàng",
+          "population": 74,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "c46fb929-79ab-51cd-9420-efc7c4747b52",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.43333333333334,
+              "latitude": 27.433333333333337
+            },
+            "longitude_text": "105°26′",
+            "latitude_text": "27°26′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "地"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "8197d356-3151-52c4-8d94-57f203bb4523": {
+    "entity": {
+      "id": "8197d356-3151-52c4-8d94-57f203bb4523",
+      "key": "earth/cn-gz/bijie/baohe/xiaotungou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "53d0f233-4f6e-57f3-ba53-261471a9fd0f",
+        "key": "bijie-gazetteer/p52/baohe/xiaotungou",
+        "entity_id": "8197d356-3151-52c4-8d94-57f203bb4523",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "52",
+        "scan_page": 87,
+        "locator": "Place table, row 17: 小屯沟",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "小屯沟",
+          "pinyin": "Xiǎotúngōu",
+          "population": 786,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "17c57d08-6bc1-53e1-884e-ffe774ab2202",
+          "rank": "settlement",
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.38333333333334,
+              "latitude": 27.283333333333335
+            },
+            "longitude_text": "105°23′",
+            "latitude_text": "27°17′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "大队驻地"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "819e9ee5-e1e6-5bd4-9497-49beb8bf9692": {
+    "entity": {
+      "id": "819e9ee5-e1e6-5bd4-9497-49beb8bf9692",
+      "key": "earth/cn-gz/bijie/yanzikou/huangnipo-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    "records": [
+      {
+        "id": "92c6dd85-66c2-5e85-81d8-6e7ec4cea3d7",
+        "key": "bijie-gazetteer/p211/yanzikou/huangnipo-brigade",
+        "entity_id": "819e9ee5-e1e6-5bd4-9497-49beb8bf9692",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "211",
+        "scan_page": 246,
+        "locator": "Place table, row 2: 黄泥坡大队",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "黄泥坡大队",
+          "pinyin": "Huángnípō Dàduì",
+          "population": 1683,
+          "households": null,
+          "ethnicities": [
+            "汉",
+            "苗"
+          ],
+          "parent_id": "0643c1be-7622-5fb9-9518-49972efe9238",
+          "rank": "brigade",
+          "seat_id": "00cf439e-654c-5894-a1ba-aafa25918b0b",
+          "coordinate": {
+            "point": {
+              "longitude": 105.43333333333334,
+              "latitude": 27.6
+            },
+            "longitude_text": "105°26′",
+            "latitude_text": "27°36′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "81b086bd-7273-591d-8053-62d328d02387": {
+    "entity": {
+      "id": "81b086bd-7273-591d-8053-62d328d02387",
+      "key": "earth/cn-gz/bijie/guanyinqiao-commune",
+      "body": "earth",
+      "kind": "commune"
+    },
+    "records": [
+      {
+        "id": "02ddc778-96ce-5a0c-aef4-1db5d80b15d4",
+        "key": "bijie-gazetteer/p156/guanyinqiao-commune/extent",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "156",
+        "scan_page": 191,
+        "locator": "Overview, extent",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "观音桥公社",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "extent": "在毕节县城东北，相距五公里，川滇东路横穿东西，田坝桥河纵贯社境，北入南流，中部与公路交叉，成十字形。社境位于东经105°19′至105°20′，北纬27°20′至27°21′之间，总面积6.9平方公里。东邻迎宾，南频德厚，西接五里坪，北与田坝桥等公社接壤。",
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "0f5e5bbb-d6ac-5e71-908e-f64ebb858d70",
+        "key": "bijie-gazetteer/p156/guanyinqiao-commune/predecessors",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "156",
+        "scan_page": 191,
+        "locator": "Overview, predecessors",
+        "verbatim_quote": "民国为八寨乡六保地，解放后设村，土改后建乡名观音乡，办初级社，56年进入高级社，并入田坝桥，",
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "观音桥公社",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "259cf5b0-d69d-5cd5-9cfd-119c446fc885",
+        "key": "bijie-gazetteer/p156/guanyinqiao-commune/establishment",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "156",
+        "scan_page": 191,
+        "locator": "Overview, establishment",
+        "verbatim_quote": "1958年成立人民公社时又分划为观音桥公社",
+        "checked": true,
+        "source_date": {
+          "text": "1958年",
+          "convention": "Gregorian year",
+          "conversion_basis": null
+        },
+        "observation": {
+          "name": "观音桥公社",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "610e4c0e-f957-586b-83cb-47fa9a7e3c13",
+        "key": "bijie-gazetteer/town-map/guanyinqiao-commune",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "毕节镇地名图",
+        "scan_page": 22,
+        "locator": "观音桥公社: commune seat symbol",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "观音桥公社",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": "commune",
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "82be1daf-8da6-5e91-8abc-6b6724c6951d",
+        "key": "bijie-gazetteer/p156/guanyinqiao-commune/hongwei-renaming",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "156",
+        "scan_page": 191,
+        "locator": "Overview, hongwei renaming",
+        "verbatim_quote": "文革期间任意改名为红卫公社",
+        "checked": true,
+        "source_date": {
+          "text": "文革期间",
+          "convention": "Chinese historical period",
+          "conversion_basis": "ccp-history-resolution-1981, section 19 (https://www.12371.cn/2021/11/09/ARTI1636454249781129.shtml), dates the Cultural Revolution to May 1966 through October 1976. Retain that entire period as the renaming bounds; the midpoint is a representative value."
+        },
+        "observation": {
+          "name": "红卫公社",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "abdc6654-80cd-5968-9fe5-a83be833923d",
+        "key": "bijie-gazetteer/p157/guanyinqiao-commune",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "157",
+        "scan_page": 192,
+        "locator": "Place table, row 1: 观音桥公社",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "观音桥公社",
+          "pinyin": "Guānyīnqiáo Gōngshè",
+          "population": 3931,
+          "households": null,
+          "ethnicities": [
+            "汉",
+            "苗",
+            "彝"
+          ],
+          "parent_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+          "rank": "commune",
+          "seat_id": "106a1571-8855-5d59-a3b4-80bacb73c238",
+          "coordinate": {
+            "point": {
+              "longitude": 105.31666666666666,
+              "latitude": 27.333333333333332
+            },
+            "longitude_text": "105°19′",
+            "latitude_text": "27°20′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "c458fb19-ca78-55b0-8800-1de39e3597b4",
+        "key": "bijie-gazetteer/p156/guanyinqiao-commune/relief",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "156",
+        "scan_page": 191,
+        "locator": "Overview, relief",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "观音桥公社",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "extent": "地势北面最高海拔1762.3米，南面较低处下箐口，海拔1440米，中部成带形槽地。",
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "cd25c661-62bb-5d42-a3ee-ee2495aafb69",
+        "key": "bijie-gazetteer/p156/guanyinqiao-commune/restoration",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "156",
+        "scan_page": 191,
+        "locator": "Overview, restoration",
+        "verbatim_quote": "81年经地名普查后，根据历史沿称，复名观音桥公社。",
+        "checked": true,
+        "source_date": {
+          "text": "81年",
+          "convention": "Gregorian year",
+          "conversion_basis": "The overview places this restoration after the Cultural Revolution; interpret the abbreviated year as 1981."
+        },
+        "observation": {
+          "name": "观音桥公社",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [
+            {
+              "name": "红卫公社",
+              "source_date": {
+                "text": "文革期间",
+                "convention": "Chinese historical period",
+                "conversion_basis": "ccp-history-resolution-1981, section 19 (https://www.12371.cn/2021/11/09/ARTI1636454249781129.shtml), dates the Cultural Revolution to May 1966 through October 1976. Retain that entire period as the renaming bounds; the midpoint is a representative value."
+              },
+              "validity": null
+            }
+          ],
+          "note": null
+        }
+      },
+      {
+        "id": "e50d4b67-6438-585b-a4fc-9f28c49b67cf",
+        "key": "bijie-gazetteer/p156/guanyinqiao-commune/population",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "156",
+        "scan_page": 191,
+        "locator": "Overview, population",
+        "verbatim_quote": "直辖40个生产队，14个自然村，汉、彝、苗、蔡、南京等民族杂居。总人口：786户，3931人。其中：苗族152人，彝族42人，余为汉族。",
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "观音桥公社",
+          "pinyin": null,
+          "population": 3931,
+          "households": 786,
+          "ethnicities": [
+            "汉",
+            "彝",
+            "苗",
+            "蔡",
+            "南京"
+          ],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "ff41b27d-0dd5-5b73-a7b4-26b179eb2cab",
+        "key": "bijie-gazetteer/contents-3/guanyinqiao-commune",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "Contents 3",
+        "scan_page": 32,
+        "locator": "Table of contents, 海子街区 chapter: commune overview listed on printed page 156; chapter continued from the preceding contents page",
+        "verbatim_quote": "观音桥公社",
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "观音桥公社",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "ae9a8021-2b4b-52d5-9e52-04d6226b4bd2",
+          "rank": "commune",
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [
+      {
+        "id": "38d1f7a4-a02c-59ad-8afa-736cd62ac6f1",
+        "key": "editorial/bijie/guanyinqiao-commune/initial-name",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "basis": [
+          "259cf5b0-d69d-5cd5-9cfd-119c446fc885",
+          "82be1daf-8da6-5e91-8abc-6b6724c6951d"
+        ],
+        "brief": "ccp-history-resolution-1981, section 19 (https://www.12371.cn/2021/11/09/ARTI1636454249781129.shtml), dates the Cultural Revolution to May 1966 through October 1976. Retain that entire period as the renaming bounds; the midpoint is a representative value.",
+        "value": {
+          "kind": "temporal",
+          "assertion": {
+            "validity": {
+              "start": {
+                "earliest": "-1325419200000",
+                "nominal": "-1309651200001",
+                "latest": "-1293883200001",
+                "precision": "year"
+              },
+              "end": {
+                "earliest": "-1062590400000",
+                "nominal": "-896832000001",
+                "latest": "-731073600001",
+                "precision": "decade"
+              }
+            },
+            "value": {
+              "property": "name",
+              "value": {
+                "text": "观音桥公社",
+                "kind": "standard",
+                "language": "zh-Hans"
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "7957eb44-dd23-5570-8d5c-ee08ca747264",
+        "key": "editorial/bijie/guanyinqiao-commune/restored-name",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "basis": [
+          "cd25c661-62bb-5d42-a3ee-ee2495aafb69"
+        ],
+        "brief": "Use the stated name between the cited changes, retaining their date bounds.",
+        "value": {
+          "kind": "temporal",
+          "assertion": {
+            "validity": {
+              "start": {
+                "earliest": "-599572800000",
+                "nominal": "-583804800001",
+                "latest": "-568036800001",
+                "precision": "year"
+              },
+              "end": null
+            },
+            "value": {
+              "property": "name",
+              "value": {
+                "text": "观音桥公社",
+                "kind": "standard",
+                "language": "zh-Hans"
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "b9bb50d2-509b-58c5-96e5-ed064e24e210",
+        "key": "editorial/bijie/guanyinqiao-commune/hongwei-name",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "basis": [
+          "82be1daf-8da6-5e91-8abc-6b6724c6951d",
+          "cd25c661-62bb-5d42-a3ee-ee2495aafb69"
+        ],
+        "brief": "ccp-history-resolution-1981, section 19 (https://www.12371.cn/2021/11/09/ARTI1636454249781129.shtml), dates the Cultural Revolution to May 1966 through October 1976. Retain that entire period as the renaming bounds; the midpoint is a representative value.",
+        "value": {
+          "kind": "temporal",
+          "assertion": {
+            "validity": {
+              "start": {
+                "earliest": "-1062590400000",
+                "nominal": "-896832000001",
+                "latest": "-731073600001",
+                "precision": "decade"
+              },
+              "end": {
+                "earliest": "-599572800000",
+                "nominal": "-583804800001",
+                "latest": "-568036800001",
+                "precision": "year"
+              }
+            },
+            "value": {
+              "property": "name",
+              "value": {
+                "text": "红卫公社",
+                "kind": "standard",
+                "language": "zh-Hans"
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "d400a0e4-bd61-5e1d-b8cb-54f04c669915",
+        "key": "bijie-gazetteer/town-map/guanyinqiao-commune/registered-location",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "basis": [
+          "111012a9-9038-526e-b96a-fe0d4574e3a1",
+          "13612164-eb54-5b80-9403-2221fa234831",
+          "16c8f60e-9247-55be-9102-80f934894d16",
+          "17e831d9-4fa7-5394-bc5f-77fb789e1443",
+          "21f3ba91-ee20-5ed5-a26d-7084e1dd4ff9",
+          "232a3ab5-4ef8-5929-95d1-1e0b10e46b7e",
+          "260f4fa2-766f-53c9-bd1a-465bb89fec0f",
+          "27366a25-bc87-5bce-8214-fcea844763bb",
+          "28fd172e-dd9d-59e3-b708-9a3f27b817a1",
+          "337c4f81-b41e-57e8-8364-34f10e3aaff7",
+          "377fb544-f4b1-50b8-b078-657c2cd4ac9e",
+          "3ad0d673-e9cd-5323-9d45-83055b55ccb2",
+          "3e973736-1d2b-515a-bed6-96d4d93631e9",
+          "3fa56487-d128-5f3a-a915-b3d64dda2d79",
+          "526bd021-3d96-5bbd-898c-132760ad1cf1",
+          "53c17e88-1c81-5472-9714-b26671eb8fa4",
+          "54b5eb8c-49ae-5ff5-b796-fa0c7928f20e",
+          "54ce43f0-1680-5fb5-b351-372b70bb0eab",
+          "57957725-ca0b-51b0-ac7b-4b2d80c88a5f",
+          "5ac6c2e9-a92e-59fe-a1c2-2884ceec4722",
+          "5ca66ffe-33e5-592f-9aab-a6b158da23f7",
+          "5fa35cc7-405c-5e57-a1f0-f2373afa5503",
+          "610e4c0e-f957-586b-83cb-47fa9a7e3c13",
+          "623c2fb1-3957-51c2-82a7-0ee8d784afd3",
+          "6335376a-eb5e-5d9d-9dfc-a7664cbfdc2e",
+          "67c5d781-e71e-558a-8d4c-03b8a97722dc",
+          "6907ae0a-f25b-57f8-b8e3-70f944e8855a",
+          "6b124df2-137f-57f2-bfb2-91f16a6235b1",
+          "6fa04a1f-973c-5fd6-b677-af0cf5fca5fd",
+          "74b428cc-6262-56af-a3dc-8ca951fe67b6",
+          "74c54029-b30a-5e02-910e-6da94d78ae66",
+          "7a004f1c-3d23-5870-a05a-77dd9f3d21cb",
+          "7b7c1c39-69c8-5326-9748-4608d21a60be",
+          "7da16eae-3193-5cec-ad97-7b947726b223",
+          "836b58a6-faea-5ae3-b68e-12063fcd9c42",
+          "8c452e95-898c-5b93-9eca-0bbf47eb45b2",
+          "8f7d6d4c-5310-571d-adef-ae9bbfcb968c",
+          "96bebc52-4f17-5584-8138-4ce82003d960",
+          "9cdd6412-84b3-537e-a1e4-d4618804a719",
+          "abdc6654-80cd-5968-9fe5-a83be833923d",
+          "acc21a5b-deca-537f-b996-0694439d322a",
+          "b82f977c-646b-53a5-9580-67bd72fc501c",
+          "c64e6c6f-c8c7-574a-8614-2802e8ac789b",
+          "c9835f25-b2fb-568b-9c51-f5bf263e7457",
+          "cb1ece7d-b5b9-5306-ade3-8b7b686be9f0",
+          "ddfb132c-e649-59b0-8cdf-7c3d3d704b4a",
+          "defca568-c94e-581a-af87-0a09ae806328",
+          "e2821358-72b7-5fa2-8ee0-a81c5ec67d39",
+          "eabcc8a6-e312-5c7e-8bdd-3531e8c72f9c",
+          "eae3449f-f708-5ef0-8888-ae970e9f68fc",
+          "ebe12c0f-cc9b-5cac-8106-9b29f272bf79",
+          "ebf8f056-000f-506d-b5f8-5ab8a8a0f03f",
+          "f327db95-647f-590b-b90e-b6a0a82182c9",
+          "f6378e7f-f4b8-514a-995e-84751b6b434e",
+          "fb077623-d1d9-5d79-9b95-bbecbdf3d5a3",
+          "fb7ebfda-b96a-5f31-9cce-3fa7bb8a21e6",
+          "fc7e4357-3218-5dc2-a97d-1dd3d7f822c6",
+          "fe0310a7-67ae-59c3-b596-0492097cafd1"
+        ],
+        "brief": "Affine map position from 毕节镇地名图. Registration: maps/bijie-town.json. The 4.5 km working allowance rounds up the largest of 25 independent table checks (about 2.81 km at 煤洞) plus the half-cell diagonal of the one-arcminute reference grid (about 1.24 km). The registration preserves relative map positions in the source coordinates; the source datum is unspecified.",
+        "value": {
+          "kind": "map_location",
+          "record_id": "610e4c0e-f957-586b-83cb-47fa9a7e3c13",
+          "point": {
+            "longitude": 105.32564640069317,
+            "latitude": 27.335031775569142
+          },
+          "datum": "unspecified",
+          "uncertainty_m": 4500.0,
+          "registration": "maps/bijie-town.json"
+        }
+      },
+      {
+        "id": "faa0c66b-d498-5e86-a8c6-e4851f16f31b",
+        "key": "editorial/bijie/guanyinqiao-commune/establishment",
+        "entity_id": "81b086bd-7273-591d-8053-62d328d02387",
+        "basis": [
+          "259cf5b0-d69d-5cd5-9cfd-119c446fc885"
+        ],
+        "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+        "value": {
+          "kind": "origin",
+          "time": {
+            "constraint": "estimated",
+            "instant": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            }
+          }
+        }
+      }
+    ],
+    "disputes": [],
+    "derived_boundaries": [
+      {
+        "record_id": "ff41b27d-0dd5-5b73-a7b4-26b179eb2cab",
+        "basis": [
+          "0573ed53-117a-5193-ad41-9f6b31057c5c",
+          "106868a7-4dec-5cc6-bcf7-133c9253e9fd",
+          "a832a323-3729-5faa-bbea-031eabbf9332",
+          "abdc6654-80cd-5968-9fe5-a83be833923d",
+          "ac0b43ec-c7cc-55e9-bed4-608042ba19b3",
+          "cee70005-9a51-5956-9f26-2a246e0dbf46",
+          "e68846ef-c4db-55c3-bb5b-178948fcbad2",
+          "ff41b27d-0dd5-5b73-a7b4-26b179eb2cab"
+        ],
+        "region": {
+          "unit": 36,
+          "vertices": [
+            {
+              "x": 105.29434204101562,
+              "y": 27.333955100147556
+            },
+            {
+              "x": 105.29434204101562,
+              "y": 27.331515160144626
+            },
+            {
+              "x": 105.29983520507812,
+              "y": 27.331515160144626
+            },
+            {
+              "x": 105.29983520507812,
+              "y": 27.32907516643884
+            },
+            {
+              "x": 105.30532836914062,
+              "y": 27.32907516643884
+            },
+            {
+              "x": 105.30532836914062,
+              "y": 27.324195017931693
+            },
+            {
+              "x": 105.30807495117188,
+              "y": 27.324195017931693
+            },
+            {
+              "x": 105.30807495117188,
+              "y": 27.32175486313682
+            },
+            {
+              "x": 105.31082153320311,
+              "y": 27.32175486313682
+            },
+            {
+              "x": 105.31082153320311,
+              "y": 27.319314654652064
+            },
+            {
+              "x": 105.32180786132812,
+              "y": 27.319314654652064
+            },
+            {
+              "x": 105.32180786132812,
+              "y": 27.324195017931693
+            },
+            {
+              "x": 105.32730102539062,
+              "y": 27.324195017931693
+            },
+            {
+              "x": 105.32730102539062,
+              "y": 27.326635119033455
+            },
+            {
+              "x": 105.33004760742188,
+              "y": 27.326635119033455
+            },
+            {
+              "x": 105.33004760742188,
+              "y": 27.32907516643884
+            },
+            {
+              "x": 105.33828735351564,
+              "y": 27.32907516643884
+            },
+            {
+              "x": 105.33828735351564,
+              "y": 27.331515160144626
+            },
+            {
+              "x": 105.33554077148439,
+              "y": 27.331515160144626
+            },
+            {
+              "x": 105.33554077148439,
+              "y": 27.333955100147556
+            },
+            {
+              "x": 105.33828735351564,
+              "y": 27.333955100147556
+            },
+            {
+              "x": 105.33828735351564,
+              "y": 27.33639498644439
+            },
+            {
+              "x": 105.33554077148439,
+              "y": 27.33639498644439
+            },
+            {
+              "x": 105.33554077148439,
+              "y": 27.33883481903188
+            },
+            {
+              "x": 105.33279418945311,
+              "y": 27.33883481903188
+            },
+            {
+              "x": 105.33279418945311,
+              "y": 27.341274597906803
+            },
+            {
+              "x": 105.33004760742188,
+              "y": 27.341274597906803
+            },
+            {
+              "x": 105.33004760742188,
+              "y": 27.343714323065893
+            },
+            {
+              "x": 105.32730102539062,
+              "y": 27.343714323065893
+            },
+            {
+              "x": 105.32730102539062,
+              "y": 27.341274597906803
+            },
+            {
+              "x": 105.32455444335938,
+              "y": 27.341274597906803
+            },
+            {
+              "x": 105.32455444335938,
+              "y": 27.343714323065893
+            },
+            {
+              "x": 105.31906127929688,
+              "y": 27.343714323065893
+            },
+            {
+              "x": 105.31906127929688,
+              "y": 27.341274597906803
+            },
+            {
+              "x": 105.31082153320311,
+              "y": 27.341274597906803
+            },
+            {
+              "x": 105.31082153320311,
+              "y": 27.33883481903188
+            },
+            {
+              "x": 105.30532836914062,
+              "y": 27.33883481903188
+            },
+            {
+              "x": 105.30532836914062,
+              "y": 27.33639498644439
+            },
+            {
+              "x": 105.29983520507812,
+              "y": 27.33639498644439
+            },
+            {
+              "x": 105.29983520507812,
+              "y": 27.333955100147556
+            }
+          ],
+          "polygons": [
+            {
+              "exterior": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                0
+              ],
+              "interiors": []
+            }
+          ],
+          "cells": 91
+        },
+        "datum": "unspecified",
+        "cell_m": 305.74811314070394,
+        "slope_weight": 10.0,
+        "model": "derived/bijie-communes-terrain.json"
+      }
+    ]
+  },
+  "81c9f5dd-ad61-5409-8c72-a465350dc777": {
+    "entity": {
+      "id": "81c9f5dd-ad61-5409-8c72-a465350dc777",
+      "key": "earth/cn-gz/bijie/baohe/bakou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "b004f13b-9628-5931-a440-adb48e1b51f8",
+        "key": "bijie-gazetteer/p52/baohe/bakou",
+        "entity_id": "81c9f5dd-ad61-5409-8c72-a465350dc777",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "52",
+        "scan_page": 87,
+        "locator": "Place table, row 6: 坝口",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "坝口",
+          "pinyin": "Bàkǒu",
+          "population": 775,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "50c53330-9519-57af-aad2-153c3cbc46cf",
+          "rank": "settlement",
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.41666666666669,
+              "latitude": 27.283333333333335
+            },
+            "longitude_text": "105°25′",
+            "latitude_text": "27°17′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "大队驻地"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "81ddaed4-7f2f-5434-9da8-3c5462c4b532": {
+    "entity": {
+      "id": "81ddaed4-7f2f-5434-9da8-3c5462c4b532",
+      "key": "earth/cn-gz/liuzhi/dongmen-wai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "b54679c7-0123-5dbe-8033-d308a15e2b93",
+        "key": "liuzhi-gazetteer/p15/dongmen-wai",
+        "entity_id": "81ddaed4-7f2f-5434-9da8-3c5462c4b532",
+        "source_id": "liuzhi-gazetteer",
+        "page_or_sheet": "15",
+        "scan_page": 20,
+        "locator": "row 16: 东门外",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "东门外",
+          "pinyin": "Dōngmén Wài",
+          "population": 440,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "45118072-e147-5188-969b-5d9d050cec87",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": "大队驻地"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "81eabf17-bf52-5282-bf84-97ec7c3de1b9": {
+    "entity": {
+      "id": "81eabf17-bf52-5282-bf84-97ec7c3de1b9",
+      "key": "earth/cn-gz/bijie/gala/zhongzhai/chahe",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "d2e8a37f-5c6a-5a14-a907-971c6046b831",
+        "key": "bijie-gazetteer/p268/gala/zhongzhai/chahe",
+        "entity_id": "81eabf17-bf52-5282-bf84-97ec7c3de1b9",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "268",
+        "scan_page": 303,
+        "locator": "Place table, row 3: 岔河",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "岔河",
+          "pinyin": "Chàhé",
+          "population": 140,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "a2bd7c3f-e74e-56c3-9cb9-505b7becdf13",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.61666666666666,
+              "latitude": 27.366666666666667
+            },
+            "longitude_text": "105°37′",
+            "latitude_text": "27°22′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "81eff3a0-846f-51c4-a3aa-dc9019333f1c": {
+    "entity": {
+      "id": "81eff3a0-846f-51c4-a3aa-dc9019333f1c",
+      "key": "earth/cn-gz/bijie/tianbaqiao/xiangshui",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "5cf06571-83b8-589e-9b4a-e1c64b4dc28a",
+        "key": "bijie-gazetteer/p159/tianbaqiao/xiangshui",
+        "entity_id": "81eff3a0-846f-51c4-a3aa-dc9019333f1c",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "159",
+        "scan_page": 194,
+        "locator": "Place table, row 3: 响水",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "响水",
+          "pinyin": "Xiǎngshuǐ",
+          "population": 131,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "137efbe3-456a-5969-94b9-98fedf513436",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.28333333333332,
+              "latitude": 27.383333333333333
+            },
+            "longitude_text": "105°17′",
+            "latitude_text": "27°23′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "81f330ca-6fe6-5f24-a2da-9da9dd419309": {
+    "entity": {
+      "id": "81f330ca-6fe6-5f24-a2da-9da9dd419309",
+      "key": "earth/cn-gz/bijie/gengguan/gengguan/zhangping",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "e8acbccd-b655-5aa4-bd64-fed5f1ae5f4d",
+        "key": "bijie-gazetteer/p316/gengguan/gengguan/zhangping",
+        "entity_id": "81f330ca-6fe6-5f24-a2da-9da9dd419309",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "316",
+        "scan_page": 351,
+        "locator": "Place table, 张坪 row",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "张坪",
+          "pinyin": "Zhāngpíng",
+          "population": 204,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "12cf213a-fbee-5059-9bcd-6d9e89684499",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.51666666666668,
+              "latitude": 27.7
+            },
+            "longitude_text": "105°31′",
+            "latitude_text": "27°42′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "81f87c9d-c1b3-5de7-9c5a-138cc009c0bc": {
+    "entity": {
+      "id": "81f87c9d-c1b3-5de7-9c5a-138cc009c0bc",
+      "key": "earth/cn-gz/bijie/gengguan/pingzishang/banpo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "d1ac0932-da4d-553d-b545-acb3a807127e",
+        "key": "bijie-gazetteer/p317/gengguan/pingzishang/banpo",
+        "entity_id": "81f87c9d-c1b3-5de7-9c5a-138cc009c0bc",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "317",
+        "scan_page": 352,
+        "locator": "Place table, 半坡 row",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "半坡",
+          "pinyin": "Bànpō",
+          "population": 131,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "bd1b4387-4c67-5580-be7f-b7f9e5dcd3eb",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.53333333333332,
+              "latitude": 27.716666666666665
+            },
+            "longitude_text": "105°32′",
+            "latitude_text": "27°43′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "81fabb51-e5b5-5378-8ebc-9951f69a3cb0": {
+    "entity": {
+      "id": "81fabb51-e5b5-5378-8ebc-9951f69a3cb0",
+      "key": "earth/cn-gz/bijie/shatian/shatian/xujiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "3ffea297-1091-5bfe-823d-63b95da103c8",
+        "key": "bijie-gazetteer/p248/shatian/shatian/xujiazhai",
+        "entity_id": "81fabb51-e5b5-5378-8ebc-9951f69a3cb0",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "248",
+        "scan_page": 283,
+        "locator": "Place table, row 6: 徐家寨",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "徐家寨",
+          "pinyin": "Xújiāzhài",
+          "population": 87,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "c997335f-8271-5e84-a7af-1140f5484fc4",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.66666666666669,
+              "latitude": 27.6
+            },
+            "longitude_text": "105°40′",
+            "latitude_text": "27°36′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "81fde86d-9344-5c04-9f6e-d5b311694718": {
+    "entity": {
+      "id": "81fde86d-9344-5c04-9f6e-d5b311694718",
+      "key": "earth/cn-gz/bijie/dalan/liujia-wanzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "e15185e1-4cdb-5571-9431-264df31d1121",
+        "key": "bijie-gazetteer/p28/dalan/liujia-wanzi",
+        "entity_id": "81fde86d-9344-5c04-9f6e-d5b311694718",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "28",
+        "scan_page": 63,
+        "locator": "row 10: 刘家弯子",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "刘家弯子",
+          "pinyin": "LiúJiā Wānzǐ",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "229a76f0-fdef-5d34-85f1-10f428628ce8",
+          "rank": "settlement",
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.28333333333332,
+              "latitude": 27.283333333333335
+            },
+            "longitude_text": "105°17′",
+            "latitude_text": "27°17′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "村"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  }
+}

@@ -1,0 +1,517 @@
+{
+  "ec0e2ffa-5248-586b-818f-e47740238ac3": {
+    "entity": {
+      "id": "ec0e2ffa-5248-586b-818f-e47740238ac3",
+      "key": "earth/cn-gz/bijie/sili/yanwan/yanwan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "1d829545-640e-5271-95d9-b5e2284f1d5a",
+        "key": "bijie-gazetteer/p284/sili/yanwan/yanwan",
+        "entity_id": "ec0e2ffa-5248-586b-818f-e47740238ac3",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "284",
+        "scan_page": 319,
+        "locator": "Place table, row 17: 岩湾",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "岩湾",
+          "pinyin": "YánWān",
+          "population": 124,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "91611a89-bcb3-5acf-8d8f-acc825fc6ecc",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.53333333333332,
+              "latitude": 27.566666666666663
+            },
+            "longitude_text": "105°32′",
+            "latitude_text": "27°34′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "ec1c91e6-6419-5c8e-b320-1a8f829baeee": {
+    "entity": {
+      "id": "ec1c91e6-6419-5c8e-b320-1a8f829baeee",
+      "key": "earth/cn-gz/bijie/liuwan/tiankanzhai/shiduiwo",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "96c5eb0f-1280-51d3-9d1d-a97e82450b91",
+        "key": "bijie-gazetteer/p264/liuwan/tiankanzhai/shiduiwo",
+        "entity_id": "ec1c91e6-6419-5c8e-b320-1a8f829baeee",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "264",
+        "scan_page": 299,
+        "locator": "Place table, row 30: 石碓窝",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "石碓窝",
+          "pinyin": "Shíduìwō",
+          "population": 36,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "0dee6d12-4395-5079-84d4-37ed9c780599",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.63333333333334,
+              "latitude": 27.616666666666667
+            },
+            "longitude_text": "105°38′",
+            "latitude_text": "27°37′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "ec4d1fc8-1212-5b02-ac72-a00b0b1c0d58": {
+    "entity": {
+      "id": "ec4d1fc8-1212-5b02-ac72-a00b0b1c0d58",
+      "key": "earth/cn-gz/bijie/xiaoji/jifeng/tunshang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "985f9a37-6b73-5f10-8a29-610511ef7c3f",
+        "key": "bijie-gazetteer/p275/xiaoji/jifeng/tunshang",
+        "entity_id": "ec4d1fc8-1212-5b02-ac72-a00b0b1c0d58",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "275",
+        "scan_page": 310,
+        "locator": "Place table, row 15: 屯上",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "屯上",
+          "pinyin": "Túnshàng",
+          "population": 79,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "ae176c11-0011-5fe5-a799-c6659852c78d",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.51666666666668,
+              "latitude": 27.466666666666665
+            },
+            "longitude_text": "105°31′",
+            "latitude_text": "27°28′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "ec4f6c3f-0e34-5ee8-9906-3d80371ce429": {
+    "entity": {
+      "id": "ec4f6c3f-0e34-5ee8-9906-3d80371ce429",
+      "key": "earth/cn-gz/bijie/urban/huiquan-road",
+      "body": "earth",
+      "kind": "street"
+    },
+    "records": [
+      {
+        "id": "fa6da3e1-62c8-5822-9e0a-0121cd4aed84",
+        "key": "bijie-gazetteer/p15/urban/huiquan-road",
+        "entity_id": "ec4f6c3f-0e34-5ee8-9906-3d80371ce429",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "15",
+        "scan_page": 50,
+        "locator": "Street table, 惠泉路 row",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "惠泉路",
+          "pinyin": "Huìquán Lù",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "e95c434e-66df-55d4-a10f-6a187e09830c",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "extent": "东北地区粮食局起，西南双井路口止",
+          "former_names": [
+            {
+              "name": "东关坡",
+              "source_date": null,
+              "validity": null
+            }
+          ],
+          "note": "原东关坡"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "ec723ff3-b155-5ed2-ab32-afa06c8c2c2c": {
+    "entity": {
+      "id": "ec723ff3-b155-5ed2-ab32-afa06c8c2c2c",
+      "key": "earth/cn-gz/bijie/shatian/shatian/yenaxiagou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "af9a9683-ea4d-5ed4-aec0-0b273ef8033b",
+        "key": "bijie-gazetteer/p248/shatian/shatian/yenaxiagou",
+        "entity_id": "ec723ff3-b155-5ed2-ab32-afa06c8c2c2c",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "248",
+        "scan_page": 283,
+        "locator": "Place table, row 9: 野那下沟",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "野那下沟",
+          "pinyin": "Yěnàxiàgōu",
+          "population": 110,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "c997335f-8271-5e84-a7af-1140f5484fc4",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.66666666666669,
+              "latitude": 27.6
+            },
+            "longitude_text": "105°40′",
+            "latitude_text": "27°36′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "ec85bb07-d062-5573-863c-f02e3c224793": {
+    "entity": {
+      "id": "ec85bb07-d062-5573-863c-f02e3c224793",
+      "key": "earth/cn-gz/bijie/gaoshanpu/nanguan/chengmanyuan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "152a3395-eb96-5f48-b796-14aa5fe3e2df",
+        "key": "bijie-gazetteer/p306/gaoshanpu/nanguan/chengmanyuan/name-and-membership",
+        "entity_id": "ec85bb07-d062-5573-863c-f02e3c224793",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "306",
+        "scan_page": 341,
+        "locator": "Commune overview: name and membership",
+        "verbatim_quote": "夏橙的新乡，以种植夏橙而得名的“橙满园”（自然村名），位于川黔交界的赤水河畔，为高山铺公社南关大队所辖。",
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "橙满园",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "e03d6fd0-9f4f-5b9d-90a5-542b4b4e30d6",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "288fec79-f193-5a6f-b7e9-20b492971c02",
+        "key": "bijie-gazetteer/p309/gaoshanpu/nanguan/chengmanyuan",
+        "entity_id": "ec85bb07-d062-5573-863c-f02e3c224793",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "309",
+        "scan_page": 344,
+        "locator": "Place table, row 1: 橙满园",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "橙满园",
+          "pinyin": "Chéngmǎnyuán",
+          "population": 165,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "e03d6fd0-9f4f-5b9d-90a5-542b4b4e30d6",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.58333333333331,
+              "latitude": 27.716666666666665
+            },
+            "longitude_text": "105°35′",
+            "latitude_text": "27°43′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "418604be-4a22-5d60-a12b-baaf60ae4133",
+        "key": "bijie-gazetteer/p306/gaoshanpu/nanguan/chengmanyuan/citrus-introduction",
+        "entity_id": "ec85bb07-d062-5573-863c-f02e3c224793",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "306",
+        "scan_page": 341,
+        "locator": "Commune overview: citrus introduction",
+        "verbatim_quote": "一九六六年后许猛义、陈锐熙等农业科技人员从四川引进美国伏灵夏橙、血橙、锦橙、粒柑等六十七个品种，栽培试种，生长良好。",
+        "checked": true,
+        "source_date": {
+          "text": "一九六六年后",
+          "convention": "After a Gregorian year",
+          "conversion_basis": null
+        },
+        "observation": {
+          "name": "橙满园",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": "The stated date concerns crop introduction, not settlement establishment or the beginning of its name."
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "ec8e35e2-22ec-5e33-a321-5389d9d35154": {
+    "entity": {
+      "id": "ec8e35e2-22ec-5e33-a321-5389d9d35154",
+      "key": "earth/cn-gz/bijie/huangnichong/jiadanwan",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    "records": [
+      {
+        "id": "b22fc59e-3ef8-5234-af5e-b5910e7b3132",
+        "key": "bijie-gazetteer/p116/huangnichong/jiadanwan",
+        "entity_id": "ec8e35e2-22ec-5e33-a321-5389d9d35154",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "116",
+        "scan_page": 151,
+        "locator": "Place table, row 21: 柳担湾",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "柳担湾",
+          "pinyin": "Jiādānwān",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "c8753828-0ec5-59da-a3ef-e1df492bbb16",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.08333333333331,
+              "latitude": 27.283333333333335
+            },
+            "longitude_text": "105°05′",
+            "latitude_text": "27°17′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "地名"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "ecc1e400-dfb8-5f64-ad69-e82e25868e8e": {
+    "entity": {
+      "id": "ecc1e400-dfb8-5f64-ad69-e82e25868e8e",
+      "key": "earth/cn-gz/bijie/mianyuhe/shiliangzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "3d1a8ca8-4829-59ca-bb50-c3c094ded8b4",
+        "key": "bijie-gazetteer/p214/mianyuhe/shiliangzi",
+        "entity_id": "ecc1e400-dfb8-5f64-ad69-e82e25868e8e",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "214",
+        "scan_page": 249,
+        "locator": "Place table, row 12: 石梁子",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "石梁子",
+          "pinyin": "Shíliángzǐ",
+          "population": 219,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "a798843c-e455-552b-80f8-1e998132c65f",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.36666666666666,
+              "latitude": 27.566666666666663
+            },
+            "longitude_text": "105°22′",
+            "latitude_text": "27°34′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "ecc9c61c-76d6-5279-b5bb-5bd3a7cf6634": {
+    "entity": {
+      "id": "ecc9c61c-76d6-5279-b5bb-5bd3a7cf6634",
+      "key": "earth/cn-gz/bijie/changchunbao/qingshuitang-pumping-station",
+      "body": "earth",
+      "kind": "facility"
+    },
+    "records": [
+      {
+        "id": "a0166152-7f3f-5983-87cb-96183d9014c7",
+        "key": "bijie-gazetteer/p99/changchunbao/qingshuitang-pumping-station/overview",
+        "entity_id": "ecc9c61c-76d6-5279-b5bb-5bd3a7cf6634",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "99",
+        "scan_page": 134,
+        "locator": "Overview, irrigation facility without a stated construction year",
+        "verbatim_quote": "如修建清水塘提灌站，",
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "清水塘提灌站",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "fd55a301-afc7-5050-b942-76fee9565e7b",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "ecde259c-b594-5425-a617-6c44d16ce168": {
+    "entity": {
+      "id": "ecde259c-b594-5425-a617-6c44d16ce168",
+      "key": "earth/cn-gz/bijie/wuliping/miaopu",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "a0b5cdd9-36e8-5f76-ba0d-c05c8cfbe73c",
+        "key": "bijie-gazetteer/p35/wuliping/miaopu",
+        "entity_id": "ecde259c-b594-5425-a617-6c44d16ce168",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "35",
+        "scan_page": 70,
+        "locator": "row 17: 庙堡",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "庙堡",
+          "pinyin": "Miào Pù",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "fc39bcd0-053d-5710-b9f6-6621fe2b9cde",
+          "rank": "settlement",
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.3,
+              "latitude": 27.316666666666663
+            },
+            "longitude_text": "105°18′",
+            "latitude_text": "27°19′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "公社、大队驻地"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  }
+}

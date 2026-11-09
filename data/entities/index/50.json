@@ -1,0 +1,949 @@
+{
+  "500221c2-84a5-57e6-81af-3aa7da9b95c8": {
+    "entity": {
+      "id": "500221c2-84a5-57e6-81af-3aa7da9b95c8",
+      "key": "earth/cn-gz/bijie/cengtai/guanxiang/xuejiaping",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "dff60456-b59c-58f1-b676-f26ee12f5aca",
+        "key": "bijie-gazetteer/p296/cengtai/guanxiang/xuejiaping",
+        "entity_id": "500221c2-84a5-57e6-81af-3aa7da9b95c8",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "296",
+        "scan_page": 331,
+        "locator": "Place table, row 7: 薛家坪",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "薛家坪",
+          "pinyin": "Xuéjiāpíng",
+          "population": 246,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "6d681df7-251a-5870-8b6b-7a6ba88100c5",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.43333333333334,
+              "latitude": 27.483333333333334
+            },
+            "longitude_text": "105°26′",
+            "latitude_text": "27°29′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "5003b4fc-5e35-5f02-8dc4-47c80f7fef0e": {
+    "entity": {
+      "id": "5003b4fc-5e35-5f02-8dc4-47c80f7fef0e",
+      "key": "earth/cn-gz/bijie/shatian/primary-school",
+      "body": "earth",
+      "kind": "facility"
+    },
+    "records": [
+      {
+        "id": "8076850f-6cc4-5462-9a0b-25093d6752ad",
+        "key": "bijie-gazetteer/p248/shatian/primary-school",
+        "entity_id": "5003b4fc-5e35-5f02-8dc4-47c80f7fef0e",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "248",
+        "scan_page": 283,
+        "locator": "Place table, row 28: 沙田小学",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "沙田小学",
+          "pinyin": "Shātiánxiǎoxué",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "fd401a53-6de9-5f76-8cef-63645da4835a",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.68333333333334,
+              "latitude": 27.616666666666667
+            },
+            "longitude_text": "105°41′",
+            "latitude_text": "27°37′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "学校"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "50107514-4518-5a7b-8bcf-a479ee4e0452": {
+    "entity": {
+      "id": "50107514-4518-5a7b-8bcf-a479ee4e0452",
+      "key": "earth/cn-gz/bijie/mianyuhe/banchanggou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "f931ca55-1df0-5fe0-8d8d-1ac285ecd521",
+        "key": "bijie-gazetteer/p215/mianyuhe/banchanggou",
+        "entity_id": "50107514-4518-5a7b-8bcf-a479ee4e0452",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "215",
+        "scan_page": 250,
+        "locator": "Place table, row 13: 板厂沟",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "板厂沟",
+          "pinyin": "Bǎnchǎnggōu",
+          "population": 123,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "d69ec0c9-30eb-5c9d-9ba7-b12523f645d9",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.36666666666666,
+              "latitude": 27.516666666666666
+            },
+            "longitude_text": "105°22′",
+            "latitude_text": "27°31′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "50174255-156e-586e-912f-4d57f598e0f9": {
+    "entity": {
+      "id": "50174255-156e-586e-912f-4d57f598e0f9",
+      "key": "earth/cn-gz/bijie/gaoshanpu/daping/dapingzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "63b1c3df-e6c2-5c78-b552-e8449843b208",
+        "key": "bijie-gazetteer/p307/gaoshanpu/daping/dapingzi",
+        "entity_id": "50174255-156e-586e-912f-4d57f598e0f9",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "307",
+        "scan_page": 342,
+        "locator": "Place table, row 23: 大平子",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "大平子",
+          "pinyin": "Dàpíngzǐ",
+          "population": 185,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "0e646129-834c-526f-9255-52386e3ed948",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.58333333333331,
+              "latitude": 27.683333333333337
+            },
+            "longitude_text": "105°35′",
+            "latitude_text": "27°41′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "501cbba4-95a2-5132-b202-ea2fbbab646e": {
+    "entity": {
+      "id": "501cbba4-95a2-5132-b202-ea2fbbab646e",
+      "key": "earth/cn-gz/bijie/taiji/xiongfeng-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    "records": [
+      {
+        "id": "23aa8a03-3141-54d3-b8cd-729ab238d3dd",
+        "key": "bijie-gazetteer/p232/taiji/xiongfeng-brigade",
+        "entity_id": "501cbba4-95a2-5132-b202-ea2fbbab646e",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "232",
+        "scan_page": 267,
+        "locator": "Place table, row 5: 雄峰大队",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "雄峰大队",
+          "pinyin": "Xióngfēng Dàduì",
+          "population": 1184,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "a4625554-46ca-5407-a239-b84ce8bd31ff",
+          "rank": "brigade",
+          "seat_id": "6eea6674-fd7c-5ab8-9187-f6ef6d0b5e1e",
+          "coordinate": {
+            "point": {
+              "longitude": 105.46666666666668,
+              "latitude": 27.55
+            },
+            "longitude_text": "105°28′",
+            "latitude_text": "27°33′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "50200910-9a97-561b-b179-d691b051e649": {
+    "entity": {
+      "id": "50200910-9a97-561b-b179-d691b051e649",
+      "key": "earth/cn-gz/bijie/songlin/sujiazhai",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "d9233805-f612-5891-bf20-fc82b4db057f",
+        "key": "bijie-gazetteer/p62/songlin/sujiazhai",
+        "entity_id": "50200910-9a97-561b-b179-d691b051e649",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "62",
+        "scan_page": 97,
+        "locator": "Place table, row 4: 苏家寨",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "苏家寨",
+          "pinyin": "SūJiāzhài",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "9bfe5e39-5bde-599e-9bbb-53cd4d823ab7",
+          "rank": "settlement",
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.41666666666669,
+              "latitude": 27.183333333333337
+            },
+            "longitude_text": "105°25′",
+            "latitude_text": "27°11′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "村"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "502026f8-7588-532b-a0c6-a488116fea58": {
+    "entity": {
+      "id": "502026f8-7588-532b-a0c6-a488116fea58",
+      "key": "earth/cn-gz/bijie/gengguan/liujiagou-reservoir",
+      "body": "earth",
+      "kind": "reservoir"
+    },
+    "records": [
+      {
+        "id": "6a14c332-e7e4-5fd4-a0b0-9e7d731052b4",
+        "key": "bijie-gazetteer/p317/gengguan/liujiagou-reservoir",
+        "entity_id": "502026f8-7588-532b-a0c6-a488116fea58",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "317",
+        "scan_page": 352,
+        "locator": "Place table, 刘家沟水库 row",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "刘家沟水库",
+          "pinyin": "Liújiāgōu Shuǐkù",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "adb93f9b-a2ce-5cc8-9f75-0c8a5b594062",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": "库容10万立方米，灌田150亩。水库"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "503c9de8-ee94-5530-a340-bbcb2ef6a1b6": {
+    "entity": {
+      "id": "503c9de8-ee94-5530-a340-bbcb2ef6a1b6",
+      "key": "earth/cn-gz/bijie/yachi/wangjiawanzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "9ac52171-e5d9-5c43-a341-6e2e8db2cfcc",
+        "key": "bijie-gazetteer/p44/yachi/wangjiawanzi",
+        "entity_id": "503c9de8-ee94-5530-a340-bbcb2ef6a1b6",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "44",
+        "scan_page": 79,
+        "locator": "Place table, row 28: 王家湾子",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "王家湾子",
+          "pinyin": "WángJiāwānzǐ",
+          "population": 203,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "997bb127-37ca-58a0-a82d-8ae6c8e55345",
+          "rank": "settlement",
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.33333333333331,
+              "latitude": 27.25
+            },
+            "longitude_text": "105°20′",
+            "latitude_text": "27°15′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "大队驻地"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "504109b7-cab9-5732-9f7e-d744117b02e2": {
+    "entity": {
+      "id": "504109b7-cab9-5732-9f7e-d744117b02e2",
+      "key": "earth/cn-gz/bijie/shengji/duanping/yinchanggou",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "38c55fce-9310-5de7-a2e7-c819a269b5d8",
+        "key": "bijie-gazetteer/p323/shengji/duanping/yinchanggou",
+        "entity_id": "504109b7-cab9-5732-9f7e-d744117b02e2",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "323",
+        "scan_page": 358,
+        "locator": "Place table, 银厂沟 row",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "银厂沟",
+          "pinyin": "Yínchǎnggōu",
+          "population": 27,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "27dcfcd7-4d69-5e84-bf75-1de25a3257d1",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.45,
+              "latitude": 27.7
+            },
+            "longitude_text": "105°27′",
+            "latitude_text": "27°42′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "504c94f1-3dc2-50b9-8315-8e88edfb4b1d": {
+    "entity": {
+      "id": "504c94f1-3dc2-50b9-8315-8e88edfb4b1d",
+      "key": "earth/cn-gz/bijie/tianbaqiao/xiniutang",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "afdb05db-9a54-521f-a872-141d32fd07e4",
+        "key": "bijie-gazetteer/p159/tianbaqiao/xiniutang",
+        "entity_id": "504c94f1-3dc2-50b9-8315-8e88edfb4b1d",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "159",
+        "scan_page": 194,
+        "locator": "Place table, row 19: 犀牛塘",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "犀牛塘",
+          "pinyin": "Xīniútáng",
+          "population": 343,
+          "households": null,
+          "ethnicities": [
+            "汉",
+            "彝"
+          ],
+          "parent_id": "137efbe3-456a-5969-94b9-98fedf513436",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.31666666666666,
+              "latitude": 27.35
+            },
+            "longitude_text": "105°19′",
+            "latitude_text": "27°21′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "504f5f8b-ee3a-5219-a38b-38d9570fcc09": {
+    "entity": {
+      "id": "504f5f8b-ee3a-5219-a38b-38d9570fcc09",
+      "key": "earth/cn-gz/bijie/xiaoji/lizi/zhangjiapingzi",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "4ae05208-ac9e-5c16-a3e6-f13eb9cbd8b3",
+        "key": "bijie-gazetteer/p276/xiaoji/lizi/zhangjiapingzi",
+        "entity_id": "504f5f8b-ee3a-5219-a38b-38d9570fcc09",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "276",
+        "scan_page": 311,
+        "locator": "Place table, row 25: 张家坪子",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "张家坪子",
+          "pinyin": "Zhāngjiāpíngzǐ",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "c62673d3-e753-5d93-ade6-9857f5c1f9c8",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.48333333333332,
+              "latitude": 27.466666666666665
+            },
+            "longitude_text": "105°29′",
+            "latitude_text": "27°28′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "5058d3d2-6551-56d8-a827-df928b741241": {
+    "entity": {
+      "id": "5058d3d2-6551-56d8-a827-df928b741241",
+      "key": "earth/cn-gz/bijie/qingshuipu/qingshui/lanmagan",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    "records": [
+      {
+        "id": "2d192478-93ec-51b2-aa2f-4fb8118f9b28",
+        "key": "bijie-gazetteer/p301/qingshuipu/qingshui/lanmagan",
+        "entity_id": "5058d3d2-6551-56d8-a827-df928b741241",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "301",
+        "scan_page": 336,
+        "locator": "Place table, row 6: 拦马干",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "拦马干",
+          "pinyin": "Lánmǎgān",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "9476784e-2b8e-5851-8586-bf28b2439d06",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.55,
+              "latitude": 27.666666666666668
+            },
+            "longitude_text": "105°33′",
+            "latitude_text": "27°40′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "地名"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "5062c2da-bd05-558a-9747-d91cd885ff30": {
+    "entity": {
+      "id": "5062c2da-bd05-558a-9747-d91cd885ff30",
+      "key": "earth/cn-gz/bijie/taiji/feilun/lijiawangou",
+      "body": "earth",
+      "kind": "toponym"
+    },
+    "records": [
+      {
+        "id": "ca78546b-a018-554e-bd78-e287cef62c38",
+        "key": "bijie-gazetteer/p232/taiji/feilun/lijiawangou",
+        "entity_id": "5062c2da-bd05-558a-9747-d91cd885ff30",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "232",
+        "scan_page": 267,
+        "locator": "Place table, row 4: 李家湾沟",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "李家湾沟",
+          "pinyin": "Lǐjiāwāngōu",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "c7ff7076-1433-57d9-93ac-411baa1130f7",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.5,
+              "latitude": 27.6
+            },
+            "longitude_text": "105°30′",
+            "latitude_text": "27°36′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "地名"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "507933fa-f2a4-54ff-b321-440f22c8cf42": {
+    "entity": {
+      "id": "507933fa-f2a4-54ff-b321-440f22c8cf42",
+      "key": "earth/cn-gz/bijie/shuiqing/shanjiao",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "b144ef16-fcf5-5c74-9ae9-2ea5f3b45252",
+        "key": "bijie-gazetteer/p135/shuiqing/shanjiao",
+        "entity_id": "507933fa-f2a4-54ff-b321-440f22c8cf42",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "135",
+        "scan_page": 170,
+        "locator": "Place table, row 13: 山脚",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "山脚",
+          "pinyin": "Shānjiǎo",
+          "population": 120,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "c2d0ed3e-2db4-53e2-9eef-4a40a642bf61",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.13333333333334,
+              "latitude": 27.383333333333333
+            },
+            "longitude_text": "105°08′",
+            "latitude_text": "27°23′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "5085d887-4c02-5e0c-a6c8-33bc4c6eb76b": {
+    "entity": {
+      "id": "5085d887-4c02-5e0c-a6c8-33bc4c6eb76b",
+      "key": "earth/cn-gz/bijie/hongyan/minzu/wajia",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "6bec4d5c-9314-56a6-bb7c-5afdd676e13e",
+        "key": "bijie-gazetteer/p313/hongyan/minzu/wajia",
+        "entity_id": "5085d887-4c02-5e0c-a6c8-33bc4c6eb76b",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "313",
+        "scan_page": 348,
+        "locator": "Place table, 瓦戛 row",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "瓦戛",
+          "pinyin": "Wǎjiá",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "e59f1a0a-c849-556e-9e54-0cd8a997a5da",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.58333333333331,
+              "latitude": 27.616666666666667
+            },
+            "longitude_text": "105°35′",
+            "latitude_text": "27°37′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "片村"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "50c1fb2d-ccaf-557f-930c-3c6118e82223": {
+    "entity": {
+      "id": "50c1fb2d-ccaf-557f-930c-3c6118e82223",
+      "key": "earth/cn-gz/zhijin/ertang/dashi-ban",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "afec2b60-411c-582c-947f-c58670bd76fc",
+        "key": "zhijin-gazetteer-scan-b/p32/ertang/dashi-ban",
+        "entity_id": "50c1fb2d-ccaf-557f-930c-3c6118e82223",
+        "source_id": "zhijin-gazetteer-scan-b",
+        "page_or_sheet": "32",
+        "scan_page": 40,
+        "locator": "Named settlement symbol on the commune map",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "大石板",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "93c12e4a-63a2-52fb-be49-9a045bc07114",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
+        "id": "c7f07354-a219-5016-93f7-1954a2d09f2e",
+        "key": "zhijin-gazetteer-scan-b/p34/ertang/dashi-ban",
+        "entity_id": "50c1fb2d-ccaf-557f-930c-3c6118e82223",
+        "source_id": "zhijin-gazetteer-scan-b",
+        "page_or_sheet": "34",
+        "scan_page": 42,
+        "locator": "Name, population, resident groups, and annotation cells in the commune place-name table",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "大石板",
+          "pinyin": null,
+          "population": 176,
+          "households": null,
+          "ethnicities": [
+            "汉",
+            "青"
+          ],
+          "parent_id": "93c12e4a-63a2-52fb-be49-9a045bc07114",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "50c53330-9519-57af-aad2-153c3cbc46cf": {
+    "entity": {
+      "id": "50c53330-9519-57af-aad2-153c3cbc46cf",
+      "key": "earth/cn-gz/bijie/baohe/cheba-brigade",
+      "body": "earth",
+      "kind": "brigade"
+    },
+    "records": [
+      {
+        "id": "79556f63-c5f6-536b-8289-0c55f7d7d7b0",
+        "key": "bijie-gazetteer/p52/baohe/cheba-brigade",
+        "entity_id": "50c53330-9519-57af-aad2-153c3cbc46cf",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "52",
+        "scan_page": 87,
+        "locator": "Place table, row 5: 车坝大队; seat identified by the 坝口 row on this table",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "车坝大队",
+          "pinyin": "Chēbà Dàduì",
+          "population": 775,
+          "households": null,
+          "ethnicities": [
+            "汉"
+          ],
+          "parent_id": "4e4899e9-8cf2-5399-a436-e06fc757b15e",
+          "rank": "brigade",
+          "seat_id": "81c9f5dd-ad61-5409-8c72-a465350dc777",
+          "coordinate": {
+            "point": {
+              "longitude": 105.41666666666669,
+              "latitude": 27.283333333333335
+            },
+            "longitude_text": "105°25′",
+            "latitude_text": "27°17′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "50d02671-a206-54a0-9e0c-e317896c22da": {
+    "entity": {
+      "id": "50d02671-a206-54a0-9e0c-e317896c22da",
+      "key": "earth/cn-gz/bijie/qingsong/power-station",
+      "body": "earth",
+      "kind": "facility"
+    },
+    "records": [
+      {
+        "id": "6af7d41b-f5fe-5467-9828-cfd5c3fe97d9",
+        "key": "bijie-gazetteer/p77/qingsong/power-station-construction",
+        "entity_id": "50d02671-a206-54a0-9e0c-e317896c22da",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "77",
+        "scan_page": 112,
+        "locator": "Qingsong commune overview, unnamed 200 kW power station",
+        "verbatim_quote": "于1978年开工新建200瓩电站一座，现已完成50%以上的工程。",
+        "checked": true,
+        "source_date": {
+          "text": "1978年",
+          "convention": "Gregorian year",
+          "conversion_basis": null
+        },
+        "observation": {
+          "name": "电站",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "eeee6543-a0e0-5a13-b319-5905934e2997",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "50e16349-681e-57c1-b123-a129ea3ad7b2": {
+    "entity": {
+      "id": "50e16349-681e-57c1-b123-a129ea3ad7b2",
+      "key": "earth/cn-gz/bijie/guanyinqiao/lijiawan",
+      "body": "earth",
+      "kind": "settlement"
+    },
+    "records": [
+      {
+        "id": "a832a323-3729-5faa-bbea-031eabbf9332",
+        "key": "bijie-gazetteer/p157/guanyinqiao/lijiawan",
+        "entity_id": "50e16349-681e-57c1-b123-a129ea3ad7b2",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "157",
+        "scan_page": 192,
+        "locator": "Place table, row 5: 李家湾",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "李家湾",
+          "pinyin": "Lǐjiāwān",
+          "population": 345,
+          "households": null,
+          "ethnicities": [
+            "汉",
+            "苗"
+          ],
+          "parent_id": "81b086bd-7273-591d-8053-62d328d02387",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.31666666666666,
+              "latitude": 27.333333333333332
+            },
+            "longitude_text": "105°19′",
+            "latitude_text": "27°20′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": null
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
+  "50e6a706-2e36-5866-beb3-fd4b647c7640": {
+    "entity": {
+      "id": "50e6a706-2e36-5866-beb3-fd4b647c7640",
+      "key": "earth/cn-gz/bijie/lishu/dashanying",
+      "body": "earth",
+      "kind": "mountain"
+    },
+    "records": [
+      {
+        "id": "d2a54001-5dfa-524d-87eb-158b24c8f950",
+        "key": "bijie-gazetteer/p64/lishu/dashanying",
+        "entity_id": "50e6a706-2e36-5866-beb3-fd4b647c7640",
+        "source_id": "bijie-gazetteer",
+        "page_or_sheet": "64",
+        "scan_page": 99,
+        "locator": "Place table, row 32: 大山营",
+        "verbatim_quote": null,
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "大山营",
+          "pinyin": "Dàshānyíng",
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": "b820f73d-a1c4-5335-80fc-527377c7fac3",
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 105.41666666666669,
+              "latitude": 27.266666666666666
+            },
+            "longitude_text": "105°25′",
+            "latitude_text": "27°16′",
+            "resolution_arcminutes": 1.0,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "山峰，海拔1655.6米。"
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  }
+}
