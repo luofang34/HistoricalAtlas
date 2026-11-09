@@ -31,6 +31,8 @@ pub struct Application {
     selected_time: SelectedTime,
     selected: Option<EntityId>,
     search: String,
+    /// Matches for the query and body they were computed for, kept until either changes.
+    search_results: Option<(String, BodyId, Vec<EntityId>)>,
     hits: Vec<EntityId>,
     layer: MapLayer,
     territory_visible: bool,
@@ -62,6 +64,7 @@ impl Application {
             selected_time,
             selected: None,
             search: String::new(),
+            search_results: None,
             hits: Vec::new(),
             layer: MapLayer::MappedPlaces,
             territory_visible: false,
