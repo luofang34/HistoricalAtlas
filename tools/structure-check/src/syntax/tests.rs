@@ -22,3 +22,17 @@ fn guard_checks_function_and_struct_limits() {
     checker.visit_file(&syn::parse_file(&source).unwrap());
     assert_eq!(checker.problems.len(), 2);
 }
+
+#[test]
+fn guard_rejects_hidden_module_paths_unscoped_environment_and_blocking_io() {
+    let source = r#"#[path = "elsewhere.rs"] mod hidden;
+        fn read() { std::fs::read("sample"); std::env::var("SETTING"); println!("diagnostic"); }
+        #[test] fn misplaced() {}"#;
+    let mut checker = Checker::default();
+    checker.visit_file(&syn::parse_file(source).unwrap());
+    assert_eq!(checker.problems.len(), 5);
+    let mut checker = Checker::default();
+    checker
+        .visit_file(&syn::parse_file("fn read_blocking() { std::fs::read(\"sample\"); }").unwrap());
+    assert!(checker.problems.is_empty());
+}

@@ -1,15 +1,22 @@
 //! Bundled physical geography, shared by flat and globe rendering.
 
 use maplibre::{
-    coords::{WorldTileCoords, ZoomLevel},
     io::{
         resource_loader::SharedLoader,
         source_client::{HttpClient, SourceFetchError},
     },
-    raster::{AvailableRasterLayerData, RasterSourceId},
+    raster::AvailableRasterLayerData,
 };
 
+#[cfg(not(target_arch = "wasm32"))]
+use maplibre::{
+    coords::{WorldTileCoords, ZoomLevel},
+    raster::RasterSourceId,
+};
+
+#[cfg(not(target_arch = "wasm32"))]
 const WORLD: &[u8] = include_bytes!("../../assets/basemap/natural-earth-0-0-0.jpg");
+#[cfg(not(target_arch = "wasm32"))]
 const TERRAIN: [(i32, i32, &[u8]); 4] = [
     (
         202,
@@ -39,14 +46,31 @@ struct BundledBasemap;
 #[async_trait::async_trait(?Send)]
 impl HttpClient for BundledBasemap {
     async fn fetch(&self, url: &str) -> Result<Vec<u8>, SourceFetchError> {
-        if url == "atlas://natural-earth/0/0/0" {
-            return Ok(WORLD.to_vec());
+        #[cfg(target_arch = "wasm32")]
+        {
+            let path = url
+                .strip_prefix("atlas://")
+                .ok_or_else(|| SourceFetchError::not_found(url))?;
+            if path.split('/').count() != 4 || path.contains(['.', '\\']) {
+                return Err(SourceFetchError::not_found(url));
+            }
+            return crate::resources::bytes(&format!(
+                "assets/basemap/{}.jpg",
+                path.replace('/', "-")
+            ))
+            .await;
         }
-        TERRAIN
-            .iter()
-            .find(|(x, y, _)| url == format!("atlas://terrain/8/{x}/{y}"))
-            .map(|(_, _, bytes)| bytes.to_vec())
-            .ok_or_else(|| SourceFetchError::not_found(url))
+        #[cfg(not(target_arch = "wasm32"))]
+        {
+            if url == "atlas://natural-earth/0/0/0" {
+                return Ok(WORLD.to_vec());
+            }
+            TERRAIN
+                .iter()
+                .find(|(x, y, _)| url == format!("atlas://terrain/8/{x}/{y}"))
+                .map(|(_, _, bytes)| bytes.to_vec())
+                .ok_or_else(|| SourceFetchError::not_found(url))
+        }
     }
 }
 
@@ -57,13 +81,21 @@ pub fn loader() -> SharedLoader {
 
 /// Decode locally bundled tiles; both renderers use the same geographic coverage.
 pub fn tiles() -> Result<Vec<AvailableRasterLayerData>, image::ImageError> {
-    let mut tiles = vec![tile("natural-earth", 0, 0, 0, WORLD)?];
-    for (x, y, bytes) in TERRAIN {
-        tiles.push(tile("terrain", 8, x, y, bytes)?);
+    #[cfg(target_arch = "wasm32")]
+    {
+        Ok(Vec::new())
     }
-    Ok(tiles)
+    #[cfg(not(target_arch = "wasm32"))]
+    {
+        let mut tiles = vec![tile("natural-earth", 0, 0, 0, WORLD)?];
+        for (x, y, bytes) in TERRAIN {
+            tiles.push(tile("terrain", 8, x, y, bytes)?);
+        }
+        Ok(tiles)
+    }
 }
 
+#[cfg(not(target_arch = "wasm32"))]
 fn tile(
     source: &str,
     z: u8,

@@ -35,6 +35,8 @@ pub(super) fn validate_temporal(
         ));
     }
     match &assertion.value {
+        TemporalValue::Existence(_) => {}
+        TemporalValue::Measurement(value) => validate_measurement(&estimate.key, value)?,
         TemporalValue::Name(name) => {
             if name.text.trim().is_empty()
                 || name
@@ -72,6 +74,26 @@ pub(super) fn validate_temporal(
     Ok(())
 }
 
+pub(super) fn validate_measurement(
+    context: &str,
+    value: &atlas_core::physical::Measurement,
+) -> Result<(), ValidationError> {
+    if !value.metres.is_finite()
+        || value.notation.trim().is_empty()
+        || (value.kind != atlas_core::physical::MeasurementKind::Elevation && value.metres < 0.0)
+        || value
+            .reference
+            .as_ref()
+            .is_some_and(|reference| reference.trim().is_empty())
+    {
+        return Err(fail(
+            context,
+            "measurement needs a finite quantity, source notation, and a nonempty supplied reference",
+        ));
+    }
+    Ok(())
+}
+
 pub(super) fn validate_relation(
     context: &str,
     subject: EntityId,
@@ -86,7 +108,7 @@ pub(super) fn validate_relation(
     {
         return Err(fail(
             context,
-            "unknown, self-referencing, or cross-body hierarchy relation",
+            "unknown, self-referencing, or cross-body entity relationship",
         ));
     }
     Ok(())

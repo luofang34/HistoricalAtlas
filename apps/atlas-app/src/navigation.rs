@@ -21,8 +21,8 @@ impl Camera {
         match body {
             BodyId::Earth => Self {
                 center: LonLat {
-                    longitude: 105.27,
-                    latitude: 27.3,
+                    longitude: 0.0,
+                    latitude: 0.0,
                 },
                 zoom: 0.5,
             },

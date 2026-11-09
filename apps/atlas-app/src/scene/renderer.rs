@@ -18,7 +18,6 @@ use maplibre::{
         settings::RendererSettings,
         view_state::{CameraOptions, NavigationMode},
     },
-    sdf::query::{QueryGeometry, QueryOptions},
     vector::{DefaultVectorTransferables, VectorPlugin},
     window::PhysicalSize,
 };
@@ -51,9 +50,9 @@ pub enum RenderError {
     /// Camera position is invalid.
     #[error("map camera: {0}")]
     Camera(#[from] maplibre::render::view_state::NavigationError),
-    /// Feature picking failed.
-    #[error("map selection: {0}")]
-    Query(#[from] maplibre::sdf::query::QueryError),
+    /// Globe camera projection is unavailable.
+    #[error("map projection: {0}")]
+    Projection(#[from] maplibre::render::projection::ProjectionStateError),
     /// Map feature identity is invalid.
     #[error("map feature identity: {0}")]
     Identity(#[from] serde_json::Error),
@@ -65,6 +64,8 @@ pub struct MapRenderer {
     gpu: RenderState,
     texture: egui::TextureId,
     dimensions: [u32; 2],
+    picking: super::picking::Picking,
+    selection_picking: super::picking::Picking,
 }
 
 impl MapRenderer {
@@ -107,6 +108,8 @@ impl MapRenderer {
             gpu,
             texture,
             dimensions: [1, 1],
+            picking: Default::default(),
+            selection_picking: Default::default(),
         })
     }
 
@@ -122,7 +125,10 @@ impl MapRenderer {
                 style.set_layout_property(id, "visibility", visibility.into())
             })?;
         }
-        Ok(self.map.set_geojson_source("observations", points)?)
+        let picking = super::picking::Picking::new(&points)?;
+        self.map.set_geojson_source("observations", points)?;
+        self.picking = picking;
+        Ok(())
     }
 
     /// Render at the viewport's physical size and return the shared texture.
@@ -190,33 +196,26 @@ impl MapRenderer {
 
     /// Return every distinct entity beneath the pointer, including coincident villages.
     pub fn pick(&self, [x, y]: [f64; 2]) -> Result<Vec<EntityId>, RenderError> {
-        let geometry = QueryGeometry::Box {
-            min: [x - 5.0, y - 5.0],
-            max: [x + 5.0, y + 5.0],
-        };
-        let features = self.map.query_rendered_features(
-            geometry,
-            &QueryOptions {
-                layers: Some(vec![
-                    "observations".into(),
-                    "mapped-places".into(),
-                    "external-events".into(),
-                    "territory-nodes".into(),
-                    "boundaries".into(),
-                    "boundary-lines".into(),
-                    "derived-boundaries".into(),
-                    "derived-lines".into(),
-                ]),
-                ..Default::default()
-            },
-        )?;
-        let mut ids = std::collections::BTreeSet::new();
-        for feature in features {
-            if let Some(value) = feature.properties.get("entity_id") {
-                ids.insert(serde_json::from_value(value.clone())?);
-            }
-        }
-        Ok(ids.into_iter().collect())
+        let camera = maplibre::render::projection::globe_camera_for_view(self.map.view_state())?;
+        let pixel = cgmath::Point2::new(x, y);
+        let mut hits = self.picking.pick(&camera, pixel);
+        hits.extend(self.selection_picking.pick(&camera, pixel));
+        hits.sort();
+        hits.dedup();
+        Ok(hits)
+    }
+
+    /// Update only the selected entity and its optional territory network.
+    pub fn select(
+        &mut self,
+        id: Option<EntityId>,
+        extra: Vec<serde_json::Value>,
+    ) -> Result<(), RenderError> {
+        let selection = self.picking.selection(id, extra);
+        let picking = super::picking::Picking::new(&selection)?;
+        self.map.set_geojson_source("selection", selection)?;
+        self.selection_picking = picking;
+        Ok(())
     }
 
     /// Whether map work requests another GUI frame.

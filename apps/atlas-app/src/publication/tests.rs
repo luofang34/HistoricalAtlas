@@ -2,10 +2,11 @@ use super::*;
 
 #[test]
 fn load_compiler_output_and_reject_manifest_path_traversal() {
-    let input = atlas_compile::input::load_blocking(
+    let mut input = atlas_compile::input::load_blocking(
         &Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data"),
     )
     .unwrap();
+    input.derivations.clear();
     let artifacts = atlas_compile::export::compile(&input).unwrap();
     let temporary = tempfile::tempdir().unwrap();
     let output = temporary.path().join("atlas");

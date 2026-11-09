@@ -23,6 +23,9 @@ fn main() -> Result<(), Box<dyn Error>> {
         let content = fs::read_to_string(path)?;
         let syntax = syn::parse_file(&content)?;
         let mut checker = syntax::Checker::default();
+        checker.test_file = path.file_name().is_some_and(|name| name == "tests.rs")
+            || (!path.components().any(|part| part.as_os_str() == "src")
+                && path.components().any(|part| part.as_os_str() == "tests"));
         checker.visit_file(&syntax);
         check_file(path, &content, &syntax, &mut checker.problems);
         for problem in checker.problems {

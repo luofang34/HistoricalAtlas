@@ -8,6 +8,7 @@ use serde_json::{Value, json};
 pub mod basemap;
 pub mod boundaries;
 mod locations;
+mod picking;
 pub mod renderer;
 pub mod sheet;
 pub mod territories;
@@ -42,21 +43,16 @@ pub fn features(
             let entry = atlas.entry(record.entity_id)?;
             if entry.entity.body != body
                 || (layer == MapLayer::SelectedTime
-                    && !time.evidence.contains_key(&record.entity_id))
+                    && (!time.evidence.contains_key(&record.entity_id) || time.absent.contains(&record.entity_id)))
             {
                 return None;
             }
             let coordinate = record.observation.coordinate.as_ref()?;
+            let mut properties = atlas_ledger::features::observation_properties(record, &entry.entity, coordinate);
+            if let Some(properties) = properties.as_object_mut() { properties.insert("selected".into(), json!(selected == Some(record.entity_id))); }
             Some(
                 json!({"type": "Feature", "geometry": {"type": "Point", "coordinates":
-                [coordinate.point.longitude, coordinate.point.latitude]}, "properties": {
-                    "entity_id": record.entity_id, "record_id": record.id,
-                    "name": record.observation.name, "selected": selected == Some(record.entity_id),
-                    "geometry_role": "source_observation", "datum": coordinate.datum,
-                    "resolution_arcminutes": coordinate.resolution_arcminutes,
-                    "source_id": record.source_id, "page_or_sheet": record.page_or_sheet,
-                    "scan_page": record.scan_page
-                }}),
+                [coordinate.point.longitude, coordinate.point.latitude]}, "properties": properties}),
             )
         })
         .collect();
@@ -74,12 +70,13 @@ pub fn style(
     } else {
         "none"
     };
-    serde_json::from_value(json!({"version": 8, "center": [105.27, 27.3], "zoom": 0.5,
+    serde_json::from_value(json!({"version": 8, "center": [0.0, 0.0], "zoom": 0.5,
     "projection": {"type": projection},
     "sources": {
         "natural-earth": {"type": "raster", "tiles": ["atlas://natural-earth/{z}/{x}/{y}"], "tileSize": 512, "minzoom": 0, "maxzoom": 0},
         "terrain": {"type": "raster", "tiles": ["atlas://terrain/{z}/{x}/{y}"], "tileSize": 512, "minzoom": 8, "maxzoom": 8, "bounds": [104.0625, 25.799891182088334, 106.875, 28.304380682962783]},
         "observations": {"type": "geojson", "data": points},
+        "selection": {"type": "geojson", "data": {"type": "FeatureCollection", "features": []}},
         "grid": {"type": "geojson", "data": graticule()}
     }, "layers": [
         {"id": "background", "type": "background", "paint": {"background-color": "#152c35"}},
@@ -96,19 +93,22 @@ pub fn style(
         {"id": "derived-lines", "type": "line", "source": "observations",
             "filter": ["==", "geometry_role", "derived_boundary"],
             "paint": {"line-color": "#91621c", "line-width": 1.5, "line-dasharray": [3, 2]}},
-        {"id": "derived-selection", "type": "line", "source": "observations",
+        {"id": "derived-selection", "type": "line", "source": "selection",
             "filter": ["all", ["==", "geometry_role", "derived_boundary"], ["==", "selected", true]],
             "paint": {"line-color": "#e25c31", "line-width": 3, "line-dasharray": [3, 2]}},
         {"id": "boundary-lines", "type": "line", "source": "observations",
-            "filter": ["==", "geometry_role", "registered_boundary"],
+            "filter": ["all", ["==", "geometry_role", "registered_boundary"], ["!=", "membership", "possible"]],
             "paint": {"line-color": "#23616e", "line-width": 2}},
-        {"id": "boundary-selection", "type": "line", "source": "observations",
+        {"id": "possible-boundary-lines", "type": "line", "source": "observations",
+            "filter": ["all", ["==", "geometry_role", "registered_boundary"], ["==", "membership", "possible"]],
+            "paint": {"line-color": "#23616e", "line-width": 2, "line-dasharray": [3, 2]}},
+        {"id": "boundary-selection", "type": "line", "source": "selection",
             "filter": ["all", ["==", "geometry_role", "registered_boundary"], ["==", "selected", true]],
             "paint": {"line-color": "#ef8d55", "line-width": 3}},
-        {"id": "territory-links", "type": "line", "source": "observations",
+        {"id": "territory-links", "type": "line", "source": "selection",
             "filter": ["==", "geometry_role", "territory_link"],
             "paint": {"line-color": "#91b8cf", "line-width": 2, "line-dasharray": [3, 2]}},
-        {"id": "territory-nodes", "type": "circle", "source": "observations",
+        {"id": "territory-nodes", "type": "circle", "source": "selection",
             "filter": ["==", "geometry_role", "territory_node"],
             "paint": {"circle-radius": 8, "circle-color": "#31505c", "circle-stroke-width": 2,
                 "circle-stroke-color": "#91b8cf"}},
@@ -124,7 +124,7 @@ pub fn style(
             "filter": ["==", "geometry_role", "external_event"],
             "paint": {"circle-radius": 10, "circle-color": "#43c5c3", "circle-opacity": 0.65,
                 "circle-stroke-width": 2, "circle-stroke-color": "#bdf4e9"}},
-        {"id": "selection", "type": "circle", "source": "observations",
+        {"id": "selection", "type": "circle", "source": "selection",
             "filter": ["all", ["==", "$type", "Point"], ["==", "selected", true]],
             "paint": {"circle-radius": 8, "circle-color": "#ef8d55", "circle-stroke-width": 2,
                 "circle-stroke-color": "#ffffff"}}

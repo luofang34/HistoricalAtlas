@@ -39,6 +39,7 @@ impl Application {
                 .selected_text(format!("{:?}", self.time.mode))
                 .show_ui(ui, |ui| {
                     ui.selectable_value(&mut self.time.mode, TimeMode::Year, "Gregorian year (TT)");
+                    ui.selectable_value(&mut self.time.mode, TimeMode::Date, "Gregorian date (TT)");
                     ui.selectable_value(
                         &mut self.time.mode,
                         TimeMode::MillionYears,
@@ -76,29 +77,12 @@ impl Application {
     fn shortcuts(&mut self, ui: &mut egui::Ui) {
         let previous = self.layer;
         ui.horizontal_wrapped(|ui| {
-            let mut year = self
-                .time
-                .value
-                .parse::<i32>()
-                .unwrap_or(1982)
-                .clamp(1950, 1984);
-            if ui
-                .add(egui::Slider::new(&mut year, 1950..=1984).text("Year"))
-                .changed()
+            if self.time.mode == TimeMode::Year
+                && let Ok(mut year) = self.time.value.parse::<i64>()
             {
-                self.time.mode = TimeMode::Year;
-                self.time.value = year.to_string();
-                self.apply_time();
-            }
-            for (label, mode, value) in [
-                ("669 CE", TimeMode::Year, "669"),
-                ("1381 CE", TimeMode::Year, "1381"),
-                ("240 Ma", TimeMode::MillionYears, "240"),
-                ("4510 Ma", TimeMode::MillionYears, "4510"),
-            ] {
-                if ui.button(label).clicked() {
-                    self.time.mode = mode;
-                    self.time.value = value.into();
+                ui.label("Year");
+                if ui.add(egui::DragValue::new(&mut year)).changed() {
+                    self.time.value = year.to_string();
                     self.apply_time();
                 }
             }
@@ -119,7 +103,7 @@ impl Application {
                     "Evidence at selected time",
                 )
                 .changed();
-            self.dirty |= ui
+            self.selection_dirty |= ui
                 .checkbox(&mut self.territory_visible, "Territory nodes")
                 .on_hover_text("Administrative and seat links for the selected place.")
                 .changed();

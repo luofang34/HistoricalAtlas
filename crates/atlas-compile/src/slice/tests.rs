@@ -106,7 +106,8 @@ fn query_errors_precede_output_and_repeated_compilation_is_identical() {
 fn lunar_origins_select_deep_time_and_preserve_unquantified_ages() {
     use atlas_ledger::timeline::Timeline;
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
-    let input = load_blocking(&root).unwrap();
+    let mut input = load_blocking(&root).unwrap();
+    input.derivations.clear();
     let lunar_ids: std::collections::BTreeSet<_> = input
         .data
         .entities
@@ -337,6 +338,7 @@ fn origins_require_checked_subject_evidence_and_moon_coordinates_reject_earth() 
     use atlas_ledger::validation::validate;
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
     let mut input = load_blocking(&root).unwrap();
+    input.derivations.clear();
     let evidence = input
         .data
         .records

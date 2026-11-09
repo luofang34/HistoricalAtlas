@@ -5,7 +5,7 @@ use std::{collections::BTreeMap, str::FromStr};
 use atlas_core::{
     assertion::{TemporalAssertion, TemporalProperty, TemporalValue},
     identity::{EntityId, FactId},
-    time::{EpochTime, TimeError, TimeMembership},
+    time::{EpochTime, TemporalSpan, TimeError, TimeMembership},
 };
 use serde::{Deserialize, Serialize};
 use thiserror::Error;
@@ -28,6 +28,27 @@ pub enum TimeSelection {
     Possible,
     /// Include values supported by every allowed pair of endpoints.
     Certain,
+}
+
+impl TimeSelection {
+    /// Select a dated interval and retain its certainty classification.
+    pub fn select(
+        self,
+        span: Option<&TemporalSpan>,
+        at: EpochTime,
+    ) -> Result<Option<TimeMembership>, TimeError> {
+        let Some(span) = span else { return Ok(None) };
+        let membership = span.membership(at)?;
+        let included = match self {
+            Self::Nominal => span.nominally_contains(at)?,
+            Self::Possible => matches!(
+                membership,
+                TimeMembership::Possible | TimeMembership::Certain
+            ),
+            Self::Certain => membership == TimeMembership::Certain,
+        };
+        Ok(included.then_some(membership))
+    }
 }
 
 impl FromStr for TimeSelection {
@@ -87,6 +108,16 @@ pub struct EntitySlice<'a> {
     pub origins: Vec<SelectedOrigin<'a>>,
 }
 
+impl EntitySlice<'_> {
+    /// Exclude a physical feature only when every selected existence claim records its removal.
+    pub fn is_present(&self) -> bool {
+        self.properties.iter().find(|property| property.property == TemporalProperty::Existence)
+            .is_none_or(|property| property.candidates.iter().any(|candidate| {
+                matches!(candidate.assertion.value, TemporalValue::Existence(state) if state.is_present())
+            }))
+    }
+}
+
 /// Reproducible time query, including its uncertainty-selection mode.
 #[derive(Debug, Serialize)]
 pub struct TimeSlice<'a> {
@@ -139,16 +170,7 @@ impl<'a> Timeline<'a> {
             let EstimateValue::Temporal { assertion } = &estimate.value else {
                 continue;
             };
-            let membership = assertion.validity.membership(at)?;
-            let included = match selection {
-                TimeSelection::Nominal => assertion.validity.nominally_contains(at)?,
-                TimeSelection::Possible => matches!(
-                    membership,
-                    TimeMembership::Possible | TimeMembership::Certain
-                ),
-                TimeSelection::Certain => membership == TimeMembership::Certain,
-            };
-            if included {
+            if let Some(membership) = selection.select(Some(&assertion.validity), at)? {
                 entities
                     .entry(estimate.entity_id)
                     .or_default()

@@ -1,7 +1,6 @@
 use super::{PlaceMapError, register_places};
 use crate::{input::LedgerInput, registration::RegistrationJobError};
 use atlas_boundary::geographic::GeographicBoundary;
-use atlas_geo::registration::{AffineRegistration, Registration};
 
 pub(crate) fn register_boundaries(
     input: &LedgerInput,
@@ -11,10 +10,23 @@ pub(crate) fn register_boundaries(
         let matching: Vec<_> = input
             .place_maps
             .values()
-            .filter(|map| map.source_id == trace.source_id && map.scan_page == trace.scan_page)
+            .filter(|map| {
+                map.source_id == trace.source_id
+                    && map.scan_page == trace.scan_page
+                    && trace
+                        .registration_id
+                        .as_ref()
+                        .is_none_or(|id| *id == map.id)
+            })
             .collect();
         let map = match matching.as_slice() {
-            [] => continue,
+            [] if trace.registration_id.is_none() => continue,
+            [] => {
+                return Err(PlaceMapError::Evidence(format!(
+                    "missing registration {:?}",
+                    trace.registration_id
+                )));
+            }
             [map] => *map,
             _ => {
                 return Err(PlaceMapError::Evidence(format!(
@@ -33,12 +45,10 @@ pub(crate) fn register_boundaries(
             )));
         }
         let (sheet, _) = register_places(input, map)?;
-        let controls: Vec<_> = sheet.job.controls.iter().map(|c| c.point).collect();
-        let model = AffineRegistration::fit(&controls).map_err(RegistrationJobError::from)?;
         let vertices = trace
             .vertices
             .iter()
-            .map(|p| model.transform(*p))
+            .map(|p| sheet.transform(*p))
             .collect::<Result<Vec<_>, _>>()
             .map_err(RegistrationJobError::from)?;
         for unit in &trace.units {

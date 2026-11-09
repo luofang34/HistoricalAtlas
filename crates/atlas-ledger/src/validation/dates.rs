@@ -21,7 +21,7 @@ pub(super) fn validate_dates(
     Ok(())
 }
 
-fn validate_date(
+pub(super) fn validate_date(
     key: &str,
     date: &SourceDate,
     sources: &BTreeMap<&str, &Source>,

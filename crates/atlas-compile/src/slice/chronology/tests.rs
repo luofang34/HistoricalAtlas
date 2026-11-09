@@ -7,7 +7,9 @@ fn wuliping_renaming_keeps_year_uncertainty_in_the_actual_timeline() {
         calendar::{Calendar, CivilDate},
         identity::EntityId,
     };
-    let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    let mut input =
+        load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    input.derivations.clear();
     let timeline = Timeline::new(&input.catalog, &input.data).unwrap();
     let id = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
     for (year, selection, expected) in [
@@ -53,7 +55,9 @@ fn wuliping_renaming_keeps_year_uncertainty_in_the_actual_timeline() {
 #[test]
 fn guard_properties_end_in_the_converted_lunar_month() {
     use atlas_core::calendar::{Calendar, CivilDate};
-    let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    let mut input =
+        load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    input.derivations.clear();
     let guard = input
         .data
         .entities
@@ -86,7 +90,9 @@ fn guard_properties_end_in_the_converted_lunar_month() {
 fn bijie_era_origins_follow_cited_periods() {
     use atlas_core::origin::OriginTime;
     use atlas_ledger::model::EstimateValue;
-    let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    let mut input =
+        load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    input.derivations.clear();
     let timeline = Timeline::new(&input.catalog, &input.data).unwrap();
     for name in [
         "lulu",
@@ -154,7 +160,9 @@ fn bijie_era_origins_follow_cited_periods() {
 
 #[test]
 fn published_county_evidence_keeps_the_printed_year_and_era_conversion() {
-    let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    let mut input =
+        load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    input.derivations.clear();
     let county = input
         .data
         .entities

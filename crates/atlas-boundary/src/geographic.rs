@@ -1,11 +1,11 @@
-//! Registered Earth boundaries retaining their source coordinate datum.
+//! Registered geographic boundaries retaining their source coordinate datum.
 
 use crate::{
     polygon::resolve,
     sheet::{BoundaryMethod, TracedUnit},
 };
 use atlas_core::identity::{EntityId, FactId};
-use atlas_geo::{body::BodyId, coordinates::Datum, registration::PlanarPoint};
+use atlas_geo::{coordinates::Datum, registration::PlanarPoint};
 use atlas_ledger::model::{Dataset, Record};
 use serde::{Deserialize, Serialize};
 use serde_json::{Value, json};
@@ -39,7 +39,17 @@ impl GeographicBoundary {
         selected: Option<EntityId>,
     ) -> Result<Value, GeographicError> {
         let record = self.record(data)?;
-        self.datum.validate_body(BodyId::Earth)?;
+        let body = data
+            .entities
+            .iter()
+            .find(|e| e.id == record.entity_id)
+            .ok_or_else(|| GeographicError::Evidence("boundary subject is missing".into()))?
+            .body;
+        self.datum.validate_body(body)?;
+        if let Some(span) = &self.unit.validity {
+            span.validate()
+                .map_err(|error| GeographicError::Evidence(error.to_string()))?;
+        }
         if self
             .registration_allowance_m
             .is_some_and(|value| !value.is_finite() || value <= 0.0)
@@ -87,7 +97,7 @@ impl GeographicBoundary {
                 "selected": selected == Some(record.entity_id), "reconstructed": false,
                 "boundary_method": self.boundary_method, "method_basis": self.method_basis,
                 "datum": self.datum, "registration_allowance_m": self.registration_allowance_m,
-                "rank": record.observation.rank, "validity": null,
+                "rank": record.observation.rank, "validity": self.unit.validity,
                 "registration": self.registration}}))
     }
 
@@ -102,14 +112,9 @@ impl GeographicBoundary {
                     self.unit.record_id
                 ))
             })?;
-        if record.scan_page.is_none()
-            || !data
-                .entities
-                .iter()
-                .any(|e| e.id == record.entity_id && e.body == BodyId::Earth)
-        {
+        if !data.entities.iter().any(|e| e.id == record.entity_id) {
             return Err(GeographicError::Evidence(
-                "geographic display requires a cited Earth map boundary".into(),
+                "geographic display requires a cited map boundary".into(),
             ));
         }
         if self.boundary_method != BoundaryMethod::Unstated && self.method_basis.is_empty() {

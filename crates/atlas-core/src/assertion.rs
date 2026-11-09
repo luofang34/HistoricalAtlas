@@ -117,10 +117,17 @@ pub enum TemporalProperty {
     Hierarchy,
     /// Demographic quantities.
     Demographics,
+    /// Physical presence or destruction of the feature.
+    Existence,
+    /// Physical dimension or elevation.
+    Measurement {
+        /// Quantity being measured.
+        kind: crate::physical::MeasurementKind,
+    },
 }
 
 /// Supported time-varying geographical values.
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(
     tag = "property",
     content = "value",
@@ -134,6 +141,10 @@ pub enum TemporalValue {
     Hierarchy(HierarchyValue),
     /// Demographic observation.
     Demographics(DemographicsValue),
+    /// Physical presence, abandonment, or destruction during the interval.
+    Existence(crate::physical::Existence),
+    /// A measured physical quantity during the interval.
+    Measurement(crate::physical::Measurement),
 }
 
 impl TemporalValue {
@@ -146,6 +157,8 @@ impl TemporalValue {
             },
             Self::Hierarchy(_) => TemporalProperty::Hierarchy,
             Self::Demographics(_) => TemporalProperty::Demographics,
+            Self::Existence(_) => TemporalProperty::Existence,
+            Self::Measurement(value) => TemporalProperty::Measurement { kind: value.kind },
         }
     }
 }

@@ -21,6 +21,7 @@ fn ledger() -> (SourceCatalog, Dataset) {
     data.disputes.append(&mut history.disputes);
     let catalog = SourceCatalog {
         sources: vec![Source {
+            capture: None,
             id: "bijie-gazetteer".into(),
             title: "贵州省毕节县地名录".into(),
             responsibility: None,

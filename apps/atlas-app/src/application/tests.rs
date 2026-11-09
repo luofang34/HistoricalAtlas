@@ -1,7 +1,36 @@
 use super::*;
 
-#[path = "sheet/tests.rs"]
 mod sheet;
+
+#[test]
+fn selecting_a_dated_boundary_updates_only_selection_and_frames_visible_geometry() {
+    let atlas = Atlas::new(crate::scene::boundaries::tests::lunar_publication()).unwrap();
+    let id = atlas.data.entities[0].id;
+    let mut app = Application::new(atlas).unwrap();
+    app.body = BodyId::Moon;
+    app.layer = MapLayer::SelectedTime;
+    app.time.mode = crate::selection::TimeMode::Ticks;
+    app.time.value = "14".into();
+    app.apply_time();
+    let observations = app.points().unwrap();
+    app.dirty = false;
+    app.selection_dirty = false;
+    app.select(id, true);
+    assert!(!app.dirty);
+    assert!(app.selection_dirty);
+    assert_eq!(app.points().unwrap(), observations);
+    assert_eq!(app.camera.center.longitude, 1.5);
+    assert_eq!(app.camera.center.latitude, 1.5);
+    app.time.value = "20".into();
+    app.apply_time();
+    assert!(app.focus_point(id).is_none());
+    assert!(
+        app.points().unwrap()["features"]
+            .as_array()
+            .unwrap()
+            .is_empty()
+    );
+}
 
 #[test]
 fn registered_boundary_search_focuses_geography_and_displays_source_method() {
@@ -11,7 +40,7 @@ fn registered_boundary_search_focuses_geography_and_displays_source_method() {
     boundary.datum = atlas_geo::coordinates::Datum::Unspecified;
     boundary.registration_allowance_m = Some(4500.);
     let atlas = Atlas::new(publication).unwrap();
-    let expected = crate::scene::boundaries::center(&atlas, id, false).unwrap();
+    let expected = crate::scene::boundaries::center(&atlas, id, false, None).unwrap();
     let mut app = Application::new(atlas).unwrap();
     app.select(id, true);
     assert_eq!(app.camera.center, expected);
@@ -66,7 +95,7 @@ fn mapped_place_view_keeps_registered_locations_and_frames_the_reconstruction() 
     assert_eq!(app.camera.center, table);
     assert_eq!(
         app.camera.center,
-        scene::boundaries::center(&app.atlas, id, true).unwrap()
+        scene::boundaries::center(&app.atlas, id, true, None).unwrap()
     );
     let collection = app.points().unwrap();
     let features = collection["features"].as_array().unwrap();
@@ -79,7 +108,7 @@ fn mapped_place_view_keeps_registered_locations_and_frames_the_reconstruction() 
         .collect();
     assert_eq!(selected.len(), 2);
     for feature in &selected {
-        assert_eq!(feature["properties"]["selected"], true);
+        assert_eq!(feature["properties"]["selected"], false);
         assert_eq!(feature["properties"]["geometry_role"], "location_estimate");
         assert_eq!(feature["properties"]["datum"], "unspecified");
     }
@@ -141,7 +170,7 @@ fn county_search_fits_the_outline_to_the_map_viewport() {
                 && f["properties"]["entity_id"] == id.0.to_string()
         })
         .unwrap();
-    assert_eq!(boundary["properties"]["selected"], true);
+    assert_eq!(boundary["properties"]["selected"], false);
     assert_eq!(boundary["properties"]["scan_page"], 658);
 }
 
@@ -180,8 +209,7 @@ fn territory_toggle_adds_links_and_respects_the_applied_hierarchy_mode() {
     let id = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
     app.select(id, false);
     let roles = |app: &Application| {
-        app.points().unwrap()["features"]
-            .as_array()
+        app.selection_features()
             .unwrap()
             .iter()
             .filter(|feature| feature["properties"]["geometry_role"] == "territory_link")

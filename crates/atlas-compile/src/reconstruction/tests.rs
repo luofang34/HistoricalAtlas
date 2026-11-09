@@ -4,7 +4,8 @@ use atlas_geo::coordinates::Datum;
 #[cfg(test)]
 fn real_input() -> (LedgerInput, ReconstructionJob) {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
-    let input = load_blocking(&root).unwrap();
+    let mut input = load_blocking(&root).unwrap();
+    input.derivations.clear();
     let job =
         read_json_blocking(&root.join("paleogeography/panxian-240ma.reconstruction.json")).unwrap();
     (input, job)

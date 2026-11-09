@@ -44,6 +44,9 @@ pub enum AppError {
     /// An exact year, age, or tick could not be parsed.
     #[error("invalid time: {0}")]
     Number(#[from] std::num::ParseIntError),
+    /// Date input is missing a year, month, or day.
+    #[error("invalid date {0:?}; use YYYY-MM-DD")]
+    DateFormat(String),
     /// Calendar date is invalid.
     #[error("calendar date: {0}")]
     Calendar(#[from] atlas_core::calendar::CalendarError),

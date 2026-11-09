@@ -1,7 +1,6 @@
 use super::{PlaceControl, PlaceMap};
 use crate::{input::LedgerInput, registration::RegistrationJobError};
 use atlas_core::identity::FactId;
-use atlas_geo::body::BodyId;
 use atlas_ledger::model::Record;
 use std::collections::BTreeSet;
 use thiserror::Error;
@@ -56,19 +55,30 @@ pub(super) fn validate(input: &LedgerInput, map: &PlaceMap) -> Result<(), PlaceM
         ));
     }
     let mut subjects = BTreeSet::new();
+    let mut body = None;
     for place in &map.places {
         let record = record(input, place.record_id)?;
+        let entity = input
+            .data
+            .entities
+            .iter()
+            .find(|entity| entity.id == record.entity_id)
+            .ok_or_else(|| {
+                PlaceMapError::Evidence(format!("missing subject {:?}", record.entity_id))
+            })?;
+        map.datum.validate_body(entity.body)?;
+        if body.is_some_and(|body| body != entity.body) {
+            return Err(PlaceMapError::Evidence(
+                "map requires a unique subject body".into(),
+            ));
+        }
+        body = Some(entity.body);
         if record.source_id != map.source_id
             || record.scan_page != Some(map.scan_page)
             || !subjects.insert(record.entity_id)
-            || !input
-                .data
-                .entities
-                .iter()
-                .any(|e| e.id == record.entity_id && e.body == BodyId::Earth)
         {
             return Err(PlaceMapError::Evidence(format!(
-                "{} requires a unique Earth subject and the mapped sheet",
+                "{} requires a unique subject and the mapped sheet",
                 record.key
             )));
         }

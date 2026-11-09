@@ -1,48 +1,73 @@
 //! Source-map outlines with registration and boundary-construction evidence.
 
-use super::MapLayer;
-use crate::{catalog::Atlas, error::AppError};
+use crate::{catalog::Atlas, error::AppError, selection::SelectedTime};
 use atlas_core::identity::EntityId;
 use atlas_geo::{body::BodyId, coordinates::LonLat};
 use serde_json::Value;
 
-/// Select registered outlines for source browsing on Earth.
+/// Select registered outlines on the subject's body and optional evidence-supported interval.
 pub fn features(
     atlas: &Atlas,
     body: BodyId,
-    layer: MapLayer,
+    time: Option<&SelectedTime>,
     selected: Option<EntityId>,
     include_derived: bool,
 ) -> Result<Vec<Value>, AppError> {
-    if body != BodyId::Earth || layer == MapLayer::SelectedTime {
-        return Ok(Vec::new());
-    }
     let mut features: Vec<_> = atlas
         .data
         .entities
         .iter()
+        .filter(|e| e.body == body && time.is_none_or(|time| !time.absent.contains(&e.id)))
         .filter_map(|e| atlas.entry(e.id))
         .flat_map(|entry| &entry.boundaries)
         .map(|boundary| Ok(boundary.feature(&atlas.data, selected)?))
         .collect::<Result<_, AppError>>()?;
     if !include_derived {
-        return Ok(features);
+        return select(features, time);
     }
     for boundary in atlas
         .data
         .entities
         .iter()
+        .filter(|e| e.body == body && time.is_none_or(|time| !time.absent.contains(&e.id)))
         .filter_map(|e| atlas.entry(e.id))
         .flat_map(|entry| &entry.derived_boundaries)
     {
         features.push(boundary.feature(&atlas.data, selected)?);
     }
-    Ok(features)
+    select(features, time)
+}
+
+fn select(features: Vec<Value>, time: Option<&SelectedTime>) -> Result<Vec<Value>, AppError> {
+    let Some(time) = time else {
+        return Ok(features);
+    };
+    let mut selected = Vec::new();
+    for mut feature in features {
+        let span: Option<atlas_core::time::TemporalSpan> = serde_json::from_value(
+            feature
+                .pointer("/properties/validity")
+                .cloned()
+                .unwrap_or_default(),
+        )?;
+        if let Some(membership) = time.selection.select(span.as_ref(), time.at)? {
+            if let Some(properties) = feature.get_mut("properties").and_then(Value::as_object_mut) {
+                properties.insert("membership".into(), serde_json::to_value(membership)?);
+            }
+            selected.push(feature);
+        }
+    }
+    Ok(selected)
 }
 
 /// Bounding-box midpoint for navigating to an entity with a registered boundary.
-pub fn center(atlas: &Atlas, id: EntityId, include_derived: bool) -> Option<LonLat> {
-    let [low, high] = extent(atlas, id, include_derived)?;
+pub fn center(
+    atlas: &Atlas,
+    id: EntityId,
+    include_derived: bool,
+    time: Option<&SelectedTime>,
+) -> Option<LonLat> {
+    let [low, high] = extent(atlas, id, include_derived, time)?;
     Some(LonLat {
         longitude: (low.longitude + high.longitude) / 2.,
         latitude: (low.latitude + high.latitude) / 2.,
@@ -55,14 +80,20 @@ pub fn frame(
     id: EntityId,
     viewport: [f64; 2],
     include_derived: bool,
+    time: Option<&SelectedTime>,
 ) -> Option<crate::navigation::Camera> {
-    let bounds = extent(atlas, id, include_derived)?;
-    let mut camera = crate::navigation::Camera::for_body(BodyId::Earth);
+    let bounds = extent(atlas, id, include_derived, time)?;
+    let mut camera = crate::navigation::Camera::for_body(atlas.entry(id)?.entity.body);
     camera.fit_bounds(bounds, viewport);
     Some(camera)
 }
 
-fn extent(atlas: &Atlas, id: EntityId, include_derived: bool) -> Option<[LonLat; 2]> {
+fn extent(
+    atlas: &Atlas,
+    id: EntityId,
+    include_derived: bool,
+    time: Option<&SelectedTime>,
+) -> Option<[LonLat; 2]> {
     let entry = atlas.entry(id)?;
     let mut bounds = [
         f64::INFINITY,
@@ -70,18 +101,34 @@ fn extent(atlas: &Atlas, id: EntityId, include_derived: bool) -> Option<[LonLat;
         f64::NEG_INFINITY,
         f64::NEG_INFINITY,
     ];
-    let mapped = entry.boundaries.iter().flat_map(|boundary| {
-        boundary
-            .unit
-            .polygons
-            .iter()
-            .flat_map(|p| &p.exterior)
-            .filter_map(|index| boundary.vertices.get(*index))
-    });
+    if time.is_some_and(|time| time.absent.contains(&id)) {
+        return None;
+    }
+    let visible = |span: Option<&atlas_core::time::TemporalSpan>| {
+        time.is_none_or(|time| {
+            time.selection
+                .select(span, time.at)
+                .ok()
+                .flatten()
+                .is_some()
+        })
+    };
+    let mapped = entry
+        .boundaries
+        .iter()
+        .filter(|b| visible(b.unit.validity.as_ref()))
+        .flat_map(|boundary| {
+            boundary
+                .unit
+                .polygons
+                .iter()
+                .flat_map(|p| &p.exterior)
+                .filter_map(|index| boundary.vertices.get(*index))
+        });
     let derived = entry
         .derived_boundaries
         .iter()
-        .filter(|_| include_derived)
+        .filter(|b| include_derived && visible(b.validity.as_ref()))
         .flat_map(|boundary| {
             boundary
                 .region

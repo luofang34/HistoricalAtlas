@@ -1,6 +1,36 @@
 use super::*;
 
 #[test]
+fn campaign_dates_select_days_before_the_gazetteer_period() {
+    let mut control = TimeControl {
+        mode: TimeMode::Date,
+        value: "1942-08-07".into(),
+        ..Default::default()
+    };
+    let first = control.epoch().unwrap();
+    control.value = "1942-09-01".into();
+    assert_eq!(
+        control.epoch().unwrap().ticks() - first.ticks(),
+        25 * 86_400_000
+    );
+    control.value = "1942-02-29".into();
+    assert!(control.epoch().is_err());
+    control.value = "1942-08".into();
+    assert!(control.epoch().is_err());
+    control.value = "-0044-03-15".into();
+    assert_eq!(
+        control.epoch().unwrap(),
+        CivilDate {
+            year: -44,
+            month: 3,
+            day: 15
+        }
+        .to_epoch(Calendar::Gregorian, 0)
+        .unwrap()
+    );
+}
+
+#[test]
 fn exact_deep_time_and_millisecond_inputs() {
     let mut control = TimeControl {
         mode: TimeMode::MillionYears,

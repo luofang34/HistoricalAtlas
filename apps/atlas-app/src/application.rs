@@ -34,6 +34,7 @@ pub struct Application {
     map_size: [f64; 2],
     map: Option<MapRenderer>,
     dirty: bool,
+    selection_dirty: bool,
     error: Option<String>,
     overlay: overlay::OverlayState,
     sheet: sheet::SheetView,
@@ -60,6 +61,7 @@ impl Application {
             map_size: [800.0, 600.0],
             map: None,
             dirty: true,
+            selection_dirty: true,
             error: None,
             overlay: overlay::OverlayState::default(),
             sheet: sheet::SheetView::default(),
@@ -72,7 +74,7 @@ impl Application {
             gpu,
             scene::style(self.points()?, self.body, crate::navigation::PROJECTION)?,
         )?);
-        self.dirty = false;
+        self.dirty = true;
         Ok(())
     }
 
@@ -97,7 +99,8 @@ impl Application {
 
     fn select(&mut self, id: EntityId, focus: bool) {
         self.selected = Some(id);
-        self.dirty = true;
+        self.selection_dirty = true;
+        self.error = None;
         if focus && !self.atlas.drawings(id).is_empty() && self.focus_point(id).is_none() {
             self.sheet = sheet::SheetView::open();
         }
@@ -111,9 +114,13 @@ impl Application {
             };
         }
         if focus
-            && self.layer != MapLayer::SelectedTime
-            && let Some(camera) =
-                scene::boundaries::frame(&self.atlas, id, self.map_size, self.derived_visible)
+            && let Some(camera) = scene::boundaries::frame(
+                &self.atlas,
+                id,
+                self.map_size,
+                self.derived_visible,
+                (self.layer == MapLayer::SelectedTime).then_some(&self.selected_time),
+            )
         {
             self.camera = camera;
             self.camera_pending = true;
@@ -131,16 +138,21 @@ impl Application {
                     atlas_ledger::model::EstimateValue::MapLocation { point, .. } => Some(point),
                     _ => None,
                 })
-                .or_else(|| scene::boundaries::center(&self.atlas, id, self.derived_visible));
+                .or_else(|| {
+                    scene::boundaries::center(&self.atlas, id, self.derived_visible, None)
+                });
         }
         entry
             .records
             .iter()
             .find_map(|record| record.observation.coordinate.as_ref().map(|c| c.point))
             .or_else(|| {
-                (self.layer != MapLayer::SelectedTime)
-                    .then(|| scene::boundaries::center(&self.atlas, id, self.derived_visible))
-                    .flatten()
+                scene::boundaries::center(
+                    &self.atlas,
+                    id,
+                    self.derived_visible,
+                    (self.layer == MapLayer::SelectedTime).then_some(&self.selected_time),
+                )
             })
     }
 
@@ -150,7 +162,7 @@ impl Application {
             self.body,
             &self.selected_time,
             self.layer,
-            self.selected,
+            None,
         );
         if let Some(features) = collection
             .get_mut("features")
@@ -159,22 +171,9 @@ impl Application {
             features.extend(scene::boundaries::features(
                 &self.atlas,
                 self.body,
-                self.layer,
-                self.selected,
+                (self.layer == MapLayer::SelectedTime).then_some(&self.selected_time),
+                None,
                 self.derived_visible,
-            )?);
-        }
-        if self.territory_visible
-            && let Some(id) = self.selected
-            && let Some(features) = collection
-                .get_mut("features")
-                .and_then(serde_json::Value::as_array_mut)
-        {
-            features.extend(scene::territories::features(
-                &self.atlas,
-                id,
-                &self.selected_time,
-                self.layer,
             )?);
         }
         if self.overlay.visible
@@ -183,14 +182,21 @@ impl Application {
                 .get_mut("features")
                 .and_then(serde_json::Value::as_array_mut)
         {
-            features.extend(overlay.features(
-                &self.atlas,
-                self.body,
-                &self.selected_time,
-                self.selected,
-            )?);
+            features.extend(overlay.features(&self.atlas, self.body, &self.selected_time, None)?);
         }
         Ok(collection)
+    }
+
+    fn selection_features(&self) -> Result<Vec<serde_json::Value>, AppError> {
+        match self.selected.filter(|_| self.territory_visible) {
+            Some(id) => Ok(scene::territories::features(
+                &self.atlas,
+                id,
+                &self.selected_time,
+                self.layer,
+            )?),
+            None => Ok(Vec::new()),
+        }
     }
 
     fn apply_time(&mut self) {
@@ -232,6 +238,7 @@ impl Application {
 }
 
 /// Install the publication's Chinese glyph subset alongside egui's default fonts.
+#[cfg(not(target_arch = "wasm32"))]
 pub fn configure_fonts(ctx: &egui::Context) {
     let mut fonts = egui::FontDefinitions::default();
     fonts.font_data.insert(

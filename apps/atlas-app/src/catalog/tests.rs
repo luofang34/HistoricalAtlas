@@ -1,6 +1,5 @@
 use super::*;
 
-#[path = "haizijie/tests.rs"]
 mod haizijie;
 
 #[test]

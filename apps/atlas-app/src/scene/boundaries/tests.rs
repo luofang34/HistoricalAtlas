@@ -11,9 +11,75 @@ use std::{
 };
 
 #[cfg(test)]
+pub(crate) fn lunar_publication() -> Publication {
+    use atlas_core::identity::FactId;
+    let id = EntityId::from_key("moon/test/enclosure").unwrap();
+    let record_id = FactId::from_key("survey/enclosure").unwrap();
+    let source = json!({"id":"survey","title":"Test lunar survey","scan_pages":1,"scan_sha256":"0".repeat(64)});
+    let record = json!({"id":record_id,"key":"survey/enclosure","entity_id":id,"source_id":"survey",
+        "scan_page":1,"page_or_sheet":"A","locator":"Enclosure","checked":true,"observation":{"name":"Enclosure"}});
+    let boundary = json!({"unit":{"record_id":record_id,"polygons":[{"exterior":[0,1,2,3,0],"interiors":[]}],
+        "validity":{"start":{"earliest":"10","nominal":"12","latest":"14","precision":"day"},
+            "end":{"earliest":"20","nominal":"20","latest":"20","precision":"day"}}},
+        "vertices":[{"x":1,"y":1},{"x":2,"y":1},{"x":2,"y":2},{"x":1,"y":2}],
+        "datum":"moon_iau","boundary_method":"unstated","method_basis":[],"registration":"maps/survey.json"});
+    let entry: Entry = serde_json::from_value(
+        json!({"entity":{"id":id,"key":"moon/test/enclosure","body":"moon","kind":"facility"},
+        "records":[record],"estimates":[],"disputes":[],"boundaries":[boundary]}),
+    )
+    .unwrap();
+    Publication {
+        sources: serde_json::from_value(json!([source])).unwrap(),
+        entries: BTreeMap::from([(id, entry)]),
+        aliases: Default::default(),
+    }
+}
+
+#[test]
+fn dated_lunar_boundaries_follow_uncertainty_and_exclusive_endpoints() {
+    use crate::selection::{SelectedTime, TimeControl, TimeMode};
+    use atlas_ledger::timeline::TimeSelection;
+    let atlas = Atlas::new(lunar_publication()).unwrap();
+    for (ticks, mode, expected) in [
+        (9, TimeSelection::Possible, None),
+        (10, TimeSelection::Possible, Some("possible")),
+        (12, TimeSelection::Certain, None),
+        (14, TimeSelection::Certain, Some("certain")),
+        (20, TimeSelection::Possible, None),
+    ] {
+        let time = SelectedTime::query(
+            &atlas,
+            &TimeControl {
+                mode: TimeMode::Ticks,
+                value: ticks.to_string(),
+                selection: mode,
+            },
+        )
+        .unwrap();
+        let selected = features(&atlas, BodyId::Moon, Some(&time), None, false).unwrap();
+        assert_eq!(selected.len(), usize::from(expected.is_some()));
+        if let Some(expected) = expected {
+            assert_eq!(selected[0]["properties"]["membership"], expected);
+        }
+        assert!(
+            features(&atlas, BodyId::Earth, Some(&time), None, false)
+                .unwrap()
+                .is_empty()
+        );
+    }
+    assert_eq!(
+        features(&atlas, BodyId::Moon, None, None, false)
+            .unwrap()
+            .len(),
+        1
+    );
+}
+
+#[cfg(test)]
 fn compiled() -> Artifacts {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
-    let input = atlas_compile::input::load_blocking(&root).unwrap();
+    let mut input = atlas_compile::input::load_blocking(&root).unwrap();
+    input.derivations.clear();
     let trace: SheetTrace = serde_json::from_slice(
         &std::fs::read(root.join("guizhou-1960s/zhijin/ertang.trace.json")).unwrap(),
     )
@@ -59,14 +125,7 @@ fn registered_boundary_loads_with_source_evidence_and_stays_out_of_time_slices()
     write_blocking(&path, &artifacts).unwrap();
     let atlas = crate::publication::load_blocking(&path).unwrap();
     let id = EntityId::from_key("earth/cn-gz/zhijin/ertang-commune").unwrap();
-    let boundaries = features(
-        &atlas,
-        BodyId::Earth,
-        MapLayer::Observations,
-        Some(id),
-        true,
-    )
-    .unwrap();
+    let boundaries = features(&atlas, BodyId::Earth, None, Some(id), true).unwrap();
     let feature = boundaries
         .iter()
         .find(|f| f["properties"]["entity_id"] == json!(id))
@@ -91,7 +150,7 @@ fn registered_boundary_loads_with_source_evidence_and_stays_out_of_time_slices()
         serde_json::from_slice(&artifacts[Path::new("boundary/registration.json")]).unwrap();
     assert!(proof["check_quality"]["maximum"].as_f64().unwrap() < 1e-12);
     assert!(
-        features(&atlas, BodyId::Moon, MapLayer::Observations, Some(id), true)
+        features(&atlas, BodyId::Moon, None, Some(id), true)
             .unwrap()
             .is_empty()
     );
@@ -99,7 +158,13 @@ fn registered_boundary_loads_with_source_evidence_and_stays_out_of_time_slices()
         features(
             &atlas,
             BodyId::Earth,
-            MapLayer::SelectedTime,
+            Some(
+                &crate::selection::SelectedTime::query(
+                    &atlas,
+                    &crate::selection::TimeControl::default()
+                )
+                .unwrap()
+            ),
             Some(id),
             true
         )
@@ -107,21 +172,21 @@ fn registered_boundary_loads_with_source_evidence_and_stays_out_of_time_slices()
         .is_empty()
     );
     assert_eq!(
-        features(&atlas, BodyId::Earth, MapLayer::MappedPlaces, None, false)
+        features(&atlas, BodyId::Earth, None, None, false)
             .unwrap()
             .iter()
             .filter(|f| f["properties"]["entity_id"] == json!(id))
             .count(),
         1
     );
-    assert!(center(&atlas, id, false).unwrap().validate().is_ok());
+    assert!(center(&atlas, id, false, None).unwrap().validate().is_ok());
 }
 
 #[test]
 fn mapped_polygons_tessellate_fill_outline_and_selection_for_both_projections() {
     let atlas = Atlas::new(publication()).unwrap();
     let id = EntityId::from_key("earth/cn-gz/zhijin/ertang-commune").unwrap();
-    let collection = json!({"type": "FeatureCollection", "features": features(&atlas, BodyId::Earth, MapLayer::Observations, Some(id), true).unwrap()});
+    let collection = json!({"type": "FeatureCollection", "features": features(&atlas, BodyId::Earth, None, Some(id), true).unwrap()});
     for projection in [
         maplibre::projection::ProjectionType::Mercator,
         maplibre::projection::ProjectionType::Globe,
@@ -138,7 +203,11 @@ fn mapped_polygons_tessellate_fill_outline_and_selection_for_both_projections() 
                 .collect();
             let processed = maplibre::headless::map::process_geojson_layers(
                 &collection,
-                "observations",
+                if name.ends_with("selection") {
+                    "selection"
+                } else {
+                    "observations"
+                },
                 layers,
                 maplibre::coords::WorldTileCoords {
                     x: 0,
@@ -164,14 +233,7 @@ fn mapped_polygons_tessellate_fill_outline_and_selection_for_both_projections() 
 fn reconstructed_communes_load_frame_and_tessellate_with_dashed_outlines() {
     let atlas = Atlas::new(crate::catalog::tests::terrain_publication()).unwrap();
     let id = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
-    let boundaries = features(
-        &atlas,
-        BodyId::Earth,
-        MapLayer::Observations,
-        Some(id),
-        true,
-    )
-    .unwrap();
+    let boundaries = features(&atlas, BodyId::Earth, None, Some(id), true).unwrap();
     assert_eq!(
         boundaries
             .iter()
@@ -179,12 +241,18 @@ fn reconstructed_communes_load_frame_and_tessellate_with_dashed_outlines() {
             .count(),
         124
     );
-    assert!(frame(&atlas, id, [800., 600.], true).is_some());
+    assert!(frame(&atlas, id, [800., 600.], true, None).is_some());
     assert!(
         features(
             &atlas,
             BodyId::Earth,
-            MapLayer::SelectedTime,
+            Some(
+                &crate::selection::SelectedTime::query(
+                    &atlas,
+                    &crate::selection::TimeControl::default()
+                )
+                .unwrap()
+            ),
             Some(id),
             true
         )
@@ -208,7 +276,11 @@ fn reconstructed_communes_load_frame_and_tessellate_with_dashed_outlines() {
                 .collect();
             let rendered = maplibre::headless::map::process_geojson_layers(
                 &collection,
-                "observations",
+                if name.ends_with("selection") {
+                    "selection"
+                } else {
+                    "observations"
+                },
                 layers,
                 maplibre::coords::WorldTileCoords {
                     x: 0,

@@ -1,9 +1,7 @@
 use super::{PlaceControl, PlaceMap, PlaceMapError, evidence};
 use crate::{
     input::LedgerInput,
-    registration::{
-        self, ReferencedControl, RegisteredSheet, RegistrationJob, RegistrationMethod, TargetFrame,
-    },
+    registration::{self, ReferencedControl, RegisteredSheet, RegistrationJob, TargetFrame},
 };
 use atlas_core::identity::FactId;
 use atlas_geo::{
@@ -31,13 +29,13 @@ pub(super) fn register(
         input,
         RegistrationJob {
             source_id: map.source_id.clone(),
-            scan_page: map.scan_page,
+            scan_page: Some(map.scan_page),
             source_frame: map.source_frame,
             target_frame: TargetFrame {
                 crs: format!("ATLAS:source-angular:{:?}", map.datum),
                 units: "degrees".into(),
             },
-            method: RegistrationMethod::Affine,
+            method: map.method,
             controls,
             check_points,
             vertices: map.places.iter().map(|p| p.point).collect(),
@@ -66,6 +64,7 @@ fn control(
             PlaceMapError::Evidence(format!("missing coordinate {:?}", target.id))
         })?;
     Ok(ReferencedControl {
+        basis: vec![mapped.id, target.id],
         landmark: mapped.observation.name.clone(),
         reference: format!(
             "{}; record {}; printed page {}; scan page {:?}; {} {}; resolution {} arcminutes; datum {:?}",
@@ -118,7 +117,7 @@ fn estimates(
                 entity_id: record.entity_id,
                 basis: basis.into_iter().collect(),
                 brief: format!(
-                    "Affine map position from {}. Registration: maps/{}.json. {}",
+                    "Registered map position from {}. Registration: maps/{}.json. {}",
                     record.page_or_sheet.as_deref().unwrap_or("the cited sheet"),
                     map.id,
                     map.uncertainty_basis

@@ -8,8 +8,7 @@ import shutil
 import subprocess
 
 
-def package(staging):
-    root = Path(__file__).resolve().parent.parent
+def split_wasm(staging):
     wasm, = staging.glob('*_bg.wasm')
     module = wasm.name.removesuffix('_bg.wasm') + '.js'
     if not (staging / module).is_file():
@@ -22,6 +21,13 @@ def package(staging):
             parts.append({'path': name, 'bytes': len(chunk), 'sha256': hashlib.sha256(chunk).hexdigest()})
     (staging / 'runtime.json').write_text(json.dumps({'module': module, 'parts': parts}) + '\n')
     wasm.unlink()
+    return parts
+
+
+def package(staging):
+    root = Path(__file__).resolve().parent.parent
+    parts = split_wasm(staging)
+    shutil.copytree(root / 'apps/atlas-app/assets', staging / 'assets', dirs_exist_ok=True)
     subprocess.run(['cargo', 'run', '--locked', '-p', 'atlas-compile', '--',
                     'build', 'data', str(staging / 'data')], cwd=root, check=True)
     shutil.copyfile(root / 'apps/atlas-app/assets/OFL.txt', staging / 'FONT-LICENSE.txt')

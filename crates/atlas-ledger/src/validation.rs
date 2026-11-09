@@ -57,6 +57,20 @@ fn validate_record(
     citations::validate_citation(record, source)?;
     dates::validate_dates(record, sources)?;
     territory::validate(record, entity, entities)?;
+    if let Some(physical) = &record.observation.physical {
+        if physical.measurements.is_empty()
+            && physical.existence.is_none()
+            && physical.flows_into.is_none()
+        {
+            return Err(fail(&record.key, "empty physical observation"));
+        }
+        for measurement in &physical.measurements {
+            temporal::validate_measurement(&record.key, measurement)?;
+        }
+        if let Some(target) = physical.flows_into {
+            temporal::validate_relation(&record.key, entity.id, target, entities)?;
+        }
+    }
     if record
         .observation
         .extent

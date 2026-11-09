@@ -9,6 +9,9 @@ use serde_json::{Value, json};
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct DerivedBoundary {
+    /// Evidence-supported period of this reconstruction.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub validity: Option<atlas_core::time::TemporalSpan>,
     /// Checked record identifying the administrative unit.
     pub record_id: FactId,
     /// Input records supporting membership, locations, and the enclosing boundary.
@@ -42,6 +45,10 @@ impl DerivedBoundary {
             .ok_or_else(|| {
                 TerrainError::Input("derived boundary needs a checked unit record".into())
             })?;
+        if let Some(span) = &self.validity {
+            span.validate()
+                .map_err(|error| TerrainError::Input(error.to_string()))?;
+        }
         if !data
             .entities
             .iter()
@@ -98,6 +105,6 @@ impl DerivedBoundary {
                 "geometry_role":"derived_boundary","geometry_kind":"derived_polygon",
                 "reconstructed":true,"selected":selected==Some(record.entity_id),
                 "datum":self.datum,"cell_m":self.cell_m,"slope_weight":self.slope_weight,
-                "model":self.model,"basis":self.basis,"validity":null}}))
+                "model":self.model,"basis":self.basis,"validity":self.validity}}))
     }
 }

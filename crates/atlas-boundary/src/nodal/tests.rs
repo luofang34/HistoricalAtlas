@@ -28,6 +28,7 @@ fn record(name: &str, parent: Option<&str>, longitude: Option<f64>) -> Record {
         checked: true,
         source_date: None,
         observation: Observation {
+            physical: None,
             name: name.into(),
             pinyin: None,
             population: None,
@@ -59,6 +60,7 @@ fn record(name: &str, parent: Option<&str>, longitude: Option<f64>) -> Record {
 fn fixture() -> (SourceCatalog, Dataset) {
     let catalog = SourceCatalog {
         sources: vec![Source {
+            capture: None,
             id: "test-source".into(),
             title: "Test source".into(),
             responsibility: None,

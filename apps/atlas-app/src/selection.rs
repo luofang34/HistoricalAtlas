@@ -1,6 +1,6 @@
 //! Exact calendar, geological-age, and millisecond time controls.
 
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, BTreeSet};
 
 use atlas_core::{
     assertion::TemporalValue,
@@ -17,6 +17,8 @@ use crate::{catalog::Atlas, error::AppError};
 pub enum TimeMode {
     /// January 1 in the proleptic Gregorian calendar, TT.
     Year,
+    /// Calendar date at midnight on the TT axis, written YYYY-MM-DD.
+    Date,
     /// Integer million Julian years before J2000 TT.
     MillionYears,
     /// Exact signed TT milliseconds from J2000.
@@ -47,6 +49,21 @@ impl TimeControl {
     /// Convert the input into the common exact axis.
     pub fn epoch(&self) -> Result<EpochTime, AppError> {
         Ok(match self.mode {
+            TimeMode::Date => {
+                let (year_month, day) = self
+                    .value
+                    .rsplit_once('-')
+                    .ok_or_else(|| AppError::DateFormat(self.value.clone()))?;
+                let (year, month) = year_month
+                    .rsplit_once('-')
+                    .ok_or_else(|| AppError::DateFormat(self.value.clone()))?;
+                CivilDate {
+                    year: year.parse()?,
+                    month: month.parse()?,
+                    day: day.parse()?,
+                }
+                .to_epoch(Calendar::Gregorian, 0)?
+            }
             TimeMode::Year => CivilDate {
                 year: self.value.parse()?,
                 month: 1,
@@ -67,6 +84,8 @@ impl TimeControl {
 
 /// Selected temporal evidence serialized for an inspectable UI snapshot.
 pub struct SelectedTime {
+    /// Entities whose selected existence evidence records physical removal.
+    pub absent: BTreeSet<EntityId>,
     /// Exact query epoch.
     pub at: EpochTime,
     /// Applied endpoint interpretation, independent of unsubmitted controls.
@@ -85,7 +104,11 @@ impl SelectedTime {
         let selected = timeline.at(at, control.selection)?;
         let mut evidence = BTreeMap::new();
         let mut names = BTreeMap::new();
+        let mut absent = BTreeSet::new();
         for entity in selected.entities {
+            if !entity.is_present() {
+                absent.insert(entity.entity_id);
+            }
             let mut labels: Vec<_> = entity
                 .properties
                 .iter()
@@ -101,6 +124,7 @@ impl SelectedTime {
             evidence.insert(entity.entity_id, serde_json::to_value(entity)?);
         }
         Ok(Self {
+            absent,
             at,
             selection: control.selection,
             evidence,

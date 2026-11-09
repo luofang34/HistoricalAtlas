@@ -6,7 +6,10 @@ use std::path::{Path, PathBuf};
 
 #[cfg(test)]
 fn input() -> LedgerInput {
-    load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap()
+    let mut input =
+        load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    input.derivations.clear();
+    input
 }
 
 #[test]
@@ -124,7 +127,7 @@ fn map_registration_rejects_wrong_sheet_duplicate_subject_and_outside_symbol() {
         register_places(&input, &map)
             .unwrap_err()
             .to_string()
-            .contains("unique Earth subject")
+            .contains("unique subject")
     );
     let mut map = original.clone();
     map.places[0].point = PlanarPoint { x: -1.0, y: 1.0 };

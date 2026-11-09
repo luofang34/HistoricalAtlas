@@ -27,6 +27,7 @@ fn input() -> LedgerInput {
         .point;
     // A synthetic rectangle exercises registration with the reviewed Bijie controls.
     input.traces.push(SheetTrace {
+        registration_id: None,
         source_id: map.source_id.clone(),
         scan_page: map.scan_page,
         source_frame: map.source_frame,
@@ -49,6 +50,7 @@ fn input() -> LedgerInput {
             },
         ],
         units: vec![TracedUnit {
+            validity: None,
             record_id: record.id,
             polygons: vec![IndexedPolygon {
                 exterior: vec![0, 1, 2, 3, 0],
@@ -165,7 +167,9 @@ fn explicit_boundary_registration_replaces_the_automatic_fit_for_its_record() {
 fn county_outline_publishes_closed_geometry_containing_its_mapped_places() {
     use atlas_core::identity::EntityId;
 
-    let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    let mut input =
+        load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    input.derivations.clear();
     let output = export::compile(&input).unwrap();
     let id = EntityId::from_key("earth/cn-gz/bijie/bijie-county").unwrap();
     let path = format!("entities/index/{}.json", id.shard());

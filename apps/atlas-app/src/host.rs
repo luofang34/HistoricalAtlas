@@ -1,10 +1,6 @@
 //! Window lifecycle and shared GPU presentation for native and browser hosts.
 
-use crate::{
-    application::{Application, configure_fonts},
-    catalog::Atlas,
-    error::AppError,
-};
+use crate::{application::Application, catalog::Atlas, error::AppError};
 use egui_wgpu::winit::Painter;
 use std::{num::NonZeroU32, sync::Arc};
 use winit::{event::WindowEvent, event_loop::ActiveEventLoop, window::Window};
@@ -19,6 +15,9 @@ pub use lifecycle::{BrowserControl, spawn};
 /// Application window initialization or execution failure.
 #[derive(Debug, thiserror::Error)]
 pub enum HostError {
+    /// A static browser resource could not be loaded.
+    #[error("atlas asset: {0}")]
+    Resource(#[from] maplibre::io::source_client::SourceFetchError),
     /// The operating system could not initialize the event loop.
     #[error("window event loop: {0}")]
     EventLoop(#[from] winit::error::EventLoopError),
@@ -48,7 +47,10 @@ impl Host {
     async fn new(window: Arc<Window>, atlas: Atlas) -> Result<Self, HostError> {
         let context = egui::Context::default();
         context.set_visuals(egui::Visuals::dark());
-        configure_fonts(&context);
+        #[cfg(not(target_arch = "wasm32"))]
+        crate::application::configure_fonts(&context);
+        #[cfg(target_arch = "wasm32")]
+        crate::resources::fonts(&context).await?;
         let mut painter = Painter::new(
             context.clone(),
             Default::default(),

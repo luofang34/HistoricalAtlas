@@ -9,6 +9,7 @@ use atlas_ledger::{
 };
 use serde::Serialize;
 use thiserror::Error;
+mod geometry;
 
 use crate::{
     export::{Artifacts, ExportError, compile, insert, write_blocking},
@@ -20,6 +21,7 @@ struct SliceManifest {
     at: EpochTime,
     selection: TimeSelection,
     shards: Vec<String>,
+    geometry: Vec<String>,
 }
 
 /// Compile time-selected properties alongside the complete checked evidence index.
@@ -31,6 +33,13 @@ pub fn compile_slice(
     let mut artifacts = compile(input)?;
     let timeline = Timeline::new(&input.catalog, &input.data)?;
     let slice = timeline.at(at, selection)?;
+    let absent = slice
+        .entities
+        .iter()
+        .filter(|entity| !entity.is_present())
+        .map(|entity| entity.entity_id)
+        .collect();
+    let geometry = geometry::publish(&mut artifacts, &input.data, at, selection, &absent)?;
     let mut shards: BTreeMap<String, BTreeMap<_, _>> = BTreeMap::new();
     for entity in slice.entities {
         shards
@@ -53,6 +62,7 @@ pub fn compile_slice(
             at,
             selection,
             shards: names,
+            geometry,
         },
     )?;
     Ok(artifacts)
@@ -109,5 +119,4 @@ pub enum SliceError {
 mod tests;
 
 #[cfg(test)]
-#[path = "slice/chronology/tests.rs"]
-mod chronology_tests;
+mod chronology;

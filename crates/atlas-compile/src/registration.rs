@@ -7,11 +7,11 @@ use std::{
 };
 
 use atlas_geo::registration::{
-    AffineRegistration, ControlPoint, PlanarPoint, Registration, RegistrationError,
-    RegistrationQuality, ThinPlateSpline,
+    ControlPoint, PlanarPoint, Registration, RegistrationError, RegistrationQuality,
 };
 use serde::{Deserialize, Serialize};
 use thiserror::Error;
+mod fitted;
 
 use crate::{
     export::MAX_FILE_BYTES,
@@ -22,6 +22,9 @@ use crate::{
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct ReferencedControl {
+    /// Checked ledger facts establishing this correspondence.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub basis: Vec<atlas_core::identity::FactId>,
     /// Landmark name as identified on the sheet.
     pub landmark: String,
     /// Survey, dataset feature, or bibliographic locator establishing the target.
@@ -31,10 +34,11 @@ pub struct ReferencedControl {
 }
 
 /// Registration method and its parameters.
-#[derive(Debug, Clone, Copy, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, Default, Serialize, Deserialize)]
 #[serde(tag = "kind", rename_all = "snake_case", deny_unknown_fields)]
 pub enum RegistrationMethod {
     /// Least-squares affine fit.
+    #[default]
     Affine,
     /// Thin-plate spline warp.
     ThinPlate {
@@ -61,8 +65,8 @@ pub use atlas_boundary::sheet::RasterFrame;
 pub struct RegistrationJob {
     /// Catalogued source edition.
     pub source_id: String,
-    /// One-based scan page of the sheet.
-    pub scan_page: u32,
+    /// One-based page for a paginated scan; absent for a fingerprinted capture.
+    pub scan_page: Option<u32>,
     /// Full-page image dimensions defining the source pixel frame.
     pub source_frame: RasterFrame,
     /// Declared target coordinate system.
@@ -80,6 +84,8 @@ pub struct RegistrationJob {
 /// A sheet registration result with provenance and measured fit quality.
 #[derive(Debug, Serialize)]
 pub struct RegisteredSheet {
+    #[serde(skip)]
+    model: fitted::Fitted,
     /// Catalogued fingerprint of the source scan used for this result.
     pub scan_sha256: String,
     /// Input controls, references, and coordinate definitions.
@@ -92,6 +98,13 @@ pub struct RegisteredSheet {
     pub vertices: Vec<PlanarPoint>,
 }
 
+impl RegisteredSheet {
+    /// Transform additional geometry with the fitted model and original control solution.
+    pub fn transform(&self, point: PlanarPoint) -> Result<PlanarPoint, RegistrationError> {
+        self.model.transform(point)
+    }
+}
+
 /// Fit an identified sheet and evaluate its independent control evidence.
 pub fn register(
     input: &LedgerInput,
@@ -99,12 +112,7 @@ pub fn register(
 ) -> Result<RegisteredSheet, RegistrationJobError> {
     let scan_sha256 = validate_job(input, &job)?;
     let controls: Vec<_> = job.controls.iter().map(|control| control.point).collect();
-    let model: Box<dyn Registration> = match job.method {
-        RegistrationMethod::Affine => Box::new(AffineRegistration::fit(&controls)?),
-        RegistrationMethod::ThinPlate { smoothing } => {
-            Box::new(ThinPlateSpline::fit(&controls, smoothing)?)
-        }
-    };
+    let model = fitted::Fitted::fit(job.method, &controls)?;
     let control_quality = model.evaluate(&controls)?;
     let check_quality = if job.check_points.is_empty() {
         None
@@ -122,6 +130,7 @@ pub fn register(
         .map(|point| model.transform(*point))
         .collect::<Result<_, _>>()?;
     Ok(RegisteredSheet {
+        model,
         scan_sha256,
         job,
         control_quality,
@@ -142,9 +151,17 @@ fn validate_job(
         .ok_or_else(|| {
             RegistrationJobError::Evidence(format!("unknown source {}", job.source_id))
         })?;
-    if job.scan_page == 0 || source.scan_pages.is_none_or(|pages| job.scan_page > pages) {
+    let valid_page = match (job.scan_page, source.scan_pages) {
+        (Some(page), Some(pages)) => (1..=pages).contains(&page),
+        (None, None) => source
+            .capture
+            .as_ref()
+            .is_some_and(|capture| capture.sha256.is_some()),
+        _ => false,
+    };
+    if !valid_page {
         return Err(RegistrationJobError::Evidence(format!(
-            "{} scan page {} out of range",
+            "{} scan page {:?} does not identify a source raster",
             source.id, job.scan_page
         )));
     }
@@ -153,13 +170,7 @@ fn validate_job(
             "target CRS and units must be declared".into(),
         ));
     }
-    for control in job.controls.iter().chain(&job.check_points) {
-        if control.landmark.trim().is_empty() || control.reference.trim().is_empty() {
-            return Err(RegistrationJobError::Evidence(
-                "every control requires a landmark and target reference".into(),
-            ));
-        }
-    }
+    validate_controls(input, job)?;
     if job.source_frame.width == 0 || job.source_frame.height == 0 {
         return Err(RegistrationJobError::Evidence(
             "source raster dimensions must be positive".into(),
@@ -188,9 +199,44 @@ fn validate_job(
             )));
         }
     }
-    source.scan_sha256.clone().ok_or_else(|| {
+    let fingerprint = if job.scan_page.is_some() {
+        source.scan_sha256.clone()
+    } else {
+        source
+            .capture
+            .as_ref()
+            .and_then(|capture| capture.sha256.clone())
+    };
+    fingerprint.ok_or_else(|| {
         RegistrationJobError::Evidence(format!("{} has no scan fingerprint", source.id))
     })
+}
+
+fn validate_controls(
+    input: &LedgerInput,
+    job: &RegistrationJob,
+) -> Result<(), RegistrationJobError> {
+    for control in job.controls.iter().chain(&job.check_points) {
+        for id in &control.basis {
+            if !input
+                .data
+                .records
+                .iter()
+                .any(|record| record.id == *id && record.checked)
+            {
+                return Err(RegistrationJobError::Evidence(format!(
+                    "control {} references missing or unchecked fact {id:?}",
+                    control.landmark
+                )));
+            }
+        }
+        if control.landmark.trim().is_empty() || control.reference.trim().is_empty() {
+            return Err(RegistrationJobError::Evidence(
+                "every control requires a landmark and target reference".into(),
+            ));
+        }
+    }
+    Ok(())
 }
 
 /// Read a registration job and write a new result file after fitting succeeds.

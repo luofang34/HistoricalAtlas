@@ -160,12 +160,19 @@ impl Atlas {
 
     /// Display the first published name for source browsing.
     pub fn label(&self, id: EntityId) -> String {
-        self.entry(id)
-            .and_then(|entry| entry.records.first())
-            .map_or_else(
-                || id.0.to_string(),
-                |record| record.observation.name.clone(),
-            )
+        self.entry(id).map_or_else(
+            || id.0.to_string(),
+            |entry| {
+                entry
+                    .records
+                    .iter()
+                    .find(|record| !record.observation.name.is_empty())
+                    .map_or_else(
+                        || entry.entity.key.clone(),
+                        |record| record.observation.name.clone(),
+                    )
+            },
+        )
     }
 
     /// Search standard, pinyin, former names, semantic keys, and UUIDs on one body.

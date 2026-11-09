@@ -12,4 +12,6 @@ pub mod selection;
 #[cfg(not(target_arch = "wasm32"))]
 pub mod publication;
 #[cfg(target_arch = "wasm32")]
+pub mod resources;
+#[cfg(target_arch = "wasm32")]
 pub mod web;

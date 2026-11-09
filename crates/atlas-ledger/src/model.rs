@@ -14,12 +14,16 @@ use atlas_geo::{
 };
 use serde::{Deserialize, Serialize};
 
+pub mod media;
 pub mod territory;
 
 /// Bibliographic metadata for an identifiable source edition.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Source {
+    /// Capture and archival identifiers, when applicable.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub capture: Option<media::Capture>,
     /// Stable bibliographic key.
     pub id: String,
     /// Bibliographic display title.
@@ -106,6 +110,8 @@ pub enum EntityKind {
     GeologicalSite,
     /// Impact crater or basin.
     Crater,
+    /// Built infrastructure with an extensible subtype.
+    Infrastructure(atlas_core::physical::InfrastructureKind),
 }
 
 /// Enduring identity; names and administrative relationships belong to evidence.
@@ -163,10 +169,11 @@ pub struct Record {
 }
 
 /// Values transcribed from a source assertion, retaining their stated conventions.
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Observation {
     /// Standard name in the source.
+    #[serde(default, skip_serializing_if = "String::is_empty")]
     pub name: String,
     /// Pinyin spelling in the source.
     pub pinyin: Option<String>,
@@ -175,6 +182,7 @@ pub struct Observation {
     /// Recorded household count.
     pub households: Option<u64>,
     /// Source labels for population groups, in source order.
+    #[serde(default)]
     pub ethnicities: Vec<String>,
     /// Parent indicated by the source's table hierarchy.
     pub parent_id: Option<EntityId>,
@@ -194,9 +202,40 @@ pub struct Observation {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub territory: Option<territory::TerritoryObservation>,
     /// Former names supported by the source.
+    #[serde(default)]
     pub former_names: Vec<FormerName>,
+    /// Physical quantities and relationships supported by this citation.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub physical: Option<media::PhysicalObservation>,
     /// Short transcribed annotation.
     pub note: Option<String>,
+}
+
+impl Observation {
+    /// Whether the record carries a substantive observation without requiring a repeated name.
+    pub fn has_content(&self) -> bool {
+        !self.name.trim().is_empty()
+            || self
+                .pinyin
+                .as_ref()
+                .is_some_and(|text| !text.trim().is_empty())
+            || self.population.is_some()
+            || self.households.is_some()
+            || !self.ethnicities.is_empty()
+            || self.parent_id.is_some()
+            || self.rank.is_some()
+            || self.seat_id.is_some()
+            || self.coordinate.is_some()
+            || self.unresolved_coordinate.is_some()
+            || self.extent.is_some()
+            || self.territory.is_some()
+            || !self.former_names.is_empty()
+            || self.physical.is_some()
+            || self
+                .note
+                .as_ref()
+                .is_some_and(|text| !text.trim().is_empty())
+    }
 }
 
 /// A chosen interpretation with supporting evidence.

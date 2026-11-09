@@ -250,6 +250,13 @@ fn verify_checked_references(
             .chain(
                 record
                     .observation
+                    .physical
+                    .iter()
+                    .filter_map(|physical| physical.flows_into.as_ref()),
+            )
+            .chain(
+                record
+                    .observation
                     .territory
                     .iter()
                     .flat_map(|t| &t.neighbors)
@@ -369,79 +376,3 @@ pub enum ExportError {
 
 #[cfg(test)]
 mod tests;
-
-#[cfg(test)]
-#[path = "export/urban/tests.rs"]
-mod urban_tests;
-
-#[cfg(test)]
-#[path = "export/yachi/tests.rs"]
-mod yachi_tests;
-
-#[cfg(test)]
-#[path = "export/yachi/communes/tests.rs"]
-mod yachi_commune_tests;
-
-#[cfg(test)]
-#[path = "export/qingchang/tests.rs"]
-mod qingchang_tests;
-
-#[cfg(test)]
-#[path = "export/qingchang/communes/tests.rs"]
-mod qingchang_commune_tests;
-
-#[cfg(test)]
-#[path = "export/changchunbao/tests.rs"]
-mod changchunbao_tests;
-
-#[cfg(test)]
-#[path = "export/heguantun/tests.rs"]
-mod heguantun_tests;
-
-#[cfg(test)]
-#[path = "export/haizijie/tests.rs"]
-mod haizijie_tests;
-
-#[cfg(test)]
-#[path = "export/zhijin/tests.rs"]
-mod zhijin_tests;
-
-#[cfg(test)]
-#[path = "export/pingqiao/tests.rs"]
-mod pingqiao_tests;
-
-#[cfg(test)]
-#[path = "export/alie/tests.rs"]
-mod alie_tests;
-
-#[cfg(test)]
-#[path = "export/yanzikou/tests.rs"]
-mod yanzikou_tests;
-
-#[cfg(test)]
-#[path = "export/puyi/tests.rs"]
-mod puyi_tests;
-
-#[cfg(test)]
-#[path = "export/jichang/tests.rs"]
-mod jichang_tests;
-
-#[cfg(test)]
-#[path = "export/qingshuipu/tests.rs"]
-mod qingshuipu_tests;
-
-#[cfg(test)]
-#[path = "export/commune_anchors/tests.rs"]
-mod commune_anchor_tests;
-
-#[cfg(test)]
-#[path = "export/baiyan/tests.rs"]
-mod baiyan_tests;
-
-#[cfg(test)]
-#[path = "export/hongyan/tests.rs"]
-mod hongyan_tests;
-
-#[cfg(test)]
-#[path = "export/shengji/tests.rs"]
-mod shengji_tests;

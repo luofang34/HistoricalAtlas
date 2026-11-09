@@ -20,10 +20,10 @@ fn default_map_shows_drawn_places_and_requires_a_toggle_for_terrain_estimates() 
     assert_eq!(roles(&app, "source_observation"), 0);
     assert_eq!(roles(&app, "derived_boundary"), 0);
     let id = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
-    assert!(scene::boundaries::frame(&app.atlas, id, app.map_size, false).is_none());
+    assert!(scene::boundaries::frame(&app.atlas, id, app.map_size, false, None).is_none());
     app.derived_visible = true;
     assert_eq!(roles(&app, "derived_boundary"), 124);
-    assert!(scene::boundaries::frame(&app.atlas, id, app.map_size, true).is_some());
+    assert!(scene::boundaries::frame(&app.atlas, id, app.map_size, true, None).is_some());
     app.layer = MapLayer::Observations;
     assert!(roles(&app, "source_observation") > 0);
 }

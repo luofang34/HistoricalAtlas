@@ -33,10 +33,13 @@ pub struct PlaceControl {
     pub coordinate_record_id: FactId,
 }
 
-/// Reproducible affine registration of one map's named places.
+/// Reproducible registration of one map's named places.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct PlaceMap {
+    /// Numerical transformation used for all geometry on this registration.
+    #[serde(default)]
+    pub method: crate::registration::RegistrationMethod,
     /// Lowercase ASCII publication name.
     pub id: String,
     /// Bibliographic edition containing the sheet.

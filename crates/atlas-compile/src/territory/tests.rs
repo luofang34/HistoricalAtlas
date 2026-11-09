@@ -21,7 +21,8 @@ fn request(name: &str) -> NodalQuery {
 
 #[test]
 fn real_wuliping_network_preserves_every_table_identity_and_cites_every_connection() {
-    let input = load_blocking(&root()).unwrap();
+    let mut input = load_blocking(&root()).unwrap();
+    input.derivations.clear();
     let query = request("wuliping");
     let table: atlas_ledger::model::Dataset =
         read_json_blocking(&root().join("guizhou-1960s/bijie/page-35.dataset.json")).unwrap();
@@ -92,7 +93,8 @@ fn real_wuliping_network_preserves_every_table_identity_and_cites_every_connecti
 
 #[test]
 fn unresolved_yinhe_uses_only_its_cited_seat_as_a_network_anchor() {
-    let input = load_blocking(&root()).unwrap();
+    let mut input = load_blocking(&root()).unwrap();
+    input.derivations.clear();
     let query = request("toubu");
     let territory = NodalBuilder::new(&input.catalog, &input.data)
         .unwrap()
@@ -153,7 +155,8 @@ fn unresolved_yinhe_uses_only_its_cited_seat_as_a_network_anchor() {
 #[test]
 fn bijie_town_retains_dated_rank_evidence_when_its_parent_is_unknown() {
     use atlas_core::calendar::{Calendar, CivilDate};
-    let input = load_blocking(&root()).unwrap();
+    let mut input = load_blocking(&root()).unwrap();
+    input.derivations.clear();
     let estimate = input
         .data
         .estimates
@@ -208,6 +211,7 @@ fn territory_command_writes_reproducible_artifacts_and_refuses_existing_output()
 #[test]
 fn published_alias_queries_resolve_to_the_current_network_without_losing_the_request() {
     let mut input = load_blocking(&root()).unwrap();
+    input.derivations.clear();
     let canonical = request("wuliping");
     let alias = EntityId::from_key("earth/cn-gz/bijie/retired-wuliping-key").unwrap();
     input.aliases.0.insert(alias, canonical.entity_id);

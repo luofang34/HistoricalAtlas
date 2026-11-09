@@ -241,6 +241,7 @@ fn estimates_require_checked_evidence_and_a_matching_datum() {
 pub(super) fn catalog() -> SourceCatalog {
     SourceCatalog {
         sources: vec![Source {
+            capture: None,
             id: "bijie-gazetteer".into(),
             title: "贵州省毕节县地名录".into(),
             responsibility: None,

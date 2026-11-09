@@ -74,6 +74,10 @@ pub fn validate(
     }
     validate_subjects(data, trace)?;
     for unit in &trace.units {
+        if let Some(span) = &unit.validity {
+            span.validate()
+                .map_err(|error| SheetError::Evidence(error.to_string()))?;
+        }
         resolve(&trace.vertices, &unit.polygons).map_err(|source| SheetError::Topology {
             record_id: unit.record_id,
             source,

@@ -97,6 +97,9 @@ impl Application {
                 } else {
                     ui.strong(&source.title);
                 }
+                if let Some(capture) = &source.capture {
+                    capture_evidence(ui, capture);
+                }
             }
             ui.label(format!(
                 "Printed page: {} · Scan page: {}",
@@ -106,7 +109,10 @@ impl Application {
                     .map_or_else(|| "—".into(), |page| page.to_string())
             ));
             ui.label(&record.locator);
-            ui.label(&record.observation.name);
+            if !record.observation.name.is_empty() {
+                ui.label(&record.observation.name);
+            }
+            physical_evidence(ui, record);
             if let Some(pinyin) = &record.observation.pinyin {
                 ui.label(pinyin);
             }
@@ -161,7 +167,7 @@ fn mapped_boundaries(
                 allowance / 1000.0
             ));
         }
-        ui.label("Effective dates: unknown");
+        boundary_dates(ui, boundary.unit.validity.as_ref());
         ui.label(format!("Registration: {}", boundary.registration));
         ui.separator();
     }
@@ -175,10 +181,8 @@ fn derived_boundaries(ui: &mut egui::Ui, boundaries: &[atlas_boundary::terrain::
             "Grid: {:.0} projected metres · elevation cost: {}",
             boundary.cell_m, boundary.slope_weight
         ));
-        ui.label(format!(
-            "Datum: {:?} · Effective dates: unknown",
-            boundary.datum
-        ));
+        ui.label(format!("Datum: {:?}", boundary.datum));
+        boundary_dates(ui, boundary.validity.as_ref());
         for comparison in &boundary.comparisons {
             ui.label(format!(
                 "Area: {:.2} km² modeled · {:.2} km² reported",
@@ -264,4 +268,45 @@ fn json_value(ui: &mut egui::Ui, title: &str, value: &impl serde::Serialize) {
             ui.colored_label(egui::Color32::LIGHT_RED, error.to_string());
         }
     });
+}
+
+fn boundary_dates(ui: &mut egui::Ui, span: Option<&atlas_core::time::TemporalSpan>) {
+    match span {
+        Some(span) => json_value(ui, "Effective interval", span),
+        None => {
+            ui.label("Effective dates: unknown");
+        }
+    }
+}
+
+fn capture_evidence(ui: &mut egui::Ui, capture: &atlas_ledger::model::media::Capture) {
+    if let Some(medium) = capture.medium {
+        ui.label(format!("Medium: {medium:?}"));
+    }
+    if let Some(date) = &capture.date {
+        ui.label(format!("Capture date: {}", date.text));
+    }
+    if let Some(sortie) = &capture.sortie {
+        ui.label(format!("Sortie: {sortie}"));
+    }
+    if let Some(frame) = &capture.frame {
+        ui.label(format!("Frame: {frame}"));
+    }
+    if let Some(archive) = &capture.archive {
+        ui.label(format!("{} · {}", archive.repository, archive.accession));
+    }
+}
+
+fn physical_evidence(ui: &mut egui::Ui, record: &Record) {
+    if let Some(physical) = &record.observation.physical {
+        for value in &physical.measurements {
+            ui.label(format!("{:?}: {}", value.kind, value.notation));
+            if let Some(reference) = &value.reference {
+                ui.label(reference);
+            }
+        }
+        if let Some(state) = physical.existence {
+            ui.label(format!("State: {state:?}"));
+        }
+    }
 }

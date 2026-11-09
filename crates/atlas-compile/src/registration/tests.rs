@@ -6,6 +6,7 @@ fn job() -> RegistrationJob {
         .into_iter()
         .enumerate()
         .map(|(index, (x, y))| ReferencedControl {
+            basis: Vec::new(),
             landmark: format!("control-{index}"),
             reference: "test coordinate frame".into(),
             point: ControlPoint {
@@ -19,7 +20,7 @@ fn job() -> RegistrationJob {
         .collect();
     RegistrationJob {
         source_id: "zhijin-gazetteer-scan-b".into(),
-        scan_page: 40,
+        scan_page: Some(40),
         source_frame: RasterFrame {
             width: 100,
             height: 100,
@@ -31,6 +32,7 @@ fn job() -> RegistrationJob {
         method: RegistrationMethod::Affine,
         controls,
         check_points: vec![ReferencedControl {
+            basis: Vec::new(),
             landmark: "holdout".into(),
             reference: "test coordinate frame".into(),
             point: ControlPoint {
@@ -76,7 +78,8 @@ fn registration_command_path_writes_quality_and_refuses_overwrite() {
 #[test]
 fn raster_frame_rejects_outside_vertices_and_empty_dimensions() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
-    let input = load_blocking(&root).unwrap();
+    let mut input = load_blocking(&root).unwrap();
+    input.derivations.clear();
     let mut request = job();
     request.vertices[0].x = 101.0;
     assert!(
@@ -98,7 +101,8 @@ fn raster_frame_rejects_outside_vertices_and_empty_dimensions() {
 #[test]
 fn check_points_and_source_page_must_be_independent_and_identified() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
-    let input = load_blocking(&root).unwrap();
+    let mut input = load_blocking(&root).unwrap();
+    input.derivations.clear();
     let mut request = job();
     request.check_points = vec![request.controls[0].clone()];
     assert!(
@@ -108,12 +112,12 @@ fn check_points_and_source_page_must_be_independent_and_identified() {
             .contains("fitting control")
     );
     let mut request = job();
-    request.scan_page = 500;
+    request.scan_page = Some(500);
     assert!(
         register(&input, request)
             .unwrap_err()
             .to_string()
-            .contains("out of range")
+            .contains("does not identify a source raster")
     );
     let mut request = job();
     request.source_id = "nasa-nssdca-apollo11".into();
@@ -121,7 +125,7 @@ fn check_points_and_source_page_must_be_independent_and_identified() {
         register(&input, request)
             .unwrap_err()
             .to_string()
-            .contains("out of range")
+            .contains("does not identify a source raster")
     );
     let mut request = job();
     request.controls[0].reference.clear();
@@ -130,5 +134,42 @@ fn check_points_and_source_page_must_be_independent_and_identified() {
             .unwrap_err()
             .to_string()
             .contains("target reference")
+    );
+}
+
+#[test]
+fn unpaginated_aerial_capture_uses_its_fingerprint_and_rejects_unknown_control_facts() {
+    use std::collections::BTreeMap;
+    let catalog = serde_json::from_value(serde_json::json!({"sources":[{
+        "id":"frame","title":"Test reconnaissance frame","capture":{"medium":"aerial_photograph",
+        "frame":"17","sortie":"A","sha256":"a".repeat(64),"archive":{"repository":"Test archive","accession":"AIR/17"}}
+    }]})).unwrap();
+    let input = LedgerInput {
+        catalog,
+        data: Default::default(),
+        aliases: Default::default(),
+        published: Default::default(),
+        derivations: BTreeMap::new(),
+        traces: Vec::new(),
+        place_maps: BTreeMap::new(),
+        plate_models: BTreeMap::new(),
+    };
+    let mut request = job();
+    request.source_id = "frame".into();
+    request.scan_page = None;
+    let result = register(&input, request.clone()).unwrap();
+    assert_eq!(result.scan_sha256, "a".repeat(64));
+    assert_eq!(
+        result.transform(request.vertices[0]).unwrap(),
+        result.vertices[0]
+    );
+    request.controls[0]
+        .basis
+        .push(atlas_core::identity::FactId::from_key("missing/fact").unwrap());
+    assert!(
+        register(&input, request)
+            .unwrap_err()
+            .to_string()
+            .contains("unchecked fact")
     );
 }

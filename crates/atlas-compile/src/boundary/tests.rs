@@ -18,6 +18,7 @@ fn trace() -> SheetTrace {
 #[cfg(test)]
 fn controls() -> BoundaryRegistration {
     let control = |name: &str, x: f64, y: f64| ReferencedControl {
+        basis: Vec::new(),
         landmark: name.into(),
         reference: "synthetic registration test frame".into(),
         point: ControlPoint {
@@ -51,7 +52,8 @@ fn json(artifacts: &Artifacts, path: &str) -> Value {
 
 #[test]
 fn reviewed_ertang_trace_keeps_pixel_frame_and_source_boundary_method() {
-    let input = load_blocking(&root()).unwrap();
+    let mut input = load_blocking(&root()).unwrap();
+    input.derivations.clear();
     let trace = trace();
     let artifacts = compile_trace(&input, trace.clone()).unwrap();
     let manifest = json(&artifacts, "boundary-trace.json");
@@ -82,7 +84,8 @@ fn reviewed_ertang_trace_keeps_pixel_frame_and_source_boundary_method() {
 
 #[test]
 fn registration_preserves_provenance_and_reflected_rings_in_geographic_output() {
-    let input = load_blocking(&root()).unwrap();
+    let mut input = load_blocking(&root()).unwrap();
+    input.derivations.clear();
     let request = trace();
     let artifacts = compile_boundary(&input, request.clone(), controls()).unwrap();
     let manifest = json(&artifacts, "boundary.json");
@@ -117,7 +120,8 @@ fn registration_preserves_provenance_and_reflected_rings_in_geographic_output() 
 
 #[test]
 fn projected_boundary_preserves_crs_and_does_not_emit_projected_geojson() {
-    let input = load_blocking(&root()).unwrap();
+    let mut input = load_blocking(&root()).unwrap();
+    input.derivations.clear();
     let mut parameters = controls();
     parameters.target_frame = TargetFrame {
         crs: "EPSG:32648".into(),

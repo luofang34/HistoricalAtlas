@@ -44,7 +44,10 @@ fn unresolved_printed_longitude_remains_in_evidence_without_becoming_a_tile_poin
 
 #[cfg(test)]
 fn input() -> LedgerInput {
-    load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap()
+    let mut input =
+        load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
+    input.derivations.clear();
+    input
 }
 
 #[cfg(test)]

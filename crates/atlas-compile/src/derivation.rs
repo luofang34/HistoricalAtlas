@@ -49,6 +49,9 @@ pub enum AnchorReference {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct DerivationUnit {
+    /// Interval supported by the reconstruction's cited evidence.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub validity: Option<atlas_core::time::TemporalSpan>,
     /// Checked unit record from the selected gazetteer edition.
     pub record_id: FactId,
     /// Selected commune or subordinate-place coordinates.
@@ -140,6 +143,7 @@ pub fn reconstruct(
             .ok_or(TerrainError::Cell(region.unit))?;
         basis.insert(request.envelope_record_id);
         let boundary = DerivedBoundary {
+            validity: unit.validity.clone(),
             record_id: unit.record_id,
             basis: basis.iter().copied().collect(),
             region,

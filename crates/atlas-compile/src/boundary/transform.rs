@@ -21,7 +21,7 @@ pub(super) fn register(
         input,
         RegistrationJob {
             source_id: trace.source_id.clone(),
-            scan_page: trace.scan_page,
+            scan_page: Some(trace.scan_page),
             source_frame: trace.source_frame,
             target_frame: controls.target_frame,
             method: controls.method,
@@ -40,6 +40,7 @@ pub(super) fn register(
             source,
         })?;
         units.push(TracedUnit {
+            validity: unit.validity.clone(),
             record_id: unit.record_id,
             polygons,
         });

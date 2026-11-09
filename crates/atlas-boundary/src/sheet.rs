@@ -54,6 +54,9 @@ pub enum BoundaryMethod {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct TracedUnit {
+    /// Interval supported by the boundary observation; publication date alone does not date geometry.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub validity: Option<atlas_core::time::TemporalSpan>,
     /// Record identifying the subject, edition, sheet, and depicted boundary.
     pub record_id: FactId,
     /// Components sharing the sheet's pixel vertex array.
@@ -64,6 +67,9 @@ pub struct TracedUnit {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct SheetTrace {
+    /// Explicit registration identifier when one page contains several maps or solutions.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub registration_id: Option<String>,
     /// Bibliographic source edition.
     pub source_id: String,
     /// One-based scan page containing the map.
