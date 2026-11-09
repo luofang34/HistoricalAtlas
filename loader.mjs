@@ -24,7 +24,13 @@ export async function loadPublication(base) {
       }
     }
   }
-  return { sources, entries, aliases };
+  const models = await json(new URL('plates/models.json', base));
+  if (!Array.isArray(models) || models.some(id => typeof id !== 'string' || !/^[a-z0-9-]+$/.test(id))) {
+    throw new Error('Invalid plate model manifest');
+  }
+  const plate_models = Object.fromEntries(await Promise.all(models.map(async id =>
+    [id, await json(new URL(`plates/${id}.json`, base))])));
+  return { sources, entries, aliases, plate_models };
 }
 
 export async function loadBytes(manifest, base = import.meta.url) {

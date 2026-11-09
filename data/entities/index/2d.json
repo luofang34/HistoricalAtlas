@@ -398,6 +398,46 @@
     "estimates": [],
     "disputes": []
   },
+  "2d533d06-c7ce-5884-b2ae-70acd366e67f": {
+    "entity": {
+      "id": "2d533d06-c7ce-5884-b2ae-70acd366e67f",
+      "key": "earth/sb/guadalcanal/pagoda-hill",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    "records": [
+      {
+        "id": "15469f60-1483-56dd-8fe6-fc19f8c475f9",
+        "key": "commons-80-g-29356-411c/pagoda-hill/caption",
+        "entity_id": "2d533d06-c7ce-5884-b2ae-70acd366e67f",
+        "source_id": "commons-80-g-29356-411c",
+        "page_or_sheet": null,
+        "scan_page": null,
+        "locator": "Wikimedia Commons file description; original 5624×4393 px",
+        "verbatim_quote": "Aerial view of \"Pagoda Hill\" at Henderson Field, Guadalcanal. The view seems to be taken shortly after its occupation by U.S. forces.",
+        "checked": true,
+        "source_date": {
+          "text": "circa August 1942",
+          "convention": "Gregorian date as captioned",
+          "conversion_basis": null
+        },
+        "observation": {
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": "Caption asserts that the feature was photographed; it gives no coordinates."
+        }
+      }
+    ],
+    "estimates": [],
+    "disputes": []
+  },
   "2d575445-94a9-5727-9734-41f2de00f576": {
     "entity": {
       "id": "2d575445-94a9-5727-9734-41f2de00f576",
@@ -449,8 +489,8 @@
       "parts": [
         {
           "path": "geometry/2d657b11-6531-5104-a49f-4300f5e783fb/000.part",
-          "bytes": 5096,
-          "sha256": "ec77e2cf223a18d6c49b2e0a71a5f8885608ce41f2a2b38e69f0ac53f8d9b409"
+          "bytes": 5102,
+          "sha256": "7bdcd6041f3b46df0187b4f2cff121b0f7d4af7acea18053730eb4d5e54a1035"
         }
       ],
       "bounds": [

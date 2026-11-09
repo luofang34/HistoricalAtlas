@@ -52,8 +52,8 @@
       "parts": [
         {
           "path": "geometry/b81b191e-64f5-579f-8c98-8b77d993bb53/000.part",
-          "bytes": 2407,
-          "sha256": "c697521c9f4967d0c6d90a982735fce14c57f5cef8291c4fa8788fa3be38e7e5"
+          "bytes": 2409,
+          "sha256": "2898d46d539707909e254392305217fc823b02a8a2d3fd6e94ffaa0feabd7147"
         }
       ],
       "bounds": [
@@ -215,15 +215,15 @@
       "parts": [
         {
           "path": "geometry/b820f73d-a1c4-5335-80fc-527377c7fac3/000.part",
-          "bytes": 3205,
-          "sha256": "f29335d987d7162d4fc67f4ada4375f8c6182ffaa32b7fb91783664c3995d139"
+          "bytes": 3209,
+          "sha256": "2643cb4e2574b41113041ff46eeed2041b3a2d7c99f5985529fd39dc0280be1a"
         }
       ],
       "bounds": [
         105.38223266601562,
         27.236315643890098,
         105.4450003817349,
-        27.28514610024644
+        27.285146100246436
       ],
       "subjects": []
     },
@@ -477,7 +477,7 @@
           "kind": "map_location",
           "record_id": "89b09bdf-8c89-5bee-b2b4-7dfe8e371433",
           "point": {
-            "longitude": 105.38992084908551,
+            "longitude": 105.38992084908553,
             "latitude": 27.266637349196436
           },
           "datum": "unspecified",
