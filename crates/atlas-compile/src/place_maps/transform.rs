@@ -78,6 +78,8 @@ fn control(
             coordinate.resolution_arcminutes,
             coordinate.datum
         ),
+        reference_sha256: None,
+        uncertainty: None,
         point: ControlPoint {
             source: source.point,
             target: PlanarPoint {

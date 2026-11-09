@@ -87,6 +87,7 @@ fn compiled() -> Artifacts {
     let control = |name: &str, x: f64, y: f64| {
         json!({
             "landmark": name, "reference": "Synthetic affine frame for publication tests",
+            "reference_sha256": "0".repeat(64),
             "point": {"source": {"x": x, "y": y},
                 "target": {"x": 105. + x / 10000., "y": 27. - y / 10000.}}
         })

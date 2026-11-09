@@ -29,6 +29,12 @@ pub struct ReferencedControl {
     pub landmark: String,
     /// Survey, dataset feature, or bibliographic locator establishing the target.
     pub reference: String,
+    /// SHA-256 of the reference raster or dataset on which the target was measured.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub reference_sha256: Option<String>,
+    /// Stated identification uncertainty of the target, in target units.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub uncertainty: Option<f64>,
     /// Source image pixels and target planar coordinates.
     pub point: ControlPoint,
 }
@@ -45,6 +51,8 @@ pub enum RegistrationMethod {
         /// Nonnegative smoothing in normalized source units.
         smoothing: f64,
     },
+    /// Planar homography for photographs of level ground, evaluated only inside the control hull.
+    Projective,
 }
 
 /// Coordinate frame declared for every target control and output point.
@@ -244,6 +252,36 @@ fn validate_controls(
                 "every control requires a landmark and target reference".into(),
             ));
         }
+        validate_target_evidence(control)?;
+    }
+    Ok(())
+}
+
+/// A target must be traceable to checked facts or to a fingerprinted reference, never asserted.
+fn validate_target_evidence(control: &ReferencedControl) -> Result<(), RegistrationJobError> {
+    let fingerprint = control.reference_sha256.as_deref();
+    if fingerprint.is_some_and(|digest| {
+        digest.len() != 64 || !digest.bytes().all(|byte| byte.is_ascii_hexdigit())
+    }) {
+        return Err(RegistrationJobError::Evidence(format!(
+            "control {} reference fingerprint must be a SHA-256 digest",
+            control.landmark
+        )));
+    }
+    if control.basis.is_empty() && fingerprint.is_none() {
+        return Err(RegistrationJobError::Evidence(format!(
+            "control {} requires checked basis facts or a fingerprinted reference",
+            control.landmark
+        )));
+    }
+    if control
+        .uncertainty
+        .is_some_and(|value| !value.is_finite() || value < 0.0)
+    {
+        return Err(RegistrationJobError::Evidence(format!(
+            "control {} uncertainty must be finite and nonnegative",
+            control.landmark
+        )));
     }
     Ok(())
 }

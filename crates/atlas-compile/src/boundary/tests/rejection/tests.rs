@@ -1,5 +1,9 @@
 use super::*;
 
+#[cfg(test)]
+const SYNTHETIC_REFERENCE: &str =
+    "0000000000000000000000000000000000000000000000000000000000000000";
+
 #[test]
 fn ordinary_ledger_loading_checks_curated_trace_documents() {
     let mut input = load_blocking(&root()).unwrap();
@@ -99,6 +103,8 @@ fn nonlinear_registration_rejects_a_fold_in_valid_source_linework() {
             basis: Vec::new(),
             landmark: format!("corner-{index}"),
             reference: "synthetic folded map test".into(),
+            reference_sha256: Some(SYNTHETIC_REFERENCE.into()),
+            uncertainty: None,
             point: ControlPoint {
                 source: *point,
                 target: request.vertices[[0, 2, 1, 3][index]],

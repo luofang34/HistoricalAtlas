@@ -1,9 +1,14 @@
 use super::*;
+
 use atlas_core::identity::{EntityId, FactId};
 use atlas_geo::registration::ControlPoint;
 use atlas_geo::registration::PlanarPoint;
 use serde_json::{Value, json};
 use std::collections::BTreeMap;
+
+#[cfg(test)]
+const SYNTHETIC_REFERENCE: &str =
+    "0000000000000000000000000000000000000000000000000000000000000000";
 
 mod rejection;
 
@@ -23,6 +28,8 @@ fn controls() -> BoundaryRegistration {
         basis: Vec::new(),
         landmark: name.into(),
         reference: "synthetic registration test frame".into(),
+        reference_sha256: Some(SYNTHETIC_REFERENCE.into()),
+        uncertainty: None,
         point: ControlPoint {
             source: PlanarPoint { x, y },
             target: PlanarPoint {

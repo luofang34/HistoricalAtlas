@@ -1,6 +1,10 @@
 use super::*;
 
 #[cfg(test)]
+const SYNTHETIC_REFERENCE: &str =
+    "0000000000000000000000000000000000000000000000000000000000000000";
+
+#[cfg(test)]
 fn job() -> RegistrationJob {
     let controls = [(0.0, 0.0), (100.0, 0.0), (100.0, 100.0), (0.0, 100.0)]
         .into_iter()
@@ -9,6 +13,8 @@ fn job() -> RegistrationJob {
             basis: Vec::new(),
             landmark: format!("control-{index}"),
             reference: "test coordinate frame".into(),
+            reference_sha256: Some(SYNTHETIC_REFERENCE.into()),
+            uncertainty: None,
             point: ControlPoint {
                 source: PlanarPoint { x, y },
                 target: PlanarPoint {
@@ -36,6 +42,8 @@ fn job() -> RegistrationJob {
             basis: Vec::new(),
             landmark: "holdout".into(),
             reference: "test coordinate frame".into(),
+            reference_sha256: Some(SYNTHETIC_REFERENCE.into()),
+            uncertainty: None,
             point: ControlPoint {
                 source: PlanarPoint { x: 50.0, y: 50.0 },
                 target: PlanarPoint {
@@ -138,23 +146,27 @@ fn check_points_and_source_page_must_be_independent_and_identified() {
     );
 }
 
-#[test]
-fn unpaginated_aerial_capture_uses_its_fingerprint_and_rejects_unknown_control_facts() {
-    use std::collections::BTreeMap;
+#[cfg(test)]
+fn capture_input() -> LedgerInput {
     let catalog = serde_json::from_value(serde_json::json!({"sources":[{
         "id":"frame","title":"Test reconnaissance frame","capture":{"medium":"aerial_photograph",
         "frame":"17","sortie":"A","sha256":"a".repeat(64),"archive":{"repository":"Test archive","accession":"AIR/17"}}
     }]})).unwrap();
-    let input = LedgerInput {
+    LedgerInput {
         catalog,
         data: Default::default(),
         aliases: Default::default(),
         published: Default::default(),
-        derivations: BTreeMap::new(),
+        derivations: std::collections::BTreeMap::new(),
         traces: Vec::new(),
-        place_maps: BTreeMap::new(),
-        plate_models: BTreeMap::new(),
-    };
+        place_maps: std::collections::BTreeMap::new(),
+        plate_models: std::collections::BTreeMap::new(),
+    }
+}
+
+#[test]
+fn unpaginated_aerial_capture_uses_its_fingerprint_and_rejects_unknown_control_facts() {
+    let input = capture_input();
     let mut request = job();
     request.source_id = "frame".into();
     request.scan_page = None;
@@ -173,4 +185,56 @@ fn unpaginated_aerial_capture_uses_its_fingerprint_and_rejects_unknown_control_f
             .to_string()
             .contains("unchecked fact")
     );
+}
+
+#[test]
+fn controls_without_checked_facts_or_a_fingerprinted_reference_are_rejected() {
+    let mut request = job();
+    request.source_id = "frame".into();
+    request.scan_page = None;
+    request.controls[1].reference_sha256 = None;
+    let error = register(&capture_input(), request.clone()).unwrap_err();
+    assert!(
+        error.to_string().contains("fingerprinted reference"),
+        "{error}"
+    );
+    request.controls[1].reference_sha256 = Some("not-a-digest".into());
+    assert!(register(&capture_input(), request.clone()).is_err());
+    request.controls[1].reference_sha256 = Some(SYNTHETIC_REFERENCE.into());
+    request.controls[1].uncertainty = Some(-1.0);
+    assert!(register(&capture_input(), request).is_err());
+}
+
+#[test]
+fn projective_capture_registration_reports_holdouts_and_refuses_extrapolation() {
+    let ground = |x: f64, y: f64| {
+        let w = 1.0 + 0.004 * y;
+        PlanarPoint {
+            x: 600_000.0 + 3.0 * x / w,
+            y: 8_957_000.0 + (500.0 - 4.0 * y) / w,
+        }
+    };
+    let mut request = job();
+    request.source_id = "frame".into();
+    request.scan_page = None;
+    request.method = RegistrationMethod::Projective;
+    for control in &mut request.controls {
+        let source = control.point.source;
+        control.point.target = ground(source.x, source.y);
+    }
+    request.check_points[0].point.target = ground(50.0, 50.0);
+    request.vertices = vec![PlanarPoint { x: 25.0, y: 75.0 }];
+    let result = register(&capture_input(), request.clone()).unwrap();
+    assert!(result.check_quality.as_ref().unwrap().maximum < 1e-6);
+    let expected = ground(25.0, 75.0);
+    assert!((result.vertices[0].x - expected.x).hypot(result.vertices[0].y - expected.y) < 1e-6);
+    request.vertices = vec![
+        PlanarPoint { x: 100.0, y: 0.0 },
+        PlanarPoint { x: 0.0, y: 0.5 },
+    ];
+    assert!(register(&capture_input(), request.clone()).is_ok());
+    request.source_frame.width = 200;
+    request.vertices = vec![PlanarPoint { x: 150.0, y: 50.0 }];
+    let error = register(&capture_input(), request).unwrap_err();
+    assert!(error.to_string().contains("convex hull"), "{error}");
 }
