@@ -10,6 +10,7 @@ use atlas_compile::{
     reconstruction::reconstruct_blocking,
     registration::register_blocking,
     slice::write_slice_blocking,
+    terrain_grid::terrain_grid_blocking,
     territory::territory_blocking,
     tiles::write_tiles_blocking,
 };
@@ -86,7 +87,7 @@ fn dispatch(args: &[String]) -> Result<(), Box<dyn Error>> {
         }
         _ => {
             return Err(
-                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | derive <data> <request.json> <new-output-directory> | register <data> <controls.json> <new-result.json> | slice <data> <tt-ms> <nominal|possible|certain> <new-output-directory> | reconstruct <data> <request.json> <new-output-directory> | territory <data> <request.json> <new-output-directory> | trace <data> <trace.json> <new-output-directory> | boundary <data> <trace.json> <controls.json> <new-output-directory> | tiles <data> <base-url> <max-zoom> <new-output-directory>".into(),
+                "usage: atlas-compile verify <data> | build <data> <new-output-directory> | derive <data> <request.json> <new-output-directory> | register <data> <controls.json> <new-result.json> | slice <data> <tt-ms> <nominal|possible|certain> <new-output-directory> | reconstruct <data> <request.json> <new-output-directory> | territory <data> <request.json> <new-output-directory> | trace <data> <trace.json> <new-output-directory> | boundary <data> <trace.json> <controls.json> <new-output-directory> | tiles <data> <base-url> <max-zoom> <new-output-directory> | terrain-grid <request.json> <new-terrain.json>".into(),
             );
         }
     }
@@ -99,6 +100,10 @@ fn boundary_command(args: &[String]) -> Result<bool, Box<dyn Error>> {
             let files =
                 derive_blocking(Path::new(root), Path::new(request), Path::new(destination))?;
             info!(files, destination, "Terrain boundaries reconstructed");
+        }
+        [command, request, destination] if command == "terrain-grid" => {
+            let cells = terrain_grid_blocking(Path::new(request), Path::new(destination))?;
+            info!(cells, destination, "Terrain grid cropped");
         }
         [command, root, trace, destination] if command == "trace" => {
             let files = boundary_blocking(

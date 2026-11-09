@@ -25,6 +25,8 @@ pub struct LedgerInput {
     pub traces: Vec<crate::boundary::SheetTrace>,
     /// Registered source maps supplying derived place locations.
     pub place_maps: BTreeMap<String, crate::place_maps::PlaceMap>,
+    /// Shared elevation grids keyed by data-relative path without `.terrain.json`.
+    pub terrains: BTreeMap<String, crate::registration::RegistrationTerrain>,
     /// Cited plate models available for reconstruction.
     pub plate_models: BTreeMap<String, PlateModelDocument>,
     /// Combined source catalog.
@@ -60,6 +62,15 @@ pub enum InputError {
         /// Underlying evidence or geometry failure.
         #[source]
         source: Box<crate::boundary::BoundaryError>,
+    },
+    /// A shared terrain document failed validation.
+    #[error("terrain document {id}: {source}")]
+    Terrain {
+        /// Data-relative terrain identifier.
+        id: String,
+        /// Underlying evidence failure.
+        #[source]
+        source: Box<crate::registration::RegistrationJobError>,
     },
     /// Rotation model metadata or assignment failed validation.
     #[error("plate model input: {0}")]
@@ -112,6 +123,7 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
     let mut traces = Vec::new();
     let mut place_maps = Vec::new();
     let mut derivations = BTreeMap::new();
+    let mut terrains = BTreeMap::new();
     for path in paths {
         if path.file_name().is_some_and(|name| name == "sources.toml") {
             let mut batch = read_catalog_blocking(&path)?;
@@ -138,6 +150,9 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
             data.records.append(&mut batch.records);
             data.estimates.append(&mut batch.estimates);
             data.disputes.append(&mut batch.disputes);
+        } else if let Some(id) = terrain_id(root, &path) {
+            let terrain: crate::registration::RegistrationTerrain = read_json_blocking(&path)?;
+            terrains.insert(id, terrain);
         } else if path.to_string_lossy().ends_with(".trace.json") {
             traces.push((path.clone(), read_json_blocking(&path)?));
         } else if path.to_string_lossy().ends_with(".places.json") {
@@ -152,7 +167,9 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
     let aliases = read_json_blocking(&root.join("aliases.json"))?;
     let published = read_json_blocking(&root.join("published.json"))?;
     verify_publication(&data, &aliases, &published)?;
+    validate_terrains(&catalog, &terrains)?;
     let mut input = LedgerInput {
+        terrains,
         derivations,
         traces: Vec::new(),
         place_maps: BTreeMap::new(),
@@ -171,6 +188,29 @@ pub fn load_blocking(root: &Path) -> Result<LedgerInput, InputError> {
         input.traces.push(trace);
     }
     Ok(input)
+}
+
+fn validate_terrains(
+    catalog: &SourceCatalog,
+    terrains: &BTreeMap<String, crate::registration::RegistrationTerrain>,
+) -> Result<(), InputError> {
+    for (id, terrain) in terrains {
+        crate::registration::validate_terrain(catalog, terrain).map_err(|source| {
+            InputError::Terrain {
+                id: id.clone(),
+                source: Box::new(source),
+            }
+        })?;
+    }
+    Ok(())
+}
+
+/// Data-relative identifier of a `*.terrain.json` document.
+fn terrain_id(root: &Path, path: &Path) -> Option<String> {
+    let relative = path.strip_prefix(root).ok()?.to_str()?;
+    relative
+        .strip_suffix(".terrain.json")
+        .map(|id| id.replace(std::path::MAIN_SEPARATOR, "/"))
 }
 
 fn read_catalog_blocking(path: &Path) -> Result<SourceCatalog, InputError> {

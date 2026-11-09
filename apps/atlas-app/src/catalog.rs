@@ -51,6 +51,9 @@ pub struct Publication {
     /// Redirects preserving external references to merged entity identities.
     #[serde(default)]
     pub aliases: Aliases,
+    /// Cited plate-rotation excerpts keyed by model identifier.
+    #[serde(default)]
+    pub plate_models: BTreeMap<String, atlas_ledger::plates::PlateModelDocument>,
 }
 
 /// Validated, searchable evidence shared by the native and browser applications.
@@ -59,6 +62,8 @@ pub struct Atlas {
     pub sources: SourceCatalog,
     /// Evidence reconstructed from the published shards.
     pub data: Dataset,
+    /// Plate models that place assigned coordinates in deep time.
+    pub plate_models: BTreeMap<String, atlas_ledger::plates::PlateModelDocument>,
     entries: BTreeMap<EntityId, Entry>,
     aliases: BTreeMap<EntityId, EntityId>,
 }
@@ -108,9 +113,17 @@ impl Atlas {
             .keys()
             .map(|id| publication.aliases.resolve(*id).map(|target| (*id, target)))
             .collect::<Result<_, _>>()?;
+        for (id, document) in &publication.plate_models {
+            if *id != document.id {
+                return Err(AppError::PlateModel(id.clone()));
+            }
+            atlas_geo::plates::RotationModel::from_sequences(document.sequences.clone())
+                .map_err(|_| AppError::PlateModel(id.clone()))?;
+        }
         Ok(Self {
             sources,
             data,
+            plate_models: publication.plate_models,
             entries: publication.entries,
             aliases,
         })

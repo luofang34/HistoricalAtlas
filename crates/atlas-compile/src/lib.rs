@@ -9,5 +9,6 @@ pub mod plate_models;
 pub mod reconstruction;
 pub mod registration;
 pub mod slice;
+pub mod terrain_grid;
 pub mod territory;
 pub mod tiles;

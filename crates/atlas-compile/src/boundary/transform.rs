@@ -37,6 +37,7 @@ pub(super) fn register(
             controls: controls.controls,
             check_points: controls.check_points,
             vertices,
+            terrain: controls.terrain,
         },
     )?;
     let mut remaining = expanded.into_iter();
@@ -50,6 +51,7 @@ pub(super) fn register(
         })?;
         units.push(TracedUnit {
             validity: unit.validity.clone(),
+            validity_basis: unit.validity_basis.clone(),
             record_id: unit.record_id,
             polygons,
         });

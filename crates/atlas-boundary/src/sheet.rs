@@ -58,6 +58,9 @@ pub struct TracedUnit {
     /// Interval supported by the boundary observation; publication date alone does not date geometry.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub validity: Option<atlas_core::time::TemporalSpan>,
+    /// Checked records or estimates about the subject entity that establish `validity`.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub validity_basis: Vec<FactId>,
     /// Record identifying the subject, edition, sheet, and depicted boundary.
     pub record_id: FactId,
     /// Components sharing the sheet's pixel vertex array.

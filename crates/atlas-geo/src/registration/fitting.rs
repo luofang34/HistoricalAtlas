@@ -1,4 +1,4 @@
-use nalgebra::{DMatrix, DVector};
+use nalgebra::{DMatrix, DVector, Matrix3};
 
 use super::{ControlPoint, PlanarPoint, RegistrationError};
 
@@ -34,6 +34,37 @@ impl Normalization {
         };
         result.validate()?;
         Ok(result)
+    }
+
+    /// Homogeneous matrix applying [`Self::normalize`].
+    pub(super) fn normalizing_matrix(self) -> Matrix3<f64> {
+        let inverse = 1.0 / self.scale;
+        Matrix3::new(
+            inverse,
+            0.0,
+            -self.origin.x * inverse,
+            0.0,
+            inverse,
+            -self.origin.y * inverse,
+            0.0,
+            0.0,
+            1.0,
+        )
+    }
+
+    /// Homogeneous matrix applying [`Self::restore`].
+    pub(super) fn restoring_matrix(self) -> Matrix3<f64> {
+        Matrix3::new(
+            self.scale,
+            0.0,
+            self.origin.x,
+            0.0,
+            self.scale,
+            self.origin.y,
+            0.0,
+            0.0,
+            1.0,
+        )
     }
 
     pub(super) fn restore(self, point: PlanarPoint) -> Result<PlanarPoint, RegistrationError> {

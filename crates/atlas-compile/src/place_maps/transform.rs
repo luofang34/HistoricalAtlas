@@ -15,16 +15,18 @@ pub(super) fn register(
     input: &LedgerInput,
     map: &PlaceMap,
 ) -> Result<(RegisteredSheet, Vec<Estimate>), PlaceMapError> {
-    let controls = map
+    let mut controls: Vec<_> = map
         .controls
         .iter()
         .map(|c| control(input, map, c))
         .collect::<Result<_, _>>()?;
-    let check_points = map
+    controls.extend(map.reference_controls.iter().cloned());
+    let mut check_points: Vec<_> = map
         .check_points
         .iter()
         .map(|c| control(input, map, c))
         .collect::<Result<_, _>>()?;
+    check_points.extend(map.reference_check_points.iter().cloned());
     let sheet = registration::register(
         input,
         RegistrationJob {
@@ -40,6 +42,7 @@ pub(super) fn register(
             controls,
             check_points,
             vertices: map.places.iter().map(|p| p.point).collect(),
+            terrain: map.terrain.clone(),
         },
     )?;
     let estimates = estimates(input, map, &sheet)?;
@@ -78,6 +81,8 @@ fn control(
             coordinate.resolution_arcminutes,
             coordinate.datum
         ),
+        reference_sha256: None,
+        uncertainty: None,
         point: ControlPoint {
             source: source.point,
             target: PlanarPoint {

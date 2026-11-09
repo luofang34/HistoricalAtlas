@@ -41,6 +41,9 @@ pub struct Source {
     pub scan_sha256: Option<String>,
     /// Public source URL, including a DOI resolver when appropriate.
     pub url: Option<String>,
+    /// Licence or rights statement given by the holder or host for this edition or file.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub rights: Option<String>,
 }
 
 /// Source catalog stored as TOML.

@@ -24,7 +24,7 @@ pub use atlas_boundary::sheet::{BoundaryMethod, SheetTrace, TracedPlace, TracedU
 pub struct BoundaryRegistration {
     /// CRS and units shared by every target control.
     pub target_frame: TargetFrame,
-    /// Affine or thin-plate registration.
+    /// Registration model.
     pub method: RegistrationMethod,
     /// Referenced fitting landmarks.
     pub controls: Vec<ReferencedControl>,
@@ -32,6 +32,9 @@ pub struct BoundaryRegistration {
     pub check_points: Vec<ReferencedControl>,
     /// Maximum source-pixel segment length before transforming linework.
     pub maximum_segment_pixels: f64,
+    /// Elevation model required by the camera method.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub terrain: Option<crate::registration::TerrainInput>,
 }
 
 /// Compile a source-pixel trace without assigning geographical coordinates.

@@ -5,9 +5,13 @@ use thiserror::Error;
 
 mod affine;
 mod fitting;
+mod projective;
+mod support;
 mod thin_plate;
 
 pub use affine::AffineRegistration;
+pub use projective::ProjectiveRegistration;
+pub use support::ControlSupport;
 pub use thin_plate::ThinPlateSpline;
 
 /// A point in a caller-declared planar coordinate reference system.
@@ -30,7 +34,8 @@ impl PlanarPoint {
         }
     }
 
-    fn distance(self, other: Self) -> f64 {
+    /// Euclidean distance in the shared planar units.
+    pub fn distance(self, other: Self) -> f64 {
         (self.x - other.x).hypot(self.y - other.y)
     }
 }
@@ -118,6 +123,12 @@ pub enum RegistrationError {
     /// Numerical solver failed.
     #[error("registration linear solve: {0}")]
     Solve(&'static str),
+    /// Point maps to or beyond the horizon of a projective registration.
+    #[error("source point {0:?} lies on or beyond the registered ground plane's horizon")]
+    BeyondHorizon(PlanarPoint),
+    /// Point lies outside the region supported by the fitting controls.
+    #[error("source point {0:?} lies outside the convex hull of the fitting controls")]
+    OutsideSupport(PlanarPoint),
     /// Floating-point range exceeded during fitting or evaluation.
     #[error("registration computation exceeds finite numerical range")]
     NumericalRange,

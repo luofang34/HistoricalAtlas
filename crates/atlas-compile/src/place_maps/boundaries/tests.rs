@@ -52,6 +52,7 @@ fn input() -> LedgerInput {
         ],
         units: vec![TracedUnit {
             validity: None,
+            validity_basis: Vec::new(),
             record_id: record.id,
             polygons: vec![IndexedPolygon {
                 exterior: vec![0, 1, 2, 3, 0],

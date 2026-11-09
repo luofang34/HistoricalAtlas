@@ -411,3 +411,36 @@ fn assert_lunar_evidence(
                 && source["url"].as_str().unwrap().starts_with("https://"))
     );
 }
+
+#[test]
+fn deep_time_slices_publish_plate_rotated_positions_matching_reconstruction_jobs() {
+    let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
+    let mut input = load_blocking(&root).unwrap();
+    input.derivations.clear();
+    let job: crate::reconstruction::ReconstructionJob = crate::input::read_json_blocking(
+        &root.join("paleogeography/panxian-240ma.reconstruction.json"),
+    )
+    .unwrap();
+    let expected = crate::reconstruction::reconstruct(&input, job.clone()).unwrap();
+    let artifacts = compile_slice(&input, job.at, TimeSelection::Nominal).unwrap();
+    let manifest: serde_json::Value =
+        serde_json::from_slice(&artifacts[Path::new("slice.json")]).unwrap();
+    assert_eq!(manifest["paleo"], "slice/paleo.json");
+    let positions: Vec<atlas_ledger::plates::PaleoPosition> =
+        serde_json::from_slice(&artifacts[Path::new("slice/paleo.json")]).unwrap();
+    let anchor = &expected.anchors[0];
+    let position = positions
+        .iter()
+        .find(|position| position.record_id == anchor.coordinate_record)
+        .unwrap();
+    assert!((position.reconstructed.longitude - anchor.reconstructed.longitude).abs() < 1e-9);
+    assert!((position.reconstructed.latitude - anchor.reconstructed.latitude).abs() < 1e-9);
+    // At the model's present the rotation is the identity.
+    let present = compile_slice(&input, EpochTime::from_ticks(0), TimeSelection::Nominal).unwrap();
+    let positions: Vec<atlas_ledger::plates::PaleoPosition> =
+        serde_json::from_slice(&present[Path::new("slice/paleo.json")]).unwrap();
+    assert!(positions.iter().all(|position| {
+        (position.reconstructed.longitude - position.observed.longitude).abs() < 1e-6
+            && (position.reconstructed.latitude - position.observed.latitude).abs() < 1e-6
+    }));
+}

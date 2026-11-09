@@ -32,6 +32,7 @@ pub(crate) fn lunar_publication() -> Publication {
         sources: serde_json::from_value(json!([source])).unwrap(),
         entries: BTreeMap::from([(id, entry)]),
         aliases: Default::default(),
+        plate_models: Default::default(),
     }
 }
 
@@ -80,6 +81,12 @@ fn compiled() -> Artifacts {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
     let mut input = atlas_compile::input::load_blocking(&root).unwrap();
     input.derivations.clear();
+    input.catalog.sources.push(
+        serde_json::from_value(json!({"id": "synthetic-reference",
+            "title": "Synthetic registration test frame", "rights": "Public domain test fixture",
+            "capture": {"sha256": "0".repeat(64)}}))
+        .unwrap(),
+    );
     let trace: SheetTrace = serde_json::from_slice(
         &std::fs::read(root.join("guizhou-1960s/zhijin/ertang.trace.json")).unwrap(),
     )
@@ -87,6 +94,7 @@ fn compiled() -> Artifacts {
     let control = |name: &str, x: f64, y: f64| {
         json!({
             "landmark": name, "reference": "Synthetic affine frame for publication tests",
+            "reference_sha256": "0".repeat(64),
             "point": {"source": {"x": x, "y": y},
                 "target": {"x": 105. + x / 10000., "y": 27. - y / 10000.}}
         })
@@ -124,6 +132,7 @@ pub(crate) fn publication() -> Publication {
         sources,
         entries,
         aliases: Default::default(),
+        plate_models: Default::default(),
     }
 }
 

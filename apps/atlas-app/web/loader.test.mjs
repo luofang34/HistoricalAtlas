@@ -8,12 +8,17 @@ test('publication loads valid UUID shards and rejects repeated or misfiled ident
     ['/data/sources.json', []], ['/data/entities/shards.json', ['ab']],
     ['/data/entities/aliases.json', { 'old-entity': 'ab-entity' }],
     ['/data/entities/index/ab.json', { 'ab-entity': { entity: { id: 'ab-entity' } } }],
+    ['/data/plates/models.json', ['test-model']], ['/data/plates/test-model.json', { id: 'test-model' }],
   ]);
   t.mock.method(globalThis, 'fetch', async url => new Response(JSON.stringify(documents.get(url.pathname))));
   const base = new URL('https://atlas.example/data/');
   const publication = await loadPublication(base);
   assert.equal(Object.keys(publication.entries).length, 1);
   assert.deepEqual(publication.aliases, { 'old-entity': 'ab-entity' });
+  assert.deepEqual(publication.plate_models, { 'test-model': { id: 'test-model' } });
+  documents.set('/data/plates/models.json', ['../private']);
+  await assert.rejects(loadPublication(base), /Invalid plate model manifest/);
+  documents.set('/data/plates/models.json', ['test-model']);
   documents.set('/data/entities/shards.json', ['ab', 'ab']);
   await assert.rejects(loadPublication(base), /repeated entity/);
   documents.set('/data/entities/shards.json', ['../private']);

@@ -1,4 +1,6 @@
 use super::*;
+use crate::registration::{SYNTHETIC_REFERENCE, with_synthetic_reference};
+
 use atlas_core::identity::{EntityId, FactId};
 use atlas_geo::registration::ControlPoint;
 use atlas_geo::registration::PlanarPoint;
@@ -23,6 +25,8 @@ fn controls() -> BoundaryRegistration {
         basis: Vec::new(),
         landmark: name.into(),
         reference: "synthetic registration test frame".into(),
+        reference_sha256: Some(SYNTHETIC_REFERENCE.into()),
+        uncertainty: None,
         point: ControlPoint {
             source: PlanarPoint { x, y },
             target: PlanarPoint {
@@ -45,6 +49,7 @@ fn controls() -> BoundaryRegistration {
         ],
         check_points: vec![control("holdout", 900., 1400.)],
         maximum_segment_pixels: 10.,
+        terrain: None,
     }
 }
 
@@ -55,7 +60,7 @@ fn json(artifacts: &Artifacts, path: &str) -> Value {
 
 #[test]
 fn reviewed_ertang_trace_keeps_pixel_frame_and_source_boundary_method() {
-    let mut input = load_blocking(&root()).unwrap();
+    let mut input = with_synthetic_reference(load_blocking(&root()).unwrap());
     input.derivations.clear();
     let trace = trace();
     let artifacts = compile_trace(&input, trace.clone()).unwrap();
@@ -87,7 +92,7 @@ fn reviewed_ertang_trace_keeps_pixel_frame_and_source_boundary_method() {
 
 #[test]
 fn registration_preserves_provenance_and_reflected_rings_in_geographic_output() {
-    let mut input = load_blocking(&root()).unwrap();
+    let mut input = with_synthetic_reference(load_blocking(&root()).unwrap());
     input.derivations.clear();
     let request = trace();
     let artifacts = compile_boundary(&input, request.clone(), controls()).unwrap();
@@ -123,7 +128,7 @@ fn registration_preserves_provenance_and_reflected_rings_in_geographic_output() 
 
 #[test]
 fn projected_boundary_preserves_crs_and_does_not_emit_projected_geojson() {
-    let mut input = load_blocking(&root()).unwrap();
+    let mut input = with_synthetic_reference(load_blocking(&root()).unwrap());
     input.derivations.clear();
     let mut parameters = controls();
     parameters.target_frame = TargetFrame {
@@ -159,7 +164,14 @@ fn boundary_command_publishes_both_modes_and_refuses_existing_destinations() {
     assert!(boundary_blocking(&root(), &path, None, &output).unwrap() > 200);
     assert!(boundary_blocking(&root(), &path, None, &output).is_err());
     let parameters = temp.path().join("controls.json");
-    std::fs::write(&parameters, serde_json::to_vec(&controls()).unwrap()).unwrap();
+    // The command reloads the ledger from disk, so its controls cite the trace's checked method fact.
+    let method_fact = trace().method_basis[0];
+    let mut cited = controls();
+    for control in cited.controls.iter_mut().chain(&mut cited.check_points) {
+        control.reference_sha256 = None;
+        control.basis.push(method_fact);
+    }
+    std::fs::write(&parameters, serde_json::to_vec(&cited).unwrap()).unwrap();
     let registered = temp.path().join("registered");
     boundary_blocking(&root(), &path, Some(&parameters), &registered).unwrap();
     assert!(registered.join("boundary.json").is_file());
@@ -170,18 +182,18 @@ fn boundary_command_publishes_both_modes_and_refuses_existing_destinations() {
 fn unpaginated_line_only_capture_registers_and_publishes_open_components() {
     let entity = EntityId::from_key("earth/test/river").unwrap();
     let fact = FactId::from_key("capture/river").unwrap();
-    let mut input = LedgerInput {
+    let mut input = with_synthetic_reference(LedgerInput {
         catalog: serde_json::from_value(json!({"sources":[{"id":"capture","title":"Test frame",
             "capture":{"medium":"aerial_photograph","sha256":"a".repeat(64),"frame":"17"}}]})).unwrap(),
         data: serde_json::from_value(json!({"entities":[{"id":entity,"key":"earth/test/river","body":"earth","kind":"river"}],
             "records":[{"id":fact,"key":"capture/river","entity_id":entity,"source_id":"capture","locator":"River","checked":true,"observation":{"name":"River"}}],"estimates":[],"disputes":[]})).unwrap(),
-        aliases: Default::default(), published: Default::default(), derivations: BTreeMap::new(),
+        aliases: Default::default(), published: Default::default(), derivations: BTreeMap::new(), terrains: BTreeMap::new(),
         traces: Vec::new(), place_maps: BTreeMap::new(), plate_models: BTreeMap::new(),
-    };
+    });
     let trace: SheetTrace = serde_json::from_value(json!({"source_id":"capture","scan_page":null,
         "source_frame":{"width":1000,"height":1500},"boundary_method":"unstated","method_basis":[],
         "vertices":[{"x":100,"y":100},{"x":400,"y":100},{"x":600,"y":100},{"x":900,"y":100}],
-        "lines":[{"record_id":fact,"paths":[[0,1],[2,3]],"validity":{"start":{"earliest":"0","nominal":"0","latest":"0","precision":"day"},"end":null}}]})).unwrap();
+        "lines":[{"record_id":fact,"paths":[[0,1],[2,3]],"validity_basis":[fact],"validity":{"start":{"earliest":"0","nominal":"0","latest":"0","precision":"day"},"end":null}}]})).unwrap();
     let mut parameters = controls();
     parameters.method = RegistrationMethod::ThinPlate { smoothing: 0.0 };
     for control in &mut parameters.controls {

@@ -192,3 +192,32 @@ fn county_registration_checks_the_whole_extent_against_independent_minute_coordi
         assert!(estimates.iter().all(|e| e.basis.contains(&source.id)));
     }
 }
+
+#[test]
+fn reference_landmarks_join_table_controls_and_holdouts() {
+    let input = crate::registration::with_synthetic_reference(input());
+    let mut map = input.place_maps["bijie-town"].clone();
+    let (baseline, _) = register_places(&input, &map).unwrap();
+    // Re-express the first holdout as a landmark measured on a catalogued reference.
+    let holdout = baseline.job.check_points[0].clone();
+    map.check_points.remove(0);
+    map.reference_check_points
+        .push(crate::registration::ReferencedControl {
+            basis: Vec::new(),
+            reference: "Synthetic reference measurement".into(),
+            reference_sha256: Some(crate::registration::SYNTHETIC_REFERENCE.into()),
+            uncertainty: Some(0.0005),
+            ..holdout
+        });
+    let (sheet, _) = register_places(&input, &map).unwrap();
+    assert_eq!(
+        sheet.job.check_points.len(),
+        baseline.job.check_points.len()
+    );
+    let quality = sheet.check_quality.unwrap();
+    let before = baseline.check_quality.unwrap();
+    assert!((quality.maximum - before.maximum).abs() < 1e-12);
+    let mut unlicensed = map.clone();
+    unlicensed.reference_check_points[0].reference_sha256 = Some("e".repeat(64));
+    assert!(register_places(&input, &unlicensed).is_err());
+}

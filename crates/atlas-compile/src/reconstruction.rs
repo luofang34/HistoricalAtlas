@@ -104,7 +104,7 @@ pub fn reconstruct(
             "reconstruction needs at least one coordinate anchor".into(),
         ));
     }
-    let model = document.model(&input.catalog)?;
+    let model = crate::plate_models::validated_model(document, &input.catalog)?;
     let mut anchors = Vec::new();
     for anchor in &job.anchors {
         let (record, plate) = resolve_anchor(input, anchor, &job.model_id)?;

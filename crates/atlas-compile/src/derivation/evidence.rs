@@ -77,6 +77,13 @@ pub(super) fn seeds(
                 "units need distinct administrative subjects and seed evidence".into(),
             ));
         }
+        atlas_boundary::validity::validate(
+            &input.data,
+            unit.record_id,
+            unit.validity.as_ref(),
+            &unit.validity_basis,
+        )
+        .map_err(|error| DerivationError::Evidence(error.to_string()))?;
         let mut basis = BTreeSet::from([record.id]);
         for anchor in &unit.anchors {
             let (entity, point, anchor_datum, proof) = location(input, request, anchor)?;

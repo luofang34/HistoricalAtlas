@@ -59,7 +59,8 @@ fn units(input: &LedgerInput, units: &[TracedUnit]) -> Result<Vec<Value>, Bounda
             Ok(
                 json!({"entity_id": record.entity_id, "record_id": record.id,
             "body": entity.body, "rank": record.observation.rank,
-            "validity": unit.validity, "polygons": unit.polygons}),
+            "validity": unit.validity, "validity_basis": unit.validity_basis,
+            "polygons": unit.polygons}),
             )
         })
         .collect()
