@@ -1,0 +1,48 @@
+{
+  "entities": [
+    {
+      "id": "80347fb7-d22f-54ab-a2a9-b438bbee13f4",
+      "key": "earth/cn-gz/bijie/gengguan/luoshuidong-south-cave",
+      "body": "earth",
+      "kind": "cave"
+    }
+  ],
+  "records": [
+    {
+      "id": "faa758bf-5dc6-5368-a8f0-eea0a4759a21",
+      "key": "bijie-gazetteer/p318/gengguan/luoshuidong-south-cave",
+      "entity_id": "80347fb7-d22f-54ab-a2a9-b438bbee13f4",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "318",
+      "scan_page": 353,
+      "locator": "Place table, 落水洞 row",
+      "verbatim_quote": null,
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "落水洞",
+        "pinyin": "Luóshuǐ Dòng",
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "adb93f9b-a2ce-5cc8-9f75-0c8a5b594062",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": {
+          "point": {
+            "longitude": 105.5,
+            "latitude": 27.683333333333334
+          },
+          "longitude_text": "105°30′",
+          "latitude_text": "27°41′",
+          "resolution_arcminutes": 1.0,
+          "datum": "unspecified"
+        },
+        "former_names": [],
+        "note": "洞穴、高/深4/700米"
+      }
+    }
+  ],
+  "estimates": [],
+  "disputes": []
+}

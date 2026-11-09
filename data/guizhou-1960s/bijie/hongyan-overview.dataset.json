@@ -1,0 +1,415 @@
+{
+  "entities": [
+    {
+      "id": "f5be109c-0a54-56c3-82bf-fde46d086a2e",
+      "key": "earth/cn-gz/bijie/hongyan/hongyan-fortress",
+      "body": "earth",
+      "kind": "historic_site"
+    },
+    {
+      "id": "aebd84a8-260a-502a-8c0c-95bfd12ede04",
+      "key": "earth/cn-gz/bijie/hongyan/hongyan-gully",
+      "body": "earth",
+      "kind": "river"
+    }
+  ],
+  "records": [
+    {
+      "id": "1edebf9c-ec0e-56bf-aa42-0b61196b05ae",
+      "key": "bijie-gazetteer/p311/hongyan-commune/extent",
+      "entity_id": "126109bd-1ae6-5c43-ab47-addc384047cf",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "311",
+      "scan_page": 346,
+      "locator": "Commune overview: extent",
+      "verbatim_quote": "今名红岩公社，位于毕节县东北距县城七十公里，地处东经105°30′～105°36′，北纬27°34′～27°39′之间，总面积约35平方公里。\n红岩公社：东与柳湾，东南与公子河，西与亮岩，西南与斯栗、太极，北与清水铺等公社接壤。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "红岩公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "今名红岩公社，位于毕节县东北距县城七十公里，地处东经105°30′～105°36′，北纬27°34′～27°39′之间，总面积约35平方公里。\n红岩公社：东与柳湾，东南与公子河，西与亮岩，西南与斯栗、太极，北与清水铺等公社接壤。",
+        "territory": {
+          "area_square_km": 35.0,
+          "neighbors": [
+            {
+              "name": "柳湾",
+              "entity_id": "a8d1cc61-b619-50dc-832b-6f23b774fc9f"
+            },
+            {
+              "name": "公子河",
+              "entity_id": "e5e83800-168f-5446-9fff-2b8c7a63a3d8"
+            },
+            {
+              "name": "亮岩",
+              "entity_id": "771c134d-858b-591f-8568-42ab29fa33b7"
+            },
+            {
+              "name": "斯栗",
+              "entity_id": "f88908f9-e391-5517-bfab-c9bc7bb6906c"
+            },
+            {
+              "name": "太极",
+              "entity_id": "a4625554-46ca-5407-a239-b84ce8bd31ff"
+            },
+            {
+              "name": "清水铺",
+              "entity_id": "4ab19eda-f47e-5d20-94ba-e93bd1ce4788"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "607515b7-45ca-56d7-bf37-d095835290b6",
+      "key": "bijie-gazetteer/p311/hongyan/hongyan-fortress/history",
+      "entity_id": "f5be109c-0a54-56c3-82bf-fde46d086a2e",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "311",
+      "scan_page": 346,
+      "locator": "Commune overview: history",
+      "verbatim_quote": "明红岩囤，属水西辖地，八夷屯之一。据《县志》引《方舆纪要》红岩囤称天险。",
+      "checked": true,
+      "source_date": {
+        "text": "明",
+        "convention": "Chinese historical period",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "红岩囤",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "126109bd-1ae6-5c43-ab47-addc384047cf",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "b9a73c59-687e-5a4e-a390-e8d9922cb856",
+      "key": "bijie-gazetteer/p311/hongyan-commune/chronology",
+      "entity_id": "126109bd-1ae6-5c43-ab47-addc384047cf",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "311",
+      "scan_page": 346,
+      "locator": "Commune overview: chronology",
+      "verbatim_quote": "民国属清水乡辖地，解放后，1950年建村，土改后54年建乡，农业合作化建初级社，56年进入高级社，58年成立红岩人民公社至今，公社驻地在红岩沟南面湾子村。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "红岩公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "fad8b26a-a8f2-5371-84c7-5c91139615dd",
+      "key": "bijie-gazetteer/p311/hongyan-commune/establishment",
+      "entity_id": "126109bd-1ae6-5c43-ab47-addc384047cf",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "311",
+      "scan_page": 346,
+      "locator": "Commune overview: establishment",
+      "verbatim_quote": "58年成立红岩人民公社至今。",
+      "checked": true,
+      "source_date": {
+        "text": "58年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "红岩人民公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "72d58c06-48e6-5487-a3d9-c5d334b052b3",
+      "key": "bijie-gazetteer/p311/hongyan-commune/seat",
+      "entity_id": "126109bd-1ae6-5c43-ab47-addc384047cf",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "311",
+      "scan_page": 346,
+      "locator": "Commune overview: seat",
+      "verbatim_quote": "公社驻地在红岩沟南面湾子村。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "红岩公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "a4dbb3e5-b69c-5ffa-a152-0c6cafd97faf",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "16a3748f-4bc8-5b3e-8979-d83505ddd2c1",
+      "key": "bijie-gazetteer/p311/hongyan/qingshan-mountain/elevation",
+      "entity_id": "d6bc9e6d-c7e7-5960-8d81-0c2f77016c40",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "311",
+      "scan_page": 346,
+      "locator": "Commune overview: elevation",
+      "verbatim_quote": "最高处青山海拔1442米。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "青山",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "44091898-cf80-5a8d-935a-1b4e0c14c394",
+      "key": "bijie-gazetteer/p311/hongyan/wangxiang-river/elevation",
+      "entity_id": "549d05e8-4455-54a3-85a3-517f3ba13784",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "311",
+      "scan_page": 346,
+      "locator": "Commune overview: elevation",
+      "verbatim_quote": "最低处望乡河海拔620米。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "望乡河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "871b0d82-44dd-5d01-9c67-37806670e526",
+      "key": "bijie-gazetteer/p311/hongyan/hongyan-gully/course",
+      "entity_id": "aebd84a8-260a-502a-8c0c-95bfd12ede04",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "311",
+      "scan_page": 346,
+      "locator": "Commune overview: course",
+      "verbatim_quote": "两山间多溪流，汇成红岩沟，由西向东折南入望乡河。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "红岩沟",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "126109bd-1ae6-5c43-ab47-addc384047cf",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "343e7057-bec8-589c-8b72-6a9737a0545e",
+      "key": "bijie-gazetteer/p311/hongyan-commune/name-origin",
+      "entity_id": "126109bd-1ae6-5c43-ab47-addc384047cf",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "311",
+      "scan_page": 346,
+      "locator": "Commune overview: name origin",
+      "verbatim_quote": "由于夏季山洪暴发，沿沟两侧岩石显红色，故人称为红岩沟，红岩公社因而得名。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "红岩公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5281c0a6-59d4-52f6-b80b-19c3011e1216",
+      "key": "bijie-gazetteer/p311/hongyan-commune/subdivisions",
+      "entity_id": "126109bd-1ae6-5c43-ab47-addc384047cf",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "311",
+      "scan_page": 346,
+      "locator": "Commune overview: subdivisions",
+      "verbatim_quote": "辖：红岩沟、小垭、民族、兰沟、发沙五个大队，四十六个生产队、68个自然村。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "红岩公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Five brigades, 46 production teams and 68 natural villages."
+      }
+    },
+    {
+      "id": "6ff905ce-de03-58b5-96f9-f056a7eacbe2",
+      "key": "bijie-gazetteer/p311/hongyan-commune/population",
+      "entity_id": "126109bd-1ae6-5c43-ab47-addc384047cf",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "311",
+      "scan_page": 346,
+      "locator": "Commune overview: population",
+      "verbatim_quote": "该社总人口为1039户4889人，其中苗族254人，彝族115人，其他民族129人，余为汉族，均以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "红岩公社",
+        "pinyin": null,
+        "population": 4889,
+        "households": 1039,
+        "ethnicities": [
+          "苗",
+          "彝",
+          "汉"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "254 Miao, 115 Yi and 129 residents of other unnamed ethnic groups, with the remainder Han."
+      }
+    },
+    {
+      "id": "5618ce11-8359-5f7e-8412-dbd000d87aee",
+      "key": "bijie-gazetteer/p311/hongyan-commune/transport-and-education",
+      "entity_id": "126109bd-1ae6-5c43-ab47-addc384047cf",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "311",
+      "scan_page": 346,
+      "locator": "Commune overview: transport and education",
+      "verbatim_quote": "目前已修通了乡村公路，共有约10公里，文教卫生亦逐步发展。现有社办完小一所，附设初中班，有学生120余人，各大队有民办小学共五所，在校学生600余人。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "红岩公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "f3c12999-af89-5220-b922-0136b00bcda0",
+      "key": "editorial/bijie/hongyan-commune/establishment",
+      "entity_id": "126109bd-1ae6-5c43-ab47-addc384047cf",
+      "basis": [
+        "fad8b26a-a8f2-5371-84c7-5c91139615dd"
+      ],
+      "brief": "Date establishment within the cited calendar year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "88524a35-0532-5409-a273-6590c1d6e6d0",
+      "key": "editorial/bijie/hongyan-commune/commune-name",
+      "entity_id": "126109bd-1ae6-5c43-ab47-addc384047cf",
+      "basis": [
+        "fad8b26a-a8f2-5371-84c7-5c91139615dd"
+      ],
+      "brief": "Use the explicitly dated transition with calendar-year bounds.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "红岩人民公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

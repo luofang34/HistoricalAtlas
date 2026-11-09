@@ -437,3 +437,7 @@ mod commune_anchor_tests;
 #[cfg(test)]
 #[path = "export/baiyan/tests.rs"]
 mod baiyan_tests;
+
+#[cfg(test)]
+#[path = "export/hongyan/tests.rs"]
+mod hongyan_tests;
