@@ -12,19 +12,35 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: true
+env:
+  SOURCE_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
 
 jobs:
-  publish:
+  # CI runs for successive pushes can finish out of order; only the branch tip publishes,
+  # so a late result for an older commit never replaces a newer site.
+  check:
     if: >-
       github.event_name == 'workflow_dispatch' ||
       (github.event.workflow_run.conclusion == 'success' &&
        github.event.workflow_run.event == 'push')
     runs-on: ubuntu-latest
-    env:
-      SOURCE_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+    outputs:
+      current: ${{ steps.tip.outputs.current }}
+    steps:
+      - id: tip
+        run: |
+          tip=$(git ls-remote "https://github.com/${GITHUB_REPOSITORY}" refs/heads/atlas-foundation | cut -f1)
+          if [ "$tip" = "$SOURCE_SHA" ]; then current=true; else current=false; fi
+          echo "tip ${tip}, source ${SOURCE_SHA}, current ${current}"
+          echo "current=${current}" >> "$GITHUB_OUTPUT"
+
+  publish:
+    needs: check
+    if: needs.check.outputs.current == 'true'
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
