@@ -4,7 +4,7 @@ A spatiotemporal atlas and evidence ledger for chronicle applications. Historica
 
 ## Usage
 
-Requires Rust 1.97.1 or later with the `wasm32-unknown-unknown` target, the Protocol Buffers compiler (`protoc`), Python 3.12 or later, Poppler, and Tesseract with the English model for extraction tests. Image recognition of Chinese sources also uses the `chi_sim` model.
+Requires Rust 1.97.1 or later with the `wasm32-unknown-unknown` target, the Protocol Buffers compiler (`protoc`), Python 3.12 or later, Poppler, Tesseract with the English model for extraction tests, Node.js for the browser loader tests, and `uv`, which `scripts/ci.sh` uses to run the asset-tool tests with numpy, Pillow, fontTools, and matplotlib. Image recognition of Chinese sources also uses the `chi_sim` model.
 
 ```sh
 cargo run -p atlas-compile -- verify data
