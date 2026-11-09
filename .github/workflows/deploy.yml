@@ -1,0 +1,61 @@
+name: Deploy
+
+# Publish the browser atlas after CI passes on a push to the default branch, so the site
+# always matches a commit whose code and evidence were verified.
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [atlas-foundation]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event == 'push')
+    runs-on: ubuntu-latest
+    env:
+      SOURCE_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.SOURCE_SHA }}
+      - name: Install build tools
+        run: |
+          rustup toolchain install stable --profile minimal --target wasm32-unknown-unknown
+          rustup default stable
+          sudo apt-get update
+          sudo apt-get install -y protobuf-compiler
+          curl -fsSL https://github.com/trunk-rs/trunk/releases/download/v0.21.14/trunk-x86_64-unknown-linux-gnu.tar.gz \
+            | sudo tar -xz -C /usr/local/bin trunk
+      - uses: Swatinem/rust-cache@v2
+      - name: Build the browser atlas
+        run: cd apps/atlas-app && trunk build --release
+      - name: Keep every published file under 4,000,000 bytes
+        run: |
+          oversized=$(find dist/site -type f -size +3999999c)
+          if [ -n "$oversized" ]; then echo "$oversized"; exit 1; fi
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: pages
+      - name: Publish to gh-pages
+        # Review previews and the Jekyll opt-out live only on gh-pages.
+        run: |
+          rsync -a --delete --exclude .git --exclude previews --exclude .nojekyll dist/site/ pages/
+          cd pages
+          git add -A
+          if git diff --cached --quiet; then echo "Site unchanged"; exit 0; fi
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "Publish the atlas from ${SOURCE_SHA::7}"
+          git push origin HEAD:gh-pages
