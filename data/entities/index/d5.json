@@ -328,6 +328,59 @@
         }
       },
       {
+        "id": "2a6476a0-ab36-5cee-87e4-bd98a0b23cac",
+        "key": "wikipedia-henderson-field-1382271173/henderson-field/construction",
+        "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+        "source_id": "wikipedia-henderson-field-1382271173",
+        "page_or_sheet": null,
+        "scan_page": null,
+        "locator": "Japanese construction",
+        "verbatim_quote": "There were two major construction units involved: 1,379 men in one and 1,145 in another, originally designated to work on Midway Island once it was captured. They arrived on 6 July 1942, commencing work after 9 July.",
+        "checked": true,
+        "source_date": {
+          "text": "after 9 July 1942",
+          "convention": "Gregorian date in text",
+          "conversion_basis": null
+        },
+        "observation": {
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": "Japanese construction of the airfield began."
+        }
+      },
+      {
+        "id": "4f8ac444-1381-5b05-b9e3-c23a52cec359",
+        "key": "wikipedia-henderson-field-1382271173/henderson-field/naming",
+        "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+        "source_id": "wikipedia-henderson-field-1382271173",
+        "page_or_sheet": null,
+        "scan_page": null,
+        "locator": "United States seizure and Battle of Guadalcanal",
+        "verbatim_quote": "The captured airfield was named Henderson Field in honor of United States Marine Corps Major Lofton Henderson, commanding officer of VMSB-241 who was killed in the Battle of Midway while leading his squadron against the Japanese carrier forces; he was the first Marine aviator to perish during that battle.",
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "Henderson Field",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": null
+        }
+      },
+      {
         "id": "5e758980-48e5-50d0-a16c-37784c1c6fbc",
         "key": "commons-lunga-airfield-1942-07/henderson-field/caption",
         "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
@@ -440,6 +493,97 @@
         }
       },
       {
+        "id": "91253d3f-5dad-58ff-8ebe-b33ccf10de0e",
+        "key": "wikipedia-henderson-field-1382271173/henderson-field/coordinate",
+        "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+        "source_id": "wikipedia-henderson-field-1382271173",
+        "page_or_sheet": null,
+        "scan_page": null,
+        "locator": "Infobox, coordinates",
+        "verbatim_quote": "09°25′41″S 160°03′17″E",
+        "checked": true,
+        "source_date": null,
+        "observation": {
+          "name": "Henderson Field",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": {
+            "point": {
+              "longitude": 160.05472222222224,
+              "latitude": -9.428055555555554
+            },
+            "longitude_text": "160°03′17″E",
+            "latitude_text": "09°25′41″S",
+            "resolution_arcminutes": 0.016666666666666666,
+            "datum": "unspecified"
+          },
+          "former_names": [],
+          "note": "Coordinate of the article subject; the site is today Honiara International Airport."
+        }
+      },
+      {
+        "id": "92df6349-6d69-526d-a3f8-fb7dd379cd0c",
+        "key": "wikipedia-henderson-field-1382271173/henderson-field/completion",
+        "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+        "source_id": "wikipedia-henderson-field-1382271173",
+        "page_or_sheet": null,
+        "scan_page": null,
+        "locator": "Japanese construction",
+        "verbatim_quote": "Airfield construction went well, and on the night of 6 August 1942, just before the American landing, the construction troops were given an extra sake ration for completing the airfield ahead of schedule.",
+        "checked": true,
+        "source_date": {
+          "text": "night of 6 August 1942",
+          "convention": "Gregorian date in text",
+          "conversion_basis": null
+        },
+        "observation": {
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": "The Japanese construction troops completed the airfield."
+        }
+      },
+      {
+        "id": "9a994ca7-48a2-519e-9638-35a8f44b449f",
+        "key": "wikipedia-henderson-field-1382271173/henderson-field/reopening",
+        "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+        "source_id": "wikipedia-henderson-field-1382271173",
+        "page_or_sheet": null,
+        "scan_page": null,
+        "locator": "Postwar use",
+        "verbatim_quote": "The field was modernized and reopened in 1969 as Honiara International Airport, the main airport for the Solomon Islands.",
+        "checked": true,
+        "source_date": {
+          "text": "1969",
+          "convention": "Gregorian year",
+          "conversion_basis": null
+        },
+        "observation": {
+          "name": "Honiara International Airport",
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": "Reopened as Honiara International Airport."
+        }
+      },
+      {
         "id": "9e5781af-9a91-5466-ac35-85532a9e3610",
         "key": "commons-henderson-field-1942-08-07/henderson-field/caption",
         "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
@@ -465,6 +609,34 @@
           "coordinate": null,
           "former_names": [],
           "note": "Caption asserts that the feature was photographed; it gives no coordinates."
+        }
+      },
+      {
+        "id": "b34f6ed1-9ffd-5034-83ea-871b0721e535",
+        "key": "wikipedia-henderson-field-1382271173/henderson-field/first-aircraft",
+        "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+        "source_id": "wikipedia-henderson-field-1382271173",
+        "page_or_sheet": null,
+        "scan_page": null,
+        "locator": "United States seizure and Battle of Guadalcanal",
+        "verbatim_quote": "The first aircraft to land on the field was a PBY patrol bomber on August 12.",
+        "checked": true,
+        "source_date": {
+          "text": "August 12",
+          "convention": "Gregorian month and day; the section narrates 1942",
+          "conversion_basis": null
+        },
+        "observation": {
+          "pinyin": null,
+          "population": null,
+          "households": null,
+          "ethnicities": [],
+          "parent_id": null,
+          "rank": null,
+          "seat_id": null,
+          "coordinate": null,
+          "former_names": [],
+          "note": "First aircraft landing on the field."
         }
       },
       {
@@ -524,7 +696,36 @@
         }
       }
     ],
-    "estimates": [],
+    "estimates": [
+      {
+        "id": "8070abd6-60ac-5b60-b1ea-c45868c887d6",
+        "key": "editorial/guadalcanal/henderson-field/existence",
+        "entity_id": "d590649b-6007-53e4-8ce5-885a97f4e8a8",
+        "basis": [
+          "2a6476a0-ab36-5cee-87e4-bd98a0b23cac",
+          "92df6349-6d69-526d-a3f8-fb7dd379cd0c"
+        ],
+        "brief": "Work began after 9 July 1942 and the airfield was complete by the night of 6 August 1942; the site remains in use, so no end is set.",
+        "value": {
+          "kind": "temporal",
+          "assertion": {
+            "validity": {
+              "start": {
+                "earliest": "-1814011200000",
+                "nominal": "-1814011200000",
+                "latest": "-1811592000000",
+                "precision": "day"
+              },
+              "end": null
+            },
+            "value": {
+              "property": "existence",
+              "value": "present"
+            }
+          }
+        }
+      }
+    ],
     "disputes": []
   },
   "d59146ab-2374-57c3-957c-ac804584713e": {
