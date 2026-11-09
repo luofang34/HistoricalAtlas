@@ -7,6 +7,7 @@ use thiserror::Error;
 
 use crate::polygon::{IndexedPolygon, resolve};
 
+mod adjacency;
 mod boundary;
 mod cells;
 mod connectivity;
@@ -46,7 +47,7 @@ pub struct TerrainRequest {
     pub slope_weight: f64,
     /// Source areas to fit while retaining every seed's unit membership.
     pub areas: Vec<AreaTarget>,
-    /// Unit pairs whose initial adjacency must survive area fitting.
+    /// Unit pairs required to share an edge while retaining their located members.
     pub neighbors: Vec<[usize; 2]>,
 }
 

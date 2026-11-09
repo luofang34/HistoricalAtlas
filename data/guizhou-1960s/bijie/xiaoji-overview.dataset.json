@@ -1,0 +1,573 @@
+{
+  "entities": [
+    {
+      "id": "63be9aa7-2c4e-571d-899d-84c6bfb0c402",
+      "key": "earth/cn-gz/bijie/xiaoji/silk-reeling-factory",
+      "body": "earth",
+      "kind": "factory"
+    }
+  ],
+  "records": [
+    {
+      "id": "56a589a4-1681-5d9f-93dc-125fc442b866",
+      "key": "bijie-gazetteer/p273/xiaoji-commune/extent",
+      "entity_id": "9d6937d5-7bf6-5751-a51a-6c6f6fbc3df8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "273",
+      "scan_page": 308,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": "小吉公社，在毕节县东北部，距县城40公里，位于东经105°29′至105°32′，北纬27°27′至27°31′之间，东与大方县接界，南与总基，西与永兴，北靠大吉等公社相互接壤，全社总面积30.4平方公里。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小吉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "小吉公社，在毕节县东北部，距县城40公里，位于东经105°29′至105°32′，北纬27°27′至27°31′之间，东与大方县接界，南与总基，西与永兴，北靠大吉等公社相互接壤，全社总面积30.4平方公里。",
+        "territory": {
+          "area_square_km": 30.4,
+          "neighbors": [
+            {
+              "name": "大方县",
+              "entity_id": null
+            },
+            {
+              "name": "总基",
+              "entity_id": "de20053f-2452-573d-a782-3080ee1de75f"
+            },
+            {
+              "name": "永兴",
+              "entity_id": "d8b90f70-5465-5505-bf57-67c8eee3649c"
+            },
+            {
+              "name": "大吉",
+              "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "37c240f6-2ac2-51ed-8987-212860a49482",
+      "key": "bijie-gazetteer/p273/xiaoji-commune/chronology",
+      "entity_id": "9d6937d5-7bf6-5751-a51a-6c6f6fbc3df8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "273",
+      "scan_page": 308,
+      "locator": "Commune overview, chronology",
+      "verbatim_quote": "解放后1950年置九区人民政府，并建村，土改后1954年建吉场乡政府，56年入高级社，将九区改名为吉场区，1958年成立人民公社，名小吉公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小吉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2030a4e5-b3bc-5ce8-8ec8-7e1edf8c85ff",
+      "key": "bijie-gazetteer/p273/xiaoji-commune/establishment",
+      "entity_id": "9d6937d5-7bf6-5751-a51a-6c6f6fbc3df8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "273",
+      "scan_page": 308,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "1958年成立人民公社，名小吉公社。",
+      "checked": true,
+      "source_date": {
+        "text": "1958年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "小吉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "2edca5f2-f7e5-51f6-ad51-e4d218bdce8e",
+      "key": "bijie-gazetteer/p273/xiaoji-commune/population",
+      "entity_id": "9d6937d5-7bf6-5751-a51a-6c6f6fbc3df8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "273",
+      "scan_page": 308,
+      "locator": "Commune overview, population",
+      "verbatim_quote": "小吉公社辖：四伦、吉兴、吉丰、新伦、德盛、梨子、吉平七个大队，127个生产队，46个自然村，为汉、彝、苗等民族杂居，总人口（普查数）2491户，12,809人，其中：苗族140人，彝族283人，其他民族152人，其余为汉族，大都以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小吉公社",
+        "pinyin": null,
+        "population": 12809,
+        "households": 2491,
+        "ethnicities": [
+          "汉",
+          "彝",
+          "苗"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview lists seven brigades, 127 production teams, and 46 natural villages; 140 Miao, 283 Yi, and 152 other residents, with the remainder Han. It lists 吉兴 among the brigades; the table prints 吉新."
+      }
+    },
+    {
+      "id": "c97c9acc-2f53-502a-9dcb-f6184d7ab93d",
+      "key": "bijie-gazetteer/p273/xiaoji-commune/seat",
+      "entity_id": "9d6937d5-7bf6-5751-a51a-6c6f6fbc3df8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "273",
+      "scan_page": 308,
+      "locator": "Commune overview, seat",
+      "verbatim_quote": "区公所和公社驻地均在小吉场街。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小吉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "8994af9d-2b16-5eab-8bd2-9ef416f49ecd",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "1f45bdb4-ee91-588b-b544-9f520e52e373",
+      "key": "bijie-gazetteer/p273/xiaoji-commune/relief",
+      "entity_id": "9d6937d5-7bf6-5751-a51a-6c6f6fbc3df8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "273",
+      "scan_page": 308,
+      "locator": "Commune overview, relief",
+      "verbatim_quote": "东面高，贵人山最高海拔1723米，西面低，周家寨的河边最低海拔1230米。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小吉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Reported elevation range: 1,230–1,723 metres."
+      }
+    },
+    {
+      "id": "e357b82f-6c84-54d7-82fa-875d1257b214",
+      "key": "bijie-gazetteer/p273/xiaoji/guiren-mountain/elevation",
+      "entity_id": "28bbeeac-d615-5a98-be4e-2a0b2748ab64",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "273",
+      "scan_page": 308,
+      "locator": "Commune overview, elevation",
+      "verbatim_quote": "贵人山最高海拔1723米，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "贵人山",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Reported elevation: 1,723 metres."
+      }
+    },
+    {
+      "id": "67b75374-b25d-5794-ab68-3cf7b89b3a6c",
+      "key": "bijie-gazetteer/p273/xiaoji/jixin/xiaojichang/name",
+      "entity_id": "8994af9d-2b16-5eab-8bd2-9ef416f49ecd",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "273",
+      "scan_page": 308,
+      "locator": "Commune overview, name",
+      "verbatim_quote": "在明代以前属夷目领地，名鸡场，系彝语音，含义为铜厂，明洪武时名鸡场堡，设屯以屯军卒。清乾隆《县志》沿称鸡场堡属县之长乐里辖，《同治县志》名小鸡场，为市集。清末到民国时群众以鸡场之名讹为小吉场。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "小吉场",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "鸡场",
+            "source_date": null,
+            "validity": null
+          },
+          {
+            "name": "鸡场堡",
+            "source_date": null,
+            "validity": null
+          },
+          {
+            "name": "小鸡场",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "ebff068f-b39c-5aa9-8a41-7cc194458503",
+      "key": "bijie-gazetteer/p273/xiaoji/silk-reeling-factory/location",
+      "entity_id": "63be9aa7-2c4e-571d-899d-84c6bfb0c402",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "273",
+      "scan_page": 308,
+      "locator": "Commune overview, location",
+      "verbatim_quote": "解放初期毕节土产公司和民贸公司曾在廖家院子设立过缫丝加工厂一座，",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "缫丝加工厂",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "9d6937d5-7bf6-5751-a51a-6c6f6fbc3df8",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "廖家院子"
+      }
+    },
+    {
+      "id": "f1eee62c-7262-5a48-9490-2dd105db3794",
+      "key": "bijie-gazetteer/p274/xiaoji-commune/medical-team",
+      "entity_id": "9d6937d5-7bf6-5751-a51a-6c6f6fbc3df8",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "274",
+      "scan_page": 309,
+      "locator": "Commune overview, medical-team",
+      "verbatim_quote": "1952年成立了医疗组，有医务人员四人，",
+      "checked": true,
+      "source_date": {
+        "text": "1952年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "小吉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The passage dates a medical team with four staff members."
+      }
+    },
+    {
+      "id": "9496b1b9-2266-5734-859d-08a734360087",
+      "key": "bijie-gazetteer/p273/jichang-district/establishment",
+      "entity_id": "bba53fb3-4ae2-5078-ba08-d41e92ae8aed",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "273",
+      "scan_page": 308,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "解放后1950年置九区人民政府，",
+      "checked": true,
+      "source_date": {
+        "text": "1950年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "九区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "district",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "96a850be-745e-52b5-8a4c-15026dfd7287",
+      "key": "bijie-gazetteer/p273/jichang-district/renaming",
+      "entity_id": "bba53fb3-4ae2-5078-ba08-d41e92ae8aed",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "273",
+      "scan_page": 308,
+      "locator": "Commune overview, renaming",
+      "verbatim_quote": "56年入高级社，将九区改名为吉场区，",
+      "checked": true,
+      "source_date": {
+        "text": "56年",
+        "convention": "Gregorian year",
+        "conversion_basis": "The surrounding chronology places the abbreviated year in the twentieth century."
+      },
+      "observation": {
+        "name": "吉场区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "district",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "九区",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "4de32157-139f-5d23-b82a-3dd53f84a12a",
+      "key": "bijie-gazetteer/p273/jichang-district/seat",
+      "entity_id": "bba53fb3-4ae2-5078-ba08-d41e92ae8aed",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "273",
+      "scan_page": 308,
+      "locator": "Commune overview, seat",
+      "verbatim_quote": "区公所和公社驻地均在小吉场街。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "吉场区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "8994af9d-2b16-5eab-8bd2-9ef416f49ecd",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "7aa4e6ce-133c-5a20-8219-1838686c0f11",
+      "key": "bijie-gazetteer/p273/jichang-district/communes",
+      "entity_id": "bba53fb3-4ae2-5078-ba08-d41e92ae8aed",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "273",
+      "scan_page": 308,
+      "locator": "Commune overview, communes",
+      "verbatim_quote": "吉场区辖：小吉、大吉、斯栗、总基、永兴、层台六个公社。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "吉场区",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview lists six communes."
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "fc7a3406-b84e-5719-881c-be84559e8203",
+      "key": "editorial/bijie/xiaoji-commune/establishment",
+      "entity_id": "9d6937d5-7bf6-5751-a51a-6c6f6fbc3df8",
+      "basis": [
+        "2030a4e5-b3bc-5ce8-8ec8-7e1edf8c85ff"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "9d6dd3a9-11d7-5817-9707-7ecb99535c02",
+      "key": "editorial/bijie/xiaoji-commune/name",
+      "entity_id": "9d6937d5-7bf6-5751-a51a-6c6f6fbc3df8",
+      "basis": [
+        "2030a4e5-b3bc-5ce8-8ec8-7e1edf8c85ff",
+        "0933e472-1d60-5269-b4c2-f6b93922fb40"
+      ],
+      "brief": "Use the cited name within the stated transition years, retaining year-level uncertainty.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "小吉公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "5a15bce3-4d70-5683-bbb9-197afc6ad397",
+      "key": "editorial/bijie/jichang-district/establishment",
+      "entity_id": "bba53fb3-4ae2-5078-ba08-d41e92ae8aed",
+      "basis": [
+        "9496b1b9-2266-5734-859d-08a734360087"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1577880000000",
+            "nominal": "-1562112000001",
+            "latest": "-1546344000001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "a7cd6651-7443-5e61-9c3f-7cf6d0eb6f56",
+      "key": "editorial/bijie/jichang-district/ninth-district-name",
+      "entity_id": "bba53fb3-4ae2-5078-ba08-d41e92ae8aed",
+      "basis": [
+        "9496b1b9-2266-5734-859d-08a734360087",
+        "96a850be-745e-52b5-8a4c-15026dfd7287"
+      ],
+      "brief": "Use the cited name within the stated transition years, retaining year-level uncertainty.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1577880000000",
+              "nominal": "-1562112000001",
+              "latest": "-1546344000001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-1388577600000",
+              "nominal": "-1372766400001",
+              "latest": "-1356955200001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "九区",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "09c00628-2464-550e-8e16-cbc52efc9ea3",
+      "key": "editorial/bijie/jichang-district/jichang-name",
+      "entity_id": "bba53fb3-4ae2-5078-ba08-d41e92ae8aed",
+      "basis": [
+        "96a850be-745e-52b5-8a4c-15026dfd7287",
+        "fb607fc1-b376-5c45-9e82-ced325e5c9ae"
+      ],
+      "brief": "Use the cited name within the stated transition years, retaining year-level uncertainty.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1388577600000",
+              "nominal": "-1372766400001",
+              "latest": "-1356955200001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "吉场区",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}

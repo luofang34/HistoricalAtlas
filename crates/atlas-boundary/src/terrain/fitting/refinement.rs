@@ -1,6 +1,5 @@
 use super::{AreaTarget, FitState, TerrainError, partition, review};
 use geo::{BooleanOps, MapCoords, MultiPolygon};
-use std::collections::BTreeSet;
 
 pub(super) fn refine(
     state: &mut FitState<'_>,
@@ -20,22 +19,19 @@ pub(super) fn refine(
         let candidates = candidates(state, &areas)?;
         let mut moved = false;
         for (_, cell, from, to) in candidates {
-            if !removable(state, cell, from) {
+            if !crate::terrain::connectivity::removable(state.request, &state.labels, cell, from) {
                 continue;
             }
             let before = residual_pair(&areas, from, to, 0.);
             *state.labels.get_mut(cell).ok_or(TerrainError::Cell(cell))? = Some(to);
             let mut after = 0.;
-            let mut preserved = true;
             for unit in [from, to] {
-                if let Some((previous, target)) = areas.get(unit).copied().flatten() {
+                if let Some((_, target)) = areas.get(unit).copied().flatten() {
                     let actual = state.area(unit)?;
-                    preserved &= !target.accepts(previous) || target.accepts(actual);
                     after += residual(actual, target);
                 }
             }
-            if preserved
-                && after + 1e-9 < before
+            if after + 1e-9 < before
                 && crate::terrain::connectivity::shared_neighbors(state.request, &state.labels)?
             {
                 moved = true;
@@ -82,10 +78,7 @@ fn candidates(
                     }
                 });
             let area = review::area_square_km(&clipped);
-            if residual_pair(areas, from, to, area) + 1e-9 >= residual_pair(areas, from, to, 0.)
-                || violates_fit(areas, from, -area)
-                || violates_fit(areas, to, area)
-            {
+            if residual_pair(areas, from, to, area) + 1e-9 >= residual_pair(areas, from, to, 0.) {
                 continue;
             }
             result.push((
@@ -124,37 +117,4 @@ fn residual_pair(
                 .map(|(area, target)| residual(area + delta, target))
         })
         .sum()
-}
-
-fn violates_fit(areas: &[Option<(f64, &AreaTarget)>], unit: usize, delta: f64) -> bool {
-    areas
-        .get(unit)
-        .copied()
-        .flatten()
-        .is_some_and(|(area, target)| target.accepts(area) && !target.accepts(area + delta))
-}
-
-fn removable(state: &FitState<'_>, cell: usize, unit: usize) -> bool {
-    let grid = &state.request.grid;
-    let mut remaining: BTreeSet<_> = partition::neighbors(cell, grid.width, grid.height)
-        .into_iter()
-        .filter(|&n| state.labels.get(n) == Some(&Some(unit)))
-        .collect();
-    let Some(start) = remaining.pop_first() else {
-        return false;
-    };
-    let mut pending = vec![start];
-    let mut visited = BTreeSet::from([cell, start]);
-    while let Some(current) = pending.pop() {
-        if remaining.is_empty() {
-            return true;
-        }
-        for next in partition::neighbors(current, grid.width, grid.height) {
-            if state.labels.get(next) == Some(&Some(unit)) && visited.insert(next) {
-                remaining.remove(&next);
-                pending.push(next);
-            }
-        }
-    }
-    false
 }

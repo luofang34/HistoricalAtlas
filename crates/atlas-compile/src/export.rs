@@ -423,6 +423,10 @@ mod yanzikou_tests;
 mod puyi_tests;
 
 #[cfg(test)]
+#[path = "export/jichang/tests.rs"]
+mod jichang_tests;
+
+#[cfg(test)]
 #[path = "export/commune_anchors/tests.rs"]
 mod commune_anchor_tests;
 

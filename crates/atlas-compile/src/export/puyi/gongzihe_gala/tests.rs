@@ -309,6 +309,7 @@ fn joint_waterworks_and_river_reaches_keep_their_source_scopes() {
             .estimates
             .iter()
             .any(|e| e.entity_id == joint.entity_id
+                && e.basis.contains(&joint.id)
                 && matches!(e.value, EstimateValue::Origin { .. }))
     );
     let waterworks = record(&input, 267, "gala-commune/waterworks");

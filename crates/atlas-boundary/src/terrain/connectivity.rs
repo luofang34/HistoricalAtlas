@@ -144,5 +144,35 @@ fn paths(
     Ok(())
 }
 
+pub(super) fn removable(
+    request: &TerrainRequest,
+    labels: &[Option<usize>],
+    cell: usize,
+    unit: usize,
+) -> bool {
+    let grid = &request.grid;
+    let mut remaining: BTreeSet<_> = partition::neighbors(cell, grid.width, grid.height)
+        .into_iter()
+        .filter(|&n| labels.get(n) == Some(&Some(unit)))
+        .collect();
+    let Some(start) = remaining.pop_first() else {
+        return false;
+    };
+    let mut pending = vec![start];
+    let mut visited = BTreeSet::from([cell, start]);
+    while let Some(current) = pending.pop() {
+        if remaining.is_empty() {
+            return true;
+        }
+        for next in partition::neighbors(current, grid.width, grid.height) {
+            if labels.get(next) == Some(&Some(unit)) && visited.insert(next) {
+                remaining.remove(&next);
+                pending.push(next);
+            }
+        }
+    }
+    false
+}
+
 #[cfg(test)]
 mod tests;

@@ -1,4 +1,4 @@
-use super::{TerrainError, TerrainRequest, connectivity, partition, review, vectorize};
+use super::{TerrainError, TerrainRequest, adjacency, connectivity, partition, review, vectorize};
 use geo::MultiPolygon;
 use std::collections::BTreeSet;
 
@@ -23,16 +23,12 @@ pub(super) fn assign(
     let active = partition::active(request, envelope);
     let offsets = vec![0.; request.units];
     let mut fixed = connectivity::seed_cells(request)?;
-    let labels = partition::assign(request, &active, &offsets, &fixed)?;
-    if !connectivity::shared_neighbors(request, &labels)? {
-        return Err(TerrainError::Input(
-            "cited neighbor units have no initial shared edge".into(),
-        ));
-    }
+    let mut labels = partition::assign(request, &active, &offsets, &fixed)?;
+    connectivity::preserve(request, &labels, &mut fixed)?;
+    adjacency::establish(request, &mut labels, &mut fixed)?;
     if request.areas.is_empty() {
         return Ok(labels);
     }
-    connectivity::preserve(request, &labels, &mut fixed)?;
     let mut state = FitState {
         request,
         envelope,

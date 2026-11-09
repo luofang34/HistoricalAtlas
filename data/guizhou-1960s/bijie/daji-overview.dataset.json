@@ -1,0 +1,450 @@
+{
+  "entities": [],
+  "records": [
+    {
+      "id": "fb14d753-85b7-5844-ab7d-6f8c01dffb40",
+      "key": "bijie-gazetteer/p277/daji-commune/extent",
+      "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "277",
+      "scan_page": 312,
+      "locator": "Commune overview, extent",
+      "verbatim_quote": "大吉公社，在毕节县城东北面，相距45公里，位于东经105°31′～34′，北纬27°30′～35′之间，总面积40平方公里。东连播扎、戛拉两公社，南抵大方县和我县小吉，西接永兴、斯栗公社，北枕公子河与红岩、阿市等公社相互接壤，公社驻地灯台树。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大吉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "大吉公社，在毕节县城东北面，相距45公里，位于东经105°31′～34′，北纬27°30′～35′之间，总面积40平方公里。东连播扎、戛拉两公社，南抵大方县和我县小吉，西接永兴、斯栗公社，北枕公子河与红岩、阿市等公社相互接壤，公社驻地灯台树。",
+        "territory": {
+          "area_square_km": 40.0,
+          "neighbors": [
+            {
+              "name": "播扎",
+              "entity_id": "2a2a120f-4fbe-57db-b8b2-791f90f8f86c"
+            },
+            {
+              "name": "戛拉",
+              "entity_id": "8cb2113d-cecf-528e-81ef-fcdbaeb2ed61"
+            },
+            {
+              "name": "大方县",
+              "entity_id": null
+            },
+            {
+              "name": "小吉",
+              "entity_id": "9d6937d5-7bf6-5751-a51a-6c6f6fbc3df8"
+            },
+            {
+              "name": "永兴",
+              "entity_id": "d8b90f70-5465-5505-bf57-67c8eee3649c"
+            },
+            {
+              "name": "斯栗",
+              "entity_id": "f88908f9-e391-5517-bfab-c9bc7bb6906c"
+            },
+            {
+              "name": "公子河",
+              "entity_id": "e5e83800-168f-5446-9fff-2b8c7a63a3d8"
+            },
+            {
+              "name": "红岩",
+              "entity_id": "126109bd-1ae6-5c43-ab47-addc384047cf"
+            },
+            {
+              "name": "阿市",
+              "entity_id": "9fe77231-5952-51da-9e9b-b928010cfe42"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "158d26c0-34c2-5d19-b208-18b4120f856d",
+      "key": "bijie-gazetteer/p277/daji-commune/chronology",
+      "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "277",
+      "scan_page": 312,
+      "locator": "Commune overview, chronology",
+      "verbatim_quote": "解放后沿其名、置村、建农协、经土改，于1954年建立乡政府，办初级社，56年入高级社，58年成立人民公社，因多民族居住，取民族团结之意，故命名团结公社，至60年恢复原名。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大吉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "1e1883b7-2f55-5eae-8a9f-294249696323",
+      "key": "bijie-gazetteer/p277/daji-commune/establishment",
+      "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "277",
+      "scan_page": 312,
+      "locator": "Commune overview, establishment",
+      "verbatim_quote": "58年成立人民公社，因多民族居住，取民族团结之意，故命名团结公社，",
+      "checked": true,
+      "source_date": {
+        "text": "58年",
+        "convention": "Gregorian year",
+        "conversion_basis": "The surrounding chronology places the abbreviated year in the twentieth century."
+      },
+      "observation": {
+        "name": "团结公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "29eb156f-fb40-5074-a27d-d7cf4f4736f4",
+      "key": "bijie-gazetteer/p277/daji-commune/renaming",
+      "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "277",
+      "scan_page": 312,
+      "locator": "Commune overview, renaming",
+      "verbatim_quote": "至60年恢复原名。",
+      "checked": true,
+      "source_date": {
+        "text": "60年",
+        "convention": "Gregorian year",
+        "conversion_basis": "The surrounding chronology places the abbreviated year in the twentieth century."
+      },
+      "observation": {
+        "name": "大吉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": "commune",
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "团结公社",
+            "source_date": {
+              "text": "58年",
+              "convention": "Gregorian year",
+              "conversion_basis": "The surrounding chronology places the abbreviated year in the twentieth century."
+            },
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "0d731760-d3fc-5c5e-9a59-32f10419ef49",
+      "key": "bijie-gazetteer/p277/daji-commune/seat",
+      "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "277",
+      "scan_page": 312,
+      "locator": "Commune overview, seat",
+      "verbatim_quote": "公社驻地灯台树。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大吉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": "11c1396e-4394-596d-b905-ac5293c7e938",
+        "coordinate": null,
+        "former_names": [],
+        "note": null
+      }
+    },
+    {
+      "id": "5941ca72-deec-5b57-92ce-998da26f96cb",
+      "key": "bijie-gazetteer/p277/daji-commune/population",
+      "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "277",
+      "scan_page": 312,
+      "locator": "Commune overview, population",
+      "verbatim_quote": "大吉公社辖：大吉、双林、龙兴、龙岭、高兴、龙洞湾6个大队，83个生产队，59个自然村。有汉、苗、彝等民族杂居，总人口（普查数）1846户，9682人，其中苗族339人，彝族46人，其他民族28人，其余多数为汉族，都以农业为主。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大吉公社",
+        "pinyin": null,
+        "population": 9682,
+        "households": 1846,
+        "ethnicities": [
+          "汉",
+          "苗",
+          "彝"
+        ],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "The overview lists six brigades, 83 production teams, and 59 natural villages; 339 Miao, 46 Yi, and 28 other residents, with the remainder Han."
+      }
+    },
+    {
+      "id": "b0d9731a-21df-5fde-916b-da9d9d20456c",
+      "key": "bijie-gazetteer/p277/daji-commune/relief",
+      "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "277",
+      "scan_page": 312,
+      "locator": "Commune overview, relief",
+      "verbatim_quote": "地势南高北低，南面最高海拔达1808.1米，北面大吉河出境处猴子桥最低海拔810米。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大吉公社",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Reported elevation range: 810–1,808.1 metres."
+      }
+    },
+    {
+      "id": "c2c9b440-2e23-581c-8beb-3d145d521995",
+      "key": "bijie-gazetteer/p277/daji/daji-river/route",
+      "entity_id": "08b3bb07-4609-52c9-a986-6f4d56eff99a",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "277",
+      "scan_page": 312,
+      "locator": "Commune overview, route",
+      "verbatim_quote": "大吉河纵贯社境，水利资源丰富，沿河两岸多稻田。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大吉河",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": null,
+        "extent": "纵贯大吉公社；在猴子桥出境"
+      }
+    },
+    {
+      "id": "d3d9c268-830e-54ce-8151-a81444c4cf1d",
+      "key": "bijie-gazetteer/p277/daji/daji/dajichang/name",
+      "entity_id": "c43384a4-a178-559d-a2c2-750ef4e85a15",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "277",
+      "scan_page": 312,
+      "locator": "Commune overview, name",
+      "verbatim_quote": "大吉地名之由来已久，在明代前后为彝族头目领地，曾办过铜厂、铅厂，故彝语名为“大鸡场”，《县志》载：明洪武时设屯、堡以屯军卒名为鸡场堡”清初沿称，后来形成市集，名大鸡场，属县之长乐里辖。清末以大鸡场讹为大吉场。",
+      "checked": true,
+      "source_date": null,
+      "observation": {
+        "name": "大吉场",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": null,
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [
+          {
+            "name": "大鸡场",
+            "source_date": null,
+            "validity": null
+          },
+          {
+            "name": "鸡场堡",
+            "source_date": null,
+            "validity": null
+          }
+        ],
+        "note": null
+      }
+    },
+    {
+      "id": "74c5d667-6426-5e0a-ab84-562ce9e87408",
+      "key": "bijie-gazetteer/p277/gongzihe/houziqiao-power-station/completion",
+      "entity_id": "41886e15-dab8-5693-b898-c0ea4853661c",
+      "source_id": "bijie-gazetteer",
+      "page_or_sheet": "277",
+      "scan_page": 312,
+      "locator": "Commune overview, completion",
+      "verbatim_quote": "1978年在猴子桥建成电站一座，装机容量400千瓦，可供吉场区照明和农副业用电。",
+      "checked": true,
+      "source_date": {
+        "text": "1978年",
+        "convention": "Gregorian year",
+        "conversion_basis": null
+      },
+      "observation": {
+        "name": "猴子桥电站",
+        "pinyin": null,
+        "population": null,
+        "households": null,
+        "ethnicities": [],
+        "parent_id": "9198505c-2929-5f74-baf3-b3f4f789140d",
+        "rank": null,
+        "seat_id": null,
+        "coordinate": null,
+        "former_names": [],
+        "note": "Completed in the stated year, with 400 kilowatts of installed capacity.",
+        "extent": "猴子桥"
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "id": "eae9ba5b-7f49-5a1b-a667-f11ce5fffed9",
+      "key": "editorial/bijie/daji-commune/establishment",
+      "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d",
+      "basis": [
+        "1e1883b7-2f55-5eae-8a9f-294249696323"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-1325419200000",
+            "nominal": "-1309651200001",
+            "latest": "-1293883200001",
+            "precision": "year"
+          }
+        }
+      }
+    },
+    {
+      "id": "848ff862-56cd-572c-b60b-9b66042e9cae",
+      "key": "editorial/bijie/daji-commune/tuanjie-name",
+      "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d",
+      "basis": [
+        "1e1883b7-2f55-5eae-8a9f-294249696323",
+        "29eb156f-fb40-5074-a27d-d7cf4f4736f4"
+      ],
+      "brief": "Use the cited name within the stated transition years, retaining year-level uncertainty.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1325419200000",
+              "nominal": "-1309651200001",
+              "latest": "-1293883200001",
+              "precision": "year"
+            },
+            "end": {
+              "earliest": "-1262347200000",
+              "nominal": "-1246536000001",
+              "latest": "-1230724800001",
+              "precision": "year"
+            }
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "团结公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "a70ae01d-d706-56d8-8fe4-8876539df014",
+      "key": "editorial/bijie/daji-commune/daji-name",
+      "entity_id": "9198505c-2929-5f74-baf3-b3f4f789140d",
+      "basis": [
+        "29eb156f-fb40-5074-a27d-d7cf4f4736f4",
+        "5ee26a82-80e0-584d-98e0-7b71d1f435ae"
+      ],
+      "brief": "Use the cited name within the stated transition years, retaining year-level uncertainty.",
+      "value": {
+        "kind": "temporal",
+        "assertion": {
+          "validity": {
+            "start": {
+              "earliest": "-1262347200000",
+              "nominal": "-1246536000001",
+              "latest": "-1230724800001",
+              "precision": "year"
+            },
+            "end": null
+          },
+          "value": {
+            "property": "name",
+            "value": {
+              "text": "大吉公社",
+              "kind": "standard",
+              "language": "zh-Hans"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ac70c60e-91b0-5668-a7c7-72cf21734004",
+      "key": "editorial/bijie/gongzihe/houziqiao-power-station/establishment",
+      "entity_id": "41886e15-dab8-5693-b898-c0ea4853661c",
+      "basis": [
+        "74c5d667-6426-5e0a-ab84-562ce9e87408"
+      ],
+      "brief": "Date establishment within the stated Gregorian year, retaining year-level uncertainty.",
+      "value": {
+        "kind": "origin",
+        "time": {
+          "constraint": "estimated",
+          "instant": {
+            "earliest": "-694267200000",
+            "nominal": "-678499200001",
+            "latest": "-662731200001",
+            "precision": "year"
+          }
+        }
+      }
+    }
+  ],
+  "disputes": []
+}
