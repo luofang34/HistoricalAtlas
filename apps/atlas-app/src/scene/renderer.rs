@@ -11,6 +11,7 @@ use maplibre::{
         create_headless_renderer_on_host_gpu,
         map::{HeadlessMap, ProcessedLayers},
     },
+    hud::NavigationHudPlugin,
     raster::{DefaultRasterTransferables, RasterPlugin},
     render::{
         RenderPlugin,
@@ -95,6 +96,7 @@ impl MapRenderer {
                 Box::new(BackgroundPlugin),
                 Box::new(RasterPlugin::<DefaultRasterTransferables>::default()),
                 Box::new(VectorPlugin::<DefaultVectorTransferables>::default()),
+                Box::new(NavigationHudPlugin),
             ],
         )?;
         map.set_navigation_mode(NavigationMode::FreeGlobe)?;
@@ -265,6 +267,8 @@ impl MapRenderer {
         self.map.needs_redraw()
     }
 }
+
+mod navigation;
 
 impl Drop for MapRenderer {
     fn drop(&mut self) {
