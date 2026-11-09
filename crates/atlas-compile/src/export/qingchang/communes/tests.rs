@@ -61,7 +61,7 @@ fn parents(input: &LedgerInput, key: &str, year: i64, mode: TimeSelection) -> BT
 #[test]
 fn all_commune_table_rows_round_trip_with_original_fields() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [
         (82, 37),
         (83, 19),
@@ -331,7 +331,7 @@ fn merger_interval_has_no_independent_commune_hierarchy() {
 #[test]
 fn conflicting_transfer_years_publish_both_claims_and_change_possible_selection() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let key = id("kuaile-commune");
     let shard: serde_json::Value = serde_json::from_slice(
         &output[&PathBuf::from(format!("entities/index/{}.json", key.shard()))],

@@ -39,7 +39,7 @@ fn record<'a>(input: &'a LedgerInput, page: u32, key: &str) -> &'a Record {
 #[test]
 fn puyi_and_ledu_pages_publish_reviewed_fields_and_retain_anchor_identities() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [
         (237, 11),
         (238, 36),

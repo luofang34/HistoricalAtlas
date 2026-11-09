@@ -3,7 +3,7 @@ use super::*;
 #[test]
 fn reviewed_bozha_and_liuwan_pages_preserve_anchor_ids_and_all_source_fields() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [(259, 10), (260, 34), (261, 5), (263, 9), (264, 30)] {
         let rows: Vec<_> = input
             .data

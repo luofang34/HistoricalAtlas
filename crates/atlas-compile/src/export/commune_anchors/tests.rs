@@ -6,7 +6,7 @@ use atlas_geo::coordinates::Datum;
 #[test]
 fn every_indexed_bijie_commune_publishes_its_own_coordinate_evidence() {
     let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let communes: Vec<_> = input
         .data
         .records
@@ -46,7 +46,7 @@ fn every_indexed_bijie_commune_publishes_its_own_coordinate_evidence() {
 #[test]
 fn commune_rows_keep_their_printed_values_when_nearby_rows_differ() {
     let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, slug, longitude, latitude) in [
         (242, "ledu", "105°40′", "27°38′"),
         (278, "daji", "105°32′", "27°32′"),
@@ -70,7 +70,7 @@ fn commune_rows_keep_their_printed_values_when_nearby_rows_differ() {
 #[test]
 fn anomalous_commune_longitudes_publish_alongside_independent_map_locations() {
     let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (slug, page, longitude) in [("hantun", 186, "107°27′"), ("haogou", 188, "105°20′")] {
         assert_independent_map_location(&output, slug, page, longitude);
     }

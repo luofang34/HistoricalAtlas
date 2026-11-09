@@ -39,7 +39,7 @@ fn record<'a>(input: &'a LedgerInput, page: u32, key: &str) -> &'a Record {
 #[test]
 fn source_tables_publish_all_fields_and_keep_blank_demographics() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [(209, 14), (210, 36), (211, 35), (212, 24)] {
         let rows: Vec<_> = input
             .data
@@ -135,7 +135,7 @@ fn commune_network_uses_explicit_brigade_membership_and_seats() {
 #[test]
 fn coincident_and_same_named_places_preserve_distinct_source_identities() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, key, name, kind, latitude) in [
         (
             210,

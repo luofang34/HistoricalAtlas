@@ -58,7 +58,7 @@ fn names(input: &LedgerInput, key: &str, year: i64, month: u8) -> BTreeSet<Strin
 #[test]
 fn complete_tables_publish_each_reviewed_row_without_changing_its_fields() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [
         (127, 37),
         (128, 15),

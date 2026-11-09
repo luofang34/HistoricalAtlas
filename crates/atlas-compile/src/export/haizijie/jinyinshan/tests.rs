@@ -46,7 +46,7 @@ fn commune_networks_draw_source_seats_and_subordinate_settlements() {
 #[test]
 fn same_named_places_remain_independently_queryable() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, key, population, kind) in [
         (
             201,
@@ -108,7 +108,7 @@ fn same_named_places_remain_independently_queryable() {
 #[test]
 fn source_coordinate_anomalies_and_rare_names_survive_publication() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, key, longitude, latitude) in [
         (200, "jinyinshan/commune-bowl-factory", "105°23′", "27°23′"),
         (204, "xinai/huachangchang", "107°21′", "27°25′"),

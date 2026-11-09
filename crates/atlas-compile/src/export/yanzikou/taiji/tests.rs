@@ -3,7 +3,7 @@ use super::*;
 #[test]
 fn taiji_pages_publish_reviewed_fields_and_retain_the_commune_record_identity() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [(229, 10), (230, 35), (231, 35), (232, 36), (233, 5)] {
         let rows: Vec<_> = input
             .data

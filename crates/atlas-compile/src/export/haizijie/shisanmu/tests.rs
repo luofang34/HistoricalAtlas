@@ -48,7 +48,7 @@ fn commune_networks_keep_colocated_seats_and_every_subordinate_settlement() {
 #[test]
 fn source_totals_and_included_populations_remain_separate_in_publication() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, key, population, note) in [
         (195, "yazitang-commune/population", Some(2281), None),
         (196, "yazitang-commune", Some(2229), None),

@@ -115,7 +115,7 @@ fn changed_model_metadata_and_missing_reference_edges_fail_publication() {
         .get_mut(&job.model_id)
         .unwrap()
         .source_sha256 = "invalid".into();
-    assert!(compile(&input).is_err());
+    assert!(crate::export::compile_with_derived(&input, &[]).is_err());
     let (mut input, job) = real_input();
     input
         .plate_models
@@ -123,7 +123,7 @@ fn changed_model_metadata_and_missing_reference_edges_fail_publication() {
         .unwrap()
         .sequences
         .retain(|sequence| sequence.moving_plate != PlateId(410));
-    assert!(compile(&input).is_err());
+    assert!(crate::export::compile_with_derived(&input, &[]).is_err());
     let (mut input, job) = real_input();
     let estimate = input
         .data
@@ -132,7 +132,7 @@ fn changed_model_metadata_and_missing_reference_edges_fail_publication() {
         .find(|estimate| estimate.id == job.anchors[0].plate_estimate)
         .unwrap();
     estimate.basis = vec![job.anchors[0].coordinate_record];
-    assert!(compile(&input).is_err());
+    assert!(crate::export::compile_with_derived(&input, &[]).is_err());
 }
 
 #[test]

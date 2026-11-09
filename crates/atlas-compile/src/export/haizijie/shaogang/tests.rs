@@ -217,7 +217,7 @@ fn population_rows_keep_blanks_and_source_disagreements() {
 #[test]
 fn district_facilities_gain_coordinates_without_duplicate_entities() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (key, name, earlier_page) in [
         ("haizijie/middle-school", "海子街中学", 150),
         ("haizijie/baimashan-state-forest", "白马山林场", 149),

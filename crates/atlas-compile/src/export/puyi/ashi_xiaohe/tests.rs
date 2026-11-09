@@ -52,7 +52,7 @@ fn liuwan_map_symbol_refines_the_boundary_without_replacing_table_coordinates() 
 #[test]
 fn reviewed_ashi_and_xiaohe_pages_round_trip_with_existing_commune_identities() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [
         (251, 11),
         (252, 35),

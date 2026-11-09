@@ -42,7 +42,7 @@ fn instant(year: i64) -> atlas_core::time::EpochTime {
 #[test]
 fn reviewed_tables_and_continued_elevation_round_trip_through_publication() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [(74, 36), (75, 36), (76, 8), (78, 36), (79, 35), (80, 2)] {
         let rows: Vec<_> = input
             .data

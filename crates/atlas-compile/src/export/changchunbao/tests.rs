@@ -63,7 +63,7 @@ fn names(input: &LedgerInput, key: &str, year: i64, mode: TimeSelection) -> BTre
 #[test]
 fn table_pages_publish_all_rows_with_their_original_fields() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [
         (101, 37),
         (102, 29),

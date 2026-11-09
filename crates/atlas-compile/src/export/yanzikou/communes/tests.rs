@@ -3,7 +3,7 @@ use super::*;
 #[test]
 fn complete_commune_tables_and_overviews_publish_their_reviewed_fields() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [
         (213, 14),
         (214, 37),
@@ -93,7 +93,7 @@ fn networks_include_all_residential_localities_and_each_brigade_seat() {
 #[test]
 fn coincident_villages_keep_separate_brigades_and_blank_demographics() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let first = record(&input, 218, "liangyan/sanlitian-yingjiao");
     let second = record(&input, 219, "liangyan/heguang-yingjiao");
     assert_eq!(first.observation.coordinate, second.observation.coordinate);
@@ -144,7 +144,7 @@ fn coincident_villages_keep_separate_brigades_and_blank_demographics() {
 #[test]
 fn incomplete_reservoir_coordinate_and_scoped_river_lengths_survive_export() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let source = record(&input, 220, "liangyan/liziyuan-reservoir");
     let published = crate::export::tests::published_record(&output, source);
     assert!(published["observation"]["coordinate"].is_null());

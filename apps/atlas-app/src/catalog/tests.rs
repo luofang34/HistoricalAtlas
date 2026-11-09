@@ -300,8 +300,21 @@ fn urban_search_keeps_same_named_temples_distinct_and_follows_office_hierarchy()
 #[cfg(test)]
 pub(crate) fn publication() -> Publication {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
+    let mut input = atlas_compile::input::load_blocking(&root).unwrap();
+    input.derivations.clear();
+    compile_publication(&input)
+}
+
+#[cfg(test)]
+pub(crate) fn terrain_publication() -> Publication {
+    let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
     let input = atlas_compile::input::load_blocking(&root).unwrap();
-    let output = atlas_compile::export::compile(&input).unwrap();
+    compile_publication(&input)
+}
+
+#[cfg(test)]
+fn compile_publication(input: &atlas_compile::input::LedgerInput) -> Publication {
+    let output = atlas_compile::export::compile(input).unwrap();
     let sources =
         serde_json::from_slice(&output[&std::path::PathBuf::from("sources.json")]).unwrap();
     let entries = output

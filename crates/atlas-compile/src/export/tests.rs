@@ -58,7 +58,7 @@ fn shared_minute_coordinates_preserve_distinct_villages_and_their_parent() {
     assert_ne!(shaer.entity_id, bengtushan.entity_id);
     assert_eq!(shaer.observation.parent_id, Some(brigade.entity_id));
     assert_eq!(bengtushan.observation.parent_id, Some(brigade.entity_id));
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for record in [shaer, bengtushan] {
         let path = PathBuf::from(format!("entities/index/{}.json", record.entity_id.shard()));
         let shard: serde_json::Value = serde_json::from_slice(&output[&path]).unwrap();
@@ -100,7 +100,9 @@ fn temporal_hierarchy_cannot_publish_a_parent_without_checked_evidence() {
     {
         hierarchy.parent_id = Some(unchecked);
     }
-    assert!(matches!(compile(&input), Err(ExportError::MissingEvidence(id)) if id == unchecked));
+    assert!(
+        matches!(compile_with_derived(&input, &[]), Err(ExportError::MissingEvidence(id)) if id == unchecked)
+    );
 }
 
 #[cfg(test)]
@@ -130,7 +132,7 @@ pub(super) fn published_record(output: &Artifacts, record: &Record) -> serde_jso
 fn bijie_export_keeps_printed_coordinate_anomalies_and_blank_cells() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
     let input = load_blocking(&root).unwrap();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (key, latitude, longitude) in [
         ("bijie-gazetteer/p24/daqiao/zhongba", "27°28′", "105°16′"),
         ("bijie-gazetteer/p28/dalan/wujia-gou", "20°16′", "105°16′"),
@@ -174,7 +176,7 @@ fn bijie_export_keeps_printed_coordinate_anomalies_and_blank_cells() {
 fn explicit_brigade_notes_and_continued_tables_link_to_the_correct_parent() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
     let input = load_blocking(&root).unwrap();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let daqiao = EntityId::from_key("earth/cn-gz/bijie/daqiao/daqiao-brigade").unwrap();
     for slug in ["shuiguan-suo", "taoci-chang", "television-relay"] {
         let record = bijie_record(&input, &format!("bijie-gazetteer/p24/daqiao/{slug}"));
@@ -211,7 +213,7 @@ fn explicit_brigade_notes_and_continued_tables_link_to_the_correct_parent() {
 fn shared_names_and_coordinates_do_not_merge_distinct_geographical_features() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
     let input = load_blocking(&root).unwrap();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (first, second) in [
         (
             "bijie-gazetteer/p24/daqiao/xiaohe-seat",
@@ -266,7 +268,7 @@ fn shared_names_and_coordinates_do_not_merge_distinct_geographical_features() {
 #[test]
 fn toubu_and_wuliping_tables_preserve_seats_continuations_and_source_disagreements() {
     let input = load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data")).unwrap();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let continued = bijie_record(&input, "bijie-gazetteer/p39/toubu/xindianzi");
     let brigade = bijie_record(&input, "bijie-gazetteer/p38/toubu/yingjiao-brigade");
     assert_eq!(continued.observation.parent_id, Some(brigade.entity_id));
@@ -341,7 +343,7 @@ fn toubu_and_wuliping_tables_preserve_seats_continuations_and_source_disagreemen
 fn conflicting_source_totals_and_undated_parent_claims_survive_export() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
     let input = load_blocking(&root).unwrap();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let overview = bijie_record(&input, "bijie-gazetteer/p29/dehou/composition");
     let table = bijie_record(&input, "bijie-gazetteer/p30/dehou/dehou-commune");
     assert_eq!(overview.entity_id, table.entity_id);
@@ -375,7 +377,7 @@ fn conflicting_source_totals_and_undated_parent_claims_survive_export() {
 fn contents_citations_remain_distinct_from_main_text_pages_and_dates() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
     let input = load_blocking(&root).unwrap();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let contents: Vec<_> = input
         .data
         .records

@@ -29,7 +29,7 @@ fn table<'a>(input: &'a LedgerInput, key: &str) -> &'a Record {
 #[test]
 fn reviewed_tables_publish_every_row_with_original_precision_and_unknown_counts() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [(44, 33), (46, 29), (49, 36), (50, 22), (52, 29)] {
         let records: Vec<_> = input
             .data

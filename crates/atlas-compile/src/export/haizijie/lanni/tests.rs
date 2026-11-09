@@ -102,7 +102,7 @@ fn coincident_and_same_named_places_keep_distinct_identities() {
 #[test]
 fn differing_seat_and_population_claims_are_published_together() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let entity = id("guole-commune");
     let shard: serde_json::Value = serde_json::from_slice(
         &output[&PathBuf::from(format!("entities/index/{}.json", entity.shard()))],

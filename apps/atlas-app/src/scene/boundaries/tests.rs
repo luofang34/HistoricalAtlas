@@ -149,7 +149,7 @@ fn mapped_polygons_tessellate_fill_outline_and_selection_for_both_projections() 
 
 #[test]
 fn reconstructed_communes_load_frame_and_tessellate_with_dashed_outlines() {
-    let atlas = Atlas::new(crate::catalog::tests::publication()).unwrap();
+    let atlas = Atlas::new(crate::catalog::tests::terrain_publication()).unwrap();
     let id = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
     let boundaries = features(&atlas, BodyId::Earth, MapLayer::Observations, Some(id)).unwrap();
     assert_eq!(

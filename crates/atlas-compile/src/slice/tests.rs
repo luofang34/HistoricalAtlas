@@ -87,7 +87,8 @@ fn query_errors_precede_output_and_repeated_compilation_is_identical() {
         Err(SliceError::Selection(_))
     ));
     assert!(!output.exists());
-    let input = load_blocking(&root).unwrap();
+    let mut input = load_blocking(&root).unwrap();
+    input.derivations.clear();
     let artifacts =
         compile_slice(&input, EpochTime::from_ticks(0), TimeSelection::Possible).unwrap();
     assert_eq!(
@@ -172,7 +173,8 @@ fn lunar_origins_select_deep_time_and_preserve_unquantified_ages() {
 fn commune_and_cemetery_origins_follow_source_year_and_month_precision() {
     use atlas_core::time::TimePrecision;
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
-    let input = load_blocking(&root).unwrap();
+    let mut input = load_blocking(&root).unwrap();
+    input.derivations.clear();
     for commune in ["daqiao", "dalan", "dehou"] {
         assert_establishment_window(
             &input,
@@ -266,7 +268,8 @@ fn landing_slice_retains_the_second_disagreement_and_lunar_reference_frame() {
     };
     use atlas_ledger::{model::EstimateValue, timeline::Timeline};
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data");
-    let input = load_blocking(&root).unwrap();
+    let mut input = load_blocking(&root).unwrap();
+    input.derivations.clear();
     let estimate = input
         .data
         .estimates

@@ -148,7 +148,7 @@ fn missing_populations_and_population_disagreements_survive_export() {
     assert_eq!(census.observation.households, Some(1745));
     assert_eq!(census.observation.population, Some(9174));
     assert!(record(&input, 182, "xiaoba-commune").source_date.is_none());
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let shard: serde_json::Value = serde_json::from_slice(
         &output[&PathBuf::from(format!("entities/index/{}.json", south.entity_id.shard()))],
     )

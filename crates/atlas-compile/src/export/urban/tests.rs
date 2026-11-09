@@ -15,7 +15,7 @@ fn id(key: &str) -> EntityId {
 #[test]
 fn complete_urban_street_table_preserves_extent_without_creating_point_coordinates() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let streets: Vec<_> = input
         .data
         .records
@@ -162,7 +162,7 @@ fn homonymous_temple_rows_remain_distinct_at_identical_source_coordinates() {
         temples[0].observation.coordinate,
         temples[1].observation.coordinate
     );
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for record in temples {
         let path = PathBuf::from(format!("entities/index/{}.json", record.entity_id.shard()));
         let shard: serde_json::Value = serde_json::from_slice(&output[&path]).unwrap();
@@ -193,7 +193,7 @@ fn source_spelling_coordinates_and_addresses_survive_compilation() {
         .find(|record| record.entity_id == id("caishen-lou"))
         .unwrap();
     assert_eq!(source.observation.pinyin.as_deref(), Some("Cháishén Nóu"));
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let subject = id("anti-japanese-army-headquarters-site");
     let path = PathBuf::from(format!("entities/index/{}.json", subject.shard()));
     let shard: serde_json::Value = serde_json::from_slice(&output[&path]).unwrap();

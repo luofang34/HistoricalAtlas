@@ -45,7 +45,7 @@ fn instant(year: i64) -> atlas_core::time::EpochTime {
 #[test]
 fn every_reviewed_commune_table_row_round_trips_through_publication() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [
         (54, 36),
         (55, 3),

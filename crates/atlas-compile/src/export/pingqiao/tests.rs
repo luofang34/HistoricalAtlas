@@ -20,7 +20,7 @@ fn row<'a>(input: &'a LedgerInput, page: u32, slug: &str) -> &'a Record {
 #[test]
 fn pingqiao_tables_publish_all_villages_with_source_population_disagreements() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (brigade, count, sum, heading, seat) in [
         ("pingqiao", 6, 974, 1047, "laowu-ji"),
         ("zhongba", 10, 1280, 1326, "ganba"),
@@ -61,7 +61,7 @@ fn pingqiao_tables_publish_all_villages_with_source_population_disagreements() {
 #[test]
 fn pingqiao_map_and_table_names_keep_their_citations_and_symbol_links() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let table = row(&input, 27, "kengkeng-tian");
     let map = row(&input, 25, "luokeng-tian");
     assert_ne!(table.entity_id, map.entity_id);

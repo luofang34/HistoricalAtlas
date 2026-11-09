@@ -20,7 +20,7 @@ fn row<'a>(input: &'a LedgerInput, page: u32, slug: &str) -> &'a Record {
 #[test]
 fn alie_tables_publish_brigades_and_keep_aggregate_population_separate() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (brigade, page, count, sum, heading) in [
         ("alie", 38, 8, 1673, 1654),
         ("jiaozi", 38, 14, 1756, 1540),
@@ -66,7 +66,7 @@ fn alie_tables_publish_brigades_and_keep_aggregate_population_separate() {
 #[test]
 fn alie_map_preserves_the_table_seat_disagreement_and_additional_settlement() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let map = row(&input, 36, "tanglishu-brigade");
     let table = row(&input, 39, "tanglishu-brigade");
     assert_eq!(map.entity_id, table.entity_id);

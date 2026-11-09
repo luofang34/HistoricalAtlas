@@ -5,7 +5,7 @@ use atlas_ledger::model::EstimateValue;
 #[test]
 fn reviewed_gongzihe_and_gala_pages_round_trip_with_existing_commune_identities() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [(265, 9), (266, 27), (267, 10), (268, 34), (269, 1)] {
         let rows: Vec<_> = input
             .data

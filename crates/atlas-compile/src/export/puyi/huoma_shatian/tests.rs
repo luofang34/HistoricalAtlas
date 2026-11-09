@@ -3,7 +3,7 @@ use super::*;
 #[test]
 fn reviewed_pages_round_trip_without_changing_published_commune_and_brigade_ids() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [(245, 8), (246, 31), (247, 8), (248, 36), (249, 22)] {
         let rows: Vec<_> = input
             .data

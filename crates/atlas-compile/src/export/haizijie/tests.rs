@@ -54,7 +54,7 @@ fn names(input: &LedgerInput, key: &str, year: i64, selection: TimeSelection) ->
 #[test]
 fn complete_tables_export_all_reviewed_rows_with_their_source_fields() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [
         (151, 34),
         (152, 3),

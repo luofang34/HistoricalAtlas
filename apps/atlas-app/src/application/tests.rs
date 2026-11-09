@@ -55,7 +55,8 @@ fn registered_boundary_search_focuses_geography_and_displays_source_method() {
 
 #[test]
 fn mapped_place_view_keeps_registered_locations_and_frames_the_reconstruction() {
-    let mut app = Application::new(crate::catalog::tests::atlas()).unwrap();
+    let atlas = Atlas::new(crate::catalog::tests::terrain_publication()).unwrap();
+    let mut app = Application::new(atlas).unwrap();
     let id = EntityId::from_key("earth/cn-gz/bijie/daqiao-commune").unwrap();
     app.select(id, true);
     let table = app.camera.center;

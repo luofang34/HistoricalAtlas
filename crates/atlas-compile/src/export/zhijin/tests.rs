@@ -20,7 +20,7 @@ fn row<'a>(input: &'a LedgerInput, page: u32, slug: &str) -> &'a Record {
 #[test]
 fn qimo_table_continuation_preserves_brigade_membership_and_population_disagreements() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (brigade, page, count, total, heading) in [
         ("douyan", 30, 8, 1350, 1339),
         ("xingrong", 30, 12, 1447, 1585),
@@ -72,7 +72,7 @@ fn qimo_table_continuation_preserves_brigade_membership_and_population_disagreem
 #[test]
 fn qimo_locality_note_does_not_duplicate_the_village_population() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let village = row(&input, 30, "qimo-village");
     let locality = row(&input, 30, "qimo-locality");
     assert_ne!(village.entity_id, locality.entity_id);
@@ -99,7 +99,7 @@ fn qimo_locality_note_does_not_duplicate_the_village_population() {
 #[test]
 fn differing_map_and_table_spellings_do_not_silently_share_locations() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, table, map) in [
         (30, "meidong-yan", "meidong-zhai"),
         (30, "shuili-chong", "muli-chong"),
@@ -134,7 +134,7 @@ fn differing_map_and_table_spellings_do_not_silently_share_locations() {
 #[test]
 fn qimo_seats_and_printed_pinyin_retain_their_individual_citations() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, unit, seat) in [
         (30, "douyan-brigade", "zhulin-zhai"),
         (30, "xingrong-brigade", "bana"),

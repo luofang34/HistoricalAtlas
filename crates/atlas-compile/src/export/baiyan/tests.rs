@@ -6,7 +6,7 @@ fn baiyan_table_keeps_all_settlements_seats_and_separate_area_names() {
     let input =
         crate::input::load_blocking(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../data"))
             .unwrap();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let rows: Vec<_> = input
         .data
         .records

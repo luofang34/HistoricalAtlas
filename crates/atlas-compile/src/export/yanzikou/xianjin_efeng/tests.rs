@@ -3,7 +3,7 @@ use super::*;
 #[test]
 fn reviewed_pages_publish_all_rows_with_source_notation_and_blank_fields() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     for (page, count) in [
         (221, 11),
         (222, 36),
@@ -132,7 +132,7 @@ fn brigade_networks_preserve_unlocated_residents_and_explicit_seats() {
 #[test]
 fn same_names_preserve_distinct_mountains_and_cite_repeated_cave_entries() {
     let input = input();
-    let output = compile(&input).unwrap();
+    let output = compile_with_derived(&input, &[]).unwrap();
     let west = record(&input, 223, "xianjin/lengsha-liangzi-west");
     let east = record(&input, 223, "xianjin/lengsha-liangzi-east");
     assert_eq!(west.observation.name, east.observation.name);
