@@ -9,6 +9,7 @@ pub(crate) struct Input {
     pointer: egui::Pos2,
     started: web_time::Instant,
     modifiers: Modifiers,
+    ime: super::ime::ImeFlag,
 }
 
 impl Input {
@@ -21,6 +22,7 @@ impl Input {
             pointer: egui::Pos2::ZERO,
             started: web_time::Instant::now(),
             modifiers: Modifiers::default(),
+            ime: super::ime::ImeFlag::default(),
         }
     }
 
@@ -155,20 +157,12 @@ impl Input {
                 browser.open_with_url_and_target(&url.url, "_blank").ok();
             }
         }
-        if let Some(input) = web_sys::window()
-            .and_then(|window| window.document())
-            .and_then(|document| document.get_element_by_id("ime"))
+        if let Some(active) = self.ime.update(output.ime.is_some())
+            && let Some(input) = web_sys::window()
+                .and_then(|window| window.document())
+                .and_then(|document| document.get_element_by_id("ime"))
         {
-            input
-                .set_attribute(
-                    "data-active",
-                    if output.ime.is_some() {
-                        "true"
-                    } else {
-                        "false"
-                    },
-                )
-                .ok();
+            input.set_attribute("data-active", active).ok();
         }
     }
 }

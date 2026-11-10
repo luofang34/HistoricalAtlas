@@ -1,5 +1,10 @@
 #[cfg(target_arch = "wasm32")]
 mod browser;
+#[cfg_attr(
+    not(target_arch = "wasm32"),
+    allow(dead_code, reason = "only the browser host has an IME bridge")
+)]
+mod ime;
 #[cfg(target_arch = "wasm32")]
 pub(super) use browser::Input;
 
