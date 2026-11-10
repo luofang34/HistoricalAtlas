@@ -1,6 +1,7 @@
 use super::Application;
 use crate::scene::sheet::{SheetPoint, points};
 use atlas_boundary::sheet::SheetTrace;
+use atlas_core::identity::EntityId;
 use atlas_geo::registration::PlanarPoint;
 use egui::{Align2, Color32, FontId, Pos2, Rect, Sense, Shape, Stroke, Vec2};
 
@@ -45,6 +46,24 @@ impl SheetView {
 
 impl Application {
     pub(super) fn source_drawings(&mut self, ui: &mut egui::Ui) {
+        // The menu body runs only while it is open, so the list costs nothing per frame.
+        egui::ComboBox::from_id_salt("source-drawings")
+            .selected_text("Source drawings")
+            .show_ui(ui, |ui| {
+                for (id, name) in self.drawing_choices() {
+                    if ui
+                        .selectable_label(self.sheet.visible && self.selected == Some(id), name)
+                        .clicked()
+                    {
+                        self.select(id, false);
+                        self.sheet = SheetView::open();
+                    }
+                }
+            });
+    }
+
+    /// Entities on the current body with a traced source drawing, and their names.
+    fn drawing_choices(&self) -> Vec<(EntityId, String)> {
         let mut drawings: Vec<_> = self
             .atlas
             .data
@@ -69,19 +88,7 @@ impl Application {
                 .filter(|(_, reference)| !reference.subjects.is_empty())
                 .map(|(id, _)| (id, self.atlas.label(id).to_owned())),
         );
-        egui::ComboBox::from_id_salt("source-drawings")
-            .selected_text("Source drawings")
-            .show_ui(ui, |ui| {
-                for (id, name) in drawings {
-                    if ui
-                        .selectable_label(self.sheet.visible && self.selected == Some(id), name)
-                        .clicked()
-                    {
-                        self.select(id, false);
-                        self.sheet = SheetView::open();
-                    }
-                }
-            });
+        drawings
     }
 
     pub(super) fn sheet_panel(&mut self, ui: &mut egui::Ui) -> bool {
