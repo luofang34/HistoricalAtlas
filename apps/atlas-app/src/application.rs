@@ -13,6 +13,7 @@ use atlas_geo::body::BodyId;
 mod controls;
 mod dates;
 mod evidence;
+mod hierarchy;
 mod map;
 mod overlay;
 mod sheet;
@@ -31,6 +32,8 @@ pub struct Application {
     search: String,
     /// Matches for the query and body they were computed for, kept until either changes.
     search_results: Option<(String, BodyId, Vec<EntityId>)>,
+    tree: hierarchy::PlaceTree,
+    gesture: map::MapGesture,
     hits: Vec<EntityId>,
     layer: MapLayer,
     territory_visible: bool,
@@ -63,6 +66,8 @@ impl Application {
             selected: None,
             search: String::new(),
             search_results: None,
+            tree: hierarchy::PlaceTree::default(),
+            gesture: map::MapGesture::default(),
             hits: Vec::new(),
             layer: MapLayer::MappedPlaces,
             territory_visible: false,
@@ -101,11 +106,11 @@ impl Application {
     pub fn ui(&mut self, ui: &mut egui::Ui) {
         egui::Panel::top("controls").show(ui, |ui| self.controls(ui));
         egui::Panel::left("places")
-            .default_size(240.0)
+            .default_size(280.0)
             .show(ui, |ui| {
                 ui.style_mut().wrap_mode = Some(egui::TextWrapMode::Wrap);
                 self.overlay_panel(ui);
-                self.search_panel(ui);
+                self.places_panel(ui);
             });
         egui::Panel::right("evidence")
             .default_size(340.0)
@@ -117,9 +122,14 @@ impl Application {
     }
 
     fn select(&mut self, id: EntityId, focus: bool) {
+        self.select_and_reveal(id, focus, true);
+    }
+
+    fn select_and_reveal(&mut self, id: EntityId, focus: bool, scroll_tree: bool) {
         self.selected = Some(id);
         self.selection_dirty = true;
         self.error = None;
+        self.tree.reveal(&self.atlas, self.body, id, scroll_tree);
         if focus && !self.atlas.drawings(id).is_empty() && self.focus_point(id).is_none() {
             self.sheet = sheet::SheetView::open();
         }

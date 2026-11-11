@@ -90,3 +90,25 @@ fn globe_line_pick_uses_segments_without_joining_components() {
     assert!(index.pick(&camera, Point2::new(400.0, 300.0)).is_empty());
     assert!(index.pick(&camera, Point2::new(0.0, 0.0)).is_empty());
 }
+
+#[test]
+fn pick_prioritizes_points_then_smaller_polygons_before_enclosing_county() {
+    // Choose keys where the outer county UUID sorts lexicographically before the point/town if unsorted.
+    let county = EntityId::from_key("earth/cn-gz/bijie/bijie-county").unwrap();
+    let town = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
+    let village = EntityId::from_key("earth/cn-gz/bijie/cuiping-commune").unwrap();
+    assert!(county < village);
+    let source = json!({"features": [
+        {"type": "Feature", "geometry": {"type": "Polygon", "coordinates": [[[-20.0, -20.0], [20.0, -20.0], [20.0, 20.0], [-20.0, 20.0], [-20.0, -20.0]]]}, "properties": {"entity_id": county}},
+        {"type": "Feature", "geometry": {"type": "Polygon", "coordinates": [[[-4.0, -4.0], [4.0, -4.0], [4.0, 4.0], [-4.0, 4.0], [-4.0, -4.0]]]}, "properties": {"entity_id": town}},
+        {"type": "Feature", "geometry": {"type": "Point", "coordinates": [0.0, 0.0]}, "properties": {"entity_id": village}}
+    ]});
+    let index = Picking::new(&source).unwrap();
+    let camera = camera();
+    assert_eq!(
+        index.pick(&camera, Point2::new(400.0, 300.0)),
+        vec![village, town, county]
+    );
+    let town_only = camera.location_to_screen(LatLon::new(2.5, 2.5), 0.0);
+    assert_eq!(index.pick(&camera, town_only), vec![town, county]);
+}

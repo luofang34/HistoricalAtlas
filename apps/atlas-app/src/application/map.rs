@@ -2,20 +2,27 @@ use super::Application;
 use crate::scene::{MapLayer, ViewportPointer};
 use atlas_geo::coordinates::LonLat;
 
+/// Tracks pointer press origin so slight tremor during a click neither pans the globe nor drops the click.
+#[derive(Default)]
+pub(super) struct MapGesture {
+    press_origin: Option<egui::Pos2>,
+    dragged: bool,
+}
+
 impl Application {
     fn map_caption(&self) -> &'static str {
         if self.territory_visible {
-            return "Territory nodes and place locations · Drag to rotate · Right- or Ctrl-drag to tilt · Scroll to zoom";
+            return "Click a place or boundary to inspect sources · Drag to rotate · Right- or Ctrl-drag to tilt · Scroll to zoom";
         }
         match self.layer {
             MapLayer::Observations => {
-                "Printed coordinates and source-map boundaries · Drag to rotate · Right- or Ctrl-drag to tilt · Scroll to zoom"
+                "Printed coordinates and source-map boundaries · Click to inspect · Drag to rotate · Scroll to zoom"
             }
             MapLayer::MappedPlaces => {
-                "Source-map places and traced boundaries · Drag to rotate · Right- or Ctrl-drag to tilt · Scroll to zoom"
+                "Source-map places and traced boundaries · Click to inspect · Drag to rotate · Scroll to zoom"
             }
             MapLayer::SelectedTime => {
-                "Time-selected source anchors · Drag to rotate · Right- or Ctrl-drag to tilt · Scroll to zoom"
+                "Time-selected source anchors · Click to inspect · Drag to rotate · Scroll to zoom"
             }
         }
     }
@@ -28,36 +35,53 @@ impl Application {
             return;
         }
         ui.label(self.map_caption());
-        if self.dirty {
-            let points = match self.points() {
-                Ok(points) => points,
-                Err(error) => {
-                    self.error = Some(error.to_string());
-                    return;
-                }
-            };
-            if let Some(map) = &mut self.map {
-                match map.update(points, self.body) {
-                    Ok(()) => {
-                        self.dirty = false;
-                        self.selection_dirty = true;
-                    }
-                    Err(error) => self.error = Some(error.to_string()),
-                }
-            }
+        if self.dirty && !self.sync_map_points() {
+            return;
         }
         self.update_selection();
         let size = ui.available_size().max(egui::vec2(1.0, 1.0));
         self.map_size = [f64::from(size.x), f64::from(size.y)];
-        let (rect, response) = ui.allocate_exact_size(size, egui::Sense::click_and_drag());
+        let (_, rect) = ui.allocate_space(size);
+        let response = ui.interact(
+            rect,
+            ui.id().with("planetary-viewport"),
+            egui::Sense::click_and_drag(),
+        );
         let pointer = ViewportPointer::read(ui, &response);
         let on_controls = self
             .map
             .as_mut()
             .is_some_and(|map| map.pointer_controls(pointer));
+        self.track_gesture_press(ui, rect, &response, on_controls);
         if !on_controls {
             self.gestures(ui, &response);
         }
+        self.render_map_frame(ui, rect, size);
+        self.finish_gesture_click(ui, rect, &response, on_controls);
+        self.attribution(ui, rect);
+    }
+
+    fn sync_map_points(&mut self) -> bool {
+        let points = match self.points() {
+            Ok(points) => points,
+            Err(error) => {
+                self.error = Some(error.to_string());
+                return false;
+            }
+        };
+        if let Some(map) = &mut self.map {
+            match map.update(points, self.body) {
+                Ok(()) => {
+                    self.dirty = false;
+                    self.selection_dirty = true;
+                }
+                Err(error) => self.error = Some(error.to_string()),
+            }
+        }
+        true
+    }
+
+    fn render_map_frame(&mut self, ui: &mut egui::Ui, rect: egui::Rect, size: egui::Vec2) {
         let Some(map) = &mut self.map else {
             return;
         };
@@ -85,16 +109,73 @@ impl Application {
         if map.needs_redraw() {
             ui.ctx().request_repaint();
         }
-        if response.clicked()
-            && !on_controls
-            && let Some(point) = response.interact_pointer_pos()
+    }
+
+    fn track_gesture_press(
+        &mut self,
+        ui: &egui::Ui,
+        rect: egui::Rect,
+        response: &egui::Response,
+        on_controls: bool,
+    ) {
+        let (pressed, command, pos) = ui.input(|input| {
+            (
+                input.pointer.primary_pressed(),
+                input.modifiers.command,
+                response
+                    .interact_pointer_pos()
+                    .or_else(|| input.pointer.interact_pos()),
+            )
+        });
+        if on_controls || command {
+            self.gesture.press_origin = None;
+        } else if pressed && let Some(pos) = pos.filter(|pos| rect.contains(*pos)) {
+            self.gesture.press_origin = Some(pos);
+            self.gesture.dragged = false;
+        }
+    }
+
+    fn finish_gesture_click(
+        &mut self,
+        ui: &egui::Ui,
+        rect: egui::Rect,
+        response: &egui::Response,
+        on_controls: bool,
+    ) {
+        let (released, down, pos) = ui.input(|input| {
+            (
+                input.pointer.primary_released(),
+                input.pointer.primary_down(),
+                response
+                    .interact_pointer_pos()
+                    .or_else(|| input.pointer.interact_pos()),
+            )
+        });
+        let was_dragged = self.gesture.dragged;
+        let gesture_click = if released {
+            let origin = self.gesture.press_origin.take();
+            self.gesture.dragged = false;
+            !on_controls
+                && !was_dragged
+                && origin.is_some()
+                && pos.is_some_and(|point| rect.contains(point))
+        } else {
+            if !down {
+                self.gesture.press_origin = None;
+                self.gesture.dragged = false;
+            }
+            false
+        };
+        if !on_controls
+            && !was_dragged
+            && (gesture_click || response.clicked())
+            && let Some(point) = pos.filter(|point| rect.contains(*point))
         {
             self.pick(point - rect.min);
         }
-        self.attribution(ui, rect);
     }
 
-    fn pick(&mut self, pixel: egui::Vec2) {
+    pub(super) fn pick(&mut self, pixel: egui::Vec2) {
         let Some(map) = &self.map else {
             return;
         };
@@ -103,7 +184,10 @@ impl Application {
                 self.error = None;
                 self.hits = ids;
                 if let Some(id) = self.hits.first().copied() {
-                    self.select(id, false);
+                    if !self.search.trim().is_empty() {
+                        self.search.clear();
+                    }
+                    self.select_and_reveal(id, false, true);
                 }
             }
             Err(error) => self.error = Some(error.to_string()),
@@ -308,16 +392,26 @@ impl Application {
             || (response.dragged_by(egui::PointerButton::Primary)
                 && ui.input(|input| input.modifiers.command));
         if orbiting {
+            self.gesture.dragged = true;
             let delta = ui.input(|input| input.pointer.delta());
             match map.orbit(delta) {
                 Ok(true) => ui.ctx().request_repaint(),
                 Ok(false) => {}
                 Err(error) => tracing::warn!(%error, "map orbit rejected"),
             }
-        } else if response.dragged() {
-            let delta = ui.input(|input| input.pointer.delta());
-            if map.drag(pixel - delta, pixel) {
-                ui.ctx().request_repaint();
+        } else if response.dragged_by(egui::PointerButton::Primary) {
+            if let Some(origin) = self.gesture.press_origin {
+                if !self.gesture.dragged && position.distance(origin) > 3.5 {
+                    self.gesture.dragged = true;
+                }
+            } else {
+                self.gesture.dragged = true;
+            }
+            if self.gesture.dragged {
+                let delta = ui.input(|input| input.pointer.delta());
+                if map.drag(pixel - delta, pixel) {
+                    ui.ctx().request_repaint();
+                }
             }
         }
         if response.hovered() {

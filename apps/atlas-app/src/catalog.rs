@@ -137,6 +137,98 @@ impl Atlas {
             .or_else(|| self.catalog.get(&id).map(|item| item.key.as_str()))
     }
 
+    /// Ontological category of a known entity, available before leaf shards stream in.
+    pub fn entity_kind(&self, id: EntityId) -> Option<atlas_core::taxonomy::EntityKind> {
+        let id = self.resolve(id)?;
+        self.entries
+            .get(&id)
+            .map(|entry| entry.entity.kind)
+            .or_else(|| self.catalog.get(&id).map(|item| item.kind))
+    }
+
+    /// Administrative ranks stated for `id` in checked observations or hierarchy estimates.
+    pub fn entity_ranks(&self, id: EntityId) -> Vec<AdministrativeRank> {
+        let Some(id) = self.resolve(id) else {
+            return Vec::new();
+        };
+        if let Some(item) = self.catalog.get(&id) {
+            return item.ranks.clone();
+        }
+        let Some(entry) = self.entries.get(&id) else {
+            return Vec::new();
+        };
+        let mut ranks = Vec::new();
+        for rank in entry
+            .records
+            .iter()
+            .filter_map(|record| record.observation.rank)
+            .chain(
+                entry
+                    .estimates
+                    .iter()
+                    .filter_map(|estimate| match &estimate.value {
+                        atlas_ledger::model::EstimateValue::Temporal { assertion } => {
+                            match &assertion.value {
+                                atlas_core::assertion::TemporalValue::Hierarchy(h) => Some(h.rank),
+                                _ => None,
+                            }
+                        }
+                        _ => None,
+                    }),
+            )
+        {
+            if !ranks.contains(&rank) {
+                ranks.push(rank);
+            }
+        }
+        ranks
+    }
+
+    /// Every enduring entity identity published on `body`.
+    pub fn body_entities(&self, body: BodyId) -> Vec<EntityId> {
+        if !self.catalog.is_empty() {
+            return self
+                .catalog
+                .iter()
+                .filter(|(_, item)| item.body == body)
+                .map(|(id, _)| *id)
+                .collect();
+        }
+        self.entries
+            .iter()
+            .filter(|(_, entry)| entry.entity.body == body)
+            .map(|(id, _)| *id)
+            .collect()
+    }
+
+    /// Every `(parent, child)` containment edge among entities on `body`.
+    pub fn parent_links(&self, body: BodyId) -> Vec<(EntityId, EntityId)> {
+        if !self.catalog.is_empty() {
+            return self
+                .catalog
+                .iter()
+                .filter(|(_, item)| item.body == body)
+                .flat_map(|(child, item)| {
+                    item.parents
+                        .iter()
+                        .filter_map(|parent| self.resolve(*parent))
+                        .filter(|parent| self.entity_body(*parent) == Some(body))
+                        .map(move |parent| (parent, *child))
+                })
+                .collect();
+        }
+        self.entries
+            .iter()
+            .filter(|(_, entry)| entry.entity.body == body)
+            .flat_map(|(child, entry)| {
+                self.entry_parents(entry)
+                    .into_iter()
+                    .filter(|parent| self.entity_body(*parent) == Some(body))
+                    .map(move |parent| (parent, *child))
+            })
+            .collect()
+    }
+
     /// Whether reviewed observations or dated hierarchy assign `rank` to `id`.
     pub fn has_rank(&self, id: EntityId, rank: AdministrativeRank) -> bool {
         let Some(id) = self.resolve(id) else {
@@ -251,43 +343,52 @@ impl Atlas {
             .collect()
     }
 
+    fn entry_parents(&self, entry: &Entry) -> BTreeSet<EntityId> {
+        entry
+            .records
+            .iter()
+            .filter_map(|record| record.observation.parent_id)
+            .filter_map(|parent| self.resolve(parent))
+            .collect()
+    }
+
     /// Source-reported parents, retaining different undated claims.
     pub fn parents(&self, id: EntityId) -> BTreeSet<EntityId> {
         let Some(resolved) = self.resolve(id) else {
             return BTreeSet::new();
         };
-        if let Some(entry) = self.entries.get(&resolved) {
-            return entry
-                .records
+        if let Some(item) = self.catalog.get(&resolved) {
+            return item
+                .parents
                 .iter()
-                .filter_map(|record| record.observation.parent_id)
+                .filter_map(|parent| self.resolve(*parent))
                 .collect();
         }
-        self.catalog
+        self.entries
             .get(&resolved)
-            .into_iter()
-            .flat_map(|item| item.parents.iter().copied())
-            .collect()
+            .map_or_else(BTreeSet::new, |entry| self.entry_parents(entry))
     }
 
     /// Entities that a reviewed source places below this parent.
     pub fn children(&self, parent: EntityId) -> Vec<EntityId> {
+        let Some(parent) = self.resolve(parent) else {
+            return Vec::new();
+        };
         if !self.catalog.is_empty() {
             return self
                 .catalog
                 .iter()
-                .filter(|(_, item)| item.parents.contains(&parent))
+                .filter(|(_, item)| {
+                    item.parents
+                        .iter()
+                        .any(|candidate| self.resolve(*candidate) == Some(parent))
+                })
                 .map(|(id, _)| *id)
                 .collect();
         }
         self.entries
             .iter()
-            .filter(|(_, entry)| {
-                entry
-                    .records
-                    .iter()
-                    .any(|record| record.observation.parent_id == Some(parent))
-            })
+            .filter(|(_, entry)| self.entry_parents(entry).contains(&parent))
             .map(|(id, _)| *id)
             .collect()
     }

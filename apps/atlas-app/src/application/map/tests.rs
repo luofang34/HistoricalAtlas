@@ -77,3 +77,118 @@ fn data_extent_separates_source_maps_from_printed_coordinates() {
     assert!(obs_low.latitude < 25.6);
     assert!(obs_high.latitude > 27.5);
 }
+
+struct MockScene {
+    hits: Vec<EntityId>,
+    drags: std::sync::Arc<std::sync::atomic::AtomicUsize>,
+}
+
+impl ScenePort for MockScene {
+    fn update(
+        &mut self,
+        _: serde_json::Value,
+        _: BodyId,
+    ) -> Result<(), crate::scene::renderer::RenderError> {
+        Ok(())
+    }
+    fn select(
+        &mut self,
+        _: Option<EntityId>,
+        _: Vec<serde_json::Value>,
+    ) -> Result<(), crate::scene::renderer::RenderError> {
+        Ok(())
+    }
+    fn frame(
+        &mut self,
+        _: egui::Vec2,
+        _: f32,
+        _: Option<Camera>,
+    ) -> Result<egui::TextureId, crate::scene::renderer::RenderError> {
+        Ok(egui::TextureId::Managed(0))
+    }
+    fn pick(&self, _: [f64; 2]) -> Result<Vec<EntityId>, crate::scene::renderer::RenderError> {
+        Ok(self.hits.clone())
+    }
+    fn detail_bounds(&self) -> Option<[f64; 4]> {
+        None
+    }
+    fn pointer_controls(&mut self, _: crate::scene::ViewportPointer) -> bool {
+        false
+    }
+    fn advance_controls(&mut self) -> bool {
+        false
+    }
+    fn drag(&mut self, _: egui::Vec2, _: egui::Vec2) -> bool {
+        self.drags.fetch_add(1, std::sync::atomic::Ordering::SeqCst);
+        true
+    }
+    fn orbit(&mut self, _: egui::Vec2) -> Result<bool, crate::scene::renderer::RenderError> {
+        Ok(false)
+    }
+    fn zoom(&mut self, _: egui::Vec2, _: f64) -> bool {
+        false
+    }
+    fn needs_redraw(&self) -> bool {
+        false
+    }
+}
+
+#[test]
+fn clicking_map_viewport_ignores_tremor_expands_hierarchy_and_shows_original_source() {
+    let atlas = crate::catalog::tests::atlas();
+    let county = EntityId::from_key("earth/cn-gz/bijie/bijie-county").unwrap();
+    let commune = EntityId::from_key("earth/cn-gz/bijie/wuliping-commune").unwrap();
+    let drags = std::sync::Arc::new(std::sync::atomic::AtomicUsize::new(0));
+    let mut app = Application::new(atlas).unwrap();
+    app.search = "stale-filter".into();
+    app.map = Some(Box::new(MockScene {
+        hits: vec![commune, county],
+        drags: drags.clone(),
+    }));
+    let context = egui::Context::default();
+    crate::application::configure_fonts_blocking(&context).unwrap();
+    let run = |app: &mut Application, time: f64, events: Vec<egui::Event>| {
+        let rect = egui::Rect::from_min_size(egui::Pos2::ZERO, egui::vec2(1440.0, 900.0));
+        let input = egui::RawInput {
+            screen_rect: Some(rect),
+            time: Some(time),
+            events,
+            ..Default::default()
+        };
+        let mut out = context.run_ui(input, |ui| app.ui(ui));
+        out.textures_delta.clear();
+        out
+    };
+    run(&mut app, 0.0, Vec::new());
+    let press = egui::pos2(720.0, 450.0);
+    let tremor = egui::pos2(722.0, 451.0);
+    let button = |pos, pressed| egui::Event::PointerButton {
+        pos,
+        button: egui::PointerButton::Primary,
+        pressed,
+        modifiers: Default::default(),
+    };
+    run(
+        &mut app,
+        0.1,
+        vec![egui::Event::PointerMoved(press), button(press, true)],
+    );
+    run(&mut app, 0.4, vec![egui::Event::PointerMoved(tremor)]);
+    run(&mut app, 0.7, vec![button(tremor, false)]);
+    assert_eq!(drags.load(std::sync::atomic::Ordering::SeqCst), 0);
+    assert_eq!(app.selected, Some(commune));
+    assert_eq!(app.hits, vec![commune, county]);
+    assert!(app.search.is_empty());
+    let out = run(&mut app, 0.8, Vec::new());
+    let texts: Vec<&str> = out
+        .shapes
+        .iter()
+        .filter_map(|shape| match &shape.shape {
+            egui::epaint::Shape::Text(text) => Some(text.galley.job.text.as_str()),
+            _ => None,
+        })
+        .collect();
+    assert!(texts.contains(&"At this map point"));
+    assert!(texts.contains(&"Source hierarchy"));
+    assert!(texts.contains(&"Source observations"));
+}

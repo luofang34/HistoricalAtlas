@@ -173,10 +173,21 @@ mod wasm {
     }
 
     impl Application {
+        fn has_loaded_target(&self, id: EntityId) -> bool {
+            self.focus_point(id).is_some()
+                || !self.atlas.drawings(id).is_empty()
+                || crate::scene::boundaries::extent(
+                    &self.atlas,
+                    id,
+                    self.derived_visible,
+                    (self.layer == crate::scene::MapLayer::SelectedTime)
+                        .then_some(&self.selected_time),
+                )
+                .is_some()
+        }
+
         pub(in crate::application) fn load_visible_streams(&mut self, ui: &mut egui::Ui) {
-            let needs_focus = self
-                .selected
-                .is_some_and(|id| self.focus_point(id).is_none());
+            let awaiting_target = self.selected.filter(|&id| !self.has_loaded_target(id));
             let (changed, refresh_time) = self.drain_stream_results();
             if refresh_time
                 && let Ok(time) = crate::selection::SelectedTime::query(&self.atlas, &self.time)
@@ -186,8 +197,8 @@ mod wasm {
             if changed {
                 self.dirty = true;
                 self.selection_dirty = true;
-                if needs_focus && let Some(id) = self.selected {
-                    self.select(id, true);
+                if let Some(id) = awaiting_target.filter(|&id| self.has_loaded_target(id)) {
+                    self.select_and_reveal(id, true, false);
                 }
             }
             if (!self.streaming.failed_shards.is_empty()
@@ -330,9 +341,10 @@ mod wasm {
                         && !self.streaming.failed_geometries.contains(id)
                         && (self.selected.is_some_and(|selected| {
                             **id == selected || reference.subjects.contains(&selected)
-                        }) || bounds
-                            .zip(reference.bounds)
-                            .is_some_and(|(view, detail)| intersects(view, detail)))
+                        }) || self.is_overview_boundary(**id)
+                            || bounds
+                                .zip(reference.bounds)
+                                .is_some_and(|(view, detail)| intersects(view, detail)))
                 })
                 .take(available)
                 .map(|(id, (_, reference))| (*id, reference.clone()))
@@ -347,6 +359,13 @@ mod wasm {
                     context.request_repaint();
                 });
             }
+        }
+
+        fn is_overview_boundary(&self, id: EntityId) -> bool {
+            use atlas_core::assertion::AdministrativeRank::{County, Prefecture, Province};
+            [Province, Prefecture, County]
+                .into_iter()
+                .any(|rank| self.atlas.has_rank(id, rank))
         }
 
         fn priority_shards(&self) -> BTreeSet<String> {
