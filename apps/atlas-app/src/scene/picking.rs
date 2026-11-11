@@ -2,7 +2,7 @@ use std::collections::{BTreeMap, BTreeSet};
 
 use atlas_core::identity::EntityId;
 use cgmath::Point2;
-use geo::{BoundingRect, Intersects, LineString, MultiPolygon, Point, Polygon};
+use geo::{Area, BoundingRect, Intersects, LineString, MultiPolygon, Point, Polygon};
 use maplibre::{coords::LatLon, projection::globe::camera::GlobeCameraState};
 use rstar::{AABB, RTree, RTreeObject, primitives::GeomWithData};
 use serde::Deserialize;
@@ -15,6 +15,7 @@ type Located = GeomWithData<[f64; 3], (EntityId, LatLon)>;
 struct Region {
     id: EntityId,
     shape: MultiPolygon,
+    area: f64,
     envelope: AABB<[f64; 2]>,
 }
 
@@ -44,6 +45,7 @@ pub(super) struct Picking {
     points: RTree<Located>,
     lines: lines::LineIndex,
     regions: RTree<Region>,
+    region_areas: BTreeMap<EntityId, f64>,
     entities: BTreeMap<EntityId, Vec<Value>>,
 }
 
@@ -71,8 +73,18 @@ impl Picking {
                     let point = LatLon::new(latitude, longitude);
                     points.push(GeomWithData::new(sphere(point), (id, point)));
                 }
-                Geometry::Polygon(rings) => regions.extend(region(id, vec![rings])),
-                Geometry::MultiPolygon(polygons) => regions.extend(region(id, polygons)),
+                Geometry::Polygon(rings) => {
+                    if let Some(built) = region(id, vec![rings]) {
+                        *index.region_areas.entry(id).or_insert(0.0) += built.area;
+                        regions.push(built);
+                    }
+                }
+                Geometry::MultiPolygon(polygons) => {
+                    if let Some(built) = region(id, polygons) {
+                        *index.region_areas.entry(id).or_insert(0.0) += built.area;
+                        regions.push(built);
+                    }
+                }
                 Geometry::LineString(path) => lines.push((id, vec![path])),
                 Geometry::MultiLineString(paths) => lines.push((id, paths)),
                 Geometry::Other => {}
@@ -82,6 +94,10 @@ impl Picking {
         index.lines = lines::LineIndex::new(lines);
         index.regions = RTree::bulk_load(regions);
         Ok(index)
+    }
+
+    pub(super) fn region_area(&self, id: EntityId) -> f64 {
+        self.region_areas.get(&id).copied().unwrap_or(f64::INFINITY)
     }
 
     pub(super) fn selection(&self, id: Option<EntityId>, mut extra: Vec<Value>) -> Value {
@@ -116,28 +132,36 @@ impl Picking {
             })
             .map(|p| distance_squared(anchor, sphere(p)))
             .fold(0.0, f64::max);
-        let mut hits: BTreeSet<_> = self
-            .lines
-            .pick(camera, pixel, anchor, reach)
-            .into_iter()
-            .collect();
+        let mut point_hits = Vec::new();
         for point in self.points.locate_within_distance(anchor, reach) {
             if camera.is_location_occluded(point.data.1) {
                 continue;
             }
             let screen = camera.location_to_screen(point.data.1, 0.0);
-            if (screen.x - pixel.x).hypot(screen.y - pixel.y) <= 12.0 {
-                hits.insert(point.data.0);
+            let dist = (screen.x - pixel.x).hypot(screen.y - pixel.y);
+            if dist <= 12.0 {
+                point_hits.push((dist, point.data.0));
             }
         }
+        point_hits.sort_by(|a, b| a.0.total_cmp(&b.0).then_with(|| a.1.cmp(&b.1)));
+        let line_hits = self.lines.pick(camera, pixel, anchor, reach);
         let point = Point::new(ground.longitude, ground.latitude);
         let envelope = AABB::from_point([ground.longitude, ground.latitude]);
+        let mut region_hits = Vec::new();
         for region in self.regions.locate_in_envelope_intersecting(envelope) {
             if region.shape.intersects(&point) {
-                hits.insert(region.id);
+                region_hits.push((region.area, region.id));
             }
         }
-        hits.into_iter().collect()
+        region_hits.sort_by(|a, b| a.0.total_cmp(&b.0).then_with(|| a.1.cmp(&b.1)));
+        let mut seen = BTreeSet::new();
+        point_hits
+            .into_iter()
+            .map(|(_, id)| id)
+            .chain(line_hits)
+            .chain(region_hits.into_iter().map(|(_, id)| id))
+            .filter(|id| seen.insert(*id))
+            .collect()
     }
 }
 
@@ -154,9 +178,11 @@ fn region(id: EntityId, components: Vec<Vec<Vec<[f64; 2]>>>) -> Option<Region> {
             .collect(),
     );
     let bounds = shape.bounding_rect()?;
+    let area = shape.unsigned_area();
     Some(Region {
         id,
         shape,
+        area,
         envelope: AABB::from_corners(
             [bounds.min().x, bounds.min().y],
             [bounds.max().x, bounds.max().y],

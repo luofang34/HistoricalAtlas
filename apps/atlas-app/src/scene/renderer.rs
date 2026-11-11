@@ -29,6 +29,7 @@ use thiserror::Error;
 
 mod controls;
 mod navigation;
+mod query;
 #[cfg(test)]
 mod tests;
 
@@ -59,6 +60,9 @@ pub enum RenderError {
     /// Globe camera projection is unavailable.
     #[error("map projection: {0}")]
     Projection(#[from] maplibre::render::projection::ProjectionStateError),
+    /// Rendered feature query failed.
+    #[error("map feature query: {0}")]
+    Query(#[from] maplibre::sdf::query::QueryError),
     /// Map feature identity is invalid.
     #[error("map feature identity: {0}")]
     Identity(#[from] serde_json::Error),
@@ -274,14 +278,8 @@ impl ScenePort for MapRenderer {
         moved
     }
 
-    fn pick(&self, [x, y]: [f64; 2]) -> Result<Vec<EntityId>, RenderError> {
-        let camera = maplibre::render::projection::globe_camera_for_view(self.map.view_state())?;
-        let pixel = cgmath::Point2::new(x, y);
-        let mut hits = self.picking.pick(&camera, pixel);
-        hits.extend(self.selection_picking.pick(&camera, pixel));
-        hits.sort();
-        hits.dedup();
-        Ok(hits)
+    fn pick(&self, pixel: [f64; 2]) -> Result<Vec<EntityId>, RenderError> {
+        self.pick_rendered(pixel)
     }
 
     fn select(

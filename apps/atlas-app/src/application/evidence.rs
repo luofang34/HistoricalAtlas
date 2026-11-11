@@ -7,26 +7,25 @@ impl Application {
     pub(super) fn evidence(&mut self, ui: &mut egui::Ui) {
         ui.heading("Evidence ledger");
         let Some(id) = self.selected else {
-            ui.label("Select a place on the map or search by name.");
+            ui.label("Select a place or boundary on the map, or browse the structural hierarchy.");
             return;
         };
+        let trail = self.tree.ancestor_trail(&self.atlas, self.body, id);
         let mut navigate = None;
+        let mut focus_target = false;
+        let mut open_sheet = false;
         let mut date_target = None;
         egui::ScrollArea::vertical()
             .id_salt("evidence-scroll")
             .show(ui, |ui| {
                 ui.heading(self.label(id));
-                ui.monospace(id.0.to_string());
+                self.entity_identity_meta(ui, id, &mut focus_target, &mut open_sheet);
                 ui.separator();
                 self.overlay_details(ui, id);
-                navigate = self.hierarchy(ui, id);
+                navigate = self.hierarchy(ui, id, &trail);
+                ui.separator();
                 if let Some(entry) = self.atlas.entry(id) {
                     mapped_boundaries(ui, &entry.boundaries);
-                    derived_boundaries(ui, &entry.derived_boundaries);
-                    if self.layer == crate::scene::MapLayer::MappedPlaces {
-                        mapped_locations(ui, &entry.estimates);
-                        ui.separator();
-                    }
                     ui.strong("Source observations");
                     for record in &entry.records {
                         if let Some(at) =
@@ -36,6 +35,11 @@ impl Application {
                         }
                     }
                     ui.separator();
+                    if self.layer == crate::scene::MapLayer::MappedPlaces {
+                        mapped_locations(ui, &entry.estimates);
+                        ui.separator();
+                    }
+                    derived_boundaries(ui, &entry.derived_boundaries);
                     ui.strong("At selected time");
                     if let Some(evidence) = self.selected_time.evidence.get(&id) {
                         json_value(ui, "Selected assertions", evidence);
@@ -43,8 +47,8 @@ impl Application {
                         ui.label("No dated assertion matches this selection.");
                     }
                     for estimate in &entry.estimates {
-                        let id = ui.make_persistent_id(("estimate", estimate.id.0));
-                        CollapsingState::load_with_default_open(ui.ctx(), id, false)
+                        let est_id = ui.make_persistent_id(("estimate", estimate.id.0));
+                        CollapsingState::load_with_default_open(ui.ctx(), est_id, false)
                             .show_header(ui, |ui| ui.label(&estimate.brief))
                             .body(|ui| json_value(ui, "Interpretation", estimate));
                     }
@@ -53,10 +57,17 @@ impl Application {
                     }
                 } else {
                     ui.label("Loading entity evidence…");
+                    ui.ctx().request_repaint();
                 }
             });
-        if let Some(id) = navigate {
-            self.select(id, true);
+        if open_sheet {
+            self.sheet = super::sheet::SheetView::open();
+        }
+        if focus_target {
+            self.select_and_reveal(id, true, false);
+        }
+        if let Some(target) = navigate {
+            self.select_and_reveal(target, true, true);
         }
         if let Some(at) = date_target {
             self.time.mode = crate::selection::TimeMode::Ticks;
@@ -65,23 +76,109 @@ impl Application {
         }
     }
 
-    fn hierarchy(&self, ui: &mut egui::Ui, id: EntityId) -> Option<EntityId> {
-        let mut target = None;
-        ui.collapsing("Source hierarchy", |ui| {
-            for parent in self.atlas.parents(id) {
-                if ui
-                    .button(format!("Parent: {}", self.atlas.label(parent)))
-                    .clicked()
-                {
-                    target = Some(parent);
+    fn entity_identity_meta(
+        &self,
+        ui: &mut egui::Ui,
+        id: EntityId,
+        focus_target: &mut bool,
+        open_sheet: &mut bool,
+    ) {
+        let mut meta = Vec::new();
+        if let Some(kind) = self.atlas.entity_kind(id) {
+            meta.push(kind.code());
+        }
+        let ranks: Vec<&str> = self
+            .atlas
+            .entity_ranks(id)
+            .into_iter()
+            .map(super::hierarchy::rank_label)
+            .collect();
+        if !ranks.is_empty() {
+            meta.push(ranks.join(", "));
+        }
+        if !meta.is_empty() {
+            ui.weak(meta.join(" · "));
+        }
+        if let Some(key) = self.atlas.entity_key(id) {
+            ui.monospace(key);
+        }
+        ui.monospace(id.0.to_string());
+        let has_focus = self.focus_point(id).is_some()
+            || crate::scene::boundaries::extent(
+                &self.atlas,
+                id,
+                self.derived_visible,
+                (self.layer == crate::scene::MapLayer::SelectedTime).then_some(&self.selected_time),
+            )
+            .is_some();
+        let has_sheet = !self.atlas.drawings(id).is_empty();
+        if has_focus || has_sheet {
+            ui.horizontal_wrapped(|ui| {
+                if has_focus && ui.small_button("Focus on map").clicked() {
+                    *focus_target = true;
                 }
-            }
-            for child in self.atlas.children(id) {
-                if ui.button(self.atlas.label(child)).clicked() {
-                    target = Some(child);
+                if has_sheet && ui.small_button("Open source map sheet").clicked() {
+                    *open_sheet = true;
                 }
-            }
+            });
+        }
+    }
+
+    fn hierarchy(&self, ui: &mut egui::Ui, id: EntityId, trail: &[EntityId]) -> Option<EntityId> {
+        let parents = self.atlas.parents(id);
+        let mut children = self.atlas.children(id);
+        children.sort_by(|a, b| {
+            self.atlas
+                .entity_key(*a)
+                .unwrap_or("")
+                .cmp(self.atlas.entity_key(*b).unwrap_or(""))
         });
+        if trail.is_empty() && parents.is_empty() && children.is_empty() {
+            return None;
+        }
+        let mut target = None;
+        let header_id = ui.make_persistent_id(("source-hierarchy", id.0));
+        CollapsingState::load_with_default_open(ui.ctx(), header_id, true)
+            .show_header(ui, |ui| ui.strong("Source hierarchy"))
+            .body(|ui| {
+                if !trail.is_empty() {
+                    ui.horizontal_wrapped(|ui| {
+                        ui.weak("Path:");
+                        for &ancestor in trail {
+                            if ui.small_button(self.atlas.label(ancestor)).clicked() {
+                                target = Some(ancestor);
+                            }
+                            ui.weak("›");
+                        }
+                        ui.label(self.label(id));
+                    });
+                }
+                if parents.len() > 1 {
+                    ui.horizontal_wrapped(|ui| {
+                        ui.weak("Reported parents:");
+                        for parent in parents {
+                            if ui.small_button(self.atlas.label(parent)).clicked() {
+                                target = Some(parent);
+                            }
+                        }
+                    });
+                }
+                if !children.is_empty() {
+                    ui.weak(format!("Subordinate entities ({}):", children.len()));
+                    egui::ScrollArea::vertical()
+                        .id_salt(("hierarchy-children", id.0))
+                        .max_height(110.0)
+                        .show(ui, |ui| {
+                            ui.horizontal_wrapped(|ui| {
+                                for child in children {
+                                    if ui.small_button(self.atlas.label(child)).clicked() {
+                                        target = Some(child);
+                                    }
+                                }
+                            });
+                        });
+                }
+            });
         target
     }
 
@@ -98,6 +195,16 @@ impl Application {
                     ui.hyperlink_to(&source.title, url);
                 } else {
                     ui.strong(&source.title);
+                }
+                let mut bib = Vec::new();
+                if let Some(author) = &source.responsibility {
+                    bib.push(author.clone());
+                }
+                if let Some(year) = source.publication_year {
+                    bib.push(year.to_string());
+                }
+                if !bib.is_empty() {
+                    ui.weak(bib.join(" · "));
                 }
                 if let Some(capture) = &source.capture {
                     capture_evidence(ui, capture);
@@ -127,6 +234,12 @@ impl Application {
             }
             if let Some(households) = record.observation.households {
                 ui.label(format!("Households: {households}"));
+            }
+            if !record.observation.ethnicities.is_empty() {
+                ui.label(format!(
+                    "Population groups: {}",
+                    record.observation.ethnicities.join("、")
+                ));
             }
             let date_target = record
                 .source_date
