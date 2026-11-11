@@ -4,7 +4,7 @@ use crate::{
     catalog::Atlas,
     error::AppError,
     navigation::Camera,
-    scene::{self, MapLayer, renderer::MapRenderer},
+    scene::{self, MapLayer, ScenePort},
     selection::{SelectedTime, TimeControl},
 };
 use atlas_core::identity::EntityId;
@@ -13,17 +13,15 @@ use atlas_geo::body::BodyId;
 mod controls;
 mod dates;
 mod evidence;
-#[cfg(target_arch = "wasm32")]
-mod geometry;
 mod map;
-mod map_controls;
 mod overlay;
 mod sheet;
+mod streaming;
 
 /// Application state independent of the windowing platform.
 pub struct Application {
     #[cfg(target_arch = "wasm32")]
-    geometry: geometry::GeometryLoads,
+    streaming: streaming::StreamingLoads,
     atlas: Atlas,
     basemap: scene::basemap::Manifest,
     body: BodyId,
@@ -37,16 +35,16 @@ pub struct Application {
     layer: MapLayer,
     territory_visible: bool,
     derived_visible: bool,
+    crustal_pins: bool,
     camera: Camera,
     camera_pending: bool,
     map_size: [f64; 2],
-    map: Option<MapRenderer>,
+    map: Option<Box<dyn ScenePort>>,
     dirty: bool,
     selection_dirty: bool,
     error: Option<String>,
     overlay: overlay::OverlayState,
     sheet: sheet::SheetView,
-    controls: map_controls::MapControls,
 }
 
 impl Application {
@@ -56,7 +54,7 @@ impl Application {
         let selected_time = SelectedTime::query(&atlas, &time)?;
         Ok(Self {
             #[cfg(target_arch = "wasm32")]
-            geometry: geometry::GeometryLoads::new(&atlas),
+            streaming: streaming::StreamingLoads::new(&atlas),
             atlas,
             basemap: scene::basemap::Manifest::bundled()?,
             body: BodyId::Earth,
@@ -69,6 +67,7 @@ impl Application {
             layer: MapLayer::MappedPlaces,
             territory_visible: false,
             derived_visible: false,
+            crustal_pins: false,
             camera: Camera::for_body(BodyId::Earth),
             camera_pending: true,
             map_size: [800.0, 600.0],
@@ -78,7 +77,6 @@ impl Application {
             error: None,
             overlay: overlay::OverlayState::default(),
             sheet: sheet::SheetView::default(),
-            controls: map_controls::MapControls::default(),
         })
     }
 
@@ -89,14 +87,10 @@ impl Application {
 
     /// Attach the GPU renderer after the window has a drawing surface.
     pub fn attach(&mut self, gpu: egui_wgpu::RenderState) -> Result<(), AppError> {
-        self.map = Some(MapRenderer::new(
+        self.map = Some(scene::create_scene(
             gpu,
-            scene::style_with_basemap(
-                self.points()?,
-                self.body,
-                crate::navigation::PROJECTION,
-                &self.basemap,
-            )?,
+            self.points()?,
+            self.body,
             &self.basemap,
         )?);
         self.dirty = true;
@@ -167,27 +161,61 @@ impl Application {
                     scene::boundaries::center(&self.atlas, id, self.derived_visible, None)
                 });
         }
+        if self.layer == MapLayer::SelectedTime {
+            for record in &entry.records {
+                if let Some(pos) = self.selected_time.paleo.get(&record.id).or_else(|| {
+                    self.crustal_pins
+                        .then(|| self.selected_time.crustal_pins.get(&record.id))
+                        .flatten()
+                }) {
+                    return Some(pos.reconstructed);
+                }
+            }
+            if self.selected_time.evidence.contains_key(&id) && !self.selected_time.is_excluded(id)
+            {
+                if let Some(point) = entry
+                    .records
+                    .iter()
+                    .find_map(|record| record.observation.coordinate.as_ref().map(|c| c.point))
+                {
+                    return Some(point);
+                }
+                if let Some(point) =
+                    entry
+                        .estimates
+                        .iter()
+                        .find_map(|estimate| match estimate.value {
+                            atlas_ledger::model::EstimateValue::MapLocation { point, .. } => {
+                                Some(point)
+                            }
+                            _ => None,
+                        })
+                {
+                    return Some(point);
+                }
+            }
+            return scene::boundaries::center(
+                &self.atlas,
+                id,
+                self.derived_visible,
+                Some(&self.selected_time),
+            );
+        }
         entry
             .records
             .iter()
             .find_map(|record| record.observation.coordinate.as_ref().map(|c| c.point))
-            .or_else(|| {
-                scene::boundaries::center(
-                    &self.atlas,
-                    id,
-                    self.derived_visible,
-                    (self.layer == MapLayer::SelectedTime).then_some(&self.selected_time),
-                )
-            })
+            .or_else(|| scene::boundaries::center(&self.atlas, id, self.derived_visible, None))
     }
 
     fn points(&self) -> Result<serde_json::Value, AppError> {
-        let mut collection = scene::features(
+        let mut collection = scene::features_with_pins(
             &self.atlas,
             self.body,
             &self.selected_time,
             self.layer,
             None,
+            self.crustal_pins,
         );
         if let Some(features) = collection
             .get_mut("features")

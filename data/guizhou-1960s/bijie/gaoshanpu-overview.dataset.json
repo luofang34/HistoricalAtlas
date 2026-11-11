@@ -4,25 +4,33 @@
       "id": "85a90976-901f-5fee-b995-0fe64d6adc1f",
       "key": "earth/cn-gz/bijie/gaoshanpu/gaoshan-fortress",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "71430a30-46da-5455-b176-718dfb9edcea",
       "key": "earth/cn-gz/bijie/gaoshanpu/chishui-post-station",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "efd2aaa3-52b1-5cb1-8538-88d8c3545592",
       "key": "earth/cn-gz/bijie/gaoshanpu/nanguan-former-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "38000ead-4c5c-59eb-a647-7f4d8741126a",
       "key": "earth/cn-gz/bijie/gaoshanpu/xiaogou-former-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     }
   ],
   "records": [

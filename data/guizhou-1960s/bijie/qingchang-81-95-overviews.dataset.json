@@ -4,73 +4,97 @@
       "id": "ad11506e-b341-5c36-89a9-7bb5aebbe225",
       "key": "earth/cn-gz/bijie/dahe/baiduo-liangzi-forest",
       "body": "earth",
-      "kind": "forest"
+      "kind": {
+        "ecology": "forest"
+      }
     },
     {
       "id": "09ea88aa-1b0d-54d6-aefe-1e2a4d4deb9e",
       "key": "earth/cn-gz/bijie/dahe/qingchang-dahe-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "a695906d-0af6-5906-9d8d-693ca40b2d62",
       "key": "earth/cn-gz/bijie/kuaile/kuaile-yejiao-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "62a46ebc-2114-577c-bbca-3a9db2338e43",
       "key": "earth/cn-gz/bijie/yejiao/dashuigou-stream",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "c6310f4d-e838-50ea-afc1-a49df33d475a",
       "key": "earth/cn-gz/bijie/yejiao/lianhe-forest",
       "body": "earth",
-      "kind": "forest"
+      "kind": {
+        "ecology": "forest"
+      }
     },
     {
       "id": "4f3447a3-8c26-5f60-804d-f96219e5f6cc",
       "key": "earth/cn-gz/bijie/yejiao/xiniu-forest",
       "body": "earth",
-      "kind": "forest"
+      "kind": {
+        "ecology": "forest"
+      }
     },
     {
       "id": "3efa21ba-a174-5bbc-b0a9-7aebfae09dee",
       "key": "earth/cn-gz/bijie/yejiao/maoping-forest",
       "body": "earth",
-      "kind": "forest"
+      "kind": {
+        "ecology": "forest"
+      }
     },
     {
       "id": "25b6251b-30c1-58ee-bd4a-29786c4103fc",
       "key": "earth/cn-gz/bijie/baojia/xindi-forest",
       "body": "earth",
-      "kind": "forest"
+      "kind": {
+        "ecology": "forest"
+      }
     },
     {
       "id": "f49cfc74-b066-5a8e-9e7b-37f7f3c2d81e",
       "key": "earth/cn-gz/bijie/baojia/xiangshui-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "e76b25e9-a56b-5305-8497-1444d8706cc1",
       "key": "earth/cn-gz/bijie/yejiao/qiaobian-liangshuigou-iron",
       "body": "earth",
-      "kind": "geological_site"
+      "kind": {
+        "geology": "site"
+      }
     },
     {
       "id": "73d674af-35d5-561a-b1e4-45174cef54e6",
       "key": "earth/cn-gz/bijie/qingchang-district/meitongping-meitangou-coal",
       "body": "earth",
-      "kind": "geological_site"
+      "kind": {
+        "geology": "site"
+      }
     },
     {
       "id": "8d718b03-b1e3-52f4-8658-a8489e3da5db",
       "key": "earth/cn-gz/bijie/baojia/yudongchong-coal",
       "body": "earth",
-      "kind": "geological_site"
+      "kind": {
+        "geology": "site"
+      }
     }
   ],
   "records": [

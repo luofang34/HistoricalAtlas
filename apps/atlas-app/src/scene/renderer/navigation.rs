@@ -34,7 +34,7 @@ impl MapRenderer {
     /// Turn the camera by a right- or Ctrl-drag: horizontal travel turns the bearing and
     /// vertical travel the pitch, at the rate MapLibre's window host uses; returns whether
     /// the camera moved.
-    pub fn orbit(
+    pub(super) fn orbit_raw(
         &mut self,
         delta: egui::Vec2,
     ) -> Result<bool, maplibre::render::view_state::NavigationError> {

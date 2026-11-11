@@ -4,7 +4,9 @@
       "id": "63be9aa7-2c4e-571d-899d-84c6bfb0c402",
       "key": "earth/cn-gz/bijie/xiaoji/silk-reeling-factory",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     }
   ],
   "records": [

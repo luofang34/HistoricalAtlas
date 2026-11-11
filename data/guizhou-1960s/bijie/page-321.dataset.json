@@ -4,217 +4,289 @@
       "id": "5a69e881-75fc-5565-8ff2-f26ff42a0ee9",
       "key": "earth/cn-gz/bijie/shengji/shengji-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "95f2c582-ffa7-5d6a-8c9b-18b62f094e6f",
       "key": "earth/cn-gz/bijie/shengji/shengji/shengji",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bfdb0f70-5fb8-57fd-a853-3268408326cd",
       "key": "earth/cn-gz/bijie/shengji/shengji/xinjie",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ebef4dc4-5aaf-5d73-8bf0-2c1c074c4a25",
       "key": "earth/cn-gz/bijie/shengji/shengji/shangguanzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3ecff025-f5df-56b5-b7b5-998b719270b3",
       "key": "earth/cn-gz/bijie/shengji/shengji/madigou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2ef21af5-c53f-5511-bc93-b1e7a6dbccd5",
       "key": "earth/cn-gz/bijie/shengji/shengji/zhaozishan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c3fa7bb2-cf16-58fe-a572-0aabdf0cf696",
       "key": "earth/cn-gz/bijie/shengji/shengji/dazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "38d9cc24-41fd-5ccc-a40d-a886280bf379",
       "key": "earth/cn-gz/bijie/shengji/shengji/yanshang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c71518e9-7877-52cf-90d0-9e657cc7e8d0",
       "key": "earth/cn-gz/bijie/shengji/shengji/zhaozishanlinchang",
       "body": "earth",
-      "kind": "forest"
+      "kind": {
+        "ecology": "forest"
+      }
     },
     {
       "id": "c1387912-2e76-512e-817b-0f14dc663079",
       "key": "earth/cn-gz/bijie/shengji/shengji/changwanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c53b9c75-aa72-5e92-a1a7-73c5dfee7d88",
       "key": "earth/cn-gz/bijie/shengji/shengji/shaniudong",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "f4fdf736-900f-53b7-ac6b-163640c4896e",
       "key": "earth/cn-gz/bijie/shengji/shengji/laodianzhan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "53e601d8-d76a-5cb6-99e1-87c12462b8db",
       "key": "earth/cn-gz/bijie/shengji/shengji/qingcaoba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "121b3671-32bc-537b-81b7-942658b1f9aa",
       "key": "earth/cn-gz/bijie/shengji/shengji/matang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3771397a-294d-5d4a-af64-0607353ebfec",
       "key": "earth/cn-gz/bijie/shengji/shengji/ganchailing",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "e424caba-13ba-51c7-a52b-65e60aca3281",
       "key": "earth/cn-gz/bijie/shengji/shengji/wotang",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "a37650b8-b292-5ebe-b137-956384b50ec3",
       "key": "earth/cn-gz/bijie/shengji/shengji/gangou",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "70cf09c2-f63c-53ae-9a26-f848d21525e1",
       "key": "earth/cn-gz/bijie/shengji/shengji/xiaguanzhai",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "cca00a12-6369-5ece-bc46-f3efe5a6503f",
       "key": "earth/cn-gz/bijie/shengji/shengji/shengjidianzhan",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "fa970026-b872-5792-98ae-b4f759723e55",
       "key": "earth/cn-gz/bijie/shengji/shengji/laoyingpo",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "949d553d-d648-5281-9ee5-d9986b929797",
       "key": "earth/cn-gz/bijie/shengji/xiadazhai-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "5d7e4395-0719-59de-94c9-67a0b8dcf566",
       "key": "earth/cn-gz/bijie/shengji/xiadazhai/yemaoding",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0fa22888-684f-5390-ad87-f6b063445e04",
       "key": "earth/cn-gz/bijie/shengji/xiadazhai/shangdazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bf20a8d5-c5cd-5968-b856-c23ad1b1d362",
       "key": "earth/cn-gz/bijie/shengji/xiadazhai/xiadazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4097c110-600e-5531-b8ae-31cc70993be8",
       "key": "earth/cn-gz/bijie/shengji/xiadazhai/yakoushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "53b7473a-5986-5b42-bd48-8fd9f0120bb3",
       "key": "earth/cn-gz/bijie/shengji/xiadazhai/yanshang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7f1315b5-ba0d-57fb-ba2f-e5af298ad48f",
       "key": "earth/cn-gz/bijie/shengji/xiadazhai/tiangougou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2c678919-389b-5890-9ea9-20b1fcc5c512",
       "key": "earth/cn-gz/bijie/shengji/xiadazhai/yanjiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ea9ed0d2-ed45-5e62-91ce-765e29a92f34",
       "key": "earth/cn-gz/bijie/shengji/xiadazhai/tianba",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "21436555-234d-5d89-a2a9-720791f60327",
       "key": "earth/cn-gz/bijie/shengji/zhenjiang-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "f810d990-e155-5d57-a8d8-dc87d32e06ab",
       "key": "earth/cn-gz/bijie/shengji/zhenjiang/banpo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f4a5fdce-8f19-52a8-8c19-c50654b06c58",
       "key": "earth/cn-gz/bijie/shengji/zhenjiang/hujiawan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "cb29e224-e315-5090-849e-a8a1e05e9233",
       "key": "earth/cn-gz/bijie/shengji/zhenjiang/xujiagou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "92a51c67-011a-52c5-9921-52ce953893b9",
       "key": "earth/cn-gz/bijie/shengji/zhenjiang/luhuatang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d5d08ded-7106-559b-9b07-67b839abee90",
       "key": "earth/cn-gz/bijie/shengji/zhenjiang/hantangwa",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e306da4f-c7c7-532d-a00a-103f5b6cc88d",
       "key": "earth/cn-gz/bijie/shengji/zhenjiang/yanjiaoxia",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [

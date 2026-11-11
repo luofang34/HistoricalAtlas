@@ -42,14 +42,14 @@ fn hud_buttons_own_their_clicks_and_zoom_about_the_view_centre() {
     let mut map = Recorder::default();
     let mut controls = MapControls::default();
     let button = zoom_in_button();
-    let press = Pointer {
+    let press = ViewportPointer {
         pixel: Some(button),
         pressed: true,
         released: false,
         hovered: true,
     };
     assert!(controls.pointer(&map, press));
-    let release = Pointer {
+    let release = ViewportPointer {
         pressed: false,
         released: true,
         ..press
@@ -62,7 +62,6 @@ fn hud_buttons_own_their_clicks_and_zoom_about_the_view_centre() {
     };
     assert_eq!(*pixel, egui::vec2(300.0, 200.0));
     assert!(*delta > 0.0);
-    // Nothing pending: the controls settle and stop asking for frames.
     assert!(!controls.advance(&mut map));
 }
 
@@ -70,21 +69,21 @@ fn hud_buttons_own_their_clicks_and_zoom_about_the_view_centre() {
 fn map_pixels_away_from_the_hud_stay_with_map_gestures() {
     let map = Recorder::default();
     let mut controls = MapControls::default();
-    let press = Pointer {
+    let press = ViewportPointer {
         pixel: Some(egui::vec2(100.0, 300.0)),
         pressed: true,
         released: false,
         hovered: true,
     };
     assert!(!controls.pointer(&map, press));
-    assert!(!controls.pointer(&map, Pointer::default()));
+    assert!(!controls.pointer(&map, ViewportPointer::default()));
 }
 
 #[test]
 fn a_click_pressed_and_released_within_one_frame_still_activates_the_button() {
     let mut map = Recorder::default();
     let mut controls = MapControls::default();
-    let click = Pointer {
+    let click = ViewportPointer {
         pixel: Some(zoom_in_button()),
         pressed: true,
         released: true,
@@ -93,10 +92,9 @@ fn a_click_pressed_and_released_within_one_frame_still_activates_the_button() {
     assert!(controls.pointer(&map, click));
     controls.advance(&mut map);
     assert_eq!(map.zooms.len(), 1);
-    // The button is released, so later pointer motion over the map is not captured.
-    let elsewhere = Pointer {
+    let elsewhere = ViewportPointer {
         pixel: Some(egui::vec2(100.0, 300.0)),
-        ..Pointer::default()
+        ..ViewportPointer::default()
     };
     assert!(!controls.pointer(&map, elsewhere));
 }

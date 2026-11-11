@@ -26,6 +26,7 @@ pub(super) fn publish(
     output: &mut Artifacts,
     base: &str,
     maxzoom: u8,
+    shard_paths: &BTreeMap<EntityId, String>,
 ) -> Result<(), TileError> {
     let mut features = crate::export::geometry::features(output, &input.data)?;
     for estimate in &input.data.estimates {
@@ -63,7 +64,7 @@ pub(super) fn publish(
         bodies
             .entry(body)
             .or_default()
-            .push(prepare(feature, base)?);
+            .push(prepare(feature, base, shard_paths)?);
     }
     let mut inventory = Vec::new();
     for (body, features) in bodies {
@@ -91,7 +92,11 @@ pub(super) fn publish(
     Ok(())
 }
 
-fn prepare(feature: Value, base: &str) -> Result<Feature, TileError> {
+fn prepare(
+    feature: Value,
+    base: &str,
+    shard_paths: &BTreeMap<EntityId, String>,
+) -> Result<Feature, TileError> {
     let fact: FactId = serde_json::from_value(
         feature
             .pointer("/properties/record_id")
@@ -115,12 +120,10 @@ fn prepare(feature: Value, base: &str) -> Result<Feature, TileError> {
         .and_then(Value::as_object)
         .cloned()
         .ok_or(TileError::Geometry("missing properties"))?;
-    properties.insert(
-        "evidence_url".into(),
-        json!(format!("{base}entities/index/{}.json", id.shard())),
-    );
+    let shard_path = shard_paths.get(&id).map_or("manifest.json", String::as_str);
+    properties.insert("evidence_url".into(), json!(format!("{base}{shard_path}")));
     let span = properties.get("validity").cloned().unwrap_or_default();
-    // Exact TT milliseconds stay decimal strings, including deep-time values beyond i64.
+    // Exact TT milliseconds stay decimal strings; Julian years provide GPU numeric filters.
     for (key, end, estimate) in [
         ("valid_from", "start", "nominal"),
         ("valid_to", "end", "nominal"),
@@ -131,6 +134,10 @@ fn prepare(feature: Value, base: &str) -> Result<Feature, TileError> {
     ] {
         if let Some(value) = span.get(end).and_then(|v| v.get(estimate)) {
             properties.insert(key.into(), value.clone());
+            if let Some(ticks) = value.as_str().and_then(|s| s.parse::<i128>().ok()) {
+                let julian_year = 2000.0 + ticks as f64 / atlas_core::time::JULIAN_YEAR_MS as f64;
+                properties.insert(format!("{key}_year"), json!(julian_year));
+            }
         }
     }
     Ok(Feature {

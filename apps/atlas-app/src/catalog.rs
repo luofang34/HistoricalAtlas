@@ -2,18 +2,22 @@
 
 use std::collections::{BTreeMap, BTreeSet};
 
-use atlas_core::identity::EntityId;
-use atlas_geo::body::BodyId;
+use atlas_boundary::publication::{CatalogItem, ShardSummary};
+use atlas_core::{assertion::AdministrativeRank, identity::EntityId};
+use atlas_geo::{body::BodyId, plates::RotationModel};
 use atlas_ledger::model::{Dataset, Dispute, Entity, Estimate, Record, Source, SourceCatalog};
 use atlas_ledger::publication::{Aliases, Published, verify_publication};
 use serde::Deserialize;
 
 use crate::error::AppError;
+
+mod bootstrap;
 mod geometry;
+
+pub use bootstrap::{AttachedShard, Bootstrap};
 
 /// A single entity's published evidence.
 #[derive(Debug, Deserialize)]
-#[serde(deny_unknown_fields)]
 pub struct Entry {
     /// External geometry parts loaded independently of the evidence index.
     #[serde(default)]
@@ -40,9 +44,8 @@ pub struct Entry {
     pub disputes: Vec<Dispute>,
 }
 
-/// The publication documents assembled by a filesystem or browser loader.
+/// The publication documents assembled by an in-memory loader.
 #[derive(Debug, Deserialize)]
-#[serde(deny_unknown_fields)]
 pub struct Publication {
     /// Bibliography accompanying the entity indexes.
     pub sources: Vec<Source>,
@@ -64,8 +67,12 @@ pub struct Atlas {
     pub data: Dataset,
     /// Plate models that place assigned coordinates in deep time.
     pub plate_models: BTreeMap<String, atlas_ledger::plates::PlateModelDocument>,
+    rotation_models: BTreeMap<String, RotationModel>,
     entries: BTreeMap<EntityId, Entry>,
     aliases: BTreeMap<EntityId, EntityId>,
+    catalog: BTreeMap<EntityId, CatalogItem>,
+    shard_summaries: BTreeMap<String, ShardSummary>,
+    loaded_shards: BTreeSet<String>,
 }
 
 impl Atlas {
@@ -76,27 +83,7 @@ impl Atlas {
         };
         let mut data = Dataset::default();
         for (id, entry) in &publication.entries {
-            if *id != entry.entity.id {
-                return Err(AppError::EntryIdentity {
-                    key: *id,
-                    entity: entry.entity.id,
-                });
-            }
-            if entry.records.iter().any(|record| record.entity_id != *id)
-                || entry
-                    .estimates
-                    .iter()
-                    .any(|estimate| estimate.entity_id != *id)
-                || entry
-                    .disputes
-                    .iter()
-                    .any(|dispute| dispute.entity_id != *id)
-            {
-                return Err(AppError::EvidenceIdentity(*id));
-            }
-            if entry.records.iter().any(|record| !record.checked) {
-                return Err(AppError::Unchecked(*id));
-            }
+            bootstrap::validate_entry_ownership(*id, entry)?;
             data.entities.push(entry.entity.clone());
             data.records.extend(entry.records.clone());
             data.estimates.extend(entry.estimates.clone());
@@ -107,31 +94,63 @@ impl Atlas {
             entry.validate_geometry(&sources, &data)?;
         }
         verify_publication(&data, &publication.aliases, &Published::default())?;
-        let aliases = publication
-            .aliases
-            .0
-            .keys()
-            .map(|id| publication.aliases.resolve(*id).map(|target| (*id, target)))
-            .collect::<Result<_, _>>()?;
-        for (id, document) in &publication.plate_models {
-            if *id != document.id {
-                return Err(AppError::PlateModel(id.clone()));
-            }
-            atlas_geo::plates::RotationModel::from_sequences(document.sequences.clone())
-                .map_err(|_| AppError::PlateModel(id.clone()))?;
-        }
+        let aliases = bootstrap::resolve_aliases(&publication.aliases)?;
+        let rotation_models = bootstrap::build_rotation_models(&publication.plate_models)?;
         Ok(Self {
             sources,
             data,
             plate_models: publication.plate_models,
+            rotation_models,
             entries: publication.entries,
             aliases,
+            catalog: BTreeMap::new(),
+            shard_summaries: BTreeMap::new(),
+            loaded_shards: BTreeSet::new(),
         })
+    }
+
+    /// Pre-validated plate kinematic models cached at startup.
+    pub fn rotation_models(&self) -> &BTreeMap<String, RotationModel> {
+        &self.rotation_models
     }
 
     /// Find an entity and its evidence by permanent identity.
     pub fn entry(&self, id: EntityId) -> Option<&Entry> {
         self.entries.get(&self.resolve(id)?)
+    }
+
+    /// Planetary body of a known entity, available even before leaf shards stream in.
+    pub fn entity_body(&self, id: EntityId) -> Option<BodyId> {
+        let id = self.resolve(id)?;
+        self.entries
+            .get(&id)
+            .map(|entry| entry.entity.body)
+            .or_else(|| self.catalog.get(&id).map(|item| item.body))
+    }
+
+    /// Canonical semantic key of a known entity, available before leaf shards stream in.
+    pub fn entity_key(&self, id: EntityId) -> Option<&str> {
+        let id = self.resolve(id)?;
+        self.entries
+            .get(&id)
+            .map(|entry| entry.entity.key.as_str())
+            .or_else(|| self.catalog.get(&id).map(|item| item.key.as_str()))
+    }
+
+    /// Whether reviewed observations or dated hierarchy assign `rank` to `id`.
+    pub fn has_rank(&self, id: EntityId, rank: AdministrativeRank) -> bool {
+        let Some(id) = self.resolve(id) else {
+            return false;
+        };
+        if let Some(item) = self.catalog.get(&id) {
+            return item.ranks.contains(&rank);
+        }
+        self.entries.get(&id).is_some_and(|entry| {
+            entry
+                .records
+                .iter()
+                .any(|record| record.observation.rank == Some(rank))
+        })
     }
 
     /// Source drawings containing a selected boundary or place.
@@ -155,27 +174,29 @@ impl Atlas {
 
     /// Resolve a permanent identity or published redirect to a current entity.
     pub fn resolve(&self, id: EntityId) -> Option<EntityId> {
-        self.entries
-            .contains_key(&id)
+        (self.entries.contains_key(&id) || self.catalog.contains_key(&id))
             .then_some(id)
             .or_else(|| self.aliases.get(&id).copied())
     }
 
     /// Display the first published name for source browsing.
     pub fn label(&self, id: EntityId) -> String {
-        self.entry(id).map_or_else(
-            || id.0.to_string(),
-            |entry| {
-                entry
-                    .records
-                    .iter()
-                    .find(|record| !record.observation.name.is_empty())
-                    .map_or_else(
-                        || entry.entity.key.clone(),
-                        |record| record.observation.name.clone(),
-                    )
-            },
-        )
+        let Some(resolved) = self.resolve(id) else {
+            return id.0.to_string();
+        };
+        if let Some(entry) = self.entries.get(&resolved) {
+            return entry
+                .records
+                .iter()
+                .find(|record| !record.observation.name.is_empty())
+                .map_or_else(
+                    || entry.entity.key.clone(),
+                    |record| record.observation.name.clone(),
+                );
+        }
+        self.catalog
+            .get(&resolved)
+            .map_or_else(|| resolved.0.to_string(), |item| item.label.clone())
     }
 
     /// Search standard, pinyin, former names, semantic keys, and UUIDs on one body.
@@ -185,6 +206,25 @@ impl Atlas {
             .aliases
             .iter()
             .find_map(|(id, target)| (id.0.to_string() == query).then_some(*target));
+        if !self.catalog.is_empty() {
+            return self
+                .catalog
+                .iter()
+                .filter(|(id, item)| {
+                    item.body == body
+                        && (query.is_empty()
+                            || alias == Some(**id)
+                            || id.0.to_string().contains(&query)
+                            || item.key.to_lowercase().contains(&query)
+                            || item.label.to_lowercase().contains(&query)
+                            || item
+                                .terms
+                                .iter()
+                                .any(|term| term.to_lowercase().contains(&query)))
+                })
+                .map(|(id, _)| *id)
+                .collect();
+        }
         self.entries
             .iter()
             .filter(|(id, entry)| {
@@ -213,15 +253,33 @@ impl Atlas {
 
     /// Source-reported parents, retaining different undated claims.
     pub fn parents(&self, id: EntityId) -> BTreeSet<EntityId> {
-        self.entry(id)
+        let Some(resolved) = self.resolve(id) else {
+            return BTreeSet::new();
+        };
+        if let Some(entry) = self.entries.get(&resolved) {
+            return entry
+                .records
+                .iter()
+                .filter_map(|record| record.observation.parent_id)
+                .collect();
+        }
+        self.catalog
+            .get(&resolved)
             .into_iter()
-            .flat_map(|entry| &entry.records)
-            .filter_map(|record| record.observation.parent_id)
+            .flat_map(|item| item.parents.iter().copied())
             .collect()
     }
 
     /// Entities that a reviewed source places below this parent.
     pub fn children(&self, parent: EntityId) -> Vec<EntityId> {
+        if !self.catalog.is_empty() {
+            return self
+                .catalog
+                .iter()
+                .filter(|(_, item)| item.parents.contains(&parent))
+                .map(|(id, _)| *id)
+                .collect();
+        }
         self.entries
             .iter()
             .filter(|(_, entry)| {

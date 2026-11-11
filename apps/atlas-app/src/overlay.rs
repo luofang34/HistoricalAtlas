@@ -111,11 +111,7 @@ impl ChronicleEvent {
         self.entities
             .iter()
             .filter_map(|id| atlas.resolve(*id))
-            .filter(|id| {
-                atlas
-                    .entry(*id)
-                    .is_some_and(|entry| entry.entity.body == body)
-            })
+            .filter(|id| atlas.entity_body(*id) == Some(body))
             .collect()
     }
 

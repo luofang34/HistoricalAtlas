@@ -4,169 +4,225 @@
       "id": "a4745b9e-4474-54f2-a258-5b41a742b488",
       "key": "earth/cn-gz/bijie/yihe/heba-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "8120e4aa-8131-5446-9a99-ef20acd5027b",
       "key": "earth/cn-gz/bijie/yihe/yihe",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a665e292-5dd7-562c-b268-ab43f46ccc7c",
       "key": "earth/cn-gz/bijie/yihe/laoyingyan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "553ed4f4-937f-555c-9c63-54cca1bae387",
       "key": "earth/cn-gz/bijie/yihe/wujiayuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0c84a54e-3dcc-527e-98af-71c0fdb28848",
       "key": "earth/cn-gz/bijie/yihe/wumaquan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a4a79e4d-bc9f-5ad5-b33c-6211794ee29a",
       "key": "earth/cn-gz/bijie/yihe/bashi-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "9cce992c-1787-5ac1-bd31-009e5293e6ab",
       "key": "earth/cn-gz/bijie/yihe/bashi-mu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7862562e-c0d6-5d87-829b-54ecd2a8aa95",
       "key": "earth/cn-gz/bijie/yihe/wangjiayuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c2c0b4e5-62bf-54eb-9be3-9b859eb84bee",
       "key": "earth/cn-gz/bijie/yihe/yejigou-wan",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "b0e0ba3e-31be-5c03-99fc-bbc5f278b154",
       "key": "earth/cn-gz/bijie/yihe/tudiya",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "c083e94a-506d-50e0-ac30-8f24d02b5226",
       "key": "earth/cn-gz/bijie/yihe/datian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "79849011-23a4-5a7d-b5f3-953e64ca9bf2",
       "key": "earth/cn-gz/bijie/yihe/shizikou",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "1bd7fbd3-72a4-5d1b-bd50-b5b7736c50d5",
       "key": "earth/cn-gz/bijie/yihe/xiaozhai-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "c13b813e-8bc6-5d3c-b9c2-88537e05b7c3",
       "key": "earth/cn-gz/bijie/yihe/xiaozhai-gou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "363793d5-77bc-5973-89a1-4e52cf047e7d",
       "key": "earth/cn-gz/bijie/yihe/guankouyingjiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3d928b41-ed9d-5fd7-b44e-dd239571cee1",
       "key": "earth/cn-gz/bijie/yihe/mahuanggou-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "4efca4ac-e2c5-578d-b6ec-b92c8915a50f",
       "key": "earth/cn-gz/bijie/yihe/luojiapo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1e7178be-c305-5e36-b396-c98cd7fe6d00",
       "key": "earth/cn-gz/bijie/yihe/mahuanggou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b05b3e81-3967-57e0-8e1c-5e1ee8e3e4d8",
       "key": "earth/cn-gz/bijie/yihe/xiejiayuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "32a1fc22-0079-51a3-ac00-a8814141d720",
       "key": "earth/cn-gz/bijie/yihe/mohe-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "9d4ca5e8-4f85-5f43-bd10-9e979b47c68e",
       "key": "earth/cn-gz/bijie/yihe/wukoutang",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "514ea60b-4a1b-58a9-88d8-9253a9351460",
       "key": "earth/cn-gz/bijie/yihe/tashan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "e918ff22-ae17-5118-8944-16f5ad5729c2",
       "key": "earth/cn-gz/bijie/yihe/bailongdi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "a2192913-0775-56d8-8da7-163f895d743b",
       "key": "earth/cn-gz/bijie/yihe/banbian-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "0b06f01c-c4e4-5a9a-87b9-516e8763577a",
       "key": "earth/cn-gz/bijie/yihe/yeji-he",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "8cf53f60-3ed0-57ac-b235-b649e0c7ffe3",
       "key": "earth/cn-gz/bijie/yihe/wenfeng-ge",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "4b47788b-457b-5d20-b1dd-084bbbe8eda2",
       "key": "earth/cn-gz/bijie/yihe/yihe-miao",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "7a8371ec-bf84-53e7-a327-cab4c6e34711",
       "key": "earth/cn-gz/bijie/yihe/guankouying",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

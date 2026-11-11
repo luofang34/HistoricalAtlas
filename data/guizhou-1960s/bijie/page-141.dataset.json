@@ -4,37 +4,49 @@
       "id": "1556b7cb-c99c-579f-8fa1-cd4a4e57eaa5",
       "key": "earth/cn-gz/bijie/shanzhai/xiongjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "610a63a3-40c0-5bdb-8a41-62624a44279a",
       "key": "earth/cn-gz/bijie/shanzhai/gaojiancao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8f8d8873-d9bd-5727-bf1d-84fdcb518388",
       "key": "earth/cn-gz/bijie/shanzhai/shiyakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3a25085f-e072-5dab-818d-b8ae170df06f",
       "key": "earth/cn-gz/bijie/shanzhai/yakoushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c69a3579-0e67-5a05-a191-6c44b2c2efe5",
       "key": "earth/cn-gz/bijie/shanzhai/dawanzi",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "3713fb81-1ad0-5180-a9e4-3fdcb547148c",
       "key": "earth/cn-gz/bijie/shanzhai/beishuiyan-cave",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     }
   ],
   "records": [

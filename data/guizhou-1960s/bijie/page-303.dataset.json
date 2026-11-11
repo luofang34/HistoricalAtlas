@@ -4,31 +4,41 @@
       "id": "e97e739c-a1bb-57c3-87e6-3c99f2a66d4a",
       "key": "earth/cn-gz/bijie/qingshuipu/yingpan-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "87d9c2fb-c4c8-5347-9da9-003065f630df",
       "key": "earth/cn-gz/bijie/qingshuipu/laohuwo-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "df86cc2c-e78b-546a-a5bb-a2f3c97ef5c0",
       "key": "earth/cn-gz/bijie/qingshuipu/yinchangyan-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "b2422098-56af-5b7e-9d05-f72e1f0ec126",
       "key": "earth/cn-gz/bijie/qingshuipu/dushantang-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "5f3b36ba-30a1-5969-b956-972b7b67fcf8",
       "key": "earth/cn-gz/bijie/qingshuipu/xinwenge-site",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

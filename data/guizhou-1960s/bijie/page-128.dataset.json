@@ -4,91 +4,121 @@
       "id": "fa38c85f-86c2-55d5-bbb1-b5b81e05c897",
       "key": "earth/cn-gz/bijie/heguantun/xiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ee321315-898f-56ee-9bf4-5bdd86753de8",
       "key": "earth/cn-gz/bijie/heguantun/shenggenshi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2104b4db-3c6d-5f03-9174-7c061be978fe",
       "key": "earth/cn-gz/bijie/heguantun/shanjiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "90590319-b2a0-5a68-a2ed-706d631761f7",
       "key": "earth/cn-gz/bijie/heguantun/shisun",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5a483f99-44ea-5f76-b3cf-f81192be1c51",
       "key": "earth/cn-gz/bijie/heguantun/xinzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "afb5970f-7ca9-5d37-bc36-50232879a103",
       "key": "earth/cn-gz/bijie/heguantun/bakou-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "ac9a6898-a410-55e0-8dde-7da8dd140e79",
       "key": "earth/cn-gz/bijie/heguantun/bakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "afce5ef2-e591-589a-abe1-235044f5b40c",
       "key": "earth/cn-gz/bijie/heguantun/hemachong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "60d015c2-b0a7-5b65-b1d2-29529ff25eab",
       "key": "earth/cn-gz/bijie/heguantun/yizigou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "72935167-c698-5d66-80d5-051a59ac1bb4",
       "key": "earth/cn-gz/bijie/heguantun/tudiyakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c8f4bd58-e6bf-5521-9136-5ed9f29d4fec",
       "key": "earth/cn-gz/bijie/heguantun/yanfenggou",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "2b033fca-0826-59d7-935c-1aa03c54d1ad",
       "key": "earth/cn-gz/bijie/heguantun/niezhaishan-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "a0924bac-7424-50f2-bb9c-df366cbd248f",
       "key": "earth/cn-gz/bijie/heguantun/dapingzi-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "9581536f-cd85-5b49-aa79-1313a66fb2e2",
       "key": "earth/cn-gz/bijie/heguantun/guantun-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "3053cf07-8a81-589e-9dc4-6acc185149fe",
       "key": "earth/cn-gz/bijie/heguantun/shisun-rock",
       "body": "earth",
-      "kind": "geological_site"
+      "kind": {
+        "geology": "site"
+      }
     }
   ],
   "records": [

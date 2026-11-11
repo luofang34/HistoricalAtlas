@@ -77,10 +77,10 @@ fn ordinary_build_registers_sheet_boundaries_with_the_same_place_controls_and_da
         EstimateValue::MapLocation {record_id: id, ..} if id == record_id)
         })
         .unwrap();
-    let path = format!("entities/index/{}.json", estimate.entity_id.shard());
-    let shard: serde_json::Value = serde_json::from_slice(&output[Path::new(&path)]).unwrap();
-    let geometry =
-        export::resolve_geometry(&output, &shard[estimate.entity_id.0.to_string()]).unwrap();
+    let entry = export::lookup_entity(&output, estimate.entity_id)
+        .unwrap()
+        .unwrap();
+    let geometry = export::resolve_geometry(&output, &entry).unwrap();
     let boundaries = geometry["boundaries"].as_array().unwrap();
     assert_eq!(boundaries.len(), 1);
     let boundary: GeographicBoundary = serde_json::from_value(boundaries[0].clone()).unwrap();
@@ -147,10 +147,10 @@ fn explicit_boundary_registration_replaces_the_automatic_fit_for_its_record() {
         .iter()
         .find(|r| r.id == explicit.unit.record_id)
         .unwrap();
-    let path = format!("entities/index/{}.json", record.entity_id.shard());
-    let shard: serde_json::Value = serde_json::from_slice(&output[Path::new(&path)]).unwrap();
-    let geometry =
-        export::resolve_geometry(&output, &shard[record.entity_id.0.to_string()]).unwrap();
+    let entry = export::lookup_entity(&output, record.entity_id)
+        .unwrap()
+        .unwrap();
+    let geometry = export::resolve_geometry(&output, &entry).unwrap();
     let published = geometry["boundaries"].as_array().unwrap();
     assert_eq!(published.len(), 1);
     let published: GeographicBoundary = serde_json::from_value(published[0].clone()).unwrap();
@@ -174,9 +174,8 @@ fn county_outline_publishes_closed_geometry_containing_its_mapped_places() {
     input.derivations.clear();
     let output = export::compile(&input).unwrap();
     let id = EntityId::from_key("earth/cn-gz/bijie/bijie-county").unwrap();
-    let path = format!("entities/index/{}.json", id.shard());
-    let shard: serde_json::Value = serde_json::from_slice(&output[Path::new(&path)]).unwrap();
-    let geometry = export::resolve_geometry(&output, &shard[id.0.to_string()]).unwrap();
+    let entry = export::lookup_entity(&output, id).unwrap().unwrap();
+    let geometry = export::resolve_geometry(&output, &entry).unwrap();
     let boundary: GeographicBoundary =
         serde_json::from_value(geometry["boundaries"][0].clone()).unwrap();
     let feature = boundary.feature(&input.data, None).unwrap();
@@ -229,4 +228,33 @@ fn contains(ring: &[PlanarPoint], point: PlanarPoint) -> bool {
         .count()
         % 2
         == 1
+}
+
+#[test]
+fn shared_sheet_vertices_are_compacted_independently_per_unit() {
+    use atlas_core::identity::FactId;
+    let vertices = [
+        (0.0, 0.0),
+        (1.0, 0.0),
+        (1.0, 1.0),
+        (0.0, 1.0),
+        (10.0, 10.0),
+        (11.0, 10.0),
+        (11.0, 11.0),
+        (10.0, 11.0),
+    ]
+    .map(|(x, y)| PlanarPoint { x, y });
+    let unit = TracedUnit {
+        record_id: FactId::from_key("sheet/second").unwrap(),
+        polygons: vec![IndexedPolygon {
+            exterior: vec![4, 5, 6, 7, 4],
+            interiors: Vec::new(),
+        }],
+        validity: None,
+        validity_basis: Vec::new(),
+    };
+    let (compact, remapped) = compact_unit(&vertices, &unit).unwrap();
+    assert_eq!(compact.len(), 4);
+    assert_eq!(remapped.polygons[0].exterior, vec![0, 1, 2, 3, 0]);
+    assert_eq!(compact[0].x, 10.0);
 }

@@ -4,55 +4,73 @@
       "id": "68f5077e-5bd3-5866-b278-4015e78cfa5e",
       "key": "earth/cn-gz/bijie/tianbaqiao/guanmenshan",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "2d3d5cd7-ea89-55ff-ac8c-628be3ad76bf",
       "key": "earth/cn-gz/bijie/tianbaqiao/jiaodingshan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "1efc777e-a528-54b4-b879-3f3a35e42f4e",
       "key": "earth/cn-gz/bijie/tianbaqiao/shizi-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "e1665241-b3d0-537d-b808-0fa706d7d657",
       "key": "earth/cn-gz/bijie/tianbaqiao/shuiniu-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "628c0e70-396f-58b3-a069-d11344b07752",
       "key": "earth/cn-gz/bijie/tianbaqiao/dahei-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "d0a3c885-73fc-52c6-bb3b-7e62e86dfd35",
       "key": "earth/cn-gz/bijie/tianbaqiao/shaofeng-cave",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     },
     {
       "id": "5ed927f6-7918-56e4-8f4c-be0b5964caef",
       "key": "earth/cn-gz/bijie/tianbaqiao/meijiaying-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "238b1fbd-8860-56c2-8103-09572d1aec5f",
       "key": "earth/cn-gz/bijie/tianbaqiao/longwang-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "67cbd386-50dd-54a6-9ede-3b8f4c37b2ba",
       "key": "earth/cn-gz/bijie/tianbaqiao/da-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

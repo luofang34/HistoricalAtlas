@@ -4,67 +4,89 @@
       "id": "36d39ee4-7fe1-586d-b2c8-93d8a1cd6d94",
       "key": "earth/cn-gz/bijie/qingchang-district/qingchang-he",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "4b79e7b3-1870-535e-b273-45073ad55527",
       "key": "earth/cn-gz/bijie/qingchang-district/saobalin-haizi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "50d02671-a206-54a0-9e0c-e317896c22da",
       "key": "earth/cn-gz/bijie/qingsong/power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "861bb10d-75c1-5d0d-b11b-6163ac9d908e",
       "key": "earth/cn-gz/bijie/qingchang/qingba-power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "96d3c963-602d-56c2-8ceb-7fa58db54fda",
       "key": "earth/cn-gz/bijie/qingchang-district/niubizi-dong-power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "2477a375-d2b3-5e8f-aa66-76748ad19559",
       "key": "earth/cn-gz/bijie/qingchang-district/baojiatun-power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "5a01cd67-b053-5560-ad3a-92aec966ca9a",
       "key": "earth/cn-gz/bijie/qingchang-district/xindi-power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "d68d1481-2064-5563-add9-5b662ef1c04a",
       "key": "earth/cn-gz/bijie/qingchang-district/chaer-yan-power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "f0b5e492-7d62-5651-beae-6bdceca9330f",
       "key": "earth/cn-gz/bijie/qingchang-district/chahe-power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "9a95ff85-c12e-5ffb-9396-93f20e71dc5e",
       "key": "earth/cn-gz/bijie/qingchang/maoping-forest",
       "body": "earth",
-      "kind": "forest"
+      "kind": {
+        "ecology": "forest"
+      }
     },
     {
       "id": "c5b54ecc-5c95-5453-a785-ffe391af5502",
       "key": "earth/cn-gz/bijie/qingsong/zhugongqing-battlefield",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

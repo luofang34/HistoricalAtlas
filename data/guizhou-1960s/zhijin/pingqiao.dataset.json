@@ -4,223 +4,297 @@
       "id": "16e873fd-5c12-5789-9567-e91d5dc9e882",
       "key": "earth/cn-gz/zhijin/pingqiao-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "c48c9d80-9758-5689-a002-f85e85511245",
       "key": "earth/cn-gz/zhijin/pingqiao/pingqiao-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "9efa8f9e-e5ab-5bde-b1b1-1ec9b0db53c5",
       "key": "earth/cn-gz/zhijin/pingqiao/laowu-ji",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "23a50fd5-2305-59b7-acbd-a6cfb4c6039e",
       "key": "earth/cn-gz/zhijin/pingqiao/huamu-wei",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9637d564-77cc-5062-89e1-d9fcc7a5c9fd",
       "key": "earth/cn-gz/zhijin/pingqiao/hewan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "26ca3ff3-5f23-52bb-9be4-99b18e36461f",
       "key": "earth/cn-gz/zhijin/pingqiao/kengkeng-tian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "16b01e17-0c44-5658-b517-2e6e84aea5b0",
       "key": "earth/cn-gz/zhijin/pingqiao/luokeng-tian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6bff572b-2be7-56eb-a375-d4725d7ff1b5",
       "key": "earth/cn-gz/zhijin/pingqiao/chaye-chang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8fd25054-dee7-5cb7-b2c2-86e3feec447c",
       "key": "earth/cn-gz/zhijin/pingqiao/chenjia-zhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "96f7c116-2ea3-566f-b9ac-1d4ef3ac71f2",
       "key": "earth/cn-gz/zhijin/pingqiao/zhongba-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "3a348037-cb70-5ce7-9852-2bd4dd0548df",
       "key": "earth/cn-gz/zhijin/pingqiao/ganba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "03f51f99-24ca-5c6e-838d-c73db1c09ddf",
       "key": "earth/cn-gz/zhijin/pingqiao/baima-dong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a90301e9-9de3-56ce-8211-8b5ea6fb5eab",
       "key": "earth/cn-gz/zhijin/pingqiao/gao-zhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3a9a78d5-9b86-52ce-9fb2-54ebb28c72fd",
       "key": "earth/cn-gz/zhijin/pingqiao/yangjia-wan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6b99d65c-96a1-5c5e-bc3f-1daa1bc2c47f",
       "key": "earth/cn-gz/zhijin/pingqiao/jiudao-wan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1425d9d3-cb1f-5196-962b-d933e1fc2d1b",
       "key": "earth/cn-gz/zhijin/pingqiao/miaofen-po",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ceba911a-00fe-5810-9a5a-216535af9a71",
       "key": "earth/cn-gz/zhijin/pingqiao/toutang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8e1c39d5-30ed-5e06-b220-1c66f0444e16",
       "key": "earth/cn-gz/zhijin/pingqiao/dashu-jiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0d0797c7-293d-5ed5-9fe6-f4e4824b18a4",
       "key": "earth/cn-gz/zhijin/pingqiao/hou-chong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0db02f02-3df1-56c2-9696-c1c533bbd31f",
       "key": "earth/cn-gz/zhijin/pingqiao/miao-zhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "62e3dd39-7659-59d4-953d-5931319826f3",
       "key": "earth/cn-gz/zhijin/pingqiao/yangliu-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "55271efb-b044-5738-8520-05236a000137",
       "key": "earth/cn-gz/zhijin/pingqiao/yangliu-he",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "85cb345d-1797-50d9-a880-cabbdf6ca62d",
       "key": "earth/cn-gz/zhijin/pingqiao/pianpo-zhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8bb291de-d447-5895-a988-5e79aa9e257f",
       "key": "earth/cn-gz/zhijin/pingqiao/renren-shan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0ce425e3-0522-50b1-af12-f0c707b34493",
       "key": "earth/cn-gz/zhijin/pingqiao/heipo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "982494a7-837e-5446-aa76-abe5fbeb1fd7",
       "key": "earth/cn-gz/zhijin/pingqiao/tudi-ya",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7226cd4d-d225-5317-9da1-1441ee17eea8",
       "key": "earth/cn-gz/zhijin/pingqiao/xiaomu-ga",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "875692da-e7a7-52e7-a642-70f0545df8f7",
       "key": "earth/cn-gz/zhijin/pingqiao/yantou-shang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9280e5b2-e7d0-59d8-a3d5-3f720df1b435",
       "key": "earth/cn-gz/zhijin/pingqiao/shiguan-kou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "200e3fef-54ac-561a-9c51-2809bd01c056",
       "key": "earth/cn-gz/zhijin/pingqiao/tianjia-zhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "41aad126-f0bd-519a-864c-21578897c9fa",
       "key": "earth/cn-gz/zhijin/pingqiao/shuiyan-chong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3a084794-0f99-5884-8cef-c735ff05ee1b",
       "key": "earth/cn-gz/zhijin/pingqiao/sanjia-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "34332762-dacc-54ec-8ca5-2c281e616a62",
       "key": "earth/cn-gz/zhijin/pingqiao/dashi-ban",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b4e8d4b5-203c-56c1-8759-6e074952a19d",
       "key": "earth/cn-gz/zhijin/pingqiao/huangshui-gou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "27cc4b56-9501-58c0-bf0a-5e4648444e10",
       "key": "earth/cn-gz/zhijin/pingqiao/yakou-tian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9fd9faa7-6f0a-5d26-a4e0-5ebf94eb1026",
       "key": "earth/cn-gz/zhijin/pingqiao/sanjia-shan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0ba35cdd-9a39-5450-9516-64a1de9d275f",
       "key": "earth/cn-gz/zhijin/pingqiao/sijiao-tian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [

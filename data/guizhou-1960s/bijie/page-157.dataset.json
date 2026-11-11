@@ -4,109 +4,145 @@
       "id": "b827f9e9-fb1d-54a6-9834-5d831f97836a",
       "key": "earth/cn-gz/bijie/guanyinqiao/taishaoba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "94d86815-ba24-5e3c-8726-e1baa19b4fdc",
       "key": "earth/cn-gz/bijie/guanyinqiao/gaijiawan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c68213de-f8cd-5000-9c63-712cc0f33295",
       "key": "earth/cn-gz/bijie/guanyinqiao/tangfang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "50e16349-681e-57c1-b123-a129ea3ad7b2",
       "key": "earth/cn-gz/bijie/guanyinqiao/lijiawan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "65cd4f99-fc6b-5a57-91c5-38d29dc85998",
       "key": "earth/cn-gz/bijie/guanyinqiao/xiongjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c21760ed-3581-5e11-85c5-e311e33d4f74",
       "key": "earth/cn-gz/bijie/guanyinqiao/songjiawan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3e3dc5c8-a961-5261-8561-7aa2cc3ec642",
       "key": "earth/cn-gz/bijie/guanyinqiao/xiaqingkou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a2311b4c-53c7-5aa0-b582-5ae540f06056",
       "key": "earth/cn-gz/bijie/guanyinqiao/hongshuigou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "106a1571-8855-5d59-a3b4-80bacb73c238",
       "key": "earth/cn-gz/bijie/guanyinqiao/qiaobian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bab2b2dd-446a-5cfb-9860-19e8bb116a0d",
       "key": "earth/cn-gz/bijie/guanyinqiao/zhujiawan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a42cc058-c0b1-5d1f-962b-9e72475e2406",
       "key": "earth/cn-gz/bijie/guanyinqiao/shaojiawan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "16bad0c3-0213-58cb-8a85-161f48dbfa13",
       "key": "earth/cn-gz/bijie/guanyinqiao/yanjiawa",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "16da55fb-d36e-5fe8-b071-060ce05f5c67",
       "key": "earth/cn-gz/bijie/guanyinqiao/zhangjiawan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6181f4ae-1b8f-5b83-9923-3640f2cde7f6",
       "key": "earth/cn-gz/bijie/guanyinqiao/guanyinqiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "67b355ed-1cff-51df-b943-f802c1e2a0fd",
       "key": "earth/cn-gz/bijie/guanyinqiao/bijie-lightbulb-factory",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "e9e3587a-b68a-5fa3-a0b7-73633eafa870",
       "key": "earth/cn-gz/bijie/guanyinqiao/power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "30fc08e3-7ae1-5bd0-8fc7-0bd9b75462ef",
       "key": "earth/cn-gz/bijie/guanyinqiao/guanyin-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "0dd00b14-e151-5e92-8ce4-b5c8826c847b",
       "key": "earth/cn-gz/bijie/guanyinqiao/leidashan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

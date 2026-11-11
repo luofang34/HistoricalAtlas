@@ -4,13 +4,17 @@
       "id": "9bc685d5-f2e7-5681-a47b-d968b081caf7",
       "key": "earth/cn-gz/bijie/qingshuipu/huaqing-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "35e7e47c-2780-5363-a2f8-8d2d60d2f004",
       "key": "earth/cn-gz/bijie/qingshuipu/dushan-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     }
   ],
   "records": [

@@ -4,139 +4,185 @@
       "id": "ec85bb07-d062-5573-863c-f02e3c224793",
       "key": "earth/cn-gz/bijie/gaoshanpu/nanguan/chengmanyuan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "fb872579-c82d-5187-a7fa-169914178767",
       "key": "earth/cn-gz/bijie/gaoshanpu/nanguan/heba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f75f0057-63ad-5f73-8634-48ccd907005a",
       "key": "earth/cn-gz/bijie/gaoshanpu/nanguan/nanguan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c7dabf62-faf2-548a-a769-ba8d359704e1",
       "key": "earth/cn-gz/bijie/gaoshanpu/nanguan/dongshanzui",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "269af3fd-8091-5b47-a18c-b132f157ec33",
       "key": "earth/cn-gz/bijie/gaoshanpu/nanguan/jiangdi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "cef7940e-265b-54d9-9ba8-3c59c00872d5",
       "key": "earth/cn-gz/bijie/gaoshanpu/cuijia-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "572291a2-9a5c-511f-8c63-f4b0e4321d06",
       "key": "earth/cn-gz/bijie/gaoshanpu/cuijia/shangdong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b4efc973-bfbd-5068-bfc0-4ccc79e0a239",
       "key": "earth/cn-gz/bijie/gaoshanpu/cuijia/shanlin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0331e9a0-587e-5a2d-a2f4-ac874e984b5b",
       "key": "earth/cn-gz/bijie/gaoshanpu/cuijia/houshangou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4797bfb2-8919-5bd1-96d7-fbfb21774923",
       "key": "earth/cn-gz/bijie/gaoshanpu/cuijia/liushoutun",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "16da21f5-7847-5e5b-9889-d4da0dd0dbd2",
       "key": "earth/cn-gz/bijie/gaoshanpu/cuijia/yakoushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f9fc8506-4e04-5f2d-a166-3c3771ac0f0d",
       "key": "earth/cn-gz/bijie/gaoshanpu/cuijia/laofangzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a0cabe29-32d6-571e-8b6d-79a15a40db94",
       "key": "earth/cn-gz/bijie/gaoshanpu/cuijia/xiaolushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "634a107c-63fb-5813-87f2-3b52c02f3906",
       "key": "earth/cn-gz/bijie/gaoshanpu/cuijia/dalushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9b97c4b7-7228-54bd-9e1c-e299b6284c6f",
       "key": "earth/cn-gz/bijie/gaoshanpu/cuijia/luojiatang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5dfc4c8c-c1f8-5953-9ed1-e8840425e7f5",
       "key": "earth/cn-gz/bijie/gaoshanpu/cuijia/dashichang",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "9dd152ed-76c1-5873-9191-abb61f04e7e1",
       "key": "earth/cn-gz/bijie/gaoshanpu/cuijia/xiaolishu",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "57c8a797-eb1a-5d50-9c67-b7122d669824",
       "key": "earth/cn-gz/bijie/gaoshanpu/shanyanglin-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "c65b613d-b540-5dba-92ef-d59e5a4f7eb4",
       "key": "earth/cn-gz/bijie/gaoshanpu/liangzishang-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "2678f0d9-e83c-5819-ace6-c864e78ad3bd",
       "key": "earth/cn-gz/bijie/gaoshanpu/wangjiashan-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "3e084077-f115-5161-8742-a296f72f9074",
       "key": "earth/cn-gz/bijie/gaoshanpu/jifengbao-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "18607d42-95f2-52a0-89f6-7977bb1b6b09",
       "key": "earth/cn-gz/bijie/gaoshanpu/chafeng-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "8fa60294-422d-5d29-a0b1-038d0a5db229",
       "key": "earth/cn-gz/bijie/gaoshanpu/chishui-river-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     }
   ],
   "records": [

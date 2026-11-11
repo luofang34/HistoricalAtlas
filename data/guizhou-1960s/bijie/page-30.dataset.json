@@ -4,217 +4,289 @@
       "id": "684acf2e-382b-5f1c-a90c-b59acb932dba",
       "key": "earth/cn-gz/bijie/dehou-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "67b32dd1-8da4-544c-836d-4e106e28203e",
       "key": "earth/cn-gz/bijie/dehou/degou-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "b1998e4a-0003-5354-ab9c-e776d5e2cf92",
       "key": "earth/cn-gz/bijie/dehou/degou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e98a9678-7d28-56de-b54f-8c92b3f15d7c",
       "key": "earth/cn-gz/bijie/dehou/piaoer-tang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "84d06d01-23b2-52f8-b132-44a1d8795264",
       "key": "earth/cn-gz/bijie/dehou/niejia-nao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bb1d604d-c52c-5471-b063-94faed2d439b",
       "key": "earth/cn-gz/bijie/dehou/lujia-qiao-village",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "84a69251-e87b-50a1-9674-08a02dbe84e0",
       "key": "earth/cn-gz/bijie/dehou/wujia-chong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8b03e834-a6c9-5e0a-a828-dbb6225f0679",
       "key": "earth/cn-gz/bijie/dehou/lujia-wan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "62e7724a-526a-517f-b620-bca36f3a6557",
       "key": "earth/cn-gz/bijie/dehou/majia-yuan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7c1a5ec5-5a22-5c2b-b05e-2f2ec9ca47f3",
       "key": "earth/cn-gz/bijie/dehou/qiang-yuan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e3708a6e-0133-51f6-8ac0-ede8ac28dd27",
       "key": "earth/cn-gz/bijie/dehou/shijia-wan-degou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "848c01dd-c04f-53cc-be23-7f9538138e6c",
       "key": "earth/cn-gz/bijie/dehou/yangji-chang",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "e7ddddc9-11b2-57b5-99da-6b5678ad8131",
       "key": "earth/cn-gz/bijie/dehou/shashi-po",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "92f10286-10bb-5295-8041-a3e3be202f22",
       "key": "earth/cn-gz/bijie/dehou/party-school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "8b51e5e2-247b-5d21-b7f3-73e06e3d567a",
       "key": "earth/cn-gz/bijie/dehou/agricultural-school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "e2ca517d-f1c4-5738-9de0-1be195b62b90",
       "key": "earth/cn-gz/bijie/dehou/livestock-research",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "e4c41ed4-54a9-5fce-b730-683d39c4415d",
       "key": "earth/cn-gz/bijie/dehou/agricultural-research",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "6e01a298-5a14-577f-8b40-54952715e6e1",
       "key": "earth/cn-gz/bijie/dehou/degou-school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "cbe82d15-b632-53cd-9249-7f99f36465ef",
       "key": "earth/cn-gz/bijie/dehou/xiaqing-kou",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "736b75f0-7c31-53d7-8c17-51dc2a79b88f",
       "key": "earth/cn-gz/bijie/dehou/chalu-kou",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "74de6ff3-9af3-57bc-a256-a0f271a24646",
       "key": "earth/cn-gz/bijie/dehou/crematorium",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "034e657a-1275-5be7-a054-e5c6aa5a6a03",
       "key": "earth/cn-gz/bijie/dehou/houhe-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "bfe41a0e-aadb-5d51-9c49-a67d7321b858",
       "key": "earth/cn-gz/bijie/dehou/houhe",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "80e97235-60cb-547b-97aa-d4215174433d",
       "key": "earth/cn-gz/bijie/dehou/zhangjia-yanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ed33c86d-ee57-5966-91a4-99ff006bb144",
       "key": "earth/cn-gz/bijie/dehou/shaojia-yuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e7c8930b-33f4-5406-b042-a2b483e885e2",
       "key": "earth/cn-gz/bijie/dehou/shijia-yuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "48b171ae-8167-5fc0-a76f-4f7936bb4ea0",
       "key": "earth/cn-gz/bijie/dehou/shaojia-yakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "86ff9908-d479-54ad-bb5e-f47d9b65d8d8",
       "key": "earth/cn-gz/bijie/dehou/lanni-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "84e76957-c097-5ae8-b795-cd1a5c367434",
       "key": "earth/cn-gz/bijie/dehou/lanni",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7ca59952-d3b5-5e47-a184-d95ee533753a",
       "key": "earth/cn-gz/bijie/dehou/zhujia-zhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e98b5c79-1c98-56cb-b1f1-7f24f81f7122",
       "key": "earth/cn-gz/bijie/dehou/weijia-daping",
       "body": "earth",
-      "kind": "forest"
+      "kind": {
+        "ecology": "forest"
+      }
     },
     {
       "id": "ed4e3ed0-89b6-5c02-85b1-b45868b80354",
       "key": "earth/cn-gz/bijie/dehou/shijia-wan-lanni",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "40f19266-4392-5e9a-b2c4-c96a7bb939b3",
       "key": "earth/cn-gz/bijie/dehou/lannigou-yakou",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "9f67c904-a8bb-594b-b401-d7e87e0b6a55",
       "key": "earth/cn-gz/bijie/dehou/dawa-zi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a0562911-f5ec-5709-bcfc-5f60bfa9b584",
       "key": "earth/cn-gz/bijie/dehou/meihua-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "a02381c1-8c5c-5971-bf21-7f64e9e5e7d2",
       "key": "earth/cn-gz/bijie/dehou/lujia-yanta",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

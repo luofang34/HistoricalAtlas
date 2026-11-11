@@ -4,79 +4,105 @@
       "id": "e7352634-18a1-5714-87a0-e734ad1d8f35",
       "key": "earth/cn-gz/bijie/wangfeng/luomushan",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "2f22e9e7-a597-5c08-af0a-858936950a75",
       "key": "earth/cn-gz/bijie/wangfeng/daodong-cave",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     },
     {
       "id": "c8e0fb9b-5554-51c4-b069-aadc5b2a3bfd",
       "key": "earth/cn-gz/bijie/wangfeng/huoyanshan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "b36e4c5f-8f7e-5b34-9c67-7fc54cf8511e",
       "key": "earth/cn-gz/bijie/wangfeng/jianshan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "ae128a0e-c215-5b32-849e-673919861ebf",
       "key": "earth/cn-gz/bijie/wangfeng/hujia-yakou",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "4b55cca0-4895-518a-8375-c8ea33904fb2",
       "key": "earth/cn-gz/bijie/wangfeng/zhangzhongling",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "39aa41ac-d47b-5b61-bf1c-10a5854203b3",
       "key": "earth/cn-gz/bijie/wangfeng/lianhuashan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "129f5be9-47c7-5f59-8beb-c873c6e2e2cd",
       "key": "earth/cn-gz/bijie/wangfeng/shadi-liangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "52a4157a-7be1-5177-a2b0-04133fd3bac2",
       "key": "earth/cn-gz/bijie/wangfeng/mafenpo-yakou",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "b37063e5-d245-5628-b067-7a800cfa8331",
       "key": "earth/cn-gz/bijie/wangfeng/palachong",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "8f34749b-a382-5e25-bb3c-40b777a02d39",
       "key": "earth/cn-gz/bijie/wangfeng/popingshan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "bb92555f-04e5-5f8a-bbc4-6bbee338dfb7",
       "key": "earth/cn-gz/bijie/wangfeng/zhangguan-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "0cc9f305-54cc-55ef-a239-a900e200d803",
       "key": "earth/cn-gz/bijie/wangfeng/wangfeng-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     }
   ],
   "records": [

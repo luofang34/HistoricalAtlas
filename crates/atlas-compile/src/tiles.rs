@@ -35,13 +35,14 @@ pub fn compile_tiles(
         return Err(TileError::Zoom(maxzoom));
     }
     let mut output = compile(input)?;
+    let shard_paths = crate::export::entity_shard_paths(&output)?;
     let mut bodies = Vec::new();
     for (body, name) in [
         (BodyId::Earth, "earth"),
         (BodyId::Moon, "moon"),
         (BodyId::Mars, "mars"),
     ] {
-        let points = features::collect(input, body, &base)?;
+        let points = features::collect(input, body, &base, &shard_paths)?;
         if points.is_empty() {
             continue;
         }
@@ -75,7 +76,7 @@ pub fn compile_tiles(
         }));
     }
     insert(&mut output, "tiles/index.json", &bodies)?;
-    geometry::publish(input, &mut output, &base, maxzoom)?;
+    geometry::publish(input, &mut output, &base, maxzoom, &shard_paths)?;
     Ok(output)
 }
 

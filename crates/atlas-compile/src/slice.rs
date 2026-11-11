@@ -34,22 +34,29 @@ pub fn compile_slice(
     selection: TimeSelection,
 ) -> Result<Artifacts, SliceError> {
     let mut artifacts = compile(input)?;
-    let timeline = Timeline::new(&input.catalog, &input.data)?;
+    let timeline = Timeline::from_validated(&input.data);
     let slice = timeline.at(at, selection)?;
-    let absent = slice
-        .entities
-        .iter()
-        .filter(|entity| !entity.is_present())
-        .map(|entity| entity.entity_id)
-        .collect();
-    let geometry = geometry::publish(&mut artifacts, &input.data, at, selection, &absent)?;
-    // A plate assignment places a coordinate at any covered age, whether or not
-    // dated evidence says the entity existed then; only recorded removal hides it.
-    let positions: Vec<_> =
-        atlas_ledger::plates::paleo_positions(&input.plate_models, &input.data, at)?
-            .into_iter()
-            .filter(|position| !absent.contains(&position.entity_id))
-            .collect();
+    let mut excluded = timeline.unformed_at(at, selection)?;
+    excluded.extend(
+        slice
+            .entities
+            .iter()
+            .filter(|entity| !entity.is_present())
+            .map(|entity| entity.entity_id),
+    );
+    let geometry = geometry::publish(&mut artifacts, &input.data, at, selection, &excluded)?;
+    // A plate assignment places a coordinate at any covered age, unless an origin
+    // constraint shows the feature had not yet formed or existence records its removal.
+    let positions: Vec<_> = atlas_ledger::plates::paleo_positions_with_models(
+        &input.plate_models,
+        &BTreeMap::new(),
+        &input.data,
+        at,
+        selection,
+    )?
+    .into_iter()
+    .filter(|position| !excluded.contains(&position.entity_id))
+    .collect();
     let paleo = if positions.is_empty() {
         None
     } else {
@@ -130,9 +137,9 @@ pub enum SliceError {
     /// Static artifact generation failed.
     #[error("time-slice output: {0}")]
     Export(#[from] ExportError),
-    /// A cited plate model could not rotate a coordinate.
+    /// A cited plate model or assignment validity failed reconstruction.
     #[error("time-slice plate reconstruction: {0}")]
-    Plate(#[from] atlas_geo::plates::PlateModelError),
+    Plate(#[from] atlas_ledger::plates::PaleoError),
 }
 
 #[cfg(test)]

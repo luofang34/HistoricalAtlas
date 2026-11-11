@@ -22,7 +22,7 @@ fn fixture() -> (BTreeMap<String, PlateModelDocument>, Dataset, FactId) {
     let estimate = FactId::from_key("interpretation/fossil-site/plate").unwrap();
     let data = serde_json::from_value(json!({
         "entities": [{"id": entity, "key": "earth/test/fossil-site", "body": "earth",
-            "kind": "geological_site"}],
+            "kind": {"geology": "site"}}],
         "records": [{"id": record, "key": "survey/fossil-site", "entity_id": entity,
             "source_id": "survey", "locator": "Table 1", "checked": true,
             "observation": {"coordinate": {"point": {"longitude": 100.0, "latitude": 0.0},
@@ -56,4 +56,52 @@ fn covered_epochs_rotate_coordinates_and_uncovered_epochs_leave_them_out() {
     assert!(paleo_positions(&models, &data, older).unwrap().is_empty());
     let future = EpochTime::from_ticks(JULIAN_YEAR_MS);
     assert!(paleo_positions(&models, &data, future).unwrap().is_empty());
+}
+
+#[test]
+fn plate_assignment_validity_bounds_reconstructed_epochs() {
+    use atlas_core::time::{InstantEstimate, TemporalSpan, TimePrecision};
+    let (models, mut data, _) = fixture();
+    let six_ma = EpochTime::from_ticks(-6 * 1_000_000 * JULIAN_YEAR_MS);
+    let two_ma = EpochTime::from_ticks(-2 * 1_000_000 * JULIAN_YEAR_MS);
+    let exact = |at| InstantEstimate {
+        earliest: at,
+        nominal: at,
+        latest: at,
+        precision: TimePrecision::Millisecond,
+    };
+    if let EstimateValue::Plate { validity, .. } = &mut data.estimates[0].value {
+        *validity = Some(TemporalSpan {
+            start: Some(exact(six_ma)),
+            end: Some(exact(two_ma)),
+        });
+    }
+    let prebuilt: BTreeMap<String, RotationModel> = models
+        .iter()
+        .map(|(id, doc)| {
+            (
+                id.clone(),
+                RotationModel::from_sequences(doc.sequences.clone()).unwrap(),
+            )
+        })
+        .collect();
+    let five_ma = EpochTime::from_ticks(-5 * 1_000_000 * JULIAN_YEAR_MS);
+    let eight_ma = EpochTime::from_ticks(-8 * 1_000_000 * JULIAN_YEAR_MS);
+    let one_ma = EpochTime::from_ticks(-1_000_000 * JULIAN_YEAR_MS);
+    assert_eq!(
+        paleo_positions_with_models(&models, &prebuilt, &data, five_ma, TimeSelection::Nominal)
+            .unwrap()
+            .len(),
+        1
+    );
+    assert!(
+        paleo_positions_with_models(&models, &prebuilt, &data, eight_ma, TimeSelection::Nominal)
+            .unwrap()
+            .is_empty()
+    );
+    assert!(
+        paleo_positions_with_models(&models, &prebuilt, &data, one_ma, TimeSelection::Nominal)
+            .unwrap()
+            .is_empty()
+    );
 }

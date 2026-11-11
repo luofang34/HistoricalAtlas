@@ -4,163 +4,217 @@
       "id": "7a57cba6-cdba-5e2d-b89a-af1adb9fa57d",
       "key": "earth/cn-gz/anshun-county/baifen-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "3138c6aa-04da-503b-a6a9-5d653cb025cf",
       "key": "earth/cn-gz/anshun-county/baifen-commune/shaer-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "b33841f8-579f-5a0c-8aee-63a4d99dc1cf",
       "key": "earth/cn-gz/anshun-county/baifen-commune/shaer-brigade/shaer",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "dd9f0b89-1d61-5ef8-a343-1865b02e82a2",
       "key": "earth/cn-gz/anshun-county/baifen-commune/shaer-brigade/bengtushan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6b1ab4c5-9b5d-5e9b-99e6-b30279b1a579",
       "key": "earth/cn-gz/anshun-county/baifen-commune/shaer-brigade/changerduo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "16b1d009-4759-54c8-92eb-fbdb034ad8d2",
       "key": "earth/cn-gz/anshun-county/baifen-commune/shaer-brigade/hegoutou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "db43870b-2c15-59da-8c06-de0d107f2175",
       "key": "earth/cn-gz/anshun-county/baifen-commune/shaer-brigade/baifen",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f4cd82ad-e911-5aa3-a1ea-99312ed87828",
       "key": "earth/cn-gz/anshun-county/baifen-commune/shaer-brigade/baifenyakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4397c939-0b87-589b-8d14-8b588215dc62",
       "key": "earth/cn-gz/anshun-county/baifen-commune/shaer-brigade/guankou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "920c1093-a761-5bf4-bec9-bd8c0dd22ffb",
       "key": "earth/cn-gz/anshun-county/baifen-commune/shaer-brigade/laozhaitian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "06517377-538b-506c-a66c-403e619ab7f6",
       "key": "earth/cn-gz/anshun-county/baifen-commune/shaer-brigade/xinzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2931ae8e-42f3-5fa0-979f-cecb77557047",
       "key": "earth/cn-gz/anshun-county/baifen-commune/shaer-brigade/qianzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f3fb2a83-e9c1-5113-8861-f6981995aba6",
       "key": "earth/cn-gz/anshun-county/baifen-commune/shaer-brigade/houzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9af50a96-5d94-5240-8ca4-d5736c0f2ec0",
       "key": "earth/cn-gz/anshun-county/baifen-commune/shaer-brigade/xinzhuang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "36f7c8e1-8080-56fc-acd1-96a9328c284f",
       "key": "earth/cn-gz/anshun-county/baifen-commune/mutouzhai-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "75cb3f1a-0907-5ea3-bff2-9e6691c44684",
       "key": "earth/cn-gz/anshun-county/baifen-commune/mutouzhai-brigade/mutouzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e8b24ed6-6daa-585e-bb00-e3256bfd0d56",
       "key": "earth/cn-gz/anshun-county/baifen-commune/mutouzhai-brigade/qingkou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a632d538-2043-5abd-9be4-0f2479005dae",
       "key": "earth/cn-gz/anshun-county/baifen-commune/yingpan-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "bcc653d9-3be4-56b4-b701-dc7ae8cad00f",
       "key": "earth/cn-gz/anshun-county/baifen-commune/yingpan-brigade/xiongjiashan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f6fedc62-06f7-5f90-a18c-a4b1300087c7",
       "key": "earth/cn-gz/anshun-county/baifen-commune/yingpan-brigade/dapo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "14871164-7407-565f-8916-41ea63a1f86b",
       "key": "earth/cn-gz/anshun-county/baifen-commune/yingpan-brigade/shanshulin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "82dd52da-dbeb-5e91-b220-2ef6f92c11fc",
       "key": "earth/cn-gz/anshun-county/baifen-commune/yingpan-brigade/qinggangpo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a415e567-186a-5939-b8eb-7aec4591e5b6",
       "key": "earth/cn-gz/anshun-county/baifen-commune/yingpan-brigade/xiangshuiyan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "53cdecb9-c976-532c-88ac-f5e00ace6f5a",
       "key": "earth/cn-gz/anshun-county/baifen-commune/yingpan-brigade/guanyinshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "cf4fac92-ca8f-5023-9876-bf3611876b81",
       "key": "earth/cn-gz/anshun-county/baifen-commune/yingpan-brigade/yingpan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6a5b7e5a-3fad-5993-a035-2a7ce848ccd1",
       "key": "earth/cn-gz/anshun-county/baifen-commune/guojiatun-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "8562f918-b9eb-5d52-a9b4-05d6a1b0c413",
       "key": "earth/cn-gz/anshun-county/baifen-commune/guojiatun-brigade/guojiatun",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [
@@ -183,7 +237,8 @@
         "parent_id": null,
         "coordinate": null,
         "former_names": [],
-        "note": null
+        "note": null,
+        "rank": "commune"
       }
     },
     {
@@ -218,7 +273,8 @@
           "datum": "unspecified"
         },
         "former_names": [],
-        "note": null
+        "note": null,
+        "rank": "brigade"
       }
     },
     {
@@ -652,7 +708,8 @@
           "datum": "unspecified"
         },
         "former_names": [],
-        "note": null
+        "note": null,
+        "rank": "brigade"
       }
     },
     {
@@ -754,7 +811,8 @@
           "datum": "unspecified"
         },
         "former_names": [],
-        "note": null
+        "note": null,
+        "rank": "brigade"
       }
     },
     {
@@ -1019,7 +1077,8 @@
           "datum": "unspecified"
         },
         "former_names": [],
-        "note": null
+        "note": null,
+        "rank": "brigade"
       }
     },
     {

@@ -4,31 +4,41 @@
       "id": "e0af63d9-6248-5abf-b957-8d9e08768a24",
       "key": "earth/cn-gz/bijie/taiji/lengsha-liangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "e689b60e-6555-5dd7-bdbb-b74a3865ac28",
       "key": "earth/cn-gz/bijie/taiji/hongsha-liangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "f2c3820b-8384-5a49-8441-508cb4a5b8d4",
       "key": "earth/cn-gz/bijie/taiji/dashanying",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "bb1519fe-906e-5359-939a-128de004df9f",
       "key": "earth/cn-gz/bijie/taiji/maochonggou-yingpan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "96c066c5-12ac-598b-bbde-65692c44d36f",
       "key": "earth/cn-gz/bijie/taiji/taiji-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

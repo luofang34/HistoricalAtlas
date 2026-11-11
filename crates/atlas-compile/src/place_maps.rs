@@ -7,7 +7,7 @@ use serde::{Deserialize, Serialize};
 
 use crate::{input::LedgerInput, registration::RegisteredSheet};
 
-mod boundaries;
+pub(crate) mod boundaries;
 mod evidence;
 mod transform;
 pub(crate) use boundaries::{RegisteredMap, register_boundaries, register_shapes};

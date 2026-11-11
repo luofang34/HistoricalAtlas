@@ -4,73 +4,97 @@
       "id": "f486eb6c-2149-5b26-9bde-8da775648e37",
       "key": "earth/cn-gz/bijie/wangfeng/zhangguantun-former-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "c24140ae-ddb8-542c-b53c-8eeb151a71f6",
       "key": "earth/cn-gz/bijie/wangfeng/xiawuxi-former-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "a1bab523-91e7-5d83-85e6-f22cf2bd5b89",
       "key": "earth/cn-gz/bijie/wangfeng/baixiliangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "09e7fc1f-eb1e-53f7-b926-3a134c0e6e87",
       "key": "earth/cn-gz/bijie/wangfeng/sandaoshui-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "e769ef2a-8e6d-585f-aa8b-776212f73981",
       "key": "earth/cn-gz/bijie/wangfeng/zhangguantun-stream",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "abfff581-1954-50e7-ae7a-21ba186ef9c1",
       "key": "earth/cn-gz/bijie/wangfeng/wangfeng-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "c76965e5-e8d0-5a2a-a6a6-014f79495b9d",
       "key": "earth/cn-gz/bijie/wangfeng/longqi-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "2c8d77ef-a0dd-553f-9f5d-961c5b07c570",
       "key": "earth/cn-gz/bijie/wangfeng/wachang-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "f1cc1d12-6af2-5638-acf2-1e6ce18a729d",
       "key": "earth/cn-gz/bijie/wangfeng/qingfeng-wangfeng-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "f3339193-2661-5362-9edc-6c5d110ce6d6",
       "key": "earth/cn-gz/bijie/huangnichong/maoyigou-stream",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "95b286ea-7d2f-5a2c-8705-5f12d3b20ccd",
       "key": "earth/cn-gz/bijie/shaba/shale-former-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "0be5c401-ac68-574b-ba5d-2cde49ed1ef8",
       "key": "earth/cn-gz/bijie/shaba/gaoshanpu-former-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     }
   ],
   "records": [
@@ -380,7 +404,7 @@
         "households": null,
         "ethnicities": [],
         "parent_id": null,
-        "rank": null,
+        "rank": "commune",
         "seat_id": null,
         "coordinate": null,
         "former_names": [],
@@ -409,7 +433,7 @@
         "households": null,
         "ethnicities": [],
         "parent_id": null,
-        "rank": null,
+        "rank": "commune",
         "seat_id": null,
         "coordinate": null,
         "former_names": [],
@@ -872,7 +896,7 @@
         "households": null,
         "ethnicities": [],
         "parent_id": null,
-        "rank": null,
+        "rank": "commune",
         "seat_id": null,
         "coordinate": null,
         "former_names": [],
@@ -901,7 +925,7 @@
         "households": null,
         "ethnicities": [],
         "parent_id": null,
-        "rank": null,
+        "rank": "commune",
         "seat_id": null,
         "coordinate": null,
         "former_names": [],
@@ -930,7 +954,7 @@
         "households": null,
         "ethnicities": [],
         "parent_id": null,
-        "rank": null,
+        "rank": "commune",
         "seat_id": null,
         "coordinate": null,
         "former_names": [],
@@ -959,7 +983,7 @@
         "households": null,
         "ethnicities": [],
         "parent_id": null,
-        "rank": null,
+        "rank": "commune",
         "seat_id": null,
         "coordinate": null,
         "former_names": [],

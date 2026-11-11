@@ -4,97 +4,129 @@
       "id": "b45f6623-19be-5631-a2e3-34688ecbba2d",
       "key": "earth/cn-gz/bijie/haogou/haogou-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "0968b343-bd7e-51b3-89aa-3dae5e18d6cb",
       "key": "earth/cn-gz/bijie/haogou/guaerwa",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2094de1d-7e26-5178-9e58-6ef0af44f4c3",
       "key": "earth/cn-gz/bijie/haogou/haogou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "226c2888-e623-5ac5-bfe6-fc1d7cdffc4d",
       "key": "earth/cn-gz/bijie/haogou/piaoerwa",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "daed9274-1e8d-5db4-89c8-4705d776eb7c",
       "key": "earth/cn-gz/bijie/haogou/shiguan-yakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c4eabe74-e0c1-5515-b5df-b52649e8b838",
       "key": "earth/cn-gz/bijie/haogou/jiaoshuwa",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "04e21ab6-c276-5150-881d-a33de46912f9",
       "key": "earth/cn-gz/bijie/haogou/wangjia-yakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5f6b1bcf-f23d-5a2f-9a7d-d4d8b80e90a7",
       "key": "earth/cn-gz/bijie/haogou/hewei-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "f243e982-273d-5a83-bc4a-a579d02f287c",
       "key": "earth/cn-gz/bijie/haogou/heweiba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8c08cab4-7631-5511-a935-b7306fe08c9f",
       "key": "earth/cn-gz/bijie/haogou/maobaiwa",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1ae4eb1e-5acd-5fc0-87ea-e8051c74b2b8",
       "key": "earth/cn-gz/bijie/haogou/lannigou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0a3aeb12-1246-5264-9794-9ddddcd91814",
       "key": "earth/cn-gz/bijie/haogou/shizishan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ae0779ac-dda1-5592-9a6f-4ee46c067d7a",
       "key": "earth/cn-gz/bijie/haogou/mahuangtian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1e2f58af-856b-56ed-9e93-18c5516dfb2e",
       "key": "earth/cn-gz/bijie/haogou/shuitang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "52f32908-58cb-543e-bac1-be37077bcc0f",
       "key": "earth/cn-gz/bijie/haogou/haogou-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "d6b41845-5da9-516a-bdf2-f33eb22580b8",
       "key": "earth/cn-gz/bijie/haogou/shizi-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

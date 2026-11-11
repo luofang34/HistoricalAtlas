@@ -108,23 +108,24 @@ impl Application {
         };
         self.overlay.selected = Some(id.to_owned());
         self.overlay.visible = true;
-        if let Some(target) = target {
-            if let Some(body) = self.atlas.entry(target).map(|entry| entry.entity.body)
-                && self.body != body
-            {
-                self.body = body;
-                self.camera = Camera::for_body(body);
-                self.camera_pending = true;
-                self.layer = crate::scene::MapLayer::Observations;
-                self.hits.clear();
-            }
-            self.select(target, true);
+        if let Some(target) = target
+            && let Some(body) = self.atlas.entity_body(target)
+            && self.body != body
+        {
+            self.body = body;
+            self.camera = Camera::for_body(body);
+            self.camera_pending = true;
+            self.layer = crate::scene::MapLayer::Observations;
+            self.hits.clear();
         }
         if let Some(at) = at {
             self.time.mode = TimeMode::Ticks;
             self.time.value = at.ticks().to_string();
             self.time.selection = TimeSelection::Nominal;
             self.apply_time();
+        }
+        if let Some(target) = target {
+            self.select(target, true);
         }
     }
 

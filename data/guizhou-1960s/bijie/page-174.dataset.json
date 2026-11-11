@@ -4,145 +4,193 @@
       "id": "36cfe62e-b628-56fc-a67c-c859a3fea050",
       "key": "earth/cn-gz/bijie/lanni/dayakou-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "84aff0bf-8a1f-518a-8228-75fcf73824fc",
       "key": "earth/cn-gz/bijie/lanni/pingzishang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "01eec169-e1ff-5c7b-9353-f356e83e8e97",
       "key": "earth/cn-gz/bijie/lanni/dayakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c6a6fa20-2499-5339-a769-02c552e976db",
       "key": "earth/cn-gz/bijie/lanni/banbianqing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4649931e-b675-5a48-adba-3988f17ee96e",
       "key": "earth/cn-gz/bijie/lanni/yaziba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3d211c7a-2f0c-5d74-8811-6de2a379494c",
       "key": "earth/cn-gz/bijie/lanni/longtang-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "126de85c-5410-57a8-97f2-38d58393b6a1",
       "key": "earth/cn-gz/bijie/lanni/shizikou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2b673ed6-74a2-5c7c-ab9c-e3a6d2547f93",
       "key": "earth/cn-gz/bijie/lanni/qingganglin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e3aa1d0f-d769-54e3-8223-ef0d455c7944",
       "key": "earth/cn-gz/bijie/lanni/zhangjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "03f6c9a4-cf89-5ea7-a43e-b049119ce969",
       "key": "earth/cn-gz/bijie/lanni/pingshan-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "977e33a0-a19a-5e35-a05a-512d5ab54a47",
       "key": "earth/cn-gz/bijie/lanni/pingshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9fad66b5-a461-51ab-8383-fc7fa5235c4e",
       "key": "earth/cn-gz/bijie/lanni/yinggezui",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a351be8e-68ad-5450-a664-eeae0a2a4564",
       "key": "earth/cn-gz/bijie/lanni/xiaochong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5d6c5802-d4bd-51b5-b11b-f16d6aabfcde",
       "key": "earth/cn-gz/bijie/lanni/anshan-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "a4c2380a-0fb4-53cf-8145-2f02b5913d3a",
       "key": "earth/cn-gz/bijie/lanni/liangshuijing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7ba91f74-ad56-5cd0-a795-9d66ed9dbfba",
       "key": "earth/cn-gz/bijie/lanni/jinjiabao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "86ec3af4-2802-5ce9-94ab-5ad047666dae",
       "key": "earth/cn-gz/bijie/lanni/chengjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1a6a9b5c-5c3a-5948-89da-cfcae867c3f6",
       "key": "earth/cn-gz/bijie/lanni/daomakan-seat",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "98187551-dfdc-5200-82af-297b9b343792",
       "key": "earth/cn-gz/bijie/lanni/daomakan-east",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "95bee6a5-c0a7-5c36-8d8a-9130da7147bc",
       "key": "earth/cn-gz/bijie/lanni/lanni-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "e4371f6a-7e2c-516b-b512-04f2a311dec7",
       "key": "earth/cn-gz/bijie/lanni/huoliaoping",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "062602a1-a463-54f9-85ce-bd71f7af5b27",
       "key": "earth/cn-gz/bijie/lanni/banbian-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "97a68e89-758d-5a8c-8cd9-11129bebe2ae",
       "key": "earth/cn-gz/bijie/lanni/yingge-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "383f2ffa-bd16-5700-a90d-a0c59775153c",
       "key": "earth/cn-gz/bijie/lanni/duqing-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

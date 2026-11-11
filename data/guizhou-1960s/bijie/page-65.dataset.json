@@ -4,13 +4,17 @@
       "id": "11d22a76-12ea-58dc-aa71-ee252ef2eca3",
       "key": "earth/cn-gz/bijie/lishu/lishuping-qiao",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "5b9d34e9-ee80-5e3a-a0d2-1c495889a56a",
       "key": "earth/cn-gz/bijie/lishu/kuaqiao-he",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

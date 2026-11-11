@@ -4,103 +4,137 @@
       "id": "fb415a13-ee6e-58dc-8559-478e9989a1b0",
       "key": "earth/cn-gz/bijie/toubu/xindianzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3579f414-3829-55ec-a649-c434ae2c5250",
       "key": "earth/cn-gz/bijie/toubu/qingwan-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "4d17cac2-e278-5414-bd7d-724ca468901b",
       "key": "earth/cn-gz/bijie/toubu/zhangjia-wanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1d829408-0e42-53b3-92ff-0cdecb3d78bc",
       "key": "earth/cn-gz/bijie/toubu/qingshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b180c532-7a4c-5610-b64f-a81e92103fb2",
       "key": "earth/cn-gz/bijie/toubu/cement-factory",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "3dbbb742-c9e3-51b2-81a7-51a3b8d8d34f",
       "key": "earth/cn-gz/bijie/toubu/bijie-sixth-school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "8f70f57c-8532-54f5-9975-8d9788d50572",
       "key": "earth/cn-gz/bijie/toubu/dijun-miao",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "7c7b91e7-63be-5093-9f95-3a73c3b88a47",
       "key": "earth/cn-gz/bijie/toubu/dongwang-miao",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "d7a10904-7c08-5aaa-819a-eff133639472",
       "key": "earth/cn-gz/bijie/toubu/toubu-qiao-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "562d4a43-106f-5350-8f66-4b714d3dd9c9",
       "key": "earth/cn-gz/bijie/toubu/liucang-qiao-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "c72ebcf3-86b3-5ff9-8399-527ab7362a92",
       "key": "earth/cn-gz/bijie/toubu/bijie-teachers-college",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "aa615464-8e05-593e-b5d0-7725e17da44f",
       "key": "earth/cn-gz/bijie/toubu/power-plant",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "00603c7f-a385-5764-98e1-aad2d60beaa8",
       "key": "earth/cn-gz/bijie/toubu/power-plant-school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "167dda00-ba72-593f-8616-241c294259b8",
       "key": "earth/cn-gz/bijie/toubu/fertilizer-factory",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "cc9f4b97-83c1-5ccd-8334-7a47b0cd9609",
       "key": "earth/cn-gz/bijie/toubu/tobacco-factory",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "3d81f50c-1fc1-5779-89da-0ba2f9b2f6bd",
       "key": "earth/cn-gz/bijie/toubu/paper-factory",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "8612087f-521b-5370-9435-17543bcbb0eb",
       "key": "earth/cn-gz/bijie/toubu/agricultural-machinery-school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     }
   ],
   "records": [

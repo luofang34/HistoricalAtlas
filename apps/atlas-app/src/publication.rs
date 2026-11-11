@@ -1,6 +1,5 @@
-//! Read the compiler's published shards from a local directory.
+//! Read and verify the compiler's versioned publication shards from a local directory.
 
-use serde::de::DeserializeOwned;
 use std::{
     collections::BTreeMap,
     fs,
@@ -8,14 +7,23 @@ use std::{
 };
 use thiserror::Error;
 
+use atlas_boundary::publication::{
+    CatalogItem, ManifestError, PublicationManifest, ShardSummary, VerifiedPart,
+    decode_concatenated, decode_map_parts, decode_vec_parts,
+};
+use atlas_ledger::publication::{Aliases, Published};
+
 use crate::{
-    catalog::{Atlas, Entry, Publication},
+    catalog::{Atlas, Bootstrap},
     error::AppError,
 };
 
 /// Filesystem publication loading failure.
 #[derive(Debug, Error)]
 pub enum PublicationError {
+    /// Root manifest or part checksum failed verification.
+    #[error(transparent)]
+    Manifest(#[from] ManifestError),
     /// Geometry parts failed verification.
     #[error(transparent)]
     Geometry(#[from] atlas_boundary::publication::GeometryError),
@@ -37,84 +45,107 @@ pub enum PublicationError {
         #[source]
         source: serde_json::Error,
     },
-    /// Shard names must be two lowercase hexadecimal digits.
-    #[error("invalid entity shard name {0:?}")]
-    Shard(String),
-    /// Plate model names must be lowercase ASCII letters, digits and hyphens.
-    #[error("invalid plate model name {0:?}")]
-    Model(String),
-    /// Entity identity was repeated in more than one shard.
-    #[error("duplicate entity in shard {0}")]
-    Duplicate(String),
     /// Loaded evidence failed integrity checks.
     #[error(transparent)]
     Atlas(#[from] AppError),
 }
 
-/// Load exactly the shards named by the publication manifest.
-pub fn load_blocking(root: &Path) -> Result<Atlas, PublicationError> {
-    let sources = read_blocking(&root.join("sources.json"))?;
-    let aliases = read_blocking(&root.join("entities/aliases.json"))?;
-    let shards: Vec<String> = read_blocking(&root.join("entities/shards.json"))?;
-    let mut entries = BTreeMap::new();
-    for shard in shards {
-        if shard.len() != 2
-            || !shard
-                .bytes()
-                .all(|value| value.is_ascii_digit() || (b'a'..=b'f').contains(&value))
-        {
-            return Err(PublicationError::Shard(shard));
-        }
-        let records: BTreeMap<_, Entry> =
-            read_blocking(&root.join(format!("entities/index/{shard}.json")))?;
-        for (id, mut record) in records {
-            if let Some(reference) = &record.geometry {
-                reference.validate()?;
-                let parts = reference
-                    .parts
-                    .iter()
-                    .map(|part| {
-                        let path = root.join(&part.path);
-                        fs::read(&path).map_err(|source| PublicationError::Io { path, source })
-                    })
-                    .collect::<Result<Vec<_>, _>>()?;
-                record.attach_geometry(reference.decode(&parts)?);
-            }
-            if entries.insert(id, record).is_some() {
-                return Err(PublicationError::Duplicate(shard));
-            }
-        }
-    }
-    let models: Vec<String> = read_blocking(&root.join("plates/models.json"))?;
-    let mut plate_models = BTreeMap::new();
-    for id in models {
-        if id.is_empty()
-            || !id
-                .bytes()
-                .all(|byte| byte.is_ascii_lowercase() || byte.is_ascii_digit() || byte == b'-')
-        {
-            return Err(PublicationError::Model(id));
-        }
-        let document = read_blocking(&root.join(format!("plates/{id}.json")))?;
-        plate_models.insert(id, document);
-    }
-    Ok(Atlas::new(Publication {
-        sources,
-        entries,
-        aliases,
-        plate_models,
-    })?)
-}
-
-fn read_blocking<T: DeserializeOwned>(path: &Path) -> Result<T, PublicationError> {
-    let bytes = fs::read(path).map_err(|source| PublicationError::Io {
-        path: path.to_owned(),
+/// Load and verify the compact startup manifest, bibliography, search catalog, and plate models.
+pub fn load_bootstrap_blocking(root: &Path) -> Result<Bootstrap, PublicationError> {
+    let manifest_path = root.join("manifest.json");
+    let manifest_bytes = fs::read(&manifest_path).map_err(|source| PublicationError::Io {
+        path: manifest_path.clone(),
         source,
     })?;
-    serde_json::from_slice(&bytes).map_err(|source| PublicationError::Json {
-        path: path.to_owned(),
-        source,
+    let manifest: PublicationManifest =
+        serde_json::from_slice(&manifest_bytes).map_err(|source| PublicationError::Json {
+            path: manifest_path,
+            source,
+        })?;
+    manifest.validate()?;
+    let sources = decode_vec_parts(
+        &manifest.sources,
+        &read_parts_blocking(root, &manifest.sources)?,
+    )?;
+    let aliases = Aliases(decode_map_parts(
+        &manifest.aliases,
+        &read_parts_blocking(root, &manifest.aliases)?,
+    )?);
+    let published = Published(
+        decode_vec_parts(
+            &manifest.published,
+            &read_parts_blocking(root, &manifest.published)?,
+        )?
+        .into_iter()
+        .collect(),
+    );
+    let shards: Vec<ShardSummary> = decode_vec_parts(
+        &manifest.shard_inventories,
+        &read_parts_blocking(root, &manifest.shard_inventories)?,
+    )?;
+    let catalog_parts: Vec<VerifiedPart> = manifest
+        .catalog_shards
+        .iter()
+        .map(|s| s.part.clone())
+        .collect();
+    let catalog: Vec<CatalogItem> =
+        decode_vec_parts(&catalog_parts, &read_parts_blocking(root, &catalog_parts)?)?;
+    let mut plate_models = BTreeMap::new();
+    for model in &manifest.plate_models {
+        let slices = read_parts_blocking(root, &model.parts)?;
+        let document = decode_concatenated(&model.parts, &slices)?;
+        plate_models.insert(model.id.clone(), document);
+    }
+    Ok(Bootstrap {
+        manifest,
+        sources,
+        aliases,
+        published,
+        shards,
+        catalog,
+        plate_models,
     })
+}
+
+/// Load and verify all shards and geometry bundles named by `manifest.json`.
+pub fn load_blocking(root: &Path) -> Result<Atlas, PublicationError> {
+    let bootstrap = load_bootstrap_blocking(root)?;
+    let mut atlas = Atlas::from_bootstrap(bootstrap)?;
+    let ordered_shards: Vec<ShardSummary> = atlas.ordered_shards()?.into_iter().cloned().collect();
+    let mut geometries = Vec::new();
+    for shard in &ordered_shards {
+        let path = root.join(&shard.part.path);
+        let bytes = fs::read(&path).map_err(|source| PublicationError::Io { path, source })?;
+        let attached = atlas.attach_shard(&shard.id, &bytes)?;
+        geometries.extend(attached.geometries);
+    }
+    for (id, _, reference) in geometries {
+        reference.validate()?;
+        let parts = reference
+            .parts
+            .iter()
+            .map(|part| {
+                let path = root.join(&part.path);
+                fs::read(&path).map_err(|source| PublicationError::Io { path, source })
+            })
+            .collect::<Result<Vec<_>, _>>()?;
+        atlas.attach_geometry(id, reference.decode(&parts)?)?;
+    }
+    Ok(atlas)
+}
+
+fn read_parts_blocking(
+    root: &Path,
+    parts: &[VerifiedPart],
+) -> Result<Vec<Vec<u8>>, PublicationError> {
+    parts
+        .iter()
+        .map(|part| {
+            part.validate_with_prefix("")?;
+            let path = root.join(&part.path);
+            fs::read(&path).map_err(|source| PublicationError::Io { path, source })
+        })
+        .collect()
 }
 
 #[cfg(test)]

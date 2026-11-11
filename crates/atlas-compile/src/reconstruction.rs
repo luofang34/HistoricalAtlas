@@ -107,7 +107,7 @@ pub fn reconstruct(
     let model = crate::plate_models::validated_model(document, &input.catalog)?;
     let mut anchors = Vec::new();
     for anchor in &job.anchors {
-        let (record, plate) = resolve_anchor(input, anchor, &job.model_id)?;
+        let (record, plate) = resolve_anchor(input, anchor, &job.model_id, job.at)?;
         let observation = record.observation.coordinate.clone().ok_or_else(|| {
             ReconstructionError::Evidence(format!("{} has no coordinate", record.key))
         })?;
@@ -134,6 +134,7 @@ fn resolve_anchor<'a>(
     input: &'a LedgerInput,
     anchor: &ReconstructionAnchor,
     model: &str,
+    at: EpochTime,
 ) -> Result<(&'a Record, PlateId), ReconstructionError> {
     let record = input
         .data
@@ -160,7 +161,24 @@ fn resolve_anchor<'a>(
             ))
         })?;
     match &estimate.value {
-        EstimateValue::Plate { model_id, plate_id } if model_id == model => Ok((record, *plate_id)),
+        EstimateValue::Plate {
+            model_id,
+            plate_id,
+            validity,
+        } if model_id == model => {
+            if let Some(span) = validity
+                && !span
+                    .nominally_contains(at)
+                    .map_err(|e| ReconstructionError::Evidence(e.to_string()))?
+            {
+                return Err(ReconstructionError::Evidence(format!(
+                    "{} is inactive at {}",
+                    estimate.key,
+                    at.ticks()
+                )));
+            }
+            Ok((record, *plate_id))
+        }
         _ => Err(ReconstructionError::Evidence(format!(
             "{} is not a plate assignment in {model}",
             estimate.key

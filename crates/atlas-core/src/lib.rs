@@ -5,4 +5,5 @@ pub mod calendar;
 pub mod identity;
 pub mod origin;
 pub mod physical;
+pub mod taxonomy;
 pub mod time;

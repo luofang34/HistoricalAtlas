@@ -4,73 +4,97 @@
       "id": "c38b7ba0-c1e5-5492-adec-694ad7718a4f",
       "key": "earth/cn-gz/bijie/yingbin/yingbin-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "82077a3f-f615-5648-a86d-8aec9577c059",
       "key": "earth/cn-gz/bijie/yingbin/fuji",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "66092f97-a03a-5032-ac1c-f9a98b3fa069",
       "key": "earth/cn-gz/bijie/yingbin/zuantianpo",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "824a7c75-6d14-592d-b22a-3654eaf8a0ce",
       "key": "earth/cn-gz/bijie/yingbin/changzheng-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "8a3d39ad-94b9-542e-85e4-ede39299dfb0",
       "key": "earth/cn-gz/bijie/yingbin/qingganglin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9348b979-bfa3-5901-8cbc-3ef3ddbaf4a2",
       "key": "earth/cn-gz/bijie/yingbin/longtanwan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "896fa9a0-0697-56c6-8c0f-e70ac80de3d5",
       "key": "earth/cn-gz/bijie/yingbin/maliupo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "aae225d7-fe08-56d8-80d7-90b2e4f037de",
       "key": "earth/cn-gz/bijie/yingbin/xiaoyantang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a7f22708-c77b-5162-bcc9-b38b2841722c",
       "key": "earth/cn-gz/bijie/yingbin/zhenwushan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "80c95b4b-dafa-5493-9632-c7e5e05c6138",
       "key": "earth/cn-gz/bijie/yingbin/baijiafen",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "70451853-1632-50ee-914a-4ee60bdce910",
       "key": "earth/cn-gz/bijie/yingbin/xianshanpo",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "4a371f53-e564-5e86-a279-d7569a3f6db3",
       "key": "earth/cn-gz/bijie/yingbin/qinglongshan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

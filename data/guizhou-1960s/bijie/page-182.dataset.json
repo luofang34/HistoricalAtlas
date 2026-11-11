@@ -4,205 +4,273 @@
       "id": "1490ef60-f831-597b-bd74-813ef27edb54",
       "key": "earth/cn-gz/bijie/xiaoba/xiaoba-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "349118b8-f1a8-5438-9b5b-53301881807c",
       "key": "earth/cn-gz/bijie/xiaoba/xiaoba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0a20e812-1171-59cc-b88c-bfcfc805baa0",
       "key": "earth/cn-gz/bijie/xiaoba/luoshaiqiu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ed4ad83b-ecbf-5795-8de9-2bc0c5a399df",
       "key": "earth/cn-gz/bijie/xiaoba/lianhuanpo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c8485642-fc6e-5078-b585-42562e9fcb40",
       "key": "earth/cn-gz/bijie/xiaoba/commune-forest",
       "body": "earth",
-      "kind": "forest"
+      "kind": {
+        "ecology": "forest"
+      }
     },
     {
       "id": "2d6b75a2-a994-53b1-9e6d-2fae78e55587",
       "key": "earth/cn-gz/bijie/xiaoba/fenghuang-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "6fe5fa16-0d81-53ce-96fa-91246092f29a",
       "key": "earth/cn-gz/bijie/xiaoba/dashan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "dceeb24c-9b18-5fe1-8931-4b3920e9bde2",
       "key": "earth/cn-gz/bijie/xiaoba/caijiawa",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f04bc0a7-69f1-5b82-9edc-3eca0a69ff72",
       "key": "earth/cn-gz/bijie/xiaoba/wujishang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c1d77a20-f7b2-549b-b894-7f82889e0f7e",
       "key": "earth/cn-gz/bijie/xiaoba/yakoushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9d526a9c-5ee5-540b-980f-4d72ab106104",
       "key": "earth/cn-gz/bijie/xiaoba/liangcengyan",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "3b86b6b3-270c-5ad3-b69b-8cf3bdbc36e4",
       "key": "earth/cn-gz/bijie/xiaoba/xichong-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "a4dafaf5-4ce2-5616-b6b9-f8f34c71bfff",
       "key": "earth/cn-gz/bijie/xiaoba/xichong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c1f7d9e2-fd04-5454-b887-59e590fe18bb",
       "key": "earth/cn-gz/bijie/xiaoba/heshangchong-north",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e3b95c38-e121-5b75-bf00-57e0b15942a1",
       "key": "earth/cn-gz/bijie/xiaoba/heshangchong-south",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "dd1e98a8-be25-5940-9045-39b35d8913da",
       "key": "earth/cn-gz/bijie/xiaoba/muguadang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "83f1ba69-abb7-5590-b911-0725004262fa",
       "key": "earth/cn-gz/bijie/xiaoba/guanjing-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "c36c904b-adf8-5c97-a7da-d46b4d1fd3ce",
       "key": "earth/cn-gz/bijie/xiaoba/fengjiaqiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f6cdba1a-df68-593e-b0ee-9c70d69636ca",
       "key": "earth/cn-gz/bijie/xiaoba/shachong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "725f235b-73de-5368-95d9-e61ab77eed56",
       "key": "earth/cn-gz/bijie/xiaoba/guanjingshang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "fb7827a6-d2d9-5e9c-a8b6-9df758c40c28",
       "key": "earth/cn-gz/bijie/xiaoba/dongshang-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "0eebf966-f2fa-5b7c-9a34-3fbc0df02fd9",
       "key": "earth/cn-gz/bijie/xiaoba/dongshang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bae400d2-2ba0-566a-8fec-ef0c5c6baea3",
       "key": "earth/cn-gz/bijie/xiaoba/taxing-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "622c4467-93c4-5039-86cd-c9f65170c137",
       "key": "earth/cn-gz/bijie/xiaoba/dagoubian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "04d40f3b-9310-5487-b6cd-67456a8906a1",
       "key": "earth/cn-gz/bijie/xiaoba/shangbaihu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "349691d5-4d51-5df9-90b9-fb4b59792d96",
       "key": "earth/cn-gz/bijie/xiaoba/yantangwa",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bbbc0b0f-b5ea-5b0f-b936-f887409ae713",
       "key": "earth/cn-gz/bijie/xiaoba/xiajiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ce1be6c5-1648-5cba-8d6c-6174b106a5fc",
       "key": "earth/cn-gz/bijie/xiaoba/xinchang-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "2ff84ea2-5ada-5859-9c7c-874890862e3a",
       "key": "earth/cn-gz/bijie/xiaoba/zuosuo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0b75cc17-bcc5-5ae8-8771-8423139e2beb",
       "key": "earth/cn-gz/bijie/xiaoba/xinchangjie",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "774a8a29-1dda-5218-a882-696e6c01ebb3",
       "key": "earth/cn-gz/bijie/xiaoba/huangnidi-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "dff0ed5e-a6cd-5fc0-bbd8-bd6b96dd0e9d",
       "key": "earth/cn-gz/bijie/xiaoba/huangni",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d7850eb7-c6ea-584d-8c68-695b914fef3c",
       "key": "earth/cn-gz/bijie/xiaoba/fenghuang-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "2dbcb6ca-b37c-5cc3-bbff-653fa2ecc010",
       "key": "earth/cn-gz/bijie/xiaoba/ta-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

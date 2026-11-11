@@ -4,79 +4,105 @@
       "id": "818bbe4f-8b18-5ddb-a442-5c689744ef00",
       "key": "earth/cn-gz/bijie/cengtai/qingchun/tangfang",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "611fa6d2-4806-59de-8c92-639d70145b3f",
       "key": "earth/cn-gz/bijie/cengtai/qingchun/yangjiaguan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3842de6e-73af-5573-8ecc-d0d7f7fc565f",
       "key": "earth/cn-gz/bijie/cengtai/qingchun/meizigou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6d681df7-251a-5870-8b6b-7a6ba88100c5",
       "key": "earth/cn-gz/bijie/cengtai/guanxiang-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "a32160be-d5bf-57f6-b862-585edfb7440a",
       "key": "earth/cn-gz/bijie/cengtai/guanxiang/guanxiangcheng",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "aef2fd7d-ad02-516c-b6d8-952badada96e",
       "key": "earth/cn-gz/bijie/cengtai/guanxiang/doufugou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "500221c2-84a5-57e6-81af-3aa7da9b95c8",
       "key": "earth/cn-gz/bijie/cengtai/guanxiang/xuejiaping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a133c165-f296-5f40-bd6c-7f596b948709",
       "key": "earth/cn-gz/bijie/cengtai/guanxiang/shiwo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b70e1ad5-4d41-5387-b278-ce268523a8f2",
       "key": "earth/cn-gz/bijie/cengtai/guanxiang/beishan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "cc4a13a8-1a9b-5b62-bbf0-e800a99df638",
       "key": "earth/cn-gz/bijie/cengtai/guanxiang/xieshanqing",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "03b9ab98-d845-5dc2-a0f6-b661fc06c58b",
       "key": "earth/cn-gz/bijie/cengtai/guanxiang/yinggezui",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "521235d7-2362-5b56-a7ae-5d93c2a5bce2",
       "key": "earth/cn-gz/bijie/cengtai/huangchang-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "dcc4d9c9-ad06-5a71-88eb-901485027dc5",
       "key": "earth/cn-gz/bijie/cengtai/guanyin-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

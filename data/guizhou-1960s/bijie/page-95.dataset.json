@@ -4,43 +4,57 @@
       "id": "7151de6d-cf77-5ddb-b76a-2a32f8fa84ff",
       "key": "earth/cn-gz/bijie/baojia/yudongchong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "54090a91-e6c4-54b5-8f29-2d9396bf666b",
       "key": "earth/cn-gz/bijie/baojia/zhongduan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a9116797-ab40-50c5-a66b-8a4c5b37cff8",
       "key": "earth/cn-gz/bijie/baojia/dawanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b3abe0db-e11b-5b52-9fbc-8884c32fb5b9",
       "key": "earth/cn-gz/bijie/baojia/toudaohe",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "aa133968-9432-5aef-a191-807c47dd1e24",
       "key": "earth/cn-gz/bijie/baojia/matang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6c6c3f1f-5d97-52ec-88d6-e1fb96e6e937",
       "key": "earth/cn-gz/bijie/baojia/changyaoling",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "98d37e3f-f990-533d-a91e-b03e3ad9fad4",
       "key": "earth/cn-gz/bijie/baojia/chahe-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

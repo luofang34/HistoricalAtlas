@@ -4,67 +4,89 @@
       "id": "b7880401-fe49-5858-b613-449440a74c0c",
       "key": "earth/cn-gz/bijie/duipo/qingganglin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f46169af-ed5b-52ee-92cb-7b1b9aae9a09",
       "key": "earth/cn-gz/bijie/duipo/erdengpo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1fb5ffa1-959d-59ad-8d76-16d6f7c525d3",
       "key": "earth/cn-gz/bijie/duipo/baiyanglin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "163faa83-ef5c-5427-a96e-a3e993ad165f",
       "key": "earth/cn-gz/bijie/duipo/shierguai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2b80d4f1-a532-5034-a1ec-b6a7a974617d",
       "key": "earth/cn-gz/bijie/duipo/dazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "10e85e60-8dab-5b20-a488-a1a754556df7",
       "key": "earth/cn-gz/bijie/duipo/dapo",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "8225fc81-6c30-5200-975d-cc6c3b940f85",
       "key": "earth/cn-gz/bijie/duipo/langchangpingzi",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "311041f1-026e-5bb0-8a65-9a98cbc25da2",
       "key": "earth/cn-gz/bijie/duipo/changwanzi",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "2ad74b92-049f-5271-b788-6c9a61f5009b",
       "key": "earth/cn-gz/bijie/duipo/mianyu-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "7222c117-aa40-5900-b43f-0263b5a1bea1",
       "key": "earth/cn-gz/bijie/duipo/yingzuiyan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "61b55b7c-440e-57ed-ac85-48f4a7b5fba6",
       "key": "earth/cn-gz/bijie/duipo/yachayan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

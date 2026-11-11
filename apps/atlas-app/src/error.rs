@@ -9,6 +9,9 @@ pub enum AppError {
     /// Physical imagery configuration is invalid.
     #[error(transparent)]
     Basemap(#[from] crate::scene::basemap::ManifestError),
+    /// Publication manifest or verified part failed validation.
+    #[error(transparent)]
+    Manifest(#[from] atlas_boundary::publication::ManifestError),
     /// Geometry parts failed manifest, checksum, or JSON validation.
     #[error(transparent)]
     Geometry(#[from] atlas_boundary::publication::GeometryError),
@@ -33,12 +36,21 @@ pub enum AppError {
     /// A published plate model is misfiled or has invalid rotations.
     #[error("plate model {0} is misfiled or has invalid rotations")]
     PlateModel(String),
-    /// Paleogeographic reconstruction failed.
-    #[error("plate reconstruction: {0}")]
+    /// Plate kinematics model failed.
+    #[error("plate model: {0}")]
     Plate(#[from] atlas_geo::plates::PlateModelError),
+    /// Paleogeographic coordinate reconstruction failed.
+    #[error("plate reconstruction: {0}")]
+    Paleo(#[from] atlas_ledger::plates::PaleoError),
     /// A publication document could not be decoded.
     #[error("atlas JSON: {0}")]
     Json(#[from] serde_json::Error),
+    /// Streamed shard is absent from the verified publication manifest.
+    #[error("unknown or invalid entity shard {0:?}")]
+    UnknownShard(String),
+    /// Entity identity appeared more than once across shards or catalog items.
+    #[error("duplicate entity {0:?} in publication")]
+    DuplicateEntity(EntityId),
     /// The entry key differs from the entity it contains.
     #[error("entity shard key {key:?} contains {entity:?}")]
     EntryIdentity {

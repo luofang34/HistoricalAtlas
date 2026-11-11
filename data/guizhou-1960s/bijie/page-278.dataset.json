@@ -4,211 +4,281 @@
       "id": "409130e4-d310-5fc9-a2be-7383bf0c9224",
       "key": "earth/cn-gz/bijie/daji/daji-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "11c1396e-4394-596d-b905-ac5293c7e938",
       "key": "earth/cn-gz/bijie/daji/daji/dengtaishu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3527b14a-229f-5633-8e95-a1eb9d23110a",
       "key": "earth/cn-gz/bijie/daji/daji/dapotou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "71e9db5e-ac4f-5600-8fde-1b17acf663cc",
       "key": "earth/cn-gz/bijie/daji/daji/chalinggou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "64b37fb1-249c-5b2d-b536-e04696983e46",
       "key": "earth/cn-gz/bijie/daji/daji/taojiawan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c43384a4-a178-559d-a2c2-750ef4e85a15",
       "key": "earth/cn-gz/bijie/daji/daji/dajichang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f4f1bfa3-4d9e-597b-a2d3-4b3bd9982c09",
       "key": "earth/cn-gz/bijie/daji/daji/longjiagou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5617acaf-5c89-57aa-b936-ef282b9d24ec",
       "key": "earth/cn-gz/bijie/daji/daji/laojie",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b8b2f9ff-c0c5-51d4-ba80-159d620e4ec8",
       "key": "earth/cn-gz/bijie/daji/daji/guanyinmiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5c0f0966-2347-56c7-a2a5-fcf07e0af7e1",
       "key": "earth/cn-gz/bijie/daji/daji/tianbatou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "05a5fa42-e17b-5315-96d3-c375102fabe2",
       "key": "earth/cn-gz/bijie/daji/daji/shangzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a5e821f0-11d4-5ccc-b303-1eb88193d1d8",
       "key": "earth/cn-gz/bijie/daji/daji/xiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "64a86c9e-818e-5f67-82a0-9e18db82b096",
       "key": "earth/cn-gz/bijie/daji/school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "169f0b52-1c38-5a71-8cff-44f77bd3b517",
       "key": "earth/cn-gz/bijie/daji/shuanglin-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "47c450f0-aaf0-5e0a-ba2b-4a39d8e7cee8",
       "key": "earth/cn-gz/bijie/daji/shuanglin/baixianglin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e15510a4-32bd-502f-b394-3beeae314000",
       "key": "earth/cn-gz/bijie/daji/shuanglin/banpo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3a299367-72bd-50bd-b24b-c6910beafbe0",
       "key": "earth/cn-gz/bijie/daji/shuanglin/shangmulakua",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bc247c22-68ad-5c79-8635-5c21db9b673d",
       "key": "earth/cn-gz/bijie/daji/shuanglin/xiamulakua",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5609248c-c328-5808-ac12-747a9b263ffd",
       "key": "earth/cn-gz/bijie/daji/shuanglin/erdouyan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8438628a-c1b8-52b1-a4ab-575af0ff643c",
       "key": "earth/cn-gz/bijie/daji/shuanglin/mulakua",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "12786310-9336-5f16-a611-d89e5fca9ec5",
       "key": "earth/cn-gz/bijie/daji/longxing-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "4d53f502-8ae0-5d29-90e4-2403303beb93",
       "key": "earth/cn-gz/bijie/daji/longxing/changdigeng",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "94e7cde8-96fe-5fa7-bee0-fce49d89cf32",
       "key": "earth/cn-gz/bijie/daji/longxing/dapo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5a56df45-cf10-50b1-8948-a74fb9ba0f54",
       "key": "earth/cn-gz/bijie/daji/longxing/shuiqingkou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f19d74d5-ea6c-504b-9813-7a70ca7abb59",
       "key": "earth/cn-gz/bijie/daji/longxing/longmenlang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6b0a8d98-ac34-5563-82f2-ecd4b2f5443b",
       "key": "earth/cn-gz/bijie/daji/longxing/wuhuangmiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "98da787b-3f59-54da-85dd-52240558934b",
       "key": "earth/cn-gz/bijie/daji/longxing/xixiangou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "314009be-4df7-53fe-929f-bb11c132a894",
       "key": "earth/cn-gz/bijie/daji/longxing/guanzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6761ea3e-3dc4-591c-914f-12648d31e4c5",
       "key": "earth/cn-gz/bijie/daji/longling/goupigou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d96859bf-b79e-5a37-89b6-01c13a63f2f1",
       "key": "earth/cn-gz/bijie/daji/longling/yakoushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "73184aa1-a2a6-5cf7-aa2e-073ee177b706",
       "key": "earth/cn-gz/bijie/daji/longling/mawo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f17361ea-376c-5c2a-803e-9239be05dbe0",
       "key": "earth/cn-gz/bijie/daji/longling/dazhulin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "52d8ea35-863c-5233-8e5a-1a23ea2accd8",
       "key": "earth/cn-gz/bijie/daji/longling/yanba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d1d92cee-1e0a-5daa-ace5-57b9d024c08f",
       "key": "earth/cn-gz/bijie/daji/longling/haozidong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "829f7dee-3e40-5e70-a476-451c3e30fbfd",
       "key": "earth/cn-gz/bijie/daji/longling-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     }
   ],
   "records": [

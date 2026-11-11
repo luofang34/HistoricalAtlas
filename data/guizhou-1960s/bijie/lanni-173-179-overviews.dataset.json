@@ -4,13 +4,17 @@
       "id": "818021c9-5505-53b1-bd87-b44c1d69e1a6",
       "key": "earth/cn-gz/bijie/guole/wangpo-ridge",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "289e08c7-692e-51cb-90c2-b9c7f1e9daf7",
       "key": "earth/cn-gz/bijie/liuhua/liuhua-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

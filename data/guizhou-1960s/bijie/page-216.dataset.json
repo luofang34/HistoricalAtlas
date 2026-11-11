@@ -4,25 +4,33 @@
       "id": "c4f119c6-2b74-5487-b13e-4bc1109dc6dc",
       "key": "earth/cn-gz/bijie/mianyuhe/longju-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "33c75c8a-08b5-57d8-9a7b-db11a12fe909",
       "key": "earth/cn-gz/bijie/mianyuhe/mahuangqing-liangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "8547b625-fcf3-5754-8851-381e08504059",
       "key": "earth/cn-gz/bijie/mianyuhe/baidao-liangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "660a2ae4-ab14-5619-84df-2ae220aa713f",
       "key": "earth/cn-gz/bijie/mianyuhe/bijiashan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

@@ -4,109 +4,145 @@
       "id": "f3e2c20b-e8d0-5c9a-b8f6-aaefd42784b0",
       "key": "earth/cn-gz/bijie/duipo/former-district",
       "body": "earth",
-      "kind": "district"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "0af5bb6c-3af3-5936-9628-71ae64f29d4c",
       "key": "earth/cn-gz/bijie/heguantun/luohuntai",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "12897fcb-f620-537a-bb5a-4b7b7297546d",
       "key": "earth/cn-gz/bijie/heguantun/wolongshi",
       "body": "earth",
-      "kind": "geological_site"
+      "kind": {
+        "geology": "site"
+      }
     },
     {
       "id": "ab8bcb15-e773-5a50-91a2-c84b5ae63d50",
       "key": "earth/cn-gz/bijie/heguantun/tongtiandong",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     },
     {
       "id": "73226a99-6652-59da-a0a3-936add8af389",
       "key": "earth/cn-gz/bijie/heguantun/mijiadong",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     },
     {
       "id": "d3dddabe-390f-5075-9f19-8a4423222d39",
       "key": "earth/cn-gz/bijie/heguantun/chengtianyan",
       "body": "earth",
-      "kind": "geological_site"
+      "kind": {
+        "geology": "site"
+      }
     },
     {
       "id": "a11fa7a8-cf44-5460-a78a-b03347db8519",
       "key": "earth/cn-gz/bijie/heguantun-district/duipo-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "a3352a66-a31e-519b-b363-05a4a1a94798",
       "key": "earth/cn-gz/bijie/heguantun-district/fani-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "cc83ce7e-d2e8-50b1-83b2-663e6f4492a3",
       "key": "earth/cn-gz/bijie/heguantun-district/houqing-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "f6b513f1-d599-544e-ab14-f9a7cea0b7d6",
       "key": "earth/cn-gz/bijie/heguantun-district/limin-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "efc0a59d-4da6-5f41-8b7e-e7d07132436f",
       "key": "earth/cn-gz/bijie/heguantun-district/dapingzi-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "60a585db-b6a5-5b57-a2db-5c14bea7f328",
       "key": "earth/cn-gz/bijie/heguantun-district/limin-power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "2ea5b34f-121e-50eb-8d99-61ac3778ad66",
       "key": "earth/cn-gz/bijie/heguantun-district/houqing-bayi-power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "42804e6a-d8b9-599f-b2db-78fe4f5e5963",
       "key": "earth/cn-gz/bijie/daba/shibanjing-sulfur-factory",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "df892ad0-7015-520c-a380-9692aeffeece",
       "key": "earth/cn-gz/bijie/heguantun/market-street",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "76fc2335-1b7b-5b72-8aad-0f67ccbc7a74",
       "key": "earth/cn-gz/bijie/heguantun/guantun-middle-school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "b9b2c3b6-a9f1-557b-acea-cae2295fb7ac",
       "key": "earth/cn-gz/bijie/duipo/market-street",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "a7e989ee-e73e-5dd2-b9a5-c9de26cff2ea",
       "key": "earth/cn-gz/bijie/shuiqing/xiaogaoshan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

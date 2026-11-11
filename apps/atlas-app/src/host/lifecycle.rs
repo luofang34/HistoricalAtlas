@@ -142,7 +142,13 @@ impl ApplicationHandler<Signal> for Lifecycle {
                 }
             }
             Signal::Repaint(delay) => {
-                if let Some(deadline) = Instant::now().checked_add(delay) {
+                if delay.is_zero() {
+                    self.repaint_at = None;
+                    event_loop.set_control_flow(ControlFlow::Wait);
+                    if let Some(host) = &self.host {
+                        host.window.request_redraw();
+                    }
+                } else if let Some(deadline) = Instant::now().checked_add(delay) {
                     self.repaint_at =
                         Some(self.repaint_at.map_or(deadline, |old| old.min(deadline)));
                     if let Some(at) = self.repaint_at {

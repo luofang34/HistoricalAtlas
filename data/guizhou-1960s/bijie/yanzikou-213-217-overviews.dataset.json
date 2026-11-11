@@ -4,25 +4,33 @@
       "id": "fedc0511-6f07-54ca-bdd7-349fed019c38",
       "key": "earth/cn-gz/bijie/mianyuhe/longdong-predecessor-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "20790472-52ec-5069-80d4-f82746a6b3f8",
       "key": "earth/cn-gz/bijie/mianyuhe/tiejiang-predecessor-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "41502ab6-fdcd-5780-8af4-e7d44ce44173",
       "key": "earth/cn-gz/bijie/liangyan/guanyin-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "11089563-3347-5c62-a5ef-da3e75f5ec65",
       "key": "earth/cn-gz/bijie/liangyan/baiyan-post",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

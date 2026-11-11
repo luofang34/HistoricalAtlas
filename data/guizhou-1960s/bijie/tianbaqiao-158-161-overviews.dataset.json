@@ -4,25 +4,33 @@
       "id": "b58d50a1-eb0f-5e39-9224-1238f204a747",
       "key": "earth/cn-gz/bijie/tianbaqiao/tianba-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "5ad196f3-6ec7-5740-b7d8-1604f34f9672",
       "key": "earth/cn-gz/bijie/tianbaqiao/tianba-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "3476b992-a4ec-54e5-a164-ee33edcf0ee2",
       "key": "earth/cn-gz/bijie/tianbaqiao/tianbaqiao",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "012f4163-cba1-5b9d-827d-948909d03a9e",
       "key": "earth/cn-gz/bijie/tianbaqiao/xiniutang-dam",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     }
   ],
   "records": [

@@ -4,13 +4,17 @@
       "id": "37e8277d-8d83-5efa-8c4e-830f737d47ec",
       "key": "earth/cn-gz/bijie/shuiqing/daliangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "07742957-e323-531b-b374-c5863fe50fc2",
       "key": "earth/cn-gz/bijie/shuiqing/dagan-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

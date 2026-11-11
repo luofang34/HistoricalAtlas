@@ -129,3 +129,13 @@ fn invalid_input_and_overlapping_histories_fail_with_context() {
         })
     ));
 }
+
+#[test]
+fn interleaved_moving_plates_group_per_plate_while_preserving_crossovers() {
+    let interleaved = "1 0 90 0 0 0\n2 0 90 0 10 0\n1 10 90 0 20 0\n2 10 90 0 30 0\n";
+    let model = RotationModel::from_rot(interleaved).unwrap();
+    let step = model.rotation(PlateId(1), 5.0, PlateId(0)).unwrap();
+    assert!((step.rotation.angle_degrees - 10.0).abs() < 1e-10);
+    let second = model.rotation(PlateId(2), 5.0, PlateId(0)).unwrap();
+    assert!((second.rotation.angle_degrees - 20.0).abs() < 1e-10);
+}

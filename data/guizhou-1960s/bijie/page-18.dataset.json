@@ -4,49 +4,65 @@
       "id": "c99e7eb4-c2b6-5b4a-869e-6943c3756db8",
       "key": "earth/cn-gz/bijie/urban/shoufu-si",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "090683de-cb9f-5d09-9fef-9a4f3bacae31",
       "key": "earth/cn-gz/bijie/urban/tianhou-gong",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "5a13d689-149c-5411-991a-8fd8779502f0",
       "key": "earth/cn-gz/bijie/urban/heshen-miao",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "74539f8c-0434-5be9-b2b8-159c965c0ab8",
       "key": "earth/cn-gz/bijie/urban/xianglong-si",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "9a69f9e1-2322-5ea2-b2eb-adfa430fbf73",
       "key": "earth/cn-gz/bijie/urban/shanxi-miao",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "545a6d31-e15c-5621-8d0e-f4bffc8ab1a1",
       "key": "earth/cn-gz/bijie/urban/dongguan-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "ef5ada7f-382e-540d-8c29-b77d3070f78c",
       "key": "earth/cn-gz/bijie/urban/chuandianqian-committee-site",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "2398b003-3d5c-5ade-9980-fd998b91bf09",
       "key": "earth/cn-gz/bijie/urban/anti-japanese-army-headquarters-site",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

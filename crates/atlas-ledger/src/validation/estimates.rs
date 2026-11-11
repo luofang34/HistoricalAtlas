@@ -1,5 +1,5 @@
 use super::{ValidationError, caused, fail};
-use crate::model::{Dataset, Entity, Estimate, EstimateValue, Record};
+use crate::model::{Dataset, Dispute, Entity, Estimate, EstimateValue, Record, Source};
 use atlas_core::identity::{EntityId, FactId};
 use std::collections::{BTreeMap, BTreeSet};
 
@@ -7,9 +7,29 @@ pub(super) fn validate_estimates(
     data: &Dataset,
     entities: &BTreeMap<EntityId, &Entity>,
     records: &BTreeMap<FactId, &Record>,
+    sources: &BTreeMap<&str, &Source>,
 ) -> Result<(), ValidationError> {
-    let mut estimates = BTreeMap::new();
-    for estimate in &data.estimates {
+    validate_added_estimates(
+        &Dataset::default(),
+        &data.estimates,
+        &data.disputes,
+        entities,
+        records,
+        sources,
+    )
+}
+
+pub(super) fn validate_added_estimates<'a>(
+    existing: &'a Dataset,
+    added_estimates: &'a [Estimate],
+    added_disputes: &'a [Dispute],
+    entities: &BTreeMap<EntityId, &Entity>,
+    records: &BTreeMap<FactId, &Record>,
+    sources: &BTreeMap<&str, &Source>,
+) -> Result<(), ValidationError> {
+    let mut estimates: BTreeMap<FactId, &Estimate> =
+        existing.estimates.iter().map(|e| (e.id, e)).collect();
+    for estimate in added_estimates {
         let expected = FactId::from_key(&estimate.key).map_err(|e| caused(&estimate.key, e))?;
         if estimate.id != expected
             || records.contains_key(&estimate.id)
@@ -37,9 +57,9 @@ pub(super) fn validate_estimates(
                 "estimate basis requires checked source records",
             ));
         }
-        validate_value(estimate, entities, records)?;
+        validate_value(estimate, entities, records, sources)?;
     }
-    for dispute in &data.disputes {
+    for dispute in added_disputes {
         let unique: BTreeSet<_> = dispute.alternatives.iter().collect();
         let selected = estimates.get(&dispute.estimate_id);
         if unique.len() < 2
@@ -64,9 +84,20 @@ fn validate_value(
     estimate: &Estimate,
     entities: &BTreeMap<EntityId, &Entity>,
     records: &BTreeMap<FactId, &Record>,
+    sources: &BTreeMap<&str, &Source>,
 ) -> Result<(), ValidationError> {
     match &estimate.value {
-        EstimateValue::Plate { model_id, plate_id } => {
+        EstimateValue::Plate {
+            model_id,
+            plate_id,
+            validity,
+        } => {
+            if let Some(span) = validity {
+                span.validate().map_err(|e| caused(&estimate.key, e))?;
+                if span.start.is_none() && span.end.is_none() {
+                    return Err(fail(&estimate.key, "plate validity requires an endpoint"));
+                }
+            }
             let on_earth = entities
                 .get(&estimate.entity_id)
                 .is_some_and(|entity| entity.body == atlas_geo::body::BodyId::Earth);
@@ -120,7 +151,7 @@ fn validate_value(
             registration,
         } => {
             location(estimate, entities, *point, *datum, *uncertainty_m)?;
-            map_location(estimate, records, *record_id, registration)?;
+            map_location(estimate, records, sources, *record_id, registration)?;
         }
         EstimateValue::Temporal { assertion } => {
             super::temporal::validate_temporal(estimate, assertion, entities, records)?;
@@ -132,21 +163,36 @@ fn validate_value(
 fn map_location(
     estimate: &Estimate,
     records: &BTreeMap<FactId, &Record>,
+    sources: &BTreeMap<&str, &Source>,
     record_id: FactId,
     registration: &str,
 ) -> Result<(), ValidationError> {
     let name = registration
         .strip_prefix("maps/")
         .and_then(|p| p.strip_suffix(".json"));
+    let valid_record = records.get(&record_id).is_some_and(|r| {
+        if r.entity_id != estimate.entity_id {
+            return false;
+        }
+        if r.scan_page.is_some() {
+            return true;
+        }
+        sources.get(r.source_id.as_str()).is_some_and(|source| {
+            source.scan_pages.is_none()
+                && source
+                    .capture
+                    .as_ref()
+                    .and_then(|capture| capture.sha256.as_ref())
+                    .is_some()
+        })
+    });
     if name.is_none_or(|n| {
         n.is_empty()
             || !n
                 .bytes()
                 .all(|c| c.is_ascii_lowercase() || c.is_ascii_digit() || c == b'-')
     }) || !estimate.basis.contains(&record_id)
-        || !records
-            .get(&record_id)
-            .is_some_and(|r| r.entity_id == estimate.entity_id && r.scan_page.is_some())
+        || !valid_record
     {
         return Err(fail(
             &estimate.key,

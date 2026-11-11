@@ -1,5 +1,6 @@
 use std::collections::BTreeMap;
 
+use atlas_core::identity::EntityId;
 use atlas_geo::{body::BodyId, coordinates::CoordinateObservation};
 use atlas_ledger::model::{Entity, Record};
 use geozero::mvt::TileValue;
@@ -19,6 +20,7 @@ pub(super) fn collect<'a>(
     input: &'a LedgerInput,
     body: BodyId,
     base: &str,
+    shard_paths: &BTreeMap<EntityId, String>,
 ) -> Result<Vec<ObservationPoint<'a>>, TileError> {
     let entities: BTreeMap<_, _> = input
         .data
@@ -37,7 +39,7 @@ pub(super) fn collect<'a>(
             result.push(ObservationPoint {
                 coordinate,
                 projected: projection::project(coordinate.point, record.id)?,
-                properties: properties(record, entity, coordinate, base)?,
+                properties: properties(record, entity, coordinate, base, shard_paths)?,
             });
         }
     }
@@ -49,13 +51,15 @@ fn properties(
     entity: &Entity,
     coordinate: &CoordinateObservation,
     base: &str,
+    shard_paths: &BTreeMap<EntityId, String>,
 ) -> Result<BTreeMap<String, TileValue>, TileError> {
     let mut values = atlas_ledger::features::observation_properties(record, entity, coordinate);
     if let Some(values) = values.as_object_mut() {
-        values.insert(
-            "evidence_url".into(),
-            json!(format!("{base}entities/index/{}.json", entity.id.shard())),
-        );
+        values.insert("entity_kind".into(), json!(entity.kind.code()));
+        let shard_path = shard_paths
+            .get(&entity.id)
+            .map_or("manifest.json", String::as_str);
+        values.insert("evidence_url".into(), json!(format!("{base}{shard_path}")));
     }
     scalars(values)
 }
@@ -72,6 +76,13 @@ pub(super) fn scalars(values: serde_json::Value) -> Result<BTreeMap<String, Tile
                     None => TileValue::Double(value.as_f64().unwrap_or_default()),
                 },
                 serde_json::Value::Null => continue,
+                serde_json::Value::Object(ref map) if key == "entity_kind" && map.len() == 1 => {
+                    if let Some((domain, serde_json::Value::String(sub))) = map.iter().next() {
+                        TileValue::Str(format!("{domain}/{sub}"))
+                    } else {
+                        TileValue::Str(serde_json::to_string(&value)?)
+                    }
+                }
                 value => TileValue::Str(serde_json::to_string(&value)?),
             };
             result.insert(key, scalar);

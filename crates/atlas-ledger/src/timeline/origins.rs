@@ -18,6 +18,40 @@ pub struct SelectedOrigin<'a> {
     pub disputes: Vec<&'a Dispute>,
 }
 
+pub(super) fn occurred(
+    time: &OriginTime,
+    at: EpochTime,
+    selection: TimeSelection,
+) -> Result<Option<TimeMembership>, TimeError> {
+    let membership = time.occurred_by(at)?;
+    let included = match selection {
+        TimeSelection::Nominal => at >= time.nominal(),
+        TimeSelection::Possible => membership != TimeMembership::Outside,
+        TimeSelection::Certain => membership == TimeMembership::Certain,
+    };
+    Ok(included.then_some(membership))
+}
+
+pub(super) fn unformed(
+    estimates: &[&Estimate],
+    at: EpochTime,
+    selection: TimeSelection,
+) -> Result<BTreeSet<EntityId>, TimeError> {
+    let mut states: BTreeMap<EntityId, bool> = BTreeMap::new();
+    for estimate in estimates {
+        let EstimateValue::Origin { time } = &estimate.value else {
+            continue;
+        };
+        let formed = occurred(time, at, selection)?.is_some();
+        let entry = states.entry(estimate.entity_id).or_insert(false);
+        *entry |= formed;
+    }
+    Ok(states
+        .into_iter()
+        .filter_map(|(id, formed)| (!formed).then_some(id))
+        .collect())
+}
+
 pub(super) fn merge<'a>(
     entities: &mut Vec<EntitySlice<'a>>,
     estimates: &[&'a Estimate],
@@ -30,13 +64,7 @@ pub(super) fn merge<'a>(
         let EstimateValue::Origin { time } = &estimate.value else {
             continue;
         };
-        let membership = time.occurred_by(at)?;
-        let included = match selection {
-            TimeSelection::Nominal => at >= time.nominal(),
-            TimeSelection::Possible => membership != TimeMembership::Outside,
-            TimeSelection::Certain => membership == TimeMembership::Certain,
-        };
-        if included {
+        if let Some(membership) = occurred(time, at, selection)? {
             origins
                 .entry(estimate.entity_id)
                 .or_default()

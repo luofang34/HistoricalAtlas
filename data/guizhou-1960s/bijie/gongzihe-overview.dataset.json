@@ -4,7 +4,9 @@
       "id": "41886e15-dab8-5693-b898-c0ea4853661c",
       "key": "earth/cn-gz/bijie/gongzihe/houziqiao-power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     }
   ],
   "records": [

@@ -20,9 +20,13 @@ pub enum HostError {
     /// A publication font cannot be loaded.
     #[error(transparent)]
     Font(#[from] crate::fonts::FontError),
+    /// Physical basemap manifest could not be loaded.
+    #[error(transparent)]
+    Basemap(#[from] crate::scene::basemap::ManifestError),
     /// A static browser resource could not be loaded.
+    #[cfg(target_arch = "wasm32")]
     #[error("atlas asset: {0}")]
-    Resource(#[from] maplibre::io::source_client::SourceFetchError),
+    Resource(#[from] crate::resources::ResourceError),
     /// The operating system could not initialize the event loop.
     #[error("window event loop: {0}")]
     EventLoop(#[from] winit::error::EventLoopError),
@@ -127,6 +131,15 @@ impl Host {
             Vec::new(),
             &self.window,
         );
+        if let Some(viewport) = output.viewport_output.get(&egui::ViewportId::ROOT)
+            && viewport.repaint_delay < std::time::Duration::MAX
+        {
+            if viewport.repaint_delay.is_zero() {
+                self.window.request_redraw();
+            } else {
+                self.context.request_repaint_after(viewport.repaint_delay);
+            }
+        }
     }
 }
 

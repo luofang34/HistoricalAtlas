@@ -237,6 +237,80 @@ fn estimates_require_checked_evidence_and_a_matching_datum() {
     assert!(std::error::Error::source(&error).is_some());
 }
 
+#[test]
+fn unpaginated_captured_sheet_supports_map_location_and_unformed_origin_queries() {
+    use crate::timeline::{TimeSelection, Timeline};
+    use atlas_core::time::EpochTime;
+    use serde_json::json;
+
+    let entity = EntityId::from_key("earth/test/chicxulub").unwrap();
+    let record = FactId::from_key("frame/chicxulub").unwrap();
+    let map_est = FactId::from_key("editorial/chicxulub/map").unwrap();
+    let origin_est = FactId::from_key("editorial/chicxulub/origin").unwrap();
+    let catalog: SourceCatalog = serde_json::from_value(json!({
+        "sources": [{
+            "id": "single-sheet",
+            "title": "Gravity anomaly sheet",
+            "capture": {
+                "medium": "satellite_image",
+                "sha256": "a".repeat(64),
+                "archive": {"repository": "Test", "accession": "GRAV-1"}
+            }
+        }]
+    }))
+    .unwrap();
+    let mut data: Dataset = serde_json::from_value(json!({
+        "entities": [{"id": entity, "key": "earth/test/chicxulub", "body": "earth", "kind": {"geology": "crater"}}],
+        "records": [{
+            "id": record, "key": "frame/chicxulub", "entity_id": entity,
+            "source_id": "single-sheet", "locator": "Ring anomaly", "checked": true,
+            "observation": {"name": "Chicxulub"}
+        }],
+        "estimates": [
+            {
+                "id": map_est, "key": "editorial/chicxulub/map", "entity_id": entity,
+                "basis": [record], "brief": "Registered from single-frame scene",
+                "value": {
+                    "kind": "map_location", "record_id": record,
+                    "point": {"longitude": -89.5, "latitude": 21.4},
+                    "datum": "wgs84", "uncertainty_m": 1000.0,
+                    "registration": "maps/chicxulub.json"
+                }
+            },
+            {
+                "id": origin_est, "key": "editorial/chicxulub/origin", "entity_id": entity,
+                "basis": [record], "brief": "K-Pg impact age",
+                "value": {
+                    "kind": "origin",
+                    "time": {"constraint": "estimated", "instant": {
+                        "earliest": "-100", "nominal": "-50", "latest": "-10", "precision": "millisecond"
+                    }}
+                }
+            }
+        ],
+        "disputes": []
+    }))
+    .unwrap();
+    validate(&catalog, &data).unwrap();
+    let timeline = Timeline::from_validated(&data);
+    assert!(
+        timeline
+            .unformed_at(EpochTime::from_ticks(-60), TimeSelection::Nominal)
+            .unwrap()
+            .contains(&entity)
+    );
+    assert!(
+        !timeline
+            .unformed_at(EpochTime::from_ticks(-50), TimeSelection::Nominal)
+            .unwrap()
+            .contains(&entity)
+    );
+    let mut missing_hash = catalog;
+    missing_hash.sources[0].capture.as_mut().unwrap().sha256 = None;
+    assert!(validate(&missing_hash, &data).is_err());
+    data.records[0].scan_page = None;
+}
+
 #[cfg(test)]
 pub(super) fn catalog() -> SourceCatalog {
     SourceCatalog {

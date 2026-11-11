@@ -4,31 +4,41 @@
       "id": "af31786a-9d2e-5f0a-81e0-fdb67839e1f7",
       "key": "earth/cn-gz/bijie/xiaoba/qinglong-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "7dd24131-265d-598d-bee3-0b3c5bcb0b3e",
       "key": "earth/cn-gz/bijie/hantun-district",
       "body": "earth",
-      "kind": "district"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "48231fd1-04b2-59c2-bd41-4ec0d00954ff",
       "key": "earth/cn-gz/bijie/zhongtun/shuiniutun-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "cd41a893-5544-5878-99ea-6711f20a3515",
       "key": "earth/cn-gz/bijie/zhongtun/shuiniutun-power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "0ef909fc-74ef-5289-ba44-29d165dd3638",
       "key": "earth/cn-gz/bijie/zhongtun/camphor-tree",
       "body": "earth",
-      "kind": "tree"
+      "kind": {
+        "ecology": "tree"
+      }
     }
   ],
   "records": [

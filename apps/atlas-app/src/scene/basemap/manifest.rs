@@ -26,6 +26,10 @@ pub enum ManifestError {
         #[source]
         source: std::io::Error,
     },
+    /// A browser basemap asset could not be fetched.
+    #[cfg(target_arch = "wasm32")]
+    #[error(transparent)]
+    Resource(#[from] crate::resources::ResourceError),
 }
 
 /// Physical imagery inventory; tile addresses determine its zooms and coverage.

@@ -4,193 +4,257 @@
       "id": "d38cf2ff-1e25-5c5b-880c-03055a505a78",
       "key": "earth/cn-gz/bijie/urban/jiefang-road-office",
       "body": "earth",
-      "kind": "street_office"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "e95c434e-66df-55d4-a10f-6a187e09830c",
       "key": "earth/cn-gz/bijie/urban/shuangjing-road-office",
       "body": "earth",
-      "kind": "street_office"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "49c60f74-201b-5a8d-a5c5-659d7bc1bce9",
       "key": "earth/cn-gz/bijie/urban/weining-road-office",
       "body": "earth",
-      "kind": "street_office"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "bd4e55a4-7315-5a90-b436-4d9518816e91",
       "key": "earth/cn-gz/bijie/urban/jiefang-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "c87ae532-675d-5b7d-ae9a-280a89ddbb3f",
       "key": "earth/cn-gz/bijie/urban/guanghui-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "36eebe70-6857-52b1-b6f8-acd2e49bd744",
       "key": "earth/cn-gz/bijie/urban/sifa-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "0e07e28f-4b8d-5fe1-9d2a-c820cbcfc739",
       "key": "earth/cn-gz/bijie/urban/ximen-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "ca3e09fa-757e-5937-9b72-79eea166bc1a",
       "key": "earth/cn-gz/bijie/urban/zhangjia-po",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "f1e8e9b8-1415-590f-894c-178950dd3931",
       "key": "earth/cn-gz/bijie/urban/yangjiao-po",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "4f0a3b68-e572-5d83-bfe2-3534de9282de",
       "key": "earth/cn-gz/bijie/urban/xinsheng-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "1c0aa8e6-1b2a-514a-84cd-8f214604bdb0",
       "key": "earth/cn-gz/bijie/urban/heping-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "8d69d3e4-347a-5fce-9a16-a93f43787636",
       "key": "earth/cn-gz/bijie/urban/tongjin-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "8ae8d5ce-221f-5ae6-b97c-4fa755ecef36",
       "key": "earth/cn-gz/bijie/urban/songshan-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "96585adc-b828-5850-b3e8-506e4000c51a",
       "key": "earth/cn-gz/bijie/urban/yanhe-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "5adaa4c6-b969-5a2f-99d0-35e90ce5be9d",
       "key": "earth/cn-gz/bijie/urban/changqing-po",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "ed3559ac-01d6-5025-92c0-a6ecac311f4a",
       "key": "earth/cn-gz/bijie/urban/xiangzi-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "9cb81472-3a63-552c-a7ee-912826a70629",
       "key": "earth/cn-gz/bijie/urban/xinxiang-lane",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "a7b17922-8e95-5f21-8b5f-4080003abaa8",
       "key": "earth/cn-gz/bijie/urban/shuixiangzi",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "be023740-08b1-5922-a72c-42f20db09b9d",
       "key": "earth/cn-gz/bijie/urban/tianhe-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "582413e5-0574-5c21-b9ad-9b142091077a",
       "key": "earth/cn-gz/bijie/urban/huancheng-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "60dbc32e-8034-5ad8-819a-5c5cc1d5006b",
       "key": "earth/cn-gz/bijie/urban/binhe-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "0121dcae-1922-5c23-9954-018ac382a3e6",
       "key": "earth/cn-gz/bijie/urban/zhonghua-north-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "3cf23c6f-5646-579c-baa8-f6b682ffbdfd",
       "key": "earth/cn-gz/bijie/urban/taiping-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "cc75504d-520b-5ab7-a046-4cd4b9391d44",
       "key": "earth/cn-gz/bijie/urban/wenchang-lane",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "4370829d-c65f-5ebb-8253-f3eba62a3911",
       "key": "earth/cn-gz/bijie/urban/shuangjing-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "ec4f6c3f-0e34-5ee8-9906-3d80371ce429",
       "key": "earth/cn-gz/bijie/urban/huiquan-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "09c0cd22-fccb-5b1a-af74-584e187d448b",
       "key": "earth/cn-gz/bijie/urban/dongan-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "a83d8de7-ccad-5f9c-a0fa-a250fd7b2c87",
       "key": "earth/cn-gz/bijie/urban/baihua-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "dd4d6965-056a-5039-87c6-434629075da9",
       "key": "earth/cn-gz/bijie/urban/zhennan-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "dbe84e05-4c5c-51ca-8deb-7ae72e84ae3c",
       "key": "earth/cn-gz/bijie/urban/zhongshan-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "95f803bd-124d-5107-a04d-8e9771fab3e3",
       "key": "earth/cn-gz/bijie/urban/shengli-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "7000030b-87ce-50f1-9ffb-c60a5f882331",
       "key": "earth/cn-gz/bijie/urban/gudao-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     }
   ],
   "records": [

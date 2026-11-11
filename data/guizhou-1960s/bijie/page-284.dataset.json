@@ -4,133 +4,177 @@
       "id": "07ae0793-0804-5a7f-a853-9aae8eabba15",
       "key": "earth/cn-gz/bijie/sili/xingfu/wangjiadi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "010fa2b8-3664-5cc1-9a05-e9a15ace4720",
       "key": "earth/cn-gz/bijie/sili/xingfu/dagou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b1e2aaa2-27b7-55e4-8022-c00061d8d719",
       "key": "earth/cn-gz/bijie/sili/xingfu/wangerguanshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "47187c01-4f56-5760-8af7-b1104faa33bb",
       "key": "earth/cn-gz/bijie/sili/lianfeng-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "220255c3-4ed6-5b8c-a5c4-81b14924b941",
       "key": "earth/cn-gz/bijie/sili/lianfeng/yantoushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "85dec503-8f14-556c-a82b-8c223bf1c4fc",
       "key": "earth/cn-gz/bijie/sili/lianfeng/yangjizhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3e767788-38bb-5260-b951-35c6699073a8",
       "key": "earth/cn-gz/bijie/sili/lianfeng/pingzishang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "37a6e633-7451-5251-8e66-46fa623f19eb",
       "key": "earth/cn-gz/bijie/sili/lianfeng/tianbatou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b9198cfa-3f1d-5831-a4e0-6122eb0a1dca",
       "key": "earth/cn-gz/bijie/sili/lianfeng/qinggangzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f91ddf12-639e-559d-9a32-3e37547dbed7",
       "key": "earth/cn-gz/bijie/sili/lianfeng/damiaozhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "51968d85-68b1-5a6f-bf26-e92ddfb7c3c4",
       "key": "earth/cn-gz/bijie/sili/lianfeng/wangguanhe",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "91611a89-bcb3-5acf-8d8f-acc825fc6ecc",
       "key": "earth/cn-gz/bijie/sili/yanwan-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "4d8acdfe-fae6-592f-84c6-fce26c961f1b",
       "key": "earth/cn-gz/bijie/sili/yanwan/batang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b1db8f3c-2b53-5742-a0f2-8b41d687f7a0",
       "key": "earth/cn-gz/bijie/sili/yanwan/zengjiayakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e46db518-c95a-51d5-a339-9781a818f75f",
       "key": "earth/cn-gz/bijie/sili/yanwan/shiyakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b0494e55-5e4d-504d-a18c-833e43c7de49",
       "key": "earth/cn-gz/bijie/sili/yanwan/mazongling",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ec0e2ffa-5248-586b-818f-e47740238ac3",
       "key": "earth/cn-gz/bijie/sili/yanwan/yanwan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "cc9cb2f2-0d2f-57a7-85a8-01a16a3cf67c",
       "key": "earth/cn-gz/bijie/sili/yanwan/zengjiawan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1def053c-cff1-5b4b-9f27-e377d43303d9",
       "key": "earth/cn-gz/bijie/sili/yanwan/pingzishang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1f171bad-c2f6-57de-9a3e-ea873e1d1457",
       "key": "earth/cn-gz/bijie/sili/wangguan-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "20c06d1e-5b32-577c-a987-832ed558fd1c",
       "key": "earth/cn-gz/bijie/sili/wangerguan-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "9be98da8-bb2d-5bc7-bb6f-fe455ed171ed",
       "key": "earth/cn-gz/bijie/sili/lengsha-ridge",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

@@ -107,6 +107,14 @@ impl Application {
                 .checkbox(&mut self.territory_visible, "Territory nodes")
                 .on_hover_text("Administrative and seat links for the selected place.")
                 .changed();
+            if self.layer == MapLayer::SelectedTime {
+                self.dirty |= ui
+                    .checkbox(&mut self.crustal_pins, "Crustal reference pins")
+                    .on_hover_text(
+                        "Show pre-origin features as passive reference pins on their host tectonic plate.",
+                    )
+                    .changed();
+            }
         });
         if self.layer != previous {
             self.sheet.visible = false;
@@ -156,8 +164,7 @@ impl Application {
                     if response.clicked() {
                         self.select(id, true);
                     }
-                    response
-                        .on_hover_text(self.atlas.entry(id).map_or("", |entry| &entry.entity.key));
+                    response.on_hover_text(self.atlas.entity_key(id).unwrap_or(""));
                 }
             });
     }

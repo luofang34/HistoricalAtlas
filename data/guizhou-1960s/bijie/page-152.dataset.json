@@ -4,19 +4,25 @@
       "id": "192d8536-d7ea-5066-a37f-d4db58da808c",
       "key": "earth/cn-gz/bijie/haizijie/wugongshan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "f4f8b7e6-a36d-5724-b903-d44eeff3c861",
       "key": "earth/cn-gz/bijie/haizijie/tuanpo",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "ce89c70b-0896-583b-a467-3e3923612a2b",
       "key": "earth/cn-gz/bijie/haizijie/huangjiachong-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     }
   ],
   "records": [

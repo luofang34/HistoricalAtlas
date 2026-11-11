@@ -4,79 +4,105 @@
       "id": "e7c72858-4bd8-586c-884a-42ab3ec16cc7",
       "key": "earth/cn-gz/bijie/zhongtun/zhongtun",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "530b2afb-06d2-578f-8eeb-5e455113b4d3",
       "key": "earth/cn-gz/bijie/zhongtun/erhe",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9ca11054-8cc3-52df-8b16-843349f92229",
       "key": "earth/cn-gz/bijie/zhongtun/baitouchong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "989e7b1e-7ebb-5336-9f69-fcdcc5eab7d5",
       "key": "earth/cn-gz/bijie/zhongtun/qingshanwa",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "07950bd3-1efe-578a-a43b-67b23743af51",
       "key": "earth/cn-gz/bijie/zhongtun/hebian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "dd27d8d2-f3d0-50d0-b070-74abd9af537d",
       "key": "earth/cn-gz/bijie/zhongtun/tiejiangzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2133c6b3-3aed-5f40-a28b-0212d3b522ed",
       "key": "earth/cn-gz/bijie/zhongtun/baiyanglin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "00261bfe-0e26-50e9-8da2-4e4795abc29d",
       "key": "earth/cn-gz/bijie/zhongtun/xiashuitang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c27b1d9b-e6c8-5239-a978-510e827cd5c0",
       "key": "earth/cn-gz/bijie/zhongtun/fanshahe",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3bd55e23-1036-5374-a113-401d6249ae17",
       "key": "earth/cn-gz/bijie/zhongtun/guanmen-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "9656549d-e15a-5bde-8e48-fcd90cce31de",
       "key": "earth/cn-gz/bijie/zhongtun/zhanjiapo",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "6c66efd7-7574-57c7-8e2d-e41e3e352af4",
       "key": "earth/cn-gz/bijie/zhongtun/zhongtun-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "a3d6e60e-d777-5c04-994f-f4a61fd8b14d",
       "key": "earth/cn-gz/bijie/zhongtun/ginkgo",
       "body": "earth",
-      "kind": "tree"
+      "kind": {
+        "ecology": "tree"
+      }
     }
   ],
   "records": [

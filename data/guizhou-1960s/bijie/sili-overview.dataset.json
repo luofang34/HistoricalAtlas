@@ -4,13 +4,17 @@
       "id": "4e44cdf4-21df-5458-944b-f98bd050b787",
       "key": "earth/cn-gz/bijie/sili/xiaobailowa-pumping-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "d2d32f83-79ac-5c62-947a-8283dba441e5",
       "key": "earth/cn-gz/bijie/sili/dahaizi-forest",
       "body": "earth",
-      "kind": "forest"
+      "kind": {
+        "ecology": "forest"
+      }
     }
   ],
   "records": [

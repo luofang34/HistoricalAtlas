@@ -12,6 +12,7 @@ pub fn observation_properties(
 ) -> Value {
     json!({
         "entity_id": entity.id, "record_id": record.id, "entity_kind": entity.kind,
+        "entity_domain": entity.kind.domain(), "entity_subkind": entity.kind.subkind(),
         "name": if record.observation.name.is_empty() { &entity.key } else { &record.observation.name },
         "pinyin": record.observation.pinyin, "population": record.observation.population,
         "households": record.observation.households, "rank": record.observation.rank,
@@ -43,7 +44,9 @@ pub fn map_location_feature(
     };
     Some(
         json!({"type":"Feature","geometry":{"type":"Point","coordinates":[point.longitude,point.latitude]},
-        "properties":{"entity_id":entity.id,"entity_kind":entity.kind,"estimate_id":estimate.id,"record_id":record_id,
+        "properties":{"entity_id":entity.id,"entity_kind":entity.kind,
+            "entity_domain":entity.kind.domain(),"entity_subkind":entity.kind.subkind(),
+            "estimate_id":estimate.id,"record_id":record_id,
             "name":if record.observation.name.is_empty() { &entity.key } else { &record.observation.name },
             "source_id":record.source_id,"page_or_sheet":record.page_or_sheet,"scan_page":record.scan_page,
             "geometry_role":"location_estimate","datum":datum,"uncertainty_m":uncertainty_m,

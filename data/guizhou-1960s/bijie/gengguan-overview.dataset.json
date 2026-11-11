@@ -4,25 +4,33 @@
       "id": "19703fe4-a315-572c-80f0-7c7add5e80e1",
       "key": "earth/cn-gz/bijie/gengguan/gengguan-fortress",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "ab36107c-4de1-5762-816d-4658be77618d",
       "key": "earth/cn-gz/bijie/gengguan/ningjia-former-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "ef164a29-e569-570d-b48a-ba32d841c472",
       "key": "earth/cn-gz/bijie/gengguan/laodao-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "2bc06dab-0948-56f7-957a-663f1c9fcc6b",
       "key": "earth/cn-gz/bijie/gengguan/ningjia-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     }
   ],
   "records": [

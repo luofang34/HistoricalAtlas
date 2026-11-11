@@ -95,13 +95,29 @@ fn to_ecef(ellipsoid: BodyEllipsoid, point: GeodeticPoint) -> Vector3<f64> {
 /// Bowring-style fixed-point inversion; five iterations reach sub-millimetre height.
 fn from_ecef(ellipsoid: BodyEllipsoid, ecef: Vector3<f64>) -> GeodeticPoint {
     let e2 = eccentricity_squared(ellipsoid);
-    let longitude = ecef.y.atan2(ecef.x);
     let horizontal = ecef.x.hypot(ecef.y);
+    if horizontal <= 1e-9 {
+        let latitude = if ecef.z >= 0.0 { 90.0 } else { -90.0 };
+        let polar_radius = ellipsoid.semi_major_m * (1.0 - ellipsoid.flattening);
+        return GeodeticPoint {
+            position: LonLat {
+                longitude: 0.0,
+                latitude,
+            },
+            height_m: ecef.z.abs() - polar_radius,
+        };
+    }
+    let longitude = ecef.y.atan2(ecef.x);
     let mut latitude = ecef.z.atan2(horizontal * (1.0 - e2));
     let mut height = 0.0;
     for _ in 0..5 {
-        let radius = ellipsoid.semi_major_m / (1.0 - e2 * latitude.sin().powi(2)).sqrt();
-        height = horizontal / latitude.cos() - radius;
+        let sin_lat = latitude.sin();
+        let radius = ellipsoid.semi_major_m / (1.0 - e2 * sin_lat.powi(2)).sqrt();
+        height = if latitude.abs() > 89.0_f64.to_radians() {
+            ecef.z / sin_lat - radius * (1.0 - e2)
+        } else {
+            horizontal / latitude.cos() - radius
+        };
         latitude = ecef
             .z
             .atan2(horizontal * (1.0 - e2 * radius / (radius + height)));

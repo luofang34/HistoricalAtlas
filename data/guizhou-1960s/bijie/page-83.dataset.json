@@ -4,115 +4,153 @@
       "id": "a91a33be-53bd-5803-b679-bcfc0eac1517",
       "key": "earth/cn-gz/bijie/dahe/guanzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7d7686a6-c07b-5c36-9473-7476e7fef64e",
       "key": "earth/cn-gz/bijie/dahe/jijia-yuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "72b3cc3b-f093-598f-a735-be74aac7a7cb",
       "key": "earth/cn-gz/bijie/dahe/qiujia-wuji",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8432dbf1-eccf-5b29-b55d-0c6dad1e8b2a",
       "key": "earth/cn-gz/bijie/dahe/tanguanyao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2497bee2-e0eb-5b11-896f-a4d4ed1a271a",
       "key": "earth/cn-gz/bijie/dahe/guanzhai-toponym",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "c809de5b-eb2d-5bcd-be26-8f943b6e53f5",
       "key": "earth/cn-gz/bijie/dahe/keluoyuan-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "a6b93075-72fd-55ca-b392-40a373c6acad",
       "key": "earth/cn-gz/bijie/dahe/keluoyuan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "90c9a4db-40eb-517e-a560-2426a5519d08",
       "key": "earth/cn-gz/bijie/dahe/jikuaiping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "420e6193-6d75-53ee-b924-d24992cc4e08",
       "key": "earth/cn-gz/bijie/dahe/keluoyuan-zhangjia-yuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7d32dcc8-5c44-5227-9685-9aa633c1e851",
       "key": "earth/cn-gz/bijie/dahe/zhaojia-matang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "046d636a-dce8-5dc8-b6e2-bef9c8cbc3a9",
       "key": "earth/cn-gz/bijie/dahe/banbi-yuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b633793b-983c-51e6-bc63-e37c6f8a7405",
       "key": "earth/cn-gz/bijie/dahe/dashuijing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8d39276c-f53a-58cb-a746-26f448cb4818",
       "key": "earth/cn-gz/bijie/dahe/jimaiping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "66d71fab-d22d-5ae0-971f-213de76640b6",
       "key": "earth/cn-gz/bijie/dahe/laoyingjiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c669e62a-9318-5625-987d-ea03ee10a747",
       "key": "earth/cn-gz/bijie/dahe/oubuka",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "89ba0b09-5f80-588f-b4f8-bad9b2b914bc",
       "key": "earth/cn-gz/bijie/dahe/baiduo-forest",
       "body": "earth",
-      "kind": "forest"
+      "kind": {
+        "ecology": "forest"
+      }
     },
     {
       "id": "856d7878-f5a4-5c7c-a8d8-8bc8126e1828",
       "key": "earth/cn-gz/bijie/dahe/dahe-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "c92c31c5-da8b-50e1-a981-51f265237c0d",
       "key": "earth/cn-gz/bijie/dahe/dahe-bridge-30m",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "eebb7a40-4615-57a8-bca4-f69bc13fc78d",
       "key": "earth/cn-gz/bijie/dahe/dahe-bridge-48m",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     }
   ],
   "records": [

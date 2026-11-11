@@ -4,31 +4,41 @@
       "id": "78e0864e-1c2d-5a76-8ba2-8f0cce2717eb",
       "key": "earth/cn-gz/bijie/cengtai/houziqiao-power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "8bb39f12-5f82-5634-b391-a82142e23497",
       "key": "earth/cn-gz/bijie/cengtai/station-fortress",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "0bb1ff01-8454-5eca-a0d2-35e01b220c98",
       "key": "earth/cn-gz/bijie/cengtai/guard",
       "body": "earth",
-      "kind": "region"
+      "kind": {
+        "polity": "military"
+      }
     },
     {
       "id": "c55bbf0b-e81a-513f-a5ed-57f14704389b",
       "key": "earth/cn-gz/bijie/cengtai/chishui-front-office",
       "body": "earth",
-      "kind": "region"
+      "kind": {
+        "polity": "military"
+      }
     },
     {
       "id": "7328f1d7-4181-575d-8474-bce256880d10",
       "key": "earth/cn-gz/bijie/cengtai/guanxiang-fortress",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

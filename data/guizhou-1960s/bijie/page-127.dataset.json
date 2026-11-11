@@ -4,211 +4,281 @@
       "id": "02b501ab-d0cf-5590-ae2c-1e4dd0b1d42a",
       "key": "earth/cn-gz/bijie/heguantun/heguantun-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "b71c6310-71f0-5152-a24c-d5200d2f4926",
       "key": "earth/cn-gz/bijie/heguantun/heguantun",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7732e1cd-0249-5d10-b05e-0404fc004f76",
       "key": "earth/cn-gz/bijie/heguantun/dachong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d5a112b8-921e-5f7b-bca1-be3511a6813b",
       "key": "earth/cn-gz/bijie/heguantun/niezhaishan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f9d447bc-b871-578d-ba9d-f597e477042b",
       "key": "earth/cn-gz/bijie/heguantun/guankou-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "3f3b2eec-7a35-55a8-97f3-67afaff77551",
       "key": "earth/cn-gz/bijie/heguantun/guankou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "733cb70a-b9d5-5e85-9950-805ce581a54b",
       "key": "earth/cn-gz/bijie/heguantun/mijiapingzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5aec6b8e-c046-5584-94d8-ce36951b4e4b",
       "key": "earth/cn-gz/bijie/heguantun/dawuji",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ed8d994b-ae09-5dd9-a406-dea5e4ab819c",
       "key": "earth/cn-gz/bijie/heguantun/dahaizi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1dc129f0-e0e1-52f7-a181-d49a2cde346f",
       "key": "earth/cn-gz/bijie/heguantun/wolongshi-road-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "3709aa3e-c9f1-56ba-a6bf-54db5caf7810",
       "key": "earth/cn-gz/bijie/heguantun/yangjiagou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "29dc07e9-09fa-5ea1-bc2f-0b615f58f3d5",
       "key": "earth/cn-gz/bijie/heguantun/xiaotun",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d40bdf3c-9ac9-5039-ad60-c2e15bacfda5",
       "key": "earth/cn-gz/bijie/heguantun/pingdingshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1445a07e-2680-5c76-9104-199de6fa3d24",
       "key": "earth/cn-gz/bijie/heguantun/longtanping-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "ddc3c42a-8d77-56ac-9ce0-8efddc667ea3",
       "key": "earth/cn-gz/bijie/heguantun/shizishan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2b04e7bf-4d8c-5f2e-8202-c54b567aae50",
       "key": "earth/cn-gz/bijie/heguantun/xinyingpan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3ff3bb7c-1153-5e40-9f30-a11059463d53",
       "key": "earth/cn-gz/bijie/heguantun/longtanping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9789b253-4014-5394-889e-240e20944884",
       "key": "earth/cn-gz/bijie/heguantun/shihuiyao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "73eec0f1-d196-5d05-962b-eb7eaf6d914f",
       "key": "earth/cn-gz/bijie/heguantun/chongchong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8aa4300d-2a13-592a-b2f9-42bf9e31511d",
       "key": "earth/cn-gz/bijie/heguantun/qiaobian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "855da419-cb73-5f6f-be9a-4794f2196304",
       "key": "earth/cn-gz/bijie/heguantun/yuejin-farm",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "2014813d-f28e-51f8-b3c3-ebad160702c1",
       "key": "earth/cn-gz/bijie/heguantun/anazhai-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "77d8989f-eb03-529a-b3c3-5c40da909a7b",
       "key": "earth/cn-gz/bijie/heguantun/anazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "fb01cdbc-ab85-5b43-a512-30c9bfa8fdaa",
       "key": "earth/cn-gz/bijie/heguantun/goubian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "75efaeeb-a014-5461-a898-8f9fb2fefa50",
       "key": "earth/cn-gz/bijie/heguantun/maanshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c6f39a79-461b-59c3-bbf7-611d52009fe1",
       "key": "earth/cn-gz/bijie/heguantun/shangzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8a1314c6-4e71-59c4-9e73-2d20bd207b6b",
       "key": "earth/cn-gz/bijie/heguantun/dayudong-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "78b7fa5f-58c5-5a81-ba60-a1b835d49ccb",
       "key": "earth/cn-gz/bijie/heguantun/dayudong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "cdaa439e-3da9-5490-8a38-c3ec8490ccf3",
       "key": "earth/cn-gz/bijie/heguantun/chongmenkou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "aa28ce1c-a259-5002-b251-b57929d5d7bd",
       "key": "earth/cn-gz/bijie/heguantun/shigangchong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5967b3a4-1913-5eb2-a009-d91e3cf5e2d0",
       "key": "earth/cn-gz/bijie/heguantun/chamushu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "59f3493c-a33e-5c1a-b460-348569808a69",
       "key": "earth/cn-gz/bijie/heguantun/sijiayuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "427d5d6b-35d8-5a12-ab69-075b220bac66",
       "key": "earth/cn-gz/bijie/heguantun/gangou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8a957a22-57c6-5d59-af5a-c6c8d687a1f5",
       "key": "earth/cn-gz/bijie/heguantun/maomaodong-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "daf0ea17-7d25-5841-808a-827eb274fa69",
       "key": "earth/cn-gz/bijie/heguantun/dashuijing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [

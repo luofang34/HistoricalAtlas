@@ -1,8 +1,11 @@
+use std::collections::BTreeMap;
+
 use super::{PlateId, PlateModelError, RotationSample, RotationSequence};
 use crate::{coordinates::LonLat, rotation::EulerRotation};
 
 pub(super) fn parse(text: &str) -> Result<Vec<RotationSequence>, PlateModelError> {
     let mut sequences: Vec<RotationSequence> = Vec::new();
+    let mut active: BTreeMap<PlateId, usize> = BTreeMap::new();
     for (offset, text) in text.lines().enumerate() {
         let text = text.trim();
         if text.is_empty() || text.starts_with(['!', '#']) {
@@ -36,11 +39,14 @@ pub(super) fn parse(text: &str) -> Result<Vec<RotationSequence>, PlateModelError
             source_line: line,
             description: description.trim_start_matches('!').trim().to_owned(),
         };
-        if let Some(sequence) = sequences.last_mut().filter(|sequence| {
-            sequence.moving_plate == moving_plate && sequence.fixed_plate == fixed_plate
-        }) {
+        if let Some(sequence) = active
+            .get(&moving_plate)
+            .and_then(|index| sequences.get_mut(*index))
+            .filter(|sequence| sequence.fixed_plate == fixed_plate)
+        {
             sequence.samples.push(sample);
         } else {
+            active.insert(moving_plate, sequences.len());
             sequences.push(RotationSequence {
                 moving_plate,
                 fixed_plate,

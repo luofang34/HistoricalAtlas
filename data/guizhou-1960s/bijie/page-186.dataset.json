@@ -4,79 +4,105 @@
       "id": "6ae1798b-3267-5d6a-8640-15c684114e2b",
       "key": "earth/cn-gz/bijie/hantun/hantun-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "3feb89d7-dc5a-5c42-9d49-b811fc422acb",
       "key": "earth/cn-gz/bijie/hantun/hantun",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f0b4db81-effc-5917-b99e-4f3956f7c005",
       "key": "earth/cn-gz/bijie/hantun/shuitang-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "ea165350-a8ff-574d-b723-e9f17deebb29",
       "key": "earth/cn-gz/bijie/hantun/shuitang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "202142ab-5a1e-5618-82d6-5c1933409ccc",
       "key": "earth/cn-gz/bijie/hantun/fengtian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a7d2a9c6-c739-5277-bb39-e51a36089741",
       "key": "earth/cn-gz/bijie/hantun/hujiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6afd31ac-95ad-557a-b4e8-d234d6d124ce",
       "key": "earth/cn-gz/bijie/hantun/guanba-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "8b464b2a-a73d-5f44-94f2-0a672babd545",
       "key": "earth/cn-gz/bijie/hantun/guanba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0f1074e6-da2a-51f6-a7ef-2926fde3be4f",
       "key": "earth/cn-gz/bijie/hantun/linjiaqiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "47b977df-5ec7-5bb5-a38f-259726d837c0",
       "key": "earth/cn-gz/bijie/hantun/liangjiazhai-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "57251a96-cf36-5c2a-a7eb-3614b9d4ba1c",
       "key": "earth/cn-gz/bijie/hantun/liangjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7ad15e8c-a5c1-56e1-b3da-2ea1115303de",
       "key": "earth/cn-gz/bijie/hantun/miaozhai-yakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b24db205-c903-55a4-8844-9789269d005f",
       "key": "earth/cn-gz/bijie/hantun/hantun-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     }
   ],
   "records": [

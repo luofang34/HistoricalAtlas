@@ -4,85 +4,113 @@
       "id": "ba213ddc-18d1-5cc6-8e3a-4bc3b58113c6",
       "key": "earth/cn-gz/bijie/daqiao/xuhua-tun",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "964b6453-5aa6-57fc-a512-5b6f3799ccdc",
       "key": "earth/cn-gz/bijie/daqiao/maomao-chong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "fa47adae-411f-5f9b-bb33-c63a1f9e8afe",
       "key": "earth/cn-gz/bijie/daqiao/zhangji-tun",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "31b5d9eb-c497-556b-b778-a019a9e0ff99",
       "key": "earth/cn-gz/bijie/daqiao/shuangshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bd36a208-c780-520d-9e77-e10995102093",
       "key": "earth/cn-gz/bijie/daqiao/long-daishi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "04ec596c-4b59-538a-bde7-c8196f8dbf91",
       "key": "earth/cn-gz/bijie/daqiao/zhujia-shu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b6360244-9e33-5103-b224-9777e047ed00",
       "key": "earth/cn-gz/bijie/daqiao/shamao-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "a8e9da03-a05b-5d46-89b4-9ac957835d7d",
       "key": "earth/cn-gz/bijie/daqiao/saoba-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "6e78cd6d-250d-5c3a-a9eb-6fa7a2623dd6",
       "key": "earth/cn-gz/bijie/daotianhe-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "35bb96ca-9318-5279-bd07-613bb6004bff",
       "key": "earth/cn-gz/bijie/daqiao/xiaohe-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "643f345d-b8ef-5f55-8372-4b9b5c49ab15",
       "key": "earth/cn-gz/bijie/daotianhe-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "f102f128-0ede-57a3-8864-2a459b6416ad",
       "key": "earth/cn-gz/bijie/daqiao/jiangnan-huiguan",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "30d869f9-149d-55b1-88d5-904e5f7d01df",
       "key": "earth/cn-gz/bijie/daqiao/tianshengqiao-miao",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "d8ec1cbf-e5c8-5976-8da2-da514a3c4cf1",
       "key": "earth/cn-gz/bijie/daqiao/lieshi-lingyuan",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

@@ -4,25 +4,33 @@
       "id": "8a770ac5-a3e0-5fc7-a4d6-871574bf2125",
       "key": "earth/cn-gz/bijie/caodi/shiba-he",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "24bdf4c2-7476-5511-b525-71a6ffb9e7ca",
       "key": "earth/cn-gz/bijie/shiba/daqing-liangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "f818015d-9e05-5f3c-a7ef-237d643a57aa",
       "key": "earth/cn-gz/bijie/shiba/halangchong-stream",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "379cc8a3-df22-583c-925c-adac347cd112",
       "key": "earth/cn-gz/bijie/shiba/weixian-qiao",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     }
   ],
   "records": [

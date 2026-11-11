@@ -4,15 +4,19 @@ use std::collections::BTreeMap;
 
 use atlas_core::{
     identity::{EntityId, FactId},
-    time::{EpochTime, JULIAN_YEAR_MS},
+    time::{EpochTime, JULIAN_YEAR_MS, TimeError},
 };
 use atlas_geo::{
     coordinates::LonLat,
     plates::{PlateId, PlateModelError, RotationModel, RotationSequence},
 };
 use serde::{Deserialize, Serialize};
+use thiserror::Error;
 
-use crate::model::{Dataset, EstimateValue};
+use crate::{
+    model::{Dataset, EstimateValue},
+    timeline::TimeSelection,
+};
 
 /// A reproducible subset of a cited rotation file.
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -75,6 +79,17 @@ pub struct PaleoPosition {
     pub reconstructed: LonLat,
 }
 
+/// Plate-assignment validity or rotation-circuit failure during paleogeographic reconstruction.
+#[derive(Debug, Error)]
+pub enum PaleoError {
+    /// A cited rotation model could not be built or could not reconstruct a coordinate.
+    #[error(transparent)]
+    Plate(#[from] PlateModelError),
+    /// A plate-assignment temporal validity span failed validation.
+    #[error("plate assignment validity: {0}")]
+    Time(#[from] TimeError),
+}
+
 /// Rotate every checked coordinate of plate-assigned entities whose model covers `at`.
 ///
 /// Entities without an assignment, or whose model excerpt does not cover the
@@ -84,25 +99,54 @@ pub fn paleo_positions(
     models: &BTreeMap<String, PlateModelDocument>,
     data: &Dataset,
     at: EpochTime,
-) -> Result<Vec<PaleoPosition>, PlateModelError> {
-    let mut built: BTreeMap<&str, RotationModel> = BTreeMap::new();
+) -> Result<Vec<PaleoPosition>, PaleoError> {
+    paleo_positions_with_models(models, &BTreeMap::new(), data, at, TimeSelection::Nominal)
+}
+
+/// Rotate checked coordinates using pre-built rotation models and a time-selection mode.
+///
+/// Optional `validity` spans on plate assignments restrict reconstructions to epochs
+/// selected by `selection`, allowing crust formation, terrane transfer, and subduction.
+pub fn paleo_positions_with_models(
+    models: &BTreeMap<String, PlateModelDocument>,
+    built: &BTreeMap<String, RotationModel>,
+    data: &Dataset,
+    at: EpochTime,
+    selection: TimeSelection,
+) -> Result<Vec<PaleoPosition>, PaleoError> {
+    let mut cache: BTreeMap<&str, RotationModel> = BTreeMap::new();
     let mut positions = Vec::new();
     for estimate in &data.estimates {
-        let EstimateValue::Plate { model_id, plate_id } = &estimate.value else {
+        let EstimateValue::Plate {
+            model_id,
+            plate_id,
+            validity,
+        } = &estimate.value
+        else {
             continue;
         };
+        if let Some(span) = validity
+            && selection.select(Some(span), at)?.is_none()
+        {
+            continue;
+        }
         let Some(document) = models.get(model_id) else {
             continue;
         };
         let Some(age_ma) = document.age_at(at) else {
             continue;
         };
-        if !built.contains_key(model_id.as_str()) {
-            let model = RotationModel::from_sequences(document.sequences.clone())?;
-            built.insert(model_id.as_str(), model);
-        }
-        let Some(model) = built.get(model_id.as_str()) else {
-            continue;
+        let model = if let Some(existing) = built.get(model_id) {
+            existing
+        } else {
+            if !cache.contains_key(model_id.as_str()) {
+                let compiled = RotationModel::from_sequences(document.sequences.clone())?;
+                cache.insert(model_id.as_str(), compiled);
+            }
+            let Some(compiled) = cache.get(model_id.as_str()) else {
+                continue;
+            };
+            compiled
         };
         for record in data
             .records

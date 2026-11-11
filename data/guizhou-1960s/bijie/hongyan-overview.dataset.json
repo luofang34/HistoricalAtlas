@@ -4,13 +4,17 @@
       "id": "f5be109c-0a54-56c3-82bf-fde46d086a2e",
       "key": "earth/cn-gz/bijie/hongyan/hongyan-fortress",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "aebd84a8-260a-502a-8c0c-95bfd12ede04",
       "key": "earth/cn-gz/bijie/hongyan/hongyan-gully",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

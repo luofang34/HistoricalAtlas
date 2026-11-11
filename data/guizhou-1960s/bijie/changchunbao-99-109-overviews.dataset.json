@@ -4,55 +4,73 @@
       "id": "32972ee7-d985-54dd-ab88-a92ab47acf6d",
       "key": "earth/cn-gz/bijie/changchunbao/changchunbao-street",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "da934025-61f8-5c09-af1c-98df01267ef6",
       "key": "earth/cn-gz/bijie/changchunbao/guanyinge",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "ecc9c61c-76d6-5279-b5bb-5bd3a7cf6634",
       "key": "earth/cn-gz/bijie/changchunbao/qingshuitang-pumping-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "a96ca763-d9a5-56c3-b045-5dcc26390e55",
       "key": "earth/cn-gz/bijie/gezuo/xiaolong-former-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "1b4bab53-1895-52d3-ad09-7afa54e2b16d",
       "key": "earth/cn-gz/bijie/gezuo/yangliu-former-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "19dbe451-c552-5064-90ed-55f0ee776e91",
       "key": "earth/cn-gz/bijie/gezuo/yaguan-gezuo-road",
       "body": "earth",
-      "kind": "street"
+      "kind": {
+        "infrastructure": "street"
+      }
     },
     {
       "id": "6e26817d-63a1-52a2-ab5f-4309612b0c2b",
       "key": "earth/cn-gz/bijie/qingfeng/qingtang-former-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "ef083e42-90b8-55c6-8a2b-2441b6a54217",
       "key": "earth/cn-gz/bijie/qingfeng/lingfeng-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "bdfbb179-4412-5bf2-8627-34b23a9652ec",
       "key": "earth/cn-gz/bijie/qingfeng/shamuba-pumping-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     }
   ],
   "records": [

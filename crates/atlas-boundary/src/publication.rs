@@ -5,9 +5,11 @@ use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
 use thiserror::Error;
 
+mod manifest;
+pub use manifest::*;
+
 /// Full geometry for one evidence-index entry.
 #[derive(Debug, Default, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 pub struct GeometryBundle {
     /// Reviewed source raster drawings.
     #[serde(default)]
@@ -25,7 +27,6 @@ pub struct GeometryBundle {
 
 /// One byte range of a serialized geometry bundle.
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 pub struct GeometryPart {
     /// Publication-relative static path.
     pub path: String,
@@ -37,7 +38,6 @@ pub struct GeometryPart {
 
 /// Lightweight index entry for loading detail in the current view.
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 pub struct GeometryReference {
     /// Ordered UTF-8 JSON byte ranges, assembled before decoding.
     pub parts: Vec<GeometryPart>,

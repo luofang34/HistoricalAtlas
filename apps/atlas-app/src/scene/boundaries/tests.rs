@@ -5,10 +5,7 @@ use atlas_compile::{
     export::{Artifacts, write_blocking},
 };
 use serde_json::json;
-use std::{
-    collections::BTreeMap,
-    path::{Path, PathBuf},
-};
+use std::{collections::BTreeMap, path::Path};
 
 #[cfg(test)]
 pub(crate) fn lunar_publication() -> Publication {
@@ -24,7 +21,7 @@ pub(crate) fn lunar_publication() -> Publication {
         "vertices":[{"x":1,"y":1},{"x":2,"y":1},{"x":2,"y":2},{"x":1,"y":2}],
         "datum":"moon_iau","boundary_method":"unstated","method_basis":[],"registration":"maps/survey.json"});
     let entry: Entry = serde_json::from_value(
-        json!({"entity":{"id":id,"key":"moon/test/enclosure","body":"moon","kind":"facility"},
+        json!({"entity":{"id":id,"key":"moon/test/enclosure","body":"moon","kind":{"infrastructure":"facility"}},
         "records":[record],"estimates":[],"disputes":[],"boundaries":[boundary]}),
     )
     .unwrap();
@@ -112,7 +109,7 @@ fn compiled() -> Artifacts {
 #[cfg(test)]
 pub(crate) fn publication() -> Publication {
     let output = compiled();
-    let sources = serde_json::from_slice(&output[&PathBuf::from("sources.json")]).unwrap();
+    let sources = atlas_compile::export::load_sources(&output).unwrap();
     let mut entries: BTreeMap<EntityId, Entry> = output
         .iter()
         .filter(|(p, _)| p.starts_with("entities/index"))
@@ -207,11 +204,10 @@ fn mapped_polygons_tessellate_fill_outline_and_selection_for_both_projections() 
     let id = EntityId::from_key("earth/cn-gz/zhijin/ertang-commune").unwrap();
     let collection = json!({"type": "FeatureCollection", "features": features(&atlas, BodyId::Earth, None, Some(id), true).unwrap()});
     for projection in [
-        maplibre::projection::ProjectionType::Mercator,
-        maplibre::projection::ProjectionType::Globe,
+        crate::scene::DisplayProjection::Mercator,
+        crate::scene::DisplayProjection::Globe,
     ] {
-        let style =
-            crate::scene::style(collection.clone(), BodyId::Earth, projection.clone()).unwrap();
+        let style = crate::scene::style(collection.clone(), BodyId::Earth, projection).unwrap();
         assert!(style.validate().is_ok());
         for name in ["boundaries", "boundary-lines", "boundary-selection"] {
             let layers = style
@@ -233,7 +229,7 @@ fn mapped_polygons_tessellate_fill_outline_and_selection_for_both_projections() 
                     y: 0,
                     z: maplibre::coords::ZoomLevel::new(0),
                 },
-                projection.clone(),
+                projection.into_maplibre(),
             )
             .unwrap();
             assert!(!processed.indexes.is_empty(), "{name}");
@@ -280,11 +276,10 @@ fn reconstructed_communes_load_frame_and_tessellate_with_dashed_outlines() {
     );
     let collection = json!({"type":"FeatureCollection","features":boundaries});
     for projection in [
-        maplibre::projection::ProjectionType::Mercator,
-        maplibre::projection::ProjectionType::Globe,
+        crate::scene::DisplayProjection::Mercator,
+        crate::scene::DisplayProjection::Globe,
     ] {
-        let style =
-            crate::scene::style(collection.clone(), BodyId::Earth, projection.clone()).unwrap();
+        let style = crate::scene::style(collection.clone(), BodyId::Earth, projection).unwrap();
         assert!(style.validate().is_ok());
         for name in ["derived-boundaries", "derived-lines", "derived-selection"] {
             let layers = style
@@ -306,7 +301,7 @@ fn reconstructed_communes_load_frame_and_tessellate_with_dashed_outlines() {
                     y: 0,
                     z: maplibre::coords::ZoomLevel::new(0),
                 },
-                projection.clone(),
+                projection.into_maplibre(),
             )
             .unwrap();
             assert!(!rendered.indexes.is_empty(), "{name}");

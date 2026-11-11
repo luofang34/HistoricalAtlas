@@ -1,6 +1,9 @@
 //! Time-slice selection retaining uncertainty, competing values, and evidence links.
 
-use std::{collections::BTreeMap, str::FromStr};
+use std::{
+    collections::{BTreeMap, BTreeSet},
+    str::FromStr,
+};
 
 use atlas_core::{
     assertion::{TemporalAssertion, TemporalProperty, TemporalValue},
@@ -139,6 +142,11 @@ impl<'a> Timeline<'a> {
     /// Validate the ledger and retain temporal estimates in stable identity order.
     pub fn new(catalog: &SourceCatalog, data: &'a Dataset) -> Result<Self, ValidationError> {
         validate(catalog, data)?;
+        Ok(Self::from_validated(data))
+    }
+
+    /// Build a timeline index over an already-validated ledger without repeating validation.
+    pub fn from_validated(data: &'a Dataset) -> Self {
         let mut estimates: Vec<_> = data
             .estimates
             .iter()
@@ -157,10 +165,19 @@ impl<'a> Timeline<'a> {
                 .or_default()
                 .push(dispute);
         }
-        Ok(Self {
+        Self {
             estimates,
             disputes,
-        })
+        }
+    }
+
+    /// Entities with origin constraints whose formation had not yet occurred at `at`.
+    pub fn unformed_at(
+        &self,
+        at: EpochTime,
+        selection: TimeSelection,
+    ) -> Result<BTreeSet<EntityId>, TimeError> {
+        origins::unformed(&self.estimates, at, selection)
     }
 
     /// Select supported properties without choosing between competing values.

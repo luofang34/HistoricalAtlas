@@ -4,7 +4,9 @@
       "id": "ba4cdb75-37d5-57d0-95b8-1266cc38364b",
       "key": "earth/cn-gz/bijie/shisanmu/maopingpo",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

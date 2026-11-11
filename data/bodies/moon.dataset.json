@@ -4,25 +4,33 @@
       "id": "4462864d-70ff-5bce-bd30-3ca38aba3644",
       "key": "moon/body",
       "body": "moon",
-      "kind": "body"
+      "kind": {
+        "planetary": "body"
+      }
     },
     {
       "id": "43c5bd1d-229c-5ae3-9146-063d9040a6a6",
       "key": "moon/imbrium-basin",
       "body": "moon",
-      "kind": "crater"
+      "kind": {
+        "geology": "crater"
+      }
     },
     {
       "id": "8736d6c5-b6fa-5436-ba63-d1ee868a5eed",
       "key": "moon/tycho",
       "body": "moon",
-      "kind": "crater"
+      "kind": {
+        "geology": "crater"
+      }
     },
     {
       "id": "69de861a-cc68-51d8-a087-089c734498d4",
       "key": "moon/tranquility-base",
       "body": "moon",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

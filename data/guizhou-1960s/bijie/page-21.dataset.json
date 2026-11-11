@@ -4,145 +4,193 @@
       "id": "997ded53-c330-58a3-8a10-ec15986ee96b",
       "key": "earth/cn-gz/bijie/cuiping/beizheng-guan",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "3e53195b-6b59-5422-8d4c-e6543de3346e",
       "key": "earth/cn-gz/bijie/cuiping/taizi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d2f48dc4-da59-5251-81ec-7dcf65253ea8",
       "key": "earth/cn-gz/bijie/cuiping/daxiu-chang",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "85b0d7e5-7467-5bca-9ee2-e0874c003b41",
       "key": "earth/cn-gz/bijie/chating-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "0ca00db7-4f25-5b10-b37d-6f78723222e1",
       "key": "earth/cn-gz/bijie/cuiping/yingwan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3556910f-8a61-5b88-be61-32a4cee0f9ce",
       "key": "earth/cn-gz/bijie/cuiping/chating-village",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "dd1a1c3c-3f47-5b2c-a0cb-4c630415ed7c",
       "key": "earth/cn-gz/bijie/cuiping/fujia-yuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d9e65b49-7df6-5d71-ac9c-7b71f08e85dd",
       "key": "earth/cn-gz/bijie/cuiping/zaojiao-shu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6bf3660c-79d8-5834-afbb-544af052028d",
       "key": "earth/cn-gz/bijie/cuiping/shuijing-bian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "fc693fb0-29b5-5c1d-b625-a59c05da49f6",
       "key": "earth/cn-gz/bijie/cuiping/longjia-yakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "eaa361b5-2a3d-57d4-8164-dd8c89379c74",
       "key": "earth/cn-gz/bijie/cuiping/jiaoyu-xueyuan",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "5dc91698-6e99-54a2-b687-f817db8f8271",
       "key": "earth/cn-gz/bijie/cuiping/yangshan-gongyuan",
       "body": "earth",
-      "kind": "park"
+      "kind": {
+        "infrastructure": "park"
+      }
     },
     {
       "id": "0a24cdc3-0928-53c5-a637-fe75735e7569",
       "key": "earth/cn-gz/bijie/cuiping/guanmen-shan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3293f229-35e5-5874-9d3c-bd6bbf7fb989",
       "key": "earth/cn-gz/bijie/cuiping/liangshui-jing",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "ac4ee21e-2119-581f-84da-4fc061c256f9",
       "key": "earth/cn-gz/bijie/cuiping/huiquan-si",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "fb5121d7-b170-5200-bf52-345a18af6865",
       "key": "earth/cn-gz/bijie/cuiping/dawenfeng-ge",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "a4127116-8018-5385-9f47-646a136bbc74",
       "key": "earth/cn-gz/bijie/cuiping/xiaowenfeng-ge",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "abdbca94-df47-57be-8c31-f72b08f10100",
       "key": "earth/cn-gz/bijie/cuiping/chating-pavilion",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "b9e41e55-3364-55d9-99ea-34fbf2d4e06c",
       "key": "earth/cn-gz/bijie/cuiping/nanguan-qiao",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "c28868f4-6fa4-5d3b-a37b-9bcf4acdc174",
       "key": "earth/cn-gz/bijie/cuiping/huju-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "ee54514d-b6ec-5290-808b-b20e262f5c79",
       "key": "earth/cn-gz/bijie/cuiping/longpan-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "ded48bef-581f-5b72-ac0d-df85a685854f",
       "key": "earth/cn-gz/bijie/cuiping/beizheng-guanmiao",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "ce89f483-1714-5325-8ec2-2559d463e66a",
       "key": "earth/cn-gz/bijie/cuiping/zitong-ge",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "726db89a-0d6a-5e6e-8d0f-17cc7577f12c",
       "key": "earth/cn-gz/bijie/cuiping/wulong-qiao",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     }
   ],
   "records": [

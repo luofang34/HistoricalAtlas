@@ -4,187 +4,249 @@
       "id": "b50b294f-71a1-5272-b209-a0ce1153e40a",
       "key": "earth/cn-gz/bijie/yachi/yachi-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "a363d80e-d8c8-5e1f-bb85-d8d54f63e4cc",
       "key": "earth/cn-gz/bijie/yachi/yachi-jie",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9c53c86f-373a-5f45-859a-c30e7105a30e",
       "key": "earth/cn-gz/bijie/yachi/zhongzhai-yachi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "75c926e4-a817-551c-9f09-8931c6f161b6",
       "key": "earth/cn-gz/bijie/yachi/sanchatang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1596bb31-406c-5d4d-9169-fe26b1620dad",
       "key": "earth/cn-gz/bijie/yachi/shiqiao-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "8328b2e4-7243-5377-bd5a-c0d81d0efc54",
       "key": "earth/cn-gz/bijie/yachi/shiqiaobian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bb11fc11-fe22-5b07-9d78-2a9c7d89a7b8",
       "key": "earth/cn-gz/bijie/yachi/guoerdaiqiu",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "f054496d-3cc5-5f0b-ac04-637c08e78b15",
       "key": "earth/cn-gz/bijie/yachi/longtanbian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6d303e3a-958b-5fd8-b132-cbb1231efb1e",
       "key": "earth/cn-gz/bijie/yachi/daposhang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "259dc0d7-e4d0-574f-b4e7-153fc053489d",
       "key": "earth/cn-gz/bijie/yachi/lanni-gou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a36ef89a-3599-5a06-8a8c-d50c249bd677",
       "key": "earth/cn-gz/bijie/yachi/shige-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "9735200e-e03b-54c3-88db-13307f5a3a2d",
       "key": "earth/cn-gz/bijie/yachi/hujiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "202c9749-a2ec-5e32-823f-9663a6fe8e5f",
       "key": "earth/cn-gz/bijie/yachi/shigenao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5f78103a-473a-5b78-bcfb-05a342ff9326",
       "key": "earth/cn-gz/bijie/yachi/yakoujiao",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "6d494fd1-ffc7-5718-a816-26aa4656ff2c",
       "key": "earth/cn-gz/bijie/yachi/dashan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "324d2e4e-a51b-5bee-8896-47d0e4cc4182",
       "key": "earth/cn-gz/bijie/yachi/zhongzhai-shige",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e24cd805-69c6-59d2-9832-0e0180c87cca",
       "key": "earth/cn-gz/bijie/yachi/xiaoyangjiaochong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4db8e748-2904-5e2a-a2f9-924ad7fbf4da",
       "key": "earth/cn-gz/bijie/yachi/dayangjiaochong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1332166e-9c3d-5eb6-8724-189b255dfe9b",
       "key": "earth/cn-gz/bijie/yachi/ganyantang-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "15c4c47c-d658-5b58-900e-4965f3d24af0",
       "key": "earth/cn-gz/bijie/yachi/miaozhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6f139056-87d1-59f7-bbe7-7682fa7e249a",
       "key": "earth/cn-gz/bijie/yachi/damiaozhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "967ce823-0f40-5eab-a5f4-380d829eca36",
       "key": "earth/cn-gz/bijie/yachi/lujiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "cd099637-41cf-54fb-a81d-570de668b61e",
       "key": "earth/cn-gz/bijie/yachi/ganyantang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "997bb127-37ca-58a0-a82d-8ae6c8e55345",
       "key": "earth/cn-gz/bijie/yachi/wangjiawan-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "8a253dc9-e58f-5b53-96d9-ee53753d8846",
       "key": "earth/cn-gz/bijie/yachi/zhangyuan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "503c9de8-ee94-5530-a340-bbcb2ef6a1b6",
       "key": "earth/cn-gz/bijie/yachi/wangjiawanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "03561f8b-d1be-5982-8884-ad4a07cec9ff",
       "key": "earth/cn-gz/bijie/yachi/shijiayuan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8a24304f-5955-586e-be40-9a4574a8791b",
       "key": "earth/cn-gz/bijie/yachi/yingjiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "28da01e1-86c5-5f49-bb7d-75b765e57596",
       "key": "earth/cn-gz/bijie/yachi/banpo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "78d2a6c2-4117-5761-a4c0-574e1a06e32f",
       "key": "earth/cn-gz/bijie/yachi/douchong-liangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "9190b8a5-b1cb-52b3-8293-b5ee684bf975",
       "key": "earth/cn-gz/bijie/yachi/gujia-tang",
       "body": "earth",
-      "kind": "pond"
+      "kind": {
+        "hydrography": "pond"
+      }
     }
   ],
   "records": [

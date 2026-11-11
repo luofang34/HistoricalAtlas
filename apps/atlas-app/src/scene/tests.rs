@@ -51,7 +51,7 @@ fn time_layer_keeps_undated_coordinates_out_of_deep_time_and_rotates_plate_assig
     let style = style(
         observations.clone(),
         BodyId::Earth,
-        maplibre::projection::ProjectionType::Mercator,
+        DisplayProjection::Mercator,
     )
     .unwrap();
     assert!(style.validate().is_ok());
@@ -99,7 +99,7 @@ fn event_layer_passes_through_maplibre_geojson_processing() {
     let style = style(
         collection.clone(),
         BodyId::Moon,
-        maplibre::projection::ProjectionType::Mercator,
+        DisplayProjection::Mercator,
     )
     .unwrap();
     assert!(style.validate().is_ok());
@@ -167,5 +167,198 @@ fn time_layer_places_map_registered_entities_without_table_coordinates() {
     assert_eq!(
         placed[0]["properties"]["geometry_role"],
         "location_estimate"
+    );
+}
+
+#[cfg(test)]
+fn impact_model() -> atlas_ledger::plates::PlateModelDocument {
+    use atlas_core::time::EpochTime;
+    use atlas_geo::{
+        coordinates::LonLat,
+        plates::{PlateId, RotationSample, RotationSequence},
+        rotation::EulerRotation,
+    };
+    let sample = |source_line, age_ma, angle_degrees| RotationSample {
+        age_ma,
+        rotation: EulerRotation {
+            pole: LonLat {
+                longitude: 0.0,
+                latitude: 90.0,
+            },
+            angle_degrees,
+        },
+        source_line,
+        description: String::new(),
+    };
+    atlas_ledger::plates::PlateModelDocument {
+        id: "test-plate".into(),
+        source_id: "impact-src".into(),
+        source_sha256: "0".repeat(64),
+        attribution: "Test".into(),
+        license: "CC0-1.0".into(),
+        reference_frame: "paleomagnetic".into(),
+        present_epoch: EpochTime::from_ticks(0),
+        youngest_ma: 0.0,
+        oldest_ma: 100.0,
+        sequences: vec![RotationSequence {
+            moving_plate: PlateId(101),
+            fixed_plate: PlateId(0),
+            samples: vec![sample(1, 0.0, 0.0), sample(2, 100.0, 20.0)],
+        }],
+    }
+}
+
+#[cfg(test)]
+fn impact_atlas() -> (crate::catalog::Atlas, EntityId) {
+    use atlas_core::{
+        identity::FactId,
+        origin::OriginTime,
+        time::{EpochTime, InstantEstimate, TimePrecision},
+    };
+    use atlas_geo::plates::PlateId;
+    use atlas_ledger::model::{Entity, Estimate, EstimateValue, Record};
+
+    let impact = EntityId::from_key("earth/test/impact-crater").unwrap();
+    let rec_id = FactId::from_key("survey/impact-crater").unwrap();
+    let at_66_ma = EpochTime::years_before(EpochTime::from_ticks(0), 66_000_000).unwrap();
+    let source = serde_json::from_value(json!({
+        "id": "impact-src", "title": "Test impact monograph",
+        "scan_pages": 1, "scan_sha256": "0".repeat(64)
+    }))
+    .unwrap();
+    let entity: Entity = serde_json::from_value(json!({
+        "id": impact, "key": "earth/test/impact-crater", "body": "earth",
+        "kind": {"geology": "crater"}
+    }))
+    .unwrap();
+    let record: Record = serde_json::from_value(json!({
+        "id": rec_id, "key": "survey/impact-crater", "entity_id": impact, "source_id": "impact-src",
+        "scan_page": 1, "page_or_sheet": "1", "locator": "Table 1", "checked": true,
+        "observation": {"name": "Test Impact", "coordinate": {
+            "point": {"longitude": -89.5, "latitude": 21.4}, "datum": "wgs84",
+            "longitude_text": "89°30′W", "latitude_text": "21°24′N", "resolution_arcminutes": 1.0}}
+    }))
+    .unwrap();
+    let origin = Estimate {
+        id: FactId::from_key("estimate/impact-origin").unwrap(),
+        key: "estimate/impact-origin".into(),
+        entity_id: impact,
+        basis: vec![rec_id],
+        brief: "Radiometric impact age.".into(),
+        value: EstimateValue::Origin {
+            time: OriginTime::Estimated {
+                instant: InstantEstimate {
+                    earliest: at_66_ma,
+                    nominal: at_66_ma,
+                    latest: at_66_ma,
+                    precision: TimePrecision::Ma,
+                },
+            },
+        },
+    };
+    let plate = Estimate {
+        id: FactId::from_key("estimate/impact-plate").unwrap(),
+        key: "estimate/impact-plate".into(),
+        entity_id: impact,
+        basis: vec![rec_id],
+        brief: "Host continental block.".into(),
+        value: EstimateValue::Plate {
+            model_id: "test-plate".into(),
+            plate_id: PlateId(101),
+            validity: None,
+        },
+    };
+    let entry = crate::catalog::Entry {
+        geometry: None,
+        lines: Vec::new(),
+        derived_boundaries: Vec::new(),
+        boundaries: Vec::new(),
+        drawings: Vec::new(),
+        entity,
+        records: vec![record],
+        estimates: vec![origin, plate],
+        disputes: Vec::new(),
+    };
+    let atlas = crate::catalog::Atlas::new(crate::catalog::Publication {
+        sources: vec![source],
+        entries: std::collections::BTreeMap::from([(impact, entry)]),
+        aliases: Default::default(),
+        plate_models: std::collections::BTreeMap::from([("test-plate".into(), impact_model())]),
+    })
+    .unwrap();
+    (atlas, impact)
+}
+
+#[test]
+fn pre_origin_impact_stays_hidden_until_crustal_pins_are_enabled() {
+    let (atlas, _impact) = impact_atlas();
+    let before = SelectedTime::query(
+        &atlas,
+        &TimeControl {
+            mode: TimeMode::MillionYears,
+            value: "70".into(),
+            ..Default::default()
+        },
+    )
+    .unwrap();
+    assert!(before.paleo.is_empty());
+    assert_eq!(before.crustal_pins.len(), 1);
+    assert!(
+        features_with_pins(
+            &atlas,
+            BodyId::Earth,
+            &before,
+            MapLayer::SelectedTime,
+            None,
+            false
+        )["features"]
+            .as_array()
+            .unwrap()
+            .is_empty()
+    );
+    let pinned = features_with_pins(
+        &atlas,
+        BodyId::Earth,
+        &before,
+        MapLayer::SelectedTime,
+        None,
+        true,
+    );
+    let pin_features = pinned["features"].as_array().unwrap();
+    assert_eq!(pin_features.len(), 1);
+    assert_eq!(
+        pin_features[0]["properties"]["geometry_role"],
+        "crustal_pin"
+    );
+    assert_eq!(pin_features[0]["properties"]["unformed"], true);
+    assert!(
+        style(pinned, BodyId::Earth, DisplayProjection::Mercator)
+            .unwrap()
+            .validate()
+            .is_ok()
+    );
+
+    let after = SelectedTime::query(
+        &atlas,
+        &TimeControl {
+            mode: TimeMode::MillionYears,
+            value: "65".into(),
+            ..Default::default()
+        },
+    )
+    .unwrap();
+    assert_eq!(after.paleo.len(), 1);
+    let extant = features_with_pins(
+        &atlas,
+        BodyId::Earth,
+        &after,
+        MapLayer::SelectedTime,
+        None,
+        false,
+    );
+    assert_eq!(extant["features"].as_array().unwrap().len(), 1);
+    assert_eq!(
+        extant["features"][0]["properties"]["geometry_role"],
+        "source_observation"
     );
 }

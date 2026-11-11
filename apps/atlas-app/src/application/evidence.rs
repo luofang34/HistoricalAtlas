@@ -51,6 +51,8 @@ impl Application {
                     for dispute in &entry.disputes {
                         json_value(ui, "Source disagreement", dispute);
                     }
+                } else {
+                    ui.label("Loading entity evidence…");
                 }
             });
         if let Some(id) = navigate {

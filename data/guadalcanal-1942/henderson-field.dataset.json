@@ -20,7 +20,9 @@
       "id": "2d533d06-c7ce-5884-b2ae-70acd366e67f",
       "key": "earth/sb/guadalcanal/pagoda-hill",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

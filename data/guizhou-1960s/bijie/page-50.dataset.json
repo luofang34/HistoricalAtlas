@@ -4,133 +4,177 @@
       "id": "22ac7631-ef57-5553-b508-d3d5ebf1dc1e",
       "key": "earth/cn-gz/bijie/nanqing/liujiadong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5b574818-8081-564d-aebe-e6b090c0a55f",
       "key": "earth/cn-gz/bijie/nanqing/maomaochong-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "c7ddde82-792f-5dea-af21-97e351a16851",
       "key": "earth/cn-gz/bijie/nanqing/maomaochong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d934a989-d829-5f87-828e-f0e87dae2e5c",
       "key": "earth/cn-gz/bijie/nanqing/panzhu-si-village",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9d86543c-c410-51b1-91d7-ae3ce596050e",
       "key": "earth/cn-gz/bijie/nanqing/sanjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "39630cb2-9ff4-5c9b-8075-a238ca73d1b5",
       "key": "earth/cn-gz/bijie/nanqing/baishiyan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b0066dac-cb94-54b3-92b0-4edc07e05d36",
       "key": "earth/cn-gz/bijie/nanqing/xiejia-wanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1c7ae8ae-02c6-5868-bd0d-5ba7a4246b9f",
       "key": "earth/cn-gz/bijie/nanqing/baishiyan-yakou",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "73f7fbfe-c140-5f3b-82b2-ebb554e7a2fa",
       "key": "earth/cn-gz/bijie/nanqing/tudiya",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "063aea6b-41bb-5999-933d-a0395ec358d1",
       "key": "earth/cn-gz/bijie/nanqing/hujiamatang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5fc4b91c-7903-504c-b8eb-4cf68afc686f",
       "key": "earth/cn-gz/bijie/nanqing/yantou-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "79f75037-3abe-5174-939d-58472a500985",
       "key": "earth/cn-gz/bijie/nanqing/yantouzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3a4c9fd3-8f7c-5c6c-a1bf-766f604864d8",
       "key": "earth/cn-gz/bijie/nanqing/lantianwan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "85938ef9-aba4-5162-87fc-a4c0347201c7",
       "key": "earth/cn-gz/bijie/nanqing/hujia-yuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5953fa06-ad3b-5c9e-83d1-92ec5cd06193",
       "key": "earth/cn-gz/bijie/nanqing/huangni-tian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4629dade-dbf5-5e71-86eb-ff70ce5c6868",
       "key": "earth/cn-gz/bijie/nanqing/sijiao-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "ac9428a5-3a5e-57bf-87d4-8976ad7e3a9c",
       "key": "earth/cn-gz/bijie/nanqing/nanqing-he",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "f7ef3fb9-ef42-5c1c-b8fa-91222b5c4063",
       "key": "earth/cn-gz/bijie/nanqing/zitong-ge",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "07d0c6e4-b070-596b-bbb7-2b5a972298c1",
       "key": "earth/cn-gz/bijie/nanqing/panzhu-si-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "8ff8cbd5-a89b-58e2-86b1-cfd8a9a3b7ef",
       "key": "earth/cn-gz/bijie/nanqing/guanyin-si",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "601d1db0-910e-5c9c-a725-c54dac99ae45",
       "key": "earth/cn-gz/bijie/nanqing/zhaozi-dong",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     },
     {
       "id": "d59146ab-2374-57c3-957c-ac804584713e",
       "key": "earth/cn-gz/bijie/nanqing/zhongzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [

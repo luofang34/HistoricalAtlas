@@ -31,7 +31,7 @@ fn real_wuliping_source_network_has_seat_links_and_time_view_excludes_undated_hi
     let style = crate::scene::style(
         points,
         atlas_geo::body::BodyId::Earth,
-        maplibre::projection::ProjectionType::Mercator,
+        crate::scene::DisplayProjection::Mercator,
     )
     .unwrap();
     assert!(

@@ -4,25 +4,33 @@
       "id": "a01ffd13-cf87-51bd-b441-ef3b1130d9eb",
       "key": "earth/cn-gz/bijie/jinyinshan/herb-farm",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "b81d4cb3-9603-5750-b24f-a4bb714afdd8",
       "key": "earth/cn-gz/bijie/jinyinshan/zhiqing-farm",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "f920a79a-4b34-5947-8b61-459f2e2b37b3",
       "key": "earth/cn-gz/bijie/mulang/muxi-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "285d5ca3-75ff-54c1-a538-a87dfa69dfe0",
       "key": "earth/cn-gz/bijie/mulang/muxi-pass",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

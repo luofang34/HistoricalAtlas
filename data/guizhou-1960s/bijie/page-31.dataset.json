@@ -4,37 +4,49 @@
       "id": "6b46710a-c014-52b0-9bcd-88f8ee7b0ed3",
       "key": "earth/cn-gz/bijie/guanyinqiao-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "9bb37ceb-b670-5fe0-acbe-a440bb3f0300",
       "key": "earth/cn-gz/bijie/dehou/jiaxiu-qiao",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "6685da2f-fabb-56be-869b-9d8247fd4ac5",
       "key": "earth/cn-gz/bijie/dehou/lujia-qiao-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "0da3e262-a026-53b2-a667-0c528f5db149",
       "key": "earth/cn-gz/bijie/dehou/guanmenshan-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "d42ba4d2-1968-5991-964a-100a3df7bde1",
       "key": "earth/cn-gz/bijie/dehou/chemical-factory",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "594407f1-4368-5fef-a475-c48ca30187b8",
       "key": "earth/cn-gz/bijie/dehou/liquid-nitrogen-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     }
   ],
   "records": [
