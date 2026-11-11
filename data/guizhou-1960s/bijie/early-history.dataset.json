@@ -4,31 +4,41 @@
       "id": "88041333-f15e-55a1-9e22-e81669192202",
       "key": "earth/cn-gz/bijie/lulu-polity",
       "body": "earth",
-      "kind": "region"
+      "kind": {
+        "polity": "realm"
+      }
     },
     {
       "id": "031dfec3-8362-5a06-9d1a-17416fe21ffc",
       "key": "earth/cn-gz/bijie/luzhou",
       "body": "earth",
-      "kind": "region"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "752bae17-ad39-564d-aea6-59b0b1608581",
       "key": "earth/cn-gz/bijie/bijie-post-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "fb7b29d6-2a24-5211-9011-176d89b865ac",
       "key": "earth/cn-gz/bijie/bijie-guard",
       "body": "earth",
-      "kind": "region"
+      "kind": {
+        "polity": "military"
+      }
     },
     {
       "id": "3598db1c-f453-500e-b412-21cd4953cc68",
       "key": "earth/cn-gz/bijie/bijie-county",
       "body": "earth",
-      "kind": "county"
+      "kind": {
+        "polity": "administrative"
+      }
     }
   ],
   "records": [

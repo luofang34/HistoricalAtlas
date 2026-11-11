@@ -4,7 +4,9 @@
       "id": "1a5afb64-f82f-5e8d-b1de-a4320a79435e",
       "key": "earth/cn-gz/bijie/daji/daji-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     }
   ],
   "records": [

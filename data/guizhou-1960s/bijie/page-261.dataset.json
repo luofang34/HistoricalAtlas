@@ -4,31 +4,41 @@
       "id": "55523901-6559-52ec-8e99-ddcc05155d27",
       "key": "earth/cn-gz/bijie/bozha/touzhuang/heduimen",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c0b12e35-0b52-5210-b729-5cef709e5299",
       "key": "earth/cn-gz/bijie/bozha/touzhuang/yantoushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "531f0876-8946-5c21-8004-09b12d6ac113",
       "key": "earth/cn-gz/bijie/bozha/primary-school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "707f1f75-53e8-5f58-b205-b5b7f4f4ac58",
       "key": "earth/cn-gz/bijie/bozha/power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "685f19a5-9ab3-5aa7-ba00-186956ed24ff",
       "key": "earth/cn-gz/bijie/bozha/tianba-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

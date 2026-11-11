@@ -2,10 +2,6 @@
 
 use atlas_geo::{body::BodyId, coordinates::LonLat};
 
-/// Spherical projection at both world and settlement scales.
-pub const PROJECTION: maplibre::projection::ProjectionType =
-    maplibre::projection::ProjectionType::VerticalPerspective;
-
 /// A requested camera view for body or entity selection.
 #[derive(Debug, Clone, Copy)]
 pub struct Camera {

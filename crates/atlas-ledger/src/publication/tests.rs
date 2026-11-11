@@ -1,5 +1,6 @@
 use super::*;
 use crate::model::{Entity, EntityKind};
+use atlas_core::taxonomy::PolityKind;
 use atlas_geo::body::BodyId;
 
 #[test]
@@ -12,7 +13,7 @@ fn published_links_require_a_live_entity_or_resolving_alias() {
             id: current,
             key: "earth/current".into(),
             body: BodyId::Earth,
-            kind: EntityKind::Town,
+            kind: EntityKind::Polity(PolityKind::Administrative),
         }],
         ..Dataset::default()
     };

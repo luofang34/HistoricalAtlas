@@ -1,6 +1,6 @@
 //! Source-coordinate map features with independent temporal membership.
 
-use crate::{catalog::Atlas, selection::SelectedTime};
+use crate::{catalog::Atlas, error::AppError, selection::SelectedTime};
 use atlas_core::identity::EntityId;
 use atlas_geo::body::BodyId;
 use serde_json::{Value, json};
@@ -9,9 +9,12 @@ pub mod basemap;
 pub mod boundaries;
 mod locations;
 mod picking;
+pub mod port;
 pub mod renderer;
 pub mod sheet;
 pub mod territories;
+
+pub use port::{DisplayProjection, ScenePort, ViewportPointer};
 
 /// Visibility of coordinate observations in the map.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -25,6 +28,22 @@ pub enum MapLayer {
     SelectedTime,
 }
 
+/// Construct a GPU-backed planetary scene behind the narrow [`ScenePort`] boundary.
+pub fn create_scene(
+    gpu: egui_wgpu::RenderState,
+    points: Value,
+    body: BodyId,
+    basemap: &basemap::Manifest,
+) -> Result<Box<dyn ScenePort>, AppError> {
+    let style = style_with_basemap(
+        points,
+        body,
+        DisplayProjection::VerticalPerspective,
+        basemap,
+    )?;
+    Ok(Box::new(renderer::MapRenderer::new(gpu, style, basemap)?))
+}
+
 /// Build one point per source record, preserving coincident identities.
 pub fn features(
     atlas: &Atlas,
@@ -33,33 +52,56 @@ pub fn features(
     layer: MapLayer,
     selected: Option<EntityId>,
 ) -> Value {
+    features_with_pins(atlas, body, time, layer, selected, false)
+}
+
+/// Build map point features, optionally showing pre-origin crustal reference pins in deep time.
+pub fn features_with_pins(
+    atlas: &Atlas,
+    body: BodyId,
+    time: &SelectedTime,
+    layer: MapLayer,
+    selected: Option<EntityId>,
+    crustal_pins: bool,
+) -> Value {
     if layer == MapLayer::MappedPlaces {
         return locations::features(atlas, body, selected);
     }
-    let active = |id: EntityId| time.evidence.contains_key(&id) && !time.absent.contains(&id);
+    let active = |id: EntityId| time.evidence.contains_key(&id) && !time.is_excluded(id);
     let mut features: Vec<_> = atlas
         .data
         .records
         .iter()
         .filter_map(|record| {
             let entry = atlas.entry(record.entity_id)?;
-            // A cited plate model places the coordinate at the selected age even
-            // without dated evidence that the entity existed then.
+            if entry.entity.body != body {
+                return None;
+            }
             let paleo = (layer == MapLayer::SelectedTime)
                 .then(|| time.paleo.get(&record.id))
                 .flatten();
-            if entry.entity.body != body
-                || (layer == MapLayer::SelectedTime && !active(record.entity_id) && paleo.is_none())
+            let pin = (layer == MapLayer::SelectedTime && crustal_pins)
+                .then(|| time.crustal_pins.get(&record.id))
+                .flatten();
+            if layer == MapLayer::SelectedTime
+                && !active(record.entity_id)
+                && paleo.is_none()
+                && pin.is_none()
             {
                 return None;
             }
             let coordinate = record.observation.coordinate.as_ref()?;
             let mut properties =
                 atlas_ledger::features::observation_properties(record, &entry.entity, coordinate);
-            let point = paleo.map_or(coordinate.point, |position| position.reconstructed);
+            let rotated = paleo.or(pin);
+            let point = rotated.map_or(coordinate.point, |position| position.reconstructed);
             if let Some(properties) = properties.as_object_mut() {
                 properties.insert("selected".into(), json!(selected == Some(record.entity_id)));
-                if let Some(position) = paleo {
+                if pin.is_some() {
+                    properties.insert("geometry_role".into(), json!("crustal_pin"));
+                    properties.insert("unformed".into(), json!(true));
+                }
+                if let Some(position) = rotated {
                     properties.insert("reconstructed".into(), json!(true));
                     properties.insert("plate_model".into(), json!(position.model_id));
                     properties.insert("plate_id".into(), json!(position.plate_id));
@@ -74,8 +116,6 @@ pub fn features(
         })
         .collect();
     if layer == MapLayer::SelectedTime {
-        // Entities placed only by a registered map or photograph still exist at
-        // the selected time; their registered location stands in for an anchor.
         let anchored: std::collections::BTreeSet<EntityId> = atlas
             .data
             .records
@@ -94,7 +134,7 @@ pub fn features(
 pub fn style(
     points: Value,
     body: BodyId,
-    projection: maplibre::projection::ProjectionType,
+    projection: DisplayProjection,
 ) -> Result<maplibre::style::Style, basemap::ManifestError> {
     style_with_basemap(points, body, projection, &basemap::Manifest::bundled()?)
 }
@@ -103,9 +143,10 @@ pub fn style(
 pub fn style_with_basemap(
     points: Value,
     body: BodyId,
-    projection: maplibre::projection::ProjectionType,
+    projection: DisplayProjection,
     manifest: &basemap::Manifest,
 ) -> Result<maplibre::style::Style, basemap::ManifestError> {
+    let projection = projection.into_maplibre();
     let mut value = json!({"version": 8, "center": [0.0, 0.0], "zoom": 0.5,
     "projection": {"type": projection},
     "sources": {
@@ -150,6 +191,10 @@ pub fn style_with_basemap(
             "filter": ["==", "geometry_role", "territory_node"],
             "paint": {"circle-radius": 8, "circle-color": "#31505c", "circle-stroke-width": 2,
                 "circle-stroke-color": "#91b8cf"}},
+        {"id": "crustal-pins", "type": "circle", "source": "observations",
+            "filter": ["==", "geometry_role", "crustal_pin"],
+            "paint": {"circle-radius": 5, "circle-color": "#152c35", "circle-opacity": 0.35,
+                "circle-stroke-width": 1.5, "circle-stroke-color": "#8aa6b0"}},
         {"id": "observations", "type": "circle", "source": "observations",
             "filter": ["==", "geometry_role", "source_observation"],
             "paint": {"circle-radius": 4, "circle-color": "#8d3e32", "circle-stroke-width": 1,

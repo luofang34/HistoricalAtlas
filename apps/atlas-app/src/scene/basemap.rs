@@ -23,6 +23,23 @@ struct PublishedBasemap {
     network: Network,
 }
 
+#[cfg(target_arch = "wasm32")]
+fn resource_to_fetch(error: crate::resources::ResourceError) -> SourceFetchError {
+    match error {
+        crate::resources::ResourceError::NotFound(url) => SourceFetchError::not_found(&url),
+        crate::resources::ResourceError::Http {
+            url,
+            status,
+            reason,
+        } => SourceFetchError::http_response(
+            &url,
+            status,
+            ManifestError::Invalid(format!("HTTP {status}: {reason}")),
+        ),
+        other => SourceFetchError::temporary(other),
+    }
+}
+
 #[cfg_attr(target_arch = "wasm32", async_trait::async_trait(?Send))]
 #[cfg_attr(not(target_arch = "wasm32"), async_trait::async_trait)]
 impl HttpClient for PublishedBasemap {
@@ -35,7 +52,9 @@ impl HttpClient for PublishedBasemap {
             .get(url)
             .ok_or_else(|| SourceFetchError::not_found(url))?;
         #[cfg(target_arch = "wasm32")]
-        let bytes = crate::resources::bytes(&format!("assets/basemap/{}", tile.file)).await?;
+        let bytes = crate::resources::bytes(&format!("assets/basemap/{}", tile.file))
+            .await
+            .map_err(resource_to_fetch)?;
         #[cfg(not(target_arch = "wasm32"))]
         let bytes =
             read_asset_blocking(&tile.file).map_err(|error| SourceFetchError(Box::new(error)))?;
@@ -73,13 +92,12 @@ pub fn loader(manifest: &Manifest) -> SharedLoader {
 }
 
 /// Load the publication manifest independently of the executable.
-pub async fn load() -> Result<Manifest, SourceFetchError> {
+pub async fn load() -> Result<Manifest, ManifestError> {
     #[cfg(target_arch = "wasm32")]
     let bytes = crate::resources::bytes("assets/basemap/manifest.json").await?;
     #[cfg(not(target_arch = "wasm32"))]
-    let bytes =
-        read_asset_blocking("manifest.json").map_err(|error| SourceFetchError(Box::new(error)))?;
-    Manifest::parse(&bytes).map_err(|error| SourceFetchError(Box::new(error)))
+    let bytes = read_asset_blocking("manifest.json")?;
+    Manifest::parse(&bytes)
 }
 
 /// Platform cache directory for online tiles; HTTP caching headers decide reuse,

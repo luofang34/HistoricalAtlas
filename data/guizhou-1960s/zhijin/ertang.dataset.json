@@ -4,271 +4,361 @@
       "id": "d3b7c1c7-e72e-590a-b33f-01b7a4b6d140",
       "key": "earth/cn-gz/zhijin/county",
       "body": "earth",
-      "kind": "county"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "b5e51141-9610-59e3-8052-d1f8530abbb5",
       "key": "earth/cn-gz/zhijin/ertang-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "cfc3c653-bbf6-52f9-915f-12a6cd4627be",
       "key": "earth/cn-gz/zhijin/ertang/heba-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "236684db-927e-53ab-81d0-95b5a61550e9",
       "key": "earth/cn-gz/zhijin/ertang/xinzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c5d0a9ef-ee71-59ed-9f50-174c9eb3f5c0",
       "key": "earth/cn-gz/zhijin/ertang/jinshan-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "3435c9a0-296d-5041-85e9-97f6477c5791",
       "key": "earth/cn-gz/zhijin/ertang/lengchong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "93c12e4a-63a2-52fb-be49-9a045bc07114",
       "key": "earth/cn-gz/zhijin/ertang/ertang-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "5da6b382-b940-5ff2-beb4-6e1cfb8b48f3",
       "key": "earth/cn-gz/zhijin/ertang/ertang-village",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c5584920-bdcc-55ef-bb7d-93c2b618a99e",
       "key": "earth/cn-gz/zhijin/ertang/chenjia-qiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c66c4b7c-fa94-5130-a84e-ee72b9df4498",
       "key": "earth/cn-gz/zhijin/ertang/shangchang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7992721f-122f-52f2-82f5-f1c78da36d29",
       "key": "earth/cn-gz/zhijin/ertang/bazi-shang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "08b42119-b696-5446-9e8a-6aef90d19c4a",
       "key": "earth/cn-gz/zhijin/ertang/shuiyan-ba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "972bcfd0-a1d5-5023-b3a1-0ac89dc229e5",
       "key": "earth/cn-gz/zhijin/ertang/yanjiao-zhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ccaae75e-6deb-5bb8-9577-83b17508f477",
       "key": "earth/cn-gz/zhijin/ertang/huangni-po",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b7291c30-e7ac-574b-8c71-056136805de4",
       "key": "earth/cn-gz/zhijin/ertang/shimaomao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "85f8973e-e140-560a-ad12-f43adf7868e1",
       "key": "earth/cn-gz/zhijin/ertang/maan-shan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "50c1fb2d-ccaf-557f-930c-3c6118e82223",
       "key": "earth/cn-gz/zhijin/ertang/dashi-ban",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bc8e24dd-ebc7-5645-b780-3a6a706a250b",
       "key": "earth/cn-gz/zhijin/ertang/dashu-jiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "45477691-96c5-5962-a259-3475efc05a73",
       "key": "earth/cn-gz/zhijin/ertang/shangba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "26db5cdd-0597-580d-97ee-d078525bacdd",
       "key": "earth/cn-gz/zhijin/ertang/xiaba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "06a380b2-4a1d-5024-89ed-582f47359b3f",
       "key": "earth/cn-gz/zhijin/ertang/chushui-dong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6c942766-168a-554b-9ff2-9c1040459259",
       "key": "earth/cn-gz/zhijin/ertang/malang-chong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6dcf1d0a-ec5d-5c50-9ddc-2e9a1f6f656c",
       "key": "earth/cn-gz/zhijin/ertang/xia-malang-chong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6e702ca8-3b24-562c-94fc-ef6a1e796c00",
       "key": "earth/cn-gz/zhijin/ertang/luoche",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "925e285c-7626-5cc9-877e-0a6889aa5435",
       "key": "earth/cn-gz/zhijin/ertang/potou-shang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bcedc9d9-8dc9-53fb-95f9-e7d73526fabe",
       "key": "earth/cn-gz/zhijin/ertang/chuandong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "441d5257-ac5a-5218-b77d-8971ec4bc7db",
       "key": "earth/cn-gz/zhijin/ertang/tudi-ya",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "dd1f99e7-25ce-5b52-82e8-cb4106cbf660",
       "key": "earth/cn-gz/zhijin/ertang/baobao-zhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0737beeb-9357-51eb-b7bb-617c8e2b90bd",
       "key": "earth/cn-gz/zhijin/ertang/zhongzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9a308595-ccb9-5f89-896c-b7a7b68c5f83",
       "key": "earth/cn-gz/zhijin/ertang/luodi-chong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "717ec35d-a6e3-51af-8030-9e608c7bf941",
       "key": "earth/cn-gz/zhijin/ertang/meidong-chong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c8685641-d089-51f4-b9dd-0301767bb1fd",
       "key": "earth/cn-gz/zhijin/ertang/liangshui-jing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c39ef5d3-4825-5ed7-a169-110816c5d423",
       "key": "earth/cn-gz/zhijin/ertang/longtan-bian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bc1a63b4-86b0-5086-a612-90f932c6dbed",
       "key": "earth/cn-gz/zhijin/ertang/tangjia-yakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5f85ec76-18d1-5451-b5ce-01007633e370",
       "key": "earth/cn-gz/zhijin/ertang/xiaohe-ba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7fd4fc1b-0aba-57f0-904e-5ddc655914ea",
       "key": "earth/cn-gz/zhijin/ertang/yayuan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7327baeb-300b-5280-83aa-c710d38649a4",
       "key": "earth/cn-gz/zhijin/ertang/daqing-shang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "41491ce9-78bb-59db-b301-8084bfd46980",
       "key": "earth/cn-gz/zhijin/ertang/dashui-jing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f51070cc-3ac4-5353-88a0-a02a7934d4af",
       "key": "earth/cn-gz/zhijin/ertang/baitian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "511a941b-773f-5890-9a32-262d1005f6d3",
       "key": "earth/cn-gz/zhijin/ertang/qingjiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3e64a46c-16dd-5ec3-b1a8-7ce280cb7912",
       "key": "earth/cn-gz/zhijin/ertang/taoshu-chong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c434588a-b3bd-581d-a649-ee67a57bb69a",
       "key": "earth/cn-gz/zhijin/ertang/zhangjia-wan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6e065158-7d96-51a4-84d7-5cd39496445b",
       "key": "earth/cn-gz/zhijin/ertang/zhoujia-wuji",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3b946b0b-aa58-5bdc-baef-d5e84fdf4590",
       "key": "earth/cn-gz/zhijin/ertang/dapo-shang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "add79300-81b0-5b2e-b666-e90c6bc74e82",
       "key": "earth/cn-gz/zhijin/ertang/baodi-chong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [

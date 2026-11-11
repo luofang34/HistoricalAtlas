@@ -39,3 +39,18 @@ fn lunar_frame_uses_the_moon_sphere() {
     assert!((back.height_m + 1200.0).abs() < 1e-4);
     assert!((back.position.latitude - 0.7).abs() < 1e-9);
 }
+
+#[test]
+fn polar_coordinates_round_trip_without_height_singularity() {
+    for (latitude, height_m) in [(90.0, 0.0), (90.0, 2835.0), (-90.0, 0.0), (-89.75, 1500.0)] {
+        let origin = point(45.0, latitude, height_m);
+        let frame = LocalFrame::new(origin);
+        let recovered = frame.to_geodetic(Vector3::zeros());
+        assert!((recovered.position.latitude - latitude).abs() < 1e-9);
+        assert!(
+            (recovered.height_m - height_m).abs() < 1e-3,
+            "expected {height_m}, got {}",
+            recovered.height_m
+        );
+    }
+}

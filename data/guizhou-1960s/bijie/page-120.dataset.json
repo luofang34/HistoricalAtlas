@@ -4,217 +4,289 @@
       "id": "1d6c8b4a-3e7c-5b50-a1d7-445e2703e5e0",
       "key": "earth/cn-gz/bijie/shaba/shaba-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "16bb15d8-74b3-5fde-b1f4-fa9f154d4f35",
       "key": "earth/cn-gz/bijie/shaba/shaba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "072636d4-848b-54f3-9b19-f2bd1c163e7d",
       "key": "earth/cn-gz/bijie/shaba/gaoshanpu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e41bf5e5-2fde-51df-98fc-4abdf9ef40f9",
       "key": "earth/cn-gz/bijie/shaba/taishaba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1c340e49-dc97-5810-91e1-c102dcac9b7b",
       "key": "earth/cn-gz/bijie/shaba/chaoying-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "28f32fa3-f016-5f3f-9c00-7dec61a5abf6",
       "key": "earth/cn-gz/bijie/shaba/shangxiaozhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "adf9f907-4649-5cf4-a44e-93e0428dc10f",
       "key": "earth/cn-gz/bijie/shaba/xiaxiaozhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c215b818-3c01-5908-9c85-7e5d9cfb0b71",
       "key": "earth/cn-gz/bijie/shaba/yanjiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5aa39d54-ef74-55c2-a605-8d2b3ee38bf9",
       "key": "earth/cn-gz/bijie/shaba/chaozidi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7d7efcbb-094d-53b5-88d2-e0f849040118",
       "key": "earth/cn-gz/bijie/shaba/shangshuiying",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d3b8ae11-f65c-5f2f-b627-36f4ece2f4bc",
       "key": "earth/cn-gz/bijie/shaba/xiashuiying",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "171a792a-6bb3-5b61-b116-e9766feb37c0",
       "key": "earth/cn-gz/bijie/shaba/hanjiachong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "fe31ddf0-4793-5215-8145-ce2a581c9d06",
       "key": "earth/cn-gz/bijie/shaba/maolishu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6df2af04-ef6d-5a9e-a665-91b1924219a1",
       "key": "earth/cn-gz/bijie/shaba/anjiaying",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d9b3d74d-87a8-54f4-b1b6-e3cc66140f8c",
       "key": "earth/cn-gz/bijie/shaba/yongfeng-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "13187d4a-f573-5e0c-8889-a3cd4e37dab6",
       "key": "earth/cn-gz/bijie/shaba/niulushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "04d7b6bc-e62a-53d7-9706-4e0f0ca56d8f",
       "key": "earth/cn-gz/bijie/shaba/xiangshuping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ff80b43e-f0ac-5ff1-8f9b-0b5a8d077564",
       "key": "earth/cn-gz/bijie/shaba/chadong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ba4725cb-96eb-5028-9ba3-dbcb7baa2cad",
       "key": "earth/cn-gz/bijie/shaba/zhushaao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "53b7a51b-1e4c-5856-8eb0-92e7f7f3019f",
       "key": "earth/cn-gz/bijie/shaba/yangjiaao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f3ca215a-cf72-58fa-be87-1fa6d04c72f4",
       "key": "earth/cn-gz/bijie/shaba/baijiashao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "73d221ee-4162-548c-b226-dabb2ba4b7bb",
       "key": "earth/cn-gz/bijie/shaba/guojiadi",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "f8317da6-ed2b-51c2-9cc3-de295835c7fb",
       "key": "earth/cn-gz/bijie/shaba/zhongkua",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "88139f00-43a4-548e-92b3-eb2cd127f6aa",
       "key": "earth/cn-gz/bijie/shaba/maoping",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "d45f5a0d-6ac7-5ddd-912b-a61a00d5e2c6",
       "key": "earth/cn-gz/bijie/shaba/shuimatang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9d21da62-4900-56e3-8840-487be2fefdf4",
       "key": "earth/cn-gz/bijie/shaba/shaotanchong",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "4e0ef2be-ea3a-59c1-a7f2-a5f6c9ed09ce",
       "key": "earth/cn-gz/bijie/shaba/tudi-yakou",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "4b4e1a68-f880-5850-8f93-e66d74c80f3f",
       "key": "earth/cn-gz/bijie/shaba/dazhuping",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "39956a1f-5496-5282-8613-c6a0c9ae2636",
       "key": "earth/cn-gz/bijie/shaba/shale-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "2b951a57-de6d-5fd3-b910-a472f65ab1c4",
       "key": "earth/cn-gz/bijie/shaba/luoxiongjia",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2292e7d8-e336-550a-8b63-e364aae692b2",
       "key": "earth/cn-gz/bijie/shaba/wangjia-yuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a5db7328-6817-5d6d-80ca-922742e96d09",
       "key": "earth/cn-gz/bijie/shaba/longjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8d44a174-5637-5ecb-8b0c-302035bf67a1",
       "key": "earth/cn-gz/bijie/shaba/tianba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f03f69ce-a312-523f-b628-7f7e512fe44d",
       "key": "earth/cn-gz/bijie/shaba/wangjia-tianba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4a5aa12d-df5e-5389-b528-f554b745c487",
       "key": "earth/cn-gz/bijie/shaba/muguachong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6b838fc0-4d3f-5a8d-8855-38e992761847",
       "key": "earth/cn-gz/bijie/shaba/damuqiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [

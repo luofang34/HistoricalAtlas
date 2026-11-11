@@ -4,145 +4,193 @@
       "id": "cf94d56c-8bd0-5746-beb8-26cb05c7e560",
       "key": "earth/cn-gz/bijie/yanzikou/fankaimen",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "65c946ae-8cfb-5e93-808e-b48700cb8d4c",
       "key": "earth/cn-gz/bijie/yanzikou/yanbei",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "5fb1f3e1-0466-5e91-bfd6-9c2c2e76a8cf",
       "key": "earth/cn-gz/bijie/yanzikou/jinzhu-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "dc2e7b49-9f64-5d47-a9ed-ae360947daaf",
       "key": "earth/cn-gz/bijie/yanzikou/hanjiagou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8b888256-a7d6-5933-81ef-5afa77713fda",
       "key": "earth/cn-gz/bijie/yanzikou/xinyingpan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "19a6b54d-433f-58ce-a966-382f1386f551",
       "key": "earth/cn-gz/bijie/yanzikou/baijidi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a79174e0-7254-5b58-b528-ec1cc23f3870",
       "key": "earth/cn-gz/bijie/yanzikou/daping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c68f07ed-74e0-572e-b043-0dfd625420f5",
       "key": "earth/cn-gz/bijie/yanzikou/yudong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "feb10c11-375c-5b51-bd65-d4c0abd8d6fa",
       "key": "earth/cn-gz/bijie/yanzikou/zhucaoba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6d78d06a-4cd9-5eb8-9e02-3d79d7656dfb",
       "key": "earth/cn-gz/bijie/yanzikou/chejianggou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9de3f4dd-6518-52f8-a30f-d17a328354e4",
       "key": "earth/cn-gz/bijie/yanzikou/ganchailing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "66c4d5b6-a17b-5875-8f57-017814fb7dd1",
       "key": "earth/cn-gz/bijie/yanzikou/shagou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "75c5cf3a-996b-5039-9cd9-14044c58192d",
       "key": "earth/cn-gz/bijie/yanzikou/dashanpo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8636ed2b-8f7d-58e5-a195-c633de3d7358",
       "key": "earth/cn-gz/bijie/yanzikou/dapingzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a3963d56-67bc-52b6-bfd4-23acd74820c0",
       "key": "earth/cn-gz/bijie/yanzikou/jianzhulin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6e76e2cb-cb30-58fb-83d8-ca3615336def",
       "key": "earth/cn-gz/bijie/yanzikou/matanghe",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b8d272de-5268-5006-b38a-0b17722423cd",
       "key": "earth/cn-gz/bijie/yanzikou/daliangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "43707823-116d-5caf-8d81-bf6194f51a31",
       "key": "earth/cn-gz/bijie/yanzikou/gaojiashan-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "ab97b0b3-4963-5ad4-abb2-04aa02b91042",
       "key": "earth/cn-gz/bijie/yanzikou/qinglongshan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "b8d0cdc1-f6d1-589a-8098-e34539e51c1e",
       "key": "earth/cn-gz/bijie/yanzikou/lengsha-liangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "d6f673e1-c913-533c-a78c-71d6037d92c6",
       "key": "earth/cn-gz/bijie/yanzikou/yuntai-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "ba82d632-ee0f-5297-850a-67f3b16bfc82",
       "key": "earth/cn-gz/bijie/yanzikou/shanwang-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "9046b324-e5cb-55b8-a20c-a8a990b4a4a2",
       "key": "earth/cn-gz/bijie/yanzikou/wenchang-pavilion",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "8a8c9483-6510-59ab-9679-0a8cf3b653a6",
       "key": "earth/cn-gz/bijie/yanzikou/dimu-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

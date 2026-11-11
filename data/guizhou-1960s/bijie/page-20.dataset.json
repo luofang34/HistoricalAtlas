@@ -4,217 +4,289 @@
       "id": "4b13e508-16cc-53f4-a503-9d03642b966f",
       "key": "earth/cn-gz/bijie/bijie-town",
       "body": "earth",
-      "kind": "town"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "f614f896-89e4-59a6-84d0-30a1d8b20f88",
       "key": "earth/cn-gz/bijie/cuiping-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "1f4c5f3a-2499-5a67-8c1e-747a1fb37b8c",
       "key": "earth/cn-gz/bijie/daotianhe-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "4766fa5c-f8c6-574c-8ef9-0494d8559ae6",
       "key": "earth/cn-gz/bijie/daotianhe",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "1e1d02f8-87a9-5670-b43b-710456d8fc99",
       "key": "earth/cn-gz/bijie/xiangshui-tan",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "295686e4-6d5e-5279-bd1e-354a48df8034",
       "key": "earth/cn-gz/bijie/tianhe-lu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5e6c465c-654c-5718-9b7d-67579dd926f1",
       "key": "earth/cn-gz/bijie/bajiao-jing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "02348861-1f84-5b13-848b-632b5df5e9b0",
       "key": "earth/cn-gz/bijie/pailou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d943623d-884e-5670-8c79-3e85f42e5a3a",
       "key": "earth/cn-gz/bijie/bijie-cigarette-factory",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "afb83047-a6cf-572e-821e-73a214aeb257",
       "key": "earth/cn-gz/bijie/sugar-food-factory",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "13221f9d-abf3-59ca-957d-0ab3fb4bb75d",
       "key": "earth/cn-gz/bijie/xinqiao",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "a95a6d54-4a3d-5500-afb5-e473d55939ed",
       "key": "earth/cn-gz/bijie/shuangshu-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "a408da4a-2d77-5108-8f92-1df93e267dd0",
       "key": "earth/cn-gz/bijie/shuangshuwan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5c5b4cbe-216c-58ba-8b4f-44cd0e5f8ffd",
       "key": "earth/cn-gz/bijie/xiejiayuan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bdffb613-740b-5f31-813c-07c85fd244d9",
       "key": "earth/cn-gz/bijie/qinjia-mayuan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "12ace092-8594-529e-ae67-59dd9f6353a8",
       "key": "earth/cn-gz/bijie/dadi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "880a84e1-7c79-5970-894c-d04d6cab89de",
       "key": "earth/cn-gz/bijie/damaitang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5a5b6f41-56d8-5a35-80da-1e85441e205d",
       "key": "earth/cn-gz/bijie/refrigeration-factory",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "440268a3-4f8e-56b9-8544-3a529ffe319f",
       "key": "earth/cn-gz/bijie/cuiping-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "e9fc8a95-bc25-51ea-9e8e-1e81edb67c1b",
       "key": "earth/cn-gz/bijie/cuiping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0121c639-35e5-5cd0-b6e7-ce894b577748",
       "key": "earth/cn-gz/bijie/anjiajing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "02489f7b-9bae-54ca-b302-a0a148ce1f75",
       "key": "earth/cn-gz/bijie/beimen",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7593f24e-e5b4-542c-97f4-9d095b0f166d",
       "key": "earth/cn-gz/bijie/deisheng",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "03267185-875b-5a50-b918-ad45c49073af",
       "key": "earth/cn-gz/bijie/shaoguotang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b1bf26cc-f89d-57d8-ada5-75d53527a6d8",
       "key": "earth/cn-gz/bijie/dashui-kou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "631c6017-c803-55a7-bfa6-9544059b780d",
       "key": "earth/cn-gz/bijie/shuijing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "138032ac-6c5a-5d8b-b7da-73dab7a3111f",
       "key": "earth/cn-gz/bijie/zaojiaoshu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "30066296-3fd3-558a-a677-b9fba7891f3d",
       "key": "earth/cn-gz/bijie/sanbao-qiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e38a69da-8be1-5a54-8bc5-dded6aa1fe86",
       "key": "earth/cn-gz/bijie/guihua-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "85bc6523-a8a1-5c08-b1c0-6d9db35a4df0",
       "key": "earth/cn-gz/bijie/guihua-lu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "49f1746d-0c3b-5172-818c-2d6738a5fed9",
       "key": "earth/cn-gz/bijie/shanlin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "fa88c849-c303-5378-aebe-182644315f16",
       "key": "earth/cn-gz/bijie/tunyan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7909a6c6-536f-5d5b-8e0e-4ae5621ee6c8",
       "key": "earth/cn-gz/bijie/starch-factory",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "f8cbd232-c88e-5349-a09d-7e2d9e43ba1a",
       "key": "earth/cn-gz/bijie/jinzhong-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "65a8f56c-eeb4-500a-9d58-32fdc7f14c97",
       "key": "earth/cn-gz/bijie/jinzhong-shan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "07764758-1bb7-5ca4-9f17-e958f8b8ec38",
       "key": "earth/cn-gz/bijie/weibi-shan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [

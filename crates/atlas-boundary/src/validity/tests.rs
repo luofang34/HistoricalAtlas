@@ -15,8 +15,8 @@ fn dataset() -> (Dataset, FactId, FactId, FactId) {
     };
     let data = serde_json::from_value(json!({
         "entities": [
-            {"id": commune, "key": "earth/test/commune", "body": "earth", "kind": "commune"},
-            {"id": other, "key": "earth/test/other", "body": "earth", "kind": "commune"}],
+            {"id": commune, "key": "earth/test/commune", "body": "earth", "kind": {"polity": "administrative"}},
+            {"id": other, "key": "earth/test/other", "body": "earth", "kind": {"polity": "administrative"}}],
         "records": [record(drawing, "sheet/commune", commune),
             record(chronology, "history/commune", commune),
             record(elsewhere, "history/other", other)],

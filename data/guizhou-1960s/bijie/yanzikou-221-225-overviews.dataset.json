@@ -4,19 +4,25 @@
       "id": "7a957732-17e8-54a6-86fa-5110da3d7e96",
       "key": "earth/cn-gz/bijie/xianjin/matang-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "a8d9a306-ce51-5a7e-aecc-da1c1b50d4d0",
       "key": "earth/cn-gz/bijie/efeng/daefeng",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "69e37dd3-ca94-5a54-8ac9-e388821be020",
       "key": "earth/cn-gz/bijie/efeng/efenggou",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     }
   ],
   "records": [

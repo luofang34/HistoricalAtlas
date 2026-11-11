@@ -4,61 +4,81 @@
       "id": "8805f386-07c5-570a-88b8-fd9f6ed57ec4",
       "key": "earth/cn-gz/bijie/efeng/yakoushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a72d178d-3ce0-5102-8d6b-909de00b311d",
       "key": "earth/cn-gz/bijie/efeng/majiatian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "30f38862-b266-59ff-ae76-e5a740cde276",
       "key": "earth/cn-gz/bijie/efeng/dayakou",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "4055eb7f-8d2f-5457-ac2c-5cb0245639fa",
       "key": "earth/cn-gz/bijie/efeng/hejia-dashan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "1473e215-7c8c-5f14-8e88-d4730aac6a47",
       "key": "earth/cn-gz/bijie/efeng/neikou-liangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "c5e93549-ce85-5677-8f8e-95763bf41c69",
       "key": "earth/cn-gz/bijie/efeng/laodao-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "ca6f7a86-1a86-580b-9ba2-6c6ffef118ff",
       "key": "earth/cn-gz/bijie/efeng/maocao-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "fe89a5c6-6677-5fac-a827-3c3232ce4794",
       "key": "earth/cn-gz/bijie/efeng/xujiaping-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "449acd1c-39e1-5c65-8845-bc4017bbe35d",
       "key": "earth/cn-gz/bijie/efeng/laoyingpo-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "20a632bf-c652-5bac-95a9-c0aaa8c1dee9",
       "key": "earth/cn-gz/bijie/efeng/bijiashan-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     }
   ],
   "records": [

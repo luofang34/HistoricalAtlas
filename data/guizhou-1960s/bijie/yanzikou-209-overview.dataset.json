@@ -4,13 +4,17 @@
       "id": "f226446a-eec7-5b3e-be09-205297a31838",
       "key": "earth/cn-gz/bijie/yanzikou/dashuigou-liangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "cb90a0b6-28c4-52a3-855f-0eae5cca3987",
       "key": "earth/cn-gz/bijie/yanzikou/aluomi-garrison",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

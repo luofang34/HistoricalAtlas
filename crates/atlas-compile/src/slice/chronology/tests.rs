@@ -181,9 +181,9 @@ fn published_county_evidence_keeps_the_printed_year_and_era_conversion() {
         TimeSelection::Certain,
     )
     .unwrap();
-    let path = std::path::PathBuf::from(format!("entities/index/{}.json", county.id.shard()));
-    let shard: serde_json::Value = serde_json::from_slice(&output[&path]).unwrap();
-    let evidence = &shard[county.id.0.to_string()];
+    let evidence = crate::export::lookup_entity(&output, county.id)
+        .unwrap()
+        .unwrap();
     assert_eq!(evidence["disputes"].as_array().unwrap().len(), 1);
     let records = evidence["records"].as_array().unwrap();
     assert!(

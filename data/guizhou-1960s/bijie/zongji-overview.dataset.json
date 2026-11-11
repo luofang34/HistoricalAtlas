@@ -4,19 +4,25 @@
       "id": "a36f2cf2-50f3-5fce-8913-59a3ab08bd5b",
       "key": "earth/cn-gz/bijie/zongji/tuer-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "227ad4ef-9af4-532b-bf23-475a345129ad",
       "key": "earth/cn-gz/bijie/zongji/zongji-gully",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "885e75d3-8ad1-5021-919c-8d8299c4ffd4",
       "key": "earth/cn-gz/bijie/zongji/coal-deposit",
       "body": "earth",
-      "kind": "geological_site"
+      "kind": {
+        "geology": "site"
+      }
     }
   ],
   "records": [

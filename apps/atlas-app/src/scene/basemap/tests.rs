@@ -1,4 +1,5 @@
 use super::*;
+use crate::scene::DisplayProjection;
 use atlas_geo::body::BodyId;
 use maplibre::{coords::WorldTileCoords, projection::ProjectionType};
 use serde_json::json;
@@ -45,11 +46,14 @@ fn publication_tiles_load_from_files_and_match_manifest_checksums() {
 #[test]
 fn projections_share_source_coordinates_and_earth_basemap_is_body_scoped() {
     let points = json!({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [105.3, 27.3]}, "properties": {"geometry_role": "source_observation"}}]});
-    for projection in [
-        ProjectionType::Mercator,
-        ProjectionType::VerticalPerspective,
+    for (display, projection) in [
+        (DisplayProjection::Mercator, ProjectionType::Mercator),
+        (
+            DisplayProjection::VerticalPerspective,
+            ProjectionType::VerticalPerspective,
+        ),
     ] {
-        let style = crate::scene::style(points.clone(), BodyId::Earth, projection.clone()).unwrap();
+        let style = crate::scene::style(points.clone(), BodyId::Earth, display).unwrap();
         assert!(style.validate().is_ok());
         assert_eq!(
             style.projection.as_ref().unwrap().projection_type,
@@ -70,7 +74,7 @@ fn projections_share_source_coordinates_and_earth_basemap_is_body_scoped() {
         .unwrap();
         assert!(!processed.vector.is_empty());
     }
-    let moon = crate::scene::style(points, BodyId::Moon, ProjectionType::Globe).unwrap();
+    let moon = crate::scene::style(points, BodyId::Moon, DisplayProjection::Globe).unwrap();
     let serialized = serde_json::to_value(moon).unwrap();
     for layer in serialized["layers"]
         .as_array()
@@ -90,7 +94,7 @@ fn another_region_zoom_and_body_use_manifest_coverage() {
     ]})).unwrap()).unwrap();
     let empty = json!({"type": "FeatureCollection", "features": []});
     let style =
-        crate::scene::style_with_basemap(empty, BodyId::Moon, ProjectionType::Globe, &manifest)
+        crate::scene::style_with_basemap(empty, BodyId::Moon, DisplayProjection::Globe, &manifest)
             .unwrap();
     assert!(style.validate().is_ok());
     let style = serde_json::to_value(style).unwrap();

@@ -4,61 +4,81 @@
       "id": "13589580-4431-5026-82a7-ca580657b2a6",
       "key": "earth/cn-gz/bijie/guole/liujiawan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0e47a7fd-2191-5c09-ae0f-837c81c1a145",
       "key": "earth/cn-gz/bijie/guole/baiguowa",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2c3d2552-9027-5ab7-a40f-81a12463a691",
       "key": "earth/cn-gz/bijie/guole/guoleqiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c65937ef-74f5-521a-bd90-e0e7eed3d8d8",
       "key": "earth/cn-gz/bijie/guole/erdaohe",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "997edec6-5738-5c29-adf2-62b16ed46bde",
       "key": "earth/cn-gz/bijie/guole/dujiachong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ba38f915-fbfc-5ddf-b06a-bcc04f08e135",
       "key": "earth/cn-gz/bijie/guole/qiligou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "666b0b34-eaa7-5c3f-be06-f2ec31d34fb3",
       "key": "earth/cn-gz/bijie/guole/toudaogou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2d3580a8-9f58-553b-89b0-ef09e451bc3a",
       "key": "earth/cn-gz/bijie/guole/wangpoling",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d6afb9da-7730-5094-b64c-9a8d10555b99",
       "key": "earth/cn-gz/bijie/guole/wuba-wuji",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c0cecb79-31af-5954-923c-5810dc54f4f4",
       "key": "earth/cn-gz/bijie/guole/guole-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     }
   ],
   "records": [

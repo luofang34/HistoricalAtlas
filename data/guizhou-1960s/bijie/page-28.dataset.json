@@ -4,157 +4,209 @@
       "id": "02630af6-9208-5ee5-8cdf-14b569bed157",
       "key": "earth/cn-gz/bijie/dalan-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "229a76f0-fdef-5d34-85f1-10f428628ce8",
       "key": "earth/cn-gz/bijie/dalan/dalan-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "1aaf2a50-333d-533d-ab38-84e8a1b11b24",
       "key": "earth/cn-gz/bijie/dalan/panjia-dashan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a641f7d0-af65-59f3-8da3-5e8aa8520174",
       "key": "earth/cn-gz/bijie/dalan/dashan-jiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "93d5c7fc-9318-57ee-8e52-81133533ba42",
       "key": "earth/cn-gz/bijie/dalan/psychiatric-hospital",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "5748ff5a-f9e1-5e90-953e-43e55338d427",
       "key": "earth/cn-gz/bijie/dalan/yemao-dong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "39702de0-69f3-5519-aed3-8e2650bc9b9c",
       "key": "earth/cn-gz/bijie/dalan/dizhen-tai",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "403b818b-9a08-5131-80f8-de994393c359",
       "key": "earth/cn-gz/bijie/dalan/tangjia-fenshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b700890d-8c5f-549a-8aac-99c391745474",
       "key": "earth/cn-gz/bijie/dalan/chushui-dong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "81fde86d-9344-5c04-9f6e-d5b311694718",
       "key": "earth/cn-gz/bijie/dalan/liujia-wanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7fd42ab9-d680-5c43-8491-e2546a7503db",
       "key": "earth/cn-gz/bijie/dalan/liuhe-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "5b762a92-24f3-5668-b812-a4543c58c75b",
       "key": "earth/cn-gz/bijie/dalan/maojia-yakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e6144303-f64c-5078-8015-19c65c73453f",
       "key": "earth/cn-gz/bijie/dalan/maoer-gou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2efd399a-5d9a-5d37-98b9-37f22262b268",
       "key": "earth/cn-gz/bijie/dalan/wujia-gou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "79468763-7d86-5eac-909a-114027850635",
       "key": "earth/cn-gz/bijie/dalan/lanjia-wan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "fe4f5805-0b97-5d56-b585-7e55031ac053",
       "key": "earth/cn-gz/bijie/dalan/malu-chong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "855cdc57-5fb0-5c18-95ec-69f4534fa69d",
       "key": "earth/cn-gz/bijie/dalan/xiongjia-wan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a69602f4-e4fe-5cac-a17a-d73efa56b73b",
       "key": "earth/cn-gz/bijie/dalan/huancheng-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "c5cc6d50-3537-5dfd-8efe-ea8777ecf54f",
       "key": "earth/cn-gz/bijie/dalan/tangjia-shuigou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "889efcda-8586-5dff-87ec-9117886c00df",
       "key": "earth/cn-gz/bijie/dalan/dapo-jiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b3e3f7f6-bc2b-5f27-ad3c-ea4662a58499",
       "key": "earth/cn-gz/bijie/dalan/wayao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d61faa97-8a5a-5c07-917b-d22848a54810",
       "key": "earth/cn-gz/bijie/dalan/yingpan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "385d6c73-ebe3-59f9-82b6-5281fb5b1135",
       "key": "earth/cn-gz/bijie/dalan/maoer-dong-village",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "73232ada-2921-5833-b300-ff692bd8a63e",
       "key": "earth/cn-gz/bijie/dalan/mahuang-gou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2e5811aa-6357-5e49-ac8c-67a9531625e5",
       "key": "earth/cn-gz/bijie/dalan/maoer-dong-cave",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     },
     {
       "id": "45573b04-663d-589a-b4a7-7bec291ec857",
       "key": "earth/cn-gz/bijie/dalan/guanmen-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

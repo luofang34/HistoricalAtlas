@@ -4,205 +4,273 @@
       "id": "a1c3c7a6-2a9e-5eed-b0c7-e8f6d91ee7da",
       "key": "earth/cn-gz/bijie/houqing/houqing-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "978c68e5-27b6-5bac-9d52-6788747b4605",
       "key": "earth/cn-gz/bijie/houqing/houqing-hujiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bafbfdb9-421e-5fb4-a41f-590346caff90",
       "key": "earth/cn-gz/bijie/houqing/qingshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "77f6fe41-3073-549e-89fb-ab68874f7288",
       "key": "earth/cn-gz/bijie/houqing/shuiying",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b9057e2b-4e5e-5eb4-b77e-c33cf1274b2b",
       "key": "earth/cn-gz/bijie/houqing/zhongying-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "37859a2a-37b2-542d-91c4-b4a12b8f9cca",
       "key": "earth/cn-gz/bijie/houqing/shangying",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9c0edeaa-1f99-5f71-88ec-3784dd6623c6",
       "key": "earth/cn-gz/bijie/houqing/zhongying",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bf55108c-1ab7-51f5-ab71-c674cb7f741c",
       "key": "earth/cn-gz/bijie/houqing/dashui",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ab6e18ff-ed7a-537b-a8dc-413e677c6c1d",
       "key": "earth/cn-gz/bijie/houqing/xiaogaoshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c6e572fe-ef6e-59f9-afda-59719b2485fd",
       "key": "earth/cn-gz/bijie/houqing/taoshuwa-place",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "2b85fd29-1710-521b-a81f-0331de57d02c",
       "key": "earth/cn-gz/bijie/houqing/fengdingshanjiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "30bb2c19-a3fb-57da-9909-10df8a24129e",
       "key": "earth/cn-gz/bijie/houqing/dachong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9870aff8-84d0-5a9e-a46d-cf3a9adf8ede",
       "key": "earth/cn-gz/bijie/houqing/taoshuwa",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "481ea902-cd48-5ff3-af18-21ba2ef1380c",
       "key": "earth/cn-gz/bijie/houqing/longguanqiao-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "f6e87124-ec16-5a69-9ced-feca60b303f4",
       "key": "earth/cn-gz/bijie/houqing/longguanqiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bf3e33b7-6f7f-5640-8467-9a615c740baf",
       "key": "earth/cn-gz/bijie/houqing/choushuijing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "901067a4-1131-5550-bc32-31c5fac0573a",
       "key": "earth/cn-gz/bijie/houqing/zhoujiagou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "fb3bea74-5ca4-5d84-a3cd-3ec990937bda",
       "key": "earth/cn-gz/bijie/houqing/cangpuwa",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5b3d865d-ea6c-5ee1-8918-3b1b6da70360",
       "key": "earth/cn-gz/bijie/houqing/bashang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "eea6dd13-14d4-5ad3-b485-6e686ed4d45b",
       "key": "earth/cn-gz/bijie/houqing/dapingzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "75245159-603e-5676-a0d5-f353cec38338",
       "key": "earth/cn-gz/bijie/houqing/xiaobaiyan",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "c73f3b7a-a6ed-51e1-afc3-ba9a90843d14",
       "key": "earth/cn-gz/bijie/houqing/xujiamingtang",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "697848f1-4668-5a96-8a5e-b9e0c6b7ab58",
       "key": "earth/cn-gz/bijie/houqing/longhan-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "2dbf42e4-4ff2-53a4-87ec-a87ce197bff4",
       "key": "earth/cn-gz/bijie/houqing/xiaohanzhuang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6d88e90e-d982-5c3c-a9e4-9bc3a6cb6271",
       "key": "earth/cn-gz/bijie/houqing/dahanzhuang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e8966d80-cacd-5449-b88b-51958c1b92b8",
       "key": "earth/cn-gz/bijie/houqing/luoshuidong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3d8d7d7e-2f46-57d3-9889-a480c9fdf4ff",
       "key": "earth/cn-gz/bijie/houqing/shangguolugou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9592b295-d5ca-5619-b0d6-d07aa50a725f",
       "key": "earth/cn-gz/bijie/houqing/lizishu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "14f0d849-f817-5393-9aa5-ec1764a3d3c5",
       "key": "earth/cn-gz/bijie/houqing/baiguo-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "52d67a6f-6c45-5b3d-84d9-cbe3844b9d4e",
       "key": "earth/cn-gz/bijie/houqing/baiguotun",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4ddec5f7-3083-5dc4-8e6d-2d30d845ce20",
       "key": "earth/cn-gz/bijie/houqing/shuangmatang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "75a23f02-b5dd-5d33-95e1-dda4c0183b6c",
       "key": "earth/cn-gz/bijie/houqing/shuijingwan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "048ac58f-247b-5a4c-a5b4-d13ad636a661",
       "key": "earth/cn-gz/bijie/houqing/baiguo-hujiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "891f5dbb-1430-5343-a6e5-9307d3acccfe",
       "key": "earth/cn-gz/bijie/houqing/baiguo-shuangshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [

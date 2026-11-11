@@ -4,157 +4,209 @@
       "id": "97c6eb41-322c-54b9-81f3-a7ce933c3023",
       "key": "earth/cn-gz/bijie/gongzihe/anran-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "e527dbfe-b36b-5f5f-a3dd-56c3851dded2",
       "key": "earth/cn-gz/bijie/gongzihe/anran/anjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ce6c27e4-3ca4-5d5e-a273-3d12912a54d1",
       "key": "earth/cn-gz/bijie/gongzihe/anran/yakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a81be923-fb68-58da-8ba8-42a2a27163ff",
       "key": "earth/cn-gz/bijie/gongzihe/anran/taojiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d6c6cc03-c7fc-5f22-9b52-6325537f9f58",
       "key": "earth/cn-gz/bijie/gongzihe/anran/wangjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "27941f82-6b61-5c54-b943-99030abcee97",
       "key": "earth/cn-gz/bijie/gongzihe/anran/qiaobian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "00bd5342-b17f-548a-a313-994bd2c2de14",
       "key": "earth/cn-gz/bijie/gongzihe/anran/xujiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7201524d-552f-5909-bae2-46f8db984a81",
       "key": "earth/cn-gz/bijie/gongzihe/anran/yaopu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b094e213-5df0-555a-96a1-678d0a63111e",
       "key": "earth/cn-gz/bijie/gongzihe/anran/shanbeihou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3f14c7dc-eee5-5218-9a14-c480f27e0670",
       "key": "earth/cn-gz/bijie/gongzihe/anran/zhaigou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "363fb32b-0444-51e9-aaaa-b44a9fce6f54",
       "key": "earth/cn-gz/bijie/gongzihe/primary-school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "30a39b57-5e5b-5580-b788-c21402847256",
       "key": "earth/cn-gz/bijie/gongzihe/wanzi-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "e0059a65-aee1-56ce-b70b-30bdb86221be",
       "key": "earth/cn-gz/bijie/gongzihe/wanzi/wanzitou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ba69e8a5-8ceb-5e84-a298-c46f813e44ad",
       "key": "earth/cn-gz/bijie/gongzihe/wanzi/tongzilin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "fc6d0a67-8a24-53c5-b2ce-365af1d99242",
       "key": "earth/cn-gz/bijie/gongzihe/wanzi/dashuijing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7883c7b3-9d29-5ced-b0f7-f6c7ac823391",
       "key": "earth/cn-gz/bijie/gongzihe/wanzi/maowotang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1088869e-9f02-56d2-9872-2c5921a8003b",
       "key": "earth/cn-gz/bijie/gongzihe/wanzi/poshang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7b89f8c5-ed92-5a0e-b57a-13f8f6ee31e1",
       "key": "earth/cn-gz/bijie/gongzihe/wanzi/shuijing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "aa6811bb-1c10-5d10-9e3a-a409ea426ed8",
       "key": "earth/cn-gz/bijie/gongzihe/wanzi/laofangzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f5b8dbcb-c0e9-5e15-9bc7-0f351b4c960a",
       "key": "earth/cn-gz/bijie/gongzihe/xiongkua-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "797bb797-1ed3-521e-abd6-e9e6eea1216f",
       "key": "earth/cn-gz/bijie/gongzihe/xiongkua/xiongkua",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e3eb4556-64aa-5748-a5d2-d18fdec2e478",
       "key": "earth/cn-gz/bijie/gongzihe/xiongkua/fengyan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "80b99dd8-45a0-51bf-9f65-1cb6d194237f",
       "key": "earth/cn-gz/bijie/gongzihe/xiongkua/pingzishang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "588d2000-4d1f-525d-948e-f463c8586ed0",
       "key": "earth/cn-gz/bijie/gongzihe/xiongkua/yangjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0175bb0e-f869-5ec8-92f0-44b83b129d5f",
       "key": "earth/cn-gz/bijie/gongzihe/boji-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "7044b576-4dac-5db3-b0e3-1648334c83f4",
       "key": "earth/cn-gz/bijie/gongzihe/wangxiang-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

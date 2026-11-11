@@ -4,55 +4,73 @@
       "id": "1c21be3b-5731-5595-bfc6-a5de2b45efeb",
       "key": "earth/cn-gz/bijie/gezuo/maanshan-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "60b11a69-173b-5e8c-9cb3-6e5263c5c4ed",
       "key": "earth/cn-gz/bijie/gezuo/shiyakou-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "badf4f8f-e7b1-5318-8a24-85b1b7cd6f37",
       "key": "earth/cn-gz/bijie/gezuo/xiaoyankou",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "d9cf21f7-0e23-5f2e-944e-23fbacb6eb85",
       "key": "earth/cn-gz/bijie/gezuo/mohe-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "b13570cd-8cd3-5e58-8133-b4bd727792d1",
       "key": "earth/cn-gz/bijie/gezuo/zengjiada-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "cda46f32-584d-5498-b3c2-17646a2d1fb4",
       "key": "earth/cn-gz/bijie/gezuo/bizhi-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "233eca5f-8508-5bed-91ae-da2837a7b277",
       "key": "earth/cn-gz/bijie/gezuo/gezuo-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "5421cb02-0e01-5d04-a03f-7f5bd9bb6cc8",
       "key": "earth/cn-gz/bijie/gezuo/gezuo-bridge",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     },
     {
       "id": "9fe132b8-9032-570a-8610-c40ceb224af5",
       "key": "earth/cn-gz/bijie/gezuo/xiongjia-pond",
       "body": "earth",
-      "kind": "pond"
+      "kind": {
+        "hydrography": "pond"
+      }
     }
   ],
   "records": [

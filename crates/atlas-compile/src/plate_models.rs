@@ -66,16 +66,16 @@ pub fn validated_model(
     })
 }
 
-/// Include samples, crossovers, interval interiors, and excerpt endpoints.
-fn check_ages(document: &PlateModelDocument) -> Vec<f64> {
-    let mut boundaries = vec![document.youngest_ma, document.oldest_ma];
+/// Include samples, crossovers, interval interiors, and excerpt endpoints within `[young_ma, old_ma]`.
+fn check_ages(document: &PlateModelDocument, young_ma: f64, old_ma: f64) -> Vec<f64> {
+    let mut boundaries = vec![young_ma, old_ma];
     boundaries.extend(
         document
             .sequences
             .iter()
             .flat_map(|sequence| &sequence.samples)
             .map(|sample| sample.age_ma)
-            .filter(|age| document.youngest_ma <= *age && *age <= document.oldest_ma),
+            .filter(|age| young_ma <= *age && *age <= old_ma),
     );
     boundaries.sort_by(f64::total_cmp);
     boundaries.dedup();
@@ -105,8 +105,14 @@ pub fn validate_models(
         }
         validated_model(document, catalog)?;
     }
+    let ma_ticks = atlas_core::time::JULIAN_YEAR_MS as f64 * 1_000_000.0;
     for estimate in &data.estimates {
-        let EstimateValue::Plate { model_id, plate_id } = &estimate.value else {
+        let EstimateValue::Plate {
+            model_id,
+            plate_id,
+            validity,
+        } = &estimate.value
+        else {
             continue;
         };
         let invalid = |reason: &str| PlateDocumentError::Invalid {
@@ -125,8 +131,27 @@ pub fn validate_models(
                 "assignment basis must cite the rotation-file edition",
             ));
         }
+        let present = document.present_epoch.ticks();
+        let (young_ma, old_ma) = if let Some(span) = validity {
+            let young = span.end.as_ref().map_or(document.youngest_ma, |end| {
+                ((present.saturating_sub(end.latest.ticks())) as f64 / ma_ticks)
+                    .max(document.youngest_ma)
+            });
+            let old = span.start.as_ref().map_or(document.oldest_ma, |start| {
+                ((present.saturating_sub(start.earliest.ticks())) as f64 / ma_ticks)
+                    .min(document.oldest_ma)
+            });
+            if young > old {
+                return Err(invalid(
+                    "assignment validity does not overlap model age interval",
+                ));
+            }
+            (young, old)
+        } else {
+            (document.youngest_ma, document.oldest_ma)
+        };
         let model = validated_model(document, catalog)?;
-        for age in check_ages(document) {
+        for age in check_ages(document, young_ma, old_ma) {
             model
                 .rotation(*plate_id, age, PlateId(0))
                 .map_err(|source| PlateDocumentError::Rotation {

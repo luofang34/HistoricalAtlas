@@ -4,181 +4,241 @@
       "id": "48a60af3-43d2-5881-a8df-d5aef2995596",
       "key": "earth/cn-gz/bijie/huoma/huoma-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "3c2a4da7-45b0-505b-b572-9be095f1b02f",
       "key": "earth/cn-gz/bijie/huoma/huoma/zhongjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f46d7cce-7b0c-5008-9aac-f64d9e700478",
       "key": "earth/cn-gz/bijie/huoma/huoma/chenjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ba302e43-6581-5b19-a837-fa5b96b0727e",
       "key": "earth/cn-gz/bijie/huoma/huoma/zhutouyan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e3720ec0-1a43-5596-a267-db3afc3f7754",
       "key": "earth/cn-gz/bijie/huoma/huoma/dafudi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4f348952-aa7a-5caa-999b-2b37e615b3e1",
       "key": "earth/cn-gz/bijie/huoma/huoma/longdongwan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2482e512-3128-5a58-aa4e-1e050823785b",
       "key": "earth/cn-gz/bijie/huoma/huoma/jiushenggong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "dc27d0a3-88b8-5812-9b8a-033c225ead57",
       "key": "earth/cn-gz/bijie/huoma/huoma/xiutouzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "705054eb-18f7-50b2-907b-65a4f238c925",
       "key": "earth/cn-gz/bijie/huoma/huoma/wangjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a017d30d-7ac4-5403-bab1-153347324ffe",
       "key": "earth/cn-gz/bijie/huoma/huoma/huoma-toponym",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "ad0f8817-85bf-5370-b8dc-ad2ff9836424",
       "key": "earth/cn-gz/bijie/huoma/huoma/huoma",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f9ba2d25-8968-5407-aa9e-565a9cf39ad9",
       "key": "earth/cn-gz/bijie/huoma/huoma/yibasan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a959c9d1-228b-593b-be16-2c0646b3c2da",
       "key": "earth/cn-gz/bijie/huoma/school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "6ff637e3-f83b-52d9-8120-54b050551fae",
       "key": "earth/cn-gz/bijie/huoma/longjiazhai-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "6da4eaf9-159d-5265-9488-3989e55c0895",
       "key": "earth/cn-gz/bijie/huoma/longjiazhai/longjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2995db38-30b5-50fc-8581-9a5f5c15225f",
       "key": "earth/cn-gz/bijie/huoma/longjiazhai/lujiaying",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d1a1e15d-4fd9-5897-b09e-61f95b6ed606",
       "key": "earth/cn-gz/bijie/huoma/longjiazhai/shangjiayakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b90975ee-4359-5498-8ad7-fa1b43224d5c",
       "key": "earth/cn-gz/bijie/huoma/daojiao-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "b26ea638-faf9-5d1a-99c3-e27ecc29a73b",
       "key": "earth/cn-gz/bijie/huoma/daojiao/liangchahe",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6eadad3a-0b95-5432-8367-25be9f11ee03",
       "key": "earth/cn-gz/bijie/huoma/daojiao/wotuozhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1260dd08-7d31-5ce8-8572-54df843624bb",
       "key": "earth/cn-gz/bijie/huoma/daojiao/daojiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "878048b1-1090-58ee-9e07-8232e9d95388",
       "key": "earth/cn-gz/bijie/huoma/daojiao/yangniuchang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c8fa2514-ef44-5124-8d59-2d38f88a9bc8",
       "key": "earth/cn-gz/bijie/huoma/daojiao/caishanping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7bee9356-1b50-55fb-9546-c687901d11cd",
       "key": "earth/cn-gz/bijie/huoma/daojiao/pingzishang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2d22bcd5-90f5-5feb-a27c-9ed8e25070d3",
       "key": "earth/cn-gz/bijie/huoma/daojiao/baobaoshang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "399ba244-67b3-55c7-8f42-0f8cff95e42f",
       "key": "earth/cn-gz/bijie/huoma/daojiao/yujiagou",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "1a5b4596-ea05-5a02-bac1-c871ec6ed446",
       "key": "earth/cn-gz/bijie/huoma/daojiao/sijiaotian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "17dfe15e-2b25-58de-b8bf-81938d320bf6",
       "key": "earth/cn-gz/bijie/huoma/liangchahe-ferry",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "554a2f8a-8429-56b9-bf7d-728681141fd9",
       "key": "earth/cn-gz/bijie/huoma/wangxiang-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "f8b6037a-4a1b-5801-8ef7-492b04196cb3",
       "key": "earth/cn-gz/bijie/chishui-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

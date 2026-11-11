@@ -147,18 +147,23 @@ pub(super) fn geographic_boundaries(
     let Some(datum) = sheet.job.target_frame.geographic_datum()? else {
         return Ok(Vec::new());
     };
-    Ok(units
+    units
         .iter()
-        .map(|unit| GeographicBoundary {
-            unit: unit.clone(),
-            vertices: sheet.vertices.clone(),
-            datum,
-            registration_allowance_m: None,
-            boundary_method: trace.boundary_method,
-            method_basis: trace.method_basis.clone(),
-            registration: "boundary/registration.json".into(),
+        .map(|unit| {
+            let (vertices, unit) =
+                crate::place_maps::boundaries::compact_unit(&sheet.vertices, unit)
+                    .map_err(|i| BoundaryError::Evidence(format!("missing unit vertex {i}")))?;
+            Ok(GeographicBoundary {
+                unit,
+                vertices,
+                datum,
+                registration_allowance_m: None,
+                boundary_method: trace.boundary_method,
+                method_basis: trace.method_basis.clone(),
+                registration: "boundary/registration.json".into(),
+            })
         })
-        .collect())
+        .collect()
 }
 
 pub(super) fn geographic_lines(
@@ -168,13 +173,18 @@ pub(super) fn geographic_lines(
     let Some(datum) = sheet.job.target_frame.geographic_datum()? else {
         return Ok(Vec::new());
     };
-    Ok(lines
+    lines
         .iter()
-        .map(|line| atlas_boundary::linear::GeographicLine {
-            line: line.clone(),
-            vertices: sheet.vertices.clone(),
-            datum,
-            registration: "boundary/registration.json".into(),
+        .map(|line| {
+            let (vertices, line) =
+                crate::place_maps::boundaries::compact_line(&sheet.vertices, line)
+                    .map_err(|i| BoundaryError::Evidence(format!("missing line vertex {i}")))?;
+            Ok(atlas_boundary::linear::GeographicLine {
+                line,
+                vertices,
+                datum,
+                registration: "boundary/registration.json".into(),
+            })
         })
-        .collect())
+        .collect()
 }

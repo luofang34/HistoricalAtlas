@@ -4,211 +4,281 @@
       "id": "e0a9b570-c137-5e22-969a-3970d4c570cd",
       "key": "earth/cn-gz/bijie/qingsong/chuduping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "86d55720-6e87-5ff2-91f0-0f87ab3f1707",
       "key": "earth/cn-gz/bijie/qingsong/mabaoping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "acec0284-14ab-5454-8939-7f03d899ef37",
       "key": "earth/cn-gz/bijie/qingsong/qingxiong-wanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a06307bf-7d94-5479-826c-cdf1fe971b32",
       "key": "earth/cn-gz/bijie/qingsong/laluo-tianba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bed231ed-254c-55c9-8b86-1c121155692d",
       "key": "earth/cn-gz/bijie/qingsong/chahe",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "72a0a63f-56da-5aee-8953-ee215faec18a",
       "key": "earth/cn-gz/bijie/qingsong/wanzitou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ba9d4c52-96a1-5773-8b38-36611cbd89c8",
       "key": "earth/cn-gz/bijie/qingsong/molang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0370370e-77fd-5fe7-8cd8-337010f2c955",
       "key": "earth/cn-gz/bijie/qingsong/laoyingyan",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "4d284c50-6c68-5c56-8b18-4fc90e7b6291",
       "key": "earth/cn-gz/bijie/qingsong/tiziyan",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "04708c2f-7481-5ed6-b5aa-792f334188bf",
       "key": "earth/cn-gz/bijie/qingsong/mabaogou",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "a77fe1b2-d8c6-5a1d-af9a-44fdfcba93b8",
       "key": "earth/cn-gz/bijie/qingsong/chuduhe-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "4941973e-a626-5918-a3e6-570352dfcc0d",
       "key": "earth/cn-gz/bijie/qingsong/luojia-yuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "462172e6-e7d3-58a2-8350-6a22d7403477",
       "key": "earth/cn-gz/bijie/qingsong/dengjia-yuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "dc305ce2-0a11-5562-8b3c-2caae5fb5c4a",
       "key": "earth/cn-gz/bijie/qingsong/mugantang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "309f68f2-c4a1-5d02-b4e6-db412b371694",
       "key": "earth/cn-gz/bijie/qingsong/huanshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "905147b6-1c4b-5f7d-b143-c3e49374994f",
       "key": "earth/cn-gz/bijie/qingsong/xiaowanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ffe2651e-36c6-52ff-b7f6-a0662ad41a99",
       "key": "earth/cn-gz/bijie/qingsong/shiyuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b17cbcaf-52a1-5ac1-9c09-f5a1a2e7f6fa",
       "key": "earth/cn-gz/bijie/qingsong/shenjia-gou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8fee7ba9-af95-5ff8-b08f-7eedbdf744af",
       "key": "earth/cn-gz/bijie/qingsong/mushukuai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "009309bd-09de-5d2d-b335-bb28eb80d1fe",
       "key": "earth/cn-gz/bijie/qingsong/chahe-toponym",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "1f12d70d-471d-528c-801c-ffb7964be29c",
       "key": "earth/cn-gz/bijie/qingsong/kalanggou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bec5d27b-d09b-56da-9a98-6be1f729d065",
       "key": "earth/cn-gz/bijie/qingsong/shangzhai-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "4f323938-e27b-5d70-901a-c31059c39fd9",
       "key": "earth/cn-gz/bijie/qingsong/shangzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "804bd2b8-e8fa-5521-9d92-0ee65e301156",
       "key": "earth/cn-gz/bijie/qingsong/malan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e5b2ef79-a1e3-59f8-92c9-5db64f586aeb",
       "key": "earth/cn-gz/bijie/qingsong/xiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4a39c4a3-a398-5a83-a636-04311305368e",
       "key": "earth/cn-gz/bijie/qingsong/zhongzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "be141cc5-9203-5765-bd88-0686a93e607e",
       "key": "earth/cn-gz/bijie/qingsong/baoping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c85de5cd-ec3a-5de8-8a00-26be415b70e7",
       "key": "earth/cn-gz/bijie/qingsong/pingshang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "dbbb8ef2-94da-5a8a-84a0-7402ec4e05e9",
       "key": "earth/cn-gz/bijie/qingsong/daimadi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8ad48dc5-44a6-5e99-8701-6878e7192904",
       "key": "earth/cn-gz/bijie/qingsong/miaoying-dashan-village",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "42bfd158-4add-5666-b4e6-7294245e29c9",
       "key": "earth/cn-gz/bijie/qingsong/maocaopo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4e0b0d7a-5fa5-5845-930e-39c688ad2f5d",
       "key": "earth/cn-gz/bijie/qingsong/wukuai",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "26c71db0-cc14-50c6-ad29-f6a47fb91541",
       "key": "earth/cn-gz/bijie/qingsong/dapo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "86b021ab-4fba-5b0f-962b-99821f31ff87",
       "key": "earth/cn-gz/bijie/qingsong/lilangjia",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "615f42fd-694d-5851-ae78-82ac5ab77553",
       "key": "earth/cn-gz/bijie/qingsong/miaoying-dashan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

@@ -4,193 +4,257 @@
       "id": "927aad9c-f24c-52b4-8f4b-4a3c4ef8f447",
       "key": "earth/cn-gz/bijie/jinyinshan/jinyinshan-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "d33b06d2-8c2f-5bf3-b1e0-f2291187bb66",
       "key": "earth/cn-gz/bijie/jinyinshan/dateng-forest",
       "body": "earth",
-      "kind": "forest"
+      "kind": {
+        "ecology": "forest"
+      }
     },
     {
       "id": "ac8ac4b3-81e5-5ace-b52d-e3dc61008d53",
       "key": "earth/cn-gz/bijie/jinyinshan/commune-bowl-factory",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "f6730aec-4540-5061-8296-52d2b4030162",
       "key": "earth/cn-gz/bijie/jinyinshan/bainiba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "65668e70-1aa9-519e-99b9-f5b4f2351028",
       "key": "earth/cn-gz/bijie/jinyinshan/jinyinshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9500bdd3-64eb-50cd-acdc-b6bd7eb9ebae",
       "key": "earth/cn-gz/bijie/jinyinshan/shanjiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "540bb39a-4e2c-5dae-b925-27cb3753476c",
       "key": "earth/cn-gz/bijie/jinyinshan/tunjiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9c912b8d-948a-5b26-a28d-05a59bf2c1ac",
       "key": "earth/cn-gz/bijie/jinyinshan/taishaoping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f2d6f102-1910-512c-99c3-1c9aee2e07a0",
       "key": "earth/cn-gz/bijie/jinyinshan/livestock-farm",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "76a25348-f00e-54b8-832d-30a94c12a210",
       "key": "earth/cn-gz/bijie/jinyinshan/haiba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8a10ce40-64cd-5749-90b9-7973cf57f6e9",
       "key": "earth/cn-gz/bijie/jinyinshan/biaoshuiyan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c3cbe536-a5ab-5d53-ba46-c8f4adebcf52",
       "key": "earth/cn-gz/bijie/jinyinshan/zhongchang-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "40186439-b393-5b2b-a3e3-714cdbc95b27",
       "key": "earth/cn-gz/bijie/jinyinshan/laowanchang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6a9ac9ef-927a-57da-804a-9a5bebb8d152",
       "key": "earth/cn-gz/bijie/jinyinshan/pingzishang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f62b0909-a09c-5aa0-ac8b-a26a5e8e549a",
       "key": "earth/cn-gz/bijie/jinyinshan/zhongwanchang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d304e1d4-7a91-5d2f-8f31-4d6c89aa6053",
       "key": "earth/cn-gz/bijie/jinyinshan/yanjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ca657a09-9750-5ab3-9ee4-636dd9203769",
       "key": "earth/cn-gz/bijie/jinyinshan/chenjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e9aad532-7cf9-5bda-a342-012fc0b31f64",
       "key": "earth/cn-gz/bijie/jinyinshan/lengshuihe-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "cac7c775-11be-5d58-af7f-d7b3e87e3e86",
       "key": "earth/cn-gz/bijie/jinyinshan/tudiya",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "73610e8a-b118-5358-908d-6f69fdc22daf",
       "key": "earth/cn-gz/bijie/jinyinshan/tangfang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "98f9be20-bfac-54d9-85f0-2bc4a9090894",
       "key": "earth/cn-gz/bijie/jinyinshan/gongjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7d7b5037-42fe-58d3-82d2-7cbaa3a316cf",
       "key": "earth/cn-gz/bijie/jinyinshan/wumacao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a7ed3499-ede9-504c-95f1-2af9b4ea3ba4",
       "key": "earth/cn-gz/bijie/jinyinshan/xiaobaizaofen",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "32cd5c4c-02f9-5caf-9d39-ccf206ac9ee3",
       "key": "earth/cn-gz/bijie/jinyinshan/dabaizaofen",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "630f347b-2c5a-5bbd-8de4-82205706389f",
       "key": "earth/cn-gz/bijie/jinyinshan/lengshuihe",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "368f15a9-7aa7-5141-9cf0-d0ad2fff685b",
       "key": "earth/cn-gz/bijie/jinyinshan/chongzitou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1996bf9d-075f-5ff7-aa3e-cbf42bc10a18",
       "key": "earth/cn-gz/bijie/jinyinshan/xintian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ddaab64b-b4ff-50a1-84b4-f2be32c8a0b1",
       "key": "earth/cn-gz/bijie/jinyinshan/yankou-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "695f81b2-0301-5c3e-9c68-60b4e2cf1549",
       "key": "earth/cn-gz/bijie/jinyinshan/yankou-area",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "abb4b21f-5c87-5323-803b-9e2400237b39",
       "key": "earth/cn-gz/bijie/jinyinshan/yinjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0e5dd234-2635-5975-93fa-ac1219da2132",
       "key": "earth/cn-gz/bijie/jinyinshan/shangjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6a63a208-6d98-5cd0-a9a8-99e3d86b3bb4",
       "key": "earth/cn-gz/bijie/jinyinshan/xiaoshijie",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [

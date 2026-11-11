@@ -4,7 +4,9 @@
       "id": "81744081-e961-59ef-a6d8-93c1575cfcf7",
       "key": "earth/cn-gz/bijie/xiaohe/xiaohe-ferry",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     }
   ],
   "records": [

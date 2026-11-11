@@ -110,9 +110,11 @@ fn register_trace(
     for unit in &trace.units {
         let mut unit = unit.clone();
         unit.polygons = remaining.by_ref().take(unit.polygons.len()).collect();
+        let (unit_vertices, unit) = compact_unit(&vertices, &unit)
+            .map_err(|i| PlaceMapError::Evidence(format!("missing unit vertex {i}")))?;
         let boundary = GeographicBoundary {
             unit,
-            vertices: vertices.clone(),
+            vertices: unit_vertices,
             datum: map.datum,
             registration_allowance_m: Some(map.uncertainty_m),
             boundary_method: trace.boundary_method,
@@ -124,9 +126,11 @@ fn register_trace(
     }
     let mut registered_lines = Vec::new();
     for line in lines {
+        let (line_vertices, line) = compact_line(&vertices, &line)
+            .map_err(|i| PlaceMapError::Evidence(format!("missing line vertex {i}")))?;
         let geographic = GeographicLine {
             line,
-            vertices: vertices.clone(),
+            vertices: line_vertices,
             datum: map.datum,
             registration: format!("maps/{}.json", map.id),
         };
@@ -134,6 +138,88 @@ fn register_trace(
         registered_lines.push(geographic);
     }
     Ok((boundaries, registered_lines))
+}
+
+pub(crate) fn compact_unit(
+    vertices: &[atlas_geo::registration::PlanarPoint],
+    unit: &atlas_boundary::sheet::TracedUnit,
+) -> Result<
+    (
+        Vec<atlas_geo::registration::PlanarPoint>,
+        atlas_boundary::sheet::TracedUnit,
+    ),
+    usize,
+> {
+    let mut remap = BTreeMap::new();
+    let mut compact = Vec::new();
+    let mut map_ring = |ring: &[usize]| -> Result<Vec<usize>, usize> {
+        ring.iter()
+            .map(|&idx| {
+                if let Some(&mapped) = remap.get(&idx) {
+                    return Ok(mapped);
+                }
+                let point = *vertices.get(idx).ok_or(idx)?;
+                let mapped = compact.len();
+                compact.push(point);
+                remap.insert(idx, mapped);
+                Ok(mapped)
+            })
+            .collect()
+    };
+    let polygons = unit
+        .polygons
+        .iter()
+        .map(|poly| {
+            let exterior = map_ring(&poly.exterior)?;
+            let interiors = poly
+                .interiors
+                .iter()
+                .map(|ring| map_ring(ring))
+                .collect::<Result<Vec<_>, _>>()?;
+            Ok(atlas_boundary::polygon::IndexedPolygon {
+                exterior,
+                interiors,
+            })
+        })
+        .collect::<Result<Vec<_>, usize>>()?;
+    let mut updated = unit.clone();
+    updated.polygons = polygons;
+    Ok((compact, updated))
+}
+
+pub(crate) fn compact_line(
+    vertices: &[atlas_geo::registration::PlanarPoint],
+    line: &atlas_boundary::linear::TracedLine,
+) -> Result<
+    (
+        Vec<atlas_geo::registration::PlanarPoint>,
+        atlas_boundary::linear::TracedLine,
+    ),
+    usize,
+> {
+    let mut remap = BTreeMap::new();
+    let mut compact = Vec::new();
+    let paths = line
+        .paths
+        .iter()
+        .map(|path| {
+            path.iter()
+                .map(|&idx| {
+                    if let Some(&mapped) = remap.get(&idx) {
+                        return Ok(mapped);
+                    }
+                    let point = *vertices.get(idx).ok_or(idx)?;
+                    let mapped = compact.len();
+                    compact.push(point);
+                    remap.insert(idx, mapped);
+                    Ok(mapped)
+                })
+                .collect::<Result<Vec<_>, usize>>()
+        })
+        .collect::<Result<Vec<_>, usize>>()?;
+    let mut updated = line.clone();
+    updated.paths = paths;
+    Ok((compact, updated))
 }
 
 pub(crate) fn register_boundaries(

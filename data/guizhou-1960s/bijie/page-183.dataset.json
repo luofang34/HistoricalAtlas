@@ -4,37 +4,49 @@
       "id": "25488225-5f68-5582-9661-54806f8c89d4",
       "key": "earth/cn-gz/bijie/xiaoba/xinchang-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "929ac45a-88b3-5240-89a3-e6182097626a",
       "key": "earth/cn-gz/bijie/xiaoba/chuanzhu-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "752d6c91-8ef5-57b4-bb3d-31ad868135e5",
       "key": "earth/cn-gz/bijie/xiaoba/xia-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "b0210d01-f490-5e71-a349-e4dffa6f4f7f",
       "key": "earth/cn-gz/bijie/xiaoba/zhongjian-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "e405668a-6c22-595b-b07a-cff58e7fd137",
       "key": "earth/cn-gz/bijie/xiaoba/tingzi",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "f8e75e9c-9b4e-51d3-9d32-25e8aadf9605",
       "key": "earth/cn-gz/bijie/xiaoba/shita",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

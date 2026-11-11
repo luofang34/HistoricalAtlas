@@ -1,6 +1,9 @@
 //! MapLibre draws into a texture on egui's GPU device.
 
-use crate::navigation::Camera;
+use crate::{
+    navigation::Camera,
+    scene::port::{ScenePort, ViewportPointer},
+};
 use atlas_core::identity::EntityId;
 use atlas_geo::body::BodyId;
 use egui_wgpu::RenderState;
@@ -23,6 +26,11 @@ use maplibre::{
     window::PhysicalSize,
 };
 use thiserror::Error;
+
+mod controls;
+mod navigation;
+#[cfg(test)]
+mod tests;
 
 /// A map operation failed without changing the evidence ledger.
 #[derive(Debug, Error)]
@@ -69,6 +77,7 @@ pub struct MapRenderer {
     dimensions: [u32; 2],
     picking: super::picking::Picking,
     selection_picking: super::picking::Picking,
+    controls: controls::MapControls,
     /// When the map started; the frame clock is the time since, so animations and
     /// tile retry backoffs advance with real time.
     started: web_time::Instant,
@@ -104,8 +113,6 @@ impl MapRenderer {
                 Box::new(RasterPlugin::<DefaultRasterTransferables>::default()),
                 Box::new(maplibre::hillshade::HillshadePlugin),
                 Box::new(VectorPlugin::<DefaultVectorTransferables>::default()),
-                // Registered for every body: switching bodies sets or clears the style's
-                // terrain at run time, and the plugin idles while there is none.
                 Box::new(maplibre::terrain::TerrainPlugin::<
                     maplibre::terrain::DefaultDemTransferables,
                 >::default()),
@@ -113,7 +120,6 @@ impl MapRenderer {
             ],
         )?;
         map.set_navigation_mode(NavigationMode::FreeGlobe)?;
-        // Terrain is read by looking across it, as in MapLibre's 3D terrain example.
         map.set_max_pitch(cgmath::Deg(85.0));
         map.render_source_frames(ProcessedLayers::default(), Vec::new(), 1)?;
         let view = map.head_texture_view().ok_or(RenderError::Texture)?;
@@ -140,11 +146,20 @@ impl MapRenderer {
             dimensions: [1, 1],
             picking: Default::default(),
             selection_picking: Default::default(),
+            controls: Default::default(),
         })
     }
 
-    /// Refresh the visible point collection.
-    pub fn update(&mut self, points: serde_json::Value, body: BodyId) -> Result<(), RenderError> {
+    pub(super) fn zoom_raw(&mut self, pixel: egui::Vec2, delta: f64) -> bool {
+        self.map.zoom_globe(
+            cgmath::Point2::new(f64::from(pixel.x), f64::from(pixel.y)),
+            delta,
+        )
+    }
+}
+
+impl ScenePort for MapRenderer {
+    fn update(&mut self, points: serde_json::Value, body: BodyId) -> Result<(), RenderError> {
         for (id, raster_body) in &self.raster_layers {
             let visibility = if *raster_body == body {
                 "visible"
@@ -172,8 +187,7 @@ impl MapRenderer {
         Ok(())
     }
 
-    /// Render at the viewport's physical size and return the shared texture.
-    pub fn frame(
+    fn frame(
         &mut self,
         size: egui::Vec2,
         ratio: f32,
@@ -204,7 +218,6 @@ impl MapRenderer {
         }
         self.map.frame_input_mut().timestamp = self.started.elapsed();
         self.map.run_frame()?;
-        // MapLibre replaces resized attachments during frame preparation.
         if resized {
             let view = self.map.head_texture_view().ok_or(RenderError::Texture)?;
             self.gpu
@@ -220,24 +233,48 @@ impl MapRenderer {
         Ok(self.texture)
     }
 
-    /// Rotate the globe between two viewport positions in logical pixels.
-    pub fn drag(&mut self, from: egui::Vec2, to: egui::Vec2) -> bool {
-        self.map.drag_globe(
+    fn pointer_controls(&mut self, pointer: ViewportPointer) -> bool {
+        let mut controls = std::mem::take(&mut self.controls);
+        let owned = controls.pointer_on_renderer(self, pointer);
+        self.controls = controls;
+        owned
+    }
+
+    fn advance_controls(&mut self) -> bool {
+        let mut controls = std::mem::take(&mut self.controls);
+        let moving = controls.advance_on_renderer(self);
+        self.controls = controls;
+        moving
+    }
+
+    fn drag(&mut self, from: egui::Vec2, to: egui::Vec2) -> bool {
+        let moved = self.map.drag_globe(
             cgmath::Point2::new(f64::from(from.x), f64::from(from.y)),
             cgmath::Point2::new(f64::from(to.x), f64::from(to.y)),
-        )
+        );
+        if moved {
+            self.controls.manual_move();
+        }
+        moved
     }
 
-    /// Zoom with the ground under the pointer held in place.
-    pub fn zoom(&mut self, pixel: egui::Vec2, delta: f64) -> bool {
-        self.map.zoom_globe(
-            cgmath::Point2::new(f64::from(pixel.x), f64::from(pixel.y)),
-            delta,
-        )
+    fn orbit(&mut self, delta: egui::Vec2) -> Result<bool, RenderError> {
+        let moved = MapRenderer::orbit_raw(self, delta)?;
+        if moved {
+            self.controls.manual_turn();
+        }
+        Ok(moved)
     }
 
-    /// Return every distinct entity beneath the pointer, including coincident villages.
-    pub fn pick(&self, [x, y]: [f64; 2]) -> Result<Vec<EntityId>, RenderError> {
+    fn zoom(&mut self, pixel: egui::Vec2, delta: f64) -> bool {
+        let moved = self.zoom_raw(pixel, delta);
+        if moved {
+            self.controls.manual_move();
+        }
+        moved
+    }
+
+    fn pick(&self, [x, y]: [f64; 2]) -> Result<Vec<EntityId>, RenderError> {
         let camera = maplibre::render::projection::globe_camera_for_view(self.map.view_state())?;
         let pixel = cgmath::Point2::new(x, y);
         let mut hits = self.picking.pick(&camera, pixel);
@@ -247,8 +284,7 @@ impl MapRenderer {
         Ok(hits)
     }
 
-    /// Update only the selected entity and its optional territory network.
-    pub fn select(
+    fn select(
         &mut self,
         id: Option<EntityId>,
         extra: Vec<serde_json::Value>,
@@ -260,8 +296,7 @@ impl MapRenderer {
         Ok(())
     }
 
-    /// Geographic envelope for loading regional detail, unwrapped around the camera longitude.
-    pub fn detail_bounds(&self) -> Option<[f64; 4]> {
+    fn detail_bounds(&self) -> Option<[f64; 4]> {
         let view = self.map.view_state();
         if view.zoom().value() < 4.0 {
             return None;
@@ -299,13 +334,10 @@ impl MapRenderer {
         Some(bounds)
     }
 
-    /// Whether map work requests another GUI frame.
-    pub fn needs_redraw(&self) -> bool {
+    fn needs_redraw(&self) -> bool {
         self.map.needs_redraw()
     }
 }
-
-mod navigation;
 
 impl Drop for MapRenderer {
     fn drop(&mut self) {

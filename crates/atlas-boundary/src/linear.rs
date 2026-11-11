@@ -99,7 +99,8 @@ impl GeographicLine {
         Ok(json!({"type":"Feature","id":record.entity_id,
             "geometry":{"type":"MultiLineString","coordinates":paths},
             "properties":{"entity_id":record.entity_id,"record_id":record.id,"name":record.observation.name,
-                "entity_kind":entity.kind,"source_id":record.source_id,"page_or_sheet":record.page_or_sheet,
+                "entity_kind":entity.kind,"entity_domain":entity.kind.domain(),"entity_subkind":entity.kind.subkind(),
+                "source_id":record.source_id,"page_or_sheet":record.page_or_sheet,
                 "scan_page":record.scan_page,"geometry_role":"registered_line","geometry_kind":"mapped_line",
                 "selected":selected==Some(record.entity_id),"reconstructed":false,"datum":self.datum,
                 "validity":self.line.validity,"validity_basis":self.line.validity_basis,"registration":self.registration}}))

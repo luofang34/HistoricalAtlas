@@ -4,133 +4,177 @@
       "id": "e95f28a7-9309-5ad1-890b-cb9dd1eca06c",
       "key": "earth/cn-gz/bijie/ashi/akaihe/datianjiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "129fec9a-b3ec-5c60-907c-8b632450eb01",
       "key": "earth/cn-gz/bijie/ashi/akaihe/heweiba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "cb004d4d-850d-5149-b8d1-b6ce28bc744a",
       "key": "earth/cn-gz/bijie/ashi/akaihe/pujiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "581fb0d1-5eeb-5ea6-a542-703ecc01af98",
       "key": "earth/cn-gz/bijie/ashi/akaihe/linggengshang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f8905615-8a90-5ed6-bcff-9ead4de0afef",
       "key": "earth/cn-gz/bijie/ashi/akaihe/hetoushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c1e153bd-65d8-57f0-a20e-71295df44d50",
       "key": "earth/cn-gz/bijie/ashi/akaihe/shiyakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c6a80379-3740-52e1-ac4e-1c4fc627eac7",
       "key": "earth/cn-gz/bijie/ashi/mawo-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "fcf816d1-6007-50c6-a29e-04c56c7bc506",
       "key": "earth/cn-gz/bijie/ashi/mawo/sanmawo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3ebf7018-2ea1-5c08-a2f3-309e2baed30e",
       "key": "earth/cn-gz/bijie/ashi/mawo/longtang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f1646048-82a0-5388-9c38-e83ec03d6893",
       "key": "earth/cn-gz/bijie/ashi/mawo/zhangjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "733e7506-ea7b-5700-ba80-0169c1b8cb0e",
       "key": "earth/cn-gz/bijie/ashi/mawo/yanshang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9733c052-67bf-5bca-8244-a93545c2f925",
       "key": "earth/cn-gz/bijie/ashi/mawo/yakoushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "65602aef-4bb0-5a76-8520-1024b5f6ce75",
       "key": "earth/cn-gz/bijie/ashi/mawo/dashan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "433b4167-6c9c-5a1e-9e89-d148dd99ca83",
       "key": "earth/cn-gz/bijie/ashi/mawo/dengjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "df4dada6-4ec0-5baa-bbe2-96e007b5fb3d",
       "key": "earth/cn-gz/bijie/ashi/mawo/lantianwan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7e2c240b-e83f-5662-b810-c08f442451f9",
       "key": "earth/cn-gz/bijie/ashi/mawo/zhujiatang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6df98e5a-bfa1-50fc-bf97-eecd81d5d463",
       "key": "earth/cn-gz/bijie/ashi/mawo/shadigou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "22f2cfc9-b9f5-5983-86d6-a03709887438",
       "key": "earth/cn-gz/bijie/ashi/mawo/longjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c347d02a-9574-5dab-94f1-e072e98e6734",
       "key": "earth/cn-gz/bijie/ashi/mawo/caotou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9eb4f16e-d858-5dea-8d84-f3b02bfec8f4",
       "key": "earth/cn-gz/bijie/ashi/niujianbang-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "74dcb98a-89a9-5d2f-a04f-dc4676193cc8",
       "key": "earth/cn-gz/bijie/ashi/laolu-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "7ede034c-bf47-5c70-8b5f-f2cce963fd00",
       "key": "earth/cn-gz/bijie/ashi/xiaogelao-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     }
   ],
   "records": [

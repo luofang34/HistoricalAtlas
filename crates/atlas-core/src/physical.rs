@@ -54,7 +54,7 @@ impl Existence {
 }
 
 /// Infrastructure subtypes grow without adding variants to the entity category enum.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum InfrastructureKind {
     /// Aviation site containing runways and supporting facilities.
@@ -67,8 +67,38 @@ pub enum InfrastructureKind {
     Fortification,
     /// Road or highway.
     Road,
+    /// Named urban or rural street, road, or lane.
+    Street,
+    /// Bridge crossing.
+    Bridge,
     /// Railway alignment.
     Railway,
     /// Maritime terminal or port.
     Port,
+    /// Industrial or mining production site.
+    Factory,
+    /// Public-service, educational, administrative, or technical facility.
+    Facility,
+    /// Public park or designed open space.
+    Park,
+}
+
+impl InfrastructureKind {
+    /// Canonical lowercase identifier used in flat scalar properties and vector tiles.
+    pub const fn as_str(self) -> &'static str {
+        match self {
+            Self::Airfield => "airfield",
+            Self::Runway => "runway",
+            Self::Building => "building",
+            Self::Fortification => "fortification",
+            Self::Road => "road",
+            Self::Street => "street",
+            Self::Bridge => "bridge",
+            Self::Railway => "railway",
+            Self::Port => "port",
+            Self::Factory => "factory",
+            Self::Facility => "facility",
+            Self::Park => "park",
+        }
+    }
 }

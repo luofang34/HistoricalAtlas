@@ -4,7 +4,9 @@
       "id": "7b7658f3-ecb6-5ca3-bfe2-046a85359092",
       "key": "earth/cn-gz/bijie/qingsong/dahe",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

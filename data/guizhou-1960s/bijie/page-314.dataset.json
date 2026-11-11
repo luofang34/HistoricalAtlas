@@ -4,37 +4,49 @@
       "id": "ccf0199c-18ec-522a-8ee0-ef4707b162fe",
       "key": "earth/cn-gz/bijie/hongyan/fasha/hujia",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c7b8593a-601e-5b9f-b95a-3e0b2c41a4e8",
       "key": "earth/cn-gz/bijie/hongyan/fasha/chalin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d6bc9e6d-c7e7-5960-8d81-0c2f77016c40",
       "key": "earth/cn-gz/bijie/hongyan/qingshan-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "32d679b6-92e3-5d98-847e-4a5f712015c6",
       "key": "earth/cn-gz/bijie/hongyan/panlong-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "72e5b82c-6cc7-5f53-9ece-70ef5c4528e0",
       "key": "earth/cn-gz/bijie/hongyan/fashaliangzi-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "549d05e8-4455-54a3-85a3-517f3ba13784",
       "key": "earth/cn-gz/bijie/hongyan/wangxiang-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

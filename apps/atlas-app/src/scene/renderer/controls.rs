@@ -1,9 +1,11 @@
 //! MapLibre's shared navigation HUD: compass, 2D/3D and Auto-Tilt, zoom, and Home.
 
-use crate::scene::renderer::MapRenderer;
+use crate::scene::port::ViewportPointer;
 use cgmath::Vector2;
 use maplibre::navigation::NavigationState;
 use web_time::{Duration, Instant};
+
+use super::MapRenderer;
 
 /// Longest step a settle animation advances in one frame, so a stalled frame
 /// does not jump the camera to the end of the animation.
@@ -26,50 +28,43 @@ pub(super) trait ControlledMap {
     fn zoom(&mut self, pixel: egui::Vec2, delta: f64) -> bool;
 }
 
-impl ControlledMap for MapRenderer {
+struct RendererTarget<'a>(&'a MapRenderer);
+
+impl ControlledMap for RendererTarget<'_> {
     fn view_size(&self) -> [f64; 2] {
-        MapRenderer::view_size(self)
+        self.0.view_size()
     }
     fn zoom_and_bearing(&self) -> (f64, cgmath::Rad<f64>) {
-        MapRenderer::zoom_and_bearing(self)
+        self.0.zoom_and_bearing()
     }
     fn is_over_hud(&self, controls: &NavigationState, pixel: egui::Vec2) -> bool {
-        MapRenderer::is_over_hud(self, controls, pixel)
+        self.0.is_over_hud(controls, pixel)
+    }
+    fn navigate(&mut self, _: &mut NavigationState, _: Duration) -> bool {
+        false
+    }
+    fn zoom(&mut self, _: egui::Vec2, _: f64) -> bool {
+        false
+    }
+}
+
+struct RendererTargetMut<'a>(&'a mut MapRenderer);
+
+impl ControlledMap for RendererTargetMut<'_> {
+    fn view_size(&self) -> [f64; 2] {
+        self.0.view_size()
+    }
+    fn zoom_and_bearing(&self) -> (f64, cgmath::Rad<f64>) {
+        self.0.zoom_and_bearing()
+    }
+    fn is_over_hud(&self, controls: &NavigationState, pixel: egui::Vec2) -> bool {
+        self.0.is_over_hud(controls, pixel)
     }
     fn navigate(&mut self, controls: &mut NavigationState, dt: Duration) -> bool {
-        MapRenderer::navigate(self, controls, dt)
+        self.0.navigate(controls, dt)
     }
     fn zoom(&mut self, pixel: egui::Vec2, delta: f64) -> bool {
-        MapRenderer::zoom(self, pixel, delta)
-    }
-}
-
-/// Pointer facts for one frame over the map, in logical pixels from its top-left corner.
-#[derive(Clone, Copy, Debug, Default)]
-pub(super) struct Pointer {
-    pub(super) pixel: Option<egui::Vec2>,
-    pub(super) pressed: bool,
-    pub(super) released: bool,
-    pub(super) hovered: bool,
-}
-
-impl Pointer {
-    pub(super) fn read(ui: &egui::Ui, response: &egui::Response) -> Self {
-        let (pressed, released) = ui.input(|input| {
-            (
-                input.pointer.primary_pressed(),
-                input.pointer.primary_released(),
-            )
-        });
-        Self {
-            pixel: response
-                .interact_pointer_pos()
-                .or_else(|| response.hover_pos())
-                .map(|position| position - response.rect.min),
-            pressed,
-            released,
-            hovered: response.hovered(),
-        }
+        self.0.zoom_raw(pixel, delta)
     }
 }
 
@@ -81,9 +76,21 @@ pub(super) struct MapControls {
 }
 
 impl MapControls {
+    pub(super) fn pointer_on_renderer(
+        &mut self,
+        renderer: &MapRenderer,
+        pointer: ViewportPointer,
+    ) -> bool {
+        self.pointer(&RendererTarget(renderer), pointer)
+    }
+
+    pub(super) fn advance_on_renderer(&mut self, renderer: &mut MapRenderer) -> bool {
+        self.advance(&mut RendererTargetMut(renderer))
+    }
+
     /// Route the pointer to the HUD; returns whether the HUD owns this interaction,
     /// so map dragging, zooming and picking must not also act on it.
-    pub(super) fn pointer(&mut self, map: &dyn ControlledMap, pointer: Pointer) -> bool {
+    pub(super) fn pointer(&mut self, map: &dyn ControlledMap, pointer: ViewportPointer) -> bool {
         let Some(pixel) = pointer.pixel else {
             return self.state.pressed_button.is_some();
         };

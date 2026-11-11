@@ -4,43 +4,57 @@
       "id": "e4feadb1-c0f9-5bd7-abc8-9b387667dacf",
       "key": "earth/cn-gz/bijie/shaogang/lanchong-stream",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "23319d4c-10aa-5c54-b459-8d68bc7b1d30",
       "key": "earth/cn-gz/bijie/shaogang/xichong-stream",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "1db5213d-fbc7-5289-9876-db99197b6b73",
       "key": "earth/cn-gz/bijie/shaogang/meizi-stream",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "291457b3-c67e-51f1-8688-aad7bed90f9c",
       "key": "earth/cn-gz/bijie/shaogang/dingjiazhai-pumping-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "aa7960a7-4ffd-5c35-9b34-d6442c039379",
       "key": "earth/cn-gz/bijie/shaogang/xichong-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "90144506-ca74-5908-9d6a-9ec349b89b30",
       "key": "earth/cn-gz/bijie/shashao/mahuangqing-stream",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "5e508650-e9e4-5272-ba42-146249e06f07",
       "key": "earth/cn-gz/bijie/wangzhang/maguo-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

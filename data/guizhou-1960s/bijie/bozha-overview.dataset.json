@@ -4,13 +4,17 @@
       "id": "ad791448-6258-5dd4-b7b5-839f1eadfc0a",
       "key": "earth/cn-gz/bijie/bozha/toudao-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "29db163d-0f91-5cad-97b6-3f6475c00938",
       "key": "earth/cn-gz/bijie/bozha/cha-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

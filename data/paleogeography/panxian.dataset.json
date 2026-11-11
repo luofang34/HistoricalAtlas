@@ -4,13 +4,17 @@
       "id": "4cffc0cf-e8fa-5b44-8d6e-f20a6dcfd6dd",
       "key": "earth/cn-gz/panxian/yangjuan-fauna",
       "body": "earth",
-      "kind": "geological_site"
+      "kind": {
+        "geology": "site"
+      }
     },
     {
       "id": "48f40f04-ca85-5689-a3c8-4c70e4f84dda",
       "key": "earth/plates/south-china-block",
       "body": "earth",
-      "kind": "plate"
+      "kind": {
+        "tectonic": "plate"
+      }
     }
   ],
   "records": [

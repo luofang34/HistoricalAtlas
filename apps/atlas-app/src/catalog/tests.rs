@@ -171,9 +171,7 @@ fn wangfeng_huangnichong_and_shaba_names_resolve_to_their_own_evidence() {
         let brigades = atlas
             .children(id)
             .into_iter()
-            .filter(|child| {
-                atlas.entry(*child).unwrap().entity.kind == atlas_ledger::model::EntityKind::Brigade
-            })
+            .filter(|child| atlas.has_rank(*child, AdministrativeRank::Brigade))
             .count();
         assert_eq!(brigades, count);
     }
@@ -316,8 +314,8 @@ pub(crate) fn terrain_publication() -> Publication {
 #[cfg(test)]
 fn compile_publication(input: &atlas_compile::input::LedgerInput) -> Publication {
     let output = atlas_compile::export::compile(input).unwrap();
-    let sources =
-        serde_json::from_slice(&output[&std::path::PathBuf::from("sources.json")]).unwrap();
+    let manifest = atlas_compile::export::read_manifest(&output).unwrap();
+    let sources = atlas_compile::export::load_sources(&output).unwrap();
     let mut entries: BTreeMap<EntityId, Entry> = output
         .iter()
         .filter(|(path, _)| path.starts_with("entities/index"))
@@ -333,9 +331,14 @@ fn compile_publication(input: &atlas_compile::input::LedgerInput) -> Publication
             entry.attach_geometry(reference.decode(&parts).unwrap());
         }
     }
-    let aliases =
-        serde_json::from_slice(&output[&std::path::PathBuf::from("entities/aliases.json")])
-            .unwrap();
+    let alias_slices: Vec<_> = manifest
+        .aliases
+        .iter()
+        .map(|part| output[&std::path::PathBuf::from(&part.path)].clone())
+        .collect();
+    let aliases = Aliases(
+        atlas_boundary::publication::decode_map_parts(&manifest.aliases, &alias_slices).unwrap(),
+    );
     Publication {
         sources,
         entries,
@@ -453,9 +456,7 @@ fn bijie_county_browses_the_current_index_and_the_cited_former_district() {
         let children: Vec<_> = atlas
             .children(id)
             .into_iter()
-            .filter(|child| {
-                atlas.entry(*child).unwrap().entity.kind == atlas_ledger::model::EntityKind::Commune
-            })
+            .filter(|child| atlas.has_rank(*child, AdministrativeRank::Commune))
             .collect();
         assert_eq!(children.len(), count, "{slug}");
         for child in children {

@@ -4,139 +4,185 @@
       "id": "85c1fb56-cbbf-5a74-9f54-e66a0e8c8692",
       "key": "earth/cn-gz/bijie/shengji/luoshuidong-cave",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     },
     {
       "id": "a4a58da1-8e30-5afb-8e8e-0437e543d99a",
       "key": "earth/cn-gz/bijie/shengji/shaniudong-cave",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     },
     {
       "id": "0c6c8d51-dbc0-5033-84eb-c2864966327f",
       "key": "earth/cn-gz/bijie/shengji/huangdong-cave",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     },
     {
       "id": "5ea71a09-b854-5c7a-822d-ec1321d2fd0a",
       "key": "earth/cn-gz/bijie/shengji/qinglong-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "405163b5-2fe0-59bf-912b-b6080e029a20",
       "key": "earth/cn-gz/bijie/shengji/jipotouliangzi-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "11db9cdd-4bb3-5258-8127-8c4070411795",
       "key": "earth/cn-gz/bijie/shengji/laoyingpo-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "3dc9912a-8727-53e6-b9c5-dbdfa421bd91",
       "key": "earth/cn-gz/bijie/shengji/shengjiling-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "2cd25a8a-0e25-5c34-aa80-e3efbc9c0f7e",
       "key": "earth/cn-gz/bijie/shengji/zhaozishan-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "c98cd2d8-5430-5bba-8020-a4d3637842f7",
       "key": "earth/cn-gz/bijie/shengji/dashan-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "c98facaa-8732-5612-a737-ade3e26934ea",
       "key": "earth/cn-gz/bijie/shengji/luoquanyan-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "d777933b-c991-5447-9e0e-70e8bfd8a875",
       "key": "earth/cn-gz/bijie/shengji/yinchang-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "f8dd0db4-8657-5ac8-81d8-29308b56eb96",
       "key": "earth/cn-gz/bijie/shengji/xiaoheping-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "0bbde653-1b8e-51d6-ab4f-5ab540951868",
       "key": "earth/cn-gz/bijie/shengji/xishan-canal",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "fc87d8c5-d10a-5c58-8d5c-404d922329ce",
       "key": "earth/cn-gz/bijie/shengji/gaoliu-canal",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "2eb54a22-6763-5fd3-8c98-89ee3edbebc1",
       "key": "earth/cn-gz/bijie/shengji/huangdong-canal",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "2fa12b04-c7b6-51fa-807a-70a5b300d4db",
       "key": "earth/cn-gz/bijie/shengji/hetao-canal",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "5ae082e8-06c5-5318-887c-b17f950c91dd",
       "key": "earth/cn-gz/bijie/shengji/xianghe-canal",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "6fe8dc0b-7123-5915-a491-5af297a19ec0",
       "key": "earth/cn-gz/bijie/shengji/gebu-canal",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "1dcb6c9c-7041-5ceb-86f1-e5934a0c494d",
       "key": "earth/cn-gz/bijie/shengji/zhenjiang-canal",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "946fe710-d235-51d2-8f79-344ea7820404",
       "key": "earth/cn-gz/bijie/shengji/chuanzhu-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "979fee4f-26f2-58da-ba76-d42789f25b3c",
       "key": "earth/cn-gz/bijie/shengji/longshen-zhenjiang-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "4e762ec5-f95e-5b18-9710-c572b3d733d2",
       "key": "earth/cn-gz/bijie/shengji/longshen-west-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "19360337-e75c-50e2-950a-21ea1cc74397",
       "key": "earth/cn-gz/bijie/shengji/longjun-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

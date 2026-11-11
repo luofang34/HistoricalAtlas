@@ -19,9 +19,15 @@ fn tile_geometry_clips_lines_and_keeps_holes_and_exact_temporal_bounds() {
         [[-5,-5],[-5,5],[5,5],[5,-5],[-5,-5]]]}),
         ),
         "https://atlas.example/",
+        &BTreeMap::new(),
     )
     .unwrap();
-    let line = prepare(feature(json!({"type":"MultiLineString","coordinates":[[[-50,-20],[50,-20]],[[-50,20],[50,20]]]})),"https://atlas.example/").unwrap();
+    let line = prepare(
+        feature(json!({"type":"MultiLineString","coordinates":[[[-50,-20],[50,-20]],[[-50,20],[50,20]]]})),
+        "https://atlas.example/",
+        &BTreeMap::new(),
+    )
+    .unwrap();
     let tiles = tile_features(&[polygon, line], 2).unwrap();
     let root =
         Tile::decode(encode(tiles[&Address { z: 0, x: 0, y: 0 }].clone()).as_slice()).unwrap();
@@ -43,6 +49,10 @@ fn tile_geometry_clips_lines_and_keeps_holes_and_exact_temporal_bounds() {
         TileValue::Str("-99999999999999999998".into())
     );
     assert_eq!(properties["possible_to"], TileValue::Str("12".into()));
+    assert!(matches!(
+        properties["possible_to_year"],
+        TileValue::Double(_)
+    ));
     let lines = root
         .layers
         .iter()
@@ -71,11 +81,17 @@ fn tile_geometry_clips_lines_and_keeps_holes_and_exact_temporal_bounds() {
 
 #[test]
 fn quantization_omits_collapsed_geometry_and_limits_high_zoom_work() {
-    let tiny = prepare(feature(json!({"type":"Polygon","coordinates":[[[1,1],[1.0000001,1],[1.0000001,1.0000001],[1,1]]]})),"https://atlas.example/").unwrap();
+    let tiny = prepare(
+        feature(json!({"type":"Polygon","coordinates":[[[1,1],[1.0000001,1],[1.0000001,1.0000001],[1,1]]]})),
+        "https://atlas.example/",
+        &BTreeMap::new(),
+    )
+    .unwrap();
     assert!(tile_features(&[tiny], 0).unwrap().is_empty());
     let large = prepare(
         feature(json!({"type":"LineString","coordinates":[[-170,-70],[170,70]]})),
         "https://atlas.example/",
+        &BTreeMap::new(),
     )
     .unwrap();
     assert!(matches!(
@@ -89,6 +105,7 @@ fn east_edge_line_stays_local_and_wraps_into_the_western_buffer() {
     let line = prepare(
         feature(json!({"type":"LineString","coordinates":[[179,1],[180,1]]})),
         "https://atlas.example/",
+        &BTreeMap::new(),
     )
     .unwrap();
     let tiles = tile_features(&[line], 2).unwrap();

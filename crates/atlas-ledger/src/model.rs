@@ -54,69 +54,7 @@ pub struct SourceCatalog {
     pub sources: Vec<Source>,
 }
 
-/// Geographical entity category.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
-#[serde(rename_all = "snake_case")]
-pub enum EntityKind {
-    /// Celestial body.
-    Body,
-    /// Tectonic plate or block.
-    Plate,
-    /// Regional administrative unit.
-    Region,
-    /// County-level unit.
-    County,
-    /// Special administrative district.
-    SpecialDistrict,
-    /// County-subordinate district.
-    District,
-    /// Town.
-    Town,
-    /// People's commune.
-    Commune,
-    /// Township.
-    Township,
-    /// Urban street administration office.
-    StreetOffice,
-    /// Named street, road, or lane.
-    Street,
-    /// Production brigade.
-    Brigade,
-    /// Settlement or residential locality.
-    Settlement,
-    /// Named place whose type is not established by the row.
-    Toponym,
-    /// Industrial site.
-    Factory,
-    /// Public-service, educational, or technical facility.
-    Facility,
-    /// Public park.
-    Park,
-    /// Cave or named underground opening.
-    Cave,
-    /// Forest or managed forest site.
-    Forest,
-    /// Individually named or recorded tree.
-    Tree,
-    /// Bridge.
-    Bridge,
-    /// River.
-    River,
-    /// Reservoir.
-    Reservoir,
-    /// Natural or managed pond.
-    Pond,
-    /// Mountain.
-    Mountain,
-    /// Historical site.
-    HistoricSite,
-    /// Geological observation locality.
-    GeologicalSite,
-    /// Impact crater or basin.
-    Crater,
-    /// Built infrastructure with an extensible subtype.
-    Infrastructure(atlas_core::physical::InfrastructureKind),
-}
+pub use atlas_core::taxonomy::EntityKind;
 
 /// Enduring identity; names and administrative relationships belong to evidence.
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -270,6 +208,9 @@ pub enum EstimateValue {
         model_id: String,
         /// Numeric moving-plate identity in that model.
         plate_id: PlateId,
+        /// Optional temporal interval when crust forms, transfers, or subducts.
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        validity: Option<TemporalSpan>,
     },
     /// Formation or establishment of an entity.
     Origin {

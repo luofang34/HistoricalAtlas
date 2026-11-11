@@ -19,8 +19,11 @@ fn camera() -> GlobeCameraState {
         cgmath::Deg(36.87),
     );
     view.set_globe_orbits_center(true);
-    view.set_navigation_mode(NavigationMode::FreeGlobe, &crate::navigation::PROJECTION)
-        .unwrap();
+    view.set_navigation_mode(
+        NavigationMode::FreeGlobe,
+        &crate::scene::port::DisplayProjection::VerticalPerspective.into_maplibre(),
+    )
+    .unwrap();
     globe_camera_for_view(&view).unwrap()
 }
 

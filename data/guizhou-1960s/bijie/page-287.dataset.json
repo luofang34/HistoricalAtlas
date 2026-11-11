@@ -4,73 +4,97 @@
       "id": "66e443f1-b9b0-5c0f-a567-d56a34cb12b5",
       "key": "earth/cn-gz/bijie/zongji/primary-school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "6ea74dc1-47f0-573d-a4dd-4ff5a6207b94",
       "key": "earth/cn-gz/bijie/zongji/nanfeng-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "61f187f4-ee44-5484-b798-a81f0d95ec71",
       "key": "earth/cn-gz/bijie/zongji/nanfeng/sandaogou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1e4c0aab-6594-55ce-8d15-377a45ff321a",
       "key": "earth/cn-gz/bijie/zongji/nanfeng/hulutang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "790f5933-07ef-52ba-ab75-1ac5caf6c319",
       "key": "earth/cn-gz/bijie/zongji/nanfeng/madigou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "adb069bd-2a35-552f-b52c-e00dbcfa40e7",
       "key": "earth/cn-gz/bijie/zongji/nanfeng/lizilin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "62bed274-8fb8-5ab7-9c06-932279557cd2",
       "key": "earth/cn-gz/bijie/zongji/nanfeng/wujiayakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8913a1d7-05e8-5b8f-8a3c-821ba19b43c1",
       "key": "earth/cn-gz/bijie/zongji/nanfeng/heduimen",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "210c60a3-fc9c-5d5a-a2cf-247ded9f6587",
       "key": "earth/cn-gz/bijie/zongji/nanfeng/fangniuchang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6adf8497-7f33-5000-82e0-62691f48bf90",
       "key": "earth/cn-gz/bijie/zongji/nanfeng/maocaoping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e5a7e3df-bf83-507d-b82f-a27565602f8f",
       "key": "earth/cn-gz/bijie/zongji/nanfeng/lanaotian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0a2c0202-f016-5dad-806e-479b9147521d",
       "key": "earth/cn-gz/bijie/zongji/road-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     }
   ],
   "records": [

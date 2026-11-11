@@ -4,43 +4,57 @@
       "id": "521309d8-4305-53cf-ab77-d193ef591e91",
       "key": "earth/cn-gz/bijie/houqing/baiguo-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "9712e389-f8f6-5077-b83c-1926d5aa0b7d",
       "key": "earth/cn-gz/bijie/houqing/cha-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "44655f72-bea2-5df2-99e4-6c54f9e3b16c",
       "key": "earth/cn-gz/bijie/houqing/yinsong-tree",
       "body": "earth",
-      "kind": "tree"
+      "kind": {
+        "ecology": "tree"
+      }
     },
     {
       "id": "f3e983f0-4c04-5390-8c31-d032decaf589",
       "key": "earth/cn-gz/bijie/houqing/xiaogaoshan-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "e8c4d943-7d14-51bd-9e57-570289a95767",
       "key": "earth/cn-gz/bijie/houqing/yinshan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "38828310-ff3a-5d10-8a29-2c732387c163",
       "key": "earth/cn-gz/bijie/houqing/baijishan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "51c950be-f83e-58df-9a7c-33cb4f85f6fe",
       "key": "earth/cn-gz/bijie/houqing/fengdingshan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

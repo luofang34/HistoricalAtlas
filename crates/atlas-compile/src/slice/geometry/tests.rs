@@ -10,7 +10,7 @@ fn slice_geometry_preserves_uncertainty_and_excludes_undated_or_absent_entities(
     let record = FactId::from_key("survey/enclosure").unwrap();
     let data: Dataset = serde_json::from_value(json!({
         "estimates":[],"disputes":[],
-        "entities":[{"id":id,"key":"moon/test/enclosure","kind":"facility","body":"moon"}],
+        "entities":[{"id":id,"key":"moon/test/enclosure","kind":{"infrastructure":"facility"},"body":"moon"}],
         "records":[{"id":record,"key":"survey/enclosure","entity_id":id,"source_id":"survey",
             "page_or_sheet":"A","locator":"Enclosure","checked":true,"observation":{"name":"Enclosure"}}]
     })).unwrap();

@@ -4,43 +4,57 @@
       "id": "2997f727-6bd8-5e81-9399-1b7e15e754ac",
       "key": "earth/cn-gz/bijie/qingchang/maoping-mountain",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "b4611526-3976-553d-8db1-8b7ac2f483cf",
       "key": "earth/cn-gz/bijie/qingchang/taozilin-yakou",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "dc01ad8b-0fd4-5d8b-81c2-2a6ff3b8d173",
       "key": "earth/cn-gz/bijie/qingchang/meidong-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "ca62d699-8778-5e68-a42f-f77a3c4b026e",
       "key": "earth/cn-gz/bijie/qingchang/qingchang-he",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "eb06584b-d1fe-525b-842e-884123c49f46",
       "key": "earth/cn-gz/bijie/qingchang/shanyulan",
       "body": "earth",
-      "kind": "tree"
+      "kind": {
+        "ecology": "tree"
+      }
     },
     {
       "id": "f4b80e06-9cba-5edc-9a6d-8a84d0f58175",
       "key": "earth/cn-gz/bijie/qingchang/neolithic-site",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "6f03996b-f12e-544f-b576-77fdf7b99a5a",
       "key": "earth/cn-gz/bijie/qingchang/qingchang-qiao",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     }
   ],
   "records": [

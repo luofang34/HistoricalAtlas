@@ -3,11 +3,11 @@ use atlas_boundary::publication::{GeometryPart, GeometryReference, fingerprint};
 
 pub(super) fn detach(
     output: &mut Artifacts,
-    shards: &mut BTreeMap<String, BTreeMap<EntityId, IndexedEntity<'_>>>,
+    entities: &mut BTreeMap<EntityId, IndexedEntity<'_>>,
     data: &atlas_ledger::model::Dataset,
 ) -> Result<(), ExportError> {
     let records: BTreeMap<_, _> = data.records.iter().map(|r| (r.id, r.entity_id)).collect();
-    for (id, entry) in shards.values_mut().flat_map(|shard| shard.iter_mut()) {
+    for (id, entry) in entities {
         if entry.drawings.is_empty()
             && entry.boundaries.is_empty()
             && entry.derived_boundaries.is_empty()

@@ -4,211 +4,281 @@
       "id": "12cf213a-fbee-5059-9bcd-6d9e89684499",
       "key": "earth/cn-gz/bijie/gengguan/gengguan-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "81f330ca-6fe6-5f24-a2da-9da9dd419309",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/zhangping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ce038a04-79ae-541d-b6ee-740d405d6396",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/tianba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ab473fcd-9c6b-5f82-82d0-a58399a606f9",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/shanjiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "90a016fe-e9f7-527b-aa20-9c4162c16e8b",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/dawuji",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "95d8cd72-f8c5-5dd9-a541-35b73a71d86a",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/duanjia",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7e7eaa95-44bb-5342-aef9-772061fbe7f2",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/shangguangming",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0a07a044-2b04-5659-8276-973b6647042f",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/xiaheigou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c8c47956-1f7e-5259-aee4-925cbf3c1388",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/xiaohe",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5d648d05-ce0f-50e5-8cad-5c9152079c53",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/huangtupo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "53ad8a47-2a9e-5e48-b30d-9813610c3270",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/sunjiashan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e42afc53-40e1-5d8e-b040-a41fdb768f60",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/xiaohe-power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "a0659e38-4317-5feb-b701-511ed8465cbb",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/xiaguangming-power-station",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "829437c4-b8f9-5877-9c86-9faa20c0a3f4",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/shangheigou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e8e1e19b-fd53-5715-b5a6-e1b9e88cec41",
       "key": "earth/cn-gz/bijie/gengguan/gengguan/daposhan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "43f12865-6f9a-5b6e-ae9c-8b82e77de854",
       "key": "earth/cn-gz/bijie/gengguan/taiping-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "9d3a5400-ef1a-5a46-8045-d5200538e61d",
       "key": "earth/cn-gz/bijie/gengguan/taiping/zengjiaping-group",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ce639e54-727a-5288-b7ce-3db74ead658a",
       "key": "earth/cn-gz/bijie/gengguan/taiping/zengjiaping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b22b3e66-7738-5d78-a4a1-3b8191068a97",
       "key": "earth/cn-gz/bijie/gengguan/taiping/shiyaobei",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8fc7365b-6272-5224-abfe-d57d502319d7",
       "key": "earth/cn-gz/bijie/gengguan/taiping/qinggangling",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5c46a49c-f311-5524-bd45-99b98ee55848",
       "key": "earth/cn-gz/bijie/gengguan/taiping/liujialing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "34ecfc0b-d545-549a-b07e-ec6acdfb6446",
       "key": "earth/cn-gz/bijie/gengguan/taiping/gejialing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "180a12d1-49f0-5791-8ef3-040875a3fa80",
       "key": "earth/cn-gz/bijie/gengguan/taiping/poshang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "852c8711-4764-5e52-b886-40a0dfcd5fa5",
       "key": "earth/cn-gz/bijie/gengguan/taiping/cangping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a7ccbc13-1573-5407-b394-4c8c1d504e59",
       "key": "earth/cn-gz/bijie/gengguan/taiping/shangba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7dd122d0-59ac-537a-b8e9-f649fa5df07b",
       "key": "earth/cn-gz/bijie/gengguan/taiping/xiaba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "baa287d6-7401-56c6-adc5-b5b1b0a6ce55",
       "key": "earth/cn-gz/bijie/gengguan/taiping/shiqiang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "548a15b2-7ece-5d16-87f8-8b24f14be72e",
       "key": "earth/cn-gz/bijie/gengguan/taiping/wotuo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bda1672d-e728-5094-95ed-e0378224c66b",
       "key": "earth/cn-gz/bijie/gengguan/taiping/maanshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d1698f1d-6422-5428-8435-178302a37aaf",
       "key": "earth/cn-gz/bijie/gengguan/taiping/changgou",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "9e81e69a-bacf-514c-ba47-8e5ac7fecbc3",
       "key": "earth/cn-gz/bijie/gengguan/taiping/luoshuidong",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "5108f1e8-2b33-5f82-aafe-5c363b1d606c",
       "key": "earth/cn-gz/bijie/gengguan/taiping/wanchang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c58933ee-58e3-52ea-adb9-1d350f623388",
       "key": "earth/cn-gz/bijie/gengguan/taiping/laofengou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "396d4795-57a3-5579-ad91-3ba02583c57e",
       "key": "earth/cn-gz/bijie/gengguan/taiping/yinchangyan",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "ef732024-444a-5c15-8772-32572be0942a",
       "key": "earth/cn-gz/bijie/gengguan/taiping/bangshuitian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [

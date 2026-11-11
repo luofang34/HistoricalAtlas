@@ -41,11 +41,8 @@ fn slice_command_writes_shards_and_checked_evidence_with_original_dates() {
         "城关镇"
     );
     assert_eq!(name["candidates"][0]["membership"], "certain");
-    let evidence: serde_json::Value = serde_json::from_slice(
-        &std::fs::read(output.join(format!("entities/index/{shard_name}.json"))).unwrap(),
-    )
-    .unwrap();
-    let record = evidence[subject]["records"]
+    let subject_entry = load_disk_entity(&output, subject);
+    let record = subject_entry["records"]
         .as_array()
         .unwrap()
         .iter()
@@ -53,10 +50,10 @@ fn slice_command_writes_shards_and_checked_evidence_with_original_dates() {
         .unwrap();
     assert_eq!(record["scan_page"], 47);
     assert_eq!(record["page_or_sheet"], "12");
-    let disputes = evidence[subject]["disputes"].as_array().unwrap();
+    let disputes = subject_entry["disputes"].as_array().unwrap();
     assert_eq!(disputes.len(), 2);
     for dispute in disputes {
-        let records = evidence[subject]["records"].as_array().unwrap();
+        let records = subject_entry["records"].as_array().unwrap();
         let mut pages: Vec<_> = dispute["alternatives"]
             .as_array()
             .unwrap()
@@ -71,6 +68,25 @@ fn slice_command_writes_shards_and_checked_evidence_with_original_dates() {
         assert_eq!(pages, [42, 47]);
     }
     assert!(write_slice_blocking(&root, &at.ticks().to_string(), "nominal", &output).is_err());
+}
+
+#[cfg(test)]
+fn load_disk_entity(output: &Path, subject: &str) -> serde_json::Value {
+    let root_manifest: atlas_boundary::publication::PublicationManifest =
+        serde_json::from_slice(&std::fs::read(output.join("manifest.json")).unwrap()).unwrap();
+    root_manifest.validate().unwrap();
+    for cat in &root_manifest.catalog_shards {
+        let items: Vec<atlas_boundary::publication::CatalogItem> =
+            serde_json::from_slice(&std::fs::read(output.join(&cat.part.path)).unwrap()).unwrap();
+        if let Some(item) = items.iter().find(|item| item.id.0.to_string() == subject) {
+            let shard_map: serde_json::Value = serde_json::from_slice(
+                &std::fs::read(output.join(format!("entities/index/{}.json", item.shard))).unwrap(),
+            )
+            .unwrap();
+            return shard_map[subject].clone();
+        }
+    }
+    panic!("missing entity {subject}");
 }
 
 #[test]
@@ -379,14 +395,10 @@ fn assert_lunar_evidence(
     output: &crate::export::Artifacts,
     entity_id: atlas_core::identity::EntityId,
 ) {
-    let shard = entity_id.shard();
-    let evidence: serde_json::Value = serde_json::from_slice(
-        &output[&std::path::PathBuf::from(format!("entities/index/{shard}.json"))],
-    )
-    .unwrap();
-    let records = evidence[entity_id.0.to_string()]["records"]
-        .as_array()
+    let entry = crate::export::lookup_entity(output, entity_id)
+        .unwrap()
         .unwrap();
+    let records = entry["records"].as_array().unwrap();
     let position = records
         .iter()
         .find(|record| record["source_id"] == "nasa-apollo-coordinates-2017")
@@ -400,16 +412,11 @@ fn assert_lunar_evidence(
         position["observation"]["coordinate"]["point"]["longitude"],
         23.47314
     );
-    let sources: serde_json::Value =
-        serde_json::from_slice(&output[&std::path::PathBuf::from("sources.json")]).unwrap();
-    assert!(
-        sources
-            .as_array()
-            .unwrap()
-            .iter()
-            .any(|source| source["id"] == "nasa-apollo-coordinates-2017"
-                && source["url"].as_str().unwrap().starts_with("https://"))
-    );
+    let sources = crate::export::load_sources(output).unwrap();
+    assert!(sources.iter().any(|source| {
+        source.id == "nasa-apollo-coordinates-2017"
+            && source.url.as_deref().unwrap().starts_with("https://")
+    }));
 }
 
 #[test]
@@ -443,4 +450,30 @@ fn deep_time_slices_publish_plate_rotated_positions_matching_reconstruction_jobs
         (position.reconstructed.longitude - position.observed.longitude).abs() < 1e-6
             && (position.reconstructed.latitude - position.observed.latitude).abs() < 1e-6
     }));
+    // An entity with an origin constraint (e.g. an impact crater) is excluded before formation.
+    let panxian =
+        atlas_core::identity::EntityId::from_key("earth/cn-gz/panxian/yangjuan-fauna").unwrap();
+    let basis = expected.anchors[0].coordinate_record;
+    let impact = EpochTime::years_before(EpochTime::from_ticks(0), 66_000_000).unwrap();
+    let origin_key = "interpretation/test/impact-origin";
+    input.data.estimates.push(
+        serde_json::from_value(serde_json::json!({
+            "id": atlas_core::identity::FactId::from_key(origin_key).unwrap(),
+            "key": origin_key,
+            "entity_id": panxian,
+            "basis": [basis],
+            "brief": "Impact formation age",
+            "value": {"kind": "origin", "time": {"constraint": "estimated", "instant": {
+                "earliest": impact.ticks().to_string(),
+                "nominal": impact.ticks().to_string(),
+                "latest": impact.ticks().to_string(),
+                "precision": "year"
+            }}}
+        }))
+        .unwrap(),
+    );
+    let before = compile_slice(&input, job.at, TimeSelection::Nominal).unwrap();
+    assert!(!before.contains_key(Path::new("slice/paleo.json")));
+    let after = compile_slice(&input, impact, TimeSelection::Nominal).unwrap();
+    assert!(after.contains_key(Path::new("slice/paleo.json")));
 }

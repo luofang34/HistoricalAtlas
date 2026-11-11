@@ -4,61 +4,81 @@
       "id": "c4d53110-e245-5f9f-b56e-ff4f99b21794",
       "key": "earth/cn-gz/bijie/shengji/gebu-overview-toponym",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "209e292a-429f-53ed-94a9-d46277cf1ada",
       "key": "earth/cn-gz/bijie/shengji/shangguanfang",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "161d560d-089c-5f7e-84e2-cada53d48806",
       "key": "earth/cn-gz/bijie/shengji/xiaguanfang",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "16dd0f7d-2c87-5440-bdd0-982a04c389d7",
       "key": "earth/cn-gz/bijie/shengji/shilonggou-stream",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "2aa50787-9aea-5a27-8fa0-2cf677c1a7c9",
       "key": "earth/cn-gz/bijie/shengji/luojiangou-stream",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "131be55b-1267-5031-8b30-4969989e1a0e",
       "key": "earth/cn-gz/bijie/shengji/dazhaigou-stream",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "ead22ac1-699c-58d2-abc4-a7694af86fff",
       "key": "earth/cn-gz/bijie/shengji/xujiagou-stream",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "46f9b2c5-3a4f-598a-8eb9-5b5e7cc545a8",
       "key": "earth/cn-gz/bijie/shengji/xiaohe-stream",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "67a5a584-459c-5972-8570-b403f60bb544",
       "key": "earth/cn-gz/bijie/shengji/yinchanggou-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "4a8a149d-5ff5-5630-ba80-44b754ea8d3e",
       "key": "earth/cn-gz/bijie/shengji/shengji-canal",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     }
   ],
   "records": [

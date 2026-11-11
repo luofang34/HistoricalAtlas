@@ -17,7 +17,7 @@ pub fn features(
         .data
         .entities
         .iter()
-        .filter(|e| e.body == body && time.is_none_or(|time| !time.absent.contains(&e.id)))
+        .filter(|e| e.body == body && time.is_none_or(|time| !time.is_excluded(e.id)))
         .filter_map(|e| atlas.entry(e.id))
         .flat_map(|entry| &entry.boundaries)
         .map(|boundary| Ok(boundary.feature(&atlas.data, selected)?))
@@ -26,7 +26,7 @@ pub fn features(
         .data
         .entities
         .iter()
-        .filter(|e| e.body == body && time.is_none_or(|time| !time.absent.contains(&e.id)))
+        .filter(|e| e.body == body && time.is_none_or(|time| !time.is_excluded(e.id)))
         .filter_map(|e| atlas.entry(e.id))
     {
         for line in &entry.lines {
@@ -40,7 +40,7 @@ pub fn features(
         .data
         .entities
         .iter()
-        .filter(|e| e.body == body && time.is_none_or(|time| !time.absent.contains(&e.id)))
+        .filter(|e| e.body == body && time.is_none_or(|time| !time.is_excluded(e.id)))
         .filter_map(|e| atlas.entry(e.id))
         .flat_map(|entry| &entry.derived_boundaries)
     {
@@ -94,7 +94,7 @@ pub fn frame(
     time: Option<&SelectedTime>,
 ) -> Option<crate::navigation::Camera> {
     let bounds = extent(atlas, id, include_derived, time)?;
-    let mut camera = crate::navigation::Camera::for_body(atlas.entry(id)?.entity.body);
+    let mut camera = crate::navigation::Camera::for_body(atlas.entity_body(id)?);
     camera.fit_bounds(bounds, viewport);
     Some(camera)
 }
@@ -113,7 +113,7 @@ pub fn extent(
         f64::NEG_INFINITY,
         f64::NEG_INFINITY,
     ];
-    if time.is_some_and(|time| time.absent.contains(&id)) {
+    if time.is_some_and(|time| time.is_excluded(id)) {
         return None;
     }
     let visible = |span: Option<&atlas_core::time::TemporalSpan>| {

@@ -4,211 +4,281 @@
       "id": "c997335f-8271-5e84-a7af-1140f5484fc4",
       "key": "earth/cn-gz/bijie/shatian/shatian-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "bca1b91a-369c-516b-a81a-e6f4e78af3a5",
       "key": "earth/cn-gz/bijie/shatian/shatian/wozitou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ae8499d4-6da0-5c2b-9268-345d634cbe2e",
       "key": "earth/cn-gz/bijie/shatian/shatian/qiaobian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c6c207c4-ed92-56fd-820c-f8a5decdc7f1",
       "key": "earth/cn-gz/bijie/shatian/shatian/wangjiayakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "81fabb51-e5b5-5378-8ebc-9951f69a3cb0",
       "key": "earth/cn-gz/bijie/shatian/shatian/xujiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bf7fbee9-0085-525d-bffb-9ef7f5d9733b",
       "key": "earth/cn-gz/bijie/shatian/shatian/yanbeihou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6bc61cee-3f5a-5d30-85b2-d27691e4fa4f",
       "key": "earth/cn-gz/bijie/shatian/shatian/yenashanggou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ec723ff3-b155-5ed2-ab32-afa06c8c2c2c",
       "key": "earth/cn-gz/bijie/shatian/shatian/yenaxiagou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9b516faf-31ff-56d1-82a6-a6815223dc50",
       "key": "earth/cn-gz/bijie/shatian/shatian/yenagou",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "2366e3d8-d722-5ff2-9331-0a1660c7e14c",
       "key": "earth/cn-gz/bijie/shatian/shatian/zhaojiazhuang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ac515f1a-e776-5d21-9205-65b7e7b721a0",
       "key": "earth/cn-gz/bijie/shatian/shatian/banzhulin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "829eec83-c93a-52e9-92b9-a1332c6e5064",
       "key": "earth/cn-gz/bijie/shatian/shatian/yakoushang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "565de861-2113-5150-8059-a5f7a286bb14",
       "key": "earth/cn-gz/bijie/shatian/shatian/zhoujiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "855b44e3-0f98-5e40-8781-dfa6fec3d00e",
       "key": "earth/cn-gz/bijie/shatian/shatian/shatian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1b371143-b826-5986-a813-1c1dd0f93635",
       "key": "earth/cn-gz/bijie/shatian/shatian/gaogengzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "cec15de7-dd6e-570c-a578-7f6ca4ae2bb4",
       "key": "earth/cn-gz/bijie/shatian/shatian/shalin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "131cde75-6ece-5492-9ced-8738fb7bc934",
       "key": "earth/cn-gz/bijie/shatian/shatian/dujiajia",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "6a4961d9-9c40-5bc0-be93-fa99d829b671",
       "key": "earth/cn-gz/bijie/shatian/shatian/huangjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e96ca956-de96-53a4-a7cf-54d3a0db84bc",
       "key": "earth/cn-gz/bijie/shatian/shatian/pingzishang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a32dc690-1bb8-510f-8760-c1a3ca133b4b",
       "key": "earth/cn-gz/bijie/shatian/shatian/tengjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "34bd0d1a-7b39-5468-ba8f-27a8db79102b",
       "key": "earth/cn-gz/bijie/shatian/shatian/yangliushu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "aa01273a-e0c5-5666-87cf-47b8d65c6d29",
       "key": "earth/cn-gz/bijie/shatian/shatian/mawotou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "da9a6152-6c6b-5b66-b9a4-9ee97509517c",
       "key": "earth/cn-gz/bijie/shatian/shatian/qingganglin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5e7f69e5-cd4b-5c26-8b9e-13aea754d40c",
       "key": "earth/cn-gz/bijie/shatian/shatian/sangushui",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9606796b-d9ba-592e-99fe-eff412bd54c3",
       "key": "earth/cn-gz/bijie/shatian/shatian/zhonggan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "821e23c2-5d7c-5392-9f51-3bf07d457922",
       "key": "earth/cn-gz/bijie/shatian/shatian/jiucaiping",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "5003b4fc-5e35-5f02-8dc4-47c80f7fef0e",
       "key": "earth/cn-gz/bijie/shatian/primary-school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "a007cc7a-c70c-5b17-a5c8-5b445f87baa6",
       "key": "earth/cn-gz/bijie/shatian/muwo-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "d04db9b3-c5dd-58c3-9cfe-2e1e2fa9fdac",
       "key": "earth/cn-gz/bijie/shatian/muwo/banpo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "31d7d8d5-0efc-53e5-b3ac-cab4f6ac47dc",
       "key": "earth/cn-gz/bijie/shatian/muwo/zhonggou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b94e3747-ef62-5a85-82e8-edf43fffd455",
       "key": "earth/cn-gz/bijie/shatian/muwo/qingshang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "65f34867-b923-5c8d-aab6-dcdcd6799bd2",
       "key": "earth/cn-gz/bijie/shatian/muwo/shanjiaowan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b66e67f5-2ae3-504b-b2fe-df51ed666921",
       "key": "earth/cn-gz/bijie/shatian/muwo/biaoshuiyan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1387cd6d-3521-534a-9a5c-74fdcc52f2b2",
       "key": "earth/cn-gz/bijie/shatian/muwo/chayuan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f34e59a0-2bf3-51be-8d4a-3236ee4ceb4c",
       "key": "earth/cn-gz/bijie/shatian/muwo/longjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [

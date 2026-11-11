@@ -4,13 +4,17 @@
       "id": "0005fb52-6870-5c19-97e2-bcf3e006b8ba",
       "key": "earth/cn-gz/bijie/ashi/akai-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "d44d4f11-42c5-565c-a3b7-99e164d40375",
       "key": "earth/cn-gz/bijie/ashi/wangxiang-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

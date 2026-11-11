@@ -4,19 +4,25 @@
       "id": "74b8661e-64c4-5c01-91e1-649f7e195aca",
       "key": "earth/cn-gz/bijie/xianjin/caihua-liangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "e2a3cc2e-d3c8-5c21-8277-84fa5b825c06",
       "key": "earth/cn-gz/bijie/xianjin/lengsha-liangzi-west",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "2ea5b1dd-2315-5983-baca-c63b22a62c08",
       "key": "earth/cn-gz/bijie/xianjin/lengsha-liangzi-east",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     }
   ],
   "records": [

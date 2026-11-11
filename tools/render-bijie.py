@@ -50,7 +50,7 @@ def anchor(reference, records, estimates):
 
 def load(publication):
     entries = {}
-    for path in sorted((publication / 'entities/index').glob('*.json')):
+    for path in sorted((publication / 'entities/index').rglob('*.json')):
         entries.update(json.loads(path.read_text()))
     for entry in entries.values():
         if reference := entry.get('geometry'):
@@ -97,7 +97,7 @@ def load(publication):
     owners = {u['id']: u['key'] for u in units}
     points = []
     for entry in entries.values():
-        if entry['entity']['kind'] != 'settlement':
+        if entry['entity']['kind'] != {'place': 'settlement'}:
             continue
         record = next((r for r in entry['records'] if r['source_id'] == 'bijie-gazetteer'
                        and r['observation'].get('coordinate')), None)

@@ -3,7 +3,7 @@ use std::collections::BTreeMap;
 use atlas_core::{assertion::TemporalValue, identity::EntityId, time::EpochTime};
 
 use super::{ValidationError, fail};
-use crate::model::{Dataset, EstimateValue};
+use crate::model::{Dataset, Estimate, EstimateValue};
 
 #[derive(Clone, Copy)]
 struct Window {
@@ -24,8 +24,15 @@ impl Window {
 }
 
 pub(super) fn validate_hierarchy(data: &Dataset) -> Result<(), ValidationError> {
+    validate_hierarchy_slices(&data.estimates, &[])
+}
+
+pub(super) fn validate_hierarchy_slices(
+    existing: &[Estimate],
+    added: &[Estimate],
+) -> Result<(), ValidationError> {
     let mut edges: BTreeMap<EntityId, Vec<(EntityId, Window, &str)>> = BTreeMap::new();
-    for estimate in &data.estimates {
+    for estimate in existing.iter().chain(added) {
         if let EstimateValue::Temporal { assertion } = &estimate.value
             && let TemporalValue::Hierarchy(hierarchy) = &assertion.value
             && let Some(parent) = hierarchy.parent_id

@@ -1,6 +1,6 @@
 use super::super::Manifest;
+use crate::scene::DisplayProjection;
 use atlas_geo::body::BodyId;
-use maplibre::projection::ProjectionType;
 use serde_json::{Value, json};
 
 #[cfg(test)]
@@ -19,7 +19,7 @@ fn style(body: BodyId) -> (Value, maplibre::style::Style) {
     let style = crate::scene::style_with_basemap(
         points,
         body,
-        ProjectionType::VerticalPerspective,
+        DisplayProjection::Globe,
         &Manifest::bundled().unwrap(),
     )
     .unwrap();

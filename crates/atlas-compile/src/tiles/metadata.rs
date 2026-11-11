@@ -62,8 +62,9 @@ pub(super) fn insert_body(
         "atlas:body": body,
         "atlas:projection": "spherical_mercator",
         "atlas:availability": format!("{base}tiles/{body}/observations/index.json"),
-        "atlas:evidence": format!("{base}entities/shards.json"),
-        "atlas:sources": format!("{base}sources.json")
+        "atlas:manifest": format!("{base}manifest.json"),
+        "atlas:evidence": format!("{base}manifest.json"),
+        "atlas:sources": format!("{base}manifest.json")
     });
     insert(
         output,
@@ -112,9 +113,11 @@ fn style(base: &str, body: &str) -> serde_json::Value {
                 "source-layer": "observations",
                 "paint": {
                     "circle-radius": 4,
-                    "circle-color": ["match", ["get", "entity_kind"],
-                        "commune", "#a45131", "brigade", "#b88145",
-                        "settlement", "#356c68", "#4c5968"],
+                    "circle-color": ["case",
+                        ["==", ["get", "rank"], "commune"], "#a45131",
+                        ["==", ["get", "rank"], "brigade"], "#b88145",
+                        ["==", ["get", "entity_subkind"], "settlement"], "#356c68",
+                        "#4c5968"],
                     "circle-stroke-color": "#ffffff", "circle-stroke-width": 1,
                     "circle-opacity": 0.85
                 }

@@ -4,205 +4,273 @@
       "id": "dc9b1e1c-3983-55ca-8499-504025891272",
       "key": "earth/cn-gz/bijie/ashi/ashi-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "cafb3abd-03ec-563e-a430-c24316eeb762",
       "key": "earth/cn-gz/bijie/ashi/ashi/ashi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c0a85e3f-f864-5cfe-ad9e-e4e8c676bac0",
       "key": "earth/cn-gz/bijie/ashi/ashi/sunjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "13fb73bc-3940-5d7c-8b0b-a4573f2f023d",
       "key": "earth/cn-gz/bijie/ashi/ashi/xiamuzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0bd1235e-8374-5faa-940c-e0418b3e2738",
       "key": "earth/cn-gz/bijie/ashi/ashi/hujiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "660f7fcf-bbd4-5988-b6ba-9cd15c781ff5",
       "key": "earth/cn-gz/bijie/ashi/ashi/lanaotian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7ab9386e-b66d-5d57-9636-ab3dbf0dac94",
       "key": "earth/cn-gz/bijie/ashi/ashi/jiebeihou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c7129950-df61-5391-864e-41f7ff7532f5",
       "key": "earth/cn-gz/bijie/ashi/primary-school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "55d337b2-2b2b-55f9-9dad-cf97c45b2072",
       "key": "earth/cn-gz/bijie/ashi/mula-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "689829e7-8219-53e6-8b9e-08b6805cfe5b",
       "key": "earth/cn-gz/bijie/ashi/mula/xiaogelao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "720f66af-7249-5fad-a3a9-48872c4cfb85",
       "key": "earth/cn-gz/bijie/ashi/mula/xiaomula",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5947e9c3-a315-5715-bb29-1915bca8f16d",
       "key": "earth/cn-gz/bijie/ashi/mula/shiyakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c159c90a-64a7-5cc8-affb-b3795dbc60e0",
       "key": "earth/cn-gz/bijie/ashi/mula/yuanjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "57b6c60b-6ab3-5a4d-b7e0-bccd88a2ae02",
       "key": "earth/cn-gz/bijie/ashi/mula/poshang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "959a5fac-7575-5fe1-b682-ca66be153e16",
       "key": "earth/cn-gz/bijie/ashi/mula/yinping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3f7ffea5-6158-58ff-9546-8534c60e46d1",
       "key": "earth/cn-gz/bijie/ashi/mula/haozhiwan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9b0a896a-1c2e-58f2-bb20-c08d7d7b26ca",
       "key": "earth/cn-gz/bijie/ashi/mula/guochangwanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e5c9e3db-e4f2-53ba-964a-43b513963542",
       "key": "earth/cn-gz/bijie/ashi/mula/yanjiaozhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "2c471438-53df-5ccd-a4c2-6a1eb7b99c0f",
       "key": "earth/cn-gz/bijie/ashi/mula/tiechang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "fef1a93b-b04d-5b83-8b3c-8e7120a0bf35",
       "key": "earth/cn-gz/bijie/ashi/mula/gaoshangtou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "14a495bc-0b91-502f-82a1-f1af2b445098",
       "key": "earth/cn-gz/bijie/ashi/mula/dapingzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f406d79b-82fa-51d6-8233-3787124b4063",
       "key": "earth/cn-gz/bijie/ashi/mula/zhongshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5645ac47-fb0f-5312-bfc2-20bd8399e51c",
       "key": "earth/cn-gz/bijie/ashi/mula/zhaojiamawo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "cc955eb9-5618-56a3-9eeb-a9b322f8c5e5",
       "key": "earth/cn-gz/bijie/ashi/mula/fazhong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "313493d6-8277-5db7-ac1f-3d2199180d95",
       "key": "earth/cn-gz/bijie/ashi/akaihe-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "d87d7189-3cc2-5a8c-a7f3-741a07ec20b2",
       "key": "earth/cn-gz/bijie/ashi/akaihe/maocaoping",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f85619f6-2c08-543b-afd2-f6b684d2e13c",
       "key": "earth/cn-gz/bijie/ashi/akaihe/akaihe",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3a5a9d7b-be47-5cc3-ac1a-f7fbcb623f62",
       "key": "earth/cn-gz/bijie/ashi/akaihe/qiaobian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5afc44f9-1952-5488-9f0e-fa50d526586c",
       "key": "earth/cn-gz/bijie/ashi/akaihe/dawanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "de39e786-735c-56e3-a043-c5bf69427a7a",
       "key": "earth/cn-gz/bijie/ashi/akaihe/bajiaogou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b5d34a74-09e3-5b21-8ce1-5c7f7ba284a7",
       "key": "earth/cn-gz/bijie/ashi/akaihe/falang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e41d23f4-a34d-539d-8f26-d872e0609b7e",
       "key": "earth/cn-gz/bijie/ashi/akaihe/meidongpo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "34d3be7c-7014-5f1a-aafb-28733626f5b2",
       "key": "earth/cn-gz/bijie/ashi/akaihe/mawotang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f94605e9-30ef-5e3a-ae42-73d2a0259a13",
       "key": "earth/cn-gz/bijie/ashi/akaihe/andingshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [

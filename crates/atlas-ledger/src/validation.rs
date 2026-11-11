@@ -14,7 +14,9 @@ pub use error::{ValidationCause, ValidationError};
 use error::{caused, fail};
 use estimates::validate_estimates;
 
-use crate::model::{Dataset, Entity, Record, Source, SourceCatalog};
+use crate::model::{
+    Dataset, Dispute, Entity, Estimate, EstimateValue, Record, Source, SourceCatalog,
+};
 use citations::validate_sources;
 
 /// Validate source fingerprints, identifiers, references, and interpreted values.
@@ -38,8 +40,42 @@ pub fn validate(catalog: &SourceCatalog, data: &Dataset) -> Result<(), Validatio
             return Err(fail(&record.key, "duplicate or noncanonical fact identity"));
         }
     }
-    validate_estimates(data, &entities, &facts)?;
+    validate_estimates(data, &entities, &facts, &sources)?;
     hierarchy::validate_hierarchy(data)?;
+    Ok(())
+}
+
+/// Validate streamed shard evidence against an already-validated source and entity ledger.
+pub fn validate_append(
+    catalog: &SourceCatalog,
+    existing: &Dataset,
+    records: &[Record],
+    estimates: &[Estimate],
+    disputes: &[Dispute],
+) -> Result<(), ValidationError> {
+    let sources = validate_sources(catalog)?;
+    let entities: BTreeMap<EntityId, &Entity> =
+        existing.entities.iter().map(|e| (e.id, e)).collect();
+    let mut facts: BTreeMap<FactId, &Record> = existing.records.iter().map(|r| (r.id, r)).collect();
+    for record in records {
+        validate_record(record, &entities, &sources)?;
+        let expected = FactId::from_key(&record.key).map_err(|e| caused(&record.key, e))?;
+        if record.id != expected || facts.insert(record.id, record).is_some() {
+            return Err(fail(&record.key, "duplicate or noncanonical fact identity"));
+        }
+    }
+    estimates::validate_added_estimates(
+        existing, estimates, disputes, &entities, &facts, &sources,
+    )?;
+    if estimates.iter().any(|e| {
+        matches!(
+            &e.value,
+            EstimateValue::Temporal { assertion }
+                if matches!(assertion.value, atlas_core::assertion::TemporalValue::Hierarchy(_))
+        )
+    }) {
+        hierarchy::validate_hierarchy_slices(&existing.estimates, estimates)?;
+    }
     Ok(())
 }
 

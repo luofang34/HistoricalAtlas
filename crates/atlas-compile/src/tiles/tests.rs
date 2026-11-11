@@ -24,11 +24,10 @@ fn unresolved_printed_longitude_remains_in_evidence_without_becoming_a_tile_poin
             .any(|feature| properties(&layer, feature)["record_id"]
                 == text(&record.id.0.to_string()))
     );
-    let path = PathBuf::from(format!("entities/index/{}.json", record.entity_id.shard()));
-    let shard: serde_json::Value = serde_json::from_slice(&output[&path]).unwrap();
-    let records = shard[record.entity_id.0.to_string()]["records"]
-        .as_array()
+    let entry = crate::export::lookup_entity(&output, record.entity_id)
+        .unwrap()
         .unwrap();
+    let records = entry["records"].as_array().unwrap();
     let published = records
         .iter()
         .find(|value| value["id"] == record.id.0.to_string())
@@ -347,7 +346,7 @@ fn invalid_configuration_polar_coordinates_and_oversized_tiles_fail_explicitly()
         compile_tiles(&input, BASE, 31),
         Err(TileError::Zoom(31))
     ));
-    let long_base = format!("https://host/{}/", "a".repeat(50_000));
+    let long_base = format!("https://host/{}/", "a".repeat(2_100_000));
     assert!(matches!(compile_tiles(&input, &long_base, 0),
         Err(TileError::Export(crate::export::ExportError::Oversize { path, .. })) if path.ends_with(".mvt")));
     set_single_coordinate(&mut input, 0.0, 90.0);

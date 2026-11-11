@@ -4,97 +4,129 @@
       "id": "a7de2f8d-658f-5941-99a6-19580b550f6d",
       "key": "earth/cn-gz/bijie/liangyan/yuqun-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "d8767f3c-a1ea-5472-80a8-19d06c24279e",
       "key": "earth/cn-gz/bijie/liangyan/wangjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b1b83659-6f9d-5d07-beaf-6e1efabbf76a",
       "key": "earth/cn-gz/bijie/liangyan/liujiawan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e96584c7-4c9f-5484-902e-4793137dc2fa",
       "key": "earth/cn-gz/bijie/liangyan/liangshuijing",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "54091fb7-866d-590b-b60d-512780ac92d5",
       "key": "earth/cn-gz/bijie/liangyan/lijiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "96ca27fd-04d9-57de-aa0f-48bbeb8b4529",
       "key": "earth/cn-gz/bijie/liangyan/houchuan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "1818e151-f961-5679-98e0-934c62bfab34",
       "key": "earth/cn-gz/bijie/liangyan/jianjiaodi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bb360ecf-615c-5b0d-82e8-3c2c042f55ef",
       "key": "earth/cn-gz/bijie/liangyan/hanjiashan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "7ccc9c46-2b1f-55aa-aaac-5b380fb58364",
       "key": "earth/cn-gz/bijie/liangyan/xiaozhulin",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0fda6899-d253-50ba-adde-59e538fab4a8",
       "key": "earth/cn-gz/bijie/liangyan/ganhegou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "5b159681-86b8-55e0-80f5-f6a5a0cdeee0",
       "key": "earth/cn-gz/bijie/liangyan/maocaoshan-toponym",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "a5908381-025c-5510-92c1-14cefc312d27",
       "key": "earth/cn-gz/bijie/liangyan/banqiao-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "c02cfb62-0f5b-5638-9090-c38b3f35cbab",
       "key": "earth/cn-gz/bijie/liangyan/panlong-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "9f982ef8-b08e-5cad-8c9c-ef6ddecf8765",
       "key": "earth/cn-gz/bijie/liangyan/liziyuan-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     },
     {
       "id": "e8b33676-46ea-58b1-bf65-7f274f54c89a",
       "key": "earth/cn-gz/bijie/liangyan/guanyin-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "e3a6c384-1470-5a6d-9608-ef36cc5c783a",
       "key": "earth/cn-gz/bijie/liangyan/old-firs",
       "body": "earth",
-      "kind": "tree"
+      "kind": {
+        "ecology": "tree"
+      }
     }
   ],
   "records": [

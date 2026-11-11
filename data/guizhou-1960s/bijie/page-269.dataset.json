@@ -4,7 +4,9 @@
       "id": "15a99872-6ee2-537c-85ba-586f43e153f3",
       "key": "earth/cn-gz/bijie/gala/cha-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [

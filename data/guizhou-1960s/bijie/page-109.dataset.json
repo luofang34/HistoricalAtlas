@@ -4,7 +4,9 @@
       "id": "f1fe34fc-b00e-540c-9903-91c77866b2f9",
       "key": "earth/cn-gz/bijie/qingfeng/songguan-reservoir",
       "body": "earth",
-      "kind": "reservoir"
+      "kind": {
+        "hydrography": "reservoir"
+      }
     }
   ],
   "records": [

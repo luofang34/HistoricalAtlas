@@ -4,19 +4,25 @@
       "id": "6df8490f-fea1-5d42-a09f-710c4137dfcf",
       "key": "earth/cn-gz/bijie/yongxing/shuiyanba",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "1480aeaf-a409-5fad-83ea-910d94257b2c",
       "key": "earth/cn-gz/bijie/yongxing/yujiaqing-hill",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "c71d4e3f-77e1-5cb3-a977-15df6592646a",
       "key": "earth/cn-gz/bijie/yongxing/guoquanyan",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     }
   ],
   "records": [

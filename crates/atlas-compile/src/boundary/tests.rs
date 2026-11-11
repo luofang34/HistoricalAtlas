@@ -185,7 +185,7 @@ fn unpaginated_line_only_capture_registers_and_publishes_open_components() {
     let mut input = with_synthetic_reference(LedgerInput {
         catalog: serde_json::from_value(json!({"sources":[{"id":"capture","title":"Test frame",
             "capture":{"medium":"aerial_photograph","sha256":"a".repeat(64),"frame":"17"}}]})).unwrap(),
-        data: serde_json::from_value(json!({"entities":[{"id":entity,"key":"earth/test/river","body":"earth","kind":"river"}],
+        data: serde_json::from_value(json!({"entities":[{"id":entity,"key":"earth/test/river","body":"earth","kind":{"hydrography":"river"}}],
             "records":[{"id":fact,"key":"capture/river","entity_id":entity,"source_id":"capture","locator":"River","checked":true,"observation":{"name":"River"}}],"estimates":[],"disputes":[]})).unwrap(),
         aliases: Default::default(), published: Default::default(), derivations: BTreeMap::new(), terrains: BTreeMap::new(),
         traces: Vec::new(), place_maps: BTreeMap::new(), plate_models: BTreeMap::new(),
@@ -213,12 +213,11 @@ fn unpaginated_line_only_capture_registers_and_publishes_open_components() {
             .all(|path| path.as_array().unwrap().len() == 31)
     );
     assert_ne!(paths[0][0], paths[0][30]);
-    let shard = json(
-        &artifacts,
-        &format!("entities/index/{}.json", entity.shard()),
-    );
+    let entry = crate::export::lookup_entity(&artifacts, entity)
+        .unwrap()
+        .unwrap();
     assert_eq!(
-        crate::export::resolve_geometry(&artifacts, &shard[entity.0.to_string()]).unwrap()["lines"]
+        crate::export::resolve_geometry(&artifacts, &entry).unwrap()["lines"]
             .as_array()
             .unwrap()
             .len(),

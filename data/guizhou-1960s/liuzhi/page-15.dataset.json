@@ -4,157 +4,209 @@
       "id": "b5e53c5a-d742-59f8-97ea-1b519f595b29",
       "key": "earth/cn-gz/liuzhi/langdai-district",
       "body": "earth",
-      "kind": "district"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "86f24145-8574-50e5-99bd-289722b4d87c",
       "key": "earth/cn-gz/liuzhi/langdai-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "8d7d27ee-f605-582e-b081-df97b5be0fff",
       "key": "earth/cn-gz/liuzhi/yilong-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "530b4e98-cdf4-5c2a-9150-471e5312faf2",
       "key": "earth/cn-gz/liuzhi/yima",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f072821b-e80d-5a53-9a0c-370a59305010",
       "key": "earth/cn-gz/liuzhi/datie-zhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d25d5636-9a7b-50b6-91f1-3d7792042bac",
       "key": "earth/cn-gz/liuzhi/baini-chong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c7c02bd7-00b4-54df-8f30-b7c749a3a2fc",
       "key": "earth/cn-gz/liuzhi/wangcheng-po",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "107427f8-c771-5e1d-bd17-a3bf03208ae1",
       "key": "earth/cn-gz/liuzhi/bencheng-tang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6f8b916c-d022-5f70-b1b3-ce2ad579f176",
       "key": "earth/cn-gz/liuzhi/lujia-zhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6375ea56-e12e-52e5-8428-1250de97cad0",
       "key": "earth/cn-gz/liuzhi/longguan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f20a415f-cdf3-5bce-bfdf-a35e6e7d96a0",
       "key": "earth/cn-gz/liuzhi/nanhua-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "6000d6f5-7be5-5a11-837a-81b456215ef4",
       "key": "earth/cn-gz/liuzhi/nanhua",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a6e132bf-bb36-5c1d-bfa5-6778802d0b80",
       "key": "earth/cn-gz/liuzhi/wenchang-ge",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e9a491de-6fab-51d8-9183-69ff8394d464",
       "key": "earth/cn-gz/liuzhi/machang-ba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "45118072-e147-5188-969b-5d9d050cec87",
       "key": "earth/cn-gz/liuzhi/houying-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "81ddaed4-7f2f-5434-9da8-3c5462c4b532",
       "key": "earth/cn-gz/liuzhi/dongmen-wai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b2952d5f-e615-589f-9469-4db141761afe",
       "key": "earth/cn-gz/liuzhi/luoyachong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "96bd5a3d-f132-55c9-8ea3-204b288a6909",
       "key": "earth/cn-gz/liuzhi/houying",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "547973ff-c9f9-5539-8754-505a95ea2247",
       "key": "earth/cn-gz/liuzhi/qunfeng-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "8f6f6ec4-e09b-5014-a01b-1692e7422df3",
       "key": "earth/cn-gz/liuzhi/xinglong-zhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "35bed1bb-b14a-5410-ae4f-4c9c2c9976a6",
       "key": "earth/cn-gz/liuzhi/qianzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4c4c03e1-38e4-5c31-97d3-d284a4db6e8b",
       "key": "earth/cn-gz/liuzhi/houzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "255da3dd-6058-5a86-b913-53d03109a65b",
       "key": "earth/cn-gz/liuzhi/gaopo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "3d6af4bf-8d80-5f45-af12-0b87c0b7635f",
       "key": "earth/cn-gz/liuzhi/dahebian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c8b6b71f-8aff-59e5-ba7d-4282a1d11196",
       "key": "earth/cn-gz/liuzhi/baimachong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9472656b-416b-5924-826b-40e7e20279d4",
       "key": "earth/cn-gz/liuzhi/xiaochong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [
@@ -183,7 +235,8 @@
         "parent_id": null,
         "coordinate": null,
         "former_names": [],
-        "note": "驻郎岱城"
+        "note": "驻郎岱城",
+        "rank": "district"
       }
     },
     {
@@ -208,7 +261,8 @@
         "parent_id": "b5e53c5a-d742-59f8-97ea-1b519f595b29",
         "coordinate": null,
         "former_names": [],
-        "note": "驻郎岱城"
+        "note": "驻郎岱城",
+        "rank": "commune"
       }
     },
     {
@@ -238,7 +292,8 @@
             "validity": null
           }
         ],
-        "note": null
+        "note": null,
+        "rank": "brigade"
       }
     },
     {
@@ -436,7 +491,8 @@
             "validity": null
           }
         ],
-        "note": null
+        "note": null,
+        "rank": "brigade"
       }
     },
     {
@@ -538,7 +594,8 @@
             "validity": null
           }
         ],
-        "note": null
+        "note": null,
+        "rank": "brigade"
       }
     },
     {
@@ -640,7 +697,8 @@
             "validity": null
           }
         ],
-        "note": null
+        "note": null,
+        "rank": "brigade"
       }
     },
     {

@@ -4,7 +4,9 @@
       "id": "80347fb7-d22f-54ab-a2a9-b438bbee13f4",
       "key": "earth/cn-gz/bijie/gengguan/luoshuidong-south-cave",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     }
   ],
   "records": [

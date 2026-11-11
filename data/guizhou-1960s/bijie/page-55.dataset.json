@@ -4,19 +4,25 @@
       "id": "8373fbf2-8cf4-58fd-b86d-67da7641ba95",
       "key": "earth/cn-gz/bijie/shiba/xingfu-shan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "1fe2cb33-3e6a-5c74-9216-071235ffd99e",
       "key": "earth/cn-gz/bijie/shiba/shiba-he",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     },
     {
       "id": "85440a97-d255-542c-9e50-344b63b502fc",
       "key": "earth/cn-gz/bijie/shiba/shiba-qiao",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     }
   ],
   "records": [

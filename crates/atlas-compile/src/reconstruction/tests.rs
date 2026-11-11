@@ -44,7 +44,8 @@ fn panxian_reconstruction_keeps_original_evidence_and_resolves_the_africa_circui
         ]
     );
     let artifacts = compile_reconstruction(&input, job).unwrap();
-    assert!(artifacts.contains_key(Path::new("plates/merdith2021-south-china.json")));
+    assert!(artifacts.contains_key(Path::new("manifest.json")));
+    assert!(artifacts.contains_key(Path::new("plates/merdith2021-south-china/000.part")));
     assert!(artifacts.contains_key(Path::new("reconstruction.json")));
     assert!(
         artifacts
@@ -148,7 +149,8 @@ fn reconstruction_command_writes_evidence_and_refuses_existing_output() {
         read_json_blocking(&output.join("reconstruction.json")).unwrap();
     assert_eq!(result["job"]["at"], "-7573824000000000000");
     assert_eq!(result["anchors"][0]["observation"]["datum"], "unspecified");
-    assert!(output.join("sources.json").is_file());
+    assert!(output.join("manifest.json").is_file());
+    assert!(output.join("sources/000.json").is_file());
     assert!(reconstruct_blocking(&root, &request, &output).is_err());
     let (_, mut job) = real_input();
     job.model_id = "missing-model".into();

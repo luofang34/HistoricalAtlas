@@ -56,12 +56,11 @@ fn real_wuliping_network_preserves_every_table_identity_and_cites_every_connecti
             .find(|record| record.id == record_id)
             .unwrap();
         assert!(record.checked);
-        let shard: Value = serde_json::from_slice(
-            &artifacts[Path::new(&format!("entities/index/{}.json", record.entity_id.shard()))],
-        )
-        .unwrap();
+        let entry = crate::export::lookup_entity(&artifacts, record.entity_id)
+            .unwrap()
+            .unwrap();
         assert!(
-            shard[record.entity_id.0.to_string()]["records"]
+            entry["records"]
                 .as_array()
                 .unwrap()
                 .iter()
@@ -196,7 +195,8 @@ fn territory_command_writes_reproducible_artifacts_and_refuses_existing_output()
     assert!(count > 200);
     let result: Value = read_json_blocking(&output.join("territory.json")).unwrap();
     assert_eq!(result["node_count"], 22);
-    assert!(output.join("sources.json").is_file());
+    assert!(output.join("manifest.json").is_file());
+    assert!(output.join("sources/000.json").is_file());
     assert!(
         output
             .join(result["features"][0].as_str().unwrap())

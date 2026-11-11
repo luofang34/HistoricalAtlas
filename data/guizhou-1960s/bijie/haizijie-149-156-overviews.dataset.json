@@ -4,79 +4,105 @@
       "id": "13c2b83d-8202-5e17-82ca-39416f692eea",
       "key": "earth/cn-gz/bijie/haizijie/wugong-spring",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "bc782bd9-eba0-5be5-a1c2-c071598f184d",
       "key": "earth/cn-gz/bijie/haizijie/longtan-spring",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "19ff9d13-4165-5e27-aa91-644b67a08a31",
       "key": "earth/cn-gz/bijie/haizijie/daluo-spring",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "bda47ba9-321c-52fc-a8e6-6bf671f7f075",
       "key": "earth/cn-gz/bijie/haizijie/dashui-spring",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "59d79319-3e95-5646-8719-0c11509de20d",
       "key": "earth/cn-gz/bijie/haizijie/baimashan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "6043a042-ec86-56f3-af9c-4ff5fd785469",
       "key": "earth/cn-gz/bijie/haizijie/baimashan-state-forest",
       "body": "earth",
-      "kind": "forest"
+      "kind": {
+        "ecology": "forest"
+      }
     },
     {
       "id": "793c5bc1-5ae5-5300-b147-439d6062d5f4",
       "key": "earth/cn-gz/bijie/haizijie/middle-school",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "ae745cd2-0c56-5a3e-8122-7a2a482309fb",
       "key": "earth/cn-gz/bijie/haizijie/wujia-dalongmen",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "d3037c7b-a84b-5c84-8c8e-6aabc7362e16",
       "key": "earth/cn-gz/bijie/haizijie/lanhua-cave",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     },
     {
       "id": "143fc655-2a7d-5f80-97ac-f2badfb5416d",
       "key": "earth/cn-gz/bijie/haizijie/lishuwan",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "5f93a232-48da-5a97-bf03-4a198ff709d6",
       "key": "earth/cn-gz/bijie/haizijie/reshuitian",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "1a7128e7-274f-5c49-8b38-1749ea2c0bef",
       "key": "earth/cn-gz/bijie/guanyinqiao/guanyin-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     },
     {
       "id": "b42505f7-2e4f-542f-b821-6b69634bfadb",
       "key": "earth/cn-gz/bijie/guanyinqiao/tianba-shuiying",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

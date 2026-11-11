@@ -8,10 +8,7 @@ use std::{
 
 use atlas_boundary::geographic::GeographicBoundary;
 use atlas_core::{assertion::TemporalValue, identity::EntityId};
-use atlas_ledger::{
-    model::{Dispute, Entity, Estimate, EstimateValue, Record},
-    publication::Published,
-};
+use atlas_ledger::model::{Dispute, Entity, Estimate, EstimateValue, Record};
 use serde::Serialize;
 use thiserror::Error;
 
@@ -19,13 +16,17 @@ use crate::input::LedgerInput;
 
 pub(crate) mod chunks;
 pub(crate) mod geometry;
+mod reader;
+pub(crate) mod sharding;
 mod storage;
+
+pub use reader::{entity_shard_paths, load_sources, lookup_entity, read_manifest};
 
 /// Strict upper bound for every static artifact in bytes.
 pub const MAX_FILE_BYTES: usize = 4_000_000;
 
 #[derive(Serialize)]
-struct IndexedEntity<'a> {
+pub(crate) struct IndexedEntity<'a> {
     #[serde(skip_serializing_if = "Option::is_none")]
     geometry: Option<atlas_boundary::publication::GeometryReference>,
     entity: &'a Entity,
@@ -80,14 +81,34 @@ pub(crate) fn compile_with_boundaries(
     input: &LedgerInput,
     boundaries: &[GeographicBoundary],
 ) -> Result<Artifacts, ExportError> {
-    compile_geometry(input, boundaries, &[], &[])
+    compile_geometry(
+        input,
+        boundaries,
+        &[],
+        &[],
+        sharding::DEFAULT_TARGET_SHARD_BYTES,
+    )
+}
+
+#[cfg(test)]
+pub(crate) fn compile_with_target_bytes(
+    input: &LedgerInput,
+    target_bytes: usize,
+) -> Result<Artifacts, ExportError> {
+    compile_geometry(input, &[], &[], &[], target_bytes)
 }
 
 pub(crate) fn compile_with_derived(
     input: &LedgerInput,
     derived: &[atlas_boundary::terrain::DerivedBoundary],
 ) -> Result<Artifacts, ExportError> {
-    compile_geometry(input, &[], derived, &[])
+    compile_geometry(
+        input,
+        &[],
+        derived,
+        &[],
+        sharding::DEFAULT_TARGET_SHARD_BYTES,
+    )
 }
 
 pub(crate) fn compile_registered(
@@ -95,7 +116,13 @@ pub(crate) fn compile_registered(
     boundaries: &[GeographicBoundary],
     lines: &[atlas_boundary::linear::GeographicLine],
 ) -> Result<Artifacts, ExportError> {
-    compile_geometry(input, boundaries, &[], lines)
+    compile_geometry(
+        input,
+        boundaries,
+        &[],
+        lines,
+        sharding::DEFAULT_TARGET_SHARD_BYTES,
+    )
 }
 
 fn compile_geometry(
@@ -103,6 +130,7 @@ fn compile_geometry(
     boundaries: &[GeographicBoundary],
     derived: &[atlas_boundary::terrain::DerivedBoundary],
     explicit_lines: &[atlas_boundary::linear::GeographicLine],
+    target_shard_bytes: usize,
 ) -> Result<Artifacts, ExportError> {
     atlas_ledger::validation::validate(&input.catalog, &input.data)?;
     atlas_ledger::publication::verify_publication(&input.data, &input.aliases, &input.published)?;
@@ -136,34 +164,27 @@ fn compile_geometry(
     for line in &lines {
         line.feature(&input.data, None)?;
     }
-    let mut shards = index_entities(input, boundaries, derived, &lines);
-    let current: BTreeSet<_> = shards
-        .values()
-        .flat_map(|shard| shard.keys().copied())
-        .collect();
+    let mut entities = index_entities(input, boundaries, derived, &lines);
+    let current: BTreeSet<_> = entities.keys().copied().collect();
     verify_checked_references(input, &current)?;
+    let (geometry_spans, cross_cited) =
+        sharding::summary::collect_metadata(&entities, input, derived);
     let mut output = BTreeMap::new();
-    let shard_names: Vec<_> = shards.keys().cloned().collect();
-    storage::detach(&mut output, &mut shards, &input.data)?;
-    for (shard, entities) in shards {
-        insert(
-            &mut output,
-            &format!("entities/index/{shard}.json"),
-            &entities,
-        )?;
-    }
-    insert(&mut output, "entities/shards.json", &shard_names)?;
-    insert(&mut output, "entities/aliases.json", &input.aliases)?;
-    let published = Published(input.published.0.union(&current).copied().collect());
-    insert(&mut output, "entities/published.json", &published)?;
-    let mut sources: Vec<_> = input.catalog.sources.iter().collect();
-    sources.sort_by(|a, b| a.id.cmp(&b.id));
-    insert(&mut output, "sources.json", &sources)?;
-    let models: Vec<_> = input.plate_models.keys().collect();
-    insert(&mut output, "plates/models.json", &models)?;
-    for (id, model) in &input.plate_models {
-        insert(&mut output, &format!("plates/{id}.json"), model)?;
-    }
+    storage::detach(&mut output, &mut entities, &input.data)?;
+    let (shard_summaries, catalog_shards) = sharding::publish(
+        &mut output,
+        &entities,
+        &geometry_spans,
+        &cross_cited,
+        target_shard_bytes,
+    )?;
+    reader::publish_manifest(
+        &mut output,
+        input,
+        &current,
+        shard_summaries,
+        catalog_shards,
+    )?;
     geometry::publish_maps(&mut output, input, &shapes.maps)?;
     Ok(output)
 }
@@ -173,7 +194,7 @@ fn index_entities<'a>(
     boundaries: &'a [GeographicBoundary],
     derived: &'a [atlas_boundary::terrain::DerivedBoundary],
     lines: &'a [atlas_boundary::linear::GeographicLine],
-) -> BTreeMap<String, BTreeMap<EntityId, IndexedEntity<'a>>> {
+) -> BTreeMap<EntityId, IndexedEntity<'a>> {
     let mut entities: BTreeMap<_, _> = input
         .data
         .entities
@@ -211,23 +232,13 @@ fn index_entities<'a>(
         }
     }
     geometry::index(input, &mut entities, boundaries, derived, lines);
-    shard_entities(entities)
-}
-
-fn shard_entities(
-    entities: BTreeMap<EntityId, IndexedEntity<'_>>,
-) -> BTreeMap<String, BTreeMap<EntityId, IndexedEntity<'_>>> {
-    let mut shards: BTreeMap<String, BTreeMap<EntityId, IndexedEntity<'_>>> = BTreeMap::new();
-    for (id, mut index) in entities {
-        if index.records.is_empty() {
-            continue;
-        }
+    entities.retain(|_, index| !index.records.is_empty());
+    for index in entities.values_mut() {
         index.records.sort_by_key(|r| r.id);
         index.estimates.sort_by_key(|e| e.id);
         index.disputes.sort_by_key(|d| d.estimate_id);
-        shards.entry(id.shard()).or_default().insert(id, index);
     }
-    shards
+    entities
 }
 
 fn verify_checked_references(
@@ -327,6 +338,9 @@ pub fn write_blocking(output: &Path, artifacts: &Artifacts) -> Result<(), Export
 /// Static artifact construction or write failure.
 #[derive(Debug, Error)]
 pub enum ExportError {
+    /// Publication manifest or verified part failed validation.
+    #[error(transparent)]
+    Manifest(#[from] atlas_boundary::publication::ManifestError),
     /// External geometry manifest or data failed validation.
     #[error(transparent)]
     Geometry(#[from] atlas_boundary::publication::GeometryError),

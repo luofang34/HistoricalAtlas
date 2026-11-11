@@ -4,109 +4,145 @@
       "id": "a1f34902-8905-5631-9a21-dcc939436cfc",
       "key": "earth/cn-gz/bijie/huangnichong/zhaojia-chongzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "10af67b4-22cf-5bc0-9fa7-3025ad948955",
       "key": "earth/cn-gz/bijie/huangnichong/zhengjia-chongzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d0b6f4c1-8a37-5c0b-9320-188d801c1eec",
       "key": "earth/cn-gz/bijie/huangnichong/maoping",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "d991ce73-33a6-51f1-bcb1-bec499c6283c",
       "key": "earth/cn-gz/bijie/huangnichong/aotang",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "6c8b76bc-0281-565f-a2d8-1864aaf0a1cb",
       "key": "earth/cn-gz/bijie/huangnichong/guodi-matang",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e7618608-8768-50fb-9c63-f8055a7edda8",
       "key": "earth/cn-gz/bijie/huangnichong/hujia-liangzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "beaf9efa-be6a-57f5-86fc-7a57bdf8eee6",
       "key": "earth/cn-gz/bijie/huangnichong/bailong-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "c82eef28-d398-5e36-8b19-135beacb6725",
       "key": "earth/cn-gz/bijie/huangnichong/guanzhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d08ba4c4-cce6-50f8-9a97-90325b735635",
       "key": "earth/cn-gz/bijie/huangnichong/xiniuwangyue",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bc6ac56a-97d3-5ebe-a38a-4c472972544a",
       "key": "earth/cn-gz/bijie/huangnichong/goutou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "b9be76e5-c117-5a1a-a303-25e12520c398",
       "key": "earth/cn-gz/bijie/huangnichong/hetoushan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "8deb6c94-01d1-5f29-8861-9cf7edf7bf5a",
       "key": "earth/cn-gz/bijie/huangnichong/ganlongtan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d71c32e7-25f3-5d2f-b22b-1d937b0d63d5",
       "key": "earth/cn-gz/bijie/huangnichong/wangjia-yuanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a6608d11-67c9-52a5-b2c9-e1e389ac30b1",
       "key": "earth/cn-gz/bijie/huangnichong/bailongdi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "46105ec2-9d28-5671-b070-01030091e1e1",
       "key": "earth/cn-gz/bijie/huangnichong/yejidong-place",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "5f05d8de-3068-5401-b063-a5eb520114ce",
       "key": "earth/cn-gz/bijie/huangnichong/heweiba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0777d88e-832c-53fc-9a40-e35191d9ef71",
       "key": "earth/cn-gz/bijie/huangnichong/yinggouzui",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "a939e631-dbbe-55e3-b671-bc9f99984663",
       "key": "earth/cn-gz/bijie/huangnichong/yejidong-cave",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     }
   ],
   "records": [

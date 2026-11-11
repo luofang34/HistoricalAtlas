@@ -1,4 +1,6 @@
-use super::{Application, map_controls};
+use super::Application;
+use crate::scene::{MapLayer, ViewportPointer};
+use atlas_geo::coordinates::LonLat;
 
 impl Application {
     fn map_caption(&self) -> &'static str {
@@ -6,13 +8,13 @@ impl Application {
             return "Territory nodes and place locations · Drag to rotate · Right- or Ctrl-drag to tilt · Scroll to zoom";
         }
         match self.layer {
-            crate::scene::MapLayer::Observations => {
+            MapLayer::Observations => {
                 "Printed coordinates and source-map boundaries · Drag to rotate · Right- or Ctrl-drag to tilt · Scroll to zoom"
             }
-            crate::scene::MapLayer::MappedPlaces => {
+            MapLayer::MappedPlaces => {
                 "Source-map places and traced boundaries · Drag to rotate · Right- or Ctrl-drag to tilt · Scroll to zoom"
             }
-            crate::scene::MapLayer::SelectedTime => {
+            MapLayer::SelectedTime => {
                 "Time-selected source anchors · Drag to rotate · Right- or Ctrl-drag to tilt · Scroll to zoom"
             }
         }
@@ -20,7 +22,7 @@ impl Application {
 
     pub(super) fn map_panel(&mut self, ui: &mut egui::Ui) {
         #[cfg(target_arch = "wasm32")]
-        self.load_visible_geometry(ui);
+        self.load_visible_streams(ui);
         self.view_controls(ui);
         if self.sheet_panel(ui) {
             return;
@@ -48,19 +50,18 @@ impl Application {
         let size = ui.available_size().max(egui::vec2(1.0, 1.0));
         self.map_size = [f64::from(size.x), f64::from(size.y)];
         let (rect, response) = ui.allocate_exact_size(size, egui::Sense::click_and_drag());
-        let on_controls = match &self.map {
-            Some(map) => self
-                .controls
-                .pointer(map, map_controls::Pointer::read(ui, &response)),
-            None => false,
-        };
+        let pointer = ViewportPointer::read(ui, &response);
+        let on_controls = self
+            .map
+            .as_mut()
+            .is_some_and(|map| map.pointer_controls(pointer));
         if !on_controls {
             self.gestures(ui, &response);
         }
         let Some(map) = &mut self.map else {
             return;
         };
-        if self.controls.advance(map) {
+        if map.advance_controls() {
             ui.ctx().request_repaint();
         }
         match map.frame(
@@ -69,7 +70,9 @@ impl Application {
             self.camera_pending.then_some(self.camera),
         ) {
             Ok(texture) => {
-                self.camera_pending = false;
+                if std::mem::take(&mut self.camera_pending) {
+                    ui.ctx().request_repaint();
+                }
                 ui.painter().image(
                     texture,
                     rect,
@@ -111,7 +114,6 @@ impl Application {
         if !self.basemap.has_body(self.body) {
             return;
         }
-        // Credits wrap within the map so none of a provider's attribution is cut off.
         let color = egui::Color32::from_rgb(220, 226, 219);
         let galley = ui.painter().layout(
             self.basemap.attribution(self.body),
@@ -158,42 +160,12 @@ impl Application {
         });
     }
 
-    fn data_extent(&self) -> Option<[atlas_geo::coordinates::LonLat; 2]> {
-        use atlas_geo::coordinates::LonLat;
-        let mut points = self
-            .atlas
-            .data
-            .estimates
-            .iter()
-            .filter_map(|estimate| {
-                if self.atlas.entry(estimate.entity_id)?.entity.body != self.body {
-                    return None;
-                }
-                match estimate.value {
-                    atlas_ledger::model::EstimateValue::MapLocation { point, .. } => Some(point),
-                    _ => None,
-                }
-            })
-            .collect::<Vec<_>>();
-        if points.is_empty() {
-            points.extend(self.atlas.data.records.iter().filter_map(|record| {
-                (self.atlas.entry(record.entity_id)?.entity.body == self.body)
-                    .then_some(record.observation.coordinate.as_ref()?.point)
-            }));
-        }
-        for entity in self
-            .atlas
-            .data
-            .entities
-            .iter()
-            .filter(|entity| entity.body == self.body)
-        {
-            if let Some(bounds) =
-                crate::scene::boundaries::extent(&self.atlas, entity.id, self.derived_visible, None)
-            {
-                points.extend(bounds);
-            }
-        }
+    pub(super) fn data_extent(&self) -> Option<[LonLat; 2]> {
+        let points = if self.layer == MapLayer::SelectedTime {
+            self.selected_time_extent_points()
+        } else {
+            self.present_extent_points()
+        };
         let first = *points.first()?;
         Some(points.iter().fold([first, first], |[low, high], point| {
             [
@@ -207,6 +179,115 @@ impl Application {
                 },
             ]
         }))
+    }
+
+    fn selected_time_extent_points(&self) -> Vec<LonLat> {
+        let mut points = Vec::new();
+        for pos in self.selected_time.paleo.values() {
+            if self.atlas.entity_body(pos.entity_id) == Some(self.body) {
+                points.push(pos.reconstructed);
+            }
+        }
+        if self.crustal_pins {
+            for pos in self.selected_time.crustal_pins.values() {
+                if self.atlas.entity_body(pos.entity_id) == Some(self.body) {
+                    points.push(pos.reconstructed);
+                }
+            }
+        }
+        let active = |id| {
+            self.atlas.entity_body(id) == Some(self.body)
+                && self.selected_time.evidence.contains_key(&id)
+                && !self.selected_time.is_excluded(id)
+        };
+        for record in &self.atlas.data.records {
+            if active(record.entity_id)
+                && !self.selected_time.paleo.contains_key(&record.id)
+                && let Some(coord) = &record.observation.coordinate
+            {
+                points.push(coord.point);
+            }
+        }
+        for entity in self
+            .atlas
+            .data
+            .entities
+            .iter()
+            .filter(|e| e.body == self.body)
+        {
+            if let Some(bounds) = crate::scene::boundaries::extent(
+                &self.atlas,
+                entity.id,
+                self.derived_visible,
+                Some(&self.selected_time),
+            ) {
+                points.extend(bounds);
+            }
+        }
+        points
+    }
+
+    fn present_extent_points(&self) -> Vec<LonLat> {
+        let mut points = if self.layer == MapLayer::Observations {
+            self.atlas
+                .data
+                .records
+                .iter()
+                .filter_map(|record| {
+                    (self.atlas.entity_body(record.entity_id) == Some(self.body))
+                        .then_some(record.observation.coordinate.as_ref()?.point)
+                })
+                .collect::<Vec<_>>()
+        } else {
+            self.atlas
+                .data
+                .estimates
+                .iter()
+                .filter_map(|estimate| {
+                    if self.atlas.entity_body(estimate.entity_id) != Some(self.body) {
+                        return None;
+                    }
+                    match estimate.value {
+                        atlas_ledger::model::EstimateValue::MapLocation { point, .. } => {
+                            Some(point)
+                        }
+                        _ => None,
+                    }
+                })
+                .collect::<Vec<_>>()
+        };
+        for entity in self
+            .atlas
+            .data
+            .entities
+            .iter()
+            .filter(|entity| entity.body == self.body)
+        {
+            if let Some(bounds) =
+                crate::scene::boundaries::extent(&self.atlas, entity.id, self.derived_visible, None)
+            {
+                points.extend(bounds);
+            }
+        }
+        if points.is_empty() {
+            points.extend(self.atlas.data.records.iter().filter_map(|record| {
+                (self.atlas.entity_body(record.entity_id) == Some(self.body))
+                    .then_some(record.observation.coordinate.as_ref()?.point)
+            }));
+        }
+        if points.is_empty()
+            && let Some([w, s, e, n]) = self.atlas.body_shard_bounds(self.body)
+        {
+            points.push(LonLat {
+                longitude: w,
+                latitude: s,
+            });
+            points.push(LonLat {
+                longitude: e,
+                latitude: n,
+            });
+        }
+        points
     }
 
     fn gestures(&mut self, ui: &egui::Ui, response: &egui::Response) {
@@ -229,24 +310,19 @@ impl Application {
         if orbiting {
             let delta = ui.input(|input| input.pointer.delta());
             match map.orbit(delta) {
-                Ok(true) => {
-                    self.controls.manual_turn();
-                    ui.ctx().request_repaint();
-                }
+                Ok(true) => ui.ctx().request_repaint(),
                 Ok(false) => {}
                 Err(error) => tracing::warn!(%error, "map orbit rejected"),
             }
         } else if response.dragged() {
             let delta = ui.input(|input| input.pointer.delta());
             if map.drag(pixel - delta, pixel) {
-                self.controls.manual_move();
                 ui.ctx().request_repaint();
             }
         }
         if response.hovered() {
             let delta = ui.input(|input| input.smooth_scroll_delta.y);
             if delta != 0.0 && map.zoom(pixel, f64::from(delta) / 200.0) {
-                self.controls.manual_move();
                 ui.ctx().request_repaint();
             }
         }

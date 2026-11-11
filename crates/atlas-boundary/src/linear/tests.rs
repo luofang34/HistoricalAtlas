@@ -38,7 +38,7 @@ fn geographic_lines_keep_citation_body_and_component_identity() {
     let entity = EntityId::from_key("moon/test/rille").unwrap();
     let record = line().record_id;
     let data: Dataset = serde_json::from_value(json!({
-        "entities":[{"id":entity,"key":"moon/test/rille","body":"moon","kind":"river"}],
+        "entities":[{"id":entity,"key":"moon/test/rille","body":"moon","kind":{"hydrography":"river"}}],
         "records":[{"id":record,"key":"survey/river","entity_id":entity,"source_id":"survey",
         "locator":"Rille A","checked":true,"observation":{"name":"Rille A"}}],
         "estimates":[],"disputes":[]

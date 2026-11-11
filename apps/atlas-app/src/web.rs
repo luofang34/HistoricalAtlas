@@ -1,17 +1,25 @@
-//! Browser startup from the compiler's publication shards.
+//! Browser startup from the compiler's versioned bootstrap or publication shards.
 
 use wasm_bindgen::prelude::*;
 
-/// Validate the loaded publication and start the common atlas application.
+/// Validate the loaded bootstrap or full publication and start the common atlas application.
 #[wasm_bindgen]
 pub fn start(
     canvas: web_sys::HtmlCanvasElement,
     publication: &str,
 ) -> Result<BrowserAtlas, JsValue> {
-    let atlas = serde_json::from_str(publication)
+    let value: serde_json::Value = serde_json::from_str(publication)
         .map_err(|error| JsValue::from_str(&format!("publication JSON: {error}")))?;
-    let atlas =
-        crate::catalog::Atlas::new(atlas).map_err(|error| JsValue::from_str(&error.to_string()))?;
+    let atlas = if value.get("manifest").is_some() {
+        let bootstrap: crate::catalog::Bootstrap = serde_json::from_value(value)
+            .map_err(|error| JsValue::from_str(&format!("bootstrap JSON: {error}")))?;
+        crate::catalog::Atlas::from_bootstrap(bootstrap)
+            .map_err(|error| JsValue::from_str(&error.to_string()))?
+    } else {
+        let full: crate::catalog::Publication = serde_json::from_value(value)
+            .map_err(|error| JsValue::from_str(&format!("publication JSON: {error}")))?;
+        crate::catalog::Atlas::new(full).map_err(|error| JsValue::from_str(&error.to_string()))?
+    };
     crate::host::spawn(atlas, canvas)
         .map(BrowserAtlas)
         .map_err(|error| JsValue::from_str(&error.to_string()))

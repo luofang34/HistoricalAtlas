@@ -4,121 +4,161 @@
       "id": "d8a9c301-6b4e-5c45-95dd-7445b5aa8521",
       "key": "earth/cn-gz/bijie/shaba/zhongshan-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "a8f2f55e-929a-536a-b5eb-a6b9d8a1effc",
       "key": "earth/cn-gz/bijie/shaba/jizhaodong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c22cce6a-3c62-57c1-9a22-5f730cda8543",
       "key": "earth/cn-gz/bijie/shaba/yangjiazhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "dd82d6f1-3498-5178-8435-6ad3020f90f7",
       "key": "earth/cn-gz/bijie/shaba/shanbeihou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "39b14c1b-8767-57ac-93cb-747bde76f3b4",
       "key": "earth/cn-gz/bijie/shaba/huoshishan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "f4b33ba7-e3b2-53d1-a3c3-9c5abf21fc07",
       "key": "earth/cn-gz/bijie/shaba/jiaodingshan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "6b609bde-00ba-5aa7-92ee-161998ef1e4d",
       "key": "earth/cn-gz/bijie/shaba/gaoshanpu-daoban",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "b98022e7-402d-54c6-947b-b4329b009f11",
       "key": "earth/cn-gz/bijie/shaba/muguachong-daoban",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "f7d9c664-07a6-5407-a34c-b781892f1cee",
       "key": "earth/cn-gz/bijie/shaba/chongfeng-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "faa54f26-997f-55b7-a18b-c079dd32fdd3",
       "key": "earth/cn-gz/bijie/shaba/yuegu",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "66c69dac-f48d-53a4-a431-3e176ff002a3",
       "key": "earth/cn-gz/bijie/shaba/anjia-wanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "09715b78-5486-5217-84c5-8973a472f414",
       "key": "earth/cn-gz/bijie/shaba/chuandong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0b934943-efb4-5954-9b21-eb10b8a72724",
       "key": "earth/cn-gz/bijie/shaba/meijia-yakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "fa024d8f-25af-54b5-8512-eb9f8c790b6e",
       "key": "earth/cn-gz/bijie/shaba/wujia-chongzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9f7e759e-cf1b-581f-b1d4-ffbae61b3e92",
       "key": "earth/cn-gz/bijie/shaba/qingkou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "390a17eb-ad73-5db9-bf06-0b4c66d487dc",
       "key": "earth/cn-gz/bijie/shaba/zhujia-yandong-place",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "931f1fc7-6747-507e-bfe1-255141933003",
       "key": "earth/cn-gz/bijie/shaba/zhujia-yandong-cave",
       "body": "earth",
-      "kind": "cave"
+      "kind": {
+        "landform": "cave"
+      }
     },
     {
       "id": "b5ba81fb-ed6c-5310-bea4-4672e4b044e6",
       "key": "earth/cn-gz/bijie/shaba/yemashan",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "ea02da36-065f-558c-8570-f4fbf80493ab",
       "key": "earth/cn-gz/bijie/shaba/daqing-liangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "b5739e51-14a3-527d-a3c7-d9d6bc6e239c",
       "key": "earth/cn-gz/bijie/shaba/xinqiao",
       "body": "earth",
-      "kind": "bridge"
+      "kind": {
+        "infrastructure": "bridge"
+      }
     }
   ],
   "records": [

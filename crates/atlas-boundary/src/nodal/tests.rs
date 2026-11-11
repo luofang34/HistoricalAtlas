@@ -85,7 +85,7 @@ fn fixture() -> (SourceCatalog, Dataset) {
         id: id(name),
         key: format!("earth/test/{name}"),
         body: BodyId::Earth,
-        kind: EntityKind::Settlement,
+        kind: EntityKind::Place(atlas_core::taxonomy::PlaceKind::Settlement),
     })
     .collect();
     let mut root = record("root", None, None);

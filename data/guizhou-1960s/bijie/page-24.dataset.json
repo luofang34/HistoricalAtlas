@@ -4,211 +4,281 @@
       "id": "5cd50971-ffa9-5f4a-9738-12a1ad6fb0af",
       "key": "earth/cn-gz/bijie/daqiao-commune",
       "body": "earth",
-      "kind": "commune"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "ebd49007-05e8-5224-addc-a1b4cb0a98d8",
       "key": "earth/cn-gz/bijie/daqiao/daqiao-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "3e05328c-0c2b-511a-888e-f9c2cd2ff423",
       "key": "earth/cn-gz/bijie/daqiao/daqiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "027a14d3-a4c8-506d-9412-f12b3fef2b1d",
       "key": "earth/cn-gz/bijie/daqiao/zhongba",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "e7c9df39-512a-5c4b-aa79-f7e9468c490b",
       "key": "earth/cn-gz/bijie/daqiao/panjia-chong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d91aadf3-5678-5213-8254-9787d7771b60",
       "key": "earth/cn-gz/bijie/daqiao/huangjia-dayuan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d59e3f5d-7b8b-50df-b864-74cb0dd6c4d6",
       "key": "earth/cn-gz/bijie/daqiao/guanmen-shan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "91948823-7a81-5e06-92db-a45918d53e18",
       "key": "earth/cn-gz/bijie/daqiao/xiejia-wanzi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ae34fb14-1c62-5843-9195-19a679c98680",
       "key": "earth/cn-gz/bijie/daqiao/xiaohe-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "1a935bed-cc00-5823-b3ec-b41c328726eb",
       "key": "earth/cn-gz/bijie/daqiao/xiaohe-seat",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "0e161751-bccf-5879-857d-3a3d54f3238b",
       "key": "earth/cn-gz/bijie/daqiao/xiaohe-village",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c4a0358a-f252-5f43-8b97-87cde8996b56",
       "key": "earth/cn-gz/bijie/daqiao/baishi-yan",
       "body": "earth",
-      "kind": "toponym"
+      "kind": {
+        "place": "toponym"
+      }
     },
     {
       "id": "0be35980-38cc-5aba-ae5f-03197918fb9c",
       "key": "earth/cn-gz/bijie/daqiao/shuijing-po",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "55e86687-0cf1-59f9-b4db-ea15a97d2369",
       "key": "earth/cn-gz/bijie/daqiao/shejia-gou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "88fc58a2-3d9e-592d-b0e6-b2b4011e720c",
       "key": "earth/cn-gz/bijie/daqiao/dapo-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "9864a1e8-58a8-5f9b-9c2c-d99835c6bb4f",
       "key": "earth/cn-gz/bijie/daqiao/dapo",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "21a842af-2238-5818-a0b0-c9a12e80f298",
       "key": "earth/cn-gz/bijie/daqiao/zhaojia-yakou",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "36111cb9-c6af-592f-8cf9-f4d00ae01747",
       "key": "earth/cn-gz/bijie/daqiao/poping-zi",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "9c52b3de-0169-5262-8a78-e4d2beba89a7",
       "key": "earth/cn-gz/bijie/daqiao/jiadanwan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "bf6fbe49-ecff-55eb-85ee-9be81e5d629e",
       "key": "earth/cn-gz/bijie/daqiao/shuiguan-suo",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "1f6ac5af-45a9-5ed4-9924-d4c9ade0c831",
       "key": "earth/cn-gz/bijie/daqiao/taoci-chang",
       "body": "earth",
-      "kind": "factory"
+      "kind": {
+        "infrastructure": "factory"
+      }
     },
     {
       "id": "8e31b1ab-9933-5c47-b69f-72761abb3595",
       "key": "earth/cn-gz/bijie/daqiao/television-relay",
       "body": "earth",
-      "kind": "facility"
+      "kind": {
+        "infrastructure": "facility"
+      }
     },
     {
       "id": "19637e9c-c241-5787-a3e1-9f32a252e85c",
       "key": "earth/cn-gz/bijie/daqiao/yinguantun-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "162d30a6-0753-5de1-81c4-351c54eaab8c",
       "key": "earth/cn-gz/bijie/daqiao/yinguantun",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d3ec924e-e060-5a25-b979-6f8fcc55507b",
       "key": "earth/cn-gz/bijie/daqiao/sanmu-tian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4a4b51a9-6701-5b96-89c2-fe1eb93078c1",
       "key": "earth/cn-gz/bijie/daqiao/tiaodeng-he",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d3ff060d-2e23-5908-887b-d6fbedf5f531",
       "key": "earth/cn-gz/bijie/daqiao/meidong",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "ca3bd37b-ece6-5567-b1e5-c068754c1806",
       "key": "earth/cn-gz/bijie/daqiao/dalu-bian",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "c7dea9d3-f22f-5418-a902-0ed603dd1bf3",
       "key": "earth/cn-gz/bijie/daqiao/yiwanshui",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "a041bb70-80ca-5939-a15a-a3768b87a400",
       "key": "earth/cn-gz/bijie/daqiao/weijia-tun-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "8632489b-a593-599f-b79b-45f6077aefa7",
       "key": "earth/cn-gz/bijie/daqiao/weijia-tun",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "d5dc5307-4083-53a0-b313-7de88bf8659a",
       "key": "earth/cn-gz/bijie/daqiao/zhaobi-shan",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "4f91bfd6-96d4-506c-9c8c-a678b4719a87",
       "key": "earth/cn-gz/bijie/daqiao/zhaojia-zhai",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     },
     {
       "id": "431ed3c3-14d3-5530-b57e-617539a4c179",
       "key": "earth/cn-gz/bijie/daqiao/tianshengqiao-brigade",
       "body": "earth",
-      "kind": "brigade"
+      "kind": {
+        "polity": "administrative"
+      }
     },
     {
       "id": "fc292e94-17ba-5adb-84dd-e87cd656ab7e",
       "key": "earth/cn-gz/bijie/daqiao/tianshengqiao",
       "body": "earth",
-      "kind": "settlement"
+      "kind": {
+        "place": "settlement"
+      }
     }
   ],
   "records": [

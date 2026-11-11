@@ -4,13 +4,17 @@
       "id": "9c1105d1-7557-5da5-8804-883d7593375b",
       "key": "earth/cn-gz/bijie/yongxing/youshaliangzi",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "982b8322-de99-5b0e-836e-a5f21270406a",
       "key": "earth/cn-gz/bijie/yongxing/dingshui-temple",
       "body": "earth",
-      "kind": "historic_site"
+      "kind": {
+        "heritage": "historic_site"
+      }
     }
   ],
   "records": [

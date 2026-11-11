@@ -5,10 +5,13 @@ use std::collections::{BTreeMap, BTreeSet};
 use atlas_core::{
     assertion::TemporalValue,
     calendar::{Calendar, CivilDate},
-    identity::EntityId,
+    identity::{EntityId, FactId},
     time::EpochTime,
 };
-use atlas_ledger::timeline::{TimeSelection, Timeline};
+use atlas_ledger::{
+    plates::PaleoPosition,
+    timeline::{TimeSelection, Timeline},
+};
 
 use crate::{catalog::Atlas, error::AppError};
 
@@ -86,6 +89,8 @@ impl TimeControl {
 pub struct SelectedTime {
     /// Entities whose selected existence evidence records physical removal.
     pub absent: BTreeSet<EntityId>,
+    /// Entities whose origin constraints place their formation strictly after `at`.
+    pub unformed: BTreeSet<EntityId>,
     /// Exact query epoch.
     pub at: EpochTime,
     /// Applied endpoint interpretation, independent of unsubmitted controls.
@@ -94,15 +99,23 @@ pub struct SelectedTime {
     pub evidence: BTreeMap<EntityId, serde_json::Value>,
     /// Date-selected names, including competing values.
     pub names: BTreeMap<EntityId, Vec<String>>,
-    /// Coordinates rotated by cited plate models covering the epoch, by record.
-    pub paleo: BTreeMap<atlas_core::identity::FactId, atlas_ledger::plates::PaleoPosition>,
+    /// Extant coordinates rotated by cited plate models covering the epoch, by record.
+    pub paleo: BTreeMap<FactId, PaleoPosition>,
+    /// Pre-origin reference pins rotated on ancestral host crust, by record.
+    pub crustal_pins: BTreeMap<FactId, PaleoPosition>,
 }
 
 impl SelectedTime {
-    /// Query the same timeline used by the command-line compiler.
+    /// Whether `id` is excluded from extant paleogeography at `self.at` (removed or not yet formed).
+    pub fn is_excluded(&self, id: EntityId) -> bool {
+        self.absent.contains(&id) || self.unformed.contains(&id)
+    }
+
+    /// Query the same timeline and plate kinematics used by the command-line compiler.
     pub fn query(atlas: &Atlas, control: &TimeControl) -> Result<Self, AppError> {
         let at = control.epoch()?;
-        let timeline = Timeline::new(&atlas.sources, &atlas.data)?;
+        let timeline = Timeline::from_validated(&atlas.data);
+        let unformed = timeline.unformed_at(at, control.selection)?;
         let selected = timeline.at(at, control.selection)?;
         let mut evidence = BTreeMap::new();
         let mut names = BTreeMap::new();
@@ -125,18 +138,34 @@ impl SelectedTime {
             names.insert(entity.entity_id, labels);
             evidence.insert(entity.entity_id, serde_json::to_value(entity)?);
         }
-        let paleo = atlas_ledger::plates::paleo_positions(&atlas.plate_models, &atlas.data, at)?
-            .into_iter()
-            .filter(|position| !absent.contains(&position.entity_id))
-            .map(|position| (position.record_id, position))
-            .collect();
+        let all_paleo = atlas_ledger::plates::paleo_positions_with_models(
+            &atlas.plate_models,
+            atlas.rotation_models(),
+            &atlas.data,
+            at,
+            control.selection,
+        )?;
+        let mut paleo = BTreeMap::new();
+        let mut crustal_pins = BTreeMap::new();
+        for position in all_paleo {
+            if absent.contains(&position.entity_id) {
+                continue;
+            }
+            if unformed.contains(&position.entity_id) {
+                crustal_pins.insert(position.record_id, position);
+            } else {
+                paleo.insert(position.record_id, position);
+            }
+        }
         Ok(Self {
             absent,
+            unformed,
             at,
             selection: control.selection,
             evidence,
             names,
             paleo,
+            crustal_pins,
         })
     }
 }

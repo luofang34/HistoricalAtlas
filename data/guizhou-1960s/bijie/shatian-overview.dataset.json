@@ -4,13 +4,17 @@
       "id": "aa6c2dda-bd05-5553-8dc8-7f65748f423f",
       "key": "earth/cn-gz/bijie/shatian/hanjiaqing",
       "body": "earth",
-      "kind": "mountain"
+      "kind": {
+        "landform": "mountain"
+      }
     },
     {
       "id": "3ab92f1e-6546-5127-bb62-7299fe39bf8b",
       "key": "earth/cn-gz/bijie/shatian/baigai-river",
       "body": "earth",
-      "kind": "river"
+      "kind": {
+        "hydrography": "river"
+      }
     }
   ],
   "records": [
